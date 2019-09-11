@@ -1,0 +1,60 @@
+<?xml  version="1.0" encoding="GBK"?>
+<FBASE note="日志信息汇总">
+        <log LogID="1" module="系统级别" description="系统启动" level="5" format="节点名:%s" location="" effect="" stratage=""/>
+        <log LogID="2" module="系统级别" description="系统停止" level="5" format="节点名:%s" location="" effect="" stratage=""/>
+        <log LogID="100" module="插件容器" description="初始化插件" level="1" format="节点名:%s" location="" effect="" stratage=""/>
+        <log LogID="101" module="插件容器" description="开始加载所有插件" level="1" format="" location="" effect="" stratage=""/>
+        <log LogID="102" module="插件容器" description="加载特定插件" level="1" format="Load PLUGIN[%s]" location="" effect="" stratage=""/>
+        <log LogID="103" module="插件容器" description="加载插件失败" level="3" format="PLUGIN[%s]" location="" effect="该插件不能正常工作" stratage="检查动态库文件是否存在，或者文件是否一个合法的动态库"/>
+        <log LogID="104" module="插件容器" description="插件不存在导出GetObjImplInstance函数" level="3" format="PLUGIN[%s]" location="" effect="该插件不能正常工作" stratage="可能是个非法动态库，或者编译该插件时遗忘导出函数"/>
+        <log LogID="105" module="插件容器" description="插件加载统计" level="1" format="%d Libs Loaded Ok, %d Libs Loaded Error!" location="" effect="" stratage=""/>
+        <log LogID="106" module="插件容器" description="开始初始化所有插件" level="1" format="" location="" effect="" stratage=""/>
+        <log LogID="107" module="插件容器" description="初始化插件成功" level="1" format="PLUGIN[%s]" location="" effect="" stratage=""/>
+        <log LogID="108" module="插件容器" description="初始化插件失败" level="3" format="PLUGIN[%s]" location="" effect="该插件不能正常工作" stratage="检查该插件配置或者实现"/>
+        <log LogID="109" module="插件容器" description="插件依赖关系失败" level="3" format="PLUGIN[%s]:DEPEND[%s]" location="" effect="该插件不能正常工作" stratage="检查被依赖插件是否加载"/>
+        <log LogID="110" module="插件容器" description="开始启动所有插件" level="1" format="" location="" effect="" stratage=""/>
+        <log LogID="111" module="插件容器" description="启动插件成功" level="1" format="PLUGIN[%s]" location="" effect="" stratage=""/>
+        <log LogID="112" module="插件容器" description="启动插件失败" level="3" format="PLUGIN[%s]" location="" effect="该插件不能正常工作" stratage="检查该插件配置或者实现"/>
+        <log LogID="113" module="插件容器" description="开始停止所有插件" level="1" format="" location="" effect="" stratage=""/>
+        <log LogID="114" module="插件容器" description="停止插件成功" level="1" format="PLUGIN[%s]" location="" effect="" stratage=""/>
+        <log LogID="115" module="插件容器" description="停止插件失败" level="3" format="PLUGIN[%s]" location="" effect="" stratage="检查该插件配置或者实现"/>
+        <log LogID="116" module="插件容器" description="设置流水线失败" level="3" format="can't find module[%s]" location="" effect="服务无法启动，将不能对外提供服务，也会影响流水线上其他模块" stratage="检查该插件配置或者实现"/>
+        <log LogID="500" module="消息模块" description="消息初始化失败" level="4" format="File:[%s]" location="" effect="严重错误，程序退出" stratage="清检查是否符合xml格式,文件内容"/>
+        <log LogID="501" module="消息模块" description="消息打包失败" level="3" format="%s" location="" effect="消息序列化失败，将无法发送" stratage="检查代码和模板是否匹配"/>
+        <log LogID="502" module="消息模块" description="消息解包失败" level="3" format="%s" location="" effect="根据流数据创建消息失败" stratage="检查通信双方的模板是否匹配"/>
+        <log LogID="900" module="业务处理模块" description="创建应答消息失败" level="3" format="Func:[%s]" location="" effect="应答将无法返回" stratage="清检查模板，是否存在该功能应答的模板"/>
+        <log LogID="901" module="业务处理模块" description="没有适合处理的业务组件" level="3" format="Func:[%s]" location="" effect="无法进行业务处理，将返回系统错误" stratage="清检查加载的so模块是否足够"/>
+        <log LogID="902" module="业务处理模块" description="子服务调用超时" level="3" format="Func:[%s]超时时间[%d]ms" location="" effect="子服务调用失败，将影响业务" stratage="原因可能1: 数据库被锁住，事务未提交  2:路由配置，是否将事务请求也交逻辑处理了 3:模板可能不匹配"/>
+        <log LogID="903" module="业务处理模块" description="定时任务调用失败" level="2" format="处理定时任务：%s失败，失败原因:%d" location="" effect="定时任务失败" stratage=""/>
+        <log LogID="904" module="业务处理模块" description="子服务出现意外内存泄漏" level="3" format="子服务出现意外内存泄漏" location="" effect="无" stratage="已经处理"/>
+        <log LogID="1000" module="数据库引擎" description="没有DB连接" level="3" format="在执行存过%s时，发现没有数据库连接" location="" effect="" stratage="清检查数据库配置，或者网络"/>
+        <log LogID="1001" module="数据库引擎" description="创建存过预处理失败" level="3" format="store mame:%s" location="" effect="" stratage=""/>
+        <log LogID="1002" module="数据库引擎" description="存过预处理语句执行失败" level="3" format="store mame:%s" location="" effect="" stratage="检查存过入参模板是否匹配"/>
+        <log LogID="1003" module="数据库引擎" description="数据库心跳维持" level="1" format="%d内没有任何请求，发起心跳" location="" effect="" stratage=""/>
+        <log LogID="1004" module="数据库引擎" description="数据库心跳检测连接断开，尝试重连" level="2" format="CheckType:%d" location="" effect="" stratage=""/>
+        <log LogID="1005" module="数据库引擎" description="存过执行参数" level="0" format="存过:%s  入参:%s" location="" effect="" stratage=""/>
+        <log LogID="1006" module="数据库引擎" description="数据库连接失败" level="3" format="%s" location="" effect="" stratage=""/>
+        <log LogID="1500" module="路由模块" description="转发消息失败" level="3" format="func:%s" location="" effect="" stratage="检查配置路由表"/>
+        <log LogID="2000" module="主推模块" description="新增订阅用户" level="1" format="suber:%s, topic:%s" location="" effect="" stratage=""/>
+        <log LogID="2001" module="主推模块" description="取消订阅" level="1" format="suber:%s, topic:%s" location="" effect="" stratage=""/>
+        <log LogID="2002" module="主推模块" description="接收到主推报文" level="1" format="topic:%s" location="" effect="" stratage=""/>
+        <log LogID="2003" module="主推模块" description="收到主推心跳" level="1" format="suber:%s" location="" effect="" stratage=""/>
+        <log LogID="2004" module="主推模块" description="订阅过滤条件超出限制" level="2" format="suber:%s, topic:%s" location="" effect="接收的订阅/退订信息，其过滤条件超出4个，已经强制截断成4个" stratage="检查订阅代码"/>
+        <log LogID="2005" module="主推模块" description="订阅失败(老方式)" level="2" format="suber:%s, topic:%s" location="" effect="订阅失败" stratage="检查订阅代码或者主题配置是否正确"/>
+        <log LogID="2006" module="主推模块" description="订阅失败" level="2" format="suber:%s, topic:%s" location="" effect="订阅失败" stratage="检查订阅代码或者主题配置是否正确"/>
+        <log LogID="2007" module="主推模块" description="过滤条件错误" level="2" format="suber:%s, topic:%s, 过滤条件:[%s]" location="" effect="订阅过滤条件不符合主题配置，订阅失败" stratage="检查订阅代码或者主题配置是否正确"/>
+        <log LogID="2500" module="接入通道" description="新建连接" level="1" format="channel:%d  connect:%d" location="" effect="" stratage=""/>
+        <log LogID="2501" module="接入通道" description="新建断开" level="1" format="channel:%d  connect:%d" location="" effect="" stratage=""/>
+        <log LogID="2502" module="接入通道" description="报文长度非法" level="1" format="Len:%d" location="" effect="" stratage=""/>
+        <log LogID="3000" module="通信通道" description="新建连接" level="1" format="线程:%d  连接指针:%p 连接ID：%x fd:%d" location="" effect="" stratage=""/>
+        <log LogID="3001" module="通信通道" description="接收循环事件" level="0" format="线程:%d  事件个数:%d" location="" effect="" stratage=""/>
+        <log LogID="3002" module="通信通道" description="发送循环事件" level="0" format="线程:%d  事件个数:%d" location="" effect="" stratage=""/>
+        <log LogID="3003" module="通信通道" description="未知严重错误" level="3" format="线程:%d" location="" effect="" stratage=""/>
+        <log LogID="3004" module="通信通道" description="EPOLL事件" level="0" format="线程:%d  连接指针:%p channel:%p  连接ID：%x  事件:%x  fd:%d" location="" effect="" stratage=""/>
+        <log LogID="3005" module="通信通道" description="接收发生错误" level="1" format="线程:%d  连接指针:%p 连接ID：%x  错误号:%d fd:%d" location="" effect="" stratage=""/>
+        <log LogID="3006" module="通信通道" description="连接释放发生错误" level="3" format="连接指针:%p 连接ID：%x " location="" effect="" stratage=""/>
+        <log LogID="3500" module="sdk" description="sdk初始化完成" level="1" format="sdk编译日期：%s  编译时间：%s" location="" effect="" stratage=""/>
+        <log LogID="3501" module="sdk" description="业务请求统计" level="1" format="func：%s  dealTime:%d  packetid:%d  callbacktime:%d" location="" effect="" stratage=""/>
+        <log LogID="3502" module="sdk" description="业务请求超时" level="2" format="func：%s  WaitTime:%d  packetid:%d" location="" effect="" stratage=""/>
+        <log LogID="3503" module="sdk" description="同步请求时间" level="2" format="func：%s  Time:%d" location="" effect="" stratage=""/>
+</FBASE>

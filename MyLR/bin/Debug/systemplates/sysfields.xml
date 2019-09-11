@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fields>
+	<!-- 中间件内部虚拟字段，不参与序列化、反序列化 [1,10)-->
+	<sequence fieldname="NoInternalRoute" fieldid="1"/>
+	<sequence fieldname="NoInternalSenderPath" fieldid="2"/>
+
+	<!-- 仅出现在头记录中 [10,100)-->
+	<string fieldname="FuncID" fieldid="11"/>
+	<int32 fieldname="Systemno" fieldid="12"/>
+	<uint32 fieldname="Compid" fieldid="13"/>
+	<uint32 fieldname="Packetid" fieldid="14"/>
+	<uint16 fieldname="TTL" fieldid="15"/>
+	<uint32 fieldname="Senderid" fieldid="16"/>
+	<int32 fieldname="ErrorNo" fieldid="17"/>
+	<bytevector fieldname="ErrorInfo" fieldid="18"/>
+	<sequence fieldname="NoSenderpath" fieldid="19"/>
+	<sequence fieldname="NoRouteinfo" fieldid="20"/>
+	<uint8 fieldname="PacketType" fieldid="21"/>
+	<uint32 fieldname="Ver" fieldid="22"/>
+	<sequence fieldname="NoUserDefine" fieldid="23"/>
+	<string fieldname="UserDefineData" fieldid="24"/>
+	<sequence fieldname="NoTimeStampInfo" fieldid="25"/>
+	<int32 fieldname="TimeStamp" fieldid="26"/>
+	<bytevector fieldname="TimeInfo" fieldid="27"/>
+	<bytevector fieldname="NodeName" fieldid="28"/>
+	<bytevector fieldname="SvrName" fieldid="29"/>
+	<bytevector fieldname="ModuleName" fieldid="30"/>
+	<uint32 fieldname="ChannelID" fieldid="31"/>
+	<uint32 fieldname="ConnectID" fieldid="32"/>
+	<uint8 fieldname="SerialFlag" fieldid="33"/>
+	<uint32 fieldname="BrokerID" fieldid="34"/>
+	<uint32 fieldname="InstrumentID" fieldid="35"/>
+	<uint32 fieldname="SynFlag" fieldid="36"/>
+	<uint32 fieldname="Priority" fieldid="37"/>
+	<uint32 fieldname="LivingTimes" fieldid="38"/>
+	<uint32 fieldname="InQTime" fieldid="39"/>
+	
+
+	<!--  管理功能字段[100,200)	标题-->
+	<sequence fieldname="NoName" fieldid="100"/>
+	<bytevector fieldname="name1" fieldid="101"/>
+	<bytevector fieldname="name2" fieldid="102"/>
+	<bytevector fieldname="name3" fieldid="103"/>
+	<bytevector fieldname="name4" fieldid="104"/>
+	<bytevector fieldname="name5" fieldid="105"/>
+	<bytevector fieldname="name6" fieldid="106"/>
+	<bytevector fieldname="name7" fieldid="107"/>
+	<bytevector fieldname="name8" fieldid="108"/>
+	<bytevector fieldname="name9" fieldid="109"/>
+	<bytevector fieldname="name10" fieldid="110"/>
+	<bytevector fieldname="name11" fieldid="111"/>
+	<bytevector fieldname="name12" fieldid="112"/>
+	<bytevector fieldname="name13" fieldid="113"/>
+	<bytevector fieldname="name14" fieldid="114"/>
+	<bytevector fieldname="name15" fieldid="115"/>
+	<bytevector fieldname="name16" fieldid="116"/>
+	<bytevector fieldname="name17" fieldid="117"/>
+	<bytevector fieldname="name18" fieldid="118"/>
+	<bytevector fieldname="name19" fieldid="119"/>
+	<bytevector fieldname="name20" fieldid="120"/>
+	<bytevector fieldname="name21" fieldid="121"/>
+	<!--  管理功能字段[200,300)	内容-->
+	<sequence fieldname="NoValue" fieldid="200"/>
+	<bytevector fieldname="value1" fieldid="201"/>
+	<bytevector fieldname="value2" fieldid="202"/>
+	<bytevector fieldname="value3" fieldid="203"/>
+	<bytevector fieldname="value4" fieldid="204"/>
+	<bytevector fieldname="value5" fieldid="205"/>
+	<bytevector fieldname="value6" fieldid="206"/>
+	<bytevector fieldname="value7" fieldid="207"/>
+	<bytevector fieldname="value8" fieldid="208"/>
+	<bytevector fieldname="value9" fieldid="209"/>
+	<bytevector fieldname="value10" fieldid="210"/>
+	<bytevector fieldname="value11" fieldid="211"/>
+	<bytevector fieldname="value12" fieldid="212"/>
+	<bytevector fieldname="value13" fieldid="213"/>
+	<bytevector fieldname="value14" fieldid="214"/>
+	<bytevector fieldname="value15" fieldid="215"/>
+	<bytevector fieldname="value16" fieldid="216"/>
+	<bytevector fieldname="value17" fieldid="217"/>
+	<bytevector fieldname="value18" fieldid="218"/>
+	<bytevector fieldname="value19" fieldid="219"/>
+	<bytevector fieldname="value20" fieldid="220"/>
+	<bytevector fieldname="value21" fieldid="221"/>
+
+	<!--  中间件内部消息字段[300,400)	-->
+	<int32 fieldname="change_flag" fieldid="300"/>
+	<int32 fieldname="nbr_flag" fieldid="301"/>
+	<bytevector fieldname="ospfpack" fieldid="302"/>
+	<int32 fieldname="ManageFuncIndex" fieldid="303"/>
+	
+	
+	<!--  发布订阅使用的消息字段[400,500)	-->
+	<bytevector fieldname="topicname" fieldid="400" note="最多允许32字节"/>
+	<int32 fieldname="filterfieldid" fieldid="401"/>
+	<bytevector fieldname="filterfieldvalue" fieldid="402" note="最多允许32字节"/>
+	<sequence fieldname="NoFilter" fieldid="403"/>
+	<int32 fieldname="subid" fieldid="404"/>
+	<rawdata fieldname="publishdata" fieldid="405" note="实质为另一条fastmsg消息"/>
+	<bytevector fieldname="subername" fieldid="406" note="订阅者唯一标识，最多允许64字节"/>
+	<int32 fieldname="pushinterval" fieldid="407" note="主推频度（多少秒1次）"/>
+	<bytevector fieldname="orgfuncid" fieldid="408"/>
+	<bytevector fieldname="rlevel" fieldid="409"/>
+	<int32 fieldname="slot" fieldid="410"/>
+	<sequence fieldname="NoSuberItem" fieldid="411"/>
+	<int32 fieldname="SubType" fieldid="412"  note="1:add  2:reomove  3:modify"/>
+	<int32 fieldname="SubStatus" fieldid="413"  note="1ok 2:err"/>
+	<int32 fieldname="posdup" fieldid="414"  note="0:不可能  1： 可能"/>
+	<int32 fieldname="orgtype" fieldid="415"  note="0:不可能  1： 可能"/>
+	<sequence fieldname="NoDelSuberItem" fieldid="416"/>
+</fields>

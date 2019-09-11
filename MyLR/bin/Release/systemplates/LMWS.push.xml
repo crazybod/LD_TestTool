@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizmsgs>
+	<!--function functionname="订阅请求" typename="LD_REQUEST" functionid="LMWS.push.1" packettype="0">
+		<field fieldname="subername" fieldid="406" note="订阅者唯一标识"/>
+		<field fieldname="SubType" fieldid="412" note="1"/>
+		<field fieldname="topicname" fieldid="400"/>
+		<field fieldname="pushinterval" fieldid="407" presence="optional" note="主推频度（多少秒/次）"/>
+		<sequence fieldname="NoSuberItem" fieldid="411" presence="optional" note="如果部出现，就是订阅所有">
+			<sequence fieldname="NoFilter" fieldid="403" note="这里给出所有过滤字段的取值">
+				<field fieldname="filterfieldid" fieldid="401"/>
+				<field fieldname="filterfieldvalue" fieldid="402"/>
+			</sequence>
+		</sequence>
+	</function>
+	<function functionname="订阅应答" typename="LD_REQUEST" functionid="LMWS.push.1" packettype="1">
+		<field fieldname="SubStatus" fieldid="413" note="订阅成功与否，1成功，其他失败"/>
+	</function-->
+	<function functionname="原子订阅请求" typename="LD_REQUEST" functionid="LMWS.push.1" packettype="0">
+		<field fieldname="subername" fieldid="406" note="订阅者唯一标识"/>
+		<field fieldname="SubType" fieldid="412" note="1"/>
+		<field fieldname="topicname" fieldid="400"/>
+		<field fieldname="pushinterval" fieldid="407" presence="optional" note="主推频度（多少秒/次）"/>
+		<sequence fieldname="NoSuberItem" fieldid="411" presence="optional" note="如果部出现，就是订阅所有">
+			<sequence fieldname="NoFilter" fieldid="403" note="这里给出所有过滤字段的取值">
+				<field fieldname="filterfieldid" fieldid="401"/>
+				<field fieldname="filterfieldvalue" fieldid="402"/>
+			</sequence>
+		</sequence>
+		<sequence fieldname="NoDelSuberItem" fieldid="416" presence="optional" note="如果部出现，就是订阅所有">
+			<sequence fieldname="NoFilter" fieldid="403" note="这里给出所有过滤字段的取值">
+				<field fieldname="filterfieldid" fieldid="401"/>
+				<field fieldname="filterfieldvalue" fieldid="402"/>
+			</sequence>
+		</sequence>
+	</function>
+	<function functionname="原子订阅应答" typename="LD_REQUEST" functionid="LMWS.push.1" packettype="1">
+		<field fieldname="SubStatus" fieldid="413" note="订阅成功与否，1成功，其他失败"/>
+	</function>
+	<function functionname="订阅心跳" typename="LD_REQUEST" functionid="LMWS.push.2" packettype="0">
+		<field fieldname="subername" fieldid="406" note="订阅者唯一标识"/>
+	</function>
+	<function functionname="订阅心跳应答" typename="LD_REQUEST" functionid="LMWS.push.2" packettype="1">
+		<field fieldname="SubStatus" fieldid="413" note="订阅成功与否，1成功，其他失败"/>
+	</function>
+	<function functionname="发布" typename="LD_REQUEST" functionid="LMWS.push.4" packettype="0">
+		<field fieldname="topicname" fieldid="400"/>
+		<field fieldname="orgfuncid" fieldid="408"/>
+		<field fieldname="orgtype" fieldid="415"/>
+		<field fieldname="posdup" fieldid="414" presence="optional"/>
+		<field fieldname="rlevel" fieldid="409" presence="optional"/>
+		<field fieldname="subername" fieldid="406" presence="optional"/>
+		<!--field fieldname="slot" fieldid="410"/-->
+		<field fieldname="publishdata" fieldid="405" note="实质为另一条fastmsg消息"/>
+	</function>
+	<function functionname="发布应答" typename="LD_REQUEST" functionid="LMWS.push.4" packettype="1">
+		<field fieldname="topicname" fieldid="400"/>
+		<field fieldname="subername" fieldid="406" presence="optional"/>
+		<!--field fieldname="slot" fieldid="410"/-->
+	</function>
+</bizmsgs>

@@ -1,0 +1,104 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using ICSharpCode.AvalonEdit.Utils;
+using ICSharpCode.AvalonEdit.Document;
+using System.Threading;
+using System.Windows.Documents;
+using System.Windows.Media;
+
+namespace MyLR
+{
+    class PrintHelper
+    {
+        public static readonly PrintHelper Print = new PrintHelper();
+        private QueueThreadSafe<string> _PrintCaches;
+        private PrintHelper()
+        {
+            _PrintCaches = new QueueThreadSafe<string>();
+            _PrintData = null;
+            Task.Run(() => { WriteLog(); });
+
+        }
+        public System.Windows.Controls.RichTextBox _PrintData;
+        public System.Windows.Controls.RichTextBox PrintData
+        {
+            set
+            {
+                _PrintData = value;
+            }
+        }
+        public void WriteLine(string msg)
+        {
+            _PrintCaches.Enqueue(msg + "\r\n");
+        }
+       
+        private void WriteLog()
+        {
+          
+            while (true)
+            {
+
+                if (_PrintCaches.Count > 0)
+                {
+                    List<string>info = _PrintCaches.DequeueAll();
+                    try
+                    {
+                        if (_PrintData != null)
+                        {
+                            DoPrint(info);
+
+
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        LogHelper.Logger.Error("打印错误"+e.Message);
+                    }
+                    System.Threading.Thread.Sleep(1);
+                }
+                else
+                {
+                    System.Threading.Thread.Sleep(10);
+                }
+            }
+        }
+        public void AppendLine(string log)
+        {
+            DoPrint(log+"\r\n");
+
+        }
+        private void DoPrint(List<string> infos)
+        {
+            StringBuilder b = new StringBuilder();
+            foreach (var info in infos)
+            {
+                b.Append(info);
+            }
+           
+            DoPrint(b.ToString());
+            b.Clear();
+        }
+        private void DoPrint(string log)
+        {
+          
+
+            App.Current.Dispatcher.BeginInvoke(new Action(() =>
+            {
+                //Paragraph paragraph = new Paragraph();
+                //Run run = new Run()
+                //{
+                //    Text = log,
+                //    Foreground = !result ? new SolidColorBrush(Color.FromRgb(200, 100, 0)) : new SolidColorBrush(Color.FromRgb(0, 100, 200))
+                //};
+                //paragraph.Inlines.Add(run);
+                _PrintData.AppendText(log);
+               // this._PrintData.Document.Blocks.Add(paragraph);
+               // this._PrintData.ScrollToEnd();
+            }));
+
+        }
+    }
+}

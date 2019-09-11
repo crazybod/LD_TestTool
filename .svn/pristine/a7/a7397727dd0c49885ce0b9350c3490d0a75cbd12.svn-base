@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bizmsgs>
+    <function functionname="funcl_clsebasync_QueryCompanyActionTable" typename="LD_REQUEST" functionid="clsecuL.4.101" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+    </function>
+    <function functionname="funcl_clsebasync_QueryCompanyActionTable" typename="LD_ANSWER" functionid="clsecuL.4.101" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="stock_type" fieldid="2938"/>
+            <field fieldname="asset_type" fieldid="3045"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="par_value" fieldid="2310" decimalPlaces="9"/>
+            <field fieldname="divi_cacl_num" fieldid="1723"/>
+            <field fieldname="divi_amt" fieldid="1576" decimalPlaces="6"/>
+            <field fieldname="divi_qty" fieldid="1784" decimalPlaces="2"/>
+            <field fieldname="equity_trans_qty" fieldid="3037" decimalPlaces="2"/>
+            <field fieldname="rights_issue_qty" fieldid="2296" decimalPlaces="2"/>
+            <field fieldname="placement_price" fieldid="5873" decimalPlaces="9"/>
+            <field fieldname="notice_date" fieldid="1670"/>
+            <field fieldname="reg_date" fieldid="1429"/>
+            <field fieldname="ex_date" fieldid="1341"/>
+            <field fieldname="arrive_date" fieldid="1427"/>
+            <field fieldname="begin_trade_date" fieldid="2498"/>
+            <field fieldname="deal_flag" fieldid="1342"/>
+            <field fieldname="busi_flag" fieldid="2785"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_clsebasync_UpdateCompanyActionTable" typename="LD_REQUEST" functionid="clsecuL.4.102" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="par_value" fieldid="2310" decimalPlaces="9"/>
+        <field fieldname="divi_cacl_num" fieldid="1723"/>
+        <field fieldname="divi_amt" fieldid="1576" decimalPlaces="6"/>
+        <field fieldname="divi_qty" fieldid="1784" decimalPlaces="2"/>
+        <field fieldname="equity_trans_qty" fieldid="3037" decimalPlaces="2"/>
+        <field fieldname="rights_issue_qty" fieldid="2296" decimalPlaces="2"/>
+        <field fieldname="placement_price" fieldid="5873" decimalPlaces="9"/>
+        <field fieldname="notice_date" fieldid="1670"/>
+        <field fieldname="reg_date" fieldid="1429"/>
+        <field fieldname="ex_date" fieldid="1341"/>
+        <field fieldname="arrive_date" fieldid="1427"/>
+        <field fieldname="begin_trade_date" fieldid="2498"/>
+        <field fieldname="deal_flag" fieldid="1342"/>
+        <field fieldname="busi_flag" fieldid="2785"/>
+    </function>
+    <function functionname="funcl_clsebasync_UpdateCompanyActionTable" typename="LD_ANSWER" functionid="clsecuL.4.102" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_clsebasync_UpdateCompanyActionInfo" typename="LD_REQUEST" functionid="clsecuL.4.103" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="stock_code_str" fieldid="3191"/>
+        <field fieldname="stock_name_str" fieldid="5180"/>
+        <field fieldname="divi_amt_str" fieldid="5327"/>
+        <field fieldname="divi_qty_str" fieldid="5328"/>
+        <field fieldname="equity_trans_qty_str" fieldid="5329"/>
+        <field fieldname="notice_date_str" fieldid="5330"/>
+        <field fieldname="reg_date_str" fieldid="5331"/>
+        <field fieldname="ex_date_str" fieldid="5332"/>
+        <field fieldname="arrive_date_str" fieldid="5333"/>
+        <field fieldname="begin_trade_date_str" fieldid="5307"/>
+    </function>
+    <function functionname="funcl_clsebasync_UpdateCompanyActionInfo" typename="LD_ANSWER" functionid="clsecuL.4.103" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_clsebasync_UpdateBondCashInfo" typename="LD_REQUEST" functionid="clsecuL.4.104" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="stock_code_str" fieldid="3191"/>
+        <field fieldname="stock_name_str" fieldid="5180"/>
+        <field fieldname="redem_start_date_str" fieldid="5337"/>
+        <field fieldname="redem_pay_price_str" fieldid="5338"/>
+    </function>
+    <function functionname="funcl_clsebasync_UpdateBondCashInfo" typename="LD_ANSWER" functionid="clsecuL.4.104" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_clsebasync_UpdateBondInterePaymentInfo" typename="LD_REQUEST" functionid="clsecuL.4.105" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="stock_code_str" fieldid="3191"/>
+        <field fieldname="stock_name_str" fieldid="5180"/>
+        <field fieldname="intere_start_date_str" fieldid="5334"/>
+        <field fieldname="interest_str" fieldid="5335"/>
+        <field fieldname="interest_taxed_str" fieldid="5336"/>
+    </function>
+    <function functionname="funcl_clsebasync_UpdateBondInterePaymentInfo" typename="LD_ANSWER" functionid="clsecuL.4.105" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+</bizmsgs>

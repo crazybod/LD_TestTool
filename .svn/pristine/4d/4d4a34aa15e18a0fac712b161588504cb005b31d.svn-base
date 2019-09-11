@@ -1,0 +1,49 @@
+﻿#这行是注释，注释以#开头，只支持单号注释，不支持多行注释
+#设置保存日志文件，这个后续实现
+#LogFile=
+#下面是下订单的功能号 格式： Function 功能号变量 = 功能号
+Function funOrder = tdsecuL.4.11
+#下面是给功能号请求参数赋值，默认值在defaultvalue.xlsx文件的'参数值'一列中格式：set 功能号变量.字段名=字段值
+# 订单的股票代码赋值为600519
+set funOrder.stock_code=600519
+set funOrder.exch_no=1
+set funOrder.order_dir=1
+set funOrder.exch_group_no=58880003
+set funOrder.asset_acco_no=58880003
+set funOrder.order_price=1000
+set funOrder.order_qty = 200
+
+#发送功能号 格式:功能号变量.Send()
+funOrder.Send()
+#接收功能号 格式：功能号变量.GetAnswer()
+funOrder.GetAnswer()
+#if 语句用于控制程序的执行，基本形式为：
+#	if 判断条件：
+#判断条件可以用 等于（==），不等于（!=），大于（>）, 小于（<）,大于等于（ >=）,小于等于（<=）
+#
+if funOrder.Answer().error_code !=0 : Print '('&funOrder.Answer().error_code&')'&funOrder.Answer().error_prompt&funOrder.Answer().error_info
+if funOrder.Answer().error_code !=0 : Print 'tdsecuL.4.11错误，程序即将退出'  
+if funOrder.Answer().error_code !=0 :Exit
+if funOrder.Answer().order_id >0 :Print '订单下达成功，order_id='&funOrder.Answer().order_id
+#暂停一会，单位毫秒 格式：sleep=毫秒数
+sleep=1000
+
+#下面是订单查询的功能号
+Function fun = tdsecuL.4.101
+set fun.row_id=0
+set fun.row_count=1
+set fun.order_id =funOrder.Answer().order_id
+fun.Send()
+fun.GetAnswer()
+if fun.Answer().error_code !=0 : Print '('&fun.Answer().error_code&')'&fun.Answer().error_prompt&fun.Answer().error_info
+if fun.Answer().error_code !=0 :Print 'tdsecuL.4.101错误，程序即将推出'
+if fun.Answer().error_code !=0 :Exit
+if fun.Answer().error_code == 0 :Print '订单查询成功'
+#把上面的单子撤销掉
+Function funCancel = tdsecuL.4.12
+set funCancel.order_id=funOrder.Answer().order_id
+set funCancel.order_date= funOrder.Answer().order_date
+funCancel.Send()
+funCancel.GetAnswer()
+if funCancel.Answer().error_code !=0:Print '('&funCancel.Answer().error_code&')'&funCancel.Answer().error_prompt&funCancel.Answer().error_info
+if funCancel.Answer().error_code ==0:Print '撤单发送成功'

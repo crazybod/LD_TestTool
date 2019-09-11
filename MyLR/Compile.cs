@@ -1,0 +1,700 @@
+﻿using LDBizTagDefine;
+using LDsdkDefineEx;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace MyLR
+{
+    public class Compile
+    {
+        private Dictionary<string, BizFunction> _sendFuncList = new Dictionary<string, BizFunction>();
+        private bool _exit;
+        public string LogFileName { get; set; }
+        public bool IsPreComile { get; set; }
+        public Compile()
+        {
+          
+            _exit = false;
+            IsPreComile = true;
+            LogFileName = @"log\ScriptLog.log";
+        }
+
+        public bool PreCompile(string[] strBui)
+        {
+            IsPreComile = true;
+            _exit = false;
+            bool bSuccess = true;
+            
+            for (int i = 0; i < strBui.Length; i++)
+            {
+
+                Analys(strBui[i].Trim('\r'));
+                
+            }
+            return bSuccess;
+        }
+        public void Run(string[] strBui)
+        {
+            _sendFuncList.Clear();
+            if(PreCompile(strBui))
+            {
+                IsPreComile = false;
+                _exit = false;
+                ExcelHelper excel = new ExcelHelper(@"defaultvalue.xlsx");
+                DataTable defaultTable = excel.ExcelToDataTable("Sheet1", true);
+                for (int i = 0; i < strBui.Length; i++)
+                {
+
+                    RunMsg(strBui[i].Trim('\r'),defaultTable);
+                    if (_exit && !IsPreComile)
+                    {
+                        break;
+                    }
+                }
+            }
+          
+        }
+        private void RunMsg(string strBui, DataTable defaultTable)
+        {
+            bool note = strBui.Trim().StartsWith("#");
+            if (note)
+            {
+                return;
+            }
+
+            bool isIf = strBui.Trim().StartsWith("if ");
+            if (isIf)
+            {
+                string[] strIf = strBui.Trim().Replace("if", "").Trim().Split(':');
+                if (strIf.Count() != 2)
+                {
+                    throw new Exception("if 语句不符合规则");
+                }
+                string leftValue = "";
+                string rightValue = "";
+                //拿出条件判断式的左右两边数据，并且得到条件类型
+                ConditionEnum conType = UtilTool.GetConditionRL(strIf[0], out leftValue, out rightValue);
+                if (conType  == ConditionEnum.ConditionEnum_Unkown)
+                {
+                    throw new Exception("if 语句不符合规则");
+                }
+
+                if (ConditionIsTrue(leftValue, rightValue, conType))
+                {
+                    strBui = strIf[1];
+                }
+                else
+                {
+                    return;
+                }
+            }
+            bool isSetValue = strBui.Trim().StartsWith("set");
+            if (isSetValue)
+            {
+                string fieldValue = strBui.Split('=')[1].Trim();//等号右边值
+                string fieldName = strBui.Split('=')[0].Split('.')[1].Trim();//
+                string funVar = strBui.Split('=')[0].Split('.')[0].Replace("set", "").Trim();
+                BizFunction fun = null;
+                if (_sendFuncList.TryGetValue(funVar, out fun))
+                {
+                    BizRequestField bizReq= fun.ReqFields.FirstOrDefault(o=>o.FieldName.Equals(fieldName));
+                    if (bizReq != null && bizReq.IsVarValue)
+                    {//请求参数是变量的，要替换
+                        BizFunction outFun = null;
+                        if (_sendFuncList.TryGetValue(bizReq.VarFunValue, out outFun))
+                        {
+
+                            BizAnswerField bizAnaswer=outFun.Answer.RspFields.FirstOrDefault(o=>o.FieldName.Equals(bizReq.VarFieldName));
+                            if (bizAnaswer !=null)
+                            {
+                                bizReq.FieldValue = bizAnaswer.FieldValue;
+                            }
+                        }
+                    }
+                   
+                   
+                }
+
+                return;
+            }
+
+
+            bool isSend = strBui.Trim().EndsWith("Send()");
+            if (isSend)
+            {
+                string funVar = strBui.Split('.')[0].Trim();
+                BizFunction fun = null;
+                if (_sendFuncList.TryGetValue(funVar, out fun))
+                {
+                    SendFastMsgFun(fun, defaultTable);
+                }
+                return;
+
+            }
+            bool isSleep = strBui.Trim().StartsWith("sleep");
+            if (isSleep)
+            {
+                string funSleep = strBui.Split('=')[1].Trim();
+                Thread.Sleep(int.Parse(funSleep));
+                return;
+            }
+            bool isPrint = strBui.Trim().StartsWith("Print ");
+            if (isPrint)
+            {
+                //打印到控制台
+                string printMsg = strBui.Trim().Replace("Print", "").Trim();
+                string[] printAry = printMsg.Split('&');
+                StringBuilder printBu = new StringBuilder();
+                for (int i=0;i<printAry.Count();i++)
+                {
+                    BizFunction fun;
+                    string answerFieldName = GetAnswerFieldName(printAry[i],out fun);
+                    if (fun == null)
+                    {
+                        printBu.Append(printAry[i].Trim('\''));
+
+                    }
+                    else
+                    {
+                       BizAnswerField bizAnswer =fun.Answer.RspFields.FirstOrDefault(o=>o.FieldName.Equals(answerFieldName));
+                        if (bizAnswer == null)
+                        {
+                            printBu.Append(printAry[i].Trim('\''));
+                        }
+                        else
+                        {
+                            printBu.Append(bizAnswer.FieldValue);
+                        }
+                    }
+                }
+               // PrintHelper.Print.WriteLine(printBu.ToString());
+                PrintHelper.Print.AppendLine(printBu.ToString());
+                return;
+            }
+            bool isWriteLog = strBui.Trim().StartsWith("WriteLog");
+            if (isWriteLog)
+            {
+                //打印到控制台
+                string writeLogMsg = strBui.Trim().Replace("WriteLog", "").Trim();
+                string[] printAry = writeLogMsg.Split('&');
+               
+                return;
+            }
+            if ("Exit".Equals(strBui.Trim()))
+            {
+                _exit = true;
+                return;
+            }
+
+        }
+
+        private void SendFastMsgFun(BizFunction fun, DataTable defaultTable)
+        {
+            LDsdkDefineEx.LDFastMessageAdapter fastmsg = new LDFastMessageAdapter(fun.FunctonId, 0);
+            LDRecordAdapter lpRecord = fastmsg.GetBizBodyRecord();
+            int iFieldCount = lpRecord.GetFieldCount();
+            int iIndex = 0;
+            for (iIndex = 0; iIndex < iFieldCount; iIndex++)
+            {
+                int fieldtype = lpRecord.GetFieldType(iIndex);
+                string fieldName = lpRecord.GetFieldNamebyIndex(iIndex);
+                BizRequestField bizField=fun.ReqFields.FirstOrDefault(o=>o.FieldName.Equals(fieldName));
+                String fieldValue = "";
+                if (bizField != null)
+                {
+                    fieldValue = bizField.FieldValue;                   
+                }
+                if (string.IsNullOrEmpty(fieldValue))
+                {
+                    fieldValue = UtilTool.GetDefaultValue(defaultTable, fieldName);
+                }
+                if ("func_code".Equals(fieldName))
+                {
+                    fieldValue = fun.FunctonId;
+                }
+                UtilTool.SetFastMsgValue(fastmsg, fieldtype, fieldValue, iIndex);
+            }
+            LDFastMessageAdapter outFast = null;
+            int nRet=(int)ConnectionManager.Instance.CurConnection.Connect.SendAndReceive(fun.FunctonId, fastmsg, ref outFast, 5000);
+            fastmsg.FreeMsg();
+            if (nRet<0)
+            {
+                LogHelper.Logger.Error(fun.FunctonId+"发送失败，错误号=" + nRet);
+                PrintHelper.Print.AppendLine(fun.FunctonId + "发送失败，错误号=" + nRet);
+            }
+            if (nRet>=0 && outFast != null )
+            {
+                int iErrorNo = outFast.GetInt32(LDSdkTag.LDTAG_ERRORNO);
+                if (iErrorNo != 0)
+                {
+                    LogHelper.Logger.Error("SystemErrorInfo="+outFast.GetString(LDSdkTag.LDTAG_ERRORINFO));
+                   ;
+                }
+                else
+                {
+                    if (fun.AnswerFlag)
+                    {
+                        LDRecordAdapter lpOutRecord = outFast.GetBizBodyRecord();
+                        int iAnswerFieldCount = lpOutRecord.GetFieldCount();
+                        int iAnswerIndex = 0;
+                        for (iAnswerIndex = 0; iAnswerIndex < iAnswerFieldCount; iAnswerIndex++)
+                        {
+                            string fieldName = lpOutRecord.GetFieldNamebyIndex(iAnswerIndex);
+                            int fieldType = lpOutRecord.GetFieldType(iAnswerIndex);
+                            BizAnswerField bizField = fun.Answer.RspFields.FirstOrDefault(o => o.FieldName.Equals(fieldName));
+                            if (bizField != null)
+                            {
+                                bizField.FieldValue = UtilTool.GetFastMsgValue(outFast, fieldType, iAnswerIndex);
+                                bizField.FieldType = fieldType;
+                            }
+                        }
+
+                    }
+                }
+               
+                
+                outFast.FreeMsg();
+            }
+
+        }
+        private void SetAnswerField(string srcValue)
+        {
+            if (!string.IsNullOrWhiteSpace(srcValue))
+            {
+                if (srcValue.Contains(".Answer()."))
+                {
+                    string funVarName = srcValue.Substring(0, srcValue.IndexOf(".Answer()."));//功能号变量
+                    BizFunction fun = null;
+                    if (_sendFuncList.TryGetValue(funVarName, out fun))
+                    {
+                        //需要的输出字段
+                        string answerFiledName = srcValue.Substring(srcValue.IndexOf(".Answer().") + 10);
+                        if (null ==fun.Answer.RspFields.FirstOrDefault(o=>o.FieldName.Equals(answerFiledName.Trim())))
+                        {
+                            fun.Answer.RspFields.Add(new BizAnswerField(answerFiledName.Trim(), "" ));
+
+                        }
+                        
+                    }
+                }
+            }
+        }
+        private string GetAnswerFieldName(string srcValue,out BizFunction fun)
+        {
+            fun = null;
+            string answerFiledName = "";
+            if (!string.IsNullOrWhiteSpace(srcValue))
+            {
+                if (srcValue.Contains(".Answer()."))
+                {
+                    string funVarName = srcValue.Substring(0, srcValue.IndexOf(".Answer()."));//功能号变量
+                    if (_sendFuncList.TryGetValue(funVarName, out fun))
+                    {
+                        //需要的输出字段
+                         answerFiledName = srcValue.Substring(srcValue.IndexOf(".Answer().") + 10).Trim();
+                        
+                    }
+                }
+            }
+            return answerFiledName;
+        }
+
+ 
+
+        private string GetRequestFieldName(string srcValue, out BizFunction fun)
+        {
+            fun = null;
+            string requestFiledName = "";
+            if (!string.IsNullOrWhiteSpace(srcValue))
+            {
+                if (srcValue.Contains(".Request()."))
+                {
+                    string funVarName = srcValue.Substring(0, srcValue.IndexOf(".Request()."));//功能号变量
+                    if (_sendFuncList.TryGetValue(funVarName, out fun))
+                    {
+                        //需要的输出字段
+                        requestFiledName = srcValue.Substring(srcValue.IndexOf(".Request().") + 11).Trim();
+
+                    }
+                }
+            }
+            return requestFiledName;
+        }
+
+        private void Analys(string strBui)
+        {
+            bool isIf = strBui.Trim().StartsWith("if ");
+            if (isIf)
+            {
+                bool note = strBui.Trim().StartsWith("#");
+                if (note)
+                {
+                    return;
+                }
+                string[] strIf = strBui.Trim().Replace("if", "").Trim().Split(':');
+                if (strIf.Count() != 2)
+                {
+                    throw new Exception("if 语句不符合规则");
+                }
+                string leftValue = "";
+                string rightValue = "";
+                if (UtilTool.GetConditionRL(strIf[0], out leftValue, out rightValue) == ConditionEnum.ConditionEnum_Unkown)
+                {
+                    throw new Exception("if 语句不符合规则");
+                }
+                //判断条件两变是否有输出字段
+                SetAnswerField(leftValue);
+                SetAnswerField(rightValue);
+                strBui = strIf[1];
+
+            }
+            if ("Exit".Equals(strBui.Trim()))
+            {
+                _exit = true;
+                return;
+            }
+          
+            bool isfun = strBui.Trim().StartsWith("Function");
+            if (isfun)
+            {
+                string funID = strBui.Split('=')[1].Trim();
+                string funVar = strBui.Split('=')[0].Trim().Replace("Function", "").Trim();
+                _sendFuncList.Add(funVar, new BizFunction(funID, funVar));
+                return;
+            }
+            bool isSetValue = strBui.Trim().StartsWith("set");
+            if (isSetValue)
+            {
+                string fieldValue = strBui.Split('=')[1].Trim();
+                string fieldName = strBui.Split('=')[0].Split('.')[1].Trim();
+                string funVar = strBui.Split('=')[0].Split('.')[0].Replace("set", "").Trim();
+                BizFunction fun = null;
+                if (_sendFuncList.TryGetValue(funVar, out fun))
+                {
+                   
+                    BizRequestField bizField = new BizRequestField(fieldName, fieldValue);
+
+                    BizFunction outFun = null;
+                    string outFieldName = GetAnswerFieldName(fieldValue, out outFun);
+                    if (outFun != null && outFun.AnswerFlag)
+                    {
+                        if (outFun.Answer.RspFields.FirstOrDefault(o=>o.FieldName.Equals(outFieldName))==null)
+                        {
+                            outFun.Answer.RspFields.Add(new BizAnswerField(outFieldName, " "));
+                        }
+                      
+                        bizField.IsVarValue = true;
+                        bizField.VarFieldName = outFieldName;
+                        bizField.VarFunValue = outFun.VarName;
+                    }
+
+                    fun.ReqFields.Add(bizField);
+                }
+
+                return;
+            }
+            bool isSend = strBui.Trim().EndsWith("Send()");
+            if (isSend)
+            {
+                string funVar = strBui.Split('.')[0].Trim();
+                BizFunction fun = null;
+                if (_sendFuncList.TryGetValue(funVar, out fun))
+                {
+                    fun.SendFlag = true;
+                }
+                return;
+
+            }
+            bool isAnswer = strBui.Trim().EndsWith("GetAnswer()");
+            if (isAnswer)
+            {
+                string funVar = strBui.Split('.')[0].Trim();
+                BizFunction fun = null;
+                if (_sendFuncList.TryGetValue(funVar, out fun))
+                {
+                    fun.AnswerFlag = true;
+                }
+                return;
+
+            }
+            bool isSleep = strBui.Trim().StartsWith("sleep");
+            if (isSleep)
+            {
+             
+                return;
+
+            }
+          
+           
+
+            bool isPrint = strBui.Trim().StartsWith("Print ");
+            if (isPrint)
+            {
+                //打印到控制台
+                string printMsg = strBui.Trim().Replace("Print", "").Trim();
+                string [] printAry=printMsg.Split('&');
+                for (int i=0;i<printAry.Count();i++)
+                {
+                    SetAnswerField(printAry[i]);
+                }
+                return;
+            }
+            bool isWriteLog = strBui.Trim().StartsWith("WriteLog");
+            if (isWriteLog)
+            {
+                //打印到控制台
+                string writeLogMsg = strBui.Trim().Replace("WriteLog", "").Trim();
+                string[] printAry = writeLogMsg.Split('&');
+                for (int i = 0; i < printAry.Count(); i++)
+                {
+                    SetAnswerField(printAry[i]);
+                }
+                return;
+            }
+
+
+        }
+
+        private bool ConditionIsTrue(string leftData,string rightData, ConditionEnum conType)
+        {
+          
+
+            bool isTrue = false ;
+            BizFunction leftFun = null;
+            string leftAnswerFieldName=GetAnswerFieldName(leftData, out leftFun);
+            int leftFieldType = LDSdkTag.TypeUnKnown;
+            if (leftFun != null)
+            {
+                BizAnswerField bizField= leftFun.Answer.RspFields.FirstOrDefault(o=>o.FieldName.Equals(leftAnswerFieldName));
+                if (bizField != null)
+                {
+                    leftData = bizField.FieldValue;
+                    leftFieldType = bizField.FieldType;
+                }
+            }
+
+            BizFunction rightFun = null;
+            string rightAnswerFieldName = GetAnswerFieldName(leftData, out rightFun);
+            int rightFieldType = LDSdkTag.TypeUnKnown;
+            if (rightFun != null)
+            {
+                BizAnswerField bizField = rightFun.Answer.RspFields.FirstOrDefault(o => o.FieldName.Equals(rightAnswerFieldName));
+                if (bizField != null)
+                {
+                    rightData = bizField.FieldValue;
+                    rightFieldType = bizField.FieldType;
+                }
+            }
+            if (string.IsNullOrWhiteSpace(leftData) || string.IsNullOrWhiteSpace(rightData))
+            {
+                return false;
+            }
+            switch (leftFieldType)
+            {
+
+                case LDSdkTag.TypeuInt16:
+                case LDSdkTag.TypeuInt8:
+                case LDSdkTag.TypeuInt32:
+                case LDSdkTag.TypeuInt64:
+                case LDSdkTag.TypeInt16:
+                case LDSdkTag.TypeInt8:
+                case LDSdkTag.TypeInt32:
+                case LDSdkTag.TypeInt64:
+                    //整数类型统一转为 int64比较
+                    Int64 leftIntData = Int64.Parse(leftData);
+                    #region
+                    switch (rightFieldType)
+                    {
+                        case LDSdkTag.TypeuInt16:
+                        case LDSdkTag.TypeuInt8:
+                        case LDSdkTag.TypeuInt32:
+                        case LDSdkTag.TypeuInt64:
+                        case LDSdkTag.TypeInt16:
+                        case LDSdkTag.TypeInt8:
+                        case LDSdkTag.TypeInt32:
+                        case LDSdkTag.TypeInt64:
+                        case LDSdkTag.TypeString:
+                        case LDSdkTag.TypeVector:
+                        case LDSdkTag.TypeUnKnown:;
+                            //整数类型统一转为 int64比较
+                            Int64 rightIntData = 0;
+                            Int64.TryParse(rightData,out rightIntData);
+                            switch (conType)
+                            {
+                                case ConditionEnum.ConditionEnum_Eq:
+                                    isTrue = leftIntData == rightIntData;
+                                    break;
+                                case ConditionEnum.ConditionEnum_Neq:
+                                    isTrue = leftIntData != rightIntData;
+                                    break;
+                                case ConditionEnum.ConditionEnum_Great:
+                                    isTrue = leftIntData > rightIntData;
+                                    break;
+                                case ConditionEnum.ConditionEnum_GreatOrEq:
+                                    isTrue = leftIntData >= rightIntData;
+                                    break;
+                                case ConditionEnum.ConditionEnum_Less:
+                                    isTrue = leftIntData < rightIntData;
+                                    break;
+                                case ConditionEnum.ConditionEnum_LessOrEq:
+                                    isTrue = leftIntData <= rightIntData;
+                                    break;
+
+                            }
+                            break;
+                        case LDSdkTag.TypeDouble:
+                            double rightDoubleData = double.Parse(rightData);
+                            switch (conType)
+                            {
+                                case ConditionEnum.ConditionEnum_Eq:
+                                    isTrue =Math.Abs( (leftIntData - rightDoubleData)) < 0.00001;
+                                    break;
+                                case ConditionEnum.ConditionEnum_Neq:
+                                    isTrue = Math.Abs((leftIntData - rightDoubleData)) > 0.00001;
+                                    break;
+                                case ConditionEnum.ConditionEnum_Great:
+                                    isTrue = leftIntData > rightDoubleData;
+                                    break;
+                                case ConditionEnum.ConditionEnum_GreatOrEq:
+                                    isTrue = leftIntData >= rightDoubleData;
+                                    break;
+                                case ConditionEnum.ConditionEnum_Less:
+                                    isTrue = leftIntData < rightDoubleData;
+                                    break;
+                                case ConditionEnum.ConditionEnum_LessOrEq:
+                                    isTrue = leftIntData <= rightDoubleData;
+                                    break;
+
+                            }
+                            break;                                                                      
+                    }
+                    #endregion
+                    break;
+                case LDSdkTag.TypeDouble:
+                    double leftDoubleData = double.Parse(leftData);
+                    #region
+                    switch (rightFieldType)
+                    {
+
+                        case LDSdkTag.TypeuInt16:
+                        case LDSdkTag.TypeuInt8:
+                        case LDSdkTag.TypeuInt32:
+                        case LDSdkTag.TypeuInt64:
+                        case LDSdkTag.TypeInt16:
+                        case LDSdkTag.TypeInt8:
+                        case LDSdkTag.TypeInt32:
+                        case LDSdkTag.TypeInt64:
+                        case LDSdkTag.TypeString:
+                        case LDSdkTag.TypeVector:
+                        case LDSdkTag.TypeUnKnown:
+                        case LDSdkTag.TypeDouble:
+                            //整数类型统一转为 int64比较
+                            double rightDoubleData = 0;
+                            double.TryParse(rightData, out rightDoubleData);
+                            switch (conType)
+                            {
+                                case ConditionEnum.ConditionEnum_Eq:
+                                    isTrue =Math.Abs( leftDoubleData - rightDoubleData)<0.000001;
+                                    break;
+                                case ConditionEnum.ConditionEnum_Neq:
+                                    isTrue = Math.Abs(leftDoubleData - rightDoubleData) > 0.000001;
+                                    break;
+                                case ConditionEnum.ConditionEnum_Great:
+                                    isTrue = leftDoubleData > rightDoubleData;
+                                    break;
+                                case ConditionEnum.ConditionEnum_GreatOrEq:
+                                    isTrue = leftDoubleData >= rightDoubleData;
+                                    break;
+                                case ConditionEnum.ConditionEnum_Less:
+                                    isTrue = leftDoubleData < rightDoubleData;
+                                    break;
+                                case ConditionEnum.ConditionEnum_LessOrEq:
+                                    isTrue = leftDoubleData <= rightDoubleData;
+                                    break;
+
+                            }
+                            break;
+                    }
+                    #endregion
+                    break;
+                case LDSdkTag.TypeString:
+                case LDSdkTag.TypeVector:
+                case LDSdkTag.TypeUnKnown:
+                    #region
+                    switch (rightFieldType)
+                    {
+                        case LDSdkTag.TypeuInt16:
+                        case LDSdkTag.TypeuInt8:
+                        case LDSdkTag.TypeuInt32:
+                        case LDSdkTag.TypeuInt64:
+                        case LDSdkTag.TypeInt16:
+                        case LDSdkTag.TypeInt8:
+                        case LDSdkTag.TypeInt32:
+                        case LDSdkTag.TypeInt64:
+                        case LDSdkTag.TypeDouble:
+                            leftDoubleData = 0;
+                            double.TryParse(leftData, out leftDoubleData);
+                            double rightDoubleData = 0;
+                            double.TryParse(rightData, out rightDoubleData);
+                            switch (conType)
+                            {
+                                case ConditionEnum.ConditionEnum_Eq:
+                                    isTrue = Math.Abs(leftDoubleData - rightDoubleData) < 0.000001;
+                                    break;
+                                case ConditionEnum.ConditionEnum_Neq:
+                                    isTrue = Math.Abs(leftDoubleData - rightDoubleData) > 0.000001;
+                                    break;
+                                case ConditionEnum.ConditionEnum_Great:
+                                    isTrue = leftDoubleData > rightDoubleData;
+                                    break;
+                                case ConditionEnum.ConditionEnum_GreatOrEq:
+                                    isTrue = leftDoubleData >= rightDoubleData;
+                                    break;
+                                case ConditionEnum.ConditionEnum_Less:
+                                    isTrue = leftDoubleData < rightDoubleData;
+                                    break;
+                                case ConditionEnum.ConditionEnum_LessOrEq:
+                                    isTrue = leftDoubleData <= rightDoubleData;
+                                    break;
+
+                            }
+                            break;
+                        default:
+                            switch (conType)
+                            {
+                                case ConditionEnum.ConditionEnum_Eq:
+                                    isTrue = leftData.Equals(rightData);
+                                    break;
+                                case ConditionEnum.ConditionEnum_Neq:
+                                    isTrue = !leftData.Equals(rightData);
+                                    break;
+                                case ConditionEnum.ConditionEnum_Great:
+                                    isTrue = leftData.CompareTo(rightData) > 0;
+                                    break;
+                                case ConditionEnum.ConditionEnum_GreatOrEq:
+                                    isTrue = leftData.CompareTo(rightData) >= 0;
+                                    break;
+                                case ConditionEnum.ConditionEnum_Less:
+                                    isTrue = leftData.CompareTo(rightData) < 0;
+                                    break;
+                                case ConditionEnum.ConditionEnum_LessOrEq:
+                                    isTrue = leftData.CompareTo(rightData) <= 0;
+                                    break;
+
+                            }
+                            break;
+
+                    }
+                    #endregion
+                    break;
+            }
+
+            return isTrue;
+        }
+    }
+}

@@ -1,0 +1,944 @@
+﻿using Amib.Threading;
+using LDBizTagDefine;
+using LDsdkDefineEx;
+using Microsoft.Practices.Prism.Commands;
+using Microsoft.Practices.Prism.Mvvm;
+using System;
+using System.CodeDom.Compiler;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Data;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Windows.Input;
+using System.Xml.Linq;
+using System.Timers;
+using System.Windows.Threading;
+using System.Windows.Documents;
+using System.Windows.Media;
+using System.Windows.Shapes;
+using Microsoft.Win32;
+using MyLR.HqReplay;
+using System.Windows.Forms;
+
+namespace MyLR
+{
+   
+    public class MainViewModel : BindableBase
+    {
+        private static readonly object ReqLock = new object();
+        List<ReqDTO> ReqAllList { get; set; }
+        private System.Timers.Timer timer = new System.Timers.Timer();
+        private bool IsWork;
+        private static int inTimer = 0;
+        private List<CaseFileData> caseList = new List<CaseFileData>();
+
+        private ObservableCollection<CaseFunction> _CaseFunctions;
+        public ObservableCollection<CaseFunction> CaseFunctions
+        {
+            get { return _CaseFunctions; }
+            set { this.SetProperty(ref this._CaseFunctions, value); }
+        }
+
+        /// <summary>
+        /// 证券信息集合
+        /// </summary>
+        private ObservableCollection<StockInfo> _StockInfos;
+        public ObservableCollection<StockInfo> StockInfos {
+            get
+            {
+                return _StockInfos;
+            }
+            set
+            {
+                SetProperty(ref _StockInfos, value);
+            }
+        }
+        #region 显示项目
+        /// <summary>
+        /// 项目信息集合
+        /// </summary>
+        private ObservableCollection<ProjectInfo> _ProjectInfos;
+        public ObservableCollection<ProjectInfo> ProjectInfos
+        {
+            get
+            {
+                if (_ProjectInfos == null)
+                {
+                    _ProjectInfos = new ObservableCollection<ProjectInfo>();
+                }
+                return _ProjectInfos;
+            }
+            set
+            {
+                SetProperty(ref _ProjectInfos, value);
+            }
+        }
+
+        /// <summary>
+        /// 选中项目
+        /// </summary>
+        private ProjectInfo _SelectProject;
+        public ProjectInfo SelectProject
+        {
+            get
+            {
+                if (_SelectProject != null)
+                {
+                    LoadScriptInfo(_SelectProject.FullPath);
+                }
+                return _SelectProject;
+            }
+            set
+            {
+                SetProperty(ref this._SelectProject, value);
+            }
+
+        }
+
+        /// <summary>
+        /// 加载项目下的案例信息
+        /// </summary>
+        /// <param name="path">项目文件夹路径</param>
+        private void LoadScriptInfo(string path)
+        {
+            //先清空原来的信息
+            CaseScripts.Clear();
+            //加载案例脚本信息
+            DirectoryInfo caseInfos = new DirectoryInfo(path);
+            foreach (var caseInfo in caseInfos.GetFiles())
+            {
+                string caseName = caseInfo.Name;
+                string caseFullPath = caseInfo.FullName;
+                CaseScripts.Add(new CaseScript(caseName, caseFullPath));
+            }
+        }
+        #endregion
+
+        private CaseGroup _SelectCase;
+        public CaseGroup SelectCase
+        {
+            get { return _SelectCase; }
+            set
+            {
+                SetProperty(ref this._SelectCase, value);
+                if (value != null)
+                {
+                    CaseFunctions = new ObservableCollection<CaseFunction>(value.FunList);
+                }
+            }
+
+        }
+
+        #region 显示案例脚本
+        /// <summary>
+        /// 选中脚本
+        /// </summary>
+        private CaseScript _SelectScript;
+        public CaseScript SelectScript
+        {
+            get { return _SelectScript; }
+            set
+            {
+                SetProperty(ref this._SelectScript, value);
+                test(_SelectScript.FullPath);
+            }
+
+        }
+
+        private ObservableCollection<CaseScript> _CaseScripts = new ObservableCollection<CaseScript>();
+        public ObservableCollection<CaseScript> CaseScripts
+        {
+            get
+            {
+                //案例脚本信息集合，每个根据所选的项目文件夹返回一个新的对象
+                if (_CaseScripts == null)
+                {
+                    _CaseScripts = new ObservableCollection<CaseScript>();
+                }
+                return _CaseScripts;
+            }
+            set { this.SetProperty(ref this._CaseScripts, value); }
+        }
+        #endregion
+
+
+        private ObservableCollection<CaseGroup> _CaseGroups = new ObservableCollection<CaseGroup>();
+        public ObservableCollection<CaseGroup> CaseGroups
+        {
+            get { return _CaseGroups; }
+            set { this.SetProperty(ref this._CaseGroups, value); }
+        }
+        private Dispatcher Dispatcher{get;set;}
+        public DataTable defaultTable { get; set; }
+        public MainViewModel(Dispatcher dispatcher)
+        {
+            Dispatcher = dispatcher;
+            ConnectionManager.Instance.NewConnection("config", 10000);
+            ConnectionManager.Instance.ConnectionManagerOnReceivedEx += Instance_ConnectionManagerOnReceivedEx;
+            InitCase();
+            InitStockInfo();
+            #region 定时器
+            timer.AutoReset = true;
+            timer.Interval = 400;
+            timer.Elapsed += Timer_Elapsed;
+            timer.Start();
+            #endregion
+
+        }
+
+        public MainViewModel()
+        {
+
+        }
+
+        /// <summary>
+        /// 初始化证券信息
+        /// </summary>
+        public void InitStockInfo()
+        {
+            StockInfos = new ObservableCollection<HqReplay.StockInfo>();
+            if (LoadStockInfo.excelData.Rows.Count > 0)
+            {
+                for (int i = 0; i < LoadStockInfo.excelData.Rows.Count; i++)
+                {
+                    string stockType = "";
+                    string stockNo = LoadStockInfo.excelData.Rows[i]["stock_code"].ToString();
+                    string exchangeNo = LoadStockInfo.excelData.Rows[i]["exch_no"].ToString();
+                    switch (exchangeNo)
+                    {
+                        case "1":
+                            stockType = "上海证券";
+                            break;
+                        case "2":
+                            stockType = "深圳证券";
+                            break;
+                        case "3":
+                            stockType = "沪深证券";
+                            break;
+                        case "4":
+                            stockType = "港深证券";
+                            break;
+                    }
+                    StockInfos.Add(new StockInfo(stockType, stockNo));
+                }
+            }
+        }
+
+        public void InitCase()
+        {
+            DoCaseLoad();
+            IsWork = false;
+            ReqAllList = new List<ReqDTO>();
+            //test();
+        }
+
+        private void Timer_Elapsed(object sender, ElapsedEventArgs e)
+        {
+            if (Interlocked.Exchange(ref inTimer, 1) == 0)
+            {
+                Dispatcher.BeginInvoke(new Action(() =>
+                {
+                    foreach (var data in caseList)
+                    {
+                        CaseGroup caseGroup=CaseGroups.FirstOrDefault(o=>o.ID == data.ID);
+                        if (caseGroup != null)
+                        {
+                            caseGroup.SendOkCount = data.SendOkCount;
+                            caseGroup.SendFailCount = data.SendFailCount;
+                            caseGroup.RecFailCount = data.RecFailCount;
+                            caseGroup.RecOkCount = data.RecOkCount;
+                        }
+                    }
+                }));
+                Interlocked.Exchange(ref inTimer, 0);
+            }
+        }
+        System.Windows.Controls.RichTextBox printData;
+        public void SetRichTextBox(System.Windows.Controls.RichTextBox printData)
+        {
+            this.printData = printData;
+        }
+       
+
+        private void Instance_ConnectionManagerOnReceivedEx(Connection connection, int hSend, LDFastMessageAdapter lpFastMsg, int result)
+        {
+            ReqDTO req = null;
+            lock (ReqLock)
+            {
+                req = ReqAllList.FirstOrDefault(o => o.SendID == hSend);
+                ReqAllList.Remove(req);
+            }
+            if (req != null && lpFastMsg !=null)
+            {
+                string strFunCode = lpFastMsg.GetString(LDSdkTag.LDTAG_FUNCID);
+                Console.WriteLine("Connect_OnReceivedEx  " + strFunCode);
+                Interlocked.Increment(ref req.CaseData.RecCount);
+                int iErrorNo=lpFastMsg.GetInt32(LDSdkTag.LDTAG_ERRORNO);
+                if (iErrorNo != 0)
+                {
+                    Interlocked.Increment(ref req.CaseData.RecFailCount);
+                }
+                else
+                {
+                    string strErrorCode = lpFastMsg.GetString(LDBizTag.LDBIZ_ERROR_CODE_STR);
+                   
+                    if (!"0".Equals(strErrorCode))
+                    {
+                        Interlocked.Increment(ref req.CaseData.RecFailCount);
+                        string strErrorInfo = lpFastMsg.GetString(LDBizTag.LDBIZ_ERROR_INFO_STR);
+                        string strErrorPrompt = lpFastMsg.GetString(LDBizTag.LDBIZ_ERROR_PROMPT_STR);
+                        string logInfo = string.Format("功能号[{0}]，errorCode[{1}]，errorinfo[{2}],errorprompt[{3}]", strFunCode, strErrorCode, strErrorInfo, strErrorPrompt);
+                        LogHelper.Logger.Error(logInfo);
+                    }
+                    else
+                    {
+                        Interlocked.Increment(ref req.CaseData.RecOkCount);
+                    }
+                    if (req.CaseData.SendCount - req.CaseData.RecCount >= req.CaseData.DownStage)
+                    {
+                        req.CaseData.ResetEvent.Set();
+                    }
+                }
+              
+            }
+            if (lpFastMsg !=null)
+            {
+                lpFastMsg.FreeMsg();
+            }
+        }
+
+        private List<CaseFunction> LoadCaseFunction(String filePath)
+        {
+            List<CaseFunction> list = new List<CaseFunction>();
+
+            if (!File.Exists(filePath))
+            {
+                return list;
+            }
+            XElement rootXML = XDocument.Load(filePath).Element("bizmsgs");
+            var funsXml = rootXML.Elements("function");
+            foreach (var item in funsXml)
+            {
+                string functionid = item.Attribute("functionid").Value;
+                string packettype = item.Attribute("packettype").Value;
+                if (packettype.Equals("0"))
+                {
+                    string functionname = item.Attribute("functionname").Value;
+                    CaseFunction fun = new CaseFunction()
+                    {
+                        FunID = functionid,
+                        FunType = 0,
+                        Check =1,
+                        FunName = functionname
+                    };
+
+                    list.Add(fun);
+                }
+            }
+            return list;
+
+        }
+        private  CaseFileData LoadCaseData(String filePath, List<CaseFunction> funList)
+        {
+            CaseFileData datas = new CaseFileData();
+            if (!File.Exists(filePath))
+            {
+                return datas;
+            }
+            datas.FilePath = @filePath;
+            XElement rootXML = XDocument.Load(filePath).Element("bizmsgs");
+            var funsXml = rootXML.Elements("function");
+            foreach (var item in funsXml)
+            {
+
+                string functionid = item.Attribute("functionid").Value;
+                string packettype = item.Attribute("packettype").Value;
+                var CheckFun=funList.FirstOrDefault(o => o.Check == 1 && o.FunID == functionid);
+                if (packettype.Equals("0") && CheckFun != null)
+                {
+                    string functionname = item.Attribute("functionname").Value;
+                    CaseFunction fun = new CaseFunction()
+                    {
+                        FunID = functionid,
+                        FunType = 0,
+                        Check = 1,
+                        FunName = functionname
+                    };
+                    //发送次数
+                    if (item.Attribute("value") != null)
+                    {
+                        string sendTimes = item.Attribute("times").Value;
+                        int nSendTimes = 1;
+                        int.TryParse(sendTimes, out nSendTimes);
+                        fun.SendTimes = nSendTimes;
+                    }
+                    datas.Functions.Add(fun);
+                    var filedsXml = item.Elements("field");
+
+                    LDsdkDefineEx.LDFastMessageAdapter fastmsg = new LDFastMessageAdapter(functionid, 0);
+                    LDRecordAdapter lpRecord = fastmsg.GetBizBodyRecord();
+                    int iIndex = 0;
+                    foreach (var filedItem in filedsXml)
+                    {
+                        int filedtype = lpRecord.GetFieldType(iIndex);
+
+                        string fieldid = filedItem.Attribute("fieldid").Value;
+                        string fieldname = filedItem.Attribute("fieldname").Value;
+                        PARAMTYPE paramtype = PARAMTYPE.emFile;
+                        string value = "";
+                        if (filedItem.Attribute("value") != null)
+                        {
+                            value = filedItem.Attribute("value").Value;
+                        }
+                        if (filedItem.Attribute("paramtype") != null)
+                        {
+                            string strparamtype = filedItem.Attribute("paramtype").Value;
+                            if ("file".Equals(strparamtype))
+                            {
+                                paramtype = PARAMTYPE.emFile;
+                            }
+                        }                      
+                        CaseFiled filed = new CaseFiled()
+                        {
+                            FiledTag = int.Parse(fieldid),
+                            FiledName = fieldname,
+                            FiledValue = value,
+                            FiledType = filedtype,
+                            FiledIndex = iIndex,
+                            ParamType = paramtype
+                        };
+                        var fileElemt = filedItem.Element("file");
+                        if (fileElemt != null && paramtype == PARAMTYPE.emFile)
+                        {
+
+                            filed.ColumnName = fieldname;
+                            if (fileElemt.Attribute("columnname") != null)
+                            {
+                                filed.ColumnName = fileElemt.Attribute("columnname").Value;
+                            }
+
+                            if (fileElemt.Attribute("filename") != null)
+                            {
+                                filed.FileName = fileElemt.Attribute("filename").Value;
+                                CSVFile csvFile = null;
+                                if (File.Exists(filed.FileName)&& !fun.AllCsvFile.TryGetValue(filed.FileName,out csvFile))
+                                {
+                                    var data = CSVFileHelper.OpenCSV(filed.FileName);
+                                    if (data!= null)
+                                    {
+                                        
+                                        csvFile = new CSVFile();
+                                        csvFile.FileName = filed.FiledName;
+                                        csvFile.Table = data;
+                                        fun.AllCsvFile.Add(filed.FileName, csvFile);
+                                    }
+                                    
+                                }
+                                if (csvFile != null && string.IsNullOrWhiteSpace(csvFile.DefaultFieldName))
+                                {
+                                    csvFile.DefaultFieldName = fieldname;
+                                    
+                                }
+
+                            }
+
+
+                            
+                            filed.SelectRow = VALUETYPE.emSameLine;
+                            if (fileElemt.Attribute("selectrow") != null)
+                            {
+                                try
+                                {
+                                    string SelectRow = fileElemt.Attribute("selectrow").Value;
+                                    if ("sequence".Equals(SelectRow))
+                                    {
+                                        filed.SelectRow = VALUETYPE.emSequence;
+                                    }
+                                    else if (new Regex("same_line").Match(SelectRow).Success)
+                                    {
+                                        filed.SameLineColumn = SelectRow.Split('[')[1].Split(']')[0];
+                                        filed.SelectRow = VALUETYPE.emSameLine;
+                                    }
+                                    else if ("random".Equals(SelectRow))
+                                    {
+                                        //默认("random".Equals(SelectRow))
+                                        filed.SelectRow = VALUETYPE.emRandom;
+                                    }
+                                
+                                }
+                                catch (Exception)
+                                {
+
+                                    //throw;
+                                }
+                               
+                            }
+                           
+
+                        }
+                        fun.Fileds.Add(filed);
+                        iIndex++;
+                    }
+                    fastmsg.FreeMsg();
+                }
+            }
+
+            return datas;
+        }
+
+      
+        private ICommand _CaseLoad;
+        public ICommand CaseLoad
+        {
+            get
+            {
+                if (_CaseLoad == null)
+                {
+                    _CaseLoad = new DelegateCommand(DoCaseLoad);
+                }
+                return _CaseLoad;
+            }
+        }
+        private ICommand _StartRun;
+        public ICommand StartRun
+        {
+            get
+            {
+                if (_StartRun == null)
+                {
+                    _StartRun = new DelegateCommand(DoStart);
+                }
+                return _StartRun;
+            }
+        }
+        private ICommand _StopRun;
+        public ICommand StopRun
+        {
+            get
+            {
+                if (_StopRun == null)
+                {
+                    _StopRun = new DelegateCommand(DoStop);
+                }
+                return _StopRun;
+            }
+        }
+        public void DoCaseLoad()
+        {
+
+            //CaseScripts = new ObservableCollection<CaseScript>(XmlDataLoader.LoadData<List<CaseScript>>(@"script.xml"));
+
+            List<CaseGroupBase>  baseGroups=XmlDataLoader.LoadData<List<CaseGroupBase>>(@"case.xml");
+            if (baseGroups != null)
+            {
+
+                foreach (var item in baseGroups)
+                {
+                    var caseFunList = LoadCaseFunction(item.FileName);
+
+                    CaseGroups.Add(new CaseGroup() {
+                         Check = item.Check,
+                         DownStage = item.DownStage,
+                         FileName = item.FileName,
+                         FunList = caseFunList,
+                         GroupName = item.GroupName,
+                         ID = item.ID,
+                         LoopCount = item.LoopCount,
+                         RecFailCount = item.RecFailCount,
+                         RecOkCount = item.RecOkCount,
+                         SendFailCount = item.SendFailCount,
+                         SendOkCount = item.SendOkCount,
+                         UpStage = item.UpStage
+
+                    });
+                }
+            }
+
+        }
+        public void DoStart()
+        {
+            LogHelper.Logger.Info("开始启动");
+            ExcelHelper excel = new ExcelHelper(@"defaultvalue.xlsx");
+            defaultTable = excel.ExcelToDataTable("Sheet1", true);
+            IsWork = false;
+            caseList.Clear();
+            IsWork = true;
+            foreach (var item in CaseGroups)
+            {
+                if (item.Check == 1)
+                {
+                    Task task = Task.Factory.StartNew(() =>
+                    {
+                        Work(item);
+                    });
+
+                }                            
+            }
+           
+          
+        }
+
+        private void DoStop()
+        {
+            LogHelper.Logger.Info("结束启动");
+            IsWork = false;
+        }
+        private void Work(CaseGroup caseGroup)
+        {
+            CaseFileData data = null;
+            try
+            {
+                data = LoadCaseData(caseGroup.FileName,caseGroup.FunList);
+            }
+            catch (Exception e)
+            {
+                LogHelper.Logger.Error("发现文件格式错误",e);
+                return;
+            }
+           
+            caseList.Add(data);
+            data.ID = caseGroup.ID;
+            data.UpStage = caseGroup.UpStage;
+            data.DownStage = caseGroup.DownStage;
+            do
+            {
+                if (!IsWork)
+                {
+                    break;
+                }
+                bool bNeedWait = (data.SendCount - data.RecCount) >= data.UpStage;
+                if (bNeedWait)
+                {
+                    data.ResetEvent.Reset();
+                    if (!data.ResetEvent.WaitOne(10000))
+                    {//等超时了，说明丢包了，重新置数
+                        data.RecCount = data.SendCount;
+                    }
+                }
+               
+                SendFastMsgReq(data);
+
+                for (int i=1;i<caseGroup.LoopCount;i++)
+                {
+                    if (!IsWork)
+                    {
+                        break;
+                    }
+                    SendFastMsgReq(data);
+                }
+              
+
+            } while (caseGroup.LoopCount==0);
+
+        }
+        private void SendFastMsgReq(CaseFileData file)
+        {
+            foreach (CaseFunction funitem in file.Functions)
+            {
+
+                int nSendTimes = 0;
+                do
+                {
+                    nSendTimes++;
+                    #region 发送包
+                    LDsdkDefineEx.LDFastMessageAdapter fastmsg = new LDFastMessageAdapter(funitem.FunID, funitem.FunType);
+                    foreach (var filedItem in funitem.Fileds)
+                    {
+                        string FiledValue = filedItem.FiledValue;
+                        int filedType = filedItem.FiledType;
+
+                        FiledValue = GetParamValue(funitem, filedItem);
+                        if (string.IsNullOrEmpty(FiledValue))
+                        {
+                            FiledValue = GetDefaultValue(filedItem.FiledTag, FiledValue);
+                        }
+                        UtilTool.SetFastMsgValue(fastmsg, filedType, FiledValue, filedItem.FiledIndex);
+                    }
+                    uint nRet = ConnectionManager.Instance.CurConnection.Connect.AsyncSend(funitem.FunID, fastmsg, 5000);
+                    lock (ReqLock)
+                    {
+                        ReqAllList.Add(new ReqDTO() { SendID = nRet, CaseData = file });
+                    }
+
+                    Interlocked.Increment(ref file.SendCount);
+                    if (nRet > 0)
+                    {
+
+                        Interlocked.Increment(ref file.SendOkCount);
+                    }
+                    else
+                    {
+                        Interlocked.Increment(ref file.SendFailCount);
+                    }
+                    fastmsg.FreeMsg();
+                    #endregion
+                } while (funitem.SendTimes>nSendTimes);
+
+               
+            }
+        }
+
+       
+        private String GetParamValue(CaseFunction funitem,CaseFiled filed)
+        {
+            String Value = filed.FiledValue;
+            if (filed.ParamType==PARAMTYPE.emFile)
+            {
+                if (File.Exists(filed.FileName))
+                {
+                    CSVFile csfFile = null;
+                    if (funitem.AllCsvFile.TryGetValue(filed.FileName, out csfFile))
+                    {
+                        DataTable data = csfFile.Table;
+                        if (filed.SelectRow == VALUETYPE.emRandom && data != null && data.Rows.Count > 0)
+                        {
+                            long tick = DateTime.Now.Ticks;
+                            Random ran = new Random((int)(tick & 0xffffffffL) | (int)(tick >> 32));
+                            csfFile.CurrFileRowIndex = ran.Next(data.Rows.Count);
+                            Value = data.Rows[csfFile.CurrFileRowIndex][filed.ColumnName].ToString().Replace("\"", "");
+                        }
+                        else if (filed.SelectRow==VALUETYPE.emSequence && data.Rows.Count>0)
+                        {
+                            if (data.Rows.Count > csfFile.CurrFileRowIndex + 1)
+                            {
+                                csfFile.CurrFileRowIndex++;
+                                Value = data.Rows[csfFile.CurrFileRowIndex][filed.ColumnName].ToString().Replace("\"", "");
+                            }
+                            else 
+                            {
+                                csfFile.CurrFileRowIndex = 0; ;
+                                Value = data.Rows[csfFile.CurrFileRowIndex][filed.ColumnName].ToString().Replace("\"", "");
+                            }
+                        }
+                        else if (filed.SelectRow == VALUETYPE.emSameLine && csfFile.CurrFileRowIndex>=0 && data.Rows.Count > 0)
+                        {
+                       
+                            Value = data.Rows[csfFile.CurrFileRowIndex][filed.ColumnName].ToString().Replace("\"", "");
+                        }
+                    }                    
+
+                }
+            }
+            if (filed.FiledTag == 1674)
+            {
+                Value = funitem.FunID;
+            }
+            return Value;
+
+        }
+
+        private String GetDefaultValue(int filedTag, String FiledValue)
+        {
+
+            int columnIndex = defaultTable.Columns["参数值"].Ordinal;
+            int rowIndex = filedTag - 1100 -1;
+
+            FiledValue = defaultTable.Rows[rowIndex][columnIndex].ToString().Trim(' ');
+            return FiledValue;
+        }
+
+      
+        /// <summary>
+        /// 脚本信息显示
+        /// </summary>
+        private ICSharpCode.AvalonEdit.Document.TextDocument _SrciptDoc = new ICSharpCode.AvalonEdit.Document.TextDocument();
+        public ICSharpCode.AvalonEdit.Document.TextDocument SrciptDoc
+        {
+            get
+            {
+                return this._SrciptDoc;
+            }
+            set
+            {
+                this.SetProperty(ref _SrciptDoc, value);
+            }
+        }
+
+        private ICommand _ClearPrint;
+        public ICommand ClearPrint
+        {
+            get
+            {
+                if (_ClearPrint == null)
+                {
+                    _ClearPrint = new DelegateCommand(DoClearPrint);
+                }
+                return _ClearPrint;
+            }
+        }
+
+        private void DoClearPrint()
+        {
+            printData.Document.Blocks.Clear();
+        }
+
+        private ICommand _RunScript;
+        public ICommand RunScript
+        {
+            get
+            {
+                if (_RunScript == null)
+                {
+                    _RunScript = new DelegateCommand(DoRunScript);
+                }
+                return _RunScript;
+            }
+        }
+
+        /// <summary>
+        /// 运行脚本
+        /// </summary>
+        public void DoRunScript()
+        {
+            string[] textArry = _SrciptDoc.Text.Split('\n');
+            PrintHelper.Print.PrintData = printData;
+            Task.Run(() =>
+            {
+                Compile cp = new Compile();
+               
+                cp.Run(textArry);
+
+            });
+          
+        }
+
+        private ICommand _ComplieScript;
+        public ICommand ComplieScript
+        {
+            get
+            {
+                if (_ComplieScript == null)
+                {
+                    _ComplieScript = new DelegateCommand(DoComplieScript);
+                }
+                return _ComplieScript;
+            }
+        }
+
+        private void DoComplieScript()
+        {
+            string[] textArry = _SrciptDoc.Text.Split('\n');
+            Task.Run(() =>
+            {
+                Compile cp = new Compile();
+                cp.PreCompile(textArry);
+
+            });
+         
+        }
+
+        /// <summary>
+        /// 加载并显示脚本信息
+        /// </summary>
+        private string test(string path = "NewOrder.script")
+        {
+            SrciptDoc.FileName = path;
+            string info = CSVFileHelper.OpenScript(path).ToString();
+            SrciptDoc.Text = info;
+            return info;
+        }
+
+        #region 保存脚本
+        private ICommand _SaveScript;
+        public ICommand SaveScript
+        {
+            get
+            {
+                if (_SaveScript == null)
+                {
+                    _SaveScript = new DelegateCommand(SaveScriptData);
+                }
+                return _SaveScript;
+            }
+            
+        }
+        public void SaveScriptData()
+        {
+            PrintHelper.Print.PrintData = printData;
+            string result = CSVFileHelper.SaveScript(SelectScript.FullPath, SrciptDoc.Text);
+            PrintHelper.Print.AppendLine(result);
+        }
+        #endregion
+
+        #region 脚本另存为
+        private ICommand _SaveScriptTo;
+        public ICommand SaveScriptTo
+        {
+            get
+            {
+                if (_SaveScriptTo == null)
+                {
+                    _SaveScriptTo = new DelegateCommand(SaveScriptDataTo);
+                }
+                return _SaveScriptTo;
+            }
+
+        }
+        public void SaveScriptDataTo()
+        {
+            PrintHelper.Print.PrintData = printData;
+            try
+            {
+                Microsoft.Win32.SaveFileDialog saveDialog = new Microsoft.Win32.SaveFileDialog();//定义保存文本框实体
+                saveDialog.Title = "脚本另存为";//对话框标题
+                saveDialog.Filter = "文件(.script)|*.script|所有文件|*.*";//文件扩展名
+                if (saveDialog.ShowDialog().GetValueOrDefault())
+                {
+                    //获取文件保存的路径
+                    string savePath = saveDialog.FileName;
+                    string result = CSVFileHelper.SaveScript(savePath, SrciptDoc.Text);
+                    LoadScriptInfo(_SelectProject.FullPath);
+                    PrintHelper.Print.AppendLine(result);
+                }
+            }
+            catch (Exception error)
+            {
+                PrintHelper.Print.AppendLine(error.Message + "\r\n" + error.StackTrace);
+            }
+        }
+        #endregion
+
+        #region 选择项目
+        private ICommand _OpenProject;
+        public ICommand OpenProject
+        {
+            get
+            {
+                if (_OpenProject == null)
+                {
+                    _OpenProject = new DelegateCommand(OpenProjectInfo);
+                }
+                return _OpenProject;
+            }
+
+        }
+        public void OpenProjectInfo()
+        {
+            PrintHelper.Print.PrintData = printData;
+            try
+            {
+                FolderBrowserDialog openProject = new FolderBrowserDialog();//定义文件夹实体
+                openProject.Description = "选择项目";//对话框标题
+                openProject.ShowNewFolderButton = true;//是否显示新建文件夹
+                openProject.ShowDialog();
+                if (!(openProject.SelectedPath == string.Empty))
+                {
+                    //获取项目文件夹信息
+                    string projectPath = openProject.SelectedPath;
+                    string projectName = projectPath.Split('\\').Last();
+                    ProjectInfos.Add(new ProjectInfo(projectName, projectPath));
+                }
+            }
+            catch (Exception error)
+            {
+                PrintHelper.Print.AppendLine(error.Message + "\r\n" + error.Source);
+            }
+        }
+        #endregion
+    }
+}

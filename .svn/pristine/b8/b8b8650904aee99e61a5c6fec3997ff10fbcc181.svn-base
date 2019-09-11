@@ -1,0 +1,559 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bizmsgs>
+    <function functionname="funcl_msage_UpdateObjectVerInfo" typename="LD_REQUEST" functionid="pubL.11.1" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="object_zh_name" fieldid="1479"/>
+        <field fieldname="object_en_name" fieldid="1478"/>
+        <field fieldname="object_type" fieldid="1477"/>
+        <field fieldname="main_ver_no" fieldid="3032"/>
+        <field fieldname="second_ver_no" fieldid="1357"/>
+        <field fieldname="rele_ver_no" fieldid="1503"/>
+        <field fieldname="ver_date" fieldid="1111"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funcl_msage_UpdateObjectVerInfo" typename="LD_ANSWER" functionid="pubL.11.1" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_msage_QueryObjectVerInfoJour" typename="LD_REQUEST" functionid="pubL.11.2" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="object_zh_name" fieldid="1479"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_msage_QueryObjectVerInfoJour" typename="LD_ANSWER" functionid="pubL.11.2" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="object_zh_name" fieldid="1479"/>
+            <field fieldname="jour_occur_field" fieldid="2184"/>
+            <field fieldname="jour_occur_info" fieldid="2183"/>
+            <field fieldname="jour_after_occur_info" fieldid="2185"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_msage_QueryObjectVerInfoJourHis" typename="LD_REQUEST" functionid="pubL.11.3" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="object_zh_name" fieldid="1479"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_msage_QueryObjectVerInfoJourHis" typename="LD_ANSWER" functionid="pubL.11.3" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="object_zh_name" fieldid="1479"/>
+            <field fieldname="jour_occur_field" fieldid="2184"/>
+            <field fieldname="jour_occur_info" fieldid="2183"/>
+            <field fieldname="jour_after_occur_info" fieldid="2185"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_msage_UpdateTask" typename="LD_REQUEST" functionid="pubL.11.6" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="task_no" fieldid="2424"/>
+        <field fieldname="task_name" fieldid="2426"/>
+        <field fieldname="depend_task_no" fieldid="2802"/>
+        <field fieldname="task_order" fieldid="2427"/>
+        <field fieldname="task_strike_status" fieldid="2430"/>
+        <field fieldname="task_strike_rule" fieldid="2428"/>
+        <field fieldname="exec_pro" fieldid="2952"/>
+        <field fieldname="busi_menu_no" fieldid="2787"/>
+        <field fieldname="busi_func_code" fieldid="2792"/>
+        <field fieldname="exec_count" fieldid="2951"/>
+        <field fieldname="task_status" fieldid="2431"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funcl_msage_UpdateTask" typename="LD_ANSWER" functionid="pubL.11.6" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_msage_QueryTask" typename="LD_REQUEST" functionid="pubL.11.7" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="task_no" fieldid="2424"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_msage_QueryTask" typename="LD_ANSWER" functionid="pubL.11.7" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="task_no" fieldid="2424"/>
+            <field fieldname="task_name" fieldid="2426"/>
+            <field fieldname="depend_task_no" fieldid="2802"/>
+            <field fieldname="task_order" fieldid="2427"/>
+            <field fieldname="task_strike_status" fieldid="2430"/>
+            <field fieldname="task_strike_rule" fieldid="2428"/>
+            <field fieldname="exec_pro" fieldid="2952"/>
+            <field fieldname="busi_menu_no" fieldid="2787"/>
+            <field fieldname="busi_func_code" fieldid="2792"/>
+            <field fieldname="exec_date" fieldid="2953"/>
+            <field fieldname="exec_time" fieldid="2954"/>
+            <field fieldname="comple_date" fieldid="2700"/>
+            <field fieldname="comple_time" fieldid="2701"/>
+            <field fieldname="exec_count" fieldid="2951"/>
+            <field fieldname="task_status" fieldid="2431"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_msage_UpdateTaskEx" typename="LD_REQUEST" functionid="pubL.11.11" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="task_no" fieldid="2424"/>
+        <field fieldname="task_name" fieldid="2426"/>
+        <field fieldname="depend_task_no" fieldid="2802"/>
+        <field fieldname="task_order" fieldid="2427"/>
+        <field fieldname="task_strike_status" fieldid="2430"/>
+        <field fieldname="task_strike_rule" fieldid="2428"/>
+        <field fieldname="exec_pro" fieldid="2952"/>
+        <field fieldname="busi_menu_no" fieldid="2787"/>
+        <field fieldname="busi_func_code" fieldid="2792"/>
+        <field fieldname="exec_count" fieldid="2951"/>
+        <field fieldname="task_status" fieldid="2431"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funcl_msage_UpdateTaskEx" typename="LD_ANSWER" functionid="pubL.11.11" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_msage_QueryTaskEx" typename="LD_REQUEST" functionid="pubL.11.12" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="task_no" fieldid="2424"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_msage_QueryTaskEx" typename="LD_ANSWER" functionid="pubL.11.12" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="task_no" fieldid="2424"/>
+            <field fieldname="task_name" fieldid="2426"/>
+            <field fieldname="depend_task_no" fieldid="2802"/>
+            <field fieldname="task_order" fieldid="2427"/>
+            <field fieldname="task_strike_status" fieldid="2430"/>
+            <field fieldname="task_strike_rule" fieldid="2428"/>
+            <field fieldname="exec_pro" fieldid="2952"/>
+            <field fieldname="busi_menu_no" fieldid="2787"/>
+            <field fieldname="busi_func_code" fieldid="2792"/>
+            <field fieldname="exec_date" fieldid="2953"/>
+            <field fieldname="exec_time" fieldid="2954"/>
+            <field fieldname="comple_date" fieldid="2700"/>
+            <field fieldname="comple_time" fieldid="2701"/>
+            <field fieldname="exec_count" fieldid="2951"/>
+            <field fieldname="task_status" fieldid="2431"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_msage_QueryOperLog" typename="LD_REQUEST" functionid="pubL.11.21" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="query_opor_no" fieldid="1209"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="query_menu_no" fieldid="1208"/>
+        <field fieldname="query_func_code" fieldid="1212"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_msage_QueryOperLog" typename="LD_ANSWER" functionid="pubL.11.21" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="log_level" fieldid="2436"/>
+            <field fieldname="target_menu_no" fieldid="2255"/>
+            <field fieldname="target_func_code" fieldid="2267"/>
+            <field fieldname="oper_mark" fieldid="1182"/>
+            <field fieldname="error_code" fieldid="1359"/>
+            <field fieldname="error_info" fieldid="1365"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_msage_QueryOperLogHis" typename="LD_REQUEST" functionid="pubL.11.22" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="query_opor_no" fieldid="1209"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="query_menu_no" fieldid="1208"/>
+        <field fieldname="query_func_code" fieldid="1212"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_msage_QueryOperLogHis" typename="LD_ANSWER" functionid="pubL.11.22" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="log_level" fieldid="2436"/>
+            <field fieldname="target_menu_no" fieldid="2255"/>
+            <field fieldname="target_func_code" fieldid="2267"/>
+            <field fieldname="oper_mark" fieldid="1182"/>
+            <field fieldname="error_code" fieldid="1359"/>
+            <field fieldname="error_info" fieldid="1365"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_msage_QueryOperTaskTipsInfo" typename="LD_REQUEST" functionid="pubL.11.30" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_msage_QueryOperTaskTipsInfo" typename="LD_ANSWER" functionid="pubL.11.30" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="log_level" fieldid="2436"/>
+            <field fieldname="exec_date" fieldid="2953"/>
+            <field fieldname="exec_time" fieldid="2954"/>
+            <field fieldname="comple_date" fieldid="2700"/>
+            <field fieldname="comple_time" fieldid="2701"/>
+            <field fieldname="mark_info" fieldid="4585"/>
+            <field fieldname="busi_menu_no" fieldid="2787"/>
+            <field fieldname="update_times" fieldid="3381"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_msage_AddOperTaskTipsInfo" typename="LD_REQUEST" functionid="pubL.11.31" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="log_level" fieldid="2436"/>
+        <field fieldname="exec_date" fieldid="2953"/>
+        <field fieldname="exec_time" fieldid="2954"/>
+        <field fieldname="comple_date" fieldid="2700"/>
+        <field fieldname="comple_time" fieldid="2701"/>
+        <field fieldname="mark_info" fieldid="4585"/>
+        <field fieldname="busi_menu_no" fieldid="2787"/>
+    </function>
+    <function functionname="funcl_msage_AddOperTaskTipsInfo" typename="LD_ANSWER" functionid="pubL.11.31" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_msage_ModOperTaskTipsInfo" typename="LD_REQUEST" functionid="pubL.11.32" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="log_level" fieldid="2436"/>
+        <field fieldname="exec_date" fieldid="2953"/>
+        <field fieldname="exec_time" fieldid="2954"/>
+        <field fieldname="comple_date" fieldid="2700"/>
+        <field fieldname="comple_time" fieldid="2701"/>
+        <field fieldname="mark_info" fieldid="4585"/>
+        <field fieldname="busi_menu_no" fieldid="2787"/>
+    </function>
+    <function functionname="funcl_msage_ModOperTaskTipsInfo" typename="LD_ANSWER" functionid="pubL.11.32" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_msage_DelOperTaskTipsInfo" typename="LD_REQUEST" functionid="pubL.11.33" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+    </function>
+    <function functionname="funcl_msage_DelOperTaskTipsInfo" typename="LD_ANSWER" functionid="pubL.11.33" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <field fieldname="rsp_id" fieldid="3350"/>
+    </function>
+    <function functionname="funcl_msage_QueryMoniSevrInfo" typename="LD_REQUEST" functionid="pubL.11.40" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="deal_flag" fieldid="1342"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="begin_time" fieldid="2074"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="end_time" fieldid="1987"/>
+        <field fieldname="moni_server_type" fieldid="5266"/>
+        <field fieldname="exception_level" fieldid="5265"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_msage_QueryMoniSevrInfo" typename="LD_ANSWER" functionid="pubL.11.40" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="create_date" fieldid="1354"/>
+            <field fieldname="create_time" fieldid="1355"/>
+            <field fieldname="update_date" fieldid="1667"/>
+            <field fieldname="update_time" fieldid="1669"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="exception_level" fieldid="5265"/>
+            <field fieldname="moni_server_type" fieldid="5266"/>
+            <field fieldname="computer_name" fieldid="5264"/>
+            <field fieldname="proc_no" fieldid="5263"/>
+            <field fieldname="proc_path" fieldid="5262"/>
+            <field fieldname="deal_flag" fieldid="1342"/>
+            <field fieldname="deal_info" fieldid="3309"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_msage_AddMoniSevrInfo" typename="LD_REQUEST" functionid="pubL.11.41" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exception_level" fieldid="5265"/>
+        <field fieldname="moni_server_type" fieldid="5266"/>
+        <field fieldname="computer_name" fieldid="5264"/>
+        <field fieldname="proc_no" fieldid="5263"/>
+        <field fieldname="proc_path" fieldid="5262"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+        <field fieldname="deal_flag" fieldid="1342"/>
+        <field fieldname="deal_info" fieldid="3309"/>
+    </function>
+    <function functionname="funcl_msage_AddMoniSevrInfo" typename="LD_ANSWER" functionid="pubL.11.41" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_msage_ModMoniSevrInfo" typename="LD_REQUEST" functionid="pubL.11.42" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="deal_flag" fieldid="1342"/>
+        <field fieldname="deal_info" fieldid="3309"/>
+    </function>
+    <function functionname="funcl_msage_ModMoniSevrInfo" typename="LD_ANSWER" functionid="pubL.11.42" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_msage_QueryOperLogHis" typename="LD_REQUEST" functionid="pubL.11.43" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="query_date" fieldid="1220"/>
+        <field fieldname="query_opor_no" fieldid="1209"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="query_menu_no" fieldid="1208"/>
+        <field fieldname="query_func_code" fieldid="1212"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_msage_QueryOperLogHis" typename="LD_ANSWER" functionid="pubL.11.43" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="log_level" fieldid="2436"/>
+            <field fieldname="target_menu_no" fieldid="2255"/>
+            <field fieldname="target_func_code" fieldid="2267"/>
+            <field fieldname="oper_mark" fieldid="1182"/>
+            <field fieldname="error_code" fieldid="1359"/>
+            <field fieldname="error_info" fieldid="1365"/>
+        </sequence>
+    </function>
+</bizmsgs>

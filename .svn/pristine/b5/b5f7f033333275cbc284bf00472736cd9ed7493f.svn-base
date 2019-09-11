@@ -1,0 +1,467 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bizmsgs>
+    <function functionname="funcl_rksepb_QuerySecuRiskRule" typename="LD_REQUEST" functionid="rksecuL.1.1" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="risk_rule_type" fieldid="1612"/>
+        <field fieldname="risk_calc_type" fieldid="1635"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_rksepb_QuerySecuRiskRule" typename="LD_ANSWER" functionid="rksecuL.1.1" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="risk_rule_type" fieldid="1612"/>
+            <field fieldname="risk_rule_name" fieldid="1614"/>
+            <field fieldname="risk_rule_code" fieldid="1611"/>
+            <field fieldname="risk_param_str" fieldid="1633"/>
+            <field fieldname="tim_deal_flag" fieldid="1343"/>
+            <field fieldname="corrsp_plug" fieldid="1480"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_rksepb_AddSecuRiskItem" typename="LD_REQUEST" functionid="rksecuL.1.2" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="order_dir_str" fieldid="1450"/>
+        <field fieldname="dime_id" fieldid="2717"/>
+        <field fieldname="risk_item_tmplat_id" fieldid="3673"/>
+        <field fieldname="trig_stage_type_str" fieldid="3882"/>
+        <field fieldname="compli_calc_level" fieldid="1751"/>
+        <field fieldname="unit_nav_flag" fieldid="1379"/>
+        <field fieldname="trig_type" fieldid="1348"/>
+        <field fieldname="compli_rules_remark" fieldid="1745"/>
+        <field fieldname="risk_rule_id" fieldid="1615"/>
+        <field fieldname="risk_rule_type" fieldid="1612"/>
+        <field fieldname="risk_rule_name" fieldid="1614"/>
+        <field fieldname="risk_rule_code" fieldid="1611"/>
+        <field fieldname="risk_param_str" fieldid="1633"/>
+        <field fieldname="risk_rule_value_str1" fieldid="1620"/>
+        <field fieldname="risk_rule_action1" fieldid="1605"/>
+        <field fieldname="risk_rule_value_str2" fieldid="1621"/>
+        <field fieldname="risk_rule_action2" fieldid="1606"/>
+        <field fieldname="risk_rule_value_str3" fieldid="1622"/>
+        <field fieldname="risk_rule_action3" fieldid="1607"/>
+        <field fieldname="risk_rule_value_str4" fieldid="1623"/>
+        <field fieldname="risk_rule_action4" fieldid="1608"/>
+        <field fieldname="corrsp_plug" fieldid="1480"/>
+        <field fieldname="begin_time" fieldid="2074"/>
+        <field fieldname="end_time" fieldid="1987"/>
+        <field fieldname="rule_flag" fieldid="2352"/>
+    </function>
+    <function functionname="funcl_rksepb_AddSecuRiskItem" typename="LD_ANSWER" functionid="rksecuL.1.2" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <field fieldname="row_id" fieldid="1867"/>
+    </function>
+    <function functionname="funcl_rksepb_ModiSecuRiskItem" typename="LD_REQUEST" functionid="rksecuL.1.3" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="order_dir_str" fieldid="1450"/>
+        <field fieldname="dime_id" fieldid="2717"/>
+        <field fieldname="risk_item_tmplat_id" fieldid="3673"/>
+        <field fieldname="trig_stage_type_str" fieldid="3882"/>
+        <field fieldname="compli_calc_level" fieldid="1751"/>
+        <field fieldname="unit_nav_flag" fieldid="1379"/>
+        <field fieldname="trig_type" fieldid="1348"/>
+        <field fieldname="compli_rules_remark" fieldid="1745"/>
+        <field fieldname="risk_rule_id" fieldid="1615"/>
+        <field fieldname="risk_rule_type" fieldid="1612"/>
+        <field fieldname="risk_rule_name" fieldid="1614"/>
+        <field fieldname="risk_rule_code" fieldid="1611"/>
+        <field fieldname="risk_param_str" fieldid="1633"/>
+        <field fieldname="risk_rule_value_str1" fieldid="1620"/>
+        <field fieldname="risk_rule_action1" fieldid="1605"/>
+        <field fieldname="risk_rule_value_str2" fieldid="1621"/>
+        <field fieldname="risk_rule_action2" fieldid="1606"/>
+        <field fieldname="risk_rule_value_str3" fieldid="1622"/>
+        <field fieldname="risk_rule_action3" fieldid="1607"/>
+        <field fieldname="risk_rule_value_str4" fieldid="1623"/>
+        <field fieldname="risk_rule_action4" fieldid="1608"/>
+        <field fieldname="corrsp_plug" fieldid="1480"/>
+        <field fieldname="begin_time" fieldid="2074"/>
+        <field fieldname="end_time" fieldid="1987"/>
+        <field fieldname="rule_flag" fieldid="2352"/>
+    </function>
+    <function functionname="funcl_rksepb_ModiSecuRiskItem" typename="LD_ANSWER" functionid="rksecuL.1.3" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_rksepb_DeleteSecuRiskItem" typename="LD_REQUEST" functionid="rksecuL.1.4" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="risk_item_id_str" fieldid="1631"/>
+        <field fieldname="compli_rules_remark" fieldid="1745"/>
+    </function>
+    <function functionname="funcl_rksepb_DeleteSecuRiskItem" typename="LD_ANSWER" functionid="rksecuL.1.4" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_rksepb_QuerySecuRiskItem" typename="LD_REQUEST" functionid="rksecuL.1.5" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="risk_item_id_str" fieldid="1631"/>
+        <field fieldname="compli_rules_remark" fieldid="1745"/>
+        <field fieldname="risk_rule_id" fieldid="1615"/>
+        <field fieldname="risk_rule_type" fieldid="1612"/>
+        <field fieldname="risk_rule_name" fieldid="1614"/>
+        <field fieldname="corrsp_plug" fieldid="1480"/>
+        <field fieldname="risk_item_tmplat_id" fieldid="3673"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_rksepb_QuerySecuRiskItem" typename="LD_ANSWER" functionid="rksecuL.1.5" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="exch_no_str" fieldid="2539"/>
+            <field fieldname="order_dir_str" fieldid="1450"/>
+            <field fieldname="dime_id" fieldid="2717"/>
+            <field fieldname="trig_stage_type_str" fieldid="3882"/>
+            <field fieldname="compli_calc_level" fieldid="1751"/>
+            <field fieldname="unit_nav_flag" fieldid="1379"/>
+            <field fieldname="trig_type" fieldid="1348"/>
+            <field fieldname="compli_rules_remark" fieldid="1745"/>
+            <field fieldname="risk_rule_id" fieldid="1615"/>
+            <field fieldname="risk_rule_type" fieldid="1612"/>
+            <field fieldname="risk_rule_name" fieldid="1614"/>
+            <field fieldname="risk_rule_code" fieldid="1611"/>
+            <field fieldname="risk_param_str" fieldid="1633"/>
+            <field fieldname="risk_rule_value_str1" fieldid="1620"/>
+            <field fieldname="risk_rule_action1" fieldid="1605"/>
+            <field fieldname="risk_rule_value_str2" fieldid="1621"/>
+            <field fieldname="risk_rule_action2" fieldid="1606"/>
+            <field fieldname="risk_rule_value_str3" fieldid="1622"/>
+            <field fieldname="risk_rule_action3" fieldid="1607"/>
+            <field fieldname="risk_rule_value_str4" fieldid="1623"/>
+            <field fieldname="risk_rule_action4" fieldid="1608"/>
+            <field fieldname="corrsp_plug" fieldid="1480"/>
+            <field fieldname="begin_time" fieldid="2074"/>
+            <field fieldname="end_time" fieldid="1987"/>
+            <field fieldname="risk_item_tmplat_id" fieldid="3673"/>
+            <field fieldname="rule_flag" fieldid="2352"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_rksepb_AddSecuRiskModel" typename="LD_REQUEST" functionid="rksecuL.1.6" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="model_name" fieldid="2245"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funcl_rksepb_AddSecuRiskModel" typename="LD_ANSWER" functionid="rksecuL.1.6" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_rksepb_DeleteSecuRiskModel" typename="LD_REQUEST" functionid="rksecuL.1.7" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="model_id" fieldid="2247"/>
+    </function>
+    <function functionname="funcl_rksepb_DeleteSecuRiskModel" typename="LD_ANSWER" functionid="rksecuL.1.7" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_rksepb_ModiSecuRiskModel" typename="LD_REQUEST" functionid="rksecuL.1.8" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="model_id" fieldid="2247"/>
+        <field fieldname="model_name" fieldid="2245"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funcl_rksepb_ModiSecuRiskModel" typename="LD_ANSWER" functionid="rksecuL.1.8" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_rksepb_QuerySecuRiskModel" typename="LD_REQUEST" functionid="rksecuL.1.9" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="model_id" fieldid="2247"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_rksepb_QuerySecuRiskModel" typename="LD_ANSWER" functionid="rksecuL.1.9" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="model_name" fieldid="2245"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_rksepb_AddSecuRiskModelItem" typename="LD_REQUEST" functionid="rksecuL.1.10" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="model_id" fieldid="2247"/>
+        <field fieldname="risk_item_id_str" fieldid="1631"/>
+    </function>
+    <function functionname="funcl_rksepb_AddSecuRiskModelItem" typename="LD_ANSWER" functionid="rksecuL.1.10" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_rksepb_DeleteSecuRiskModelItem" typename="LD_REQUEST" functionid="rksecuL.1.11" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="model_id" fieldid="2247"/>
+        <field fieldname="risk_item_id_str" fieldid="1631"/>
+    </function>
+    <function functionname="funcl_rksepb_DeleteSecuRiskModelItem" typename="LD_ANSWER" functionid="rksecuL.1.11" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_rksepb_QuerySecuRiskModelItem" typename="LD_REQUEST" functionid="rksecuL.1.12" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="model_id" fieldid="2247"/>
+        <field fieldname="risk_item_id_str" fieldid="1631"/>
+        <field fieldname="compli_rules_remark" fieldid="1745"/>
+        <field fieldname="risk_rule_type" fieldid="1612"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_rksepb_QuerySecuRiskModelItem" typename="LD_ANSWER" functionid="rksecuL.1.12" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="exch_no_str" fieldid="2539"/>
+            <field fieldname="order_dir_str" fieldid="1450"/>
+            <field fieldname="dime_id" fieldid="2717"/>
+            <field fieldname="risk_item_id" fieldid="1630"/>
+            <field fieldname="trig_stage_type_str" fieldid="3882"/>
+            <field fieldname="compli_calc_level" fieldid="1751"/>
+            <field fieldname="unit_nav_flag" fieldid="1379"/>
+            <field fieldname="trig_type" fieldid="1348"/>
+            <field fieldname="compli_rules_remark" fieldid="1745"/>
+            <field fieldname="risk_rule_id" fieldid="1615"/>
+            <field fieldname="risk_rule_type" fieldid="1612"/>
+            <field fieldname="risk_rule_name" fieldid="1614"/>
+            <field fieldname="risk_rule_code" fieldid="1611"/>
+            <field fieldname="risk_param_str" fieldid="1633"/>
+            <field fieldname="risk_rule_value_str1" fieldid="1620"/>
+            <field fieldname="risk_rule_action1" fieldid="1605"/>
+            <field fieldname="risk_rule_value_str2" fieldid="1621"/>
+            <field fieldname="risk_rule_action2" fieldid="1606"/>
+            <field fieldname="risk_rule_value_str3" fieldid="1622"/>
+            <field fieldname="risk_rule_action3" fieldid="1607"/>
+            <field fieldname="risk_rule_value_str4" fieldid="1623"/>
+            <field fieldname="risk_rule_action4" fieldid="1608"/>
+            <field fieldname="corrsp_plug" fieldid="1480"/>
+            <field fieldname="begin_time" fieldid="2074"/>
+            <field fieldname="end_time" fieldid="1987"/>
+            <field fieldname="rule_flag" fieldid="2352"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_rksepb_UpdateSecuRiskItemFlag" typename="LD_REQUEST" functionid="rksecuL.1.13" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="risk_item_id_str" fieldid="1631"/>
+        <field fieldname="risk_rule_type" fieldid="1612"/>
+        <field fieldname="rule_flag" fieldid="2352"/>
+    </function>
+    <function functionname="funcl_rksepb_UpdateSecuRiskItemFlag" typename="LD_ANSWER" functionid="rksecuL.1.13" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_rksepb_SecuDataToHis" typename="LD_REQUEST" functionid="rksecuL.1.14" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+    </function>
+    <function functionname="funcl_rksepb_SecuDataToHis" typename="LD_ANSWER" functionid="rksecuL.1.14" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_rksepb_QuerySecuRiskItemTempl" typename="LD_REQUEST" functionid="rksecuL.1.15" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="risk_rule_type" fieldid="1612"/>
+    </function>
+    <function functionname="funcl_rksepb_QuerySecuRiskItemTempl" typename="LD_ANSWER" functionid="rksecuL.1.15" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="exch_no_str" fieldid="2539"/>
+            <field fieldname="order_dir_str" fieldid="1450"/>
+            <field fieldname="dime_type" fieldid="2713"/>
+            <field fieldname="ctrl_cond_dim_code_str" fieldid="2118"/>
+            <field fieldname="trig_stage_type_str" fieldid="3882"/>
+            <field fieldname="compli_calc_level" fieldid="1751"/>
+            <field fieldname="trig_type" fieldid="1348"/>
+            <field fieldname="risk_item_tmplat_name" fieldid="3666"/>
+            <field fieldname="risk_rule_id" fieldid="1615"/>
+            <field fieldname="risk_rule_type" fieldid="1612"/>
+            <field fieldname="risk_rule_name" fieldid="1614"/>
+            <field fieldname="risk_rule_code" fieldid="1611"/>
+            <field fieldname="risk_param_str" fieldid="1633"/>
+        </sequence>
+    </function>
+</bizmsgs>

@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bizmsgs>
+    <function functionname="funcl_sequotser_InitStockCode" typename="LD_REQUEST" functionid="pubL.16.1" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="stock_name" fieldid="2946"/>
+        <field fieldname="pinyin_short" fieldid="2311"/>
+        <field fieldname="up_limit_price" fieldid="2905" decimalPlaces="9"/>
+        <field fieldname="down_limit_price" fieldid="1436" decimalPlaces="9"/>
+    </function>
+    <function functionname="funcl_sequotser_InitStockCode" typename="LD_ANSWER" functionid="pubL.16.1" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <field fieldname="row_id" fieldid="1867"/>
+    </function>
+    <function functionname="funcl_sequotser_UpdateStockCodeQuot" typename="LD_REQUEST" functionid="pubL.16.2" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+        <field fieldname="pre_close_price" fieldid="3140" decimalPlaces="9"/>
+        <field fieldname="stop_status" fieldid="2608"/>
+        <field fieldname="up_limit_price" fieldid="2905" decimalPlaces="9"/>
+        <field fieldname="down_limit_price" fieldid="1436" decimalPlaces="9"/>
+        <field fieldname="today_open_price" fieldid="2001" decimalPlaces="9"/>
+        <field fieldname="today_close_price" fieldid="2002" decimalPlaces="9"/>
+        <field fieldname="today_max_price" fieldid="2004" decimalPlaces="9"/>
+        <field fieldname="today_min_price" fieldid="2003" decimalPlaces="9"/>
+        <field fieldname="buy_price_1" fieldid="2207" decimalPlaces="9"/>
+        <field fieldname="buy_qty_1" fieldid="2208" decimalPlaces="2"/>
+        <field fieldname="buy_price_2" fieldid="2189" decimalPlaces="9"/>
+        <field fieldname="buy_qty_2" fieldid="2190" decimalPlaces="2"/>
+        <field fieldname="buy_price_3" fieldid="2201" decimalPlaces="9"/>
+        <field fieldname="buy_qty_3" fieldid="2202" decimalPlaces="2"/>
+        <field fieldname="buy_price_4" fieldid="2203" decimalPlaces="9"/>
+        <field fieldname="buy_qty_4" fieldid="2204" decimalPlaces="2"/>
+        <field fieldname="buy_price_5" fieldid="2205" decimalPlaces="9"/>
+        <field fieldname="buy_qty_5" fieldid="2206" decimalPlaces="2"/>
+        <field fieldname="sell_price_1" fieldid="2228" decimalPlaces="9"/>
+        <field fieldname="sell_qty_1" fieldid="2229" decimalPlaces="2"/>
+        <field fieldname="sell_price_2" fieldid="2219" decimalPlaces="9"/>
+        <field fieldname="sell_qty_2" fieldid="2220" decimalPlaces="2"/>
+        <field fieldname="sell_price_3" fieldid="2222" decimalPlaces="9"/>
+        <field fieldname="sell_qty_3" fieldid="2223" decimalPlaces="2"/>
+        <field fieldname="sell_price_4" fieldid="2224" decimalPlaces="9"/>
+        <field fieldname="sell_qty_4" fieldid="2225" decimalPlaces="2"/>
+        <field fieldname="sell_price_5" fieldid="2226" decimalPlaces="9"/>
+        <field fieldname="sell_qty_5" fieldid="2227" decimalPlaces="2"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+    </function>
+    <function functionname="funcl_sequotser_UpdateStockCodeQuot" typename="LD_ANSWER" functionid="pubL.16.2" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_sequotser_AskAvailAvgPrice" typename="LD_REQUEST" functionid="pubL.16.3" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="ask_exec_qty" fieldid="3595" decimalPlaces="2"/>
+        <field fieldname="begin_time" fieldid="2074"/>
+        <field fieldname="end_time" fieldid="1987"/>
+        <field fieldname="comm_limit_price" fieldid="3008" decimalPlaces="9"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+    </function>
+    <function functionname="funcl_sequotser_AskAvailAvgPrice" typename="LD_ANSWER" functionid="pubL.16.3" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="comm_limit_price" fieldid="3008" decimalPlaces="9"/>
+        <field fieldname="ask_exec_qty" fieldid="3595" decimalPlaces="2"/>
+        <field fieldname="ask_exec_qty1" fieldid="3596" decimalPlaces="2"/>
+        <field fieldname="ask_exec_qty2" fieldid="3597" decimalPlaces="2"/>
+        <field fieldname="ask_exec_qty3" fieldid="3598" decimalPlaces="2"/>
+        <field fieldname="ask_exec_qty4" fieldid="3599" decimalPlaces="2"/>
+        <field fieldname="ask_avg_price1" fieldid="3600" decimalPlaces="9"/>
+        <field fieldname="ask_avg_price2" fieldid="3601" decimalPlaces="9"/>
+    </function>
+    <function functionname="funcl_sequotser_AskStockQuot" typename="LD_REQUEST" functionid="pubL.16.4" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+    </function>
+    <function functionname="funcl_sequotser_AskStockQuot" typename="LD_ANSWER" functionid="pubL.16.4" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="quot_price_info" fieldid="3602"/>
+    </function>
+    <function functionname="funcl_sequotser_PushRealQuot" typename="LD_REQUEST" functionid="pubL.16.5" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="quot_price_info" fieldid="3602"/>
+    </function>
+    <function functionname="funcl_sequotser_PushRealQuot" typename="LD_ANSWER" functionid="pubL.16.5" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_sequotser_AskSHStockQuot" typename="LD_REQUEST" functionid="pubL.16.11" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+    </function>
+    <function functionname="funcl_sequotser_AskSHStockQuot" typename="LD_ANSWER" functionid="pubL.16.11" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="quot_price_info" fieldid="3602"/>
+    </function>
+    <function functionname="funcl_sequotser_AskSZStockQuot" typename="LD_REQUEST" functionid="pubL.16.12" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+    </function>
+    <function functionname="funcl_sequotser_AskSZStockQuot" typename="LD_ANSWER" functionid="pubL.16.12" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="quot_price_info" fieldid="3602"/>
+    </function>
+    <function functionname="funcl_sequotser_AskBatchStockQuot" typename="LD_REQUEST" functionid="pubL.16.15" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="stock_code_str" fieldid="3191"/>
+    </function>
+    <function functionname="funcl_sequotser_AskBatchStockQuot" typename="LD_ANSWER" functionid="pubL.16.15" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="quot_price_info" fieldid="3602"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_sequotser_AskMultiDayAvailAvgPrice" typename="LD_REQUEST" functionid="pubL.16.16" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="comm_id" fieldid="3010"/>
+        <field fieldname="ask_exec_qty" fieldid="3595" decimalPlaces="2"/>
+        <field fieldname="comm_begin_date" fieldid="2983"/>
+        <field fieldname="comm_end_date" fieldid="2978"/>
+        <field fieldname="begin_time" fieldid="2074"/>
+        <field fieldname="end_time" fieldid="1987"/>
+        <field fieldname="comm_limit_price" fieldid="3008" decimalPlaces="9"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+    </function>
+    <function functionname="funcl_sequotser_AskMultiDayAvailAvgPrice" typename="LD_ANSWER" functionid="pubL.16.16" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="comm_limit_price" fieldid="3008" decimalPlaces="9"/>
+        <field fieldname="ask_exec_qty" fieldid="3595" decimalPlaces="2"/>
+        <field fieldname="ask_exec_qty1" fieldid="3596" decimalPlaces="2"/>
+        <field fieldname="ask_exec_qty2" fieldid="3597" decimalPlaces="2"/>
+        <field fieldname="ask_exec_qty3" fieldid="3598" decimalPlaces="2"/>
+        <field fieldname="ask_exec_qty4" fieldid="3599" decimalPlaces="2"/>
+        <field fieldname="ask_avg_price1" fieldid="3600" decimalPlaces="9"/>
+        <field fieldname="ask_avg_price2" fieldid="3601" decimalPlaces="9"/>
+    </function>
+    <function functionname="funcl_sequotser_AfterMarketUpdateStockCodeQuot" typename="LD_REQUEST" functionid="pubL.16.17" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+        <field fieldname="pre_close_price" fieldid="3140" decimalPlaces="9"/>
+        <field fieldname="up_limit_price" fieldid="2905" decimalPlaces="9"/>
+        <field fieldname="down_limit_price" fieldid="1436" decimalPlaces="9"/>
+        <field fieldname="today_open_price" fieldid="2001" decimalPlaces="9"/>
+        <field fieldname="today_close_price" fieldid="2002" decimalPlaces="9"/>
+        <field fieldname="today_max_price" fieldid="2004" decimalPlaces="9"/>
+        <field fieldname="today_min_price" fieldid="2003" decimalPlaces="9"/>
+        <field fieldname="buy_price_1" fieldid="2207" decimalPlaces="9"/>
+        <field fieldname="buy_qty_1" fieldid="2208" decimalPlaces="2"/>
+        <field fieldname="buy_price_2" fieldid="2189" decimalPlaces="9"/>
+        <field fieldname="buy_qty_2" fieldid="2190" decimalPlaces="2"/>
+        <field fieldname="buy_price_3" fieldid="2201" decimalPlaces="9"/>
+        <field fieldname="buy_qty_3" fieldid="2202" decimalPlaces="2"/>
+        <field fieldname="buy_price_4" fieldid="2203" decimalPlaces="9"/>
+        <field fieldname="buy_qty_4" fieldid="2204" decimalPlaces="2"/>
+        <field fieldname="buy_price_5" fieldid="2205" decimalPlaces="9"/>
+        <field fieldname="buy_qty_5" fieldid="2206" decimalPlaces="2"/>
+        <field fieldname="sell_price_1" fieldid="2228" decimalPlaces="9"/>
+        <field fieldname="sell_qty_1" fieldid="2229" decimalPlaces="2"/>
+        <field fieldname="sell_price_2" fieldid="2219" decimalPlaces="9"/>
+        <field fieldname="sell_qty_2" fieldid="2220" decimalPlaces="2"/>
+        <field fieldname="sell_price_3" fieldid="2222" decimalPlaces="9"/>
+        <field fieldname="sell_qty_3" fieldid="2223" decimalPlaces="2"/>
+        <field fieldname="sell_price_4" fieldid="2224" decimalPlaces="9"/>
+        <field fieldname="sell_qty_4" fieldid="2225" decimalPlaces="2"/>
+        <field fieldname="sell_price_5" fieldid="2226" decimalPlaces="9"/>
+        <field fieldname="sell_qty_5" fieldid="2227" decimalPlaces="2"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+    </function>
+    <function functionname="funcl_sequotser_AfterMarketUpdateStockCodeQuot" typename="LD_ANSWER" functionid="pubL.16.17" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_sequotser_AskBatchHKStockQuot" typename="LD_REQUEST" functionid="pubL.16.18" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="stock_code_str" fieldid="3191"/>
+    </function>
+    <function functionname="funcl_sequotser_AskBatchHKStockQuot" typename="LD_ANSWER" functionid="pubL.16.18" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="quot_price_info" fieldid="3602"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_sequotser_TestServer" typename="LD_REQUEST" functionid="pubL.16.19" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="comm_id" fieldid="3010"/>
+        <field fieldname="ask_exec_qty" fieldid="3595" decimalPlaces="2"/>
+        <field fieldname="comm_begin_date" fieldid="2983"/>
+        <field fieldname="comm_end_date" fieldid="2978"/>
+        <field fieldname="begin_time" fieldid="2074"/>
+        <field fieldname="end_time" fieldid="1987"/>
+        <field fieldname="comm_limit_price" fieldid="3008" decimalPlaces="9"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+    </function>
+    <function functionname="funcl_sequotser_TestServer" typename="LD_ANSWER" functionid="pubL.16.19" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="comm_limit_price" fieldid="3008" decimalPlaces="9"/>
+        <field fieldname="ask_exec_qty" fieldid="3595" decimalPlaces="2"/>
+        <field fieldname="ask_exec_qty1" fieldid="3596" decimalPlaces="2"/>
+        <field fieldname="ask_exec_qty2" fieldid="3597" decimalPlaces="2"/>
+        <field fieldname="ask_exec_qty3" fieldid="3598" decimalPlaces="2"/>
+        <field fieldname="ask_exec_qty4" fieldid="3599" decimalPlaces="2"/>
+        <field fieldname="ask_avg_price1" fieldid="3600" decimalPlaces="9"/>
+        <field fieldname="ask_avg_price2" fieldid="3601" decimalPlaces="9"/>
+    </function>
+</bizmsgs>

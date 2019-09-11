@@ -1,0 +1,510 @@
+[2019-09-05 09:49:13:024]
+            LogID:[ldsdk] 3500[sdk初始化完成]
+            Level:INFO
+            Module:sdk
+            Message:sdk编译日期：May  6 2019  编译时间：11:20:30
+[2019-09-05 09:50:05:855]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.11  Time:188
+[2019-09-05 09:50:06:883]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.101  Time:31
+[2019-09-05 09:50:06:907]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.12  Time:16
+[2019-09-05 09:50:18:526]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.11  Time:157
+[2019-09-05 09:50:19:589]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.101  Time:62
+[2019-09-05 09:50:19:747]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.12  Time:156
+[2019-09-05 09:50:26:947]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.11  Time:94
+[2019-09-05 09:50:27:987]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.101  Time:31
+[2019-09-05 09:50:28:000]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.12  Time:15
+[2019-09-05 09:50:36:006]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.11  Time:78
+[2019-09-05 09:50:37:028]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.101  Time:16
+[2019-09-05 09:50:37:088]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.12  Time:62
+[2019-09-05 09:50:40:412]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.11  Time:172
+[2019-09-05 09:50:41:449]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.101  Time:32
+[2019-09-05 09:50:41:641]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.12  Time:187
+[2019-09-05 09:50:43:956]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.11  Time:204
+[2019-09-05 09:50:44:994]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.101  Time:46
+[2019-09-05 09:50:45:144]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.12  Time:141
+[2019-09-05 09:50:47:771]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.11  Time:110
+[2019-09-05 09:50:48:833]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.101  Time:62
+[2019-09-05 09:50:48:881]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.12  Time:47
+[2019-09-05 09:51:37:220]
+            LogID:[ldsdk] 3500[sdk初始化完成]
+            Level:INFO
+            Module:sdk
+            Message:sdk编译日期：May  6 2019  编译时间：11:20:30
+[2019-09-05 09:51:56:703]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.11  Time:79
+[2019-09-05 09:51:57:969]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.101  Time:250
+[2019-09-05 09:51:58:101]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.12  Time:141
+[2019-09-05 09:52:02:310]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.11  Time:63
+[2019-09-05 09:52:02:329]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.11  Time:63
+[2019-09-05 09:52:02:336]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.11  Time:94
+[2019-09-05 09:52:03:379]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.101  Time:15
+[2019-09-05 09:52:03:379]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.101  Time:46
+[2019-09-05 09:52:03:437]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.101  Time:125
+[2019-09-05 09:52:03:467]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.12  Time:94
+[2019-09-05 09:52:03:491]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.12  Time:109
+[2019-09-05 09:52:03:491]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.12  Time:62
+[2019-09-05 09:52:58:577]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.11  Time:188
+[2019-09-05 09:52:58:581]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.11  Time:188
+[2019-09-05 09:52:58:608]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.11  Time:203
+[2019-09-05 09:52:59:685]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.101  Time:109
+[2019-09-05 09:52:59:739]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.101  Time:125
+[2019-09-05 09:52:59:739]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.101  Time:156
+[2019-09-05 09:52:59:834]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.12  Time:156
+[2019-09-05 09:52:59:863]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.12  Time:110
+[2019-09-05 09:52:59:883]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.12  Time:141
+[2019-09-05 09:54:57:614]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.11  Time:156
+[2019-09-05 09:54:57:620]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.11  Time:203
+[2019-09-05 09:54:57:640]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.11  Time:203
+[2019-09-05 09:54:58:629]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.101  Time:0
+[2019-09-05 09:54:58:645]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.101  Time:16
+[2019-09-05 09:54:58:665]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.101  Time:31
+[2019-09-05 09:54:58:758]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.12  Time:94
+[2019-09-05 09:54:58:758]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.12  Time:109
+[2019-09-05 09:54:58:782]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.12  Time:157
+[2019-09-05 09:55:16:220]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.11  Time:109
+[2019-09-05 09:55:16:457]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.11  Time:329
+[2019-09-05 09:55:17:251]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.101  Time:31
+[2019-09-05 09:55:17:311]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.12  Time:63
+[2019-09-05 09:55:17:539]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.12  Time:93
+[2019-09-05 10:01:32:594]
+            LogID:[ldsdk] 3500[sdk初始化完成]
+            Level:INFO
+            Module:sdk
+            Message:sdk编译日期：May  6 2019  编译时间：11:20:30
+[2019-09-05 10:01:59:721]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.11  Time:94
+[2019-09-05 10:02:00:819]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.101  Time:94
+[2019-09-05 10:02:00:929]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.12  Time:109
+[2019-09-05 10:02:01:573]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.11  Time:172
+[2019-09-05 10:02:02:671]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.101  Time:93
+[2019-09-05 10:02:02:739]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.12  Time:63
+[2019-09-05 10:02:03:476]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.11  Time:156
+[2019-09-05 10:02:04:516]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.101  Time:31
+[2019-09-05 10:02:04:602]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.12  Time:94
+[2019-09-05 11:29:46:802]
+            LogID:[ldsdk] 3500[sdk初始化完成]
+            Level:INFO
+            Module:sdk
+            Message:sdk编译日期：May  6 2019  编译时间：11:20:30
+[2019-09-05 13:09:02:012]
+            LogID:[ldsdk] 3500[sdk初始化完成]
+            Level:INFO
+            Module:sdk
+            Message:sdk编译日期：May  6 2019  编译时间：11:20:30
+[2019-09-05 13:14:30:086]
+            LogID:[ldsdk] 3500[sdk初始化完成]
+            Level:INFO
+            Module:sdk
+            Message:sdk编译日期：May  6 2019  编译时间：11:20:30
+[2019-09-05 13:17:46:883]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.11  Time:62
+[2019-09-05 13:17:47:912]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.101  Time:31
+[2019-09-05 13:17:48:010]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.12  Time:94
+[2019-09-05 13:18:15:234]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.11  Time:63
+[2019-09-05 13:18:15:243]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.11  Time:62
+[2019-09-05 13:18:15:750]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.11  Time:46
+[2019-09-05 13:18:16:256]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.101  Time:31
+[2019-09-05 13:18:16:277]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.12  Time:32
+[2019-09-05 13:18:16:297]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.12  Time:31
+[2019-09-05 13:18:24:629]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.11  Time:125
+[2019-09-05 13:18:25:647]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.101  Time:32
+[2019-09-05 13:18:25:686]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.12  Time:31
+[2019-09-05 13:18:40:439]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.11  Time:63
+[2019-09-05 13:18:41:457]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.101  Time:16
+[2019-09-05 13:18:41:497]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.12  Time:46
+[2019-09-05 13:19:15:813]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.11  Time:78
+[2019-09-05 13:19:40:751]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.11  Time:78
+[2019-09-05 13:19:41:810]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.101  Time:63
+[2019-09-05 13:19:41:881]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.12  Time:78
+[2019-09-05 13:20:09:398]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.11  Time:125
+[2019-09-05 13:20:10:419]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.101  Time:15
+[2019-09-05 13:20:10:469]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.12  Time:47
+[2019-09-05 13:20:17:948]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.11  Time:157
+[2019-09-05 13:20:18:967]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.101  Time:15
+[2019-09-05 13:20:19:005]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.12  Time:31
+[2019-09-05 13:22:32:290]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.11  Time:93
+[2019-09-05 13:22:33:312]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.101  Time:16
+[2019-09-05 13:22:33:431]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.12  Time:125
+[2019-09-05 13:22:59:725]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.11  Time:297
+[2019-09-05 13:23:00:742]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.101  Time:15
+[2019-09-05 13:23:00:803]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.12  Time:63

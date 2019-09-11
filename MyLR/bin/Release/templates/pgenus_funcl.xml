@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizmsgs>
+     <function functionname="funcl_user_genus_order" typename="LD_REQUEST" functionid="jn.1.1" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="client_version" fieldid="2094"/>
+    </function>   	
+</bizmsgs>

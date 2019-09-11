@@ -1,0 +1,26 @@
+<?xml  version="1.0" encoding="GBK"?>
+<app name="ldsvr" >
+	<guard	note="这里配置守护信息">
+	</guard>
+	<svrimg note="这里配置服务镜像信息，初始化顺序按插件依赖关系自动判断">
+		<modules	>
+			<plugin lib="ld_log" note="日志插件">
+				<args KeepDays="FOREVER" KeepNote="WEEK、MONTH、YEAR、FOREVER 分别代表保留一周，一月，一年，永久" CfgFile="ld_log.xml" 
+					LogLevel="INFO" LevelNote="DEBUG INFO WARN ERROR FAULT"
+					MaxTms="10" UnitTime="1000" MaxNote="单位时间内某种错误产生的最大次数，超过则不再打印；MaxTms次数、UnitTime单位为毫秒" />
+			</plugin>
+			
+			<plugin lib="ld_fastmsg"   note="FAST消息">
+				<args templatefile="ld_templates.xml" InitMsgs="100" MaxMsgs="60000"/>
+			</plugin>
+			
+			<plugin lib="ld_comm">
+				<args comm_thread="4" />
+			</plugin>
+			<plugin lib="ld_timer" />
+		</modules>
+
+		<stream_line note="消息流水线配置">
+		</stream_line>
+	</svrimg>
+</app>

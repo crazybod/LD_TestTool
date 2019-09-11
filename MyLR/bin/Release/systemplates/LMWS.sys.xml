@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizmsgs>
+	<function functionname="nbrchange" typename="LD_REQUEST" functionid="LMWS.sys.1" packettype="0">
+		<field fieldname="change_flag" fieldid="300"/>
+		<field fieldname="nbr_flag" fieldid="301"/>
+	</function>
+	<function functionname="ospf" typename="LD_REQUEST" functionid="LMWS.sys.2" packettype="0">
+		<field fieldname="ospfpack" fieldid="302"/>
+	</function>
+	<function functionname="manager" typename="LD_REQUEST" functionid="LMWS.sys.3" packettype="0">
+		<field fieldname="ModuleName" fieldid="30" presence="optional"/>
+		<field fieldname="ManageFuncIndex" fieldid="303" presence="optional"/>
+		<field fieldname="value1" fieldid="201" presence="optional"/>
+		<field fieldname="value2" fieldid="202" presence="optional"/>
+		<field fieldname="value3" fieldid="203" presence="optional"/>
+		<field fieldname="value4" fieldid="204" presence="optional"/>
+		<field fieldname="value5" fieldid="205" presence="optional"/>
+		<field fieldname="value6" fieldid="206" presence="optional"/>
+		<field fieldname="value7" fieldid="207" presence="optional"/>
+		<field fieldname="value8" fieldid="208" presence="optional"/>
+		<field fieldname="value9" fieldid="209" presence="optional"/>
+		<field fieldname="value10" fieldid="210" presence="optional"/>
+		<field fieldname="value11" fieldid="211" presence="optional"/>
+		<field fieldname="value12" fieldid="212" presence="optional"/>
+		<field fieldname="value13" fieldid="213" presence="optional"/>
+		<field fieldname="value14" fieldid="214" presence="optional"/>
+		<field fieldname="value15" fieldid="215" presence="optional"/>
+		<field fieldname="value16" fieldid="216" presence="optional"/>
+		<field fieldname="value17" fieldid="217" presence="optional"/>
+		<field fieldname="value18" fieldid="218" presence="optional"/>
+		<field fieldname="value19" fieldid="219" presence="optional"/>
+		<field fieldname="value20" fieldid="220" presence="optional"/>
+		<field fieldname="value21" fieldid="221" presence="optional"/>
+	</function>
+	<function functionname="manager" typename="LD_ANSWER" functionid="LMWS.sys.3" packettype="1">
+		<sequence fieldname="NoName" fieldid="100" note="必然会出现，告知标题头">
+			<field fieldname="name1" fieldid="101" presence="optional"/>
+			<field fieldname="name2" fieldid="102" presence="optional"/>
+			<field fieldname="name3" fieldid="103" presence="optional"/>
+			<field fieldname="name4" fieldid="104" presence="optional"/>
+			<field fieldname="name5" fieldid="105" presence="optional"/>
+			<field fieldname="name6" fieldid="106" presence="optional"/>
+			<field fieldname="name7" fieldid="107" presence="optional"/>
+			<field fieldname="name8" fieldid="108" presence="optional"/>
+			<field fieldname="name9" fieldid="109" presence="optional"/>
+			<field fieldname="name10" fieldid="110" presence="optional"/>
+			<field fieldname="name11" fieldid="111" presence="optional"/>
+			<field fieldname="name12" fieldid="112" presence="optional"/>
+			<field fieldname="name13" fieldid="113" presence="optional"/>
+			<field fieldname="name14" fieldid="114" presence="optional"/>
+			<field fieldname="name15" fieldid="115" presence="optional"/>
+			<field fieldname="name16" fieldid="116" presence="optional"/>
+			<field fieldname="name17" fieldid="117" presence="optional"/>
+			<field fieldname="name18" fieldid="118" presence="optional"/>
+			<field fieldname="name19" fieldid="119" presence="optional"/>
+			<field fieldname="name20" fieldid="120" presence="optional"/>
+			<field fieldname="name21" fieldid="121" presence="optional"/>
+		</sequence>
+		<sequence fieldname="NoValue" fieldid="200" presence="optional">
+			<field fieldname="value1" fieldid="201" presence="optional"/>
+			<field fieldname="value2" fieldid="202" presence="optional"/>
+			<field fieldname="value3" fieldid="203" presence="optional"/>
+			<field fieldname="value4" fieldid="204" presence="optional"/>
+			<field fieldname="value5" fieldid="205" presence="optional"/>
+			<field fieldname="value6" fieldid="206" presence="optional"/>
+			<field fieldname="value7" fieldid="207" presence="optional"/>
+			<field fieldname="value8" fieldid="208" presence="optional"/>
+			<field fieldname="value9" fieldid="209" presence="optional"/>
+			<field fieldname="value10" fieldid="210" presence="optional"/>
+			<field fieldname="value11" fieldid="211" presence="optional"/>
+			<field fieldname="value12" fieldid="212" presence="optional"/>
+			<field fieldname="value13" fieldid="213" presence="optional"/>
+			<field fieldname="value14" fieldid="214" presence="optional"/>
+			<field fieldname="value15" fieldid="215" presence="optional"/>
+			<field fieldname="value16" fieldid="216" presence="optional"/>
+			<field fieldname="value17" fieldid="217" presence="optional"/>
+			<field fieldname="value18" fieldid="218" presence="optional"/>
+			<field fieldname="value19" fieldid="219" presence="optional"/>
+			<field fieldname="value20" fieldid="220" presence="optional"/>
+			<field fieldname="value21" fieldid="221" presence="optional"/>
+		</sequence>
+	</function>
+</bizmsgs>

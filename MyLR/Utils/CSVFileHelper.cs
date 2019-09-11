@@ -1,0 +1,264 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.IO;
+using System.Linq;
+using System.Text;
+
+namespace MyLR
+{
+    public class CSVFileHelper
+    {
+        /// <summary>
+        /// 将DataTable中数据写入到CSV文件中
+        /// </summary>
+        /// <param name="dt">提供保存数据的DataTable</param>
+        /// <param name="fileName">CSV的文件路径</param>
+        public static void SaveCSV(DataTable dt, string fullPath)
+        {
+            FileInfo fi = new FileInfo(fullPath);
+            if (!fi.Directory.Exists)
+            {
+                fi.Directory.Create();
+            }
+            FileStream fs = new FileStream(fullPath, FileMode.Create, FileAccess.Write);
+            StreamWriter sw = new StreamWriter(fs, Encoding.UTF8);
+            string data = "";
+            //写出列名称
+            for (int i = 0; i < dt.Columns.Count; i++)
+            {
+                data += dt.Columns[i].ColumnName.ToString();
+                if (i < dt.Columns.Count - 1)
+                {
+                    data += ",";
+                }
+            }
+            sw.WriteLine(data);
+            //写出各行数据
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                data = "";
+                for (int j = 0; j < dt.Columns.Count; j++)
+                {
+                    string str = dt.Rows[i][j].ToString();
+                    str = str.Replace("\"", "\"\"");//替换英文冒号 英文冒号需要换成两个冒号
+                    if (str.Contains(',') || str.Contains('"')
+                        || str.Contains('\r') || str.Contains('\n')) //含逗号 冒号 换行符的需要放到引号中
+                    {
+                        str = string.Format("\"{0}\"", str);
+                    }
+
+                    data += str;
+                    if (j < dt.Columns.Count - 1)
+                    {
+                        data += ",";
+                    }
+                }
+                sw.WriteLine(data);
+            }
+            sw.Close();
+            fs.Close();
+        }
+
+        /// <summary>
+        /// 将CSV文件的数据读取到DataTable中
+        /// </summary>
+        /// <param name="fileName">CSV文件路径</param>
+        /// <returns>返回读取了CSV数据的DataTable</returns>
+        public static DataTable OpenCSV(string filePath)
+        {
+            Encoding encoding = GetType(filePath);
+            DataTable dt = new DataTable();
+            FileStream fs = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+
+            StreamReader sr = new StreamReader(fs, encoding);
+            //记录每次读取的一行记录
+            string strLine = "";
+            //记录每行记录中的各字段内容
+            string[] aryLine = null;
+            string[] tableHead = null;
+            //标示列数
+            int columnCount = 0;
+            //标示是否是读取的第一行
+            bool IsFirst = true;
+            //逐行读取CSV中的数据
+            while ((strLine = sr.ReadLine()) != null)
+            {
+                if (IsFirst == true)
+                {
+                    tableHead = strLine.Split(',');
+                    IsFirst = false;
+                    columnCount = tableHead.Length;
+                    //创建列
+                    for (int i = 0; i < columnCount; i++)
+                    {
+                        DataColumn dc = new DataColumn(tableHead[i].Replace("\"", ""));
+                        dt.Columns.Add(dc);
+                    }
+                }
+                else
+                {
+                    aryLine = strLine.Split(',');
+                    DataRow dr = dt.NewRow();
+                    for (int j = 0; j < columnCount; j++)
+                    {
+                        dr[j] = aryLine[j];
+                    }
+                    dt.Rows.Add(dr);
+                }
+            }
+
+            sr.Close();
+            fs.Close();
+            return dt;
+        }
+
+        /// 给定文件的路径，读取文件的二进制数据，判断文件的编码类型
+        /// <param name="FILE_NAME">文件路径</param>
+        /// <returns>文件的编码类型</returns>
+
+        public static Encoding GetType(string FILE_NAME)
+        {
+            FileStream fs = new FileStream(FILE_NAME, FileMode.OpenOrCreate, FileAccess.Read);
+            Encoding r = GetType(fs);
+            fs.Close();
+            return r;
+        }
+
+        /// 通过给定的文件流，判断文件的编码类型
+        /// <param name="fs">文件流</param>
+        /// <returns>文件的编码类型</returns>
+        public static Encoding GetType(FileStream fs)
+        {
+            byte[] Unicode = new byte[] { 0xFF, 0xFE, 0x41 };
+            byte[] UnicodeBIG = new byte[] { 0xFE, 0xFF, 0x00 };
+            byte[] UTF8 = new byte[] { 0xEF, 0xBB, 0xBF }; //带BOM
+            Encoding reVal = Encoding.Default;
+
+            BinaryReader r = new BinaryReader(fs, Encoding.Default);
+            int i;
+            int.TryParse(fs.Length.ToString(), out i);
+            byte[] ss = r.ReadBytes(i);
+            if (IsUTF8Bytes(ss) || (ss[0] == 0xEF && ss[1] == 0xBB && ss[2] == 0xBF))
+            {
+                reVal = Encoding.UTF8;
+            }
+            else if (ss[0] == 0xFE && ss[1] == 0xFF && ss[2] == 0x00)
+            {
+                reVal = Encoding.BigEndianUnicode;
+            }
+            else if (ss[0] == 0xFF && ss[1] == 0xFE && ss[2] == 0x41)
+            {
+                reVal = Encoding.Unicode;
+            }
+            r.Close();
+            return reVal;
+        }
+
+        /// 判断是否是不带 BOM 的 UTF8 格式
+        /// <param name="data"></param>
+        /// <returns></returns>
+        private static bool IsUTF8Bytes(byte[] data)
+        {
+            int charByteCounter = 1;  //计算当前正分析的字符应还有的字节数
+            byte curByte; //当前分析的字节.
+            for (int i = 0; i < data.Length; i++)
+            {
+                curByte = data[i];
+                if (charByteCounter == 1)
+                {
+                    if (curByte >= 0x80)
+                    {
+                        //判断当前
+                        while (((curByte <<= 1) & 0x80) != 0)
+                        {
+                            charByteCounter++;
+                        }
+                        //标记位首位若为非0 则至少以2个1开始 如:110XXXXX...........1111110X　
+                        if (charByteCounter == 1 || charByteCounter > 6)
+                        {
+                            return false;
+                        }
+                    }
+                }
+                else
+                {
+                    //若是UTF-8 此时第一位必须为1
+                    if ((curByte & 0xC0) != 0x80)
+                    {
+                        return false;
+                    }
+                    charByteCounter--;
+                }
+            }
+            if (charByteCounter > 1)
+            {
+                throw new Exception("非预期的byte格式");
+            }
+            return true;
+        }
+
+
+        public static StringBuilder OpenScript(string filePath)
+        {
+            //记录每行记录中的各字段内容
+            StringBuilder aryLine = new StringBuilder();
+            try
+            {
+                Encoding encoding = GetType(filePath);
+                DataTable dt = new DataTable();
+                FileStream fs = new FileStream(filePath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
+
+                StreamReader sr = new StreamReader(fs, encoding);
+                //记录每次读取的一行记录
+                string strLine = "";
+
+                //逐行读取CSV中的数据
+                while ((strLine = sr.ReadLine()) != null)
+                {
+                    aryLine.AppendLine(strLine);
+                }
+                sr.Close();
+                fs.Close();
+            }
+            catch (Exception Error)
+            {
+                aryLine.Append(Error.Message + "\r\n" + Error.StackTrace);
+            }
+            return aryLine;
+        }
+
+        /// <summary>
+        /// 保存脚本信息
+        /// </summary>
+        /// <param name="fullPath">绝对路径</param>
+        /// <param name="scriptData">脚本信息</param>
+        /// <returns></returns>
+        public static string SaveScript(string fullPath,string scriptData)
+        {
+            string result = "";
+            try
+            {
+                Encoding encoding = GetType(fullPath);
+                DataTable dt = new DataTable();
+                FileStream fs = new FileStream(fullPath, FileMode.Create, FileAccess.ReadWrite);
+
+                StreamWriter sr = new StreamWriter(fs, encoding);
+                sr.Write(scriptData);
+
+                //释放流
+                sr.Dispose();
+                fs.Dispose();
+                //关闭流
+                sr.Close();
+                fs.Close();
+                result = "保存成功！";
+            }
+            catch (Exception error)
+            {
+                result = "保存失败：" + error.Message + "\r\n" + error.StackTrace;
+            }
+            return result;
+        }
+    }
+}

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shellmsg>
+	<field fieldname="FuncID" fieldid="11"/>
+	<field fieldname="PacketType" fieldid="21"/>
+	<field fieldname="Systemno" fieldid="12" presence="optional"/>
+	<field fieldname="Compid" fieldid="13" presence="optional"/>
+	<field fieldname="Packetid" fieldid="14"/>
+	<field fieldname="TTL" fieldid="15" presence="optional"/>
+	<field fieldname="Senderid" fieldid="16" presence="optional"/>
+	<field fieldname="SerialFlag" fieldid="33" presence="optional"/>
+	<field fieldname="ErrorNo" fieldid="17" presence="optional"/>
+	<field fieldname="ErrorInfo" fieldid="18" presence="optional"/>
+	<field fieldname="ModuleName" fieldid="30" presence="optional"/>
+	<field fieldname="Priority" fieldid="37" presence="optional"/>
+	<field fieldname="LivingTimes" fieldid="38" presence="optional"/>
+	<field fieldname="InQTime" fieldid="39" presence="optional"/>
+	<sequence fieldname="NoSenderpath" fieldid="19" presence="optional">
+		<field fieldname="NodeName" fieldid="28" presence="optional"/>
+		<field fieldname="SvrName" fieldid="29" presence="optional"/>
+		<field fieldname="ModuleName" fieldid="30" presence="optional"/>
+		<field fieldname="ChannelID" fieldid="31" presence="optional"/>
+		<field fieldname="ConnectID" fieldid="32" presence="optional"/>
+	</sequence>
+	<sequence fieldname="NoRouteinfo" fieldid="20" presence="optional">
+		<field fieldname="NodeName" fieldid="28" presence="optional"/>
+		<field fieldname="SvrName" fieldid="29" presence="optional"/>
+		<field fieldname="ModuleName" fieldid="30" presence="optional"/>
+		<field fieldname="ChannelID" fieldid="31" presence="optional"/>
+		<field fieldname="ConnectID" fieldid="32" presence="optional"/>
+	</sequence>
+	<sequence fieldname="NoUserDefine" fieldid="23" presence="optional">
+		<field fieldname="UserDefineData" fieldid="24"/>
+	</sequence>
+	<sequence fieldname="NoTimeStampInfo" fieldid="25" presence="optional">
+		<field fieldname="TimeStamp" fieldid="26"/>
+		<field fieldname="TimeInfo" fieldid="27"/>
+	</sequence>
+	<field fieldname="InstrumentID" fieldid="35"  presence="optional"/>
+	<field fieldname="SynFlag" fieldid="36" presence="optional"/>
+	
+	<sequence fieldname="NoInternalRoute" fieldid="1" presence="optional">
+		<field fieldname="NodeName" fieldid="28" presence="optional"/>
+		<field fieldname="SvrName" fieldid="29" presence="optional"/>
+		<field fieldname="ModuleName" fieldid="30" presence="optional"/>
+		<field fieldname="ChannelID" fieldid="31" presence="optional"/>
+		<field fieldname="ConnectID" fieldid="32" presence="optional"/>
+	</sequence>
+	<sequence fieldname="NoInternalSenderPath" fieldid="2" presence="optional">
+		<field fieldname="NodeName" fieldid="28" presence="optional"/>
+		<field fieldname="SvrName" fieldid="29" presence="optional"/>
+		<field fieldname="ModuleName" fieldid="30" presence="optional"/>
+		<field fieldname="ChannelID" fieldid="31" presence="optional"/>
+		<field fieldname="ConnectID" fieldid="32" presence="optional"/>
+	</sequence>
+</shellmsg>

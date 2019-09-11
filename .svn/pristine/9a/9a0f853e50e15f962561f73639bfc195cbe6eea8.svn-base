@@ -1,0 +1,117 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+using System.Xml.Serialization;
+
+namespace MyLR
+{
+    public sealed class XmlDataLoader
+    {
+        public static void SaveData<T>(T data, string filePath) where T : class
+        {
+            if (File.Exists(filePath))
+            {
+                File.Delete(filePath);
+            }
+
+            if (data != null)
+            {
+                Save(data, filePath);
+            }
+        }
+
+        public static T LoadData<T>(string filePath) where T : class
+        {
+            if (!File.Exists(filePath))
+            {
+                return null;
+            }
+            try
+            {
+                XmlSerializer ser;
+
+                if (File.Exists(filePath))
+                {
+                    ser = new XmlSerializer(typeof(T));
+                    using (StreamReader sw = new StreamReader(filePath, Encoding.Unicode))
+                    {
+                        var result = (T)ser.Deserialize(sw);
+                        return result;
+                    }
+
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        public static T LoadStringData<T>(string data) where T : class
+        {
+            try
+            {
+                var ser = new XmlSerializer(typeof(T));
+                StringReader sr = new StringReader(data);
+                var result = (T)ser.Deserialize(sr);
+                sr.Close();
+                return result;
+            }
+            catch
+            {
+
+            }
+
+            return null;
+        }
+
+        public static string SaveData<T>(T data)
+        {
+            var ser = new XmlSerializer(typeof(T));
+            StringWriter sw = new StringWriter();
+            ser.Serialize(sw, data);
+            return sw.ToString();
+        }
+
+        public static XElement ToXElement<T>(T entity) where T : new()
+        {
+            if (entity == null)
+            {
+                return null;
+            }
+
+            XElement element = new XElement(typeof(T).Name);
+            PropertyInfo[] properties = typeof(T).GetProperties();
+            XElement innerElement = null;
+            object propertyValue = null;
+
+            foreach (PropertyInfo property in properties)
+            {
+
+                propertyValue = property.GetValue(entity, null);
+                innerElement = new XElement(property.Name, propertyValue);
+                element.Add(innerElement);
+            }
+
+            return element;
+        }
+
+        private static void Save<T>(T data, string filePath) where T : class
+        {
+            var ser = new XmlSerializer(typeof(T));
+            using (StreamWriter sw = new StreamWriter(filePath, false, Encoding.Unicode))
+            {
+                ser.Serialize(sw, data);
+            }
+        }
+    }
+}
