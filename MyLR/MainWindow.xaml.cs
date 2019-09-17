@@ -32,7 +32,7 @@ namespace MyLR
     public partial class MainWindow : Window
     {
 
-        #region 变量申明
+        #region 变量声明
         /// <summary>
         /// 计次
         /// </summary>
@@ -75,9 +75,9 @@ namespace MyLR
         /// </summary>
         List<string> forbidStocks = new List<string>();
         /// <summary>
-        /// 是否发送异常行情包
+        /// 发送异常数据包的券码
         /// </summary>
-        bool? isSendWrongData = false;
+        List<string> errorStocks = new List<string>();
         #endregion
 
         MainViewModel mv;
@@ -109,13 +109,14 @@ namespace MyLR
         {
             i++;
             forbidStocks = txtForbid.Text.Split('/').ToList(); //获取停止发送的券码集合
+            errorStocks = txtError.Text.Split('/').ToList();   //获取发送异常数据包的券码集合 
             stockCountLimit = int.Parse(txtStockCountLimit.Text);//获取最大发送的券码条数
             delay = Convert.ToDouble(txtDelay.Text);//获取延时毫秒数
-            isSendWrongData = ckbIsSendWrongData.IsChecked;//是否发送异常行情包
+
             List<SolidColorBrush> ls = new List<SolidColorBrush>() { Brushes.Red, Brushes.Green, Brushes.Gold };
 
             pa = new Path();
-            pa.Stroke = ls[i % 3];//绘制颜色，亮绿色
+            pa.Stroke = ls[i % 3];//绘制颜色，三选一
             pa.StrokeThickness = 2;//绘制的线宽
             pf.Segments.Clear();
             Task.Run(() => { DrawSin(); });
@@ -219,7 +220,7 @@ namespace MyLR
 
                         
                         IntPtr ptr;
-                        if ((bool)isSendWrongData)
+                        if (errorStocks.Contains(stockNo))
                         {
                             #region 创建异常的行情包
                             WrongStockLevelRealTimeData wrongStockFiled = new WrongStockLevelRealTimeData();
@@ -371,9 +372,9 @@ namespace MyLR
         private void btnRun_Click(object sender, RoutedEventArgs e)
         {
             forbidStocks = txtForbid.Text.Split('/').ToList();//获取停止发送的券码集合
+            errorStocks = txtError.Text.Split('/').ToList();   //获取发送异常数据包的券码集合 
             stockCountLimit = int.Parse(txtStockCountLimit.Text);//获取最大发送的券码条数
             delay = Convert.ToDouble(txtDelay.Text);//获取延时毫秒数
-            isSendWrongData = ckbIsSendWrongData.IsChecked;//是否发送异常行情包
             isPause = false;
             waitHandle.Set();
         }

@@ -4687,4 +4687,8 @@
     <int64 fieldname="end_calc_value" fieldid="5932" decimalPlaces="6"/>
     <int64 fieldname="param_calc_value" fieldid="5933" decimalPlaces="6"/>
     <int64 fieldname="help_calc_value" fieldid="5934" decimalPlaces="6"/>
+    <int64 fieldname="sh_hk_stock_asset" fieldid="5935" decimalPlaces="6"/>
+    <int64 fieldname="sz_hk_stock_asset" fieldid="5936" decimalPlaces="6"/>
+    <int64 fieldname="sh_Astock_asset" fieldid="5937" decimalPlaces="6"/>
+    <int64 fieldname="sz_Astock_asset" fieldid="5938" decimalPlaces="6"/>
 </fields>

@@ -14,7 +14,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="81.8"></ColumnDefinition>
@@ -94,7 +94,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="240"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="160"></ColumnDefinition>
@@ -163,11 +163,18 @@
 
                 <GroupBox  Header="输出" Height="180" Grid.Column="1" Grid.Row="2">
                     <StackPanel>
-                        <Button Command="{Binding ClearPrint}" Width="40" Height="20" Margin="4 5 0 0" HorizontalAlignment="Left"  Content="清空" />
-                        <RichTextBox Name="PrintData" Height="165" IsReadOnly="True" VerticalScrollBarVisibility="Auto" FontSize="10">
-                            <FlowDocument Focusable="True" LineHeight="1">
-                            </FlowDocument>
-                        </RichTextBox>
+                        <Grid Height="166" Margin="0,0,0.4,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Button Command="{Binding ClearPrint}" Grid.Row="0" Width="40" Height="20" Margin="3,8,0,2.4" HorizontalAlignment="Left"  Content="清空" />
+                            <Button Grid.Row="0" Width="69" Height="20" Margin="503,8,0,2.4" HorizontalAlignment="Left"  Content="结果另存为" />
+                            <RichTextBox x:Name="PrintData" Grid.Row="1" Height="165" IsReadOnly="True" VerticalScrollBarVisibility="Auto" FontSize="10">
+                                <FlowDocument Focusable="True" LineHeight="1"/>
+                            </RichTextBox>
+                        </Grid>
+
                     </StackPanel>
 
                 </GroupBox>
@@ -213,7 +220,8 @@
                 <TextBox x:Name="txtStockCountLimit" Grid.Column="5" HorizontalAlignment="Left" Height="23" Margin="211,10,0,0" Text="100" TextWrapping="Wrap" VerticalAlignment="Top" Width="69" Grid.RowSpan="2"/>
                 <TextBox x:Name="txtForbid" Grid.Column="5" HorizontalAlignment="Left" Height="23" Margin="10,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="219" Grid.RowSpan="2" RenderTransformOrigin="0.616,-0.017"/>
                 <Label x:Name="label2" Content="停止发送以下券码行情(券码之间以'/'隔开)" Grid.Column="5" HorizontalAlignment="Left" Margin="5,40,0,0" Grid.Row="1" VerticalAlignment="Top" Width="239"/>
-                <CheckBox x:Name="ckbIsSendWrongData" Content="是否发送异常行情" Grid.Column="5" HorizontalAlignment="Left" Margin="279,67,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="-0.461,0.658"/>
+                <TextBox x:Name="txtError" Grid.Column="5" HorizontalAlignment="Left" Height="23" Margin="292,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Grid.RowSpan="2" RenderTransformOrigin="0.616,-0.017"/>
+                <Label x:Name="label2_Copy" Content="异常行情券码(券码之间以'/'隔开)" Grid.Column="5" HorizontalAlignment="Left" Margin="288,40,0,0" Grid.Row="1" VerticalAlignment="Top" Width="189"/>
 
 
 

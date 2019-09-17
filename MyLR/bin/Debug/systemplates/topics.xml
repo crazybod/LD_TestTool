@@ -770,4 +770,11 @@
             <filter fieldid="1828" note="机构编号"/>
         </filters>
     </topic>
+    <topic topicname="secu.tradebalance"   funcid="pushL.2.947" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+        </filters>
+    </topic>
 </topics>

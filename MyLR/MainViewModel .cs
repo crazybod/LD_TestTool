@@ -112,6 +112,10 @@ namespace MyLR
             DirectoryInfo scriptInfos = new DirectoryInfo(path);
             foreach (var scriptInfo in scriptInfos.GetFiles())
             {
+                if (scriptInfo.Extension.ToLower() != ".script")
+                {
+                    continue;
+                }
                 string caseName = scriptInfo.Name;
                 string caseFullPath = scriptInfo.FullName;
                 CaseScripts.Add(new CaseScript(caseName, caseFullPath));
@@ -311,183 +315,209 @@ namespace MyLR
             }
         }
 
+        /// <summary>
+        /// 加载案例详细脚本信息
+        /// </summary>
+        /// <param name="filePath">案例脚本保存路径</param>
+        /// <returns></returns>
         private List<CaseFunction> LoadCaseFunction(String filePath)
         {
             List<CaseFunction> list = new List<CaseFunction>();
 
-            if (!File.Exists(filePath))
+            try
+            {
+                if (!File.Exists(filePath))
+                {
+                    return list;
+                }
+                XElement rootXML = XDocument.Load(filePath).Element("bizmsgs");
+                var funsXml = rootXML.Elements("function");
+                foreach (var item in funsXml)
+                {
+                    string functionid = item.Attribute("functionid").Value;
+                    string packettype = item.Attribute("packettype").Value;
+                    if (packettype.Equals("0"))
+                    {
+                        string functionname = item.Attribute("functionname").Value;
+                        CaseFunction fun = new CaseFunction()
+                        {
+                            FunID = functionid,
+                            FunType = 0,
+                            Check = 1,
+                            FunName = functionname
+                        };
+
+                        list.Add(fun);
+                    }
+                }
+                return list;
+            }
+            catch (Exception error)
             {
                 return list;
             }
-            XElement rootXML = XDocument.Load(filePath).Element("bizmsgs");
-            var funsXml = rootXML.Elements("function");
-            foreach (var item in funsXml)
-            {
-                string functionid = item.Attribute("functionid").Value;
-                string packettype = item.Attribute("packettype").Value;
-                if (packettype.Equals("0"))
-                {
-                    string functionname = item.Attribute("functionname").Value;
-                    CaseFunction fun = new CaseFunction()
-                    {
-                        FunID = functionid,
-                        FunType = 0,
-                        Check =1,
-                        FunName = functionname
-                    };
-
-                    list.Add(fun);
-                }
-            }
-            return list;
 
         }
+
+        /// <summary>
+        /// 加载案例数据
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <param name="funList"></param>
+        /// <returns></returns>
         private  CaseFileData LoadCaseData(String filePath, List<CaseFunction> funList)
         {
             CaseFileData datas = new CaseFileData();
-            if (!File.Exists(filePath))
+            try
+            {
+                if (!File.Exists(filePath))
+                {
+                    return datas;
+                }
+                datas.FilePath = @filePath;
+                XElement rootXML = XDocument.Load(filePath).Element("bizmsgs");
+                var funsXml = rootXML.Elements("function");
+                foreach (var item in funsXml)
+                {
+
+                    string functionid = item.Attribute("functionid").Value;
+                    string packettype = item.Attribute("packettype").Value;
+                    var CheckFun = funList.FirstOrDefault(o => o.Check == 1 && o.FunID == functionid);
+                    if (packettype.Equals("0") && CheckFun != null)
+                    {
+                        string functionname = item.Attribute("functionname").Value;
+                        CaseFunction fun = new CaseFunction()
+                        {
+                            FunID = functionid,
+                            FunType = 0,
+                            Check = 1,
+                            FunName = functionname
+                        };
+                        //发送次数
+                        if (item.Attribute("value") != null)
+                        {
+                            string sendTimes = item.Attribute("times").Value;
+                            int nSendTimes = 1;
+                            int.TryParse(sendTimes, out nSendTimes);
+                            fun.SendTimes = nSendTimes;
+                        }
+                        datas.Functions.Add(fun);
+                        var filedsXml = item.Elements("field");
+
+                        LDsdkDefineEx.LDFastMessageAdapter fastmsg = new LDFastMessageAdapter(functionid, 0);
+                        LDRecordAdapter lpRecord = fastmsg.GetBizBodyRecord();
+                        int iIndex = 0;
+                        foreach (var filedItem in filedsXml)
+                        {
+                            int filedtype = lpRecord.GetFieldType(iIndex);
+
+                            string fieldid = filedItem.Attribute("fieldid").Value;
+                            string fieldname = filedItem.Attribute("fieldname").Value;
+                            PARAMTYPE paramtype = PARAMTYPE.emFile;
+                            string value = "";
+                            if (filedItem.Attribute("value") != null)
+                            {
+                                value = filedItem.Attribute("value").Value;
+                            }
+                            if (filedItem.Attribute("paramtype") != null)
+                            {
+                                string strparamtype = filedItem.Attribute("paramtype").Value;
+                                if ("file".Equals(strparamtype))
+                                {
+                                    paramtype = PARAMTYPE.emFile;
+                                }
+                            }
+                            CaseFiled filed = new CaseFiled()
+                            {
+                                FiledTag = int.Parse(fieldid),
+                                FiledName = fieldname,
+                                FiledValue = value,
+                                FiledType = filedtype,
+                                FiledIndex = iIndex,
+                                ParamType = paramtype
+                            };
+                            var fileElemt = filedItem.Element("file");
+                            if (fileElemt != null && paramtype == PARAMTYPE.emFile)
+                            {
+
+                                filed.ColumnName = fieldname;
+                                if (fileElemt.Attribute("columnname") != null)
+                                {
+                                    filed.ColumnName = fileElemt.Attribute("columnname").Value;
+                                }
+
+                                if (fileElemt.Attribute("filename") != null)
+                                {
+                                    filed.FileName = fileElemt.Attribute("filename").Value;
+                                    CSVFile csvFile = null;
+                                    if (File.Exists(filed.FileName) && !fun.AllCsvFile.TryGetValue(filed.FileName, out csvFile))
+                                    {
+                                        var data = CSVFileHelper.OpenCSV(filed.FileName);
+                                        if (data != null)
+                                        {
+
+                                            csvFile = new CSVFile();
+                                            csvFile.FileName = filed.FiledName;
+                                            csvFile.Table = data;
+                                            fun.AllCsvFile.Add(filed.FileName, csvFile);
+                                        }
+
+                                    }
+                                    if (csvFile != null && string.IsNullOrWhiteSpace(csvFile.DefaultFieldName))
+                                    {
+                                        csvFile.DefaultFieldName = fieldname;
+
+                                    }
+
+                                }
+
+
+
+                                filed.SelectRow = VALUETYPE.emSameLine;
+                                if (fileElemt.Attribute("selectrow") != null)
+                                {
+                                    try
+                                    {
+                                        string SelectRow = fileElemt.Attribute("selectrow").Value;
+                                        if ("sequence".Equals(SelectRow))
+                                        {
+                                            filed.SelectRow = VALUETYPE.emSequence;
+                                        }
+                                        else if (new Regex("same_line").Match(SelectRow).Success)
+                                        {
+                                            filed.SameLineColumn = SelectRow.Split('[')[1].Split(']')[0];
+                                            filed.SelectRow = VALUETYPE.emSameLine;
+                                        }
+                                        else if ("random".Equals(SelectRow))
+                                        {
+                                            //默认("random".Equals(SelectRow))
+                                            filed.SelectRow = VALUETYPE.emRandom;
+                                        }
+
+                                    }
+                                    catch (Exception)
+                                    {
+
+                                        //throw;
+                                    }
+
+                                }
+
+
+                            }
+                            fun.Fileds.Add(filed);
+                            iIndex++;
+                        }
+                        fastmsg.FreeMsg();
+                    }
+                }
+
+                return datas;
+            }
+            catch (Exception error)
             {
                 return datas;
             }
-            datas.FilePath = @filePath;
-            XElement rootXML = XDocument.Load(filePath).Element("bizmsgs");
-            var funsXml = rootXML.Elements("function");
-            foreach (var item in funsXml)
-            {
-
-                string functionid = item.Attribute("functionid").Value;
-                string packettype = item.Attribute("packettype").Value;
-                var CheckFun=funList.FirstOrDefault(o => o.Check == 1 && o.FunID == functionid);
-                if (packettype.Equals("0") && CheckFun != null)
-                {
-                    string functionname = item.Attribute("functionname").Value;
-                    CaseFunction fun = new CaseFunction()
-                    {
-                        FunID = functionid,
-                        FunType = 0,
-                        Check = 1,
-                        FunName = functionname
-                    };
-                    //发送次数
-                    if (item.Attribute("value") != null)
-                    {
-                        string sendTimes = item.Attribute("times").Value;
-                        int nSendTimes = 1;
-                        int.TryParse(sendTimes, out nSendTimes);
-                        fun.SendTimes = nSendTimes;
-                    }
-                    datas.Functions.Add(fun);
-                    var filedsXml = item.Elements("field");
-
-                    LDsdkDefineEx.LDFastMessageAdapter fastmsg = new LDFastMessageAdapter(functionid, 0);
-                    LDRecordAdapter lpRecord = fastmsg.GetBizBodyRecord();
-                    int iIndex = 0;
-                    foreach (var filedItem in filedsXml)
-                    {
-                        int filedtype = lpRecord.GetFieldType(iIndex);
-
-                        string fieldid = filedItem.Attribute("fieldid").Value;
-                        string fieldname = filedItem.Attribute("fieldname").Value;
-                        PARAMTYPE paramtype = PARAMTYPE.emFile;
-                        string value = "";
-                        if (filedItem.Attribute("value") != null)
-                        {
-                            value = filedItem.Attribute("value").Value;
-                        }
-                        if (filedItem.Attribute("paramtype") != null)
-                        {
-                            string strparamtype = filedItem.Attribute("paramtype").Value;
-                            if ("file".Equals(strparamtype))
-                            {
-                                paramtype = PARAMTYPE.emFile;
-                            }
-                        }                      
-                        CaseFiled filed = new CaseFiled()
-                        {
-                            FiledTag = int.Parse(fieldid),
-                            FiledName = fieldname,
-                            FiledValue = value,
-                            FiledType = filedtype,
-                            FiledIndex = iIndex,
-                            ParamType = paramtype
-                        };
-                        var fileElemt = filedItem.Element("file");
-                        if (fileElemt != null && paramtype == PARAMTYPE.emFile)
-                        {
-
-                            filed.ColumnName = fieldname;
-                            if (fileElemt.Attribute("columnname") != null)
-                            {
-                                filed.ColumnName = fileElemt.Attribute("columnname").Value;
-                            }
-
-                            if (fileElemt.Attribute("filename") != null)
-                            {
-                                filed.FileName = fileElemt.Attribute("filename").Value;
-                                CSVFile csvFile = null;
-                                if (File.Exists(filed.FileName)&& !fun.AllCsvFile.TryGetValue(filed.FileName,out csvFile))
-                                {
-                                    var data = CSVFileHelper.OpenCSV(filed.FileName);
-                                    if (data!= null)
-                                    {
-                                        
-                                        csvFile = new CSVFile();
-                                        csvFile.FileName = filed.FiledName;
-                                        csvFile.Table = data;
-                                        fun.AllCsvFile.Add(filed.FileName, csvFile);
-                                    }
-                                    
-                                }
-                                if (csvFile != null && string.IsNullOrWhiteSpace(csvFile.DefaultFieldName))
-                                {
-                                    csvFile.DefaultFieldName = fieldname;
-                                    
-                                }
-
-                            }
-
-
-                            
-                            filed.SelectRow = VALUETYPE.emSameLine;
-                            if (fileElemt.Attribute("selectrow") != null)
-                            {
-                                try
-                                {
-                                    string SelectRow = fileElemt.Attribute("selectrow").Value;
-                                    if ("sequence".Equals(SelectRow))
-                                    {
-                                        filed.SelectRow = VALUETYPE.emSequence;
-                                    }
-                                    else if (new Regex("same_line").Match(SelectRow).Success)
-                                    {
-                                        filed.SameLineColumn = SelectRow.Split('[')[1].Split(']')[0];
-                                        filed.SelectRow = VALUETYPE.emSameLine;
-                                    }
-                                    else if ("random".Equals(SelectRow))
-                                    {
-                                        //默认("random".Equals(SelectRow))
-                                        filed.SelectRow = VALUETYPE.emRandom;
-                                    }
-                                
-                                }
-                                catch (Exception)
-                                {
-
-                                    //throw;
-                                }
-                               
-                            }
-                           
-
-                        }
-                        fun.Fileds.Add(filed);
-                        iIndex++;
-                    }
-                    fastmsg.FreeMsg();
-                }
-            }
-
-            return datas;
         }
 
       
@@ -527,11 +557,15 @@ namespace MyLR
                 return _StopRun;
             }
         }
+
+        /// <summary>
+        /// 1、加载案例最上级目录
+        /// 2、根据最上级目录加载具体的脚本信息
+        /// </summary>
         public void DoCaseLoad()
         {
-
             //CaseScripts = new ObservableCollection<CaseScript>(XmlDataLoader.LoadData<List<CaseScript>>(@"script.xml"));
-
+            CaseGroups.Clear();
             List<CaseGroupBase>  baseGroups=XmlDataLoader.LoadData<List<CaseGroupBase>>(@"case.xml");
             if (baseGroups != null)
             {
@@ -576,7 +610,7 @@ namespace MyLR
                         Work(item);
                     });
 
-                }                            
+                }                      
             }
            
           
@@ -589,145 +623,170 @@ namespace MyLR
         }
         private void Work(CaseGroup caseGroup)
         {
-            CaseFileData data = null;
+            PrintHelper.Print.PrintData = printData;
             try
             {
-                data = LoadCaseData(caseGroup.FileName,caseGroup.FunList);
-            }
-            catch (Exception e)
-            {
-                LogHelper.Logger.Error("发现文件格式错误",e);
-                return;
-            }
-           
-            caseList.Add(data);
-            data.ID = caseGroup.ID;
-            data.UpStage = caseGroup.UpStage;
-            data.DownStage = caseGroup.DownStage;
-            do
-            {
-                if (!IsWork)
+                CaseFileData data = null;
+                try
                 {
-                    break;
+                    data = LoadCaseData(caseGroup.FileName, caseGroup.FunList);
                 }
-                bool bNeedWait = (data.SendCount - data.RecCount) >= data.UpStage;
-                if (bNeedWait)
+                catch (Exception e)
                 {
-                    data.ResetEvent.Reset();
-                    if (!data.ResetEvent.WaitOne(10000))
-                    {//等超时了，说明丢包了，重新置数
-                        data.RecCount = data.SendCount;
-                    }
+                    LogHelper.Logger.Error("发现文件格式错误", e);
+                    return;
                 }
-               
-                SendFastMsgReq(data);
 
-                for (int i=1;i<caseGroup.LoopCount;i++)
+                caseList.Add(data);
+                data.ID = caseGroup.ID;
+                data.UpStage = caseGroup.UpStage;
+                data.DownStage = caseGroup.DownStage;
+                do
                 {
                     if (!IsWork)
                     {
                         break;
                     }
+                    bool bNeedWait = (data.SendCount - data.RecCount) >= data.UpStage;
+                    if (bNeedWait)
+                    {
+                        data.ResetEvent.Reset();
+                        if (!data.ResetEvent.WaitOne(10000))
+                        {//等超时了，说明丢包了，重新置数
+                            data.RecCount = data.SendCount;
+                        }
+                    }
+
                     SendFastMsgReq(data);
+
+                    for (int i = 1; i < caseGroup.LoopCount; i++)
+                    {
+                        if (!IsWork)
+                        {
+                            break;
+                        }
+                        SendFastMsgReq(data);
+                    }
+
+
                 }
-              
-
-            } while (caseGroup.LoopCount==0);
-
+                while (caseGroup.LoopCount == 0);
+            }
+            catch (Exception error)
+            {
+                PrintHelper.Print.AppendLine(error.Message);
+                PrintHelper.Print.AppendLine(error.StackTrace);
+            }
         }
+
         private void SendFastMsgReq(CaseFileData file)
         {
-            foreach (CaseFunction funitem in file.Functions)
+            PrintHelper.Print.PrintData = printData;
+            try
             {
-
-                int nSendTimes = 0;
-                do
+                foreach (CaseFunction funitem in file.Functions)
                 {
-                    nSendTimes++;
-                    #region 发送包
-                    LDsdkDefineEx.LDFastMessageAdapter fastmsg = new LDFastMessageAdapter(funitem.FunID, funitem.FunType);
-                    foreach (var filedItem in funitem.Fileds)
-                    {
-                        string FiledValue = filedItem.FiledValue;
-                        int filedType = filedItem.FiledType;
 
-                        FiledValue = GetParamValue(funitem, filedItem);
-                        if (string.IsNullOrEmpty(FiledValue))
+                    int nSendTimes = 0;
+                    do
+                    {
+                        nSendTimes++;
+                        #region 发送包
+                        LDsdkDefineEx.LDFastMessageAdapter fastmsg = new LDFastMessageAdapter(funitem.FunID, funitem.FunType);
+                        foreach (var filedItem in funitem.Fileds)
                         {
-                            FiledValue = GetDefaultValue(filedItem.FiledTag, FiledValue);
+                            string FiledValue = filedItem.FiledValue;
+                            int filedType = filedItem.FiledType;
+
+                            FiledValue = GetParamValue(funitem, filedItem);
+                            if (string.IsNullOrEmpty(FiledValue))
+                            {
+                                FiledValue = GetDefaultValue(filedItem.FiledTag, FiledValue);
+                            }
+                            UtilTool.SetFastMsgValue(fastmsg, filedType, FiledValue, filedItem.FiledIndex);
                         }
-                        UtilTool.SetFastMsgValue(fastmsg, filedType, FiledValue, filedItem.FiledIndex);
-                    }
-                    uint nRet = ConnectionManager.Instance.CurConnection.Connect.AsyncSend(funitem.FunID, fastmsg, 5000);
-                    lock (ReqLock)
-                    {
-                        ReqAllList.Add(new ReqDTO() { SendID = nRet, CaseData = file });
-                    }
+                        uint nRet = ConnectionManager.Instance.CurConnection.Connect.AsyncSend(funitem.FunID, fastmsg, 5000);
+                        lock (ReqLock)
+                        {
+                            ReqAllList.Add(new ReqDTO() { SendID = nRet, CaseData = file });
+                        }
 
-                    Interlocked.Increment(ref file.SendCount);
-                    if (nRet > 0)
-                    {
+                        Interlocked.Increment(ref file.SendCount);
+                        if (nRet > 0)
+                        {
 
-                        Interlocked.Increment(ref file.SendOkCount);
+                            Interlocked.Increment(ref file.SendOkCount);
+                        }
+                        else
+                        {
+                            Interlocked.Increment(ref file.SendFailCount);
+                        }
+                        fastmsg.FreeMsg();
+                        #endregion
                     }
-                    else
-                    {
-                        Interlocked.Increment(ref file.SendFailCount);
-                    }
-                    fastmsg.FreeMsg();
-                    #endregion
-                } while (funitem.SendTimes>nSendTimes);
-
-               
+                    while (funitem.SendTimes > nSendTimes);
+                }
+            }
+            catch (Exception error)
+            {
+                PrintHelper.Print.AppendLine(error.Message);
+                PrintHelper.Print.AppendLine(error.StackTrace);
             }
         }
 
        
         private String GetParamValue(CaseFunction funitem,CaseFiled filed)
         {
-            String Value = filed.FiledValue;
-            if (filed.ParamType==PARAMTYPE.emFile)
+            try
             {
-                if (File.Exists(filed.FileName))
+                String Value = filed.FiledValue;
+                if (filed.ParamType == PARAMTYPE.emFile)
                 {
-                    CSVFile csfFile = null;
-                    if (funitem.AllCsvFile.TryGetValue(filed.FileName, out csfFile))
+                    if (File.Exists(filed.FileName))
                     {
-                        DataTable data = csfFile.Table;
-                        if (filed.SelectRow == VALUETYPE.emRandom && data != null && data.Rows.Count > 0)
+                        CSVFile csfFile = null;
+                        if (funitem.AllCsvFile.TryGetValue(filed.FileName, out csfFile))
                         {
-                            long tick = DateTime.Now.Ticks;
-                            Random ran = new Random((int)(tick & 0xffffffffL) | (int)(tick >> 32));
-                            csfFile.CurrFileRowIndex = ran.Next(data.Rows.Count);
-                            Value = data.Rows[csfFile.CurrFileRowIndex][filed.ColumnName].ToString().Replace("\"", "");
-                        }
-                        else if (filed.SelectRow==VALUETYPE.emSequence && data.Rows.Count>0)
-                        {
-                            if (data.Rows.Count > csfFile.CurrFileRowIndex + 1)
+                            DataTable data = csfFile.Table;
+                            if (filed.SelectRow == VALUETYPE.emRandom && data != null && data.Rows.Count > 0)
                             {
-                                csfFile.CurrFileRowIndex++;
+                                long tick = DateTime.Now.Ticks;
+                                Random ran = new Random((int)(tick & 0xffffffffL) | (int)(tick >> 32));
+                                csfFile.CurrFileRowIndex = ran.Next(data.Rows.Count);
                                 Value = data.Rows[csfFile.CurrFileRowIndex][filed.ColumnName].ToString().Replace("\"", "");
                             }
-                            else 
+                            else if (filed.SelectRow == VALUETYPE.emSequence && data.Rows.Count > 0)
                             {
-                                csfFile.CurrFileRowIndex = 0; ;
-                                Value = data.Rows[csfFile.CurrFileRowIndex][filed.ColumnName].ToString().Replace("\"", "");
+                                if (data.Rows.Count > csfFile.CurrFileRowIndex + 1)
+                                {
+                                    csfFile.CurrFileRowIndex++;
+                                    Value = data.Rows[csfFile.CurrFileRowIndex][filed.ColumnName].ToString().Replace("\"", "");
+                                }
+                                else
+                                {
+                                    csfFile.CurrFileRowIndex = 0; ;
+                                    Value = data.Rows[csfFile.CurrFileRowIndex][filed.ColumnName].ToString().Replace("\"", "");
+                                }
                             }
-                        }
-                        else if (filed.SelectRow == VALUETYPE.emSameLine && csfFile.CurrFileRowIndex>=0 && data.Rows.Count > 0)
-                        {
-                       
-                            Value = data.Rows[csfFile.CurrFileRowIndex][filed.ColumnName].ToString().Replace("\"", "");
-                        }
-                    }                    
+                            else if (filed.SelectRow == VALUETYPE.emSameLine && csfFile.CurrFileRowIndex >= 0 && data.Rows.Count > 0)
+                            {
 
+                                Value = data.Rows[csfFile.CurrFileRowIndex][filed.ColumnName].ToString().Replace("\"", "");
+                            }
+                        }
+
+                    }
                 }
+                if (filed.FiledTag == 1674)
+                {
+                    Value = funitem.FunID;
+                }
+                return Value;
             }
-            if (filed.FiledTag == 1674)
+            catch (Exception error)
             {
-                Value = funitem.FunID;
+                throw;
             }
-            return Value;
 
         }
 
@@ -856,6 +915,9 @@ namespace MyLR
             }
             
         }
+        /// <summary>
+        /// 保存脚本方法
+        /// </summary>
         public void SaveScriptData()
         {
             PrintHelper.Print.PrintData = printData;
@@ -878,6 +940,9 @@ namespace MyLR
             }
 
         }
+        /// <summary>
+        /// 脚本另存为方法
+        /// </summary>
         public void SaveScriptDataTo()
         {
             PrintHelper.Print.PrintData = printData;
@@ -916,6 +981,9 @@ namespace MyLR
             }
 
         }
+        /// <summary>
+        /// 打开项目文件夹
+        /// </summary>
         public void OpenProjectInfo()
         {
             PrintHelper.Print.PrintData = printData;
@@ -925,11 +993,11 @@ namespace MyLR
                 openProject.Description = "选择项目";//对话框标题
                 openProject.SelectedPath = Environment.CurrentDirectory;
                 openProject.ShowNewFolderButton = true;//是否显示新建文件夹
-                openProject.ShowDialog();
-                if (!(openProject.SelectedPath == string.Empty))
+                if (openProject .ShowDialog() == DialogResult.OK && !(openProject.SelectedPath == string.Empty))
                 {
                     //获取项目文件夹信息
                     string projectPath = openProject.SelectedPath;
+                    //获取文件夹名称
                     string projectName = projectPath.Split('\\').Last();
                     ProjectInfos.Add(new ProjectInfo(projectName, projectPath));
                 }
@@ -955,7 +1023,9 @@ namespace MyLR
             }
 
         }
-
+        /// <summary>
+        /// 运行所有已加载的案例脚本
+        /// </summary>
         public void RunAllScript()
         {
             foreach (var Script in CaseScripts)
@@ -971,5 +1041,19 @@ namespace MyLR
             }
         }
         #endregion
+
+        private ICommand _LoadCase;
+        public ICommand LoadCase
+        {
+            get
+            {
+                if (_LoadCase == null)
+                {
+                    _LoadCase = new DelegateCommand(DoCaseLoad);
+                }
+                return _LoadCase;
+            }
+
+        }
     }
 }

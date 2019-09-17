@@ -1,0 +1,2733 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bizmsgs>
+    <function functionname="func_secupush_quote_init" typename="LD_REQUEST" functionid="pushL.2.1" packettype="0">
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="stock_name" fieldid="2946"/>
+        <field fieldname="pinyin_short" fieldid="2311"/>
+        <field fieldname="up_limit_price" fieldid="2905" decimalPlaces="9"/>
+        <field fieldname="down_limit_price" fieldid="1436" decimalPlaces="9"/>
+    </function>
+    <function functionname="func_secupush_quote_update" typename="LD_REQUEST" functionid="pushL.2.2" packettype="0">
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+        <field fieldname="pre_close_price" fieldid="3140" decimalPlaces="9"/>
+        <field fieldname="stop_status" fieldid="2608"/>
+        <field fieldname="up_limit_price" fieldid="2905" decimalPlaces="9"/>
+        <field fieldname="down_limit_price" fieldid="1436" decimalPlaces="9"/>
+        <field fieldname="buy_price_1" fieldid="2207" decimalPlaces="9"/>
+        <field fieldname="sell_price_1" fieldid="2228" decimalPlaces="9"/>
+    </function>
+    <function functionname="func_sequotser_PushRealQuot" typename="LD_REQUEST" functionid="pushL.2.3" packettype="0">
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="quot_price_info" fieldid="3602"/>
+    </function>
+    <function functionname="func_futupush_quote_realtime" typename="LD_REQUEST" functionid="pushL.2.10" packettype="0">
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="contrc_code" fieldid="1776"/>
+        <field fieldname="quot_price_info" fieldid="3602"/>
+        <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+    </function>
+    <function functionname="func_special_quote_calcunit" typename="LD_REQUEST" functionid="pushL.2.11" packettype="0">
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="quot_calc_unit" fieldid="5638" decimalPlaces="9"/>
+        <field fieldname="delete_flag" fieldid="4216"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_sequot_maintain_by_hand" typename="LD_REQUEST" functionid="pushL.2.12" packettype="0">
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+        <field fieldname="delete_flag" fieldid="4216"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_order_new" typename="LD_REQUEST" functionid="pushL.2.20" packettype="0">
+        <field fieldname="order_id" fieldid="1462"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="stock_acco_no" fieldid="1697"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="external_no" fieldid="2656"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="comm_id" fieldid="3010"/>
+        <field fieldname="comm_batch_no" fieldid="2987"/>
+        <field fieldname="order_date" fieldid="1458"/>
+        <field fieldname="order_time" fieldid="1459"/>
+        <field fieldname="order_batch_no" fieldid="1457"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+        <field fieldname="price_type" fieldid="1887"/>
+        <field fieldname="order_status" fieldid="1464"/>
+        <field fieldname="order_frozen_amt" fieldid="1445" decimalPlaces="6"/>
+        <field fieldname="order_frozen_qty" fieldid="1446" decimalPlaces="2"/>
+        <field fieldname="wtdraw_qty" fieldid="1277" decimalPlaces="2"/>
+        <field fieldname="report_date" fieldid="2505"/>
+        <field fieldname="report_time" fieldid="2506"/>
+        <field fieldname="report_no" fieldid="2502"/>
+        <field fieldname="net_price_flag" fieldid="2019"/>
+        <field fieldname="bond_accr_intrst" fieldid="2893" decimalPlaces="12"/>
+        <field fieldname="bond_rate_type" fieldid="2894"/>
+        <field fieldname="par_value" fieldid="2310" decimalPlaces="9"/>
+        <field fieldname="impawn_ratio" fieldid="3026" decimalPlaces="12"/>
+        <field fieldname="rsp_info" fieldid="1800"/>
+        <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="strike_bond_accr_intrst" fieldid="1316" decimalPlaces="6"/>
+        <field fieldname="order_oper_way" fieldid="1443"/>
+        <field fieldname="curr_strike_qty" fieldid="3919" decimalPlaces="2"/>
+        <field fieldname="curr_strike_amt" fieldid="3920" decimalPlaces="6"/>
+        <field fieldname="curr_strike_price" fieldid="3921" decimalPlaces="9"/>
+        <field fieldname="strike_id" fieldid="1315"/>
+        <field fieldname="all_fee" fieldid="2410" decimalPlaces="6"/>
+        <field fieldname="combo_code" fieldid="4056"/>
+        <field fieldname="combo_posi_id" fieldid="4969"/>
+        <field fieldname="asset_acco_type" fieldid="3056"/>
+        <field fieldname="contra_no" fieldid="1769"/>
+        <field fieldname="strategy_id" fieldid="3674"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_withdraw" typename="LD_REQUEST" functionid="pushL.2.201" packettype="0">
+        <field fieldname="wtdraw_id" fieldid="1279"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_acco_no" fieldid="1697"/>
+        <field fieldname="stock_acco" fieldid="1696"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="external_no" fieldid="2656"/>
+        <field fieldname="wtdraw_batch_no" fieldid="1274"/>
+        <field fieldname="wtdraw_date" fieldid="1275"/>
+        <field fieldname="wtdraw_time" fieldid="1276"/>
+        <field fieldname="order_date" fieldid="1458"/>
+        <field fieldname="order_id" fieldid="1462"/>
+        <field fieldname="report_date" fieldid="2505"/>
+        <field fieldname="report_time" fieldid="2506"/>
+        <field fieldname="report_no" fieldid="2502"/>
+        <field fieldname="wtdraw_status" fieldid="1280"/>
+        <field fieldname="wtdraw_qty" fieldid="1277" decimalPlaces="2"/>
+        <field fieldname="wtdraw_remark" fieldid="1278"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+        <field fieldname="trade_acco" fieldid="5223"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_ordertotal" typename="LD_REQUEST" functionid="pushL.2.21" packettype="0">
+        <field fieldname="sum_order_row_id" fieldid="3450"/>
+        <field fieldname="sum_order_opor_no" fieldid="3593"/>
+        <field fieldname="sum_order_co_no" fieldid="3594"/>
+        <field fieldname="sum_order_pd_no" fieldid="3452"/>
+        <field fieldname="sum_order_exch_group_no" fieldid="3453"/>
+        <field fieldname="sum_order_asset_acco_no" fieldid="3454"/>
+        <field fieldname="sum_order_pass_no" fieldid="3455"/>
+        <field fieldname="sum_order_exch_crncy_type" fieldid="3456"/>
+        <field fieldname="sum_order_stock_code_no" fieldid="3457"/>
+        <field fieldname="sum_order_trade_code_no" fieldid="3458"/>
+        <field fieldname="sum_order_target_code_no" fieldid="3459"/>
+        <field fieldname="sum_order_external_no" fieldid="3460"/>
+        <field fieldname="sum_order_date" fieldid="3461"/>
+        <field fieldname="sum_order_batch_no" fieldid="3462"/>
+        <field fieldname="sum_order_dir" fieldid="3463"/>
+        <field fieldname="sum_order_price_type" fieldid="3464"/>
+        <field fieldname="sum_order_price" fieldid="3465" decimalPlaces="9"/>
+        <field fieldname="sum_order_qty" fieldid="3466" decimalPlaces="2"/>
+        <field fieldname="order_sum_status" fieldid="3142"/>
+        <field fieldname="sum_order_wtdraw_qty" fieldid="3467" decimalPlaces="2"/>
+        <field fieldname="sum_order_waste_qty" fieldid="3468" decimalPlaces="2"/>
+        <field fieldname="sum_order_strike_amt" fieldid="3469" decimalPlaces="6"/>
+        <field fieldname="sum_order_strike_qty" fieldid="3470" decimalPlaces="2"/>
+        <field fieldname="sum_order_strike_aver_price" fieldid="3471" decimalPlaces="9"/>
+        <field fieldname="sum_order_net_price_flag" fieldid="3472"/>
+        <field fieldname="sum_order_bond_accr_intrst" fieldid="3473" decimalPlaces="12"/>
+        <field fieldname="sum_order_bond_rate_type" fieldid="3474"/>
+        <field fieldname="sum_order_par_value" fieldid="3475" decimalPlaces="9"/>
+        <field fieldname="sum_order_impawn_ratio" fieldid="3476" decimalPlaces="12"/>
+        <field fieldname="sum_order_oper_way" fieldid="3477"/>
+        <field fieldname="sum_order_update_times" fieldid="3391"/>
+    </function>
+    <function functionname="func_secupush_report_order" typename="LD_REQUEST" functionid="pushL.2.30" packettype="0">
+        <field fieldname="order_id" fieldid="1462"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_acco" fieldid="1696"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="order_date" fieldid="1458"/>
+        <field fieldname="order_time" fieldid="1459"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="price_type" fieldid="1887"/>
+        <field fieldname="order_oper_way" fieldid="1443"/>
+        <field fieldname="trade_acco" fieldid="5223"/>
+        <field fieldname="registration_agency" fieldid="5222"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_report_withdraw" typename="LD_REQUEST" functionid="pushL.2.31" packettype="0">
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_acco" fieldid="1696"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="wtdraw_date" fieldid="1275"/>
+        <field fieldname="wtdraw_time" fieldid="1276"/>
+        <field fieldname="order_date" fieldid="1458"/>
+        <field fieldname="order_id" fieldid="1462"/>
+        <field fieldname="report_no" fieldid="2502"/>
+        <field fieldname="wtdraw_qty" fieldid="1277" decimalPlaces="2"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+        <field fieldname="trade_acco" fieldid="5223"/>
+        <field fieldname="wtdraw_id" fieldid="1279"/>
+    </function>
+    <function functionname="func_secupush_report_strike" typename="LD_REQUEST" functionid="pushL.2.33" packettype="0">
+        <field fieldname="strike_id" fieldid="1315"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="stock_acco_no" fieldid="1697"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="comm_id" fieldid="3010"/>
+        <field fieldname="comm_batch_no" fieldid="2987"/>
+        <field fieldname="strike_date" fieldid="1310"/>
+        <field fieldname="strike_time" fieldid="1311"/>
+        <field fieldname="strike_no" fieldid="1295"/>
+        <field fieldname="report_date" fieldid="2505"/>
+        <field fieldname="report_no" fieldid="2502"/>
+        <field fieldname="order_date" fieldid="1458"/>
+        <field fieldname="order_id" fieldid="1462"/>
+        <field fieldname="order_batch_no" fieldid="1457"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="strike_price" fieldid="1303" decimalPlaces="9"/>
+        <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+        <field fieldname="all_fee" fieldid="2410" decimalPlaces="6"/>
+        <field fieldname="stamp_tax" fieldid="2814" decimalPlaces="6"/>
+        <field fieldname="trans_fee" fieldid="1718" decimalPlaces="6"/>
+        <field fieldname="brkage_fee" fieldid="2017" decimalPlaces="6"/>
+        <field fieldname="SEC_charges" fieldid="2922" decimalPlaces="6"/>
+        <field fieldname="other_fee" fieldid="2348" decimalPlaces="6"/>
+        <field fieldname="trade_commis" fieldid="1953" decimalPlaces="6"/>
+        <field fieldname="other_commis" fieldid="2350" decimalPlaces="6"/>
+        <field fieldname="trade_tax" fieldid="3853" decimalPlaces="6"/>
+        <field fieldname="trade_cost_fee" fieldid="3854" decimalPlaces="6"/>
+        <field fieldname="trade_system_use_fee" fieldid="3855" decimalPlaces="6"/>
+        <field fieldname="stock_settle_fee" fieldid="3856" decimalPlaces="6"/>
+        <field fieldname="net_price_flag" fieldid="2019"/>
+        <field fieldname="bond_accr_intrst" fieldid="2893" decimalPlaces="12"/>
+        <field fieldname="strike_bond_accr_intrst" fieldid="1316" decimalPlaces="6"/>
+        <field fieldname="bond_rate_type" fieldid="2894"/>
+        <field fieldname="order_oper_way" fieldid="1443"/>
+        <field fieldname="exter_comm_flag" fieldid="3170"/>
+        <field fieldname="record_valid_flag" fieldid="3169"/>
+        <field fieldname="external_no" fieldid="2656"/>
+        <field fieldname="combo_code" fieldid="4056"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_report_striketotal" typename="LD_REQUEST" functionid="pushL.2.34" packettype="0">
+        <field fieldname="sum_strike_row_id" fieldid="3478"/>
+        <field fieldname="sum_strike_opor_no" fieldid="3479"/>
+        <field fieldname="sum_strike_co_no" fieldid="3480"/>
+        <field fieldname="sum_strike_pd_no" fieldid="3481"/>
+        <field fieldname="sum_strike_exch_group_no" fieldid="3482"/>
+        <field fieldname="sum_strike_asset_acco_no" fieldid="3483"/>
+        <field fieldname="sum_strike_pass_no" fieldid="3484"/>
+        <field fieldname="sum_strike_out_acco" fieldid="3485"/>
+        <field fieldname="sum_strike_stock_acco_no" fieldid="3486"/>
+        <field fieldname="sum_strike_stock_code_no" fieldid="3487"/>
+        <field fieldname="sum_strike_comm_id" fieldid="3488"/>
+        <field fieldname="sum_strike_report_date" fieldid="3489"/>
+        <field fieldname="sum_strike_report_no" fieldid="3490"/>
+        <field fieldname="sum_strike_order_date" fieldid="3491"/>
+        <field fieldname="sum_strike_order_id" fieldid="3492"/>
+        <field fieldname="sum_strike_order_batch_no" fieldid="3842"/>
+        <field fieldname="sum_strike_order_dir" fieldid="3493"/>
+        <field fieldname="sum_strike_order_price" fieldid="3494" decimalPlaces="9"/>
+        <field fieldname="sum_strike_order_qty" fieldid="3495" decimalPlaces="2"/>
+        <field fieldname="sum_strike_strike_qty" fieldid="3496" decimalPlaces="2"/>
+        <field fieldname="sum_strike_strike_amt" fieldid="3497" decimalPlaces="6"/>
+        <field fieldname="sum_strike_all_fee" fieldid="3498" decimalPlaces="6"/>
+        <field fieldname="sum_strike_stamp_tax" fieldid="3499" decimalPlaces="6"/>
+        <field fieldname="sum_strike_trans_fee" fieldid="3500" decimalPlaces="6"/>
+        <field fieldname="sum_strike_brkage_fee" fieldid="3501" decimalPlaces="6"/>
+        <field fieldname="sum_strike_SEC_charges" fieldid="3502" decimalPlaces="6"/>
+        <field fieldname="sum_strike_other_fee" fieldid="3503" decimalPlaces="6"/>
+        <field fieldname="sum_strike_trade_commis" fieldid="3504" decimalPlaces="6"/>
+        <field fieldname="sum_strike_other_commis" fieldid="3505" decimalPlaces="6"/>
+        <field fieldname="sum_trade_tax" fieldid="3861" decimalPlaces="6"/>
+        <field fieldname="sum_trade_cost_fee" fieldid="3862" decimalPlaces="6"/>
+        <field fieldname="sum_trade_system_use_fee" fieldid="3863" decimalPlaces="6"/>
+        <field fieldname="sum_stock_settle_fee" fieldid="3864" decimalPlaces="6"/>
+        <field fieldname="sum_strike_net_price_flag" fieldid="3506"/>
+        <field fieldname="sum_strike_bond_accr_intrst" fieldid="3507" decimalPlaces="6"/>
+        <field fieldname="sum_strike_bond_rate_type" fieldid="3508"/>
+        <field fieldname="sum_strike_order_oper_way" fieldid="3509"/>
+        <field fieldname="sum_strike_exter_comm_flag" fieldid="3510"/>
+        <field fieldname="sum_external_no" fieldid="3866"/>
+        <field fieldname="sum_strike_update_times" fieldid="3393"/>
+    </function>
+    <function functionname="func_secupush_comm_comm" typename="LD_REQUEST" functionid="pushL.2.40" packettype="0">
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="stock_acco_no" fieldid="1697"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="comm_id" fieldid="3010"/>
+        <field fieldname="comm_date" fieldid="2988"/>
+        <field fieldname="comm_time" fieldid="2997"/>
+        <field fieldname="comm_batch_no" fieldid="2987"/>
+        <field fieldname="comm_opor" fieldid="3006"/>
+        <field fieldname="comm_executor" fieldid="3014"/>
+        <field fieldname="comm_dir" fieldid="2974"/>
+        <field fieldname="comm_limit_price" fieldid="3008" decimalPlaces="9"/>
+        <field fieldname="limit_actual_price" fieldid="2998" decimalPlaces="9"/>
+        <field fieldname="comm_qty" fieldid="3002" decimalPlaces="2"/>
+        <field fieldname="comm_amt" fieldid="2982" decimalPlaces="6"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="comm_cancel_qty" fieldid="2966" decimalPlaces="2"/>
+        <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="comm_frozen_amt" fieldid="2969" decimalPlaces="6"/>
+        <field fieldname="comm_frozen_qty" fieldid="2970" decimalPlaces="2"/>
+        <field fieldname="strike_status" fieldid="1319"/>
+        <field fieldname="comm_status" fieldid="3016"/>
+        <field fieldname="comm_begin_date" fieldid="2983"/>
+        <field fieldname="comm_end_date" fieldid="2978"/>
+        <field fieldname="comm_begin_time" fieldid="2984"/>
+        <field fieldname="comm_end_time" fieldid="2979"/>
+        <field fieldname="comm_comple_date" fieldid="3004"/>
+        <field fieldname="comm_comple_time" fieldid="3005"/>
+        <field fieldname="comm_appr_date" fieldid="2991"/>
+        <field fieldname="comm_appr_time" fieldid="2993"/>
+        <field fieldname="comm_appr_status" fieldid="2995"/>
+        <field fieldname="comm_appr_oper" fieldid="2989"/>
+        <field fieldname="comm_appr_remark" fieldid="2994"/>
+        <field fieldname="basket_id" fieldid="2141"/>
+        <field fieldname="net_price_flag" fieldid="2019"/>
+        <field fieldname="bond_accr_intrst" fieldid="2893" decimalPlaces="12"/>
+        <field fieldname="bond_rate_type" fieldid="2894"/>
+        <field fieldname="comm_oper_way" fieldid="2964"/>
+        <field fieldname="exter_comm_flag" fieldid="3170"/>
+        <field fieldname="comm_comple_flag" fieldid="3171"/>
+        <field fieldname="strategy_capt_qty" fieldid="5020" decimalPlaces="2"/>
+        <field fieldname="strategy_order_qty" fieldid="5019" decimalPlaces="2"/>
+        <field fieldname="contra_no" fieldid="1769"/>
+        <field fieldname="comm_remark_info" fieldid="5865"/>
+        <field fieldname="disp_opor" fieldid="1570"/>
+        <field fieldname="disp_status" fieldid="5837"/>
+        <field fieldname="read_flag" fieldid="5843"/>
+        <field fieldname="combo_code" fieldid="4056"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_comm_commtotal" typename="LD_REQUEST" functionid="pushL.2.41" packettype="0">
+        <field fieldname="sum_comm_row_id" fieldid="3515"/>
+        <field fieldname="sum_comm_co_no" fieldid="3516"/>
+        <field fieldname="sum_comm_pd_no" fieldid="3517"/>
+        <field fieldname="sum_comm_exch_group_no" fieldid="3518"/>
+        <field fieldname="sum_comm_asset_acco_no" fieldid="3519"/>
+        <field fieldname="sum_comm_pass_no" fieldid="3520"/>
+        <field fieldname="sum_comm_out_acco" fieldid="3521"/>
+        <field fieldname="sum_comm_exch_crncy_type" fieldid="3522"/>
+        <field fieldname="sum_comm_stock_code_no" fieldid="3523"/>
+        <field fieldname="sum_comm_date" fieldid="3524"/>
+        <field fieldname="sum_comm_time" fieldid="3525"/>
+        <field fieldname="sum_comm_batch_no" fieldid="3526"/>
+        <field fieldname="sum_comm_opor" fieldid="3527"/>
+        <field fieldname="sum_comm_executor" fieldid="3528"/>
+        <field fieldname="sum_comm_dir" fieldid="3529"/>
+        <field fieldname="sum_comm_limit_price" fieldid="3530" decimalPlaces="9"/>
+        <field fieldname="sum_comm_qty" fieldid="3531" decimalPlaces="2"/>
+        <field fieldname="sum_comm_amt" fieldid="3532" decimalPlaces="6"/>
+        <field fieldname="sum_comm_order_qty" fieldid="3533" decimalPlaces="2"/>
+        <field fieldname="sum_comm_cancel_qty" fieldid="3534" decimalPlaces="2"/>
+        <field fieldname="sum_comm_await_cancel_qty" fieldid="3535" decimalPlaces="2"/>
+        <field fieldname="sum_comm_strike_amt" fieldid="3536" decimalPlaces="6"/>
+        <field fieldname="sum_comm_strike_qty" fieldid="3537" decimalPlaces="2"/>
+        <field fieldname="sum_comm_strike_status" fieldid="3538"/>
+        <field fieldname="comm_sum_status" fieldid="3322"/>
+        <field fieldname="sum_comm_begin_date" fieldid="3539"/>
+        <field fieldname="sum_comm_end_date" fieldid="3540"/>
+        <field fieldname="sum_comm_begin_time" fieldid="3541"/>
+        <field fieldname="sum_comm_end_time" fieldid="3542"/>
+        <field fieldname="sum_comm_comple_date" fieldid="3543"/>
+        <field fieldname="sum_comm_comple_time" fieldid="3544"/>
+        <field fieldname="sum_comm_max_comm_comple_date" fieldid="3545"/>
+        <field fieldname="sum_comm_max_comm_comple_time" fieldid="3546"/>
+        <field fieldname="sum_comm_appr_date" fieldid="3547"/>
+        <field fieldname="sum_comm_appr_time" fieldid="3548"/>
+        <field fieldname="sum_comm_appr_qty" fieldid="3549" decimalPlaces="2"/>
+        <field fieldname="comm_sum_approve_status" fieldid="3167"/>
+        <field fieldname="sum_comm_basket_id" fieldid="3550"/>
+        <field fieldname="sum_comm_net_price_flag" fieldid="3551"/>
+        <field fieldname="sum_comm_bond_accr_intrst" fieldid="3552" decimalPlaces="12"/>
+        <field fieldname="sum_comm_bond_rate_type" fieldid="3553"/>
+        <field fieldname="sum_comm_oper_way" fieldid="3554"/>
+        <field fieldname="sum_comm_exter_comm_flag" fieldid="3555"/>
+        <field fieldname="sum_buy_order_qty" fieldid="3890" decimalPlaces="2"/>
+        <field fieldname="sum_sell_order_qty" fieldid="3891" decimalPlaces="2"/>
+        <field fieldname="sum_buy_comm_qty" fieldid="3892" decimalPlaces="2"/>
+        <field fieldname="sum_sell_comm_qty" fieldid="3893" decimalPlaces="2"/>
+        <field fieldname="sum_buy_strike_qty" fieldid="3894" decimalPlaces="2"/>
+        <field fieldname="sum_sell_strike_qty" fieldid="3895" decimalPlaces="2"/>
+        <field fieldname="sum_buy_strike_amt" fieldid="3896" decimalPlaces="6"/>
+        <field fieldname="sum_sell_strike_amt" fieldid="3897" decimalPlaces="6"/>
+        <field fieldname="sum_buy_comm_amt" fieldid="3898" decimalPlaces="6"/>
+        <field fieldname="sum_sell_comm_amt" fieldid="3899" decimalPlaces="6"/>
+        <field fieldname="comm_remark_info" fieldid="5865"/>
+        <field fieldname="read_flag" fieldid="5843"/>
+        <field fieldname="acco_concat_info" fieldid="5848"/>
+        <field fieldname="sum_comm_update_times" fieldid="3392"/>
+    </function>
+    <function functionname="func_secupush_pendorder_new" typename="LD_REQUEST" functionid="pushL.2.42" packettype="0">
+        <field fieldname="pend_order_id" fieldid="3865"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_acco_no" fieldid="1697"/>
+        <field fieldname="stock_acco" fieldid="1696"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="combo_code" fieldid="4056"/>
+        <field fieldname="trade_code_no" fieldid="1918"/>
+        <field fieldname="target_code_no" fieldid="1161"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="comm_id" fieldid="3010"/>
+        <field fieldname="comm_batch_no" fieldid="2987"/>
+        <field fieldname="order_date" fieldid="1458"/>
+        <field fieldname="order_time" fieldid="1459"/>
+        <field fieldname="order_batch_no" fieldid="1457"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="price_type" fieldid="1887"/>
+        <field fieldname="exec_price_type" fieldid="3889"/>
+        <field fieldname="price_offset" fieldid="3888" decimalPlaces="9"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="net_price_flag" fieldid="2019"/>
+        <field fieldname="intrst_days" fieldid="1864"/>
+        <field fieldname="par_value" fieldid="2310" decimalPlaces="9"/>
+        <field fieldname="bond_accr_intrst" fieldid="2893" decimalPlaces="12"/>
+        <field fieldname="bond_rate_type" fieldid="2894"/>
+        <field fieldname="impawn_ratio" fieldid="3026" decimalPlaces="12"/>
+        <field fieldname="order_oper_way" fieldid="1443"/>
+        <field fieldname="external_no" fieldid="2656"/>
+        <field fieldname="pend_order_status" fieldid="3887"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+        <field fieldname="create_date" fieldid="1354"/>
+        <field fieldname="create_time" fieldid="1355"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_capital_exgp" typename="LD_REQUEST" functionid="pushL.2.50" packettype="0">
+        <field fieldname="exgp_cash_id" fieldid="3387"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="exgp_frozen_amt" fieldid="3412" decimalPlaces="6"/>
+        <field fieldname="exgp_unfroz_amt" fieldid="3413" decimalPlaces="6"/>
+        <field fieldname="exgp_comm_frozen_amt" fieldid="3414" decimalPlaces="6"/>
+        <field fieldname="exgp_comm_unfroz_amt" fieldid="3415" decimalPlaces="6"/>
+        <field fieldname="exgp_comm_capt_amt" fieldid="3416" decimalPlaces="6"/>
+        <field fieldname="exgp_comm_releas_amt" fieldid="3417" decimalPlaces="6"/>
+        <field fieldname="exgp_trade_frozen_amt" fieldid="3418" decimalPlaces="6"/>
+        <field fieldname="exgp_trade_unfroz_amt" fieldid="3419" decimalPlaces="6"/>
+        <field fieldname="exgp_trade_capt_amt" fieldid="3420" decimalPlaces="6"/>
+        <field fieldname="exgp_trade_releas_amt" fieldid="3421" decimalPlaces="6"/>
+        <field fieldname="exgp_strike_capt_amt" fieldid="3422" decimalPlaces="6"/>
+        <field fieldname="exgp_strike_releas_amt" fieldid="3423" decimalPlaces="6"/>
+        <field fieldname="exgp_cash_update_times" fieldid="3394"/>
+    </function>
+    <function functionname="func_secupush_capital_asac" typename="LD_REQUEST" functionid="pushL.2.51" packettype="0">
+        <field fieldname="asac_cash_id" fieldid="3388"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="asac_frozen_amt" fieldid="3438" decimalPlaces="6"/>
+        <field fieldname="asac_unfroz_amt" fieldid="3439" decimalPlaces="6"/>
+        <field fieldname="asac_comm_frozen_amt" fieldid="3440" decimalPlaces="6"/>
+        <field fieldname="asac_comm_unfroz_amt" fieldid="3441" decimalPlaces="6"/>
+        <field fieldname="asac_comm_capt_amt" fieldid="3442" decimalPlaces="6"/>
+        <field fieldname="asac_comm_releas_amt" fieldid="3443" decimalPlaces="6"/>
+        <field fieldname="asac_trade_frozen_amt" fieldid="3444" decimalPlaces="6"/>
+        <field fieldname="asac_trade_unfroz_amt" fieldid="3445" decimalPlaces="6"/>
+        <field fieldname="asac_trade_capt_amt" fieldid="3446" decimalPlaces="6"/>
+        <field fieldname="asac_trade_releas_amt" fieldid="3447" decimalPlaces="6"/>
+        <field fieldname="asac_strike_capt_amt" fieldid="3448" decimalPlaces="6"/>
+        <field fieldname="asac_strike_releas_amt" fieldid="3449" decimalPlaces="6"/>
+        <field fieldname="asac_cash_update_times" fieldid="3395"/>
+    </function>
+    <function functionname="func_secupush_posi_exgp" typename="LD_REQUEST" functionid="pushL.2.60" packettype="0">
+        <field fieldname="exgp_posi_id" fieldid="3389"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="stock_acco_no" fieldid="1697"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="exgp_frozen_qty" fieldid="3398" decimalPlaces="2"/>
+        <field fieldname="exgp_unfroz_qty" fieldid="3399" decimalPlaces="2"/>
+        <field fieldname="exgp_comm_frozen_qty" fieldid="3400" decimalPlaces="2"/>
+        <field fieldname="exgp_comm_unfroz_qty" fieldid="3401" decimalPlaces="2"/>
+        <field fieldname="exgp_comm_capt_qty" fieldid="3402" decimalPlaces="2"/>
+        <field fieldname="exgp_comm_releas_qty" fieldid="3403" decimalPlaces="2"/>
+        <field fieldname="exgp_trade_frozen_qty" fieldid="3404" decimalPlaces="2"/>
+        <field fieldname="exgp_trade_unfroz_qty" fieldid="3405" decimalPlaces="2"/>
+        <field fieldname="exgp_trade_capt_qty" fieldid="3406" decimalPlaces="2"/>
+        <field fieldname="exgp_trade_releas_qty" fieldid="3407" decimalPlaces="2"/>
+        <field fieldname="exgp_strike_capt_qty" fieldid="3408" decimalPlaces="2"/>
+        <field fieldname="exgp_strike_releas_qty" fieldid="3409" decimalPlaces="2"/>
+        <field fieldname="exgp_strike_frozen_qty" fieldid="3410" decimalPlaces="2"/>
+        <field fieldname="exgp_strike_unfroz_qty" fieldid="3411" decimalPlaces="2"/>
+        <field fieldname="exgp_realize_pandl" fieldid="3334" decimalPlaces="6"/>
+        <field fieldname="exgp_cost_amt" fieldid="3335" decimalPlaces="6"/>
+        <field fieldname="exgp_intrst_cost_amt" fieldid="3336" decimalPlaces="6"/>
+        <field fieldname="exgp_intrst_pandl" fieldid="3337" decimalPlaces="6"/>
+        <field fieldname="exgp_posi_update_times" fieldid="3396"/>
+        <field fieldname="exgp_put_impawn_qty" fieldid="3838" decimalPlaces="2"/>
+    </function>
+    <function functionname="func_secupush_posi_asac" typename="LD_REQUEST" functionid="pushL.2.61" packettype="0">
+        <field fieldname="asac_posi_id" fieldid="3390"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="stock_acco_no" fieldid="1697"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="asac_frozen_qty" fieldid="3424" decimalPlaces="2"/>
+        <field fieldname="asac_unfroz_qty" fieldid="3425" decimalPlaces="2"/>
+        <field fieldname="asac_comm_frozen_qty" fieldid="3426" decimalPlaces="2"/>
+        <field fieldname="asac_comm_unfroz_qty" fieldid="3427" decimalPlaces="2"/>
+        <field fieldname="asac_comm_capt_qty" fieldid="3428" decimalPlaces="2"/>
+        <field fieldname="asac_comm_releas_qty" fieldid="3429" decimalPlaces="2"/>
+        <field fieldname="asac_trade_frozen_qty" fieldid="3430" decimalPlaces="2"/>
+        <field fieldname="asac_trade_unfroz_qty" fieldid="3431" decimalPlaces="2"/>
+        <field fieldname="asac_trade_capt_qty" fieldid="3432" decimalPlaces="2"/>
+        <field fieldname="asac_trade_releas_qty" fieldid="3433" decimalPlaces="2"/>
+        <field fieldname="asac_strike_capt_qty" fieldid="3434" decimalPlaces="2"/>
+        <field fieldname="asac_strike_releas_qty" fieldid="3435" decimalPlaces="2"/>
+        <field fieldname="asac_strike_frozen_qty" fieldid="3436" decimalPlaces="2"/>
+        <field fieldname="asac_strike_unfroz_qty" fieldid="3437" decimalPlaces="2"/>
+        <field fieldname="asac_realize_pandl" fieldid="3339" decimalPlaces="6"/>
+        <field fieldname="asac_cost_amt" fieldid="3340" decimalPlaces="6"/>
+        <field fieldname="asac_intrst_cost_amt" fieldid="3341" decimalPlaces="6"/>
+        <field fieldname="asac_intrst_pandl" fieldid="3342" decimalPlaces="6"/>
+        <field fieldname="asac_posi_update_times" fieldid="3397"/>
+        <field fieldname="asac_put_impawn_qty" fieldid="3839" decimalPlaces="2"/>
+    </function>
+    <function functionname="func_secupush_pd_capital_exgp" typename="LD_REQUEST" functionid="pushL.2.70" packettype="0">
+        <field fieldname="exgp_cash_id" fieldid="3387"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exgp_begin_amt" fieldid="3565" decimalPlaces="6"/>
+        <field fieldname="exgp_curr_amt" fieldid="3567" decimalPlaces="6"/>
+        <field fieldname="exgp_frozen_amt" fieldid="3412" decimalPlaces="6"/>
+        <field fieldname="exgp_unfroz_amt" fieldid="3413" decimalPlaces="6"/>
+        <field fieldname="exgp_pre_settle_amt" fieldid="3873" decimalPlaces="6"/>
+        <field fieldname="exgp_shsz_avail_change_amt" fieldid="3926" decimalPlaces="6"/>
+        <field fieldname="exgp_hk_avail_change_amt" fieldid="3927" decimalPlaces="6"/>
+        <field fieldname="exgp_amt_check_diff" fieldid="3965" decimalPlaces="6"/>
+        <field fieldname="exgp_T_hk_buy_total_amt" fieldid="5065" decimalPlaces="6"/>
+        <field fieldname="exgp_T_hk_sell_total_amt" fieldid="5066" decimalPlaces="6"/>
+        <field fieldname="exgp_T1_hk_buy_total_amt" fieldid="5051" decimalPlaces="6"/>
+        <field fieldname="exgp_T1_hk_sell_total_amt" fieldid="5052" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_rece_amt" fieldid="3614" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_payab_amt" fieldid="3615" decimalPlaces="6"/>
+        <field fieldname="exgp_realize_pandl" fieldid="3334" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_rate" fieldid="3616" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_base_amt" fieldid="3617" decimalPlaces="6"/>
+        <field fieldname="exch_group_pre_entry_intrst_amt" fieldid="3618" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_pd_capital_asac" typename="LD_REQUEST" functionid="pushL.2.71" packettype="0">
+        <field fieldname="asac_cash_id" fieldid="3388"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="asac_begin_amt" fieldid="3566" decimalPlaces="6"/>
+        <field fieldname="asac_curr_amt" fieldid="3568" decimalPlaces="6"/>
+        <field fieldname="asac_frozen_amt" fieldid="3438" decimalPlaces="6"/>
+        <field fieldname="asac_unfroz_amt" fieldid="3439" decimalPlaces="6"/>
+        <field fieldname="asac_pre_settle_amt" fieldid="3872" decimalPlaces="6"/>
+        <field fieldname="asac_shsz_avail_change_amt" fieldid="3928" decimalPlaces="6"/>
+        <field fieldname="asac_hk_avail_change_amt" fieldid="3929" decimalPlaces="6"/>
+        <field fieldname="asac_amt_check_diff" fieldid="3966" decimalPlaces="6"/>
+        <field fieldname="asac_T_hk_buy_total_amt" fieldid="5067" decimalPlaces="6"/>
+        <field fieldname="asac_T_hk_sell_total_amt" fieldid="5068" decimalPlaces="6"/>
+        <field fieldname="asac_T1_hk_buy_total_amt" fieldid="5057" decimalPlaces="6"/>
+        <field fieldname="asac_T1_hk_sell_total_amt" fieldid="5058" decimalPlaces="6"/>
+        <field fieldname="asac_total_rece_amt" fieldid="3619" decimalPlaces="6"/>
+        <field fieldname="asac_total_payab_amt" fieldid="3620" decimalPlaces="6"/>
+        <field fieldname="asac_realize_pandl" fieldid="3339" decimalPlaces="6"/>
+        <field fieldname="asac_intrst_rate" fieldid="3621" decimalPlaces="6"/>
+        <field fieldname="asac_intrst_base_amt" fieldid="3622" decimalPlaces="6"/>
+        <field fieldname="asac_pre_entry_intrst_amt" fieldid="3623" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_pd_posi_exgp" typename="LD_REQUEST" functionid="pushL.2.80" packettype="0">
+        <field fieldname="exgp_posi_id" fieldid="3389"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_acco_no" fieldid="1697"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="exch_group_stock_type" fieldid="3624"/>
+        <field fieldname="exch_group_asset_type" fieldid="3625"/>
+        <field fieldname="exgp_invest_type" fieldid="5216"/>
+        <field fieldname="exch_group_begin_qty" fieldid="3626" decimalPlaces="2"/>
+        <field fieldname="exgp_curr_qty" fieldid="3338" decimalPlaces="2"/>
+        <field fieldname="exgp_pre_settle_qty" fieldid="3968" decimalPlaces="2"/>
+        <field fieldname="exgp_frozen_qty" fieldid="3398" decimalPlaces="2"/>
+        <field fieldname="exgp_unfroz_qty" fieldid="3399" decimalPlaces="2"/>
+        <field fieldname="exgp_posi_qty_check_diff" fieldid="3963" decimalPlaces="2"/>
+        <field fieldname="exgp_cost_amt" fieldid="3335" decimalPlaces="6"/>
+        <field fieldname="exgp_realize_pandl" fieldid="3334" decimalPlaces="6"/>
+        <field fieldname="exgp_intrst_cost_amt" fieldid="3336" decimalPlaces="6"/>
+        <field fieldname="exgp_intrst_pandl" fieldid="3337" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_pd_posi_asac" typename="LD_REQUEST" functionid="pushL.2.81" packettype="0">
+        <field fieldname="asac_posi_id" fieldid="3390"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_acco_no" fieldid="1697"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="asac_stock_type" fieldid="3627"/>
+        <field fieldname="asac_asset_type" fieldid="3628"/>
+        <field fieldname="asac_invest_type" fieldid="5217"/>
+        <field fieldname="asac_begin_qty" fieldid="3629" decimalPlaces="2"/>
+        <field fieldname="asac_curr_qty" fieldid="3343" decimalPlaces="2"/>
+        <field fieldname="asac_pre_settle_qty" fieldid="3969" decimalPlaces="2"/>
+        <field fieldname="asac_frozen_qty" fieldid="3424" decimalPlaces="2"/>
+        <field fieldname="asac_unfroz_qty" fieldid="3425" decimalPlaces="2"/>
+        <field fieldname="asac_posi_qty_check_diff" fieldid="3964" decimalPlaces="2"/>
+        <field fieldname="asac_cost_amt" fieldid="3340" decimalPlaces="6"/>
+        <field fieldname="asac_realize_pandl" fieldid="3339" decimalPlaces="6"/>
+        <field fieldname="asac_intrst_cost_amt" fieldid="3341" decimalPlaces="6"/>
+        <field fieldname="asac_intrst_pandl" fieldid="3342" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_exgp_bondrepo" typename="LD_REQUEST" functionid="pushL.2.82" packettype="0">
+        <field fieldname="bond_repo_id" fieldid="3845"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="exch_rate" fieldid="1825" decimalPlaces="12"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_acco_no" fieldid="1697"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="target_code_no" fieldid="1161"/>
+        <field fieldname="comm_id" fieldid="3010"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="repo_qty" fieldid="1818" decimalPlaces="2"/>
+        <field fieldname="repo_amt" fieldid="1815" decimalPlaces="6"/>
+        <field fieldname="repo_rate" fieldid="1816" decimalPlaces="12"/>
+        <field fieldname="repo_trade_date" fieldid="1814"/>
+        <field fieldname="repo_order_id" fieldid="1820"/>
+        <field fieldname="repo_strike_id" fieldid="1808"/>
+        <field fieldname="repo_days" fieldid="1819"/>
+        <field fieldname="repo_cale_days" fieldid="1817"/>
+        <field fieldname="repo_back_date" fieldid="1811"/>
+        <field fieldname="repo_back_amt" fieldid="1812" decimalPlaces="6"/>
+        <field fieldname="repo_back_intrst" fieldid="1813" decimalPlaces="6"/>
+        <field fieldname="repo_back_trade_date" fieldid="2533"/>
+        <field fieldname="repo_status" fieldid="1809"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_pd_block_trade_posi" typename="LD_REQUEST" functionid="pushL.2.83" packettype="0">
+        <field fieldname="posi_id" fieldid="5227"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_acco_no" fieldid="1697"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="strike_price" fieldid="1303" decimalPlaces="9"/>
+        <field fieldname="fair_price" fieldid="1672" decimalPlaces="9"/>
+        <field fieldname="strike_date" fieldid="1310"/>
+        <field fieldname="release_date" fieldid="5228"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_pd_new_stock_limit" typename="LD_REQUEST" functionid="pushL.2.84" packettype="0">
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_acco_no" fieldid="1697"/>
+        <field fieldname="stock_acco" fieldid="1696"/>
+        <field fieldname="apply_limit" fieldid="2510" decimalPlaces="2"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_futupush_order_new" typename="LD_REQUEST" functionid="pushL.2.90" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="futu_acco_no" fieldid="1909"/>
+        <field fieldname="contrc_code_no" fieldid="1777"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="contrc_type" fieldid="1778"/>
+        <field fieldname="contrc_unit" fieldid="1775"/>
+        <field fieldname="external_no" fieldid="2656"/>
+        <field fieldname="report_date" fieldid="2505"/>
+        <field fieldname="report_time" fieldid="2506"/>
+        <field fieldname="report_no" fieldid="2502"/>
+        <field fieldname="order_date" fieldid="1458"/>
+        <field fieldname="order_time" fieldid="1459"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="contrc_dir" fieldid="2070"/>
+        <field fieldname="hedge_type" fieldid="2591"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="order_status" fieldid="1464"/>
+        <field fieldname="wtdraw_qty" fieldid="1277" decimalPlaces="2"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="strike_price" fieldid="1303" decimalPlaces="9"/>
+        <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+        <field fieldname="trade_fee" fieldid="1939" decimalPlaces="6"/>
+        <field fieldname="trade_commis" fieldid="1953" decimalPlaces="6"/>
+        <field fieldname="other_commis" fieldid="2350" decimalPlaces="6"/>
+        <field fieldname="report_fee" fieldid="2504" decimalPlaces="6"/>
+        <field fieldname="wtdraw_fee" fieldid="1272" decimalPlaces="6"/>
+        <field fieldname="rece_margin" fieldid="2822" decimalPlaces="6"/>
+        <field fieldname="comb_code" fieldid="3092"/>
+        <field fieldname="margin_ratio" fieldid="1114" decimalPlaces="12"/>
+        <field fieldname="rsp_info" fieldid="1800"/>
+        <field fieldname="compli_trig_id" fieldid="1743"/>
+        <field fieldname="order_oper_way" fieldid="1443"/>
+        <field fieldname="order_batch_no" fieldid="1457"/>
+        <field fieldname="comm_id" fieldid="3010"/>
+        <field fieldname="comm_batch_no" fieldid="2987"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_futupush_ordertotal" typename="LD_REQUEST" functionid="pushL.2.91" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="contrc_code_no" fieldid="1777"/>
+        <field fieldname="contrc_code" fieldid="1776"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="contrc_type" fieldid="1778"/>
+        <field fieldname="contrc_unit" fieldid="1775"/>
+        <field fieldname="external_no" fieldid="2656"/>
+        <field fieldname="order_batch_no" fieldid="1457"/>
+        <field fieldname="order_date" fieldid="1458"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="contrc_dir" fieldid="2070"/>
+        <field fieldname="hedge_type" fieldid="2591"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="order_sum_status" fieldid="3142"/>
+        <field fieldname="wtdraw_qty" fieldid="1277" decimalPlaces="2"/>
+        <field fieldname="waste_qty" fieldid="3141" decimalPlaces="2"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="strike_aver_price" fieldid="1307" decimalPlaces="9"/>
+        <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+        <field fieldname="trade_fee" fieldid="1939" decimalPlaces="6"/>
+        <field fieldname="trade_commis" fieldid="1953" decimalPlaces="6"/>
+        <field fieldname="other_commis" fieldid="2350" decimalPlaces="6"/>
+        <field fieldname="strike_commis" fieldid="3857" decimalPlaces="6"/>
+        <field fieldname="strike_other_commis" fieldid="3858" decimalPlaces="6"/>
+        <field fieldname="report_fee" fieldid="2504" decimalPlaces="6"/>
+        <field fieldname="wtdraw_fee" fieldid="1272" decimalPlaces="6"/>
+        <field fieldname="strike_all_fee" fieldid="3859" decimalPlaces="6"/>
+        <field fieldname="rece_margin" fieldid="2822" decimalPlaces="6"/>
+        <field fieldname="order_oper_way" fieldid="1443"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_futupush_comm" typename="LD_REQUEST" functionid="pushL.2.92" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="futu_acco_no" fieldid="1909"/>
+        <field fieldname="contrc_code_no" fieldid="1777"/>
+        <field fieldname="contrc_code" fieldid="1776"/>
+        <field fieldname="contrc_type" fieldid="1778"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="contrc_dir" fieldid="2070"/>
+        <field fieldname="hedge_type" fieldid="2591"/>
+        <field fieldname="comm_date" fieldid="2988"/>
+        <field fieldname="comm_time" fieldid="2997"/>
+        <field fieldname="comm_batch_no" fieldid="2987"/>
+        <field fieldname="comm_opor" fieldid="3006"/>
+        <field fieldname="comm_executor" fieldid="3014"/>
+        <field fieldname="comm_dir" fieldid="2974"/>
+        <field fieldname="comm_limit_price" fieldid="3008" decimalPlaces="9"/>
+        <field fieldname="limit_actual_price" fieldid="2998" decimalPlaces="9"/>
+        <field fieldname="comm_qty" fieldid="3002" decimalPlaces="2"/>
+        <field fieldname="comm_amt" fieldid="2982" decimalPlaces="6"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="comm_cancel_qty" fieldid="2966" decimalPlaces="2"/>
+        <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="comm_frozen_qty" fieldid="2970" decimalPlaces="2"/>
+        <field fieldname="rece_margin" fieldid="2822" decimalPlaces="6"/>
+        <field fieldname="capit_reback_days" fieldid="3066"/>
+        <field fieldname="posi_reback_days" fieldid="1323"/>
+        <field fieldname="strike_status" fieldid="1319"/>
+        <field fieldname="comm_status" fieldid="3016"/>
+        <field fieldname="comm_begin_date" fieldid="2983"/>
+        <field fieldname="comm_end_date" fieldid="2978"/>
+        <field fieldname="comm_begin_time" fieldid="2984"/>
+        <field fieldname="comm_end_time" fieldid="2979"/>
+        <field fieldname="comm_comple_date" fieldid="3004"/>
+        <field fieldname="comm_comple_time" fieldid="3005"/>
+        <field fieldname="comm_appr_date" fieldid="2991"/>
+        <field fieldname="comm_appr_time" fieldid="2993"/>
+        <field fieldname="comm_appr_status" fieldid="2995"/>
+        <field fieldname="comm_appr_oper" fieldid="2989"/>
+        <field fieldname="comm_appr_remark" fieldid="2994"/>
+        <field fieldname="external_no" fieldid="2656"/>
+        <field fieldname="comm_oper_way" fieldid="2964"/>
+        <field fieldname="comm_comple_flag" fieldid="3171"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_futupush_commtotal" typename="LD_REQUEST" functionid="pushL.2.93" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="futu_acco_no" fieldid="1909"/>
+        <field fieldname="contrc_code_no" fieldid="1777"/>
+        <field fieldname="contrc_code" fieldid="1776"/>
+        <field fieldname="contrc_type" fieldid="1778"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="contrc_dir" fieldid="2070"/>
+        <field fieldname="hedge_type" fieldid="2591"/>
+        <field fieldname="comm_date" fieldid="2988"/>
+        <field fieldname="comm_time" fieldid="2997"/>
+        <field fieldname="comm_batch_no" fieldid="2987"/>
+        <field fieldname="comm_opor" fieldid="3006"/>
+        <field fieldname="comm_executor" fieldid="3014"/>
+        <field fieldname="comm_dir" fieldid="2974"/>
+        <field fieldname="comm_limit_price" fieldid="3008" decimalPlaces="9"/>
+        <field fieldname="limit_actual_price" fieldid="2998" decimalPlaces="9"/>
+        <field fieldname="comm_qty" fieldid="3002" decimalPlaces="2"/>
+        <field fieldname="comm_amt" fieldid="2982" decimalPlaces="6"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="comm_cancel_qty" fieldid="2966" decimalPlaces="2"/>
+        <field fieldname="comm_await_cancel_qty" fieldid="3323" decimalPlaces="2"/>
+        <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="comm_frozen_qty" fieldid="2970" decimalPlaces="2"/>
+        <field fieldname="rece_margin" fieldid="2822" decimalPlaces="6"/>
+        <field fieldname="capit_reback_days" fieldid="3066"/>
+        <field fieldname="posi_reback_days" fieldid="1323"/>
+        <field fieldname="strike_status" fieldid="1319"/>
+        <field fieldname="comm_sum_status" fieldid="3322"/>
+        <field fieldname="comm_begin_date" fieldid="2983"/>
+        <field fieldname="comm_end_date" fieldid="2978"/>
+        <field fieldname="comm_begin_time" fieldid="2984"/>
+        <field fieldname="comm_end_time" fieldid="2979"/>
+        <field fieldname="comm_comple_date" fieldid="3004"/>
+        <field fieldname="comm_comple_time" fieldid="3005"/>
+        <field fieldname="max_comm_comple_date" fieldid="3165"/>
+        <field fieldname="max_comm_comple_time" fieldid="3166"/>
+        <field fieldname="comm_appr_date" fieldid="2991"/>
+        <field fieldname="comm_appr_time" fieldid="2993"/>
+        <field fieldname="comm_appr_qty" fieldid="3308" decimalPlaces="2"/>
+        <field fieldname="comm_sum_approve_status" fieldid="3167"/>
+        <field fieldname="buy_order_qty" fieldid="3704" decimalPlaces="2"/>
+        <field fieldname="sell_order_qty" fieldid="3705" decimalPlaces="2"/>
+        <field fieldname="buy_comm_qty" fieldid="3706" decimalPlaces="2"/>
+        <field fieldname="sell_comm_qty" fieldid="3707" decimalPlaces="2"/>
+        <field fieldname="buy_strike_qty" fieldid="3708" decimalPlaces="2"/>
+        <field fieldname="sell_strike_qty" fieldid="3709" decimalPlaces="2"/>
+        <field fieldname="buy_strike_amt" fieldid="3710" decimalPlaces="6"/>
+        <field fieldname="sell_strike_amt" fieldid="3711" decimalPlaces="6"/>
+        <field fieldname="buy_comm_amt" fieldid="3712" decimalPlaces="6"/>
+        <field fieldname="sell_comm_amt" fieldid="3713" decimalPlaces="6"/>
+        <field fieldname="comm_oper_way" fieldid="2964"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_futupush_report_strike" typename="LD_REQUEST" functionid="pushL.2.100" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="futu_acco" fieldid="1908"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="contrc_code" fieldid="1776"/>
+        <field fieldname="contrc_code_no" fieldid="1777"/>
+        <field fieldname="contrc_unit" fieldid="1775"/>
+        <field fieldname="contrc_dir" fieldid="2070"/>
+        <field fieldname="hedge_type" fieldid="2591"/>
+        <field fieldname="report_date" fieldid="2505"/>
+        <field fieldname="order_id" fieldid="1462"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="report_no" fieldid="2502"/>
+        <field fieldname="strike_date" fieldid="1310"/>
+        <field fieldname="strike_time" fieldid="1311"/>
+        <field fieldname="strike_no" fieldid="1295"/>
+        <field fieldname="strike_price" fieldid="1303" decimalPlaces="9"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+        <field fieldname="strike_fee" fieldid="1300" decimalPlaces="6"/>
+        <field fieldname="close_pandl" fieldid="2320" decimalPlaces="6"/>
+        <field fieldname="strike_margin" fieldid="1293" decimalPlaces="6"/>
+        <field fieldname="strike_occur_amt" fieldid="1296" decimalPlaces="6"/>
+        <field fieldname="order_oper_way" fieldid="1443"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_futupush_report_order" typename="LD_REQUEST" functionid="pushL.2.101" packettype="0">
+        <field fieldname="order_id" fieldid="1462"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="futu_acco" fieldid="1908"/>
+        <field fieldname="contrc_code" fieldid="1776"/>
+        <field fieldname="contrc_type" fieldid="1778"/>
+        <field fieldname="contrc_dir" fieldid="2070"/>
+        <field fieldname="hedge_type" fieldid="2591"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="order_date" fieldid="1458"/>
+        <field fieldname="order_time" fieldid="1459"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+        <field fieldname="contrc_unit" fieldid="1775"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_futupush_report_withdraw" typename="LD_REQUEST" functionid="pushL.2.102" packettype="0">
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="futu_acco" fieldid="1908"/>
+        <field fieldname="contrc_code" fieldid="1776"/>
+        <field fieldname="wtdraw_date" fieldid="1275"/>
+        <field fieldname="wtdraw_time" fieldid="1276"/>
+        <field fieldname="wtdraw_status" fieldid="1280"/>
+        <field fieldname="order_date" fieldid="1458"/>
+        <field fieldname="order_id" fieldid="1462"/>
+        <field fieldname="report_no" fieldid="2502"/>
+    </function>
+    <function functionname="func_futupush_capital_exgp" typename="LD_REQUEST" functionid="pushL.2.110" packettype="0">
+        <field fieldname="exgp_row_id" fieldid="3563"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="exgp_begin_amt" fieldid="3565" decimalPlaces="6"/>
+        <field fieldname="exgp_curr_amt" fieldid="3567" decimalPlaces="6"/>
+        <field fieldname="exgp_frozen_amt" fieldid="3412" decimalPlaces="6"/>
+        <field fieldname="exgp_unfroz_amt" fieldid="3413" decimalPlaces="6"/>
+        <field fieldname="exgp_comm_frozen_amt" fieldid="3414" decimalPlaces="6"/>
+        <field fieldname="exgp_comm_unfroz_amt" fieldid="3415" decimalPlaces="6"/>
+        <field fieldname="exgp_comm_capt_amt" fieldid="3416" decimalPlaces="6"/>
+        <field fieldname="exgp_comm_releas_amt" fieldid="3417" decimalPlaces="6"/>
+        <field fieldname="exgp_trade_capt_amt" fieldid="3420" decimalPlaces="6"/>
+        <field fieldname="exgp_trade_releas_amt" fieldid="3421" decimalPlaces="6"/>
+        <field fieldname="exgp_strike_capt_amt" fieldid="3422" decimalPlaces="6"/>
+        <field fieldname="exgp_strike_releas_amt" fieldid="3423" decimalPlaces="6"/>
+        <field fieldname="exgp_capt_margin" fieldid="3569" decimalPlaces="6"/>
+        <field fieldname="exgp_trade_fee" fieldid="3571" decimalPlaces="6"/>
+        <field fieldname="exgp_strike_fee" fieldid="3573" decimalPlaces="6"/>
+        <field fieldname="exgp_close_pandl" fieldid="3575" decimalPlaces="6"/>
+        <field fieldname="exgp_marked_pandl" fieldid="3577" decimalPlaces="6"/>
+        <field fieldname="exgp_cash_update_times" fieldid="3394"/>
+    </function>
+    <function functionname="func_futupush_capital_asac" typename="LD_REQUEST" functionid="pushL.2.111" packettype="0">
+        <field fieldname="asac_row_id" fieldid="3564"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="asac_begin_amt" fieldid="3566" decimalPlaces="6"/>
+        <field fieldname="asac_curr_amt" fieldid="3568" decimalPlaces="6"/>
+        <field fieldname="asac_frozen_amt" fieldid="3438" decimalPlaces="6"/>
+        <field fieldname="asac_unfroz_amt" fieldid="3439" decimalPlaces="6"/>
+        <field fieldname="asac_comm_frozen_amt" fieldid="3440" decimalPlaces="6"/>
+        <field fieldname="asac_comm_unfroz_amt" fieldid="3441" decimalPlaces="6"/>
+        <field fieldname="asac_comm_capt_amt" fieldid="3442" decimalPlaces="6"/>
+        <field fieldname="asac_comm_releas_amt" fieldid="3443" decimalPlaces="6"/>
+        <field fieldname="asac_trade_capt_amt" fieldid="3446" decimalPlaces="6"/>
+        <field fieldname="asac_trade_releas_amt" fieldid="3447" decimalPlaces="6"/>
+        <field fieldname="asac_strike_capt_amt" fieldid="3448" decimalPlaces="6"/>
+        <field fieldname="asac_strike_releas_amt" fieldid="3449" decimalPlaces="6"/>
+        <field fieldname="asac_capt_margin" fieldid="3570" decimalPlaces="6"/>
+        <field fieldname="asac_trade_fee" fieldid="3572" decimalPlaces="6"/>
+        <field fieldname="asac_strike_fee" fieldid="3574" decimalPlaces="6"/>
+        <field fieldname="asac_close_pandl" fieldid="3576" decimalPlaces="6"/>
+        <field fieldname="asac_marked_pandl" fieldid="3578" decimalPlaces="6"/>
+        <field fieldname="asac_cash_update_times" fieldid="3395"/>
+    </function>
+    <function functionname="func_futupush_capital_pref" typename="LD_REQUEST" functionid="pushL.2.120" packettype="0">
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="exgp_long_order_margin" fieldid="3826" decimalPlaces="6"/>
+        <field fieldname="exgp_short_order_margin" fieldid="3827" decimalPlaces="6"/>
+        <field fieldname="exgp_long_strike_margin" fieldid="3828" decimalPlaces="6"/>
+        <field fieldname="exgp_short_strike_margin" fieldid="3829" decimalPlaces="6"/>
+        <field fieldname="exgp_long_hold_margin" fieldid="3830" decimalPlaces="6"/>
+        <field fieldname="exgp_short_hold_margin" fieldid="3831" decimalPlaces="6"/>
+        <field fieldname="exgp_trade_capt_amt" fieldid="3420" decimalPlaces="6"/>
+        <field fieldname="exgp_posi_capt_amt" fieldid="3650" decimalPlaces="6"/>
+        <field fieldname="exch_group_update_times" fieldid="3636"/>
+        <field fieldname="prod_long_order_margin" fieldid="3832" decimalPlaces="6"/>
+        <field fieldname="prod_short_order_margin" fieldid="3833" decimalPlaces="6"/>
+        <field fieldname="prod_long_strike_margin" fieldid="3834" decimalPlaces="6"/>
+        <field fieldname="prod_short_strike_margin" fieldid="3835" decimalPlaces="6"/>
+        <field fieldname="prod_long_hold_margin" fieldid="3836" decimalPlaces="6"/>
+        <field fieldname="prod_short_hold_margin" fieldid="3837" decimalPlaces="6"/>
+        <field fieldname="prod_trade_capt_amt" fieldid="3649" decimalPlaces="6"/>
+        <field fieldname="prod_posi_capt_amt" fieldid="3651" decimalPlaces="6"/>
+        <field fieldname="pd_update_times" fieldid="3638"/>
+        <field fieldname="comb_code" fieldid="3092"/>
+        <field fieldname="hedge_type" fieldid="2591"/>
+    </function>
+    <function functionname="func_futupush_posi_exgp" typename="LD_REQUEST" functionid="pushL.2.130" packettype="0">
+        <field fieldname="exgp_row_id" fieldid="3563"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="futu_acco_no" fieldid="1909"/>
+        <field fieldname="contrc_code_no" fieldid="1777"/>
+        <field fieldname="contrc_type" fieldid="1778"/>
+        <field fieldname="contrc_unit" fieldid="1775"/>
+        <field fieldname="lngsht_type" fieldid="1491"/>
+        <field fieldname="hedge_type" fieldid="2591"/>
+        <field fieldname="comb_code" fieldid="3092"/>
+        <field fieldname="exgp_frozen_qty" fieldid="3398" decimalPlaces="2"/>
+        <field fieldname="exgp_unfroz_qty" fieldid="3399" decimalPlaces="2"/>
+        <field fieldname="exgp_comm_releas_qty" fieldid="3403" decimalPlaces="2"/>
+        <field fieldname="exgp_trade_releas_qty" fieldid="3407" decimalPlaces="2"/>
+        <field fieldname="exgp_strike_releas_qty" fieldid="3409" decimalPlaces="2"/>
+        <field fieldname="exgp_old_comm_capt_qty" fieldid="5545" decimalPlaces="2"/>
+        <field fieldname="exgp_today_comm_capt_qty" fieldid="5547" decimalPlaces="2"/>
+        <field fieldname="exgp_old_trade_capt_qty" fieldid="3581" decimalPlaces="2"/>
+        <field fieldname="exgp_today_trade_capt_qty" fieldid="3583" decimalPlaces="2"/>
+        <field fieldname="exgp_pre_strike_capt_qty" fieldid="3585" decimalPlaces="2"/>
+        <field fieldname="exgp_today_strike_capt_qty" fieldid="3587" decimalPlaces="2"/>
+        <field fieldname="exgp_rece_margin" fieldid="3589" decimalPlaces="6"/>
+        <field fieldname="pre_settle_price" fieldid="3132" decimalPlaces="9"/>
+        <field fieldname="exgp_realize_pandl" fieldid="3334" decimalPlaces="6"/>
+        <field fieldname="exgp_open_amount" fieldid="3579" decimalPlaces="6"/>
+        <field fieldname="exgp_posi_update_times" fieldid="3396"/>
+    </function>
+    <function functionname="func_futupush_posi_asac" typename="LD_REQUEST" functionid="pushL.2.131" packettype="0">
+        <field fieldname="asac_row_id" fieldid="3564"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="futu_acco_no" fieldid="1909"/>
+        <field fieldname="contrc_code_no" fieldid="1777"/>
+        <field fieldname="contrc_type" fieldid="1778"/>
+        <field fieldname="contrc_unit" fieldid="1775"/>
+        <field fieldname="lngsht_type" fieldid="1491"/>
+        <field fieldname="hedge_type" fieldid="2591"/>
+        <field fieldname="comb_code" fieldid="3092"/>
+        <field fieldname="asac_frozen_qty" fieldid="3424" decimalPlaces="2"/>
+        <field fieldname="asac_unfroz_qty" fieldid="3425" decimalPlaces="2"/>
+        <field fieldname="asac_comm_releas_qty" fieldid="3429" decimalPlaces="2"/>
+        <field fieldname="asac_trade_releas_qty" fieldid="3433" decimalPlaces="2"/>
+        <field fieldname="asac_strike_releas_qty" fieldid="3435" decimalPlaces="2"/>
+        <field fieldname="asac_old_comm_capt_qty" fieldid="5546" decimalPlaces="2"/>
+        <field fieldname="asac_today_comm_capt_qty" fieldid="5548" decimalPlaces="2"/>
+        <field fieldname="asac_old_trade_capt_qty" fieldid="3582" decimalPlaces="2"/>
+        <field fieldname="asac_today_trade_capt_qty" fieldid="3584" decimalPlaces="2"/>
+        <field fieldname="asac_pre_strike_capt_qty" fieldid="3586" decimalPlaces="2"/>
+        <field fieldname="asac_today_strike_capt_qty" fieldid="3588" decimalPlaces="2"/>
+        <field fieldname="asac_rece_margin" fieldid="3590" decimalPlaces="6"/>
+        <field fieldname="pre_settle_price" fieldid="3132" decimalPlaces="9"/>
+        <field fieldname="asac_realize_pandl" fieldid="3339" decimalPlaces="6"/>
+        <field fieldname="asac_open_amount" fieldid="3580" decimalPlaces="6"/>
+        <field fieldname="asac_posi_update_times" fieldid="3397"/>
+    </function>
+    <function functionname="func_futupush_posi_exgpdetail" typename="LD_REQUEST" functionid="pushL.2.132" packettype="0">
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="futu_acco_no" fieldid="1909"/>
+        <field fieldname="contrc_code_no" fieldid="1777"/>
+        <field fieldname="contrc_unit" fieldid="1775"/>
+        <field fieldname="contrc_type" fieldid="1778"/>
+        <field fieldname="curr_qty" fieldid="1401" decimalPlaces="2"/>
+        <field fieldname="invest_type" fieldid="2651"/>
+        <field fieldname="lngsht_type" fieldid="1491"/>
+        <field fieldname="hedge_type" fieldid="2591"/>
+        <field fieldname="open_posi_date" fieldid="2055"/>
+        <field fieldname="open_posi_time" fieldid="2056"/>
+        <field fieldname="open_posi_price" fieldid="2053" decimalPlaces="9"/>
+        <field fieldname="open_posi_qty" fieldid="2058" decimalPlaces="2"/>
+        <field fieldname="open_amount" fieldid="2054" decimalPlaces="6"/>
+        <field fieldname="open_posi_fee" fieldid="2052" decimalPlaces="6"/>
+        <field fieldname="close_posi_fee" fieldid="2313" decimalPlaces="6"/>
+        <field fieldname="trade_capt_qty" fieldid="1960" decimalPlaces="2"/>
+        <field fieldname="strike_capt_qty" fieldid="1318" decimalPlaces="2"/>
+        <field fieldname="marked_sett_price" fieldid="1437" decimalPlaces="9"/>
+        <field fieldname="strike_no" fieldid="1295"/>
+        <field fieldname="detail_posi_id" fieldid="2242"/>
+        <field fieldname="rece_margin" fieldid="2822" decimalPlaces="6"/>
+        <field fieldname="close_pandl" fieldid="2320" decimalPlaces="6"/>
+        <field fieldname="marked_pandl" fieldid="1438" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_futupush_pd_capital_exgp" typename="LD_REQUEST" functionid="pushL.2.112" packettype="0">
+        <field fieldname="exgp_cash_id" fieldid="3387"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exgp_begin_amt" fieldid="3565" decimalPlaces="6"/>
+        <field fieldname="exgp_curr_amt" fieldid="3567" decimalPlaces="6"/>
+        <field fieldname="exgp_capt_margin" fieldid="3569" decimalPlaces="6"/>
+        <field fieldname="exgp_frozen_amt" fieldid="3412" decimalPlaces="6"/>
+        <field fieldname="exgp_unfroz_amt" fieldid="3413" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_rece_amt" fieldid="3614" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_payab_amt" fieldid="3615" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_rate" fieldid="3616" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_base_amt" fieldid="3617" decimalPlaces="6"/>
+        <field fieldname="exch_group_pre_entry_intrst_amt" fieldid="3618" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_futupush_pd_capital_asac" typename="LD_REQUEST" functionid="pushL.2.113" packettype="0">
+        <field fieldname="asac_cash_id" fieldid="3388"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="asac_begin_amt" fieldid="3566" decimalPlaces="6"/>
+        <field fieldname="asac_curr_amt" fieldid="3568" decimalPlaces="6"/>
+        <field fieldname="asac_capt_margin" fieldid="3570" decimalPlaces="6"/>
+        <field fieldname="asac_frozen_amt" fieldid="3438" decimalPlaces="6"/>
+        <field fieldname="asac_unfroz_amt" fieldid="3439" decimalPlaces="6"/>
+        <field fieldname="asac_total_rece_amt" fieldid="3619" decimalPlaces="6"/>
+        <field fieldname="asac_total_payab_amt" fieldid="3620" decimalPlaces="6"/>
+        <field fieldname="asac_intrst_rate" fieldid="3621" decimalPlaces="6"/>
+        <field fieldname="asac_intrst_base_amt" fieldid="3622" decimalPlaces="6"/>
+        <field fieldname="asac_pre_entry_intrst_amt" fieldid="3623" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_futupush_pd_posi_exgp" typename="LD_REQUEST" functionid="pushL.2.133" packettype="0">
+        <field fieldname="exgp_posi_id" fieldid="3389"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="futu_acco_no" fieldid="1909"/>
+        <field fieldname="contrc_code_no" fieldid="1777"/>
+        <field fieldname="exgp_contrc_unit" fieldid="3722"/>
+        <field fieldname="exgp_contrc_type" fieldid="3714"/>
+        <field fieldname="exgp_lngsht_type" fieldid="3715"/>
+        <field fieldname="exgp_comb_code" fieldid="3843"/>
+        <field fieldname="exgp_hedge_type" fieldid="3716"/>
+        <field fieldname="exch_group_begin_qty" fieldid="3626" decimalPlaces="2"/>
+        <field fieldname="exgp_curr_qty" fieldid="3338" decimalPlaces="2"/>
+        <field fieldname="exgp_frozen_qty" fieldid="3398" decimalPlaces="2"/>
+        <field fieldname="exgp_unfroz_qty" fieldid="3399" decimalPlaces="2"/>
+        <field fieldname="exgp_pre_settle_price" fieldid="3783" decimalPlaces="9"/>
+        <field fieldname="exgp_sett_price" fieldid="3717" decimalPlaces="9"/>
+        <field fieldname="exgp_rece_margin" fieldid="3589" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_futupush_pd_posi_asac" typename="LD_REQUEST" functionid="pushL.2.134" packettype="0">
+        <field fieldname="asac_posi_id" fieldid="3390"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="futu_acco_no" fieldid="1909"/>
+        <field fieldname="contrc_code_no" fieldid="1777"/>
+        <field fieldname="asac_contrc_unit" fieldid="3723"/>
+        <field fieldname="asac_contrc_type" fieldid="3718"/>
+        <field fieldname="asac_lngsht_type" fieldid="3719"/>
+        <field fieldname="asac_comb_code" fieldid="3844"/>
+        <field fieldname="asac_hedge_type" fieldid="3720"/>
+        <field fieldname="asac_begin_qty" fieldid="3629" decimalPlaces="2"/>
+        <field fieldname="asac_curr_qty" fieldid="3343" decimalPlaces="2"/>
+        <field fieldname="asac_frozen_qty" fieldid="3424" decimalPlaces="2"/>
+        <field fieldname="asac_unfroz_qty" fieldid="3425" decimalPlaces="2"/>
+        <field fieldname="asac_pre_settle_price" fieldid="3784" decimalPlaces="9"/>
+        <field fieldname="asac_sett_price" fieldid="3721" decimalPlaces="9"/>
+        <field fieldname="asac_rece_margin" fieldid="3590" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_riskpush_rule_securule" typename="LD_REQUEST" functionid="pushL.2.140" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no_str" fieldid="1230"/>
+        <field fieldname="exch_group_no_str" fieldid="1963"/>
+        <field fieldname="dime_id" fieldid="2717"/>
+        <field fieldname="trig_stage_type_str" fieldid="3882"/>
+        <field fieldname="compli_calc_level" fieldid="1751"/>
+        <field fieldname="trig_type" fieldid="1348"/>
+        <field fieldname="model_id" fieldid="2247"/>
+        <field fieldname="risk_item_id" fieldid="1630"/>
+        <field fieldname="risk_item_id_str" fieldid="1631"/>
+        <field fieldname="risk_rule_code" fieldid="1611"/>
+        <field fieldname="risk_param_str" fieldid="1633"/>
+        <field fieldname="risk_rule_calc_str" fieldid="1618"/>
+        <field fieldname="rule_flag" fieldid="2352"/>
+        <field fieldname="push_type" fieldid="3654"/>
+        <field fieldname="union_flag" fieldid="3881"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_riskpush_rule_monitor" typename="LD_REQUEST" functionid="pushL.2.150" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no_str" fieldid="1230"/>
+        <field fieldname="exch_group_no_str" fieldid="1963"/>
+        <field fieldname="moni_role_type" fieldid="1893"/>
+        <field fieldname="moni_value_flag" fieldid="1898"/>
+        <field fieldname="moni_value_type" fieldid="1899"/>
+        <field fieldname="warn_posi_value" fieldid="3351" decimalPlaces="6"/>
+        <field fieldname="warn_trig_oper_type" fieldid="4053"/>
+        <field fieldname="close_posi_value" fieldid="2319" decimalPlaces="6"/>
+        <field fieldname="close_trig_oper_type" fieldid="4055"/>
+        <field fieldname="appd_value" fieldid="3041" decimalPlaces="6"/>
+        <field fieldname="appd_trig_oper_type" fieldid="4054"/>
+        <field fieldname="begin_moni_date" fieldid="4050"/>
+        <field fieldname="begin_moni_value" fieldid="2353" decimalPlaces="6"/>
+        <field fieldname="max_moni_value" fieldid="3104" decimalPlaces="6"/>
+        <field fieldname="curr_moni_value" fieldid="1395" decimalPlaces="6"/>
+        <field fieldname="curr_result_moni_value" fieldid="1394" decimalPlaces="6"/>
+        <field fieldname="contrs_stock_code" fieldid="1474"/>
+        <field fieldname="contrs_exch_no" fieldid="1473"/>
+        <field fieldname="contrs_max_moni_value" fieldid="1475" decimalPlaces="6"/>
+        <field fieldname="contrs_curr_moni_value" fieldid="1470" decimalPlaces="6"/>
+        <field fieldname="contrs_result_moni_value" fieldid="1471" decimalPlaces="6"/>
+        <field fieldname="moni_result_value" fieldid="1894" decimalPlaces="6"/>
+        <field fieldname="moni_result_status" fieldid="1895"/>
+        <field fieldname="moni_set_status" fieldid="1897"/>
+        <field fieldname="cash_asset" fieldid="2752" decimalPlaces="6"/>
+        <field fieldname="fund_asset" fieldid="1853" decimalPlaces="6"/>
+        <field fieldname="bond_asset" fieldid="2897" decimalPlaces="6"/>
+        <field fieldname="stock_asset" fieldid="1710" decimalPlaces="6"/>
+        <field fieldname="repo_asset" fieldid="1821" decimalPlaces="6"/>
+        <field fieldname="nav_asset" fieldid="2035" decimalPlaces="6"/>
+        <field fieldname="stock_asset_ratio" fieldid="1711" decimalPlaces="12"/>
+        <field fieldname="close_posi_flag" fieldid="2312"/>
+        <field fieldname="close_ratio_level_one" fieldid="2801" decimalPlaces="12"/>
+        <field fieldname="close_ratio_level_two" fieldid="1501" decimalPlaces="12"/>
+        <field fieldname="close_ratio_level_three" fieldid="2482" decimalPlaces="12"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+        <field fieldname="time_stamp" fieldid="2529"/>
+        <field fieldname="push_type" fieldid="3654"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_riskpush_stock_monitor_update" typename="LD_REQUEST" functionid="pushL.2.151" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="pd_no_str" fieldid="1230"/>
+        <field fieldname="exch_group_no_str" fieldid="1963"/>
+        <field fieldname="monitor_ctrl_type" fieldid="3952"/>
+        <field fieldname="moni_value_type" fieldid="1899"/>
+        <field fieldname="monitor_param_value" fieldid="3954"/>
+        <field fieldname="moni_value_flag" fieldid="1898"/>
+        <field fieldname="warn_posi_value" fieldid="3351" decimalPlaces="6"/>
+        <field fieldname="appd_value" fieldid="3041" decimalPlaces="6"/>
+        <field fieldname="close_posi_value" fieldid="2319" decimalPlaces="6"/>
+        <field fieldname="max_moni_value" fieldid="3104" decimalPlaces="6"/>
+        <field fieldname="curr_moni_value" fieldid="1395" decimalPlaces="6"/>
+        <field fieldname="curr_result_moni_value" fieldid="1394" decimalPlaces="6"/>
+        <field fieldname="contrs_stock_code" fieldid="1474"/>
+        <field fieldname="contrs_exch_no" fieldid="1473"/>
+        <field fieldname="contrs_max_moni_value" fieldid="1475" decimalPlaces="6"/>
+        <field fieldname="contrs_curr_moni_value" fieldid="1470" decimalPlaces="6"/>
+        <field fieldname="contrs_result_moni_value" fieldid="1471" decimalPlaces="6"/>
+        <field fieldname="moni_result_value" fieldid="1894" decimalPlaces="6"/>
+        <field fieldname="moni_result_status" fieldid="1895"/>
+        <field fieldname="moni_set_status" fieldid="1897"/>
+        <field fieldname="close_posi_flag" fieldid="2312"/>
+        <field fieldname="close_ratio_level_one" fieldid="2801" decimalPlaces="12"/>
+        <field fieldname="close_ratio_level_two" fieldid="1501" decimalPlaces="12"/>
+        <field fieldname="close_ratio_level_three" fieldid="2482" decimalPlaces="12"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_riskpush_stock_monitor_del" typename="LD_REQUEST" functionid="pushL.2.152" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+    </function>
+    <function functionname="func_t0push_opor_result" typename="LD_REQUEST" functionid="pushL.2.153" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="detail_posi_id" fieldid="2242"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="stock_acco_no" fieldid="1697"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="lngsht_type" fieldid="1491"/>
+        <field fieldname="curr_qty" fieldid="1401" decimalPlaces="2"/>
+        <field fieldname="open_posi_date" fieldid="2055"/>
+        <field fieldname="open_posi_time" fieldid="2056"/>
+        <field fieldname="open_posi_price" fieldid="2053" decimalPlaces="9"/>
+        <field fieldname="open_posi_value" fieldid="2057" decimalPlaces="6"/>
+        <field fieldname="open_posi_fee" fieldid="2052" decimalPlaces="6"/>
+        <field fieldname="close_posi_qty" fieldid="2318" decimalPlaces="2"/>
+        <field fieldname="close_posi_market_value" fieldid="2317" decimalPlaces="6"/>
+        <field fieldname="close_posi_fee" fieldid="2313" decimalPlaces="6"/>
+        <field fieldname="realize_pandl" fieldid="2536" decimalPlaces="6"/>
+        <field fieldname="pandl_ratio" fieldid="2815" decimalPlaces="12"/>
+        <field fieldname="un_close_posi_qty" fieldid="2723" decimalPlaces="2"/>
+        <field fieldname="un_close_marke_value" fieldid="2722" decimalPlaces="6"/>
+        <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+        <field fieldname="up_limit_price" fieldid="2905" decimalPlaces="9"/>
+        <field fieldname="down_limit_price" fieldid="1436" decimalPlaces="9"/>
+        <field fieldname="cost_price" fieldid="1284" decimalPlaces="9"/>
+        <field fieldname="last_tshold_value" fieldid="3130" decimalPlaces="6"/>
+        <field fieldname="float_pandl" fieldid="1639" decimalPlaces="6"/>
+        <field fieldname="posi_status" fieldid="1335"/>
+        <field fieldname="moni_result_status" fieldid="1895"/>
+        <field fieldname="posi_limit_status" fieldid="3264"/>
+        <field fieldname="opor_warn_tshold" fieldid="3256" decimalPlaces="6"/>
+        <field fieldname="opor_stop_tshold" fieldid="3257" decimalPlaces="6"/>
+        <field fieldname="stock_warn_ratio" fieldid="3254" decimalPlaces="12"/>
+        <field fieldname="stock_stop_ratio" fieldid="3255" decimalPlaces="12"/>
+        <field fieldname="stock_warn_amt" fieldid="3900" decimalPlaces="6"/>
+        <field fieldname="stock_stop_amt" fieldid="3901" decimalPlaces="6"/>
+        <field fieldname="open_close_permission" fieldid="3903"/>
+        <field fieldname="posi_limit_time" fieldid="1329"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_t0push_opor_sum_result" typename="LD_REQUEST" functionid="pushL.2.154" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="curr_qty" fieldid="1401" decimalPlaces="2"/>
+        <field fieldname="open_posi_value" fieldid="2057" decimalPlaces="6"/>
+        <field fieldname="open_posi_fee" fieldid="2052" decimalPlaces="6"/>
+        <field fieldname="close_posi_qty" fieldid="2318" decimalPlaces="2"/>
+        <field fieldname="close_posi_market_value" fieldid="2317" decimalPlaces="6"/>
+        <field fieldname="close_posi_fee" fieldid="2313" decimalPlaces="6"/>
+        <field fieldname="realize_pandl" fieldid="2536" decimalPlaces="6"/>
+        <field fieldname="float_pandl" fieldid="1639" decimalPlaces="6"/>
+        <field fieldname="pandl_ratio" fieldid="2815" decimalPlaces="12"/>
+        <field fieldname="un_close_posi_qty" fieldid="2723" decimalPlaces="2"/>
+        <field fieldname="un_close_marke_value" fieldid="2722" decimalPlaces="6"/>
+        <field fieldname="last_tshold_value" fieldid="3130" decimalPlaces="6"/>
+        <field fieldname="moni_result_status" fieldid="1895"/>
+        <field fieldname="opor_warn_tshold" fieldid="3256" decimalPlaces="6"/>
+        <field fieldname="opor_stop_tshold" fieldid="3257" decimalPlaces="6"/>
+        <field fieldname="open_close_permission" fieldid="3903"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_riskpush_rule_futurule" typename="LD_REQUEST" functionid="pushL.2.160" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="contrc_type" fieldid="1778"/>
+        <field fieldname="trig_stage_type" fieldid="1350"/>
+        <field fieldname="compli_calc_level" fieldid="1751"/>
+        <field fieldname="trig_type" fieldid="1348"/>
+        <field fieldname="model_id" fieldid="2247"/>
+        <field fieldname="risk_item_id" fieldid="1630"/>
+        <field fieldname="risk_item_id_str" fieldid="1631"/>
+        <field fieldname="risk_rule_code" fieldid="1611"/>
+        <field fieldname="risk_param_str" fieldid="1633"/>
+        <field fieldname="risk_rule_calc_str" fieldid="1618"/>
+        <field fieldname="rule_flag" fieldid="2352"/>
+        <field fieldname="push_type" fieldid="3654"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_riskpush_dim_type" typename="LD_REQUEST" functionid="pushL.2.170" packettype="0">
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="dime_type_code" fieldid="2714"/>
+        <field fieldname="push_type" fieldid="3654"/>
+    </function>
+    <function functionname="func_riskpush_dim_code" typename="LD_REQUEST" functionid="pushL.2.171" packettype="0">
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="dime_type_code" fieldid="2714"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="push_type" fieldid="3654"/>
+    </function>
+    <function functionname="func_riskpush_dim_dim" typename="LD_REQUEST" functionid="pushL.2.172" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="dime_type" fieldid="2713"/>
+        <field fieldname="ctrl_cond_dim_code_str" fieldid="2118"/>
+        <field fieldname="push_type" fieldid="3654"/>
+    </function>
+    <function functionname="func_prodpush_prod_info" typename="LD_REQUEST" functionid="pushL.2.180" packettype="0">
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_code" fieldid="1232"/>
+        <field fieldname="pd_name" fieldid="1257"/>
+        <field fieldname="pd_type" fieldid="1256"/>
+        <field fieldname="pd_apply_currency" fieldid="3643"/>
+        <field fieldname="pd_crncy_type" fieldid="3644"/>
+        <field fieldname="pd_first_asset" fieldid="3645" decimalPlaces="6"/>
+        <field fieldname="pd_all_share" fieldid="1270" decimalPlaces="2"/>
+        <field fieldname="pd_curr_share" fieldid="1237" decimalPlaces="2"/>
+        <field fieldname="pd_pre_share" fieldid="3646" decimalPlaces="2"/>
+        <field fieldname="pd_his_max_per_nav" fieldid="3647" decimalPlaces="6"/>
+        <field fieldname="pd_pre_nav" fieldid="3648" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_prodpush_prod_limit_info" typename="LD_REQUEST" functionid="pushL.2.181" packettype="0">
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="pd_cost_calc_type" fieldid="3642"/>
+        <field fieldname="pd_market_price_ratio" fieldid="3880" decimalPlaces="12"/>
+        <field fieldname="pd_comm_no_limit_price_ratio" fieldid="3879" decimalPlaces="12"/>
+        <field fieldname="pd_status" fieldid="1266"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_prodpush_pd_capital" typename="LD_REQUEST" functionid="pushL.2.190" packettype="0">
+        <field fieldname="pd_cash_id" fieldid="3640"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="pd_first_amt" fieldid="3639" decimalPlaces="6"/>
+        <field fieldname="pd_curr_amt" fieldid="1238" decimalPlaces="6"/>
+        <field fieldname="pd_dist_amt" fieldid="1264" decimalPlaces="6"/>
+        <field fieldname="pd_auth_amt" fieldid="1265" decimalPlaces="6"/>
+        <field fieldname="pd_amt_check_diff" fieldid="3967" decimalPlaces="6"/>
+        <field fieldname="pd_pre_settle_amt" fieldid="3871" decimalPlaces="6"/>
+        <field fieldname="pd_total_cash_divide" fieldid="3630" decimalPlaces="6"/>
+        <field fieldname="pd_total_pre_fee" fieldid="3631" decimalPlaces="6"/>
+        <field fieldname="pd_total_rece_amt" fieldid="3632" decimalPlaces="6"/>
+        <field fieldname="pd_total_payab_amt" fieldid="3633" decimalPlaces="6"/>
+        <field fieldname="pd_intrst_cacl_amt" fieldid="3634" decimalPlaces="6"/>
+        <field fieldname="pd_pre_entry_intrst_amt" fieldid="3635" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_prodpush_pd_asset" typename="LD_REQUEST" functionid="pushL.2.195" packettype="0">
+        <field fieldname="prod_asset_id" fieldid="3948"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="pd_net_asset" fieldid="1255" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_userpush_exch_group_info" typename="LD_REQUEST" functionid="pushL.2.200" packettype="0">
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_code" fieldid="1965"/>
+        <field fieldname="exch_group_name" fieldid="1970"/>
+        <field fieldname="exch_group_status" fieldid="1972"/>
+        <field fieldname="exch_group_begin_NAV" fieldid="3641" decimalPlaces="6"/>
+        <field fieldname="exch_group_pd_share" fieldid="1966" decimalPlaces="2"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_userpush_exgp_asset" typename="LD_REQUEST" functionid="pushL.2.205" packettype="0">
+        <field fieldname="exgp_asset_id" fieldid="3947"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_group_net_asset" fieldid="1967" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_userpush_opor_exgp_rights" typename="LD_REQUEST" functionid="pushL.2.206" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="abolish_status" fieldid="3356"/>
+        <field fieldname="oper_rights" fieldid="1188"/>
+        <field fieldname="push_type" fieldid="3654"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_strategy_add" typename="LD_REQUEST" functionid="pushL.2.500" packettype="0">
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="comm_opor" fieldid="3006"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="strategy_id" fieldid="3674"/>
+        <field fieldname="strategy_exec_broker" fieldid="3677"/>
+        <field fieldname="strategy_exec_kind" fieldid="3679"/>
+        <field fieldname="strategy_exec_comm_str" fieldid="3678"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="strategy_dir" fieldid="3765"/>
+        <field fieldname="strategy_qty" fieldid="3754" decimalPlaces="2"/>
+        <field fieldname="cash_strategy_qty" fieldid="3755" decimalPlaces="2"/>
+        <field fieldname="strategy_price" fieldid="3756" decimalPlaces="9"/>
+        <field fieldname="strategy_amt" fieldid="3761" decimalPlaces="6"/>
+        <field fieldname="price_type" fieldid="1887"/>
+        <field fieldname="strategy_valid_type" fieldid="3685"/>
+        <field fieldname="strategy_rule_way" fieldid="3686"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+        <field fieldname="strategy_date" fieldid="3768"/>
+        <field fieldname="strategy_time" fieldid="3759"/>
+        <field fieldname="strategy_status" fieldid="3757"/>
+        <field fieldname="margin_trade_type" fieldid="3690"/>
+        <field fieldname="target_strategy_type" fieldid="3688"/>
+        <field fieldname="target_strategy_param" fieldid="3689"/>
+        <field fieldname="external_no" fieldid="2656"/>
+        <field fieldname="order_batch_no" fieldid="1457"/>
+        <field fieldname="strategy_oper_way" fieldid="3766"/>
+        <field fieldname="strategy_batch_no" fieldid="3767"/>
+        <field fieldname="strategy_price_type" fieldid="3684"/>
+        <field fieldname="comm_batch_no" fieldid="2987"/>
+        <field fieldname="comm_id" fieldid="3010"/>
+        <field fieldname="basket_id" fieldid="2141"/>
+        <field fieldname="combo_code" fieldid="4056"/>
+    </function>
+    <function functionname="func_secupush_strategy_replace" typename="LD_REQUEST" functionid="pushL.2.501" packettype="0">
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="comm_opor" fieldid="3006"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="strategy_id" fieldid="3674"/>
+        <field fieldname="orig_strategy_id" fieldid="3676"/>
+        <field fieldname="strategy_exec_broker" fieldid="3677"/>
+        <field fieldname="strategy_exec_kind" fieldid="3679"/>
+        <field fieldname="strategy_exec_comm_str" fieldid="3678"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="strategy_dir" fieldid="3765"/>
+        <field fieldname="strategy_qty" fieldid="3754" decimalPlaces="2"/>
+        <field fieldname="cash_strategy_qty" fieldid="3755" decimalPlaces="2"/>
+        <field fieldname="strategy_price" fieldid="3756" decimalPlaces="9"/>
+        <field fieldname="price_type" fieldid="1887"/>
+        <field fieldname="strategy_valid_type" fieldid="3685"/>
+        <field fieldname="strategy_rule_way" fieldid="3686"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+        <field fieldname="strategy_date" fieldid="3768"/>
+        <field fieldname="strategy_time" fieldid="3759"/>
+        <field fieldname="margin_trade_type" fieldid="3690"/>
+        <field fieldname="target_strategy_type" fieldid="3688"/>
+        <field fieldname="target_strategy_param" fieldid="3689"/>
+        <field fieldname="strategy_contr_comm" fieldid="3692"/>
+        <field fieldname="external_no" fieldid="2656"/>
+        <field fieldname="order_batch_no" fieldid="1457"/>
+        <field fieldname="strategy_oper_way" fieldid="3766"/>
+        <field fieldname="comm_batch_no" fieldid="2987"/>
+    </function>
+    <function functionname="func_secupush_strategy_withdraw" typename="LD_REQUEST" functionid="pushL.2.502" packettype="0">
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="comm_opor" fieldid="3006"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="strategy_id" fieldid="3674"/>
+        <field fieldname="orig_strategy_id" fieldid="3676"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="strategy_dir" fieldid="3765"/>
+        <field fieldname="strategy_qty" fieldid="3754" decimalPlaces="2"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+        <field fieldname="strategy_date" fieldid="3768"/>
+        <field fieldname="strategy_time" fieldid="3759"/>
+        <field fieldname="target_strategy_type" fieldid="3688"/>
+        <field fieldname="target_strategy_param" fieldid="3689"/>
+        <field fieldname="strategy_oper_way" fieldid="3766"/>
+    </function>
+    <function functionname="func_secupush_strategy_update" typename="LD_REQUEST" functionid="pushL.2.510" packettype="0">
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="comm_opor" fieldid="3006"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="strategy_id" fieldid="3674"/>
+        <field fieldname="strategy_exec_broker" fieldid="3677"/>
+        <field fieldname="strategy_exec_kind" fieldid="3679"/>
+        <field fieldname="strategy_exec_comm_str" fieldid="3678"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="strategy_dir" fieldid="3765"/>
+        <field fieldname="strategy_qty" fieldid="3754" decimalPlaces="2"/>
+        <field fieldname="cash_strategy_qty" fieldid="3755" decimalPlaces="2"/>
+        <field fieldname="strategy_price" fieldid="3756" decimalPlaces="9"/>
+        <field fieldname="strategy_amt" fieldid="3761" decimalPlaces="6"/>
+        <field fieldname="price_type" fieldid="1887"/>
+        <field fieldname="strategy_valid_type" fieldid="3685"/>
+        <field fieldname="strategy_rule_way" fieldid="3686"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+        <field fieldname="strategy_date" fieldid="3768"/>
+        <field fieldname="strategy_time" fieldid="3759"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="margin_trade_type" fieldid="3690"/>
+        <field fieldname="target_strategy_type" fieldid="3688"/>
+        <field fieldname="target_strategy_param" fieldid="3689"/>
+        <field fieldname="external_no" fieldid="2656"/>
+        <field fieldname="order_batch_no" fieldid="1457"/>
+        <field fieldname="strategy_status" fieldid="3757"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="order_amt" fieldid="3762" decimalPlaces="6"/>
+        <field fieldname="wtdraw_qty" fieldid="1277" decimalPlaces="2"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+        <field fieldname="strategy_oper_way" fieldid="3766"/>
+        <field fieldname="comm_batch_no" fieldid="2987"/>
+        <field fieldname="update_times" fieldid="3381"/>
+        <field fieldname="func_code" fieldid="1674"/>
+    </function>
+    <function functionname="func_secupush_strategysum_update" typename="LD_REQUEST" functionid="pushL.2.511" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="busi_opor_no" fieldid="2789"/>
+        <field fieldname="comm_opor" fieldid="3006"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="strategy_batch_no" fieldid="3767"/>
+        <field fieldname="strategy_exec_broker" fieldid="3677"/>
+        <field fieldname="strategy_exec_kind" fieldid="3679"/>
+        <field fieldname="strategy_exec_comm_str" fieldid="3678"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="strategy_dir" fieldid="3765"/>
+        <field fieldname="strategy_qty" fieldid="3754" decimalPlaces="2"/>
+        <field fieldname="cash_strategy_qty" fieldid="3755" decimalPlaces="2"/>
+        <field fieldname="strategy_price" fieldid="3756" decimalPlaces="9"/>
+        <field fieldname="price_type" fieldid="1887"/>
+        <field fieldname="strategy_amt" fieldid="3761" decimalPlaces="6"/>
+        <field fieldname="strategy_valid_type" fieldid="3685"/>
+        <field fieldname="strategy_rule_way" fieldid="3686"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+        <field fieldname="strategy_date" fieldid="3768"/>
+        <field fieldname="margin_trade_type" fieldid="3690"/>
+        <field fieldname="target_strategy_type" fieldid="3688"/>
+        <field fieldname="target_strategy_param" fieldid="3689"/>
+        <field fieldname="strategy_contr_comm" fieldid="3692"/>
+        <field fieldname="strategy_sum_status" fieldid="4039"/>
+        <field fieldname="strategy_deal_status" fieldid="3763"/>
+        <field fieldname="strategy_deal_kind" fieldid="3764"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="valid_order_qty" fieldid="4044" decimalPlaces="2"/>
+        <field fieldname="order_amt" fieldid="3762" decimalPlaces="6"/>
+        <field fieldname="wtdraw_qty" fieldid="1277" decimalPlaces="2"/>
+        <field fieldname="valid_wtdraw_qty" fieldid="4040" decimalPlaces="2"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+        <field fieldname="cancel_qty" fieldid="4042" decimalPlaces="2"/>
+        <field fieldname="faild_qty" fieldid="4041" decimalPlaces="2"/>
+        <field fieldname="external_no" fieldid="2656"/>
+        <field fieldname="order_batch_no" fieldid="1457"/>
+        <field fieldname="comm_batch_no" fieldid="2987"/>
+        <field fieldname="strategy_oper_way" fieldid="3766"/>
+        <field fieldname="update_times" fieldid="3381"/>
+        <field fieldname="func_code" fieldid="1674"/>
+    </function>
+    <function functionname="func_secupush_strategy_withdraw_by_hand" typename="LD_REQUEST" functionid="pushL.2.512" packettype="0">
+        <field fieldname="strategy_id" fieldid="3674"/>
+        <field fieldname="orig_strategy_id" fieldid="3676"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="strategy_oper_way" fieldid="3766"/>
+    </function>
+    <function functionname="func_pubpush_base_hklimitinfo" typename="LD_REQUEST" functionid="pushL.2.601" packettype="0">
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="begin_limit" fieldid="3874" decimalPlaces="6"/>
+        <field fieldname="remain_limit" fieldid="3875" decimalPlaces="6"/>
+        <field fieldname="limit_status" fieldid="3876"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_t0_stocksource" typename="LD_REQUEST" functionid="pushL.2.701" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="stock_acco_no" fieldid="1697"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="source_stock_qty" fieldid="2423" decimalPlaces="2"/>
+        <field fieldname="single_limit_qty" fieldid="3905" decimalPlaces="2"/>
+        <field fieldname="assigned_qty" fieldid="3906" decimalPlaces="2"/>
+        <field fieldname="trade_releas_qty" fieldid="1949" decimalPlaces="2"/>
+        <field fieldname="trade_capt_qty" fieldid="1960" decimalPlaces="2"/>
+        <field fieldname="strike_releas_qty" fieldid="1313" decimalPlaces="2"/>
+        <field fieldname="strike_capt_qty" fieldid="1318" decimalPlaces="2"/>
+        <field fieldname="over_night_pandl" fieldid="3916" decimalPlaces="6"/>
+        <field fieldname="sum_realize_pandl" fieldid="3914" decimalPlaces="6"/>
+        <field fieldname="total_open_posi_fee" fieldid="3271" decimalPlaces="6"/>
+        <field fieldname="total_close_posi_fee" fieldid="3276" decimalPlaces="6"/>
+        <field fieldname="out_order_releas_qty" fieldid="2672" decimalPlaces="2"/>
+        <field fieldname="out_order_capt_qty" fieldid="2675" decimalPlaces="2"/>
+        <field fieldname="out_strike_releas_qty" fieldid="2659" decimalPlaces="2"/>
+        <field fieldname="out_strike_capt_qty" fieldid="2661" decimalPlaces="2"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+        <field fieldname="buy_avail_qty" fieldid="2198" decimalPlaces="2"/>
+        <field fieldname="sell_avail_qty" fieldid="2216" decimalPlaces="2"/>
+        <field fieldname="posi_qty" fieldid="1331" decimalPlaces="2"/>
+        <field fieldname="today_trade_fee" fieldid="1406" decimalPlaces="6"/>
+        <field fieldname="today_pandl" fieldid="1417" decimalPlaces="6"/>
+        <field fieldname="diff_qty" fieldid="3374" decimalPlaces="2"/>
+        <field fieldname="t0_buy_type" fieldid="5881"/>
+        <field fieldname="allow_trade_client_modify" fieldid="5910"/>
+        <field fieldname="ctrl_set" fieldid="5892"/>
+        <field fieldname="default_open_posi_qty" fieldid="5893" decimalPlaces="2"/>
+        <field fieldname="qty_occur_unit" fieldid="5894" decimalPlaces="2"/>
+        <field fieldname="is_hide" fieldid="4784"/>
+        <field fieldname="over_night_trade_buy_qty" fieldid="5697" decimalPlaces="2"/>
+        <field fieldname="over_night_trade_sell_qty" fieldid="5698" decimalPlaces="2"/>
+        <field fieldname="over_night_strike_sell_qty" fieldid="5700" decimalPlaces="2"/>
+        <field fieldname="over_night_sumtrd_sell_qty" fieldid="5701" decimalPlaces="2"/>
+        <field fieldname="over_night_sumstk_sell_qty" fieldid="5702" decimalPlaces="2"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_t0_posidetail" typename="LD_REQUEST" functionid="pushL.2.702" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="stock_acco_no" fieldid="1697"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="lngsht_type" fieldid="1491"/>
+        <field fieldname="curr_qty" fieldid="1401" decimalPlaces="2"/>
+        <field fieldname="open_posi_date" fieldid="2055"/>
+        <field fieldname="open_posi_time" fieldid="2056"/>
+        <field fieldname="open_posi_price" fieldid="2053" decimalPlaces="9"/>
+        <field fieldname="open_posi_value" fieldid="2057" decimalPlaces="6"/>
+        <field fieldname="open_posi_fee" fieldid="2052" decimalPlaces="6"/>
+        <field fieldname="close_posi_qty" fieldid="2318" decimalPlaces="2"/>
+        <field fieldname="close_posi_market_value" fieldid="2317" decimalPlaces="6"/>
+        <field fieldname="close_posi_fee" fieldid="2313" decimalPlaces="6"/>
+        <field fieldname="strike_no" fieldid="1295"/>
+        <field fieldname="realize_pandl" fieldid="2536" decimalPlaces="6"/>
+        <field fieldname="over_night_pandl" fieldid="3916" decimalPlaces="6"/>
+        <field fieldname="posi_status" fieldid="1335"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_t0_accosum" typename="LD_REQUEST" functionid="pushL.2.703" packettype="0">
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="trade_amt" fieldid="1943" decimalPlaces="6"/>
+        <field fieldname="trade_qty" fieldid="1950" decimalPlaces="2"/>
+        <field fieldname="realize_pandl" fieldid="2536" decimalPlaces="6"/>
+        <field fieldname="yield_rate" fieldid="2576" decimalPlaces="12"/>
+        <field fieldname="over_night_pandl" fieldid="3916" decimalPlaces="6"/>
+        <field fieldname="all_fee" fieldid="2410" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_t0_availcapital" typename="LD_REQUEST" functionid="pushL.2.704" packettype="0">
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="avail_amt" fieldid="2088" decimalPlaces="6"/>
+        <field fieldname="sum_realize_pandl" fieldid="3914" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_t0_oporTshold" typename="LD_REQUEST" functionid="pushL.2.705" packettype="0">
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="curr_amt" fieldid="1396" decimalPlaces="6"/>
+        <field fieldname="frozen_amt" fieldid="1467" decimalPlaces="6"/>
+        <field fieldname="opor_warn_tshold" fieldid="3256" decimalPlaces="6"/>
+        <field fieldname="opor_stop_tshold" fieldid="3257" decimalPlaces="6"/>
+        <field fieldname="order_limit_time" fieldid="2745"/>
+        <field fieldname="per_secu_posi_ratio" fieldid="1375" decimalPlaces="12"/>
+        <field fieldname="posi_limit_time" fieldid="1329"/>
+        <field fieldname="order_ctrl_qty" fieldid="3252" decimalPlaces="2"/>
+        <field fieldname="order_ctrl_amt" fieldid="3253" decimalPlaces="6"/>
+        <field fieldname="stock_warn_ratio" fieldid="3254" decimalPlaces="12"/>
+        <field fieldname="stock_stop_ratio" fieldid="3255" decimalPlaces="12"/>
+        <field fieldname="stock_warn_amt" fieldid="3900" decimalPlaces="6"/>
+        <field fieldname="stock_stop_amt" fieldid="3901" decimalPlaces="6"/>
+        <field fieldname="trig_oper_type" fieldid="3902"/>
+        <field fieldname="open_close_permission" fieldid="3903"/>
+        <field fieldname="risk_oper" fieldid="3907"/>
+        <field fieldname="fee_calc_type" fieldid="3904"/>
+        <field fieldname="permit_margin_trade" fieldid="3261"/>
+        <field fieldname="buy_fee_ratio" fieldid="2191" decimalPlaces="12"/>
+        <field fieldname="sell_fee_ratio" fieldid="2221" decimalPlaces="12"/>
+        <field fieldname="buy_min_fee" fieldid="2209" decimalPlaces="6"/>
+        <field fieldname="sell_min_fee" fieldid="2230" decimalPlaces="6"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_t0_posisum" typename="LD_REQUEST" functionid="pushL.2.706" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="stock_acco_no" fieldid="1697"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="total_long_curr_qty" fieldid="3278" decimalPlaces="2"/>
+        <field fieldname="total_short_curr_qty" fieldid="3279" decimalPlaces="2"/>
+        <field fieldname="total_long_open_posi_value" fieldid="3282" decimalPlaces="6"/>
+        <field fieldname="total_short_open_posi_value" fieldid="3283" decimalPlaces="6"/>
+        <field fieldname="total_long_open_posi_fee" fieldid="3284" decimalPlaces="6"/>
+        <field fieldname="total_short_open_posi_fee" fieldid="3285" decimalPlaces="6"/>
+        <field fieldname="total_long_close_posi_value" fieldid="3286" decimalPlaces="6"/>
+        <field fieldname="total_short_close_posi_value" fieldid="3287" decimalPlaces="6"/>
+        <field fieldname="total_long_close_posi_qty" fieldid="3280" decimalPlaces="2"/>
+        <field fieldname="total_short_close_posi_qty" fieldid="3281" decimalPlaces="2"/>
+        <field fieldname="total_long_close_posi_fee" fieldid="3288" decimalPlaces="6"/>
+        <field fieldname="total_short_close_posi_fee" fieldid="3289" decimalPlaces="6"/>
+        <field fieldname="total_realize_pandl" fieldid="3277" decimalPlaces="6"/>
+        <field fieldname="long_curr_qty" fieldid="3265" decimalPlaces="2"/>
+        <field fieldname="short_curr_qty" fieldid="3266" decimalPlaces="2"/>
+        <field fieldname="long_open_posi_value" fieldid="3290" decimalPlaces="6"/>
+        <field fieldname="short_open_posi_value" fieldid="3291" decimalPlaces="6"/>
+        <field fieldname="long_open_posi_fee" fieldid="3292" decimalPlaces="6"/>
+        <field fieldname="short_open_posi_fee" fieldid="3293" decimalPlaces="6"/>
+        <field fieldname="long_close_posi_qty" fieldid="3267" decimalPlaces="2"/>
+        <field fieldname="short_close_posi_qty" fieldid="3268" decimalPlaces="2"/>
+        <field fieldname="long_close_posi_value" fieldid="3294" decimalPlaces="6"/>
+        <field fieldname="short_close_posi_value" fieldid="3295" decimalPlaces="6"/>
+        <field fieldname="long_close_posi_fee" fieldid="3296" decimalPlaces="6"/>
+        <field fieldname="short_close_posi_fee" fieldid="3297" decimalPlaces="6"/>
+        <field fieldname="realize_pandl" fieldid="2536" decimalPlaces="6"/>
+        <field fieldname="over_night_pandl" fieldid="3916" decimalPlaces="6"/>
+        <field fieldname="open_posi_date" fieldid="2055"/>
+        <field fieldname="open_posi_time" fieldid="2056"/>
+        <field fieldname="posi_qty" fieldid="1331" decimalPlaces="2"/>
+        <field fieldname="curr_qty" fieldid="1401" decimalPlaces="2"/>
+        <field fieldname="open_posi_value" fieldid="2057" decimalPlaces="6"/>
+        <field fieldname="open_posi_fee" fieldid="2052" decimalPlaces="6"/>
+        <field fieldname="cost_price" fieldid="1284" decimalPlaces="9"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_t0_stocksourcedel" typename="LD_REQUEST" functionid="pushL.2.707" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+    </function>
+    <function functionname="func_secupush_t0_oporallowexchgroupcapital" typename="LD_REQUEST" functionid="pushL.2.710" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="begin_amt" fieldid="2327" decimalPlaces="6"/>
+        <field fieldname="curr_amt" fieldid="1396" decimalPlaces="6"/>
+        <field fieldname="frozen_amt" fieldid="1467" decimalPlaces="6"/>
+        <field fieldname="unfroz_amt" fieldid="1995" decimalPlaces="6"/>
+        <field fieldname="comm_frozen_amt" fieldid="2969" decimalPlaces="6"/>
+        <field fieldname="comm_unfroz_amt" fieldid="2980" decimalPlaces="6"/>
+        <field fieldname="comm_capt_amt" fieldid="3012" decimalPlaces="6"/>
+        <field fieldname="comm_releas_amt" fieldid="3000" decimalPlaces="6"/>
+        <field fieldname="trade_frozen_amt" fieldid="1934" decimalPlaces="6"/>
+        <field fieldname="trade_unfroz_amt" fieldid="1941" decimalPlaces="6"/>
+        <field fieldname="trade_capt_amt" fieldid="1959" decimalPlaces="6"/>
+        <field fieldname="trade_releas_amt" fieldid="1948" decimalPlaces="6"/>
+        <field fieldname="strike_capt_amt" fieldid="1317" decimalPlaces="6"/>
+        <field fieldname="strike_releas_amt" fieldid="1312" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_t0_oporposimarketvalueset" typename="LD_REQUEST" functionid="pushL.2.711" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="max_posi_market_value" fieldid="4956" decimalPlaces="6"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_preorder" typename="LD_REQUEST" functionid="pushL.2.708" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="oper_func_code" fieldid="1186"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_acco_no" fieldid="1697"/>
+        <field fieldname="stock_acco" fieldid="1696"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="pre_order_date" fieldid="2845"/>
+        <field fieldname="pre_order_time" fieldid="2846"/>
+        <field fieldname="pre_order_dir" fieldid="2843"/>
+        <field fieldname="pre_order_type" fieldid="2842"/>
+        <field fieldname="pre_order_price" fieldid="2844" decimalPlaces="9"/>
+        <field fieldname="pre_order_qty" fieldid="2847" decimalPlaces="2"/>
+        <field fieldname="pre_order_status" fieldid="2849"/>
+        <field fieldname="pre_price_type" fieldid="4045"/>
+        <field fieldname="price_offset" fieldid="3888" decimalPlaces="9"/>
+        <field fieldname="pre_begin_date" fieldid="5003"/>
+        <field fieldname="pre_end_date" fieldid="5004"/>
+        <field fieldname="pre_begin_time" fieldid="4046"/>
+        <field fieldname="pre_end_time" fieldid="4047"/>
+        <field fieldname="trig_type" fieldid="1348"/>
+        <field fieldname="trig_price" fieldid="1349" decimalPlaces="9"/>
+        <field fieldname="trig_date" fieldid="5001"/>
+        <field fieldname="trig_time" fieldid="1351"/>
+        <field fieldname="order_date" fieldid="1458"/>
+        <field fieldname="order_time" fieldid="1459"/>
+        <field fieldname="order_id" fieldid="1462"/>
+        <field fieldname="is_trace" fieldid="5248"/>
+        <field fieldname="price_up" fieldid="1890" decimalPlaces="9"/>
+        <field fieldname="keep_trace" fieldid="5480"/>
+        <field fieldname="pre_batch_no" fieldid="5902"/>
+        <field fieldname="strategy_id" fieldid="3674"/>
+        <field fieldname="trig_qty_type" fieldid="5903"/>
+        <field fieldname="is_strategy_pre" fieldid="5904"/>
+        <field fieldname="trig_price_type" fieldid="5905"/>
+        <field fieldname="trig_time_intrv" fieldid="5909"/>
+        <field fieldname="trace_price_type" fieldid="5906"/>
+        <field fieldname="trace_price" fieldid="5907" decimalPlaces="9"/>
+        <field fieldname="trace_price_offset" fieldid="5908" decimalPlaces="9"/>
+        <field fieldname="comm_batch_no" fieldid="2987"/>
+        <field fieldname="comm_id" fieldid="3010"/>
+        <field fieldname="basket_id" fieldid="2141"/>
+        <field fieldname="comm_opor" fieldid="3006"/>
+        <field fieldname="price_type" fieldid="1887"/>
+        <field fieldname="target_strategy_type" fieldid="3688"/>
+        <field fieldname="target_strategy_param" fieldid="3689"/>
+        <field fieldname="strategy_price_type" fieldid="3684"/>
+        <field fieldname="order_oper_way" fieldid="1443"/>
+        <field fieldname="contrc_dir" fieldid="2070"/>
+        <field fieldname="hedge_type" fieldid="2591"/>
+        <field fieldname="combo_code" fieldid="4056"/>
+        <field fieldname="is_bellwether_stock" fieldid="5913"/>
+        <field fieldname="trace_times" fieldid="5914"/>
+        <field fieldname="batches_count" fieldid="5925"/>
+        <field fieldname="order_no_str" fieldid="1442"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_plugerrororder" typename="LD_REQUEST" functionid="pushL.2.709" packettype="0">
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="comm_id" fieldid="3010"/>
+        <field fieldname="comm_batch_no" fieldid="2987"/>
+        <field fieldname="order_date" fieldid="1458"/>
+        <field fieldname="order_time" fieldid="1459"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+        <field fieldname="combo_code" fieldid="4056"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+        <field fieldname="plugin_type" fieldid="5915"/>
+        <field fieldname="plugin_params_str" fieldid="5916"/>
+    </function>
+    <function functionname="func_secupush_report_fundqry" typename="LD_REQUEST" functionid="pushL.2.801" packettype="0">
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="sync_req_type" fieldid="3950"/>
+    </function>
+    <function functionname="func_secupush_report_holdqry" typename="LD_REQUEST" functionid="pushL.2.802" packettype="0">
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="sync_req_type" fieldid="3950"/>
+    </function>
+    <function functionname="func_secupush_report_rptfundqry" typename="LD_REQUEST" functionid="pushL.2.803" packettype="0">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="sync_req_status" fieldid="3951"/>
+    </function>
+    <function functionname="func_secupush_report_rptholdqry" typename="LD_REQUEST" functionid="pushL.2.804" packettype="0">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="sync_req_status" fieldid="3951"/>
+    </function>
+    <function functionname="func_futupush_report_fundqry" typename="LD_REQUEST" functionid="pushL.2.805" packettype="0">
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="sync_req_type" fieldid="3950"/>
+    </function>
+    <function functionname="func_futupush_report_holdqry" typename="LD_REQUEST" functionid="pushL.2.806" packettype="0">
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="sync_req_type" fieldid="3950"/>
+    </function>
+    <function functionname="func_futupush_report_rptfundqry" typename="LD_REQUEST" functionid="pushL.2.807" packettype="0">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="sync_req_status" fieldid="3951"/>
+    </function>
+    <function functionname="func_futupush_report_rptholdqry" typename="LD_REQUEST" functionid="pushL.2.808" packettype="0">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="sync_req_status" fieldid="3951"/>
+    </function>
+    <function functionname="func_secupush_combo" typename="LD_REQUEST" functionid="pushL.2.901" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="combo_code" fieldid="4056"/>
+        <field fieldname="comb_name" fieldid="3096"/>
+        <field fieldname="is_public" fieldid="2560"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_combodel" typename="LD_REQUEST" functionid="pushL.2.902" packettype="0">
+        <field fieldname="combo_id" fieldid="4059"/>
+    </function>
+    <function functionname="func_secupush_combostock" typename="LD_REQUEST" functionid="pushL.2.903" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="combo_code" fieldid="4056"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="combo_ratio" fieldid="4060" decimalPlaces="12"/>
+        <field fieldname="combo_qty" fieldid="4061" decimalPlaces="2"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_combostockdel" typename="LD_REQUEST" functionid="pushL.2.904" packettype="0">
+        <field fieldname="combo_stock_id" fieldid="4067"/>
+    </function>
+    <function functionname="func_secupush_comboposi" typename="LD_REQUEST" functionid="pushL.2.905" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="stock_acco_no" fieldid="1697"/>
+        <field fieldname="combo_code" fieldid="4056"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="open_posi_date" fieldid="2055"/>
+        <field fieldname="posi_qty" fieldid="1331" decimalPlaces="2"/>
+        <field fieldname="curr_qty" fieldid="1401" decimalPlaces="2"/>
+        <field fieldname="frozen_qty" fieldid="1468" decimalPlaces="2"/>
+        <field fieldname="unfroz_qty" fieldid="1996" decimalPlaces="2"/>
+        <field fieldname="pre_settle_qty" fieldid="3923" decimalPlaces="2"/>
+        <field fieldname="trade_frozen_qty" fieldid="1935" decimalPlaces="2"/>
+        <field fieldname="trade_unfroz_qty" fieldid="1942" decimalPlaces="2"/>
+        <field fieldname="trade_capt_qty" fieldid="1960" decimalPlaces="2"/>
+        <field fieldname="trade_releas_qty" fieldid="1949" decimalPlaces="2"/>
+        <field fieldname="strike_capt_qty" fieldid="1318" decimalPlaces="2"/>
+        <field fieldname="strike_releas_qty" fieldid="1313" decimalPlaces="2"/>
+        <field fieldname="strike_frozen_qty" fieldid="1299" decimalPlaces="2"/>
+        <field fieldname="strike_unfroz_qty" fieldid="1304" decimalPlaces="2"/>
+        <field fieldname="realize_pandl" fieldid="2536" decimalPlaces="6"/>
+        <field fieldname="cost_amt" fieldid="1285" decimalPlaces="6"/>
+        <field fieldname="intrst_cost_amt" fieldid="2167" decimalPlaces="6"/>
+        <field fieldname="intrst_pandl" fieldid="2173" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_comboincome" typename="LD_REQUEST" functionid="pushL.2.906" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="open_posi_date" fieldid="2055"/>
+        <field fieldname="combo_code" fieldid="4056"/>
+        <field fieldname="combo_copies" fieldid="4062" decimalPlaces="2"/>
+        <field fieldname="combo_status" fieldid="4058"/>
+        <field fieldname="combo_cost" fieldid="4064" decimalPlaces="6"/>
+        <field fieldname="combo_market_value" fieldid="4065" decimalPlaces="6"/>
+        <field fieldname="realize_pandl" fieldid="2536" decimalPlaces="6"/>
+        <field fieldname="sum_realize_pandl" fieldid="3914" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_combotradelog" typename="LD_REQUEST" functionid="pushL.2.907" packettype="0">
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="combo_code" fieldid="4056"/>
+        <field fieldname="order_batch_no" fieldid="1457"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="combo_copies" fieldid="4062" decimalPlaces="2"/>
+        <field fieldname="combo_date" fieldid="4063"/>
+        <field fieldname="combo_time" fieldid="4968"/>
+    </function>
+    <function functionname="func_secupush_modifyorder" typename="LD_REQUEST" functionid="pushL.2.908" packettype="0">
+        <field fieldname="ori_order_id" fieldid="5249"/>
+        <field fieldname="new_order_id" fieldid="2763"/>
+    </function>
+    <function functionname="func_riskpush_rule_monitor" typename="LD_REQUEST" functionid="pushL.2.909" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="moni_role_type" fieldid="1893"/>
+        <field fieldname="moni_value_flag" fieldid="1898"/>
+        <field fieldname="moni_value_type" fieldid="1899"/>
+        <field fieldname="warn_posi_value" fieldid="3351" decimalPlaces="6"/>
+        <field fieldname="warn_trig_oper_type" fieldid="4053"/>
+        <field fieldname="close_posi_value" fieldid="2319" decimalPlaces="6"/>
+        <field fieldname="close_trig_oper_type" fieldid="4055"/>
+        <field fieldname="appd_value" fieldid="3041" decimalPlaces="6"/>
+        <field fieldname="appd_trig_oper_type" fieldid="4054"/>
+        <field fieldname="begin_moni_date" fieldid="4050"/>
+        <field fieldname="begin_moni_value" fieldid="2353" decimalPlaces="6"/>
+        <field fieldname="max_moni_value" fieldid="3104" decimalPlaces="6"/>
+        <field fieldname="curr_moni_value" fieldid="1395" decimalPlaces="6"/>
+        <field fieldname="curr_result_moni_value" fieldid="1394" decimalPlaces="6"/>
+        <field fieldname="contrs_stock_code" fieldid="1474"/>
+        <field fieldname="contrs_exch_no" fieldid="1473"/>
+        <field fieldname="contrs_max_moni_value" fieldid="1475" decimalPlaces="6"/>
+        <field fieldname="contrs_curr_moni_value" fieldid="1470" decimalPlaces="6"/>
+        <field fieldname="contrs_result_moni_value" fieldid="1471" decimalPlaces="6"/>
+        <field fieldname="moni_result_value" fieldid="1894" decimalPlaces="6"/>
+        <field fieldname="moni_result_status" fieldid="1895"/>
+        <field fieldname="moni_set_status" fieldid="1897"/>
+        <field fieldname="cash_asset" fieldid="2752" decimalPlaces="6"/>
+        <field fieldname="fund_asset" fieldid="1853" decimalPlaces="6"/>
+        <field fieldname="bond_asset" fieldid="2897" decimalPlaces="6"/>
+        <field fieldname="stock_asset" fieldid="1710" decimalPlaces="6"/>
+        <field fieldname="repo_asset" fieldid="1821" decimalPlaces="6"/>
+        <field fieldname="nav_asset" fieldid="2035" decimalPlaces="6"/>
+        <field fieldname="stock_asset_ratio" fieldid="1711" decimalPlaces="12"/>
+        <field fieldname="close_posi_flag" fieldid="2312"/>
+        <field fieldname="close_ratio_level_one" fieldid="2801" decimalPlaces="12"/>
+        <field fieldname="close_ratio_level_two" fieldid="1501" decimalPlaces="12"/>
+        <field fieldname="close_ratio_level_three" fieldid="2482" decimalPlaces="12"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+        <field fieldname="time_stamp" fieldid="2529"/>
+        <field fieldname="push_type" fieldid="3654"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_prodpush_prod_prodassetacco" typename="LD_REQUEST" functionid="pushL.2.910" packettype="0">
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="trade_pwd" fieldid="1945"/>
+        <field fieldname="comm_pwd" fieldid="3318"/>
+    </function>
+    <function functionname="func_prodpush_prod_prodassetacco" typename="LD_REQUEST" functionid="pushL.2.911" packettype="0">
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="asset_acco_login_result" fieldid="5300"/>
+    </function>
+    <function functionname="func_riskpush_newstock_monitor" typename="LD_REQUEST" functionid="pushL.2.921" packettype="0">
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="stock_name" fieldid="2946"/>
+        <field fieldname="warn_trade_amount" fieldid="5242" decimalPlaces="2"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="warn_buy_amount" fieldid="5243" decimalPlaces="2"/>
+        <field fieldname="buy_qty_1" fieldid="2208" decimalPlaces="2"/>
+        <field fieldname="up_limit_price" fieldid="2905" decimalPlaces="9"/>
+        <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+    </function>
+    <function functionname="func_secupush_comm_comm_disp_appr" typename="LD_REQUEST" functionid="pushL.2.922" packettype="0">
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="comm_id" fieldid="3010"/>
+        <field fieldname="comm_date" fieldid="2988"/>
+        <field fieldname="comm_executor" fieldid="3014"/>
+        <field fieldname="before_comm_executor" fieldid="2366"/>
+        <field fieldname="comm_dispense_appr_status" fieldid="5526"/>
+        <field fieldname="comm_dispense_appr_opor" fieldid="5527"/>
+        <field fieldname="comm_dispense_appr_date" fieldid="5528"/>
+        <field fieldname="comm_dispense_appr_time" fieldid="5529"/>
+        <field fieldname="comm_dispense_appr_remark" fieldid="5530"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_pubpush_base_busiconfigstr" typename="LD_REQUEST" functionid="pushL.2.923" packettype="0">
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="config_str_level" fieldid="5543"/>
+        <field fieldname="busi_config_str" fieldid="2794"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_pubpush_comm_hedgingbasket" typename="LD_REQUEST" functionid="pushL.2.924" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="record_batch_no" fieldid="5469"/>
+        <field fieldname="comm_trd_type" fieldid="5465"/>
+        <field fieldname="basket_id" fieldid="2141"/>
+        <field fieldname="basket_name" fieldid="2137"/>
+        <field fieldname="futu_qty" fieldid="5385" decimalPlaces="2"/>
+        <field fieldname="spot_qty" fieldid="5582" decimalPlaces="2"/>
+        <field fieldname="basket_copies" fieldid="5470" decimalPlaces="2"/>
+        <field fieldname="cash_replace_amt" fieldid="5393" decimalPlaces="6"/>
+        <field fieldname="hedging_pankou" fieldid="5524" decimalPlaces="6"/>
+        <field fieldname="name_base_diff" fieldid="5471" decimalPlaces="6"/>
+        <field fieldname="basket_base_diff" fieldid="5472" decimalPlaces="6"/>
+        <field fieldname="track_base_diff" fieldid="5473" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_pubpush_base_ClientComm" typename="LD_REQUEST" functionid="pushL.2.925" packettype="0">
+        <field fieldname="func_code_str" fieldid="1675"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="func_secupush_report_order_zt" typename="LD_REQUEST" functionid="pushL.2.926" packettype="0">
+        <field fieldname="order_id" fieldid="1462"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_acco" fieldid="1696"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="order_date" fieldid="1458"/>
+        <field fieldname="order_time" fieldid="1459"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+        <field fieldname="price_type" fieldid="1887"/>
+        <field fieldname="order_oper_way" fieldid="1443"/>
+        <field fieldname="trade_acco" fieldid="5223"/>
+        <field fieldname="registration_agency" fieldid="5222"/>
+        <field fieldname="long_token" fieldid="5684"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_report_withdraw_zt" typename="LD_REQUEST" functionid="pushL.2.927" packettype="0">
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_acco" fieldid="1696"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="wtdraw_date" fieldid="1275"/>
+        <field fieldname="wtdraw_time" fieldid="1276"/>
+        <field fieldname="order_date" fieldid="1458"/>
+        <field fieldname="order_id" fieldid="1462"/>
+        <field fieldname="report_no" fieldid="2502"/>
+        <field fieldname="wtdraw_qty" fieldid="1277" decimalPlaces="2"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+        <field fieldname="trade_acco" fieldid="5223"/>
+        <field fieldname="long_token" fieldid="5684"/>
+    </function>
+    <function functionname="func_secupush_posi_exgpposidebt" typename="LD_REQUEST" functionid="pushL.2.928" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_acco_no" fieldid="1697"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="invest_type" fieldid="2651"/>
+        <field fieldname="debt_type" fieldid="5609"/>
+        <field fieldname="debt_fina_buy_strike_qty" fieldid="5640" decimalPlaces="2"/>
+        <field fieldname="fina_return_strike_qty" fieldid="5641" decimalPlaces="2"/>
+        <field fieldname="debt_loan_sell_strike_qty" fieldid="5642" decimalPlaces="2"/>
+        <field fieldname="loan_return_strike_qty" fieldid="5643" decimalPlaces="2"/>
+        <field fieldname="debt_fina_buy_order_qty" fieldid="5644" decimalPlaces="2"/>
+        <field fieldname="fina_return_order_qty" fieldid="5645" decimalPlaces="2"/>
+        <field fieldname="debt_loan_sell_order_qty" fieldid="5646" decimalPlaces="2"/>
+        <field fieldname="loan_return_order_qty" fieldid="5647" decimalPlaces="2"/>
+        <field fieldname="debt_fina_buy_comm_qty" fieldid="5648" decimalPlaces="2"/>
+        <field fieldname="fina_return_comm_qty" fieldid="5649" decimalPlaces="2"/>
+        <field fieldname="debt_loan_sell_comm_qty" fieldid="5650" decimalPlaces="2"/>
+        <field fieldname="loan_return_comm_qty" fieldid="5651" decimalPlaces="2"/>
+        <field fieldname="debt_fina_buy_strike_amt" fieldid="5652" decimalPlaces="6"/>
+        <field fieldname="fina_return_strike_amt" fieldid="5653" decimalPlaces="6"/>
+        <field fieldname="debt_loan_sell_strike_amt" fieldid="5654" decimalPlaces="6"/>
+        <field fieldname="loan_return_strike_amt" fieldid="5655" decimalPlaces="6"/>
+        <field fieldname="debt_fina_buy_order_amt" fieldid="5656" decimalPlaces="6"/>
+        <field fieldname="fina_return_order_amt" fieldid="5657" decimalPlaces="6"/>
+        <field fieldname="debt_loan_sell_order_amt" fieldid="5658" decimalPlaces="6"/>
+        <field fieldname="loan_return_order_amt" fieldid="5659" decimalPlaces="6"/>
+        <field fieldname="debt_fina_buy_comm_amt" fieldid="5660" decimalPlaces="6"/>
+        <field fieldname="fina_return_comm_amt" fieldid="5661" decimalPlaces="6"/>
+        <field fieldname="debt_loan_sell_comm_amt" fieldid="5662" decimalPlaces="6"/>
+        <field fieldname="loan_return_comm_amt" fieldid="5663" decimalPlaces="6"/>
+        <field fieldname="debt_strike_fee" fieldid="5664" decimalPlaces="6"/>
+        <field fieldname="return_strike_fee" fieldid="5665" decimalPlaces="6"/>
+        <field fieldname="debt_interest" fieldid="5666" decimalPlaces="6"/>
+        <field fieldname="return_interest_amt" fieldid="5667" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_posi_asacposidebt" typename="LD_REQUEST" functionid="pushL.2.929" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_acco_no" fieldid="1697"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="invest_type" fieldid="2651"/>
+        <field fieldname="debt_type" fieldid="5609"/>
+        <field fieldname="debt_fina_buy_strike_qty" fieldid="5640" decimalPlaces="2"/>
+        <field fieldname="fina_return_strike_qty" fieldid="5641" decimalPlaces="2"/>
+        <field fieldname="debt_loan_sell_strike_qty" fieldid="5642" decimalPlaces="2"/>
+        <field fieldname="loan_return_strike_qty" fieldid="5643" decimalPlaces="2"/>
+        <field fieldname="debt_fina_buy_order_qty" fieldid="5644" decimalPlaces="2"/>
+        <field fieldname="fina_return_order_qty" fieldid="5645" decimalPlaces="2"/>
+        <field fieldname="debt_loan_sell_order_qty" fieldid="5646" decimalPlaces="2"/>
+        <field fieldname="loan_return_order_qty" fieldid="5647" decimalPlaces="2"/>
+        <field fieldname="debt_fina_buy_comm_qty" fieldid="5648" decimalPlaces="2"/>
+        <field fieldname="fina_return_comm_qty" fieldid="5649" decimalPlaces="2"/>
+        <field fieldname="debt_loan_sell_comm_qty" fieldid="5650" decimalPlaces="2"/>
+        <field fieldname="loan_return_comm_qty" fieldid="5651" decimalPlaces="2"/>
+        <field fieldname="debt_fina_buy_strike_amt" fieldid="5652" decimalPlaces="6"/>
+        <field fieldname="fina_return_strike_amt" fieldid="5653" decimalPlaces="6"/>
+        <field fieldname="debt_loan_sell_strike_amt" fieldid="5654" decimalPlaces="6"/>
+        <field fieldname="loan_return_strike_amt" fieldid="5655" decimalPlaces="6"/>
+        <field fieldname="debt_fina_buy_order_amt" fieldid="5656" decimalPlaces="6"/>
+        <field fieldname="fina_return_order_amt" fieldid="5657" decimalPlaces="6"/>
+        <field fieldname="debt_loan_sell_order_amt" fieldid="5658" decimalPlaces="6"/>
+        <field fieldname="loan_return_order_amt" fieldid="5659" decimalPlaces="6"/>
+        <field fieldname="debt_fina_buy_comm_amt" fieldid="5660" decimalPlaces="6"/>
+        <field fieldname="fina_return_comm_amt" fieldid="5661" decimalPlaces="6"/>
+        <field fieldname="debt_loan_sell_comm_amt" fieldid="5662" decimalPlaces="6"/>
+        <field fieldname="loan_return_comm_amt" fieldid="5663" decimalPlaces="6"/>
+        <field fieldname="debt_strike_fee" fieldid="5664" decimalPlaces="6"/>
+        <field fieldname="return_strike_fee" fieldid="5665" decimalPlaces="6"/>
+        <field fieldname="debt_interest" fieldid="5666" decimalPlaces="6"/>
+        <field fieldname="return_interest_amt" fieldid="5667" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_capital_asaccapitaldebt" typename="LD_REQUEST" functionid="pushL.2.930" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="debt_loan_sell_strike_amt" fieldid="5654" decimalPlaces="6"/>
+        <field fieldname="debt_strike_fee" fieldid="5664" decimalPlaces="6"/>
+        <field fieldname="loan_return_strike_amt" fieldid="5655" decimalPlaces="6"/>
+        <field fieldname="loan_return_order_amt" fieldid="5659" decimalPlaces="6"/>
+        <field fieldname="loan_return_comm_amt" fieldid="5663" decimalPlaces="6"/>
+        <field fieldname="return_strike_fee" fieldid="5665" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_capital_exgpcapitaldebt" typename="LD_REQUEST" functionid="pushL.2.931" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="debt_loan_sell_strike_amt" fieldid="5654" decimalPlaces="6"/>
+        <field fieldname="debt_strike_fee" fieldid="5664" decimalPlaces="6"/>
+        <field fieldname="loan_return_strike_amt" fieldid="5655" decimalPlaces="6"/>
+        <field fieldname="loan_return_order_amt" fieldid="5659" decimalPlaces="6"/>
+        <field fieldname="loan_return_comm_amt" fieldid="5663" decimalPlaces="6"/>
+        <field fieldname="return_strike_fee" fieldid="5665" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_posi_exgpposidebtjour" typename="LD_REQUEST" functionid="pushL.2.932" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_acco_no" fieldid="1697"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="debt_type" fieldid="5609"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+        <field fieldname="strike_fee" fieldid="1300" decimalPlaces="6"/>
+        <field fieldname="debt_order_no" fieldid="5689"/>
+        <field fieldname="report_no" fieldid="2502"/>
+        <field fieldname="order_date" fieldid="1458"/>
+        <field fieldname="order_time" fieldid="1459"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="debt_amt" fieldid="5670" decimalPlaces="6"/>
+        <field fieldname="debt_qty" fieldid="5671" decimalPlaces="2"/>
+        <field fieldname="debt_fee" fieldid="5672" decimalPlaces="6"/>
+        <field fieldname="debt_interest" fieldid="5666" decimalPlaces="6"/>
+        <field fieldname="intrst_base_amt" fieldid="2170" decimalPlaces="6"/>
+        <field fieldname="debt_return_amt" fieldid="5673" decimalPlaces="6"/>
+        <field fieldname="debt_return_qty" fieldid="5674" decimalPlaces="2"/>
+        <field fieldname="return_interest_amt" fieldid="5667" decimalPlaces="6"/>
+        <field fieldname="debt_status" fieldid="5680"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_msg_monitor_command" typename="LD_REQUEST" functionid="pushL.2.933" packettype="0">
+        <field fieldname="channel_name" fieldid="5710"/>
+        <field fieldname="channel_no" fieldid="5711"/>
+        <field fieldname="machine_ip" fieldid="5712"/>
+        <field fieldname="ctrl_command" fieldid="5714"/>
+        <field fieldname="bkup_field_1" fieldid="1123"/>
+    </function>
+    <function functionname="func_msg_login_info" typename="LD_REQUEST" functionid="pushL.2.934" packettype="0">
+        <field fieldname="channel_name" fieldid="5710"/>
+        <field fieldname="channel_no" fieldid="5711"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="mach_name" fieldid="5842"/>
+        <field fieldname="machine_ip" fieldid="5712"/>
+        <field fieldname="machine_port" fieldid="5713"/>
+        <field fieldname="machine_login_status" fieldid="5715"/>
+        <field fieldname="connect_error_info" fieldid="5716"/>
+        <field fieldname="busi_error_info" fieldid="5717"/>
+        <field fieldname="ver_info" fieldid="5849"/>
+        <field fieldname="bkup_field_1" fieldid="1123"/>
+    </function>
+    <function functionname="func_msg_monitor_allcommand" typename="LD_REQUEST" functionid="pushL.2.935" packettype="0">
+        <field fieldname="ctrl_command" fieldid="5714"/>
+        <field fieldname="bkup_field_1" fieldid="1123"/>
+    </function>
+    <function functionname="func_secupush_posi_asacposidebtjour" typename="LD_REQUEST" functionid="pushL.2.936" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_acco_no" fieldid="1697"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="debt_type" fieldid="5609"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+        <field fieldname="strike_fee" fieldid="1300" decimalPlaces="6"/>
+        <field fieldname="debt_order_no" fieldid="5689"/>
+        <field fieldname="report_no" fieldid="2502"/>
+        <field fieldname="order_date" fieldid="1458"/>
+        <field fieldname="order_time" fieldid="1459"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="debt_amt" fieldid="5670" decimalPlaces="6"/>
+        <field fieldname="debt_qty" fieldid="5671" decimalPlaces="2"/>
+        <field fieldname="debt_fee" fieldid="5672" decimalPlaces="6"/>
+        <field fieldname="debt_interest" fieldid="5666" decimalPlaces="6"/>
+        <field fieldname="intrst_base_amt" fieldid="2170" decimalPlaces="6"/>
+        <field fieldname="debt_return_amt" fieldid="5673" decimalPlaces="6"/>
+        <field fieldname="debt_return_qty" fieldid="5674" decimalPlaces="2"/>
+        <field fieldname="return_interest_amt" fieldid="5667" decimalPlaces="6"/>
+        <field fieldname="debt_status" fieldid="5680"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_commautodistributerule" typename="LD_REQUEST" functionid="pushL.2.937" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="rule_name" fieldid="5836"/>
+        <field fieldname="prior_type" fieldid="2833"/>
+        <field fieldname="exch_group_no_str" fieldid="1963"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="stock_type_str" fieldid="2939"/>
+        <field fieldname="stock_code_str" fieldid="3191"/>
+        <field fieldname="opor_no_str" fieldid="1193"/>
+        <field fieldname="distribute_last_trader" fieldid="5834"/>
+        <field fieldname="distribute_by_jobs" fieldid="5835"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_commautodistributeruledel" typename="LD_REQUEST" functionid="pushL.2.938" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+    </function>
+    <function functionname="func_msg_acco_check" typename="LD_REQUEST" functionid="pushL.2.939" packettype="0">
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="asset_acco" fieldid="3050"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="stock_acco_no_str" fieldid="3195"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="stock_acco_str" fieldid="1698"/>
+        <field fieldname="comm_pwd" fieldid="3318"/>
+        <field fieldname="trade_pwd" fieldid="1945"/>
+        <field fieldname="config_str" fieldid="1178"/>
+        <field fieldname="asac_busi_config_str" fieldid="3058"/>
+    </function>
+    <function functionname="func_secupush_pd_kcb_new_stock_limit" typename="LD_REQUEST" functionid="pushL.2.940" packettype="0">
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_acco_no" fieldid="1697"/>
+        <field fieldname="stock_acco" fieldid="1696"/>
+        <field fieldname="apply_limit" fieldid="2510" decimalPlaces="2"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_exgpcombostrategyposi" typename="LD_REQUEST" functionid="pushL.2.941" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="stock_acco_no" fieldid="1697"/>
+        <field fieldname="combo_code" fieldid="4056"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="curr_qty" fieldid="1401" decimalPlaces="2"/>
+        <field fieldname="comm_frozen_qty" fieldid="2970" decimalPlaces="2"/>
+        <field fieldname="comm_unfroz_qty" fieldid="2981" decimalPlaces="2"/>
+        <field fieldname="comm_capt_qty" fieldid="3013" decimalPlaces="2"/>
+        <field fieldname="comm_releas_qty" fieldid="3001" decimalPlaces="2"/>
+        <field fieldname="trade_frozen_qty" fieldid="1935" decimalPlaces="2"/>
+        <field fieldname="trade_unfroz_qty" fieldid="1942" decimalPlaces="2"/>
+        <field fieldname="trade_capt_qty" fieldid="1960" decimalPlaces="2"/>
+        <field fieldname="trade_releas_qty" fieldid="1949" decimalPlaces="2"/>
+        <field fieldname="strike_capt_qty" fieldid="1318" decimalPlaces="2"/>
+        <field fieldname="strike_releas_qty" fieldid="1313" decimalPlaces="2"/>
+        <field fieldname="strike_frozen_qty" fieldid="1299" decimalPlaces="2"/>
+        <field fieldname="strike_unfroz_qty" fieldid="1304" decimalPlaces="2"/>
+        <field fieldname="realize_pandl" fieldid="2536" decimalPlaces="6"/>
+        <field fieldname="sum_realize_pandl" fieldid="3914" decimalPlaces="6"/>
+        <field fieldname="cost_amt" fieldid="1285" decimalPlaces="6"/>
+        <field fieldname="intrst_cost_amt" fieldid="2167" decimalPlaces="6"/>
+        <field fieldname="intrst_pandl" fieldid="2173" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_exgpcomboincome" typename="LD_REQUEST" functionid="pushL.2.942" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="combo_code" fieldid="4056"/>
+        <field fieldname="combo_cost" fieldid="4064" decimalPlaces="6"/>
+        <field fieldname="realize_pandl" fieldid="2536" decimalPlaces="6"/>
+        <field fieldname="sum_realize_pandl" fieldid="3914" decimalPlaces="6"/>
+        <field fieldname="today_buy_amt" fieldid="1410" decimalPlaces="6"/>
+        <field fieldname="today_sell_amt" fieldid="1413" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_asaccombostrategyposi" typename="LD_REQUEST" functionid="pushL.2.943" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="stock_acco_no" fieldid="1697"/>
+        <field fieldname="combo_code" fieldid="4056"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="curr_qty" fieldid="1401" decimalPlaces="2"/>
+        <field fieldname="comm_frozen_qty" fieldid="2970" decimalPlaces="2"/>
+        <field fieldname="comm_unfroz_qty" fieldid="2981" decimalPlaces="2"/>
+        <field fieldname="comm_capt_qty" fieldid="3013" decimalPlaces="2"/>
+        <field fieldname="comm_releas_qty" fieldid="3001" decimalPlaces="2"/>
+        <field fieldname="trade_frozen_qty" fieldid="1935" decimalPlaces="2"/>
+        <field fieldname="trade_unfroz_qty" fieldid="1942" decimalPlaces="2"/>
+        <field fieldname="trade_capt_qty" fieldid="1960" decimalPlaces="2"/>
+        <field fieldname="trade_releas_qty" fieldid="1949" decimalPlaces="2"/>
+        <field fieldname="strike_capt_qty" fieldid="1318" decimalPlaces="2"/>
+        <field fieldname="strike_releas_qty" fieldid="1313" decimalPlaces="2"/>
+        <field fieldname="strike_frozen_qty" fieldid="1299" decimalPlaces="2"/>
+        <field fieldname="strike_unfroz_qty" fieldid="1304" decimalPlaces="2"/>
+        <field fieldname="realize_pandl" fieldid="2536" decimalPlaces="6"/>
+        <field fieldname="sum_realize_pandl" fieldid="3914" decimalPlaces="6"/>
+        <field fieldname="cost_amt" fieldid="1285" decimalPlaces="6"/>
+        <field fieldname="intrst_cost_amt" fieldid="2167" decimalPlaces="6"/>
+        <field fieldname="intrst_pandl" fieldid="2173" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_secupush_asaccomboincome" typename="LD_REQUEST" functionid="pushL.2.944" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="combo_code" fieldid="4056"/>
+        <field fieldname="combo_cost" fieldid="4064" decimalPlaces="6"/>
+        <field fieldname="realize_pandl" fieldid="2536" decimalPlaces="6"/>
+        <field fieldname="sum_realize_pandl" fieldid="3914" decimalPlaces="6"/>
+        <field fieldname="today_buy_amt" fieldid="1410" decimalPlaces="6"/>
+        <field fieldname="today_sell_amt" fieldid="1413" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_syspush_systemstatus" typename="LD_REQUEST" functionid="pushL.2.945" packettype="0">
+        <field fieldname="sys_status" fieldid="2744"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="func_syspush_datadictionary" typename="LD_REQUEST" functionid="pushL.2.946" packettype="0">
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="datadict_busi_type" fieldid="5889"/>
+        <field fieldname="datadict_busi_no" fieldid="5890"/>
+        <field fieldname="datadict_busi_name" fieldid="5891"/>
+    </function>
+    <function functionname="func_secupush_trade_balance" typename="LD_REQUEST" functionid="pushL.2.947" packettype="0">
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="comm_qty" fieldid="3002" decimalPlaces="2"/>
+        <field fieldname="comm_amt" fieldid="2982" decimalPlaces="6"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="order_amt" fieldid="3762" decimalPlaces="6"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+</bizmsgs>

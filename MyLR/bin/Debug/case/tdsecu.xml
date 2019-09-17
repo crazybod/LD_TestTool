@@ -16,10 +16,10 @@
         <field fieldname="func_code" fieldid="1674"/>
         <field fieldname="comm_opor" fieldid="3006" value="58880002"/>
         <field fieldname="exch_group_no" fieldid="1962" paramtype="file">
-		 <file filename="account.dat" columnname="exch_group_no" selectrow="random" />
+			<file filename="account.dat" columnname="exch_group_no" selectrow="random" />
 		</field>
         <field fieldname="asset_acco_no" fieldid="3051" paramtype="file">
-		<file filename="account.dat" columnname="asset_acco_no" selectrow="same_line[exch_group_no]" />
+			<file filename="account.dat" columnname="asset_acco_no" selectrow="same_line[exch_group_no]" />
 		</field>
         <field fieldname="exch_no" fieldid="2538" paramtype="file"  >
 		    <file filename="stock_code.dat" columnname="exch_no" selectrow="random" />

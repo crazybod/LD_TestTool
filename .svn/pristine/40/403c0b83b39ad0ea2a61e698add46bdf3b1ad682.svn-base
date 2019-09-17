@@ -1,0 +1,780 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<topics>
+    <!--    本配置，只有主推服务器使用, 发布端和主推者之间，走当前支持的最高可靠等级-->
+    <!--funcid：    主推报文种实际负载的消息类型，缺省:无，必须配置-->
+    <!--snapshot：  消息是否快照类(行情就是典型的快照，只有快照类消息pushinterval才有效) 缺省:n-->
+    <!--private 消息的公有/私有属性，公有消息无需身份验证，私有消息必须鉴权才允许订阅    缺省:y-->
+    <!--RLevel: 可靠等级(用在主推服务器和订阅者之间)     缺省:1-->
+    <!--        0:无任何可靠性保障,网络中断会导致消息丢失-->
+    <!--        1:带确认机制，在主推服务器或者订阅方程序崩溃时，会导致消息丢失-->
+    <!--        2:持久化消息，只有在主推服务器或者订阅方主机崩溃时，才会导致消息丢失-->
+    <!--可靠等级越高，系统开销越大，主推性能越低，请谨慎根据业务特点选择合适等级，不要不恰当的选用高等级-->
+    <!--livetime:消息的有效期(单位S)，缺省0，不同可靠等级，缺省代表的含义不同-->
+    <!--        0:  发完即丢弃  -->
+    <!--        1:  5分钟       -->
+    <!--        2:  24小时      -->
+    <topic topicname="quote.init"   funcid="pushL.2.1" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="2538" note="市场编号"/>
+            <filter fieldid="2929" note="证券代码"/>
+        </filters>
+    </topic>
+    <topic topicname="quote.update"   funcid="pushL.2.2" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="2538" note="市场编号"/>
+            <filter fieldid="2929" note="证券代码"/>
+        </filters>
+    </topic>
+    <topic topicname="quote.realtime"   funcid="pushL.2.3" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="2538" note="市场编号"/>
+            <filter fieldid="2929" note="证券代码"/>
+        </filters>
+    </topic>
+    <topic topicname="quote.futuquote"   funcid="pushL.2.10" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="2538" note="市场编号"/>
+            <filter fieldid="1776" note="合约代码"/>
+        </filters>
+    </topic>
+    <topic topicname="quote.specialquote"   funcid="pushL.2.11" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="2538" note="市场编号"/>
+            <filter fieldid="2929" note="证券代码"/>
+        </filters>
+    </topic>
+    <topic topicname="quote.maintainbyhand"   funcid="pushL.2.12" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="2538" note="市场编号"/>
+            <filter fieldid="2929" note="证券代码"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.order"   funcid="pushL.2.20" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="1192" note="操作员编号"/>
+            <filter fieldid="1443" note="订单操作方式"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.withdraw"   funcid="pushL.2.201" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="1192" note="操作员编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.ordertotal"   funcid="pushL.2.21" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="3594" note="汇总订单机构编号"/>
+            <filter fieldid="3453" note="汇总订单交易组编号"/>
+            <filter fieldid="3593" note="汇总订单操作员编号"/>
+            <filter fieldid="3477" note="汇总订单操作方式"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.rptorder"   funcid="pushL.2.30" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="2610" note="通道编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.rptwtdraw"   funcid="pushL.2.31" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="2610" note="通道编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.rptstrike"   funcid="pushL.2.33" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+            <filter fieldid="1192" note="操作员编号"/>
+            <filter fieldid="1443" note="订单操作方式"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.rptstriketotal"   funcid="pushL.2.34" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="3482" note="汇总成交交易组编号"/>
+            <filter fieldid="3483" note="汇总成交资产账户编号"/>
+            <filter fieldid="3479" note="汇总成交操作员编号"/>
+            <filter fieldid="3509" note="汇总成交订单操作方式"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.comm"   funcid="pushL.2.40" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+            <filter fieldid="3006" note="指令下达人"/>
+            <filter fieldid="3014" note="指令执行人"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.commtotal"   funcid="pushL.2.41" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="3527" note="汇总指令下达人"/>
+            <filter fieldid="3528" note="汇总指令执行人"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.pendorder"   funcid="pushL.2.42" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+            <filter fieldid="1192" note="操作员编号"/>
+            <filter fieldid="1443" note="订单操作方式"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.exgpcapital"   funcid="pushL.2.50" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.asaccapital"   funcid="pushL.2.51" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="3051" note="资产账户编号"/>
+            <filter fieldid="1906" note="交易币种"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.exgpposi"   funcid="pushL.2.60" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.asacposi"   funcid="pushL.2.61" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+            <filter fieldid="1697" note="股东代码编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.pdexgpcapital"   funcid="pushL.2.70" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.pdasaccapital"   funcid="pushL.2.71" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+            <filter fieldid="1147" note="本币币种"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.pdexgpposi"   funcid="pushL.2.80" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.pdasacposi"   funcid="pushL.2.81" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+            <filter fieldid="1697" note="股东代码编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.exgpbondrepo"   funcid="pushL.2.82" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.pdblocktradeposi"   funcid="pushL.2.83" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.pdnewstocklimit"   funcid="pushL.2.84" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+            <filter fieldid="1697" note="股东代码编号"/>
+        </filters>
+    </topic>
+    <topic topicname="futu.order"   funcid="pushL.2.90" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+            <filter fieldid="1192" note="操作员编号"/>
+        </filters>
+    </topic>
+    <topic topicname="futu.ordertotal"   funcid="pushL.2.91" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+            <filter fieldid="1192" note="操作员编号"/>
+        </filters>
+    </topic>
+    <topic topicname="futu.comm"   funcid="pushL.2.92" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+            <filter fieldid="3006" note="指令下达人"/>
+            <filter fieldid="3014" note="指令执行人"/>
+        </filters>
+    </topic>
+    <topic topicname="futu.commtotal"   funcid="pushL.2.93" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="3006" note="指令下达人"/>
+            <filter fieldid="3014" note="指令执行人"/>
+        </filters>
+    </topic>
+    <topic topicname="futu.report"   funcid="pushL.2.100" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+            <filter fieldid="1192" note="操作员编号"/>
+        </filters>
+    </topic>
+    <topic topicname="futu.rptorder"   funcid="pushL.2.101" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="2610" note="通道编号"/>
+        </filters>
+    </topic>
+    <topic topicname="futu.rptwtdraw"   funcid="pushL.2.102" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="2610" note="通道编号"/>
+        </filters>
+    </topic>
+    <topic topicname="futu.exgpcapital"   funcid="pushL.2.110" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="1906" note="交易币种"/>
+        </filters>
+    </topic>
+    <topic topicname="futu.asaccapital"   funcid="pushL.2.111" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="3051" note="资产账户编号"/>
+            <filter fieldid="1906" note="交易币种"/>
+        </filters>
+    </topic>
+    <topic topicname="futu.capitalpref"   funcid="pushL.2.120" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="3051" note="资产账户编号"/>
+            <filter fieldid="1906" note="交易币种"/>
+        </filters>
+    </topic>
+    <topic topicname="futu.exgpposi"   funcid="pushL.2.130" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="1909" note="交易编码编号"/>
+            <filter fieldid="1777" note="合约代码编号"/>
+        </filters>
+    </topic>
+    <topic topicname="futu.asacposi"   funcid="pushL.2.131" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="3051" note="资产账户编号"/>
+            <filter fieldid="1909" note="交易编码编号"/>
+            <filter fieldid="1777" note="合约代码编号"/>
+        </filters>
+    </topic>
+    <topic topicname="futu.posidetail"   funcid="pushL.2.132" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="1909" note="交易编码编号"/>
+            <filter fieldid="1777" note="合约代码编号"/>
+        </filters>
+    </topic>
+    <topic topicname="futu.pdexgpcapital"   funcid="pushL.2.112" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+        </filters>
+    </topic>
+    <topic topicname="futu.pdasaccapital"   funcid="pushL.2.113" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="3051" note="资产账户编号"/>
+            <filter fieldid="1147" note="本币币种"/>
+        </filters>
+    </topic>
+    <topic topicname="futu.pdexgpposi"   funcid="pushL.2.133" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+        </filters>
+    </topic>
+    <topic topicname="futu.pdasacposi"   funcid="pushL.2.134" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="3051" note="资产账户编号"/>
+            <filter fieldid="1697" note="股东代码编号"/>
+        </filters>
+    </topic>
+    <topic topicname="risk.securule"   funcid="pushL.2.140" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="2352" note="启用标志"/>
+        </filters>
+    </topic>
+    <topic topicname="risk.monitor"   funcid="pushL.2.150" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1230" note="产品编号串"/>
+            <filter fieldid="1963" note="交易组编号串"/>
+        </filters>
+    </topic>
+    <topic topicname="risk.riskmonitorupdate"   funcid="pushL.2.151" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1192" note="操作员编号"/>
+        </filters>
+    </topic>
+    <topic topicname="risk.riskmonitordel"   funcid="pushL.2.152" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+        </filters>
+    </topic>
+    <topic topicname="risk.t0oporresult"   funcid="pushL.2.153" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1192" note="操作员编号"/>
+        </filters>
+    </topic>
+    <topic topicname="risk.t0oporsumresult"   funcid="pushL.2.154" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1192" note="操作员编号"/>
+        </filters>
+    </topic>
+    <topic topicname="risk.futurule"   funcid="pushL.2.160" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="2352" note="启用标志"/>
+        </filters>
+    </topic>
+    <topic topicname="risk.dimtype"   funcid="pushL.2.170" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+        </filters>
+    </topic>
+    <topic topicname="risk.dimcode"   funcid="pushL.2.171" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+        </filters>
+    </topic>
+    <topic topicname="risk.dim"   funcid="pushL.2.172" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+        </filters>
+    </topic>
+    <topic topicname="prod.prod"   funcid="pushL.2.180" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1228" note="产品编号"/>
+        </filters>
+    </topic>
+    <topic topicname="prod.prodlimit"   funcid="pushL.2.181" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1228" note="产品编号"/>
+        </filters>
+    </topic>
+    <topic topicname="prod.prodcapital"   funcid="pushL.2.190" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1228" note="产品编号"/>
+        </filters>
+    </topic>
+    <topic topicname="prod.prodasset"   funcid="pushL.2.195" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1228" note="产品编号"/>
+        </filters>
+    </topic>
+    <topic topicname="user.exchgroup"   funcid="pushL.2.200" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1228" note="产品编号"/>
+        </filters>
+    </topic>
+    <topic topicname="user.exgpasset"   funcid="pushL.2.205" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1962" note="交易组编号"/>
+        </filters>
+    </topic>
+    <topic topicname="user.oporexgprights"   funcid="pushL.2.206" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1192" note="操作员编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.strategyadd"   funcid="pushL.2.500" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="3766" note="策略操作方式"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.strategyreplace"   funcid="pushL.2.501" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="3766" note="策略操作方式"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.strategywithdraw"   funcid="pushL.2.502" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="3766" note="策略操作方式"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.strategyupdate"   funcid="pushL.2.510" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="3766" note="策略操作方式"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.strategysum"   funcid="pushL.2.511" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1228" note="产品编号"/>
+            <filter fieldid="1192" note="操作员编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.strategywithdrawbyhand"   funcid="pushL.2.512" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="3766" note="策略操作方式"/>
+        </filters>
+    </topic>
+    <topic topicname="pub.base"   funcid="pushL.2.601" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="2538" note="市场编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.t0stocksource"   funcid="pushL.2.701" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+            <filter fieldid="1192" note="操作员编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.t0posidetail"   funcid="pushL.2.702" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+            <filter fieldid="1192" note="操作员编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.t0accosum"   funcid="pushL.2.703" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1192" note="操作员编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.t0availcapital"   funcid="pushL.2.704" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1192" note="操作员编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.t0oporTshold"   funcid="pushL.2.705" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1192" note="操作员编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.t0posisum"   funcid="pushL.2.706" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+            <filter fieldid="1192" note="操作员编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.t0stocksourcedel"   funcid="pushL.2.707" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+        </filters>
+    </topic>
+    <topic topicname="secu.t0oporallowexgrpcap"   funcid="pushL.2.710" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+            <filter fieldid="1192" note="操作员编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.t0oporposimvset"   funcid="pushL.2.711" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1192" note="操作员编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.preorder"   funcid="pushL.2.708" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1228" note="产品编号"/>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.plugerrororder"   funcid="pushL.2.709" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1962" note="交易组编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.fundqry"   funcid="pushL.2.801" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="2610" note="通道编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.holdqry"   funcid="pushL.2.802" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="2610" note="通道编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.rptfundqry"   funcid="pushL.2.803" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="2610" note="通道编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.rptholdqry"   funcid="pushL.2.804" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="2610" note="通道编号"/>
+        </filters>
+    </topic>
+    <topic topicname="futu.fundqry"   funcid="pushL.2.805" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="2610" note="通道编号"/>
+        </filters>
+    </topic>
+    <topic topicname="futu.holdqry"   funcid="pushL.2.806" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="2610" note="通道编号"/>
+        </filters>
+    </topic>
+    <topic topicname="futu.rptfundqry"   funcid="pushL.2.807" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="2610" note="通道编号"/>
+        </filters>
+    </topic>
+    <topic topicname="futu.rptholdqry"   funcid="pushL.2.808" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="2610" note="通道编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.combo"   funcid="pushL.2.901" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1192" note="操作员编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.combodel"   funcid="pushL.2.902" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+        </filters>
+    </topic>
+    <topic topicname="secu.combostock"   funcid="pushL.2.903" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1192" note="操作员编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.combostockdel"   funcid="pushL.2.904" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+        </filters>
+    </topic>
+    <topic topicname="secu.comboposi"   funcid="pushL.2.905" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="1228" note="产品编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.comboincome"   funcid="pushL.2.906" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="1228" note="产品编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.combotradelog"   funcid="pushL.2.907" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="1228" note="产品编号"/>
+            <filter fieldid="1192" note="操作员编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.modifyorder"   funcid="pushL.2.908" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+        </filters>
+    </topic>
+    <topic topicname="risk.opormonitor"   funcid="pushL.2.909" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1192" note="操作员编号"/>
+        </filters>
+    </topic>
+    <topic topicname="prod.prodassetacco"   funcid="pushL.2.910" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="2610" note="通道编号"/>
+            <filter fieldid="2697" note="外部账号"/>
+        </filters>
+    </topic>
+    <topic topicname="prod.prodaccologinresult"   funcid="pushL.2.911" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="2610" note="通道编号"/>
+            <filter fieldid="2697" note="外部账号"/>
+        </filters>
+    </topic>
+    <topic topicname="risk.newstmor"   funcid="pushL.2.921" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.commdispappr"   funcid="pushL.2.922" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1962" note="交易组编号"/>
+        </filters>
+    </topic>
+    <topic topicname="pub.basebusiconfigstr"   funcid="pushL.2.923" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1228" note="产品编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+        </filters>
+    </topic>
+    <topic topicname="pub.hedgingbasket"   funcid="pushL.2.924" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+        </filters>
+    </topic>
+    <topic topicname="pub.ClientComm"   funcid="pushL.2.925" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.ztrptorder"   funcid="pushL.2.926" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="2610" note="通道编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.ztrptwtdraw"   funcid="pushL.2.927" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="2610" note="通道编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.exgpposidebt"   funcid="pushL.2.928" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.asacposidebt"   funcid="pushL.2.929" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+            <filter fieldid="1697" note="股东代码编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.asaccapitaldebt"   funcid="pushL.2.930" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.exgpcapitaldebt"   funcid="pushL.2.931" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+            <filter fieldid="1962" note="交易组编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.exgpposidebtjour"   funcid="pushL.2.932" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+        </filters>
+    </topic>
+    <topic topicname="report.monitorcmd"   funcid="pushL.2.933" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="5710" note="节点名"/>
+        </filters>
+    </topic>
+    <topic topicname="report.logininfo"   funcid="pushL.2.934" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+        </filters>
+    </topic>
+    <topic topicname="report.monitorallcmd"   funcid="pushL.2.935" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+        </filters>
+    </topic>
+    <topic topicname="secu.asacposidebtjour"   funcid="pushL.2.936" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.commautodistributerule"   funcid="pushL.2.937" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1192" note="操作员编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.commautodistributeruledel"   funcid="pushL.2.938" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+        </filters>
+    </topic>
+    <topic topicname="report.accocheck"   funcid="pushL.2.939" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="2610" note="通道编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.pdkcbnewstocklimit"   funcid="pushL.2.940" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+            <filter fieldid="1697" note="股东代码编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.exgpcombostrategyposi"   funcid="pushL.2.941" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1228" note="产品编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+            <filter fieldid="1962" note="交易组编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.exgpcomboincome"   funcid="pushL.2.942" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1228" note="产品编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+            <filter fieldid="1962" note="交易组编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.asaccombostrategyposi"   funcid="pushL.2.943" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1228" note="产品编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.asaccomboincome"   funcid="pushL.2.944" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1228" note="产品编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+        </filters>
+    </topic>
+    <topic topicname="sys.systemstatus"   funcid="pushL.2.945" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+        </filters>
+    </topic>
+    <topic topicname="sys.datadictionary"   funcid="pushL.2.946" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.tradebalance"   funcid="pushL.2.947" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+        </filters>
+    </topic>
+</topics>

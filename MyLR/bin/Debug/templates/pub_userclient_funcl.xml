@@ -1467,6 +1467,10 @@
             <field fieldname="futu_short_market_value" fieldid="5778" decimalPlaces="6"/>
             <field fieldname="stock_cash_asset" fieldid="5467" decimalPlaces="6"/>
             <field fieldname="futu_cash_asset" fieldid="3841" decimalPlaces="6"/>
+            <field fieldname="sh_hk_stock_asset" fieldid="5935" decimalPlaces="6"/>
+            <field fieldname="sz_hk_stock_asset" fieldid="5936" decimalPlaces="6"/>
+            <field fieldname="sh_Astock_asset" fieldid="5937" decimalPlaces="6"/>
+            <field fieldname="sz_Astock_asset" fieldid="5938" decimalPlaces="6"/>
         </sequence>
     </function>
     <function functionname="funcl_userclient_QueryExgpGroupAssetHis" typename="LD_REQUEST" functionid="pubL.19.90" packettype="0">
@@ -1517,6 +1521,10 @@
             <field fieldname="futu_cash_asset" fieldid="3841" decimalPlaces="6"/>
             <field fieldname="begin_evalu_nav_asset" fieldid="3886" decimalPlaces="6"/>
             <field fieldname="evalu_nav_asset" fieldid="3885" decimalPlaces="6"/>
+            <field fieldname="sh_hk_stock_asset" fieldid="5935" decimalPlaces="6"/>
+            <field fieldname="sz_hk_stock_asset" fieldid="5936" decimalPlaces="6"/>
+            <field fieldname="sh_Astock_asset" fieldid="5937" decimalPlaces="6"/>
+            <field fieldname="sz_Astock_asset" fieldid="5938" decimalPlaces="6"/>
         </sequence>
     </function>
     <function functionname="funcl_userclient_GetExgpMaxNav" typename="LD_REQUEST" functionid="pubL.19.92" packettype="0">
@@ -2261,6 +2269,10 @@
             <field fieldname="futu_short_market_value" fieldid="5778" decimalPlaces="6"/>
             <field fieldname="stock_cash_asset" fieldid="5467" decimalPlaces="6"/>
             <field fieldname="futu_cash_asset" fieldid="3841" decimalPlaces="6"/>
+            <field fieldname="sh_hk_stock_asset" fieldid="5935" decimalPlaces="6"/>
+            <field fieldname="sz_hk_stock_asset" fieldid="5936" decimalPlaces="6"/>
+            <field fieldname="sh_Astock_asset" fieldid="5937" decimalPlaces="6"/>
+            <field fieldname="sz_Astock_asset" fieldid="5938" decimalPlaces="6"/>
         </sequence>
     </function>
 </bizmsgs>
