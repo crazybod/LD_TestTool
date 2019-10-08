@@ -36,6 +36,12 @@ namespace MyLR
             }
             return filedValue;
         }
+        /// <summary>
+        /// 对字段进行赋默认值操作
+        /// </summary>
+        /// <param name="defaultTable">默认值集合，本程序对应defaultvalue.xlsx文件</param>
+        /// <param name="filedName">字段名</param>
+        /// <returns></returns>
         public static String GetDefaultValue(DataTable defaultTable, string filedName)
         {
             String filedValue = "";
@@ -44,6 +50,14 @@ namespace MyLR
             filedValue = dr[targer].ToString();
             return filedValue;
         }
+
+        /// <summary>
+        /// 获取应答包内的字段和值的信息
+        /// </summary>
+        /// <param name="fastmsg">应答数据包</param>
+        /// <param name="filedType">字段类型</param>
+        /// <param name="filedIndex">字段索引</param>
+        /// <returns></returns>
         public static string GetFastMsgValue(LDFastMessageAdapter fastmsg, int filedType, int filedIndex)
         {
             string filedValue = "";
@@ -80,6 +94,13 @@ namespace MyLR
             }
             return filedValue;
         }
+        /// <summary>
+        /// 根据字段在模板中的索引进行赋值构建请求数据包
+        /// </summary>
+        /// <param name="fastmsg">请求包</param>
+        /// <param name="filedType">字段类型</param>
+        /// <param name="filedValue">字段值</param>
+        /// <param name="filedIndex">字段在模板中的索引</param>
         public static void SetFastMsgValue(LDFastMessageAdapter fastmsg, int filedType, string filedValue, int filedIndex)
         {
             switch (filedType)
@@ -91,6 +112,7 @@ namespace MyLR
                     Int32 intValue = 0;
                     Int32.TryParse(filedValue, out intValue);
                     fastmsg.SetInt32byIndex(filedIndex, intValue);
+                    //fastmsg.SetInt32(filedIndex, intValue);
                     break;
                 case LDSdkTag.TypeInt64:
                 case LDSdkTag.TypeuInt64:
@@ -110,6 +132,50 @@ namespace MyLR
                         filedValue = " ";
                     }
                     fastmsg.SetStringbyIndex(filedIndex, filedValue);
+                    break;
+                default:
+                    break;
+
+            }
+        }
+        /// <summary>
+        /// 根据字段的FieldId进行构建数据包
+        /// </summary>
+        /// <param name="fastmsg"></param>
+        /// <param name="filedType"></param>
+        /// <param name="filedValue"></param>
+        /// <param name="filedIndex"></param>
+        public static void SetFastMsgValueById(LDFastMessageAdapter fastmsg, int filedType, string filedValue, int fieldId)
+        {
+            switch (filedType)
+            {
+                case LDSdkTag.TypeInt16:
+                case LDSdkTag.TypeuInt16:
+                case LDSdkTag.TypeInt32:
+                case LDSdkTag.TypeuInt32:
+                    Int32 intValue = 0;
+                    Int32.TryParse(filedValue, out intValue);
+                    //fastmsg.SetInt32byIndex(filedIndex, intValue);
+                    fastmsg.SetInt32(fieldId, intValue);
+                    break;
+                case LDSdkTag.TypeInt64:
+                case LDSdkTag.TypeuInt64:
+                    Int64 longValue = 0;
+                    Int64.TryParse(filedValue, out longValue);
+                    fastmsg.SetInt64(fieldId, (ulong)longValue);
+                    break;
+                case LDSdkTag.TypeDouble:
+                    double doubleValue = 0;
+                    double.TryParse(filedValue, out doubleValue);
+                    fastmsg.SetDouble(fieldId, doubleValue);
+                    break;
+                case LDSdkTag.TypeString:
+                case LDSdkTag.TypeVector:
+                    if (string.IsNullOrEmpty(filedValue))
+                    {
+                        filedValue = " ";
+                    }
+                    fastmsg.SetString(fieldId, filedValue);
                     break;
                 default:
                     break;

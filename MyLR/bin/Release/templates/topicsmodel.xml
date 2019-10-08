@@ -2720,6 +2720,7 @@
         <field fieldname="exch_crncy_type" fieldid="1906"/>
         <field fieldname="stock_code" fieldid="2929"/>
         <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="exch_no" fieldid="2538"/>
         <field fieldname="stock_type" fieldid="2938"/>
         <field fieldname="order_dir" fieldid="1449"/>
         <field fieldname="comm_qty" fieldid="3002" decimalPlaces="2"/>

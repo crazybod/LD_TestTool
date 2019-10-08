@@ -13,7 +13,13 @@ namespace MyLR
             FieldName = fieldName;
             FieldValue = fieldValue;
         }
+        /// <summary>
+        /// 变量名
+        /// </summary>
         public string FieldName { get; set; }
+        /// <summary>
+        /// 变量值
+        /// </summary>
         public string FieldValue { get; set; }
     }
 }

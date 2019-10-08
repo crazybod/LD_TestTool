@@ -187,7 +187,7 @@ namespace MyLR
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Exception: " + ex.Message);
+                //Console.WriteLine("Exception: " + ex.Message);
                 return -1;
             }
         }
@@ -306,7 +306,7 @@ namespace MyLR
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Exception: " + ex.Message);
+                //Console.WriteLine("Exception: " + ex.Message);
                 return -1;
             }
         }

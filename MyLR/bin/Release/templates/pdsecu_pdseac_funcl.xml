@@ -117,6 +117,7 @@
         <field fieldname="func_code" fieldid="1674"/>
         <field fieldname="pd_no" fieldid="1228"/>
         <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="stock_acco" fieldid="1696"/>
         <field fieldname="stock_acco_no" fieldid="1697"/>
         <field fieldname="exch_no" fieldid="2538"/>
         <field fieldname="stock_acco_name" fieldid="1699"/>

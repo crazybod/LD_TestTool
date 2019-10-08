@@ -24,6 +24,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,6 +34,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ICSharpCode.AvalonEdit, Version=5.0.3.0, Culture=neutral, PublicKeyToken=9cc39be672370310, processorArchitecture=MSIL">
@@ -58,6 +60,10 @@
     </Reference>
     <Reference Include="Microsoft.Practices.Prism.SharedInterfaces">
       <HintPath>..\Output\Debug\LD.Client\Libs\FrameworkLibs\Microsoft.Practices.Prism.SharedInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.12\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="NPOI, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
       <HintPath>..\packages\NPOI.2.4.1\lib\net45\NPOI.dll</HintPath>
@@ -110,10 +116,13 @@
     <Compile Include="HqReplay\LoadStockInfo.cs" />
     <Compile Include="HqReplay\StockInfo.cs" />
     <Compile Include="HqReplay\WrongStockLevelRealTimeData.cs" />
+    <Compile Include="Models\ReplyRateModel.cs" />
     <Compile Include="Utils\ConnectionManager.cs" />
     <Compile Include="Utils\CSVFileHelper.cs" />
+    <Compile Include="Utils\DBHelper.cs" />
     <Compile Include="Utils\ExcelHelper.cs" />
     <Compile Include="Utils\InitFastMsg.cs" />
+    <Compile Include="Utils\LogAnswerPackageInfo.cs" />
     <Compile Include="Utils\LogHelper.cs" />
     <Compile Include="PrintHelper.cs" />
     <Compile Include="QueueThreadSafe.cs" />

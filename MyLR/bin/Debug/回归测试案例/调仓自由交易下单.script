@@ -1,0 +1,40 @@
+﻿#调仓自由交易的流程：待执行订单-》下达订单
+
+#下面是获取订单批号  
+Function funOrderBatchNo = tdsecuL.1.901
+set funOrderBatchNo.co_no = 1100
+set funOrderBatchNo.record_no_type = 18 
+funOrderBatchNo.Send()
+funOrderBatchNo.GetAnswer()
+if funOrderBatchNo.Answer().error_code !=0 : Print '('&funOrderBatchNo.Answer().error_code&')'&funOrderBatchNo.Answer().error_prompt&funOrderBatchNo.Answer().error_info
+if funOrderBatchNo.Answer().error_code !=0 : Print 'tdsecuL.1.901错误，程序即将退出'
+if funOrderBatchNo.Answer().error_code !=0 : Exit
+if funOrderBatchNo.Answer().curr_no > 0 : Print '获取订单批号成功，OrderBatchNo = '&funOrderBatchNo.Answer().curr_no
+sleep=1000
+
+#下面是新增待执行订单
+Function funcl_tdsed_AddPendOrder = tdsecuL.4.16
+set funcl_tdsed_AddPendOrder.exch_group_no=11000001
+set funcl_tdsed_AddPendOrder.asset_acco_no=11000001
+set funcl_tdsed_AddPendOrder.exch_no = 1
+set funcl_tdsed_AddPendOrder.stock_code = 600600
+#set funcl_tdsed_AddPendOrder.comm_id=
+#set funcl_tdsed_AddPendOrder.comm_batch_no=
+set funcl_tdsed_AddPendOrder.order_batch_no=funOrderBatchNo.Answer().curr_no
+set funcl_tdsed_AddPendOrder.order_dir=1
+set funcl_tdsed_AddPendOrder.order_qty=100
+set funcl_tdsed_AddPendOrder.price_type=1
+set funcl_tdsed_AddPendOrder.exec_price_type=44.22
+set funcl_tdsed_AddPendOrder.price_offset=0.02
+set funcl_tdsed_AddPendOrder.order_oper_way=64
+#set funcl_tdsed_AddPendOrder.combo_code=
+#set funcl_tdsed_AddPendOrder.external_no=
+set funcl_tdsed_AddPendOrder.remark_info='regression test'
+
+funcl_tdsed_AddPendOrder.Send()
+funcl_tdsed_AddPendOrder.GetAnswer()
+if funcl_tdsed_AddPendOrder.Answer().error_code !=0 : Print '('&funcl_tdsed_AddPendOrder.Answer().error_code&')'&funcl_tdsed_AddPendOrder.Answer().error_prompt&funcl_tdsed_AddPendOrder.Answer().error_info
+if funcl_tdsed_AddPendOrder.Answer().error_code !=0 : Print 'tdsecuL.4.16错误，程序即将退出'
+if funcl_tdsed_AddPendOrder.Answer().error_code !=0 : Exit
+if funcl_tdsed_AddPendOrder.Answer().error_code == 0 : Print '新增待执行订单成功，pend_order_id = '&funcl_tdsed_AddPendOrder.Answer().pend_order_id&' 订单日期 = '&funcl_tdsed_AddPendOrder.Answer().order_date&' 外部账号 = '&funcl_tdsed_AddPendOrder.Answer().out_acco&' 通道编号 = '&funcl_tdsed_AddPendOrder.Answer().pass_no&' 机构编号 = '&funcl_tdsed_AddPendOrder.Answer().co_no
+sleep=1000

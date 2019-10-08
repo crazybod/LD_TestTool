@@ -1,0 +1,18 @@
+﻿
+**************************************************************
+-----------------------------------------------------
+FuncID : tdsecuL.11.15
+ PacketType : 1
+ SerialFlag : 0
+ErrorInfo : 
+ModuleName : 
+时间 : 2019/9/30 8:57:09
+-----------------------------------------------------
+error_code : 0
+error_info :  
+error_deal :  
+error_prompt :  
+strategy_id : 377
+stock_code : 002236
+strategy_oper_way : 61
+时间 : 2019/9/30 8:57:09

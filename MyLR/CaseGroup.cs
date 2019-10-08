@@ -87,6 +87,23 @@ namespace MyLR
                 this.SetProperty(ref this._FullPath, value);
             }
         }
+
+        /// <summary>
+        /// 是否被选中
+        /// </summary>
+        private bool _IsFocused;
+        [XmlAttribute("IsFocused")]
+        public bool IsFocused
+        {
+            get
+            {
+                return _IsFocused;
+            }
+            set
+            {
+                this.SetProperty(ref this._IsFocused, value);
+            }
+        }
     }
 
     public class CaseGroupBase : BindableBase
@@ -270,10 +287,11 @@ namespace MyLR
             }
         }
 
+        
+        private String _FullPath;
         /// <summary>
         /// 绝对路径
         /// </summary>
-        private String _FullPath;
         [XmlAttribute("FullPath")]
         public String FullPath
         {

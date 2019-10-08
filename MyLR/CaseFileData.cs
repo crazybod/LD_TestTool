@@ -84,6 +84,7 @@ namespace MyLR
                 SetProperty(ref this._FunID,value);
             }
         }
+
         private string _FunName;
         public string FunName
         {
@@ -96,6 +97,7 @@ namespace MyLR
                 SetProperty(ref this._FunName, value);
             }
         }
+
         public int FunType { get; set; }
         public List<CaseFiled> Fileds { get; set; }
       
@@ -111,6 +113,7 @@ namespace MyLR
             AllCsvFile = new Dictionary<string, CSVFile>();
         }
     }
+
     public class CaseFileData
     {
         public int SendOkCount;

@@ -1,0 +1,126 @@
+﻿using LDBizTagDefine;
+using LDsdkDefineEx;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MyLR.Utils
+{
+    /// <summary>
+    /// 该类用于将应答包信息写入文件
+    /// </summary>
+    public class LogAnswerPackageInfo
+    {
+        /// <summary>
+        /// 输出应答数据的结果
+        /// </summary>
+        /// <param name="lpFastMsg">应答数据包</param>
+        /// <param name="savePath">文件保存路径</param>
+        public static unsafe void OutPutResult(LDFastMessageAdapter lpFastMsg,string savePath)
+        {
+            StringBuilder outPutInfo = new StringBuilder();
+            outPutInfo.Append("\r\n**************************************************************");
+            try
+            {
+                if (lpFastMsg.Record != null)
+                {
+                    int errorNo = lpFastMsg.GetInt32(LDBizTag.LDBIZ_ERROR_NO_INT);
+                    if (errorNo != 0)
+                    {
+                        return;
+                    }
+                    //打印包头信息
+                    LDRecordAdapter headRecord = lpFastMsg.GetHeadRecord();
+                    if (headRecord.Record != null)
+                    {
+                        string tempHeadRecord = ShowRecord(headRecord);
+                        outPutInfo.Append(tempHeadRecord);
+                    }
+
+                    //打印包体信息
+                    LDGroupAdapter lpGroup = lpFastMsg.GetGroup(1000);
+                    if (lpGroup.ld == null)    //非结果集
+                    {
+                        LDRecordAdapter record = lpFastMsg.GetBizBodyRecord();
+                        if (record.Record != null)
+                        {
+                            string tempInfo = ShowRecord(record);
+                            outPutInfo.Append(tempInfo);
+                        }
+                    }
+                    else    //结果集
+                    {
+                        int recordCount = lpGroup.GetRecordCount();
+                        outPutInfo.AppendLine($"\r\nrow_count : {recordCount}");
+                        for (int i = 0; i < recordCount; i++)
+                        {
+                            LDRecordAdapter record = lpGroup.GetRecord(i);
+                            if (record.Record != null)
+                            {
+                                string tempInfo = ShowRecord(record);
+                                outPutInfo.Append(tempInfo);
+                            }
+                        }
+                    }
+                    CSVFileHelper.AppendSaveScript(savePath, outPutInfo.ToString());
+                }
+            }
+            catch (Exception error)
+            {
+                outPutInfo.Append($"{error.Message}\r\n{error.StackTrace}");
+                CSVFileHelper.AppendSaveScript(savePath, outPutInfo.ToString());
+            }
+        }
+
+        /// <summary>
+        /// 逐条解析记录并打印
+        /// </summary>
+        /// <param name="record"></param>
+        private static string ShowRecord(LDRecordAdapter record)
+        {
+            StringBuilder outPutInfo = new StringBuilder();
+            try
+            {
+                int fieldCount = record.GetFieldCount();
+
+                outPutInfo.Append("\r\n-----------------------------------------------------");
+                for (int index = 0; index < fieldCount; index++)
+                {
+                    int fieldType = record.GetFieldType(index);
+                    if (LDSdkTag.TypeInt8 <= fieldType && fieldType <= LDSdkTag.TypeuInt8)//32位整形
+                    {
+                        outPutInfo.Append($"\r\n {record.GetFieldNamebyIndex(index)} : {record.GetInt32byIndex(index)}");
+                    }
+                    else if (LDSdkTag.TypeInt64 == fieldType || LDSdkTag.TypeuInt64 == fieldType)//64位整形
+                    {
+                        outPutInfo.Append($"\r\n{record.GetFieldNamebyIndex(index)} : {record.GetInt64byIndex(index)}");
+                    }
+                    else if (LDSdkTag.TypeDouble == fieldType)//double
+                    {
+                        outPutInfo.Append($"\r\n{record.GetFieldNamebyIndex(index)} : {record.GetDoublebyIndex(index)}");
+                    }
+                    else if (LDSdkTag.TypeString == fieldType || LDSdkTag.TypeVector == fieldType)//字符串
+                    {
+                        outPutInfo.Append($"\r\n{record.GetFieldNamebyIndex(index)} : {record.GetStringbyIndex(index)}");
+                    }
+                    else if (LDSdkTag.TypeRawData == fieldType)//RawData
+                    {
+                        int rawDataLen = 0;
+                        outPutInfo.Append($"\r\n{record.GetFieldNamebyIndex(index)} : {record.GetRawDatabyIndex(index, ref rawDataLen)}");
+                    }
+                }
+                outPutInfo.Append($"\r\n时间 : {DateTime.Now.ToString()}");
+                return outPutInfo.ToString();
+                //CSVFileHelper.SaveScript(savePath, outPutInfo.ToString());
+
+            }
+            catch (Exception error)
+            {
+                outPutInfo.Append(error.Message + "\r\n" + error.StackTrace);
+                return outPutInfo.ToString();
+            }
+        }
+    }
+}

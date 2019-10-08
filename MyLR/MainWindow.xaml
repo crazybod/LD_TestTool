@@ -9,12 +9,13 @@
         Title="左右手" >
     <TabControl>
         <TabItem Header="压力测试">
-            <Grid   Background="#FFF1E9D7" >
+            <Grid   Background="#FFF1E9D7" RenderTransformOrigin="0.512,0.575" Margin="0,0,-4,-0.4" >
 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="90"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="81.8"></ColumnDefinition>
@@ -42,7 +43,7 @@
                           CanUserDeleteRows="False"
                           AutoGenerateColumns="False"
                         
-                          GridLinesVisibility="Vertical" Grid.ColumnSpan="2" Margin="0,0,0.4,-0.4" Grid.RowSpan="2">
+                          GridLinesVisibility="Vertical" Grid.ColumnSpan="2" Margin="0,0,0,53.4">
                     <DataGrid.RowStyle>
                         <Style TargetType="{x:Type DataGridRow}">
                             <Setter Property="FontSize" Value="12"/>
@@ -66,16 +67,45 @@
                         <DataGridTextColumn Header="发送次数(0无限)" Binding="{Binding LoopCount}" />
                         <DataGridTextColumn Header="积压上限" Binding="{Binding UpStage}" />
                         <DataGridTextColumn Header="积压下限" Binding="{Binding DownStage}"/>
-
                         <DataGridTextColumn Header="脚本路径" Binding="{Binding FileName}" />
                     </DataGrid.Columns>
                 </DataGrid>
+
+                <!--显示各个功能号的后台处理性能如何-->
+                <DataGrid Grid.Row="1" Grid.Column="0"  
+                          ItemsSource="{Binding ReplyRateInfos}"
+                          CanUserAddRows="False"
+                          CanUserDeleteRows="False"
+                          AutoGenerateColumns="False"
+                        
+                          GridLinesVisibility="Vertical" Grid.ColumnSpan="2" Margin="0,226,0,-0.4" Grid.RowSpan="3">
+                    <DataGrid.RowStyle>
+                        <Style TargetType="{x:Type DataGridRow}">
+                            <Setter Property="FontSize" Value="12"/>
+                            <Style.Triggers>
+                                <Trigger Property="ItemsControl.AlternationIndex" Value="0">
+                                    <Setter Property="Background" Value="#cbedfa" />
+                                </Trigger>
+                                <Trigger Property="ItemsControl.AlternationIndex" Value="1">
+                                    <Setter Property="Background" Value="#FFFFFFFF" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </DataGrid.RowStyle>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="功能号" Binding="{Binding functionId}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="当前应答频率(条/秒)" Binding="{Binding currentRate}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="最大应答频率(条/秒)" Binding="{Binding maxRate}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="最小应答频率(条/秒)" Binding="{Binding minRate}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="应答数量" Binding="{Binding replyCount}" IsReadOnly="True"/>
+                    </DataGrid.Columns>
+                </DataGrid>
                 <GridSplitter Grid.Row="1" Grid.Column="2" Width="2"  HorizontalAlignment="Stretch" Background="#FF98E415" Margin="1.6,0,2,-0.4" Grid.RowSpan="2"  />
-                <StackPanel Grid.Column="3" Grid.Row="1" Margin="0,0,0,-0.4" Grid.RowSpan="2">
+                <StackPanel Grid.Column="3" Grid.Row="1" Margin="0,0,0,-0.4" Grid.RowSpan="4" >
                     <DataGrid ItemsSource="{Binding CaseFunctions}" 
                               AutoGenerateColumns="False" 
                               CanUserAddRows="False"
-                              CanUserDeleteRows="False"
+                              CanUserDeleteRows="False" Height="451" HorizontalAlignment="Left" Width="Auto" Margin="0,0,-11.8,0"
                               >
                         <DataGrid.Columns >
                             <DataGridCheckBoxColumn Header="选择" Binding="{Binding Check}" IsReadOnly="False"/>
@@ -105,7 +135,7 @@
                 <DataGrid Grid.Row="1" Grid.Column="0"  Grid.RowSpan="1"
                           IsReadOnly="True"
                           ItemsSource="{Binding ProjectInfos}"
-                          SelectedItem="{Binding SelectProject}"  
+                          SelectedItem="{Binding SelectProject}"
                           CanUserAddRows="False"
                           CanUserDeleteRows="False"
                           AutoGenerateColumns="False"                       
@@ -116,9 +146,10 @@
                     </DataGrid.Columns>
                 </DataGrid>
                 <DataGrid Grid.Row="2" Grid.Column="0"  Grid.RowSpan="1"
+                          Name="dgCase"
                           IsReadOnly="True"
                           ItemsSource="{Binding CaseScripts}"
-                          SelectedItem="{Binding SelectScript}"  
+                          SelectedItem="{Binding SelectScript}"
                           CanUserAddRows="False"
                           CanUserDeleteRows="False"
                           AutoGenerateColumns="False"                       
@@ -130,23 +161,15 @@
                 </DataGrid>
                 <StackPanel Grid.Row="0" Grid.Column="1" Margin="10 0 0 0" Orientation="Horizontal" >
 
-                    <Button  Width="70" Height="25" Margin="4 0 0 0" HorizontalAlignment="Left"  Content="Run" Command="{Binding RunScript}" >
-
-                    </Button>
-                    <Button   Width="70"  Height="25" Margin="4 0 0 0" HorizontalAlignment="Left"  Content="Complise" Command="{Binding ComplieScript}"  >
-
-                    </Button>
-
-                    <Button  Width="60" Height="25" Margin="40,0,0,-0.2" HorizontalAlignment="Left"  Content="一键运行" Command="{Binding RunAll}" >
-
-                    </Button>
-                    <Button   Width="45" Height="25" Margin="4,0,0,-0.2" HorizontalAlignment="Left"  Content="保存" Command="{Binding SaveScript}" >
-
-                    </Button>
-                    <Button   Width="45" Height="25" Margin="4,0,0,-0.2" HorizontalAlignment="Left"  Content="另存为" Command="{Binding SaveScriptTo}"  >
-
-                    </Button>
-                    <Button   Width="58" Height="25" Margin="4,0,0,-0.2" HorizontalAlignment="Left"  Content="选择项目" Command="{Binding OpenProject}"  />
+                    <Button  Width="70" Height="25" Margin="4 0 0 0" HorizontalAlignment="Left"  Content="Run" Command="{Binding RunScript}" />
+                    <Button   Width="70"  Height="25" Margin="4 0 0 0" HorizontalAlignment="Left"  Content="Complise" Command="{Binding ComplieScript}"  />
+                    <Button  Width="60" Height="25" Margin="40,0,0,-0.2" HorizontalAlignment="Left"  Content="一键运行" Name="btnRunAll" Click="btnRunAll_Click"/>
+                    <Button   Width="45" Height="25" Margin="4,0,0,-0.2" HorizontalAlignment="Left"  Content="保存" Name="SaveScript" Click="SaveScript_Click" />
+                    <Button   Width="57" Height="25" Margin="4,0,0,-0.2" HorizontalAlignment="Left"  Content="新建案例" Name="CreateScript" Click="CreateScript_Click" />
+                    <Button   Width="56" Height="25" Margin="4,0,0,-0.2" HorizontalAlignment="Left"  Content="删除案例" Name="DeleteScript" Click="DeleteScript_Click" />
+                    <Button   Width="81" Height="25" Margin="4,0,0,-0.2" HorizontalAlignment="Left"  Content="批量删除案例" Name="btnDeleteAll" Click="btnDeleteAll_Click"/>
+                    <Button   Width="58" Height="25" Margin="4,0,0,-0.2" HorizontalAlignment="Left"  Content="选择项目" Name="OpenProject" Click="OpenProject_Click" />
+                    <Button   Width="49" Height="25" Margin="4,0,0,-0.2" HorizontalAlignment="Left"  Content="另存为" Name="SaveScriptTo" Click="SaveScriptTo_Click"/>
                 </StackPanel>
 
                 <GroupBox   Header="脚本" Grid.Column="1" Grid.Row="1">
@@ -161,16 +184,18 @@
 
 
 
-                <GroupBox  Header="输出" Height="180" Grid.Column="1" Grid.Row="2">
+                <GroupBox  Header="输出" Grid.Column="1" Grid.Row="2" Margin="0,29.6,0.2,10.4">
                     <StackPanel>
-                        <Grid Height="166" Margin="0,0,0.4,0">
+                        <Grid Height="176" Margin="0,0,0.4,0">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="30"></RowDefinition>
                                 <RowDefinition Height="*"></RowDefinition>
                             </Grid.RowDefinitions>
                             <Button Command="{Binding ClearPrint}" Grid.Row="0" Width="40" Height="20" Margin="3,8,0,2.4" HorizontalAlignment="Left"  Content="清空" />
-                            <Button Grid.Row="0" Width="69" Height="20" Margin="503,8,0,2.4" HorizontalAlignment="Left"  Content="结果另存为" />
-                            <RichTextBox x:Name="PrintData" Grid.Row="1" Height="165" IsReadOnly="True" VerticalScrollBarVisibility="Auto" FontSize="10">
+
+                            <Button Grid.Row="0" Width="69" Height="20" Margin="503,8,0,2.4" HorizontalAlignment="Left"  Content="结果另存为" Command="{Binding SaveOutCome}" />
+
+                            <RichTextBox x:Name="PrintData" IsReadOnly="True" VerticalScrollBarVisibility="Auto" FontSize="10" Margin="0,30,0,10.4" Grid.RowSpan="2">
                                 <FlowDocument Focusable="True" LineHeight="1"/>
                             </RichTextBox>
                         </Grid>
@@ -214,8 +239,8 @@
                 <Button x:Name="btnRun" Content="运行" Grid.Column="5" HorizontalAlignment="Left" Margin="397,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="70" Height="25" Click="btnRun_Click"/>
                 <Button x:Name="btnPause" Content="暂停" Grid.Column="5" HorizontalAlignment="Left" Margin="476,10,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="75" Height="25" Click="btnPause_Click"/>
                 <Canvas x:Name="cvsDraw" Grid.Column="5" HorizontalAlignment="Left" Height="348" Margin="10,120,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="548"/>
-                <TextBox x:Name="txtDelay" Grid.Column="5" HorizontalAlignment="Left" Height="23" Text="0" Margin="59,10,0,0" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" RenderTransformOrigin="-0.42,-1.93"/>
-                <Label x:Name="label" Content="延迟设置" Grid.Column="5" HorizontalAlignment="Left" Margin="2,11,0,0" Grid.RowSpan="2" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtTimes" Grid.Column="5" HorizontalAlignment="Left" Height="23" Text="1" Margin="59,10,0,0" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" RenderTransformOrigin="-0.42,-1.93"/>
+                <Label x:Name="label" Content="加速倍数" Grid.Column="5" HorizontalAlignment="Left" Margin="2,11,0,0" Grid.RowSpan="2" VerticalAlignment="Top"/>
                 <Label x:Name="label1" Content="券码条数" Grid.Column="5" HorizontalAlignment="Left" Margin="148,9,0,0" Grid.RowSpan="2" VerticalAlignment="Top"/>
                 <TextBox x:Name="txtStockCountLimit" Grid.Column="5" HorizontalAlignment="Left" Height="23" Margin="211,10,0,0" Text="100" TextWrapping="Wrap" VerticalAlignment="Top" Width="69" Grid.RowSpan="2"/>
                 <TextBox x:Name="txtForbid" Grid.Column="5" HorizontalAlignment="Left" Height="23" Margin="10,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="219" Grid.RowSpan="2" RenderTransformOrigin="0.616,-0.017"/>

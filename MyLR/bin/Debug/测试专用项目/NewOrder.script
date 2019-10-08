@@ -2,7 +2,7 @@
 #设置保存日志文件，这个后续实现
 #LogFile=
 #下面是下订单的功能号 格式： Function 功能号变量 = 功能号
-Function funOrder = tdsecuL.4.11
+Function funOrder = tdsecuL.4.1
 #下面是给功能号请求参数赋值，默认值在defaultvalue.xlsx文件的'参数值'一列中格式：set 功能号变量.字段名=字段值
 # 订单的股票代码赋值为600519
 set funOrder.stock_code=600519

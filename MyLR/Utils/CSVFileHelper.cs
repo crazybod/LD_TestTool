@@ -229,7 +229,7 @@ namespace MyLR
         }
 
         /// <summary>
-        /// 保存脚本信息
+        /// 保存脚本信息(覆盖模式)
         /// </summary>
         /// <param name="fullPath">绝对路径</param>
         /// <param name="scriptData">脚本信息</param>
@@ -241,17 +241,42 @@ namespace MyLR
             {
                 Encoding encoding = GetType(fullPath);
                 DataTable dt = new DataTable();
-                FileStream fs = new FileStream(fullPath, FileMode.Create, FileAccess.ReadWrite);
+                using (FileStream fs = new FileStream(fullPath, FileMode.Create,FileAccess.ReadWrite))
+                {
+                    using (StreamWriter sr = new StreamWriter(fs, encoding))
+                    {
+                        sr.Write(scriptData);
+                    }
+                }
+                result = "保存成功！";
+            }
+            catch (Exception error)
+            {
+                result = "保存失败：" + error.Message + "\r\n" + error.StackTrace;
+            }
+            return result;
+        }
 
-                StreamWriter sr = new StreamWriter(fs, encoding);
-                sr.Write(scriptData);
-
-                //释放流
-                sr.Dispose();
-                fs.Dispose();
-                //关闭流
-                sr.Close();
-                fs.Close();
+        /// <summary>
+        /// 保存脚本信息(追加模式)
+        /// </summary>
+        /// <param name="fullPath">绝对路径</param>
+        /// <param name="scriptData">脚本信息</param>
+        /// <returns></returns>
+        public static string AppendSaveScript(string fullPath, string scriptData)
+        {
+            string result = "";
+            try
+            {
+                Encoding encoding = GetType(fullPath);
+                DataTable dt = new DataTable();
+                using (FileStream fs = new FileStream(fullPath, FileMode.Append))
+                {
+                    using (StreamWriter sr = new StreamWriter(fs, encoding))
+                    {
+                        sr.Write(scriptData);
+                    }
+                }
                 result = "保存成功！";
             }
             catch (Exception error)

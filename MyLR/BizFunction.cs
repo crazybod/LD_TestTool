@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace MyLR
 {
-
+    /// <summary>
+    /// 同时保存了请求包的模压和应答包的模板
+    /// 以及数据信息
+    /// </summary>
     public class BizFunction
     {
         public BizFunction(string funId, string varName)
@@ -24,7 +27,7 @@ namespace MyLR
             ReqFields.Clear();
         }
         /// <summary>
-        /// 变量名称
+        /// 变量名称(指的是该次请求的唯一标识，即功能号左边的变量)
         /// </summary>
         public string VarName { get; set; }
         public int Sleep { get; set; }
@@ -41,8 +44,14 @@ namespace MyLR
         /// </summary>
         public bool AnswerFlag { get; set; }
 
+        /// <summary>
+        /// 入参集合
+        /// </summary>
         public List<BizRequestField> ReqFields { get; set; }
 
+        /// <summary>
+        /// 应答包
+        /// </summary>
         public BizAnswer Answer {get;set;}
 
 

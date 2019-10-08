@@ -43,4 +43,5 @@ E:\2.0测试工具代码\MyLR\obj\Release\MainWindow.baml
 E:\2.0测试工具代码\MyLR\obj\Release\MyLR.g.resources
 E:\2.0测试工具代码\MyLR\obj\Release\MyLR.Properties.Resources.resources
 E:\2.0测试工具代码\MyLR\obj\Release\MyLR.csproj.GenerateResource.Cache
+E:\2.0测试工具代码\MyLR\bin\Release\MySql.Data.dll
 E:\2.0测试工具代码\MyLR\obj\Release\MyLR.csprojResolveAssemblyReference.cache

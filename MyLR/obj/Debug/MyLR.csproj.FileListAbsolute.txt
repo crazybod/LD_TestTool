@@ -72,4 +72,4 @@ E:\2.0测试工具代码\MyLR\bin\Debug\NPOI.OOXML.dll
 E:\2.0测试工具代码\MyLR\bin\Debug\NPOI.OpenXml4Net.dll
 E:\2.0测试工具代码\MyLR\bin\Debug\NPOI.OpenXmlFormats.dll
 E:\2.0测试工具代码\MyLR\bin\Debug\ICSharpCode.SharpZipLib.xml
-E:\2.0测试工具代码\MyLR\obj\Debug\MyLR.csprojResolveAssemblyReference.cache
+E:\2.0测试工具代码\MyLR\bin\Debug\MySql.Data.dll

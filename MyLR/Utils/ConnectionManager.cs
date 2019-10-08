@@ -9,6 +9,7 @@ namespace MyLR
 {
     public delegate void OnPublishHandler(Connection connection, string strTopicName, LDFastMessageAdapter fastMsg);
     public delegate void OnReceivedExHandler(Connection connection, int hSend, LDFastMessageAdapter lpFastMsg, int result);
+
     public class Connection
     {
         internal event Action<int,string, LDFastMessageAdapter> OnPublishCallBack;

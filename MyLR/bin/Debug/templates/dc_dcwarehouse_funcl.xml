@@ -25,6 +25,8 @@
             <field fieldname="dc_index_type" fieldid="5898"/>
             <field fieldname="dc_index_info" fieldid="5899"/>
             <field fieldname="dc_index_formula" fieldid="5900"/>
+            <field fieldname="data_source" fieldid="5939"/>
+            <field fieldname="remark_info" fieldid="1146"/>
         </sequence>
     </function>
     <function functionname="funcl_dcwh_queryPdRptTemp" typename="LD_REQUEST" functionid="dcL.2.2" packettype="0">
@@ -48,8 +50,10 @@
         <field fieldname="error_prompt" fieldid="1364"/>
         <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
             <field fieldname="tpl_no" fieldid="2243"/>
+            <field fieldname="model_name" fieldid="2245"/>
             <field fieldname="query_cond" fieldid="1222"/>
             <field fieldname="dc_index_list" fieldid="5901"/>
+            <field fieldname="remark_info" fieldid="1146"/>
         </sequence>
     </function>
     <function functionname="funcl_dcwh_queryCoRptTemp" typename="LD_REQUEST" functionid="dcL.2.3" packettype="0">
@@ -73,8 +77,10 @@
         <field fieldname="error_prompt" fieldid="1364"/>
         <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
             <field fieldname="tpl_no" fieldid="2243"/>
+            <field fieldname="model_name" fieldid="2245"/>
             <field fieldname="query_cond" fieldid="1222"/>
             <field fieldname="dc_index_list" fieldid="5901"/>
+            <field fieldname="remark_info" fieldid="1146"/>
         </sequence>
     </function>
     <function functionname="funcl_dcwh_queryPdRptIndex" typename="LD_REQUEST" functionid="dcL.2.4" packettype="0">

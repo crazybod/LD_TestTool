@@ -4691,4 +4691,8 @@
     <int64 fieldname="sz_hk_stock_asset" fieldid="5936" decimalPlaces="6"/>
     <int64 fieldname="sh_Astock_asset" fieldid="5937" decimalPlaces="6"/>
     <int64 fieldname="sz_Astock_asset" fieldid="5938" decimalPlaces="6"/>
+    <int32 fieldname="data_source" fieldid="5939"/>
+    <uint32 fieldname="apply_pay_date" fieldid="5940"/>
+    <bytevector fieldname="apply_pay_date_str" fieldid="5941"/>
+    <bytevector fieldname="group_no_str" fieldid="5942"/>
 </fields>

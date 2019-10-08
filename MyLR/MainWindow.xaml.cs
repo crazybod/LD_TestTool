@@ -23,6 +23,7 @@ using System.Runtime.InteropServices;
 using MyLR.HqReplay;
 using MyLR.Utils;
 using System.Diagnostics;
+using System.IO;
 
 namespace MyLR
 {
@@ -33,6 +34,14 @@ namespace MyLR
     {
 
         #region 变量声明
+        /// <summary>
+        /// 当前批量选中的案例(全局变量)
+        /// </summary>
+        public static List<CaseScript> selectedItems = new List<CaseScript>();
+        /// <summary>
+        /// 发送行情固定间隔时间3000ms
+        /// </summary>
+        int interval = 3000;
         /// <summary>
         /// 计次
         /// </summary>
@@ -48,7 +57,7 @@ namespace MyLR
         /// <summary>
         /// 绘制轨迹曲线的容器，用于显示
         /// </summary>
-        Path pa;
+        System.Windows.Shapes.Path pa;
         /// <summary>
         /// 发送数据包的连接适配器
         /// </summary>
@@ -63,7 +72,10 @@ namespace MyLR
         /// </summary>
         EventWaitHandle waitHandle = new EventWaitHandle(false, EventResetMode.AutoReset);
         /// <summary>
-        /// 延迟时间(毫秒)
+        /// 延迟时间(毫秒);
+        /// 延迟时间的设置由 倍数、券码条数、固定间隔时间 三者共同决定
+        /// 计算公式为：延迟时间 = (固定间隔时间/券码条数)/倍数
+        /// 目前固定间隔时间为3000ms，默认倍数为1，券码条数由模板数据决定
         /// </summary>
         double delay = 0;
         /// <summary>
@@ -100,6 +112,7 @@ namespace MyLR
             mv.SetRichTextBox(this.PrintData);
         }
 
+        #region 行情回放界面按钮点击事件区域
         /// <summary>
         /// 开启
         /// </summary>
@@ -111,11 +124,20 @@ namespace MyLR
             forbidStocks = txtForbid.Text.Split('/').ToList(); //获取停止发送的券码集合
             errorStocks = txtError.Text.Split('/').ToList();   //获取发送异常数据包的券码集合 
             stockCountLimit = int.Parse(txtStockCountLimit.Text);//获取最大发送的券码条数
-            delay = Convert.ToDouble(txtDelay.Text);//获取延时毫秒数
+
+            int times = Convert.ToInt32(txtTimes.Text);//获取加速倍数
+            if (times < 1)
+            {
+                MessageBox.Show("加速倍数不能小于1", "警告", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            int stockCount = LoadStockInfo.excelData.Rows.Count;//券码总条数
+            int sends = stockCount < stockCountLimit ? stockCount : stockCountLimit; //实际应该发送多少条券码
+            //计算出实际发送每条行情数据之间的时间间隔
+            delay = (interval / sends) / times;
 
             List<SolidColorBrush> ls = new List<SolidColorBrush>() { Brushes.Red, Brushes.Green, Brushes.Gold };
 
-            pa = new Path();
+            pa = new System.Windows.Shapes.Path();
             pa.Stroke = ls[i % 3];//绘制颜色，三选一
             pa.StrokeThickness = 2;//绘制的线宽
             pf.Segments.Clear();
@@ -148,7 +170,7 @@ namespace MyLR
                     //加入Canvas在屏幕显示
                     this.cvsDraw.Children.Add(pa);
                 });
-                for (double i = 1; i < 360 * 4; i++)   //角
+                for (double i = 1; i < 360 * 99; i++)   //角
                 {
                     
                     float x2 = (float)(i * Math.PI * Zoom / 180 + center.X);
@@ -334,6 +356,7 @@ namespace MyLR
                         await SendPackage(fastMsg, "quote.realtime");
 
                         Marshal.FreeHGlobal(ptr);
+                        
                         Thread.Sleep(TimeSpan.FromMilliseconds(delay));
                     }
                     #endregion
@@ -374,7 +397,16 @@ namespace MyLR
             forbidStocks = txtForbid.Text.Split('/').ToList();//获取停止发送的券码集合
             errorStocks = txtError.Text.Split('/').ToList();   //获取发送异常数据包的券码集合 
             stockCountLimit = int.Parse(txtStockCountLimit.Text);//获取最大发送的券码条数
-            delay = Convert.ToDouble(txtDelay.Text);//获取延时毫秒数
+
+            int times = Convert.ToInt32(txtTimes.Text);//获取加速倍数
+            if (times < 1)
+            {
+                MessageBox.Show("加速倍数不能小于1","警告",MessageBoxButton.OK,MessageBoxImage.Warning);
+            }
+            int stockCount = LoadStockInfo.excelData.Rows.Count;//券码总条数
+            int sends = stockCount < stockCountLimit ? stockCount : stockCountLimit; //实际应该发送多少条券码
+            //计算出实际发送每条行情数据之间的时间间隔
+            delay = (interval / sends) / times;
             isPause = false;
             waitHandle.Set();
         }
@@ -388,5 +420,290 @@ namespace MyLR
         {
             isPause = true;
         }
+        #endregion
+
+        #region 回归测试界面按钮点击事件区域
+        /// <summary>
+        /// 批量删除案例
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnDeleteAll_Click(object sender, RoutedEventArgs e)
+        {
+            PrintHelper.Print.PrintData = this.PrintData;
+            try
+            {
+                var selectedItems = this.dgCase.SelectedItems;
+                if (MessageBox.Show("确定删除所选案例?", "提示", MessageBoxButton.OKCancel, MessageBoxImage.Question) == MessageBoxResult.OK)
+                {
+                    if (MessageBox.Show("案例一经删除无法恢复!", "警告", MessageBoxButton.OKCancel, MessageBoxImage.Warning) == MessageBoxResult.OK)
+                    {
+
+                        foreach (var item in selectedItems)
+                        {
+                            CaseScript convertItem = item as CaseScript;
+                            if (File.Exists(convertItem.FullPath))
+                            {
+                                File.Delete(convertItem.FullPath);
+                            }
+                        }
+                    }
+                }
+                var flush = mv.SelectProject;
+                PrintHelper.Print.AppendLine("批量删除案例成功");
+            }
+            catch (Exception error)
+            {
+                PrintHelper.Print.AppendLine(error.Message + "\r\n" + error.StackTrace);
+            }
+        }
+
+        /// <summary>
+        /// 一键运行
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnRunAll_Click(object sender, RoutedEventArgs e)
+        {
+            Compile cp = new Compile();
+            Task.Run(
+                () =>
+                {
+                    int i = -1;
+                    foreach (CaseScript Script in mv.CaseScripts)
+                    {
+                        i++;
+                        string result = "";//案例执行结果 成功/失败
+                        string info = CSVFileHelper.OpenScript(Script.FullPath).ToString();
+                        string[] textArry = info.Split('\n');
+                        PrintHelper.Print.PrintData = this.PrintData;
+                        PrintHelper.Print.AppendLine($"\r\n**********开始执行案例：{Script.CaseName}**********");
+                        cp.Run(textArry, ref result);
+
+                        DataGridRow row = (DataGridRow)this.dgCase.ItemContainerGenerator.ContainerFromIndex(i);
+                        if (result != "")
+                        {
+                            this.Dispatcher.Invoke(() => { row.Foreground = new SolidColorBrush(Colors.Red); });
+                            MessageBox.Show($"案例{Script.CaseName}执行失败,error:{result}", "异常");
+                            continue;
+                        }
+                        else
+                        {
+                            this.Dispatcher.Invoke(() => { row.Foreground = new SolidColorBrush(Colors.Green); });
+                        }
+                        
+                    }
+                    PrintHelper.Print.AppendLine($"\r\n所有案例脚本执行完毕！！！！！！！！！！！！");
+                }
+                );
+        }
+
+        /// <summary>
+        /// 新建案例
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CreateScript_Click(object sender, RoutedEventArgs e)
+        {
+            PrintHelper.Print.PrintData = this.PrintData;
+            try
+            {
+                if (mv.SelectProject == null)
+                {
+                    PrintHelper.Print.AppendLine("请先选中新建案例所在项目！");
+                    return;
+                }
+                //新建案例默认临时命名
+                string tempFileName = "temp" + DateTime.Now.ToString("HHmmss") + ".script";
+                //新建案例默认属于当前选择项目
+                string tempFullName = mv.SelectProject.FullPath + $@"\{tempFileName}";
+                //创建一个空文件
+                File.Create(tempFullName).Close();
+                //重新加载项目信息
+                mv.LoadScriptInfo(mv.SelectProject.FullPath);
+                //将当前案例的选中项设置为刚刚新建的空案例
+                mv.SelectScript = mv.CaseScripts.FirstOrDefault(o => o.FullPath == tempFullName);
+            }
+            catch (Exception error)
+            {
+                PrintHelper.Print.AppendLine(error.Message + "\r\n" + error.StackTrace);
+            }
+        }
+
+        /// <summary>
+        /// 保存案例脚本
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void SaveScript_Click(object sender, RoutedEventArgs e)
+        {
+            PrintHelper.Print.PrintData = this.PrintData;
+            string result = "";
+            try
+            {
+                if (mv.CaseScripts.Count == 0 || mv.SelectScript.FullPath == null)
+                {
+                    PrintHelper.Print.AppendLine("请先选中要保存的脚本！");
+                    return;
+                }
+                result = CSVFileHelper.SaveScript(mv.SelectScript.FullPath, mv.SrciptDoc.Text);
+                string caseName = mv.SelectScript.CaseName;
+                string fullPath = mv.SelectScript.FullPath;
+                //重新加载项目
+                mv.LoadScriptInfo(mv.SelectProject.FullPath);
+                //将焦点重置回去
+                mv.SelectScript = mv.CaseScripts.FirstOrDefault(o => o.FullPath == fullPath);
+                PrintHelper.Print.AppendLine(result);
+            }
+            catch (Exception error)
+            {
+                PrintHelper.Print.AppendLine(error.Message + "\r\n" + error.StackTrace);
+            }
+        }
+
+        /// <summary>
+        /// 删除案例脚本
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void DeleteScript_Click(object sender, RoutedEventArgs e)
+        {
+            PrintHelper.Print.PrintData = this.PrintData;
+            try
+            {
+                if (mv.CaseScripts.Count == 0 || mv.SelectScript.FullPath == null)
+                {
+                    PrintHelper.Print.AppendLine("请先选中要删除的脚本！");
+                    return;
+                }
+
+                this.Dispatcher.Invoke(
+                    () =>
+                    {
+                        if (MessageBox.Show("确定删除该案例？", "警告", MessageBoxButton.OKCancel,MessageBoxImage.Warning) == MessageBoxResult.OK)
+                        {
+                            if (File.Exists(mv.SelectScript.FullPath))
+                            {
+                                File.Delete(mv.SelectScript.FullPath);
+                            }
+                        }
+                    }
+                    );
+
+                //重新加载项目
+                mv.LoadScriptInfo(mv.SelectProject.FullPath);
+                PrintHelper.Print.AppendLine("案例删除成功");
+            }
+            catch (Exception error)
+            {
+                PrintHelper.Print.AppendLine(error.Message + "\r\n" + error.StackTrace);
+            }
+        }
+
+        /// <summary>
+        /// 选择项目
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void OpenProject_Click(object sender, RoutedEventArgs e)
+        {
+            PrintHelper.Print.PrintData = this.PrintData;
+            try
+            {
+                System.Windows.Forms.FolderBrowserDialog openProject = new System.Windows.Forms.FolderBrowserDialog();//定义文件夹实体
+                openProject.Description = "选择项目";//对话框标题
+                openProject.SelectedPath = Environment.CurrentDirectory;
+                openProject.ShowNewFolderButton = true;//是否显示新建文件夹
+                if (openProject.ShowDialog() == System.Windows.Forms.DialogResult.OK && !(openProject.SelectedPath == string.Empty))
+                {
+                    //获取项目文件夹信息
+                    string projectPath = openProject.SelectedPath;
+                    //获取文件夹名称
+                    string projectName = projectPath.Split('\\').Last();
+                    //限制不能重复加载同一项目
+                    if (mv.ProjectInfos.Count(i => i.FullPath == projectPath) > 0)
+                    {
+                        MessageBox.Show("项目已加载,请勿重复加载", "警告", MessageBoxButton.OK, MessageBoxImage.Warning);
+                        return;
+                    }
+                    mv.ProjectInfos.Add(new ProjectInfo(projectName, projectPath));
+                }
+            }
+            catch (Exception error)
+            {
+                PrintHelper.Print.AppendLine(error.Message + "\r\n" + error.Source);
+            }
+        }
+
+        /// <summary>
+        /// 脚本另存为
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void SaveScriptTo_Click(object sender, RoutedEventArgs e)
+        {
+            PrintHelper.Print.PrintData = this.PrintData;
+            string result = "";
+            //获取的文件保存的路径
+            string savePath = "";
+            //文件名
+            string fileName = "";
+           
+            try
+            {
+                if (mv.CaseScripts.Count == 0 || mv.SelectScript.FullPath == null)
+                {
+                    PrintHelper.Print.AppendLine("请先选中要保存的脚本！");
+                    return;
+                }
+                string selectPath = mv.SelectScript.FullPath;
+
+                Microsoft.Win32.SaveFileDialog saveDialog = new Microsoft.Win32.SaveFileDialog();//定义保存文本框实体
+                saveDialog.Title = "保存脚本文件";//对话框标题
+                saveDialog.Filter = "文件(.script)|*.script|所有文件|*.*";//文件扩展名
+                saveDialog.InitialDirectory = selectPath;//默认显示当前选中的脚本名称
+                saveDialog.FileName = mv.SelectScript.CaseName;
+                saveDialog.OverwritePrompt = false;
+
+                if (saveDialog.ShowDialog().GetValueOrDefault())
+                {
+
+                    savePath = saveDialog.FileName;
+                    fileName = saveDialog.SafeFileName;
+
+                    //如果当前选择的文件路径名称与原有的不同则将源文件删除并保存当前文件（即实现修改名称）
+                    if (savePath != selectPath)
+                    {
+                        //先将文件保存
+                        result = CSVFileHelper.SaveScript(selectPath, mv.SrciptDoc.Text);
+                        //再将文件改名
+                        File.Move(selectPath, savePath);
+                    }
+                    else
+                    {
+                        result = CSVFileHelper.SaveScript(savePath, mv.SrciptDoc.Text);
+                    }
+
+                    //重新加载项目
+                    mv.LoadScriptInfo(mv.SelectProject.FullPath);
+                    //将当前案例的选中项设置为刚刚保存的空案例
+                    mv.SelectScript = mv.CaseScripts.FirstOrDefault(o => o.FullPath == savePath);
+                }
+                else
+                {
+                    //重新加载项目
+                    mv.LoadScriptInfo(mv.SelectProject.FullPath);
+                    //将当前案例的选中项设置为刚刚保存的空案例
+                    mv.SelectScript = mv.CaseScripts.FirstOrDefault(o => o.FullPath == selectPath);
+                }
+                PrintHelper.Print.AppendLine(result);
+            }
+            catch (Exception error)
+            {
+                PrintHelper.Print.AppendLine(error.Message + "\r\n" + error.StackTrace);
+            }
+        }
+        #endregion
+
     }
 }

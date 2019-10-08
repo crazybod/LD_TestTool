@@ -1,100 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bizmsgs>
-<!--获取订单批次号-->
-	<function functionname="funcl_tdsepb_GetCoBusiRecordNo" typename="LD_REQUEST" functionid="tdsecuL.1.901" packettype="0">
-	<!--paramtype:fixed固定值，取值value;file 取值文件-->
-        <field fieldname="opor_co_no" fieldid="1194" value="9999" >
-		<!--selectrow：random文件中随机取一行 sequence按顺序依次取-->
-			<!--file filename="" columnname="" selectrow="random/sequence/" /-->
+<!--
+<paramtype:fixed固定值，取值value;file 取值文件>
+<selectrow：random文件中随机取一行 sequence按顺序依次取>
+<file filename="" columnname="" selectrow="randomquence/" />
+比如 <field fieldname="co_no" fieldid="1828" paramtype="file"> 
+		 <file filename="account.dat"  selectrow="random" />
 		</field>
-        <field fieldname="opor_no" fieldid="1192" value="99990001"/>
-        <field fieldname="opor_pwd" fieldid="1197" value="ZTI0MTA1ZDRiNmVmNjIxNWViMTA2ZmQ1YzkxMjYyNDM=" />
-        <field fieldname="oper_mac" fieldid="1181" />
-        <field fieldname="oper_ip_addr" fieldid="1180" />
-        <field fieldname="oper_info" fieldid="1190" />
-        <field fieldname="oper_way" fieldid="1184" value="1"/>
-        <field fieldname="menu_no" fieldid="1169" value=""/>
-        <field fieldname="func_code" fieldid="1674"/>
-        <field fieldname="co_no" fieldid="1828" paramtype="file">
-			<file filename="E:\\2.0测试工具代码\\MyLR\\bin\\Debug\\性能测试\\单账户交易\\account.dat"  columnname="co_no" selectrow="random" />
-		</field>
-        <field fieldname="record_no_type" fieldid="1149" value="18"/>
-    </function>
-<!--新增订单-->    
-    <function functionname="funcl_tdsetd_AddOrder" typename="LD_REQUEST" functionid="tdsecuL.4.11" packettype="0">
-        <field fieldname="opor_co_no" fieldid="1194" paramtype="file">
-			<file filename="E:\\2.0测试工具代码\\MyLR\\bin\\Debug\\性能测试\\单账户交易\\account.dat" />
+-->
+<!--逻辑_产品证券_资金_查询交易组资金-->  
+    <function functionname="prl_pdseca_QueryExgpCapital" typename="LD_REQUEST" functionid="pdsecuL.2.37" packettype="0" times="1">
+<!--         <field fieldname="opor_co_no" fieldid="1194" paramtype="file">
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" selectrow="sequence" />
 		</field>
         <field fieldname="opor_no" fieldid="1192" paramtype="file">
-			<file filename="E:\\2.0测试工具代码\\MyLR\\bin\\Debug\\性能测试\\单账户交易\\account.dat" />
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" />
 		</field>
         <field fieldname="opor_pwd" fieldid="1197" paramtype="file">
-			<file filename="E:\\2.0测试工具代码\\MyLR\\bin\\Debug\\性能测试\\单账户交易\\account.dat" />
-		</field>
-        <field fieldname="oper_mac" fieldid="1181" />
-        <field fieldname="oper_ip_addr" fieldid="1180" />
-        <field fieldname="oper_info" fieldid="1190" />
-        <field fieldname="oper_way" fieldid="1184" value="1"/>
-        <field fieldname="menu_no" fieldid="1169" value="11001000"/>
-        <field fieldname="func_code" fieldid="1674"/>
-        <field fieldname="comm_opor" fieldid="3006" value=""/>
-        <field fieldname="exch_group_no" fieldid="1962" paramtype="file">
-			<file filename="E:\\2.0测试工具代码\\MyLR\\bin\\Debug\\性能测试\\单账户交易\\account.dat" />
-		</field>
-        <field fieldname="asset_acco_no" fieldid="3051" paramtype="file">
-			<file filename="E:\\2.0测试工具代码\\MyLR\\bin\\Debug\\性能测试\\单账户交易\\account.dat" />
-		</field>
-        <field fieldname="exch_no" fieldid="2538" paramtype="file"  >
-		    <file filename="E:\\2.0测试工具代码\\MyLR\\bin\\Debug\\性能测试\\单账户交易\\stock_code.dat" />
-		</field>
-        <field fieldname="stock_code" fieldid="2929" paramtype="file"  >
-			<file filename="E:\\2.0测试工具代码\\MyLR\\bin\\Debug\\性能测试\\单账户交易\\stock_code.dat"  />
-		</field>
-        <field fieldname="external_no" fieldid="2656" />
-        <field fieldname="comm_id" fieldid="3010" />
-        <field fieldname="order_batch_no" fieldid="1457" />
-        <field fieldname="order_dir" fieldid="1449" value="1"/>
-        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2" value="200">
-        		
-		</field>
-        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"  paramtype="file" >
-			<file filename="E:\\2.0测试工具代码\\MyLR\\bin\\Debug\\性能测试\\单账户交易\\stock_code.dat"  />
-		</field>
-        <field fieldname="price_type" fieldid="1887" value="1"/>
-        <field fieldname="order_oper_way" fieldid="1443" value="11"/>
-    </function>
-<!--查询订单-->      
-    <function functionname="funcl_tdsetd_QueryOrder" typename="LD_REQUEST" functionid="tdsecuL.4.101" packettype="0" times="2">
-        <field fieldname="opor_co_no" fieldid="1194"/>
-        <field fieldname="opor_no" fieldid="1192"/>
-        <field fieldname="opor_pwd" fieldid="1197"/>
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" />
+		</field> -->
+		
+		<field fieldname="opor_co_no" fieldid="1194" value="4242"/>
+        <field fieldname="opor_no" fieldid="1192" value="42420001"/>
+        <field fieldname="opor_pwd" fieldid="1197" value="NzhmOTdhNzdmYWNiZDJlMzg1ODZiNTNmZjYyZDA4MWY="/>
         <field fieldname="oper_mac" fieldid="1181"/>
         <field fieldname="oper_ip_addr" fieldid="1180"/>
         <field fieldname="oper_info" fieldid="1190"/>
         <field fieldname="oper_way" fieldid="1184"/>
         <field fieldname="menu_no" fieldid="1169"/>
         <field fieldname="func_code" fieldid="1674"/>
-        <field fieldname="busi_opor_no" fieldid="2789"/>
-        <field fieldname="order_oper_way" fieldid="1443"/>
-        <field fieldname="co_no" fieldid="1828"/>
-        <field fieldname="pd_no" fieldid="1228"/>
-        <field fieldname="exch_group_no" fieldid="1962"/>
-        <field fieldname="pass_no" fieldid="2610"/>
-        <field fieldname="exch_no_str" fieldid="2539"/>
-        <field fieldname="stock_code_no" fieldid="2930"/>
-        <field fieldname="stock_type_str" fieldid="2939"/>
-        <field fieldname="comm_id" fieldid="3010"/>
-        <field fieldname="comm_batch_no" fieldid="2987"/>
-        <field fieldname="comm_opor" fieldid="3006"/>
-        <field fieldname="external_no" fieldid="2656"/>
-        <field fieldname="order_batch_no" fieldid="1457"/>
-        <field fieldname="order_id" fieldid="1462"/>
-        <field fieldname="order_dir_str" fieldid="1450"/>
-        <field fieldname="order_status_str" fieldid="1465"/>
-        <field fieldname="price_type_str" fieldid="1888"/>
-        <field fieldname="row_id" fieldid="1867"/>
-        <field fieldname="row_count" fieldid="2959" value="1"/>
-        <field fieldname="sort_type" fieldid="2290" value="2"/>
-        <field fieldname="combo_code" fieldid="4056"/>
-    </function>
+		
+        <field fieldname="pd_no" fieldid="1228" />
+		<field fieldname="asset_acco_no" fieldid="3051" />
+        <field fieldname="exch_group_no" fieldid="1962" />
+        <field fieldname="crncy_type_str" fieldid="1148" value=" "/>        
+        <field fieldname="row_id" fieldid="1867" value="0" />
+        <field fieldname="row_count" fieldid="2959" value="-1"/>
+    </function>	
 </bizmsgs>

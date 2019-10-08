@@ -24,6 +24,9 @@ using System.Windows.Shapes;
 using Microsoft.Win32;
 using MyLR.HqReplay;
 using System.Windows.Forms;
+using MyLR.Models;
+using System.Windows.Markup;
+using MyLR.Utils;
 
 namespace MyLR
 {
@@ -31,11 +34,23 @@ namespace MyLR
     public class MainViewModel : BindableBase
     {
         private static readonly object ReqLock = new object();
+        /// <summary>
+        /// 更新ReplyRateInfos集合时使用的锁
+        /// </summary>
+        private static readonly object lockFlag = new object();
+        /// <summary>
+        /// 对ReplyRateInfos内的元素进行递增更新时使用的锁
+        /// </summary>
+        private static readonly object addFlag = new object();
         List<ReqDTO> ReqAllList { get; set; }
         private System.Timers.Timer timer = new System.Timers.Timer();
-        private bool IsWork;
+        private static bool IsWork;
         private static int inTimer = 0;
         private List<CaseFileData> caseList = new List<CaseFileData>();
+        /// <summary>
+        /// 压力测试案例总目录路径
+        /// </summary>
+        private static string caseFilePath = "case.xml";
 
         private ObservableCollection<CaseFunction> _CaseFunctions;
         public ObservableCollection<CaseFunction> CaseFunctions
@@ -58,11 +73,33 @@ namespace MyLR
                 SetProperty(ref _StockInfos, value);
             }
         }
+
+        
+        private ObservableCollection<ReplyRateModel> _ReplyRateInfos;
+        /// <summary>
+        /// 应答频率集合
+        /// </summary>
+        public ObservableCollection<ReplyRateModel> ReplyRateInfos
+        {
+            get
+            {
+                if (_ReplyRateInfos == null)
+                {
+                    _ReplyRateInfos = new ObservableCollection<ReplyRateModel>();
+                }
+                return _ReplyRateInfos;
+            }
+            set
+            {
+                SetProperty(ref _ReplyRateInfos, value);
+            }
+        }
+
         #region 显示项目
+        private ObservableCollection<ProjectInfo> _ProjectInfos;
         /// <summary>
         /// 项目信息集合
         /// </summary>
-        private ObservableCollection<ProjectInfo> _ProjectInfos;
         public ObservableCollection<ProjectInfo> ProjectInfos
         {
             get
@@ -91,6 +128,7 @@ namespace MyLR
                 {
                     LoadScriptInfo(_SelectProject.FullPath);
                 }
+
                 return _SelectProject;
             }
             set
@@ -104,21 +142,29 @@ namespace MyLR
         /// 加载项目下的案例信息
         /// </summary>
         /// <param name="path">项目文件夹路径</param>
-        private void LoadScriptInfo(string path)
+        public void LoadScriptInfo(string path)
         {
-            //先清空原来的信息
-            CaseScripts.Clear();
-            //加载案例脚本信息
-            DirectoryInfo scriptInfos = new DirectoryInfo(path);
-            foreach (var scriptInfo in scriptInfos.GetFiles())
+            PrintHelper.Print.PrintData = printData;
+            try
             {
-                if (scriptInfo.Extension.ToLower() != ".script")
+                //先清空原来的信息
+                CaseScripts.Clear();
+                //加载案例脚本信息
+                DirectoryInfo scriptInfos = new DirectoryInfo(path);
+                foreach (var scriptInfo in scriptInfos.GetFiles())
                 {
-                    continue;
+                    if (scriptInfo.Extension.ToLower() != ".script")
+                    {
+                        continue;
+                    }
+                    string caseName = scriptInfo.Name;
+                    string caseFullPath = scriptInfo.FullName;
+                    CaseScripts.Add(new CaseScript(caseName, caseFullPath));
                 }
-                string caseName = scriptInfo.Name;
-                string caseFullPath = scriptInfo.FullName;
-                CaseScripts.Add(new CaseScript(caseName, caseFullPath));
+            }
+            catch (Exception error)
+            {
+                PrintHelper.Print.AppendLine(error.Message + "\r\n" + error.StackTrace);
             }
         }
         #endregion
@@ -145,16 +191,26 @@ namespace MyLR
         private CaseScript _SelectScript;
         public CaseScript SelectScript
         {
-            get { return _SelectScript; }
+            get
+            {
+                if (_SelectScript == null)
+                {
+                    _SelectScript = new CaseScript();
+                }
+                return _SelectScript;
+            }
             set
             {
                 SetProperty(ref this._SelectScript, value);
-                test(_SelectScript.FullPath);
+                LoadScript(_SelectScript.FullPath);
             }
 
         }
 
         private ObservableCollection<CaseScript> _CaseScripts = new ObservableCollection<CaseScript>();
+        /// <summary>
+        /// 与DataGrid绑定的案例集合
+        /// </summary>
         public ObservableCollection<CaseScript> CaseScripts
         {
             get
@@ -178,6 +234,7 @@ namespace MyLR
         }
         private Dispatcher Dispatcher{get;set;}
         public DataTable defaultTable { get; set; }
+
         public MainViewModel(Dispatcher dispatcher)
         {
             Dispatcher = dispatcher;
@@ -204,7 +261,7 @@ namespace MyLR
         /// </summary>
         public void InitStockInfo()
         {
-            StockInfos = new ObservableCollection<HqReplay.StockInfo>();
+            StockInfos = new ObservableCollection<StockInfo>();
             if (LoadStockInfo.excelData.Rows.Count > 0)
             {
                 for (int i = 0; i < LoadStockInfo.excelData.Rows.Count; i++)
@@ -237,7 +294,7 @@ namespace MyLR
             DoCaseLoad();
             IsWork = false;
             ReqAllList = new List<ReqDTO>();
-            //test();
+            //LoadScript();
         }
 
         private void Timer_Elapsed(object sender, ElapsedEventArgs e)
@@ -261,15 +318,24 @@ namespace MyLR
                 Interlocked.Exchange(ref inTimer, 0);
             }
         }
+
         System.Windows.Controls.RichTextBox printData;
+
         public void SetRichTextBox(System.Windows.Controls.RichTextBox printData)
         {
             this.printData = printData;
         }
        
-
+        /// <summary>
+        /// 接收并处理应答的函数
+        /// </summary>
+        /// <param name="connection">连接</param>
+        /// <param name="hSend">句柄</param>
+        /// <param name="lpFastMsg">应答包</param>
+        /// <param name="result">结果</param>
         private void Instance_ConnectionManagerOnReceivedEx(Connection connection, int hSend, LDFastMessageAdapter lpFastMsg, int result)
         {
+            DateTime timeStamp = DateTime.Now;
             ReqDTO req = null;
             lock (ReqLock)
             {
@@ -278,8 +344,33 @@ namespace MyLR
             }
             if (req != null && lpFastMsg !=null)
             {
+                //功能号
                 string strFunCode = lpFastMsg.GetString(LDSdkTag.LDTAG_FUNCID);
-                Console.WriteLine("Connect_OnReceivedEx  " + strFunCode);
+
+                /***********************************郑建翔新加部分，用于计算应答频率***************************************/
+                lock (lockFlag)
+                {
+                    //如果集合中不存这个功能号则添加
+                    if (ReplyRateInfos.Count(i => i.functionId == strFunCode) == 0)
+                    {
+                        DateTime startTime = DateTime.Now;
+                        this.Dispatcher.Invoke(() => ReplyRateInfos.Add(new ReplyRateModel(strFunCode, startTime)));
+                        /*****************************接收到每个功能号的第一条应答时，保存应答信息**************************/
+                        //文件保存路径
+                        string savePath = Environment.CurrentDirectory + @"\ScriptOutPut.txt";
+                        LogAnswerPackageInfo.OutPutResult(lpFastMsg, savePath);
+                    }
+                    else
+                    {
+                        //如果集合中已经存在这个功能号，开始更新并计算数据
+                        ReplyRateModel replyInfo = ReplyRateInfos.FirstOrDefault(i => i.functionId == strFunCode);
+                        replyInfo.timeStamp = timeStamp;
+                        replyInfo.replyCount++;
+                    }
+                }
+                /*******************************************修改结束*********************************************************/
+
+                //Console.WriteLine("Connect_OnReceivedEx  " + strFunCode);
                 Interlocked.Increment(ref req.CaseData.RecCount);
                 int iErrorNo=lpFastMsg.GetInt32(LDSdkTag.LDTAG_ERRORNO);
                 if (iErrorNo != 0)
@@ -315,6 +406,7 @@ namespace MyLR
             }
         }
 
+        
         /// <summary>
         /// 加载案例详细脚本信息
         /// </summary>
@@ -354,6 +446,7 @@ namespace MyLR
             }
             catch (Exception error)
             {
+                this.Dispatcher.Invoke(() => { MessageBox.Show(error.Message + "\r\n" + error.StackTrace, "络町"); });
                 return list;
             }
 
@@ -365,7 +458,7 @@ namespace MyLR
         /// <param name="filePath"></param>
         /// <param name="funList"></param>
         /// <returns></returns>
-        private  CaseFileData LoadCaseData(String filePath, List<CaseFunction> funList)
+        public  CaseFileData LoadCaseData(String filePath, List<CaseFunction> funList)
         {
             CaseFileData datas = new CaseFileData();
             try
@@ -406,13 +499,14 @@ namespace MyLR
 
                         LDsdkDefineEx.LDFastMessageAdapter fastmsg = new LDFastMessageAdapter(functionid, 0);
                         LDRecordAdapter lpRecord = fastmsg.GetBizBodyRecord();
+
                         int iIndex = 0;
                         foreach (var filedItem in filedsXml)
                         {
-                            int filedtype = lpRecord.GetFieldType(iIndex);
-
                             string fieldid = filedItem.Attribute("fieldid").Value;
                             string fieldname = filedItem.Attribute("fieldname").Value;
+                            int filedtype = lpRecord.GetFieldType(iIndex);
+
                             PARAMTYPE paramtype = PARAMTYPE.emFile;
                             string value = "";
                             if (filedItem.Attribute("value") != null)
@@ -516,6 +610,7 @@ namespace MyLR
             }
             catch (Exception error)
             {
+                this.Dispatcher.Invoke(() => { MessageBox.Show($"{error.Message} \r\n {error.StackTrace}"); });
                 return datas;
             }
         }
@@ -533,6 +628,7 @@ namespace MyLR
                 return _CaseLoad;
             }
         }
+
         private ICommand _StartRun;
         public ICommand StartRun
         {
@@ -545,6 +641,31 @@ namespace MyLR
                 return _StartRun;
             }
         }
+
+        /// <summary>
+        /// 启动压力测试
+        /// </summary>
+        public void DoStart()
+        {
+            LogHelper.Logger.Info("开始启动");
+            ExcelHelper excel = new ExcelHelper(@"defaultvalue.xlsx");
+            defaultTable = excel.ExcelToDataTable("Sheet1", true);
+            IsWork = false;
+            ReplyRateInfos.Clear();
+            caseList.Clear();
+            IsWork = true;
+            foreach (var item in CaseGroups)
+            {
+                if (item.Check == 1)
+                {
+                    Task task = Task.Factory.StartNew(() =>
+                    {
+                        Work(item);
+                    });
+                }
+            }
+        }
+
         private ICommand _StopRun;
         public ICommand StopRun
         {
@@ -566,7 +687,7 @@ namespace MyLR
         {
             //CaseScripts = new ObservableCollection<CaseScript>(XmlDataLoader.LoadData<List<CaseScript>>(@"script.xml"));
             CaseGroups.Clear();
-            List<CaseGroupBase>  baseGroups=XmlDataLoader.LoadData<List<CaseGroupBase>>(@"case.xml");
+            List<CaseGroupBase>  baseGroups=XmlDataLoader.LoadData<List<CaseGroupBase>>(caseFilePath);
             if (baseGroups != null)
             {
 
@@ -593,37 +714,18 @@ namespace MyLR
             }
 
         }
-        public void DoStart()
-        {
-            LogHelper.Logger.Info("开始启动");
-            ExcelHelper excel = new ExcelHelper(@"defaultvalue.xlsx");
-            defaultTable = excel.ExcelToDataTable("Sheet1", true);
-            IsWork = false;
-            caseList.Clear();
-            IsWork = true;
-            foreach (var item in CaseGroups)
-            {
-                if (item.Check == 1)
-                {
-                    Task task = Task.Factory.StartNew(() =>
-                    {
-                        Work(item);
-                    });
 
-                }                      
-            }
-           
-          
-        }
+        
 
         private void DoStop()
         {
             LogHelper.Logger.Info("结束启动");
             IsWork = false;
         }
+
         private void Work(CaseGroup caseGroup)
         {
-            PrintHelper.Print.PrintData = printData;
+            string result = "";
             try
             {
                 CaseFileData data = null;
@@ -637,51 +739,71 @@ namespace MyLR
                     return;
                 }
 
-                caseList.Add(data);
                 data.ID = caseGroup.ID;
                 data.UpStage = caseGroup.UpStage;
                 data.DownStage = caseGroup.DownStage;
-                do
+                caseList.Add(data);
+
+                if (caseGroup.LoopCount == 0)   //发送次数为0时，无限循环
                 {
-                    if (!IsWork)
+                    while (IsWork)
                     {
-                        break;
-                    }
-                    bool bNeedWait = (data.SendCount - data.RecCount) >= data.UpStage;
-                    if (bNeedWait)
-                    {
-                        data.ResetEvent.Reset();
-                        if (!data.ResetEvent.WaitOne(10000))
-                        {//等超时了，说明丢包了，重新置数
-                            data.RecCount = data.SendCount;
+                        bool bNeedWait = (data.SendCount - data.RecCount) >= data.UpStage;
+                        if (bNeedWait)
+                        {
+                            data.ResetEvent.Reset();
+                            if (!data.ResetEvent.WaitOne(10000))
+                            {//等超时了，说明丢包了，重新置数
+                                //data.RecCount = data.SendCount;
+                            }
+                        }
+
+                        SendFastMsgReq(data, out result);
+                        if (result == "error")
+                        {
+                            return;
                         }
                     }
-
-                    SendFastMsgReq(data);
-
+                }
+                else
+                {
                     for (int i = 1; i < caseGroup.LoopCount; i++)
                     {
                         if (!IsWork)
                         {
-                            break;
+                            return;
                         }
-                        SendFastMsgReq(data);
+                        bool bNeedWait = (data.SendCount - data.RecCount) >= data.UpStage;
+                        if (bNeedWait)
+                        {
+                            data.ResetEvent.Reset();
+                            if (!data.ResetEvent.WaitOne(10000))
+                            {//等超时了，说明丢包了，重新置数
+                                data.RecCount = data.SendCount;
+                            }
+                        }
+
+                        SendFastMsgReq(data, out result);
+                        if (result == "error")
+                        {
+                            return;
+                        }
                     }
-
-
                 }
-                while (caseGroup.LoopCount == 0);
             }
             catch (Exception error)
             {
-                PrintHelper.Print.AppendLine(error.Message);
-                PrintHelper.Print.AppendLine(error.StackTrace);
+                this.Dispatcher.Invoke(() => { MessageBox.Show($"{error.Message} \r\n {error.StackTrace}"); });
             }
         }
 
-        private void SendFastMsgReq(CaseFileData file)
+        /// <summary>
+        /// 发送压力测试的请求包
+        /// </summary>
+        /// <param name="file"></param>
+        /// <param name="result"></param>
+        private void SendFastMsgReq(CaseFileData file,out string result)
         {
-            PrintHelper.Print.PrintData = printData;
             try
             {
                 foreach (CaseFunction funitem in file.Functions)
@@ -693,19 +815,29 @@ namespace MyLR
                         nSendTimes++;
                         #region 发送包
                         LDsdkDefineEx.LDFastMessageAdapter fastmsg = new LDFastMessageAdapter(funitem.FunID, funitem.FunType);
+                        //读取储存默认值的Excel文档，给未复制的参数赋予默认值
                         foreach (var filedItem in funitem.Fileds)
                         {
                             string FiledValue = filedItem.FiledValue;
                             int filedType = filedItem.FiledType;
+                            string filedName = filedItem.FiledName;
 
                             FiledValue = GetParamValue(funitem, filedItem);
+                            //如果获取参数值失败，直接退出
+                            if (FiledValue == "error")
+                            {
+                                result = "error";
+                                return;
+                            }
                             if (string.IsNullOrEmpty(FiledValue))
                             {
-                                FiledValue = GetDefaultValue(filedItem.FiledTag, FiledValue);
+                                FiledValue = GetDefaultValue(filedItem.FiledName, FiledValue);
                             }
-                            UtilTool.SetFastMsgValue(fastmsg, filedType, FiledValue, filedItem.FiledIndex);
+                            UtilTool.SetFastMsgValueById(fastmsg, filedType, FiledValue, filedItem.FiledTag);
                         }
+                        //赋值完毕，异步发送数据包
                         uint nRet = ConnectionManager.Instance.CurConnection.Connect.AsyncSend(funitem.FunID, fastmsg, 5000);
+
                         lock (ReqLock)
                         {
                             ReqAllList.Add(new ReqDTO() { SendID = nRet, CaseData = file });
@@ -726,20 +858,20 @@ namespace MyLR
                     }
                     while (funitem.SendTimes > nSendTimes);
                 }
+                result = "OK";
             }
             catch (Exception error)
             {
-                PrintHelper.Print.AppendLine(error.Message);
-                PrintHelper.Print.AppendLine(error.StackTrace);
+                this.Dispatcher.Invoke(() => { MessageBox.Show($"{error.Message} \r\n {error.StackTrace}"); });
+                result = "error";
             }
         }
 
-       
         private String GetParamValue(CaseFunction funitem,CaseFiled filed)
         {
+            String Value = filed.FiledValue;
             try
             {
-                String Value = filed.FiledValue;
                 if (filed.ParamType == PARAMTYPE.emFile)
                 {
                     if (File.Exists(filed.FileName))
@@ -785,22 +917,45 @@ namespace MyLR
             }
             catch (Exception error)
             {
-                throw;
+                this.Dispatcher.Invoke(() => { MessageBox.Show($"{error.Message} \r\n {error.StackTrace}"); });
+                return "error";
             }
 
         }
 
-        private String GetDefaultValue(int filedTag, String FiledValue)
+        /// <summary>
+        /// 根据行列索引查找值
+        /// </summary>
+        /// <param name="filedTag"></param>
+        /// <param name="FiledValue"></param>
+        /// <returns></returns>
+        private String GetDefaultValue(int filedTag, string FiledValue)
         {
 
             int columnIndex = defaultTable.Columns["参数值"].Ordinal;
-            int rowIndex = filedTag - 1100 -1;
+            int rowIndex = filedTag - 1100 - 1;
 
             FiledValue = defaultTable.Rows[rowIndex][columnIndex].ToString().Trim(' ');
             return FiledValue;
         }
 
-      
+        /// <summary>
+        /// 根据所需的字段名和列名查找值
+        /// </summary>
+        /// <param name="fieldName">字段名</param>
+        /// <param name="FiledValue">字段值(多此一举的东西,与zjx无关)</param>
+        /// <returns></returns>
+        private string GetDefaultValue(string fieldName, string FiledValue)
+        {
+            DataRow[] dr = defaultTable.Select($"字段 = '{fieldName}'");
+            if (dr.Length > 0)
+            {
+                FiledValue = dr[0]["参数值"].ToString().Trim(' ');
+            }
+            return FiledValue;
+        }
+
+
         /// <summary>
         /// 脚本信息显示
         /// </summary>
@@ -857,10 +1012,13 @@ namespace MyLR
             PrintHelper.Print.PrintData = printData;
             Task.Run(() =>
             {
+                string result = "";
                 Compile cp = new Compile();
-               
-                cp.Run(textArry);
-
+                cp.Run(textArry,ref result);
+                if (result != "")
+                {
+                    this.Dispatcher.Invoke(() => { MessageBox.Show(result,"错误提示"); });
+                }
             });
           
         }
@@ -893,155 +1051,19 @@ namespace MyLR
         /// <summary>
         /// 加载并显示脚本信息
         /// </summary>
-        private string test(string path)
+        private string LoadScript(string path)
         {
-            SrciptDoc.FileName = path;
-            string info = CSVFileHelper.OpenScript(path).ToString();
-            SrciptDoc.Text = info;
+            string info = "";
+            if (File.Exists(path))
+            {
+                SrciptDoc.FileName = path;
+                info = CSVFileHelper.OpenScript(path).ToString();
+                SrciptDoc.Text = info;
+            }
             return info;
         }
 
-        #region 保存脚本
-        private ICommand _SaveScript;
-        public ICommand SaveScript
-        {
-            get
-            {
-                if (_SaveScript == null)
-                {
-                    _SaveScript = new DelegateCommand(SaveScriptData);
-                }
-                return _SaveScript;
-            }
-            
-        }
-        /// <summary>
-        /// 保存脚本方法
-        /// </summary>
-        public void SaveScriptData()
-        {
-            PrintHelper.Print.PrintData = printData;
-            string result = CSVFileHelper.SaveScript(SelectScript.FullPath, SrciptDoc.Text);
-            PrintHelper.Print.AppendLine(result);
-        }
-        #endregion
-
-        #region 脚本另存为
-        private ICommand _SaveScriptTo;
-        public ICommand SaveScriptTo
-        {
-            get
-            {
-                if (_SaveScriptTo == null)
-                {
-                    _SaveScriptTo = new DelegateCommand(SaveScriptDataTo);
-                }
-                return _SaveScriptTo;
-            }
-
-        }
-        /// <summary>
-        /// 脚本另存为方法
-        /// </summary>
-        public void SaveScriptDataTo()
-        {
-            PrintHelper.Print.PrintData = printData;
-            try
-            {
-                Microsoft.Win32.SaveFileDialog saveDialog = new Microsoft.Win32.SaveFileDialog();//定义保存文本框实体
-                saveDialog.Title = "脚本另存为";//对话框标题
-                saveDialog.Filter = "文件(.script)|*.script|所有文件|*.*";//文件扩展名
-                if (saveDialog.ShowDialog().GetValueOrDefault())
-                {
-                    //获取文件保存的路径
-                    string savePath = saveDialog.FileName;
-                    string result = CSVFileHelper.SaveScript(savePath, SrciptDoc.Text);
-                    LoadScriptInfo(_SelectProject.FullPath);
-                    PrintHelper.Print.AppendLine(result);
-                }
-            }
-            catch (Exception error)
-            {
-                PrintHelper.Print.AppendLine(error.Message + "\r\n" + error.StackTrace);
-            }
-        }
-        #endregion
-
-        #region 选择项目
-        private ICommand _OpenProject;
-        public ICommand OpenProject
-        {
-            get
-            {
-                if (_OpenProject == null)
-                {
-                    _OpenProject = new DelegateCommand(OpenProjectInfo);
-                }
-                return _OpenProject;
-            }
-
-        }
-        /// <summary>
-        /// 打开项目文件夹
-        /// </summary>
-        public void OpenProjectInfo()
-        {
-            PrintHelper.Print.PrintData = printData;
-            try
-            {
-                FolderBrowserDialog openProject = new FolderBrowserDialog();//定义文件夹实体
-                openProject.Description = "选择项目";//对话框标题
-                openProject.SelectedPath = Environment.CurrentDirectory;
-                openProject.ShowNewFolderButton = true;//是否显示新建文件夹
-                if (openProject .ShowDialog() == DialogResult.OK && !(openProject.SelectedPath == string.Empty))
-                {
-                    //获取项目文件夹信息
-                    string projectPath = openProject.SelectedPath;
-                    //获取文件夹名称
-                    string projectName = projectPath.Split('\\').Last();
-                    ProjectInfos.Add(new ProjectInfo(projectName, projectPath));
-                }
-            }
-            catch (Exception error)
-            {
-                PrintHelper.Print.AppendLine(error.Message + "\r\n" + error.Source);
-            }
-        }
-        #endregion
-
-        #region 一键运行
-        private ICommand _RunAll;
-        public ICommand RunAll
-        {
-            get
-            {
-                if (_RunAll == null)
-                {
-                    _RunAll = new DelegateCommand(RunAllScript);
-                }
-                return _RunAll;
-            }
-
-        }
-        /// <summary>
-        /// 运行所有已加载的案例脚本
-        /// </summary>
-        public void RunAllScript()
-        {
-            foreach (var Script in CaseScripts)
-            {
-                string info = CSVFileHelper.OpenScript(Script.FullPath).ToString();
-                string[] textArry = info.Split('\n');
-                PrintHelper.Print.PrintData = printData;
-                Task.Run(() =>
-                {
-                    Compile cp = new Compile();
-                    cp.Run(textArry);
-                });
-            }
-        }
-        #endregion
-
+        #region 重新加载压力测试案例
         private ICommand _LoadCase;
         public ICommand LoadCase
         {
@@ -1049,11 +1071,36 @@ namespace MyLR
             {
                 if (_LoadCase == null)
                 {
-                    _LoadCase = new DelegateCommand(DoCaseLoad);
+                    _LoadCase = new DelegateCommand(GetAndOpenCase);
                 }
                 return _LoadCase;
             }
-
         }
+
+        private void GetAndOpenCase()
+        {
+            try
+            {
+                if (_LoadCase != null)
+                {
+                    System.Windows.Forms.OpenFileDialog ofd = new System.Windows.Forms.OpenFileDialog();
+                    ofd.Filter = "(*.xml)|*.xml";
+                    ofd.InitialDirectory = Environment.CurrentDirectory;
+                    ofd.Multiselect = false;
+                    if (ofd.ShowDialog() == DialogResult.OK)
+                    {
+                        caseFilePath = ofd.FileName;
+                        ReplyRateInfos.Clear();
+                    }
+                }
+                DoCaseLoad();
+            }
+            catch (Exception error)
+            {
+                this.Dispatcher.Invoke(() => { MessageBox.Show($"{error.Message} \r\n {error.StackTrace}"); });
+            }
+        }
+        #endregion
+
     }
 }
