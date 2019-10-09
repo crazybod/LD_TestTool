@@ -950,6 +950,7 @@
             <field fieldname="pd_no_str" fieldid="1230"/>
             <field fieldname="exch_group_no_str" fieldid="1963"/>
             <field fieldname="union_flag" fieldid="3881"/>
+            <field fieldname="group_no_str" fieldid="5942"/>
         </sequence>
     </function>
     <function functionname="funcl_rkserk_UpdateClientRiskRuleFlag" typename="LD_REQUEST" functionid="rksecuL.4.31" packettype="0">

@@ -34,30 +34,45 @@ namespace MyLR
     {
 
         #region 变量声明
+        CancellationTokenSource tokenSource = new CancellationTokenSource();
+        /// <summary>
+        /// 用于控制是否取消线程
+        /// </summary>
+        CancellationToken token = new CancellationToken();
+        /// <summary>
+        /// 涨跌幅比例
+        /// </summary>
+        double limitPercent = 10.00;
         /// <summary>
         /// 当前批量选中的案例(全局变量)
         /// </summary>
         public static List<CaseScript> selectedItems = new List<CaseScript>();
+
         /// <summary>
         /// 发送行情固定间隔时间3000ms
         /// </summary>
         int interval = 3000;
+
         /// <summary>
         /// 计次
         /// </summary>
         int i = 0;
+
         /// <summary>
         /// 运动轨迹线段绘制
         /// </summary>
         PathFigure pf = new PathFigure();
+
         /// <summary>
         /// 组合绘制的线段
         /// </summary>
         PathGeometry pg = new PathGeometry();
+
         /// <summary>
         /// 绘制轨迹曲线的容器，用于显示
         /// </summary>
         System.Windows.Shapes.Path pa;
+
         /// <summary>
         /// 发送数据包的连接适配器
         /// </summary>
@@ -67,10 +82,12 @@ namespace MyLR
         /// 是否暂停状态
         /// </summary>
         bool isPause = false;
+
         /// <summary>
         /// 阻塞线程句柄
         /// </summary>
         EventWaitHandle waitHandle = new EventWaitHandle(false, EventResetMode.AutoReset);
+
         /// <summary>
         /// 延迟时间(毫秒);
         /// 延迟时间的设置由 倍数、券码条数、固定间隔时间 三者共同决定
@@ -78,14 +95,17 @@ namespace MyLR
         /// 目前固定间隔时间为3000ms，默认倍数为1，券码条数由模板数据决定
         /// </summary>
         double delay = 0;
+
         /// <summary>
         /// 券码条数限制
         /// </summary>
         int stockCountLimit = 0;
+
         /// <summary>
         /// 停止发送的券码集合
         /// </summary>
         List<string> forbidStocks = new List<string>();
+
         /// <summary>
         /// 发送异常数据包的券码
         /// </summary>
@@ -124,6 +144,7 @@ namespace MyLR
             forbidStocks = txtForbid.Text.Split('/').ToList(); //获取停止发送的券码集合
             errorStocks = txtError.Text.Split('/').ToList();   //获取发送异常数据包的券码集合 
             stockCountLimit = int.Parse(txtStockCountLimit.Text);//获取最大发送的券码条数
+            limitPercent = double.Parse(txtUpDownLimit.Text);//获取涨跌幅比例
 
             int times = Convert.ToInt32(txtTimes.Text);//获取加速倍数
             if (times < 1)
@@ -141,6 +162,9 @@ namespace MyLR
             pa.Stroke = ls[i % 3];//绘制颜色，三选一
             pa.StrokeThickness = 2;//绘制的线宽
             pf.Segments.Clear();
+
+            tokenSource = new CancellationTokenSource();
+            token = tokenSource.Token;
             Task.Run(() => { DrawSin(); });
             btnStart.IsEnabled = false;
         }
@@ -172,18 +196,21 @@ namespace MyLR
                 });
                 for (double i = 1; i < 360 * 99; i++)   //角
                 {
-                    
+                    if (isPause)//是否暂停
+                    {
+                        waitHandle.WaitOne();
+                    }
+                    if (token.IsCancellationRequested)//是否重置(取消当前线程)
+                    {
+                        return;
+                    }
+
                     float x2 = (float)(i * Math.PI * Zoom / 180 + center.X);
                     float y2 = (float)(Math.Sin(i * Math.PI / 180) * (-1) * 11 * Zoom + center.Y);
                     
                     this.Dispatcher.Invoke(() => {
                         pf.Segments.Add(new LineSegment(new Point(x2, y2), true));
                     });
-
-                    if (isPause)
-                    {
-                        waitHandle.WaitOne();
-                    }
 
                     #region 针对每个券码发送一个生成并发送一个数据包
                     int rows = LoadStockInfo.excelData.Rows.Count;//券码总条数
@@ -199,32 +226,37 @@ namespace MyLR
                             continue;
                         }
                         char[] stockNos = stockNo.ToCharArray();
+
                         //市场
                         int exchNo = Convert.ToInt32(LoadStockInfo.excelData.Rows[j]["exch_no"]);
+                        //证券类型
+                        int stockType = Convert.ToInt32(LoadStockInfo.excelData.Rows[j]["stock_type"]);
 
-                        //对5位数的券码进行数据处理
                         if (stockNos.Length < 5 || stockNos.Length > 6)
                         {
                             continue;
                         }
+                        //对5位数的券码进行数据处理
                         if (stockNos.Length < 6)
                         {
                             var tempStocks = stockNos.ToList();
                             tempStocks.Add('\0');
                             stockNos = tempStocks.ToArray();
                         }
+
+                        //昨收价格作为初始价格
+                        double preClosePrice = Convert.ToDouble(LoadStockInfo.excelData.Rows[j]["pre_close_price"]);
                         //涨停价
-                        double upPrice = Convert.ToDouble(LoadStockInfo.excelData.Rows[j]["down_limit_price"]);
+                        double upPrice = preClosePrice * (1 + limitPercent/100.00);
                         //跌停价
-                        double downPrice = Convert.ToDouble(LoadStockInfo.excelData.Rows[j]["up_limit_price"]);
-                        //初始价格
-                        double price0 = (upPrice + downPrice) / 2.00;
+                        double downPrice = preClosePrice * (1 - limitPercent / 100.00);
+
                         //递增/递减价格
-                        double price1 = (upPrice - price0) * Math.Sin(i * Math.PI / 180) * (-1) + price0;
-                        double price2 = (upPrice - price0) * Math.Sin((i + 1) * Math.PI / 180) * (-1) + price0;
-                        double price3 = (upPrice - price0) * Math.Sin((i + 2) * Math.PI / 180) * (-1) + price0;
-                        double price4 = (upPrice - price0) * Math.Sin((i + 3) * Math.PI / 180) * (-1) + price0;
-                        double price5 = (upPrice - price0) * Math.Sin((i + 4) * Math.PI / 180) * (-1) + price0;
+                        double price1 = CaculatePrecision((upPrice - preClosePrice) * Math.Sin(i * Math.PI / 180) * (-1) + preClosePrice, exchNo, stockType);
+                        double price2 = CaculatePrecision((upPrice - preClosePrice) * Math.Sin((i + 1) * Math.PI / 180) * (-1) + preClosePrice,exchNo,stockType);
+                        double price3 = CaculatePrecision((upPrice - preClosePrice) * Math.Sin((i + 2) * Math.PI / 180) * (-1) + preClosePrice, exchNo, stockType);
+                        double price4 = CaculatePrecision((upPrice - preClosePrice) * Math.Sin((i + 3) * Math.PI / 180) * (-1) + preClosePrice, exchNo, stockType);
+                        double price5 = CaculatePrecision((upPrice - preClosePrice) * Math.Sin((i + 4) * Math.PI / 180) * (-1) + preClosePrice, exchNo, stockType);
 
                         InitFastMsg.InitMsg("pubL.16.5", ref fastMsg);
 
@@ -252,8 +284,8 @@ namespace MyLR
                             wrongStockFiled.UpPrice = (int)(downPrice * tmpValue);
                             wrongStockFiled.DownPrice = (int)(upPrice * tmpValue);
                             wrongStockFiled.FiveDayVol = 0;
-                            wrongStockFiled.OpenPrice = (int)(price0 * tmpValue);
-                            wrongStockFiled.PrevClose = (int)(price0 * tmpValue); ;
+                            wrongStockFiled.OpenPrice = (int)(preClosePrice * tmpValue);
+                            wrongStockFiled.PrevClose = (int)(preClosePrice * tmpValue); ;
 
                             wrongStockFiled.BuyPrice1 = (int)(price1 * tmpValue);    //买一价
                             wrongStockFiled.BuyPrice2 = (int)(price2 * tmpValue);    //买二价
@@ -306,8 +338,8 @@ namespace MyLR
                             stockFiled.UpPrice = (int)(downPrice * tmpValue);
                             stockFiled.DownPrice = (int)(upPrice * tmpValue);
                             stockFiled.FiveDayVol = 0;
-                            stockFiled.OpenPrice = (int)(price0 * tmpValue);
-                            stockFiled.PrevClose = (int)(price0 * tmpValue); ;
+                            stockFiled.OpenPrice = (int)(preClosePrice * tmpValue);
+                            stockFiled.PrevClose = (int)(preClosePrice * tmpValue); ;
 
                             stockFiled.BuyPrice1 = (int)(price1 * tmpValue);    //买一价
                             stockFiled.BuyPrice2 = (int)(price2 * tmpValue);    //买二价
@@ -369,7 +401,83 @@ namespace MyLR
                 MessageBox.Show(error.Message + "\r\n" + error.StackTrace);
             }
         }
-        
+
+        /// <summary>
+        /// 该函数用于计算价格精度
+        /// </summary>
+        /// <param name="price">未确认精度的价格</param>
+        /// <param name="exchNo">市场编号</param>
+        /// <param name="stockType">证券类型</param>
+        /// <returns></returns>
+        private double CaculatePrecision(double price,int exchNo,int stockType)
+        {
+            if ((exchNo == 1 || exchNo == 2) && (stockType >= 1 && stockType <= 8))
+            {
+                price = Convert.ToInt32(price / 0.01) * 0.01;
+            }
+            else if ((exchNo == 1) && (stockType >= 21 && stockType <= 45))
+            {
+                price = Convert.ToInt32(price / 0.005) * 0.005;
+            }
+            else if ((exchNo == 2) && (stockType >= 21 && stockType <= 45))
+            {
+                price = Convert.ToInt32(price / 0.001) * 0.001;
+            }
+            else if (stockType >= 51 && stockType <= 64)
+            {
+                price = Convert.ToInt32(price / 0.001) * 0.001;
+            }
+            else if ((exchNo == 3 || exchNo == 4) && (stockType == 1))
+            {
+                //港股根据价格所在区间确定最小差价
+                if (price >= 0.01 && price < 0.25)
+                {
+                    price = Convert.ToInt32(price / 0.001) * 0.001;
+                }
+                else if (price >= 0.25 && price < 0.5)
+                {
+                    price = Convert.ToInt32(price / 0.005) * 0.005;
+                }
+                else if (price >= 0.5 && price < 10)
+                {
+                    price = Convert.ToInt32(price / 0.01) * 0.01;
+                }
+                else if (price >= 10 && price < 20)
+                {
+                    price = Convert.ToInt32(price / 0.02) * 0.02;
+                }
+                else if (price >= 20 && price < 100)
+                {
+                    price = Convert.ToInt32(price / 0.05) * 0.05;
+                }
+                else if (price >= 100 && price < 200)
+                {
+                    price = Convert.ToInt32(price / 0.1) * 0.1;
+                }
+                else if (price >= 200 && price < 500)
+                {
+                    price = Convert.ToInt32(price / 0.2) * 0.2;
+                }
+                else if (price >= 500 && price < 1000)
+                {
+                    price = Convert.ToInt32(price / 0.5) * 0.5;
+                }
+                else if (price >= 1000 && price < 2000)
+                {
+                    price = Convert.ToInt32(price / 1) * 1;
+                }
+                else if (price >= 2000 && price < 5000)
+                {
+                    price = Convert.ToInt32(price / 2) * 2;
+                }
+                else if (price >= 5000 && price <= 9995)
+                {
+                    price = Convert.ToInt32(price / 5) * 5;
+                }
+            }
+            return price;
+        }
+
         /// <summary>
         /// 发送广播数据包的方法
         /// </summary>
@@ -397,6 +505,7 @@ namespace MyLR
             forbidStocks = txtForbid.Text.Split('/').ToList();//获取停止发送的券码集合
             errorStocks = txtError.Text.Split('/').ToList();   //获取发送异常数据包的券码集合 
             stockCountLimit = int.Parse(txtStockCountLimit.Text);//获取最大发送的券码条数
+            limitPercent = double.Parse(txtUpDownLimit.Text);//获取涨跌幅比例
 
             int times = Convert.ToInt32(txtTimes.Text);//获取加速倍数
             if (times < 1)
@@ -419,6 +528,18 @@ namespace MyLR
         private void btnPause_Click(object sender, RoutedEventArgs e)
         {
             isPause = true;
+        }
+
+        /// <summary>
+        /// 重置
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnReset_Click(object sender, RoutedEventArgs e)
+        {
+            tokenSource.Cancel();
+            pf.Segments.Clear();
+            btnStart.IsEnabled = true;
         }
         #endregion
 
@@ -705,5 +826,6 @@ namespace MyLR
         }
         #endregion
 
+        
     }
 }

@@ -208,6 +208,7 @@ namespace MyLR
                     string answerFieldName = GetAnswerFieldName(printAry[i],out fun);
                     if (fun == null)
                     {
+                        //如果是SQL返回结果集，用如下方法打印
                         if (_dataTableCollection.TryGetValue(printAry[i].Split('.')[0].Trim(),out dt))
                         {
                             printBu.Append(dt.Rows[0][printAry[i].Split('.')[1].Trim()].ToString());

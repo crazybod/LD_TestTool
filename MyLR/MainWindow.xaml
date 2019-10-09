@@ -231,22 +231,25 @@
                               CanUserAddRows="False"
                               CanUserDeleteRows="False">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="类型" Width="80" Binding="{Binding StockType}" IsReadOnly="True"></DataGridTextColumn>
+                        <DataGridTextColumn Header="市场" Width="80" Binding="{Binding StockType}" IsReadOnly="True"></DataGridTextColumn>
                         <DataGridTextColumn Header="券码" Width="90" Binding="{Binding StockNo}" IsReadOnly="True"></DataGridTextColumn>
                     </DataGrid.Columns>
                 </DataGrid>
-                <Button x:Name="btnStart" Content="开始" Click="btnStart_Click" Grid.Column="5" HorizontalAlignment="Left" Margin="317,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="70" Height="25"/>
-                <Button x:Name="btnRun" Content="运行" Grid.Column="5" HorizontalAlignment="Left" Margin="397,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="70" Height="25" Click="btnRun_Click"/>
-                <Button x:Name="btnPause" Content="暂停" Grid.Column="5" HorizontalAlignment="Left" Margin="476,10,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="75" Height="25" Click="btnPause_Click"/>
+                <Button x:Name="btnStart" Content="开始" Click="btnStart_Click" Grid.Column="5" HorizontalAlignment="Left" Margin="317,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="42" Height="25"/>
+                <Button x:Name="btnRun" Content="运行" Grid.Column="5" HorizontalAlignment="Left" Margin="369,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="40" Height="25" Click="btnRun_Click"/>
+                <Button x:Name="btnPause" Content="暂停" Grid.Column="5" HorizontalAlignment="Left" Margin="419,10,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="38" Height="25" Click="btnPause_Click"/>
+                <Button x:Name="btnReset" Content="重置" Grid.Column="5" HorizontalAlignment="Left" Margin="467,10,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="38" Height="25" Click="btnReset_Click"/>
                 <Canvas x:Name="cvsDraw" Grid.Column="5" HorizontalAlignment="Left" Height="348" Margin="10,120,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="548"/>
-                <TextBox x:Name="txtTimes" Grid.Column="5" HorizontalAlignment="Left" Height="23" Text="1" Margin="59,10,0,0" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" RenderTransformOrigin="-0.42,-1.93"/>
+                <TextBox x:Name="txtTimes" Grid.Column="5" HorizontalAlignment="Left" Height="23" Text="1" Margin="59,10,0,0" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
                 <Label x:Name="label" Content="加速倍数" Grid.Column="5" HorizontalAlignment="Left" Margin="2,11,0,0" Grid.RowSpan="2" VerticalAlignment="Top"/>
                 <Label x:Name="label1" Content="券码条数" Grid.Column="5" HorizontalAlignment="Left" Margin="148,9,0,0" Grid.RowSpan="2" VerticalAlignment="Top"/>
                 <TextBox x:Name="txtStockCountLimit" Grid.Column="5" HorizontalAlignment="Left" Height="23" Margin="211,10,0,0" Text="100" TextWrapping="Wrap" VerticalAlignment="Top" Width="69" Grid.RowSpan="2"/>
-                <TextBox x:Name="txtForbid" Grid.Column="5" HorizontalAlignment="Left" Height="23" Margin="10,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="219" Grid.RowSpan="2" RenderTransformOrigin="0.616,-0.017"/>
+                <TextBox x:Name="txtForbid" Grid.Column="5" HorizontalAlignment="Left" Height="23" Margin="10,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="219" Grid.RowSpan="2"/>
                 <Label x:Name="label2" Content="停止发送以下券码行情(券码之间以'/'隔开)" Grid.Column="5" HorizontalAlignment="Left" Margin="5,40,0,0" Grid.Row="1" VerticalAlignment="Top" Width="239"/>
-                <TextBox x:Name="txtError" Grid.Column="5" HorizontalAlignment="Left" Height="23" Margin="292,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Grid.RowSpan="2" RenderTransformOrigin="0.616,-0.017"/>
-                <Label x:Name="label2_Copy" Content="异常行情券码(券码之间以'/'隔开)" Grid.Column="5" HorizontalAlignment="Left" Margin="288,40,0,0" Grid.Row="1" VerticalAlignment="Top" Width="189"/>
+                <TextBox x:Name="txtError" Grid.Column="5" HorizontalAlignment="Left" Height="23" Margin="258,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Grid.RowSpan="2" RenderTransformOrigin="0.616,-0.017"/>
+                <Label x:Name="label2_Copy" Content="异常行情券码(券码之间以'/'隔开)" Grid.Column="5" HorizontalAlignment="Left" Margin="254,40,0,0" Grid.Row="1" VerticalAlignment="Top" Width="189"/>
+                <TextBox x:Name="txtUpDownLimit" Text="10" Grid.Column="5" HorizontalAlignment="Left" Height="23" Margin="459,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="71" Grid.RowSpan="2" RenderTransformOrigin="0.616,-0.017"/>
+                <Label x:Name="lable4" Content="涨跌幅比例" Grid.Column="5" HorizontalAlignment="Left" Margin="459,40,0,0" Grid.Row="1" VerticalAlignment="Top" Width="71" RenderTransformOrigin="2.482,-0.797"/>
 
 
 

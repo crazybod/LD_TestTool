@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bizmsgs>
-<!--
-<paramtype:fixed固定值，取值value;file 取值文件>
-<selectrow：random文件中随机取一行 sequence按顺序依次取>
-<file filename="" columnname="" selectrow="random/sequence/" />
-比如 <field fieldname="co_no" fieldid="1828" paramtype="file"> 
-		 <file filename="account.dat"  selectrow="random" />
-		</field>
--->
 <!--逻辑_产品_账户_获取注销资产账户串-->  
     <function functionname="prl_pdacco_GetCancelAssetAccoStr" typename="LD_REQUEST" functionid="prodL.1.104" packettype="0" times="1">
         <field fieldname="opor_co_no" fieldid="1194" paramtype="file">
@@ -146,5 +138,4 @@
 		<field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"  />     
         <field fieldname="strike_amt" fieldid="1305"   />
     </function>
-
 </bizmsgs>

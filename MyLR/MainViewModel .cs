@@ -272,16 +272,16 @@ namespace MyLR
                     switch (exchangeNo)
                     {
                         case "1":
-                            stockType = "上海证券";
+                            stockType = "上海";
                             break;
                         case "2":
-                            stockType = "深圳证券";
+                            stockType = "深圳";
                             break;
                         case "3":
-                            stockType = "沪深证券";
+                            stockType = "沪港通";
                             break;
                         case "4":
-                            stockType = "港深证券";
+                            stockType = "深港通";
                             break;
                     }
                     StockInfos.Add(new StockInfo(stockType, stockNo));

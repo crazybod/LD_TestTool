@@ -28,7 +28,6 @@ namespace MyLR.HqReplay
                     using (ExcelHelper excelHelper = new ExcelHelper(path))
                     {
                         excelData = excelHelper.ExcelToDataTable("证券模板数据", true);
-                        
                     }
                     result = true;
                 }
