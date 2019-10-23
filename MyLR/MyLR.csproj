@@ -116,7 +116,9 @@
     <Compile Include="HqReplay\LoadStockInfo.cs" />
     <Compile Include="HqReplay\StockInfo.cs" />
     <Compile Include="HqReplay\WrongStockLevelRealTimeData.cs" />
+    <Compile Include="Models\MaxMinPriceModel.cs" />
     <Compile Include="Models\ReplyRateModel.cs" />
+    <Compile Include="Models\RespDataPackageModel.cs" />
     <Compile Include="Utils\ConnectionManager.cs" />
     <Compile Include="Utils\CSVFileHelper.cs" />
     <Compile Include="Utils\DBHelper.cs" />
@@ -163,6 +165,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

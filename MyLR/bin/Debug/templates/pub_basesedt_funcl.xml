@@ -959,7 +959,6 @@
             <field fieldname="trade_code_no" fieldid="1918"/>
             <field fieldname="target_code_no" fieldid="1161"/>
             <field fieldname="apply_date" fieldid="2509"/>
-            <field fieldname="apply_pay_date" fieldid="5940"/>
             <field fieldname="apply_limit" fieldid="2510" decimalPlaces="2"/>
             <field fieldname="begin_trade_date" fieldid="2498"/>
             <field fieldname="issue_price" fieldid="1504" decimalPlaces="9"/>
@@ -993,7 +992,6 @@
             <field fieldname="trade_code_no" fieldid="1918"/>
             <field fieldname="target_code_no" fieldid="1161"/>
             <field fieldname="apply_date" fieldid="2509"/>
-            <field fieldname="apply_pay_date" fieldid="5940"/>
             <field fieldname="apply_limit" fieldid="2510" decimalPlaces="2"/>
             <field fieldname="begin_trade_date" fieldid="2498"/>
             <field fieldname="issue_price" fieldid="1504" decimalPlaces="9"/>
@@ -2650,7 +2648,6 @@
             <field fieldname="trade_code_no" fieldid="1918"/>
             <field fieldname="target_code_no" fieldid="1161"/>
             <field fieldname="apply_date" fieldid="2509"/>
-            <field fieldname="apply_pay_date" fieldid="5940"/>
             <field fieldname="apply_limit" fieldid="2510" decimalPlaces="2"/>
             <field fieldname="begin_trade_date" fieldid="2498"/>
             <field fieldname="issue_price" fieldid="1504" decimalPlaces="9"/>

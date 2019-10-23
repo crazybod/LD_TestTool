@@ -17,7 +17,6 @@
         <field fieldname="risk_item_id" fieldid="1630"/>
         <field fieldname="templ_flag" fieldid="3702"/>
         <field fieldname="union_flag" fieldid="3881"/>
-        <field fieldname="group_no_str" fieldid="5942"/>
     </function>
     <function functionname="funcl_rkserk_AddSecuClientRiskRule" typename="LD_ANSWER" functionid="rksecuL.4.1" packettype="1">
         <field fieldname="error_code" fieldid="1359"/>
@@ -135,7 +134,6 @@
             <field fieldname="end_time" fieldid="1987"/>
             <field fieldname="rule_flag" fieldid="2352"/>
             <field fieldname="union_flag" fieldid="3881"/>
-            <field fieldname="group_no_str" fieldid="5942"/>
         </sequence>
     </function>
     <function functionname="funcl_rkserk_HoldingRiskComplianceJudge" typename="LD_REQUEST" functionid="rksecuL.4.4" packettype="0">
@@ -950,7 +948,6 @@
             <field fieldname="pd_no_str" fieldid="1230"/>
             <field fieldname="exch_group_no_str" fieldid="1963"/>
             <field fieldname="union_flag" fieldid="3881"/>
-            <field fieldname="group_no_str" fieldid="5942"/>
         </sequence>
     </function>
     <function functionname="funcl_rkserk_UpdateClientRiskRuleFlag" typename="LD_REQUEST" functionid="rksecuL.4.31" packettype="0">

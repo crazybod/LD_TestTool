@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bizmsgs>
 <!--逻辑_产品_账户_获取注销资产账户串-->  
-    <function functionname="prl_pdacco_GetCancelAssetAccoStr" typename="LD_REQUEST" functionid="prodL.1.104" packettype="0" times="1">
+    <function functionname="prl_pdacco_GetCancelAssetAccoStr" typename="LD_REQUEST" functionid="prodL.1.104" packettype="0" times="5">
         <field fieldname="opor_co_no" fieldid="1194" paramtype="file">
         <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" selectrow="sequence" columnname="test_no"/>
 		</field>
@@ -79,7 +79,7 @@
     </function>
 	
 <!--逻辑_交易证券_交易_查询订单-->  
-    <function functionname="funcl_tdsetd_QueryOrder" typename="LD_REQUEST" functionid="tdsecuL.4.101" packettype="0" times="1">
+    <function functionname="funcl_tdsetd_QueryOrder" typename="LD_REQUEST" functionid="tdsecuL.4.101" packettype="0" times="2">
         <field fieldname="opor_co_no" fieldid="1194" paramtype="file">
         <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" selectrow="random" />
 		</field>

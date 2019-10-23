@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizmsgs>
+    <function functionname="funcl_tdsetd_AddOrder" typename="LD_REQUEST" functionid="tdsecuL.4.11" packettype="0">
+	<!--paramtype:fixed固定值，取值value;file 取值文件-->
+        <field fieldname="opor_co_no" fieldid="1194" >
+		<!--selectrow：random文件中随机取一行 sequence按顺序依次取 samme_line[@列#] 取某一列的同一行-->
+			<!--file filename="" columnname="" selectrow="random/sequence/same_line[]" /-->
+		</field>
+        <field fieldname="opor_no" fieldid="1192" value=""/>
+        <field fieldname="opor_pwd" fieldid="1197" />
+        <field fieldname="oper_mac" fieldid="1181" />
+        <field fieldname="oper_ip_addr" fieldid="1180" />
+        <field fieldname="oper_info" fieldid="1190" />
+        <field fieldname="oper_way" fieldid="1184" value="1"/>
+        <field fieldname="menu_no" fieldid="1169" value="11001000"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="comm_opor" fieldid="3006" value="58880002"/>
+        <field fieldname="exch_group_no" fieldid="1962" paramtype="file">
+			<file filename="account.dat" columnname="exch_group_no" selectrow="random" />
+		</field>
+        <field fieldname="asset_acco_no" fieldid="3051" paramtype="file">
+			<file filename="account.dat" columnname="asset_acco_no" selectrow="same_line[exch_group_no]" />
+		</field>
+        <field fieldname="exch_no" fieldid="2538" paramtype="file"  >
+		    <file filename="stock_code.dat" columnname="exch_no" selectrow="random" />
+		</field>
+        <field fieldname="stock_code" fieldid="2929" paramtype="file"  >
+			<file filename="stock_code.dat" columnname="stock_code" selectrow="same_line[exch_no]" />
+		</field>
+        <field fieldname="external_no" fieldid="2656" />
+        <field fieldname="comm_id" fieldid="3010" />
+        <field fieldname="order_batch_no" fieldid="1457" />
+        <field fieldname="order_dir" fieldid="1449" value="1"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2" value="200">
+			
+		</field>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"  paramtype="file"  value="46.61">
+			<file filename="stock_code.dat" columnname="last_price" selectrow="same_line[exch_no]" />
+		</field>
+        <field fieldname="price_type" fieldid="1887" value="1"/>
+        <field fieldname="order_oper_way" fieldid="1443" value="11"/>
+    </function>
+    <function functionname="funcl_tdsetd_QueryOrder" typename="LD_REQUEST" functionid="tdsecuL.4.101" packettype="0" times="2">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="busi_opor_no" fieldid="2789"/>
+        <field fieldname="order_oper_way" fieldid="1443"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_type_str" fieldid="2939"/>
+        <field fieldname="comm_id" fieldid="3010"/>
+        <field fieldname="comm_batch_no" fieldid="2987"/>
+        <field fieldname="comm_opor" fieldid="3006"/>
+        <field fieldname="external_no" fieldid="2656"/>
+        <field fieldname="order_batch_no" fieldid="1457"/>
+        <field fieldname="order_id" fieldid="1462"/>
+        <field fieldname="order_dir_str" fieldid="1450"/>
+        <field fieldname="order_status_str" fieldid="1465"/>
+        <field fieldname="price_type_str" fieldid="1888"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959" value="1"/>
+        <field fieldname="sort_type" fieldid="2290" value="2"/>
+        <field fieldname="combo_code" fieldid="4056"/>
+    </function>
+</bizmsgs>

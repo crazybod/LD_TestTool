@@ -242,6 +242,7 @@ namespace MyLR
             ConnectionManager.Instance.ConnectionManagerOnReceivedEx += Instance_ConnectionManagerOnReceivedEx;
             InitCase();
             InitStockInfo();
+            DealRespPackage();
             #region 定时器
             timer.AutoReset = true;
             timer.Interval = 400;
@@ -335,78 +336,109 @@ namespace MyLR
         /// <param name="result">结果</param>
         private void Instance_ConnectionManagerOnReceivedEx(Connection connection, int hSend, LDFastMessageAdapter lpFastMsg, int result)
         {
-            DateTime timeStamp = DateTime.Now;
-            ReqDTO req = null;
-            lock (ReqLock)
-            {
-                req = ReqAllList.FirstOrDefault(o => o.SendID == hSend);
-                ReqAllList.Remove(req);
-            }
-            if (req != null && lpFastMsg !=null)
-            {
-                //功能号
-                string strFunCode = lpFastMsg.GetString(LDSdkTag.LDTAG_FUNCID);
-
-                /***********************************郑建翔新加部分，用于计算应答频率***************************************/
-                lock (lockFlag)
-                {
-                    //如果集合中不存这个功能号则添加
-                    if (ReplyRateInfos.Count(i => i.functionId == strFunCode) == 0)
-                    {
-                        DateTime startTime = DateTime.Now;
-                        this.Dispatcher.Invoke(() => ReplyRateInfos.Add(new ReplyRateModel(strFunCode, startTime)));
-                        /*****************************接收到每个功能号的第一条应答时，保存应答信息**************************/
-                        //文件保存路径
-                        string savePath = Environment.CurrentDirectory + @"\ScriptOutPut.txt";
-                        LogAnswerPackageInfo.OutPutResult(lpFastMsg, savePath);
-                    }
-                    else
-                    {
-                        //如果集合中已经存在这个功能号，开始更新并计算数据
-                        ReplyRateModel replyInfo = ReplyRateInfos.FirstOrDefault(i => i.functionId == strFunCode);
-                        replyInfo.timeStamp = timeStamp;
-                        replyInfo.replyCount++;
-                    }
-                }
-                /*******************************************修改结束*********************************************************/
-
-                //Console.WriteLine("Connect_OnReceivedEx  " + strFunCode);
-                Interlocked.Increment(ref req.CaseData.RecCount);
-                int iErrorNo=lpFastMsg.GetInt32(LDSdkTag.LDTAG_ERRORNO);
-                if (iErrorNo != 0)
-                {
-                    Interlocked.Increment(ref req.CaseData.RecFailCount);
-                }
-                else
-                {
-                    string strErrorCode = lpFastMsg.GetString(LDBizTag.LDBIZ_ERROR_CODE_STR);
-                   
-                    if (!"0".Equals(strErrorCode))
-                    {
-                        Interlocked.Increment(ref req.CaseData.RecFailCount);
-                        string strErrorInfo = lpFastMsg.GetString(LDBizTag.LDBIZ_ERROR_INFO_STR);
-                        string strErrorPrompt = lpFastMsg.GetString(LDBizTag.LDBIZ_ERROR_PROMPT_STR);
-                        string logInfo = string.Format("功能号[{0}]，errorCode[{1}]，errorinfo[{2}],errorprompt[{3}]", strFunCode, strErrorCode, strErrorInfo, strErrorPrompt);
-                        LogHelper.Logger.Error(logInfo);
-                    }
-                    else
-                    {
-                        Interlocked.Increment(ref req.CaseData.RecOkCount);
-                    }
-                    if (req.CaseData.SendCount - req.CaseData.RecCount >= req.CaseData.DownStage)
-                    {
-                        req.CaseData.ResetEvent.Set();
-                    }
-                }
-              
-            }
-            if (lpFastMsg !=null)
-            {
-                lpFastMsg.FreeMsg();
-            }
+            RespDataPackageModel.DataQueue.Enqueue(new RespDataPackageModel(hSend, lpFastMsg));
         }
 
-        
+        /// <summary>
+        /// 死循环处理队列里的应答包
+        /// </summary>
+        private void DealRespPackage()
+        {
+            Task.Run(
+                () =>
+                {
+                    while (true)
+                    {
+                        RespDataPackageModel RDP = new RespDataPackageModel();
+                        if (RespDataPackageModel.DataQueue.TryDequeue(out RDP))
+                        {
+                            Task.Run(
+                                () =>
+                                {
+                                    int hSend = RDP.hSend;
+                                    LDFastMessageAdapter lpFastMsg = RDP.lpFastMsg;
+
+                                    DateTime timeStamp = DateTime.Now;
+                                    ReqDTO req = null;
+                                    lock (ReqLock)
+                                    {
+                                        req = ReqAllList.FirstOrDefault(o => o.SendID == hSend);
+                                        ReqAllList.Remove(req);
+                                    }
+                                    if (req != null && lpFastMsg != null)
+                                    {
+                                        //功能号
+                                        string strFunCode = lpFastMsg.GetString(LDSdkTag.LDTAG_FUNCID);
+
+                                        /***********************************郑建翔新加部分，用于计算应答频率***************************************/
+                                        lock (lockFlag)
+                                        {
+                                            //如果集合中不存这个功能号则添加
+                                            if (ReplyRateInfos.Count(i => i.functionId == strFunCode) == 0)
+                                            {
+                                                DateTime startTime = DateTime.Now;
+                                                this.Dispatcher.Invoke(() => ReplyRateInfos.Add(new ReplyRateModel(strFunCode, startTime)));
+                                                /*****************************接收到每个功能号的第一条应答时，保存应答信息**************************/
+                                                //文件保存路径
+                                                string savePath = Environment.CurrentDirectory + @"\ScriptOutPut.txt";
+                                                LogAnswerPackageInfo.OutPutResult(lpFastMsg, savePath);
+                                            }
+                                            else
+                                            {
+                                                //如果集合中已经存在这个功能号，开始更新并计算数据
+                                                ReplyRateModel replyInfo = ReplyRateInfos.FirstOrDefault(i => i.functionId == strFunCode);
+                                                replyInfo.timeStamp = timeStamp;
+                                                replyInfo.replyCount++;
+                                            }
+                                        }
+                                        /*******************************************修改结束*********************************************************/
+
+                                        Interlocked.Increment(ref req.CaseData.RecCount);//递增应答数量
+                                        int iErrorNo = lpFastMsg.GetInt32(LDSdkTag.LDTAG_ERRORNO);
+                                        if (iErrorNo != 0)
+                                        {
+                                            //如果是中间件返回的错误
+                                            Interlocked.Increment(ref req.CaseData.RecFailCount);//递增应答失败数量
+                                        }
+                                        else
+                                        {
+                                            string strErrorCode = lpFastMsg.GetString(LDBizTag.LDBIZ_ERROR_CODE_STR);
+                                            Interlocked.Increment(ref req.CaseData.RecOkCount);//递增应答成功数量
+                                            if (!"0".Equals(strErrorCode))
+                                            {
+                                                //Interlocked.Increment(ref req.CaseData.RecFailCount);//递增应答失败数量
+
+                                                string strErrorInfo = lpFastMsg.GetString(LDBizTag.LDBIZ_ERROR_INFO_STR);
+                                                string strErrorPrompt = lpFastMsg.GetString(LDBizTag.LDBIZ_ERROR_PROMPT_STR);
+                                                string logInfo = string.Format("功能号[{0}]，errorCode[{1}]，errorinfo[{2}],errorprompt[{3}]", strFunCode, strErrorCode, strErrorInfo, strErrorPrompt);
+                                                LogHelper.Logger.Error(logInfo);
+                                            }
+                                            //else
+                                            //{
+                                            //    Interlocked.Increment(ref req.CaseData.RecOkCount);//递增应答成功数量
+                                            //}
+                                            if (req.CaseData.SendCount - req.CaseData.RecCount >= req.CaseData.DownStage)
+                                            {
+                                                req.CaseData.ResetEvent.Set();
+                                            }
+                                        }
+                                    }
+                                    if (lpFastMsg != null)
+                                    {
+                                        lpFastMsg.FreeMsg();
+                                    }
+                                }
+                                );
+                        }
+                        else
+                        {
+                            Thread.Sleep(1000);
+                        }
+                    }
+                }
+                );
+        }
+
         /// <summary>
         /// 加载案例详细脚本信息
         /// </summary>
@@ -487,7 +519,7 @@ namespace MyLR
                             FunName = functionname
                         };
                         //发送次数
-                        if (item.Attribute("value") != null)
+                        if (item.Attribute("times") != null)
                         {
                             string sendTimes = item.Attribute("times").Value;
                             int nSendTimes = 1;
@@ -629,6 +661,32 @@ namespace MyLR
             }
         }
 
+        public bool _StartEnable;
+        public bool StartEnable
+        {
+            get
+            {
+                return _StartEnable;
+            }
+            set
+            {
+                this.SetProperty<bool>(ref _StartEnable, value);
+            }
+        }
+
+        public bool _StopEnable;
+        public bool StopEnable
+        {
+            get
+            {
+                return _StopEnable;
+            }
+            set
+            {
+                this.SetProperty<bool>(ref _StopEnable, value);
+            }
+        }
+
         private ICommand _StartRun;
         public ICommand StartRun
         {
@@ -715,8 +773,6 @@ namespace MyLR
 
         }
 
-        
-
         private void DoStop()
         {
             LogHelper.Logger.Info("结束启动");
@@ -748,16 +804,6 @@ namespace MyLR
                 {
                     while (IsWork)
                     {
-                        bool bNeedWait = (data.SendCount - data.RecCount) >= data.UpStage;
-                        if (bNeedWait)
-                        {
-                            data.ResetEvent.Reset();
-                            if (!data.ResetEvent.WaitOne(10000))
-                            {//等超时了，说明丢包了，重新置数
-                                //data.RecCount = data.SendCount;
-                            }
-                        }
-
                         SendFastMsgReq(data, out result);
                         if (result == "error")
                         {
@@ -772,15 +818,6 @@ namespace MyLR
                         if (!IsWork)
                         {
                             return;
-                        }
-                        bool bNeedWait = (data.SendCount - data.RecCount) >= data.UpStage;
-                        if (bNeedWait)
-                        {
-                            data.ResetEvent.Reset();
-                            if (!data.ResetEvent.WaitOne(10000))
-                            {//等超时了，说明丢包了，重新置数
-                                data.RecCount = data.SendCount;
-                            }
                         }
 
                         SendFastMsgReq(data, out result);
@@ -810,8 +847,20 @@ namespace MyLR
                 {
 
                     int nSendTimes = 0;
+
                     do
                     {
+                        bool bNeedWait = (file.SendCount - file.RecCount) >= file.UpStage;
+                        if (bNeedWait)
+                        {
+                            file.ResetEvent.Reset();
+                            if (!file.ResetEvent.WaitOne(1000))
+                            {
+                                //每秒钟判断一次是否达到积压上限
+                                continue;
+                            }
+                        }
+
                         nSendTimes++;
                         #region 发送包
                         LDsdkDefineEx.LDFastMessageAdapter fastmsg = new LDFastMessageAdapter(funitem.FunID, funitem.FunType);

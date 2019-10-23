@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <configSections>
+    <section name="log4net" type="log4net.Config.Log4NetConfigurationSectionHandler,log4net" />
+  </configSections>
+    <startup> 
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.2" />
+    </startup>
+  <appSettings>
+    <!--无关人员请勿往appSettings内新增内容-->
+    <!--add key="connStr1" value="Data Source=101.37.254.37;port=3306;User id=root;PassWord=Cmbjx@2017;Charset=utf8;" />
+    <add key="connStr2" value="Data Source=119.3.39.244;port=3306;User id=root;PassWord=Cmbjx@2017;Charset=utf8;" />
+    <add key="connStr3" value="Data Source=101.37.255.48;port=3306;User id=root;PassWord=Cmbjx@2017;Charset=utf8;" /-->
+
+    <add key="connStr1_tdsecu" value="Data Source=101.37.254.37;port=3306;User id=root;PassWord=Cmbjx@2017;Charset=utf8;" />
+    <add key="connStr2_prod" value="Data Source=101.37.252.200;port=3306;User id=root;PassWord=Cmbjx@2017;Charset=utf8;" />
+    <add key="connStr3_pub" value="Data Source=101.37.255.48;port=3306;User id=root;PassWord=Cmbjx@2017;Charset=utf8;" />
+    <add key="connStr4_pdsecu" value="Data Source=101.37.255.30;port=3306;User id=root;PassWord=Cmbjx@2017;Charset=utf8;" />
+
+  </appSettings>
+  <log4net>
+    <root>
+      <level value="Debug" />
+    </root>
+    <logger name="errorlog">
+      <level value="Debug" />
+      <appender-ref ref="FileAppender" />
+      <appender-ref ref="ConsoleAppender" />
+
+    </logger>
+    <appender name="FileAppender" type="log4net.Appender.RollingFileAppender">
+      <!--文件名,可以相对路径,也可以绝对路径,这里只给定了文件夹-->
+      <file value="log\\" />
+      <!--最小锁定模型以允许多个进程可以写入同一个文件,解决文件独占问题-->
+      <lockingModel type="log4net.Appender.FileAppender+MinimalLock" />
+      <!--是否增加文件-->
+      <appendToFile value="true" />
+      <Encoding value="UTF-8" />
+      <!--日志追加类型,Date为按日期增加文件,Size为按大小-->
+      <rollingStyle value="Composite" />
+      <!--文件命名格式,非日期参数化要进行转义,如自定义文件后缀-->
+      <datePattern value="&quot;LRlog_&quot;yyyyMMdd&quot;.log&quot;" />
+      <param name="MaximumFileSize" value="10MB" />
+      <!--是否固定文件名-->
+      <staticLogFileName value="false" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="[时间]:%d%n[级别]:%p%n[内容]:%m%n%exception%n" />
+      </layout>
+      <lockingModel type="log4net.Appender.FileAppender+MinimalLock" />
+    </appender>
+  </log4net>
+<system.data>
+    <DbProviderFactories>
+      <remove invariant="MySql.Data.MySqlClient" />
+      <add name="MySQL Data Provider" invariant="MySql.Data.MySqlClient" description=".Net Framework Data Provider for MySQL" type="MySql.Data.MySqlClient.MySqlClientFactory, MySql.Data, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" />
+    </DbProviderFactories>
+  </system.data></configuration>

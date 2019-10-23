@@ -278,10 +278,6 @@
             <field fieldname="futu_short_market_value" fieldid="5778" decimalPlaces="6"/>
             <field fieldname="curr_share" fieldid="1390" decimalPlaces="2"/>
             <field fieldname="pre_share" fieldid="3137" decimalPlaces="2"/>
-            <field fieldname="sh_hk_stock_asset" fieldid="5935" decimalPlaces="6"/>
-            <field fieldname="sz_hk_stock_asset" fieldid="5936" decimalPlaces="6"/>
-            <field fieldname="sh_Astock_asset" fieldid="5937" decimalPlaces="6"/>
-            <field fieldname="sz_Astock_asset" fieldid="5938" decimalPlaces="6"/>
         </sequence>
     </function>
     <function functionname="funcl_pdcapit_QueryPdAsset_His" typename="LD_REQUEST" functionid="prodL.3.22" packettype="0">
@@ -333,10 +329,6 @@
             <field fieldname="futu_short_market_value" fieldid="5778" decimalPlaces="6"/>
             <field fieldname="curr_share" fieldid="1390" decimalPlaces="2"/>
             <field fieldname="pre_share" fieldid="3137" decimalPlaces="2"/>
-            <field fieldname="sh_hk_stock_asset" fieldid="5935" decimalPlaces="6"/>
-            <field fieldname="sz_hk_stock_asset" fieldid="5936" decimalPlaces="6"/>
-            <field fieldname="sh_Astock_asset" fieldid="5937" decimalPlaces="6"/>
-            <field fieldname="sz_Astock_asset" fieldid="5938" decimalPlaces="6"/>
         </sequence>
     </function>
     <function functionname="funcl_pdcapit_AddbkacCapital" typename="LD_REQUEST" functionid="prodL.3.71" packettype="0">

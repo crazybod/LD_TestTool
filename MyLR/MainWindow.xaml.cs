@@ -24,6 +24,7 @@ using MyLR.HqReplay;
 using MyLR.Utils;
 using System.Diagnostics;
 using System.IO;
+using MyLR.Models;
 
 namespace MyLR
 {
@@ -34,6 +35,10 @@ namespace MyLR
     {
 
         #region 变量声明
+        Dictionary<string, MaxMinPriceModel> MaxMinPriceCollection = new Dictionary<string, MaxMinPriceModel>();
+        /// <summary>
+        /// 取消线程的令牌
+        /// </summary>
         CancellationTokenSource tokenSource = new CancellationTokenSource();
         /// <summary>
         /// 用于控制是否取消线程
@@ -165,8 +170,12 @@ namespace MyLR
 
             tokenSource = new CancellationTokenSource();
             token = tokenSource.Token;
+
             Task.Run(() => { DrawSin(); });
+
             btnStart.IsEnabled = false;
+            btnRun.IsEnabled = false;
+            isPause = false;
         }
 
         /// <summary>
@@ -194,7 +203,7 @@ namespace MyLR
                     //加入Canvas在屏幕显示
                     this.cvsDraw.Children.Add(pa);
                 });
-                for (double i = 1; i < 360 * 99; i++)   //角
+                for (int i = 1; i < 360 * 99; i++)   //角
                 {
                     if (isPause)//是否暂停
                     {
@@ -212,12 +221,26 @@ namespace MyLR
                         pf.Segments.Add(new LineSegment(new Point(x2, y2), true));
                     });
 
-                    #region 针对每个券码发送一个生成并发送一个数据包
+                    #region 针对每个券码发送一个生成并发送一个数据包还要将行情进行落库
                     int rows = LoadStockInfo.excelData.Rows.Count;//券码总条数
 
-                    for (int j = 1; j < (rows < stockCountLimit ? rows : stockCountLimit); j++)
+                    for (int j = 0; j < (rows < stockCountLimit ? rows : stockCountLimit); j++)
                     {
-                        LDFastMessageAdapter fastMsg = new LDFastMessageAdapter("pubL.16.5", 0);
+                        LDFastMessageAdapter fastMsg = new LDFastMessageAdapter("pubL.16.5", 0);//行情包
+                        LDFastMessageAdapter saveMsg = new LDFastMessageAdapter("pubL.16.2", 0);//将行情落户的请求包
+
+                        unsafe
+                        {
+                            if (fastMsg.Record == null || saveMsg.Record == null)
+                            {
+                                this.Dispatcher.Invoke(() => 
+                                {
+                                    btnStart.IsEnabled = true;
+                                    MessageBox.Show("初始化数据包失败！\r\n请检查服务器是否正常", "异常", MessageBoxButton.OK, MessageBoxImage.Error);
+                                });
+                                return;
+                            }
+                        }
 
                         //券码
                         string stockNo = LoadStockInfo.excelData.Rows[j]["stock_code"].ToString();
@@ -226,9 +249,11 @@ namespace MyLR
                             continue;
                         }
                         char[] stockNos = stockNo.ToCharArray();
+                        
 
                         //市场
                         int exchNo = Convert.ToInt32(LoadStockInfo.excelData.Rows[j]["exch_no"]);
+
                         //证券类型
                         int stockType = Convert.ToInt32(LoadStockInfo.excelData.Rows[j]["stock_type"]);
 
@@ -250,15 +275,54 @@ namespace MyLR
                         double upPrice = preClosePrice * (1 + limitPercent/100.00);
                         //跌停价
                         double downPrice = preClosePrice * (1 - limitPercent / 100.00);
+                        //精度
+                        int precision = 0;
+                        
 
                         //递增/递减价格
-                        double price1 = CaculatePrecision((upPrice - preClosePrice) * Math.Sin(i * Math.PI / 180) * (-1) + preClosePrice, exchNo, stockType);
-                        double price2 = CaculatePrecision((upPrice - preClosePrice) * Math.Sin((i + 1) * Math.PI / 180) * (-1) + preClosePrice,exchNo,stockType);
-                        double price3 = CaculatePrecision((upPrice - preClosePrice) * Math.Sin((i + 2) * Math.PI / 180) * (-1) + preClosePrice, exchNo, stockType);
-                        double price4 = CaculatePrecision((upPrice - preClosePrice) * Math.Sin((i + 3) * Math.PI / 180) * (-1) + preClosePrice, exchNo, stockType);
-                        double price5 = CaculatePrecision((upPrice - preClosePrice) * Math.Sin((i + 4) * Math.PI / 180) * (-1) + preClosePrice, exchNo, stockType);
+                        double price1 = CaculatePrecision((upPrice - preClosePrice) * Math.Sin(i * Math.PI / 180) + preClosePrice, exchNo, stockType,out precision);
+                        double price2 = CaculatePrecision((upPrice - preClosePrice) * Math.Sin((i + 1) * Math.PI / 180)  + preClosePrice,exchNo,stockType, out precision);
+                        double price3 = CaculatePrecision((upPrice - preClosePrice) * Math.Sin((i + 2) * Math.PI / 180)  + preClosePrice, exchNo, stockType, out precision);
+                        double price4 = CaculatePrecision((upPrice - preClosePrice) * Math.Sin((i + 3) * Math.PI / 180)  + preClosePrice, exchNo, stockType, out precision);
+                        double price5 = CaculatePrecision((upPrice - preClosePrice) * Math.Sin((i + 4) * Math.PI / 180)  + preClosePrice, exchNo, stockType, out precision);
 
+                        //最大最小价格Model
+                        MaxMinPriceModel MMP = null;
+                        //最大价格
+                        double maxPrice = 0;
+                        //最小价格
+                        double minPrice = 0;
+
+                        if (MaxMinPriceCollection.TryGetValue(stockNo, out MMP))
+                        {
+                            if (price1 >= MMP.maxPrice)
+                            {
+                                maxPrice = price1;
+                                minPrice = MMP.minPrice;
+                                MaxMinPriceCollection[stockNo].maxPrice = price1;
+                            }
+                            else
+                            {
+                                maxPrice = MMP.maxPrice;
+                                //判断最小价格
+                                if (price1 <= MMP.minPrice)
+                                {
+                                    minPrice = price1;
+                                    MaxMinPriceCollection[stockNo].minPrice = price1;
+                                }
+                                else
+                                {
+                                    minPrice = MMP.minPrice;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            MaxMinPriceCollection.Add(stockNo,new MaxMinPriceModel() { maxPrice = price1,minPrice = price1});
+                        }
+                        
                         InitFastMsg.InitMsg("pubL.16.5", ref fastMsg);
+                        InitFastMsg.InitMsg("pubL.16.2", ref saveMsg);
 
                         fastMsg.SetInt32(LDBizTag.LDBIZ_EXCH_NO_INT, exchNo);
                         fastMsg.SetString(LDBizTag.LDBIZ_STOCK_CODE_STR, stockNo);
@@ -269,8 +333,8 @@ namespace MyLR
                          数量信息呈线性增长  y = kx
                          */
                         //数据基数
-                        int tmpValue = 1000;
-                        int tmpValue0 = 100;
+                        const int tmpValue = 1000;
+                        const int tmpValue0 = 100;
 
                         
                         IntPtr ptr;
@@ -335,8 +399,9 @@ namespace MyLR
                             StockLevelRealTimeData stockFiled = new StockLevelRealTimeData();
 
                             stockFiled.PriceUnit = tmpValue;
-                            stockFiled.UpPrice = (int)(downPrice * tmpValue);
-                            stockFiled.DownPrice = (int)(upPrice * tmpValue);
+                            stockFiled.Decimal = precision;
+                            stockFiled.UpPrice = (int)(upPrice * tmpValue);
+                            stockFiled.DownPrice = (int)(downPrice * tmpValue);
                             stockFiled.FiveDayVol = 0;
                             stockFiled.OpenPrice = (int)(preClosePrice * tmpValue);
                             stockFiled.PrevClose = (int)(preClosePrice * tmpValue); ;
@@ -367,15 +432,51 @@ namespace MyLR
                                 + (int)(price3 * tmpValue) * (uint)(tmpValue0 * i * 3) + (int)(price4 * tmpValue) * (uint)(tmpValue0 * i * 4)
                                 + (int)(price5 * tmpValue) * (uint)(tmpValue0 * i * 5);
 
-                            stockFiled.MaxPrice = (int)(price5 * tmpValue);
-                            stockFiled.MinPrice = (int)(price1 * tmpValue);
-                            stockFiled.NewPrice = (int)(price3 * tmpValue);
+                            stockFiled.MaxPrice = (int)(maxPrice * tmpValue);
+                            stockFiled.MinPrice = (int)(minPrice * tmpValue);
+                            stockFiled.NewPrice = (int)(price1 * tmpValue);
                             stockFiled.HandNum = 100;
                             stockFiled.CodeType = 4361;
-                            stockFiled.Decimal = 3;
                             stockFiled.StockCode = stockNos;
                             //成交量
                             stockFiled.Total = (uint)(tmpValue0 * i * 15);
+                            #endregion
+
+                            #region 构建行情落库请求包
+                            saveMsg.SetInt32(LDBizTag.LDBIZ_EXCH_NO_INT, exchNo);
+                            saveMsg.SetString(LDBizTag.LDBIZ_STOCK_CODE_STR, stockNo);
+                            saveMsg.SetDouble(LDBizTag.LDBIZ_LAST_PRICE_FLOAT, price3);
+                            saveMsg.SetDouble(LDBizTag.LDBIZ_PRE_CLOSE_PRICE_FLOAT, preClosePrice);
+                            saveMsg.SetString(LDBizTag.LDBIZ_STOP_STATUS_STR, "0");
+                            saveMsg.SetDouble(LDBizTag.LDBIZ_UP_LIMIT_PRICE_FLOAT, 0);
+                            saveMsg.SetDouble(LDBizTag.LDBIZ_DOWN_LIMIT_PRICE_FLOAT, 0);
+                            saveMsg.SetDouble(LDBizTag.LDBIZ_TODAY_OPEN_PRICE_FLOAT, preClosePrice);
+                            saveMsg.SetDouble(LDBizTag.LDBIZ_TODAY_CLOSE_PRICE_FLOAT, price3);
+                            saveMsg.SetDouble(LDBizTag.LDBIZ_TODAY_MAX_PRICE_FLOAT, upPrice);
+                            saveMsg.SetDouble(LDBizTag.LDBIZ_TODAY_MIN_PRICE_FLOAT, downPrice);
+                            saveMsg.SetDouble(LDBizTag.LDBIZ_BUY_PRICE_1_FLOAT, price1);
+                            saveMsg.SetDouble(LDBizTag.LDBIZ_BUY_PRICE_2_FLOAT, price2);
+                            saveMsg.SetDouble(LDBizTag.LDBIZ_BUY_PRICE_3_FLOAT, price3);
+                            saveMsg.SetDouble(LDBizTag.LDBIZ_BUY_PRICE_4_FLOAT, price4);
+                            saveMsg.SetDouble(LDBizTag.LDBIZ_BUY_PRICE_5_FLOAT, price5);
+                            saveMsg.SetDouble(LDBizTag.LDBIZ_BUY_QTY_1_FLOAT, tmpValue0 * i);
+                            saveMsg.SetDouble(LDBizTag.LDBIZ_BUY_QTY_2_FLOAT, tmpValue0 * i * 2);
+                            saveMsg.SetDouble(LDBizTag.LDBIZ_BUY_QTY_3_FLOAT, tmpValue0 * i * 3);
+                            saveMsg.SetDouble(LDBizTag.LDBIZ_BUY_QTY_4_FLOAT, tmpValue0 * i * 4);
+                            saveMsg.SetDouble(LDBizTag.LDBIZ_BUY_QTY_5_FLOAT, tmpValue0 * i * 5);
+                            saveMsg.SetDouble(LDBizTag.LDBIZ_SELL_PRICE_1_FLOAT, price1);
+                            saveMsg.SetDouble(LDBizTag.LDBIZ_SELL_PRICE_2_FLOAT, price2);
+                            saveMsg.SetDouble(LDBizTag.LDBIZ_SELL_PRICE_3_FLOAT, price3);
+                            saveMsg.SetDouble(LDBizTag.LDBIZ_SELL_PRICE_4_FLOAT, price4);
+                            saveMsg.SetDouble(LDBizTag.LDBIZ_SELL_PRICE_5_FLOAT, price5);
+                            saveMsg.SetDouble(LDBizTag.LDBIZ_SELL_QTY_1_FLOAT, tmpValue0 * i);
+                            saveMsg.SetDouble(LDBizTag.LDBIZ_SELL_QTY_2_FLOAT, tmpValue0 * i * 2);
+                            saveMsg.SetDouble(LDBizTag.LDBIZ_SELL_QTY_3_FLOAT, tmpValue0 * i * 3);
+                            saveMsg.SetDouble(LDBizTag.LDBIZ_SELL_QTY_4_FLOAT, tmpValue0 * i * 4);
+                            saveMsg.SetDouble(LDBizTag.LDBIZ_SELL_QTY_5_FLOAT, tmpValue0 * i * 5);
+                            saveMsg.SetDouble(LDBizTag.LDBIZ_STRIKE_QTY_FLOAT, tmpValue0 * i * 15);
+                            saveMsg.SetDouble(LDBizTag.LDBIZ_STRIKE_AMT_FLOAT, price1 * tmpValue0 * i + price2 * tmpValue0 * i * 2
+                                + price3 * tmpValue0 * i * 3 + price4 * tmpValue0 * i * 4 + price5 * tmpValue0 * i * 5);
                             #endregion
                             
                             //将数据包转化成非托管类型
@@ -385,10 +486,12 @@ namespace MyLR
                         }
 
                         //制造阻塞，确保数据包发送之后才进行内存回收 int result = 
-                        await SendPackage(fastMsg, "quote.realtime");
-
-                        Marshal.FreeHGlobal(ptr);
+                        await SendPubTopicsPackage(fastMsg, "quote.realtime");
                         
+                        //发送行情落库请求包
+                        await SendRequsetPackage(saveMsg, "pubL.16.2");
+
+                        Marshal.FreeHGlobal(ptr);//释放非托管内存
                         Thread.Sleep(TimeSpan.FromMilliseconds(delay));
                     }
                     #endregion
@@ -408,71 +511,78 @@ namespace MyLR
         /// <param name="price">未确认精度的价格</param>
         /// <param name="exchNo">市场编号</param>
         /// <param name="stockType">证券类型</param>
+        /// <param name="precision">输出精度</param>
         /// <returns></returns>
-        private double CaculatePrecision(double price,int exchNo,int stockType)
+        private double CaculatePrecision(double price,int exchNo,int stockType,out int precision)
         {
+            precision = 3;
             if ((exchNo == 1 || exchNo == 2) && (stockType >= 1 && stockType <= 8))
             {
-                price = Convert.ToInt32(price / 0.01) * 0.01;
+                price = Math.Round(Convert.ToInt32(price / 0.01) * 0.01,2);
+                precision = 2;
             }
             else if ((exchNo == 1) && (stockType >= 21 && stockType <= 45))
             {
-                price = Convert.ToInt32(price / 0.005) * 0.005;
+                price = Math.Round(Convert.ToInt32(price / 0.005) * 0.005,3);
+                precision = 3;
             }
             else if ((exchNo == 2) && (stockType >= 21 && stockType <= 45))
             {
-                price = Convert.ToInt32(price / 0.001) * 0.001;
+                price = Math.Round(Convert.ToInt32(price / 0.001) * 0.001,3);
+                precision = 3;
             }
             else if (stockType >= 51 && stockType <= 64)
             {
-                price = Convert.ToInt32(price / 0.001) * 0.001;
+                price = Math.Round(Convert.ToInt32(price / 0.001) * 0.001,3);
+                precision = 3;
             }
             else if ((exchNo == 3 || exchNo == 4) && (stockType == 1))
             {
+                precision = 3;
                 //港股根据价格所在区间确定最小差价
                 if (price >= 0.01 && price < 0.25)
                 {
-                    price = Convert.ToInt32(price / 0.001) * 0.001;
+                    price = Math.Round(Convert.ToInt32(price / 0.001) * 0.001,3);
                 }
                 else if (price >= 0.25 && price < 0.5)
                 {
-                    price = Convert.ToInt32(price / 0.005) * 0.005;
+                    price = Math.Round(Convert.ToInt32(price / 0.005) * 0.005,3);
                 }
                 else if (price >= 0.5 && price < 10)
                 {
-                    price = Convert.ToInt32(price / 0.01) * 0.01;
+                    price = Math.Round(Convert.ToInt32(price / 0.01) * 0.01,3);
                 }
                 else if (price >= 10 && price < 20)
                 {
-                    price = Convert.ToInt32(price / 0.02) * 0.02;
+                    price = Math.Round(Convert.ToInt32(price / 0.02) * 0.02,3);
                 }
                 else if (price >= 20 && price < 100)
                 {
-                    price = Convert.ToInt32(price / 0.05) * 0.05;
+                    price = Math.Round(Convert.ToInt32(price / 0.05) * 0.05,3);
                 }
                 else if (price >= 100 && price < 200)
                 {
-                    price = Convert.ToInt32(price / 0.1) * 0.1;
+                    price = Math.Round(Convert.ToInt32(price / 0.1) * 0.1,3);
                 }
                 else if (price >= 200 && price < 500)
                 {
-                    price = Convert.ToInt32(price / 0.2) * 0.2;
+                    price = Math.Round(Convert.ToInt32(price / 0.2) * 0.2,3);
                 }
                 else if (price >= 500 && price < 1000)
                 {
-                    price = Convert.ToInt32(price / 0.5) * 0.5;
+                    price = Math.Round(Convert.ToInt32(price / 0.5) * 0.5,3);
                 }
                 else if (price >= 1000 && price < 2000)
                 {
-                    price = Convert.ToInt32(price / 1) * 1;
+                    price = Math.Round(Convert.ToInt32(price / 1) * 1.0,3);
                 }
                 else if (price >= 2000 && price < 5000)
                 {
-                    price = Convert.ToInt32(price / 2) * 2;
+                    price = Math.Round(Convert.ToInt32(price / 2) * 2.0,3);
                 }
                 else if (price >= 5000 && price <= 9995)
                 {
-                    price = Convert.ToInt32(price / 5) * 5;
+                    price = Math.Round(Convert.ToInt32(price / 5) * 5.0,3);
                 }
             }
             return price;
@@ -484,7 +594,7 @@ namespace MyLR
         /// <param name="fastMsg"></param>
         /// <param name="funcId"></param>
         /// <returns></returns>
-        private Task<int> SendPackage(LDFastMessageAdapter fastMsg,string funcId)
+        private Task<int> SendPubTopicsPackage(LDFastMessageAdapter fastMsg,string funcId)
         {
             int result = -1;
             Task<int> tsk = Task<int>.Run(() => {
@@ -496,7 +606,22 @@ namespace MyLR
         }
 
         /// <summary>
-        /// 运行
+        /// 发送请求数据包的方法
+        /// </summary>
+        /// <param name="fastMsg"></param>
+        /// <param name="funcId"></param>
+        /// <returns></returns>
+        private Task SendRequsetPackage(LDFastMessageAdapter fastMsg, string funcId)
+        {
+            Task tsk = Task.Run(() => {
+                sendConnectionAdapter.AsyncSend(funcId,fastMsg,60000);
+                fastMsg.FreeMsg();
+            });
+            return tsk;
+        }
+
+        /// <summary>
+        /// 取消暂停
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -518,6 +643,9 @@ namespace MyLR
             delay = (interval / sends) / times;
             isPause = false;
             waitHandle.Set();
+
+            btnPause.IsEnabled = true;
+            btnRun.IsEnabled = false;
         }
 
         /// <summary>
@@ -528,6 +656,8 @@ namespace MyLR
         private void btnPause_Click(object sender, RoutedEventArgs e)
         {
             isPause = true;
+            btnPause.IsEnabled = false;
+            btnRun.IsEnabled = true;
         }
 
         /// <summary>
@@ -539,7 +669,11 @@ namespace MyLR
         {
             tokenSource.Cancel();
             pf.Segments.Clear();
+            
             btnStart.IsEnabled = true;
+            btnPause.IsEnabled = true;
+            btnRun.IsEnabled = false;
+            //btnStart_Click(new object(), new RoutedEventArgs());
         }
         #endregion
 
@@ -824,8 +958,8 @@ namespace MyLR
                 PrintHelper.Print.AppendLine(error.Message + "\r\n" + error.StackTrace);
             }
         }
+
         #endregion
 
-        
     }
 }

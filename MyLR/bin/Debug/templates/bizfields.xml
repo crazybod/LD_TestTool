@@ -4679,20 +4679,5 @@
     <bytevector fieldname="file_type_name" fieldid="5924"/>
     <int32 fieldname="batches_count" fieldid="5925"/>
     <bytevector fieldname="fail_reason" fieldid="5926"/>
-    <bytevector fieldname="dc_index_value_list" fieldid="5927"/>
-    <bytevector fieldname="import_mapping_acco" fieldid="5928"/>
-    <int32 fieldname="date_calc_type" fieldid="5929"/>
-    <int32 fieldname="import_data_type" fieldid="5930"/>
-    <int64 fieldname="begin_calc_value" fieldid="5931" decimalPlaces="6"/>
-    <int64 fieldname="end_calc_value" fieldid="5932" decimalPlaces="6"/>
-    <int64 fieldname="param_calc_value" fieldid="5933" decimalPlaces="6"/>
-    <int64 fieldname="help_calc_value" fieldid="5934" decimalPlaces="6"/>
-    <int64 fieldname="sh_hk_stock_asset" fieldid="5935" decimalPlaces="6"/>
-    <int64 fieldname="sz_hk_stock_asset" fieldid="5936" decimalPlaces="6"/>
-    <int64 fieldname="sh_Astock_asset" fieldid="5937" decimalPlaces="6"/>
-    <int64 fieldname="sz_Astock_asset" fieldid="5938" decimalPlaces="6"/>
-    <int32 fieldname="data_source" fieldid="5939"/>
-    <uint32 fieldname="apply_pay_date" fieldid="5940"/>
-    <bytevector fieldname="apply_pay_date_str" fieldid="5941"/>
-    <bytevector fieldname="group_no_str" fieldid="5942"/>
+    <LPCTSTR fieldname="dc_index_value_list" fieldid="5927"/>
 </fields>

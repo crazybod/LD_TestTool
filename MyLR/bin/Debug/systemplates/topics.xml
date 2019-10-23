@@ -506,12 +506,6 @@
             <filter fieldid="3051" note="资产账户编号"/>
         </filters>
     </topic>
-    <topic topicname="secu.plugerrororder"   funcid="pushL.2.709" snapshot="y" private="n" RLevel="0" livetime="0">
-        <filters>
-            <filter fieldid="1828" note="机构编号"/>
-            <filter fieldid="1962" note="交易组编号"/>
-        </filters>
-    </topic>
     <topic topicname="secu.fundqry"   funcid="pushL.2.801" snapshot="y" private="n" RLevel="0" livetime="0">
         <filters>
             <filter fieldid="2610" note="通道编号"/>
@@ -768,13 +762,6 @@
     <topic topicname="sys.datadictionary"   funcid="pushL.2.946" snapshot="y" private="n" RLevel="0" livetime="0">
         <filters>
             <filter fieldid="1828" note="机构编号"/>
-        </filters>
-    </topic>
-    <topic topicname="secu.tradebalance"   funcid="pushL.2.947" snapshot="y" private="n" RLevel="0" livetime="0">
-        <filters>
-            <filter fieldid="1828" note="机构编号"/>
-            <filter fieldid="1962" note="交易组编号"/>
-            <filter fieldid="3051" note="资产账户编号"/>
         </filters>
     </topic>
 </topics>

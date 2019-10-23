@@ -1,0 +1,2917 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bizmsgs>
+    <function functionname="funcl_basesedt_QueryStockTmplat" typename="LD_REQUEST" functionid="pubL.1.6" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="stock_type_str" fieldid="2939"/>
+        <field fieldname="stock_code_feature" fieldid="2934"/>
+        <field fieldname="stock_name_feature" fieldid="2947"/>
+        <field fieldname="model_name" fieldid="2245"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockTmplat" typename="LD_ANSWER" functionid="pubL.1.6" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="model_name" fieldid="2245"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code_feature" fieldid="2934"/>
+            <field fieldname="stock_name_feature" fieldid="2947"/>
+            <field fieldname="stock_type" fieldid="2938"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_ModiStockType" typename="LD_REQUEST" functionid="pubL.1.12" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="stock_type_name" fieldid="2942"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="par_value" fieldid="2310" decimalPlaces="9"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="capit_reback_days" fieldid="3066"/>
+        <field fieldname="posi_reback_days" fieldid="1323"/>
+        <field fieldname="type_unit" fieldid="2147"/>
+        <field fieldname="report_unit" fieldid="2503"/>
+        <field fieldname="min_unit" fieldid="3124"/>
+        <field fieldname="max_qty" fieldid="3105" decimalPlaces="2"/>
+        <field fieldname="min_qty" fieldid="3128" decimalPlaces="2"/>
+        <field fieldname="is_order_dir_flag" fieldid="2398"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+    </function>
+    <function functionname="funcl_basesedt_ModiStockType" typename="LD_ANSWER" functionid="pubL.1.12" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockType" typename="LD_REQUEST" functionid="pubL.1.14" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="stock_type_str" fieldid="2939"/>
+        <field fieldname="asset_type_str" fieldid="3046"/>
+        <field fieldname="time_stamp" fieldid="2529"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockType" typename="LD_ANSWER" functionid="pubL.1.14" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_type" fieldid="2938"/>
+            <field fieldname="stock_type_name" fieldid="2942"/>
+            <field fieldname="asset_type" fieldid="3045"/>
+            <field fieldname="par_value" fieldid="2310" decimalPlaces="9"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="exch_crncy_type" fieldid="1906"/>
+            <field fieldname="capit_reback_days" fieldid="3066"/>
+            <field fieldname="posi_reback_days" fieldid="1323"/>
+            <field fieldname="type_unit" fieldid="2147"/>
+            <field fieldname="report_unit" fieldid="2503"/>
+            <field fieldname="min_unit" fieldid="3124"/>
+            <field fieldname="max_qty" fieldid="3105" decimalPlaces="2"/>
+            <field fieldname="min_qty" fieldid="3128" decimalPlaces="2"/>
+            <field fieldname="is_order_dir_flag" fieldid="2398"/>
+            <field fieldname="time_stamp" fieldid="2529"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockTypeJour" typename="LD_REQUEST" functionid="pubL.1.15" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="stock_type_str" fieldid="2939"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockTypeJour" typename="LD_ANSWER" functionid="pubL.1.15" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_type" fieldid="2938"/>
+            <field fieldname="jour_occur_field" fieldid="2184"/>
+            <field fieldname="jour_after_occur_info" fieldid="2185"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockTypeJour_His" typename="LD_REQUEST" functionid="pubL.1.16" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="stock_type_str" fieldid="2939"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockTypeJour_His" typename="LD_ANSWER" functionid="pubL.1.16" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_type" fieldid="2938"/>
+            <field fieldname="jour_occur_field" fieldid="2184"/>
+            <field fieldname="jour_after_occur_info" fieldid="2185"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockTypeOrderDir" typename="LD_REQUEST" functionid="pubL.1.24" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="stock_type_str" fieldid="2939"/>
+        <field fieldname="order_dir_str" fieldid="1450"/>
+        <field fieldname="time_stamp" fieldid="2529"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockTypeOrderDir" typename="LD_ANSWER" functionid="pubL.1.24" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_type" fieldid="2938"/>
+            <field fieldname="order_dir" fieldid="1449"/>
+            <field fieldname="cash_frozen_type" fieldid="3065"/>
+            <field fieldname="order_split_flag" fieldid="1461"/>
+            <field fieldname="min_unit" fieldid="3124"/>
+            <field fieldname="min_qty" fieldid="3128" decimalPlaces="2"/>
+            <field fieldname="max_qty" fieldid="3105" decimalPlaces="2"/>
+            <field fieldname="time_stamp" fieldid="2529"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_AddStockCodeInfo" typename="LD_REQUEST" functionid="pubL.1.41" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="stock_name" fieldid="2946"/>
+        <field fieldname="pinyin_short" fieldid="2311"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="par_value" fieldid="2310" decimalPlaces="9"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="total_stock_issue" fieldid="3084" decimalPlaces="2"/>
+        <field fieldname="circl_stock_capit" fieldid="2188" decimalPlaces="2"/>
+        <field fieldname="capit_reback_days" fieldid="3066"/>
+        <field fieldname="posi_reback_days" fieldid="1323"/>
+        <field fieldname="type_unit" fieldid="2147"/>
+        <field fieldname="report_unit" fieldid="2503"/>
+        <field fieldname="min_unit" fieldid="3124"/>
+        <field fieldname="max_qty" fieldid="3105" decimalPlaces="2"/>
+        <field fieldname="min_qty" fieldid="3128" decimalPlaces="2"/>
+        <field fieldname="is_order_dir_flag" fieldid="2398"/>
+        <field fieldname="price_up" fieldid="1890" decimalPlaces="9"/>
+        <field fieldname="price_down" fieldid="1891" decimalPlaces="9"/>
+        <field fieldname="step_price" fieldid="3125" decimalPlaces="9"/>
+        <field fieldname="fair_price" fieldid="1672" decimalPlaces="9"/>
+        <field fieldname="stop_status" fieldid="2608"/>
+        <field fieldname="hk_stock_flag" fieldid="3852"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+    </function>
+    <function functionname="funcl_basesedt_AddStockCodeInfo" typename="LD_ANSWER" functionid="pubL.1.41" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+    </function>
+    <function functionname="funcl_basesedt_ModiStockCodeInfo" typename="LD_REQUEST" functionid="pubL.1.42" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="stock_name" fieldid="2946"/>
+        <field fieldname="pinyin_short" fieldid="2311"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="par_value" fieldid="2310" decimalPlaces="9"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="total_stock_issue" fieldid="3084" decimalPlaces="2"/>
+        <field fieldname="circl_stock_capit" fieldid="2188" decimalPlaces="2"/>
+        <field fieldname="capit_reback_days" fieldid="3066"/>
+        <field fieldname="posi_reback_days" fieldid="1323"/>
+        <field fieldname="type_unit" fieldid="2147"/>
+        <field fieldname="report_unit" fieldid="2503"/>
+        <field fieldname="min_unit" fieldid="3124"/>
+        <field fieldname="max_qty" fieldid="3105" decimalPlaces="2"/>
+        <field fieldname="min_qty" fieldid="3128" decimalPlaces="2"/>
+        <field fieldname="is_order_dir_flag" fieldid="2398"/>
+        <field fieldname="price_up" fieldid="1890" decimalPlaces="9"/>
+        <field fieldname="price_down" fieldid="1891" decimalPlaces="9"/>
+        <field fieldname="step_price" fieldid="3125" decimalPlaces="9"/>
+        <field fieldname="fair_price" fieldid="1672" decimalPlaces="9"/>
+        <field fieldname="stop_status" fieldid="2608"/>
+        <field fieldname="hk_stock_flag" fieldid="3852"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+    </function>
+    <function functionname="funcl_basesedt_ModiStockCodeInfo" typename="LD_ANSWER" functionid="pubL.1.42" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockInfo" typename="LD_REQUEST" functionid="pubL.1.43" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="stock_name" fieldid="2946"/>
+        <field fieldname="pinyin_short" fieldid="2311"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockInfo" typename="LD_ANSWER" functionid="pubL.1.43" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="pinyin_short" fieldid="2311"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockCodeInfo" typename="LD_REQUEST" functionid="pubL.1.44" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="stock_type_str" fieldid="2939"/>
+        <field fieldname="asset_type_str" fieldid="3046"/>
+        <field fieldname="stop_status_str" fieldid="2609"/>
+        <field fieldname="time_stamp" fieldid="2529"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockCodeInfo" typename="LD_ANSWER" functionid="pubL.1.44" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="pinyin_short" fieldid="2311"/>
+            <field fieldname="stock_type" fieldid="2938"/>
+            <field fieldname="asset_type" fieldid="3045"/>
+            <field fieldname="par_value" fieldid="2310" decimalPlaces="9"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="exch_crncy_type" fieldid="1906"/>
+            <field fieldname="total_stock_issue" fieldid="3084" decimalPlaces="2"/>
+            <field fieldname="circl_stock_capit" fieldid="2188" decimalPlaces="2"/>
+            <field fieldname="capit_reback_days" fieldid="3066"/>
+            <field fieldname="posi_reback_days" fieldid="1323"/>
+            <field fieldname="type_unit" fieldid="2147"/>
+            <field fieldname="report_unit" fieldid="2503"/>
+            <field fieldname="min_unit" fieldid="3124"/>
+            <field fieldname="max_qty" fieldid="3105" decimalPlaces="2"/>
+            <field fieldname="min_qty" fieldid="3128" decimalPlaces="2"/>
+            <field fieldname="is_order_dir_flag" fieldid="2398"/>
+            <field fieldname="price_up" fieldid="1890" decimalPlaces="9"/>
+            <field fieldname="price_down" fieldid="1891" decimalPlaces="9"/>
+            <field fieldname="step_price" fieldid="3125" decimalPlaces="9"/>
+            <field fieldname="fair_price" fieldid="1672" decimalPlaces="9"/>
+            <field fieldname="stop_status" fieldid="2608"/>
+            <field fieldname="hk_stock_flag" fieldid="3852"/>
+            <field fieldname="time_stamp" fieldid="2529"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockCodeInfoJour" typename="LD_REQUEST" functionid="pubL.1.45" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockCodeInfoJour" typename="LD_ANSWER" functionid="pubL.1.45" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="jour_occur_field" fieldid="2184"/>
+            <field fieldname="jour_after_occur_info" fieldid="2185"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockCodeInfoJour_His" typename="LD_REQUEST" functionid="pubL.1.46" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockCodeInfoJour_His" typename="LD_ANSWER" functionid="pubL.1.46" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="jour_occur_field" fieldid="2184"/>
+            <field fieldname="jour_after_occur_info" fieldid="2185"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockCodeInfoList" typename="LD_REQUEST" functionid="pubL.1.47" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockCodeInfoList" typename="LD_ANSWER" functionid="pubL.1.47" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="stock_type" fieldid="2938"/>
+            <field fieldname="asset_type" fieldid="3045"/>
+            <field fieldname="hk_stock_flag" fieldid="3852"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_QueryClientStockCodeInfo" typename="LD_REQUEST" functionid="pubL.1.49" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="stock_code_load_range" fieldid="3703"/>
+        <field fieldname="time_stamp" fieldid="2529"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryClientStockCodeInfo" typename="LD_ANSWER" functionid="pubL.1.49" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="pinyin_short" fieldid="2311"/>
+            <field fieldname="stock_type" fieldid="2938"/>
+            <field fieldname="asset_type" fieldid="3045"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="capit_reback_days" fieldid="3066"/>
+            <field fieldname="posi_reback_days" fieldid="1323"/>
+            <field fieldname="min_unit" fieldid="3124"/>
+            <field fieldname="max_qty" fieldid="3105" decimalPlaces="2"/>
+            <field fieldname="min_qty" fieldid="3128" decimalPlaces="2"/>
+            <field fieldname="step_price" fieldid="3125" decimalPlaces="9"/>
+            <field fieldname="stop_status" fieldid="2608"/>
+            <field fieldname="hk_stock_flag" fieldid="3852"/>
+            <field fieldname="time_stamp" fieldid="2529"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_AddStockCodeOrderDir" typename="LD_REQUEST" functionid="pubL.1.51" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="cash_frozen_type" fieldid="3065"/>
+        <field fieldname="order_split_flag" fieldid="1461"/>
+        <field fieldname="min_unit" fieldid="3124"/>
+        <field fieldname="max_qty" fieldid="3105" decimalPlaces="2"/>
+        <field fieldname="min_qty" fieldid="3128" decimalPlaces="2"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+    </function>
+    <function functionname="funcl_basesedt_AddStockCodeOrderDir" typename="LD_ANSWER" functionid="pubL.1.51" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_basesedt_ModiStockCodeOrderDir" typename="LD_REQUEST" functionid="pubL.1.52" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="cash_frozen_type" fieldid="3065"/>
+        <field fieldname="order_split_flag" fieldid="1461"/>
+        <field fieldname="min_unit" fieldid="3124"/>
+        <field fieldname="max_qty" fieldid="3105" decimalPlaces="2"/>
+        <field fieldname="min_qty" fieldid="3128" decimalPlaces="2"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+    </function>
+    <function functionname="funcl_basesedt_ModiStockCodeOrderDir" typename="LD_ANSWER" functionid="pubL.1.52" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_basesedt_DeleteStockCodeOrderDir" typename="LD_REQUEST" functionid="pubL.1.53" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+    </function>
+    <function functionname="funcl_basesedt_DeleteStockCodeOrderDir" typename="LD_ANSWER" functionid="pubL.1.53" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockCodeOrderDir" typename="LD_REQUEST" functionid="pubL.1.54" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="order_dir_str" fieldid="1450"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+        <field fieldname="time_stamp" fieldid="2529"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockCodeOrderDir" typename="LD_ANSWER" functionid="pubL.1.54" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="order_dir" fieldid="1449"/>
+            <field fieldname="cash_frozen_type" fieldid="3065"/>
+            <field fieldname="order_split_flag" fieldid="1461"/>
+            <field fieldname="min_unit" fieldid="3124"/>
+            <field fieldname="min_qty" fieldid="3128" decimalPlaces="2"/>
+            <field fieldname="max_qty" fieldid="3105" decimalPlaces="2"/>
+            <field fieldname="time_stamp" fieldid="2529"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockCodeOrderDirJour" typename="LD_REQUEST" functionid="pubL.1.55" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="order_dir_str" fieldid="1450"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockCodeOrderDirJour" typename="LD_ANSWER" functionid="pubL.1.55" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="order_dir" fieldid="1449"/>
+            <field fieldname="jour_occur_field" fieldid="2184"/>
+            <field fieldname="jour_after_occur_info" fieldid="2185"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockCodeOrderDirJour_His" typename="LD_REQUEST" functionid="pubL.1.56" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="order_dir_str" fieldid="1450"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockCodeOrderDirJour_His" typename="LD_ANSWER" functionid="pubL.1.56" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="order_dir" fieldid="1449"/>
+            <field fieldname="jour_occur_field" fieldid="2184"/>
+            <field fieldname="jour_after_occur_info" fieldid="2185"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_AddStockCodeMap" typename="LD_REQUEST" functionid="pubL.1.61" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="trade_code" fieldid="1917"/>
+        <field fieldname="target_code" fieldid="1160"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+    </function>
+    <function functionname="funcl_basesedt_AddStockCodeMap" typename="LD_ANSWER" functionid="pubL.1.61" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_basesedt_ModiStockCodeMap" typename="LD_REQUEST" functionid="pubL.1.62" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="trade_code" fieldid="1917"/>
+        <field fieldname="target_code" fieldid="1160"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+    </function>
+    <function functionname="funcl_basesedt_ModiStockCodeMap" typename="LD_ANSWER" functionid="pubL.1.62" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_basesedt_DeleteStockCodeMap" typename="LD_REQUEST" functionid="pubL.1.63" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+    </function>
+    <function functionname="funcl_basesedt_DeleteStockCodeMap" typename="LD_ANSWER" functionid="pubL.1.63" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockCodeMap" typename="LD_REQUEST" functionid="pubL.1.64" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockCodeMap" typename="LD_ANSWER" functionid="pubL.1.64" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="trade_code" fieldid="1917"/>
+            <field fieldname="target_code" fieldid="1160"/>
+            <field fieldname="time_stamp" fieldid="2529"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockCodeMapJour" typename="LD_REQUEST" functionid="pubL.1.65" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockCodeMapJour" typename="LD_ANSWER" functionid="pubL.1.65" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="trade_code" fieldid="1917"/>
+            <field fieldname="target_code" fieldid="1160"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockCodeMapJour_His" typename="LD_REQUEST" functionid="pubL.1.66" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockCodeMapJour_His" typename="LD_ANSWER" functionid="pubL.1.66" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="trade_code" fieldid="1917"/>
+            <field fieldname="target_code" fieldid="1160"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_QueryNewStockCode" typename="LD_REQUEST" functionid="pubL.1.34" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryNewStockCode" typename="LD_ANSWER" functionid="pubL.1.34" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="trade_code" fieldid="1917"/>
+            <field fieldname="target_code" fieldid="1160"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="trade_code_no" fieldid="1918"/>
+            <field fieldname="target_code_no" fieldid="1161"/>
+            <field fieldname="apply_date" fieldid="2509"/>
+            <field fieldname="apply_pay_date" fieldid="5940"/>
+            <field fieldname="apply_limit" fieldid="2510" decimalPlaces="2"/>
+            <field fieldname="begin_trade_date" fieldid="2498"/>
+            <field fieldname="issue_price" fieldid="1504" decimalPlaces="9"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_QueryTodayNewStockCode" typename="LD_REQUEST" functionid="pubL.1.35" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryTodayNewStockCode" typename="LD_ANSWER" functionid="pubL.1.35" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="trade_code" fieldid="1917"/>
+            <field fieldname="target_code" fieldid="1160"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="trade_code_no" fieldid="1918"/>
+            <field fieldname="target_code_no" fieldid="1161"/>
+            <field fieldname="apply_date" fieldid="2509"/>
+            <field fieldname="apply_pay_date" fieldid="5940"/>
+            <field fieldname="apply_limit" fieldid="2510" decimalPlaces="2"/>
+            <field fieldname="begin_trade_date" fieldid="2498"/>
+            <field fieldname="issue_price" fieldid="1504" decimalPlaces="9"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_QueryConvertibleBondInfo" typename="LD_REQUEST" functionid="pubL.1.36" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryConvertibleBondInfo" typename="LD_ANSWER" functionid="pubL.1.36" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="trade_code" fieldid="1917"/>
+            <field fieldname="target_code" fieldid="1160"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="trade_code_no" fieldid="1918"/>
+            <field fieldname="target_code_no" fieldid="1161"/>
+            <field fieldname="apply_date" fieldid="2509"/>
+            <field fieldname="apply_limit" fieldid="2510" decimalPlaces="2"/>
+            <field fieldname="begin_trade_date" fieldid="2498"/>
+            <field fieldname="issue_price" fieldid="1504" decimalPlaces="9"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_QueryTodayConvertibleBondInfo" typename="LD_REQUEST" functionid="pubL.1.37" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryTodayConvertibleBondInfo" typename="LD_ANSWER" functionid="pubL.1.37" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="trade_code" fieldid="1917"/>
+            <field fieldname="target_code" fieldid="1160"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="trade_code_no" fieldid="1918"/>
+            <field fieldname="target_code_no" fieldid="1161"/>
+            <field fieldname="apply_date" fieldid="2509"/>
+            <field fieldname="apply_limit" fieldid="2510" decimalPlaces="2"/>
+            <field fieldname="begin_trade_date" fieldid="2498"/>
+            <field fieldname="issue_price" fieldid="1504" decimalPlaces="9"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_AddStockQuot" typename="LD_REQUEST" functionid="pubL.1.71" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="up_limit_price" fieldid="2905" decimalPlaces="9"/>
+        <field fieldname="down_limit_price" fieldid="1436" decimalPlaces="9"/>
+        <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+    </function>
+    <function functionname="funcl_basesedt_AddStockQuot" typename="LD_ANSWER" functionid="pubL.1.71" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_basesedt_ModiStockQuot" typename="LD_REQUEST" functionid="pubL.1.72" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="up_limit_price" fieldid="2905" decimalPlaces="9"/>
+        <field fieldname="down_limit_price" fieldid="1436" decimalPlaces="9"/>
+        <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+    </function>
+    <function functionname="funcl_basesedt_ModiStockQuot" typename="LD_ANSWER" functionid="pubL.1.72" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_basesedt_DeleteStockQuot" typename="LD_REQUEST" functionid="pubL.1.73" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+    </function>
+    <function functionname="funcl_basesedt_DeleteStockQuot" typename="LD_ANSWER" functionid="pubL.1.73" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockQuot" typename="LD_REQUEST" functionid="pubL.1.74" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockQuot" typename="LD_ANSWER" functionid="pubL.1.74" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="up_limit_price" fieldid="2905" decimalPlaces="9"/>
+            <field fieldname="down_limit_price" fieldid="1436" decimalPlaces="9"/>
+            <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+            <field fieldname="pre_close_price" fieldid="3140" decimalPlaces="9"/>
+            <field fieldname="today_open_price" fieldid="2001" decimalPlaces="9"/>
+            <field fieldname="today_close_price" fieldid="2002" decimalPlaces="9"/>
+            <field fieldname="today_max_price" fieldid="2004" decimalPlaces="9"/>
+            <field fieldname="today_min_price" fieldid="2003" decimalPlaces="9"/>
+            <field fieldname="buy_price_1" fieldid="2207" decimalPlaces="9"/>
+            <field fieldname="buy_qty_1" fieldid="2208" decimalPlaces="2"/>
+            <field fieldname="buy_price_2" fieldid="2189" decimalPlaces="9"/>
+            <field fieldname="buy_qty_2" fieldid="2190" decimalPlaces="2"/>
+            <field fieldname="buy_price_3" fieldid="2201" decimalPlaces="9"/>
+            <field fieldname="buy_qty_3" fieldid="2202" decimalPlaces="2"/>
+            <field fieldname="buy_price_4" fieldid="2203" decimalPlaces="9"/>
+            <field fieldname="buy_qty_4" fieldid="2204" decimalPlaces="2"/>
+            <field fieldname="buy_price_5" fieldid="2205" decimalPlaces="9"/>
+            <field fieldname="buy_qty_5" fieldid="2206" decimalPlaces="2"/>
+            <field fieldname="sell_price_1" fieldid="2228" decimalPlaces="9"/>
+            <field fieldname="sell_qty_1" fieldid="2229" decimalPlaces="2"/>
+            <field fieldname="sell_price_2" fieldid="2219" decimalPlaces="9"/>
+            <field fieldname="sell_qty_2" fieldid="2220" decimalPlaces="2"/>
+            <field fieldname="sell_price_3" fieldid="2222" decimalPlaces="9"/>
+            <field fieldname="sell_qty_3" fieldid="2223" decimalPlaces="2"/>
+            <field fieldname="sell_price_4" fieldid="2224" decimalPlaces="9"/>
+            <field fieldname="sell_qty_4" fieldid="2225" decimalPlaces="2"/>
+            <field fieldname="sell_price_5" fieldid="2226" decimalPlaces="9"/>
+            <field fieldname="sell_qty_5" fieldid="2227" decimalPlaces="2"/>
+            <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+            <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+            <field fieldname="pe_ratio" fieldid="2553" decimalPlaces="12"/>
+            <field fieldname="time_stamp" fieldid="2529"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_GetBatchStockQuot" typename="LD_REQUEST" functionid="pubL.1.77" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="stock_code_no_str" fieldid="3192"/>
+    </function>
+    <function functionname="funcl_basesedt_GetBatchStockQuot" typename="LD_ANSWER" functionid="pubL.1.77" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="up_limit_price" fieldid="2905" decimalPlaces="9"/>
+            <field fieldname="down_limit_price" fieldid="1436" decimalPlaces="9"/>
+            <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+            <field fieldname="pre_close_price" fieldid="3140" decimalPlaces="9"/>
+            <field fieldname="today_open_price" fieldid="2001" decimalPlaces="9"/>
+            <field fieldname="today_close_price" fieldid="2002" decimalPlaces="9"/>
+            <field fieldname="today_max_price" fieldid="2004" decimalPlaces="9"/>
+            <field fieldname="today_min_price" fieldid="2003" decimalPlaces="9"/>
+            <field fieldname="buy_price_1" fieldid="2207" decimalPlaces="9"/>
+            <field fieldname="buy_qty_1" fieldid="2208" decimalPlaces="2"/>
+            <field fieldname="buy_price_2" fieldid="2189" decimalPlaces="9"/>
+            <field fieldname="buy_qty_2" fieldid="2190" decimalPlaces="2"/>
+            <field fieldname="buy_price_3" fieldid="2201" decimalPlaces="9"/>
+            <field fieldname="buy_qty_3" fieldid="2202" decimalPlaces="2"/>
+            <field fieldname="buy_price_4" fieldid="2203" decimalPlaces="9"/>
+            <field fieldname="buy_qty_4" fieldid="2204" decimalPlaces="2"/>
+            <field fieldname="buy_price_5" fieldid="2205" decimalPlaces="9"/>
+            <field fieldname="buy_qty_5" fieldid="2206" decimalPlaces="2"/>
+            <field fieldname="sell_price_1" fieldid="2228" decimalPlaces="9"/>
+            <field fieldname="sell_qty_1" fieldid="2229" decimalPlaces="2"/>
+            <field fieldname="sell_price_2" fieldid="2219" decimalPlaces="9"/>
+            <field fieldname="sell_qty_2" fieldid="2220" decimalPlaces="2"/>
+            <field fieldname="sell_price_3" fieldid="2222" decimalPlaces="9"/>
+            <field fieldname="sell_qty_3" fieldid="2223" decimalPlaces="2"/>
+            <field fieldname="sell_price_4" fieldid="2224" decimalPlaces="9"/>
+            <field fieldname="sell_qty_4" fieldid="2225" decimalPlaces="2"/>
+            <field fieldname="sell_price_5" fieldid="2226" decimalPlaces="9"/>
+            <field fieldname="sell_qty_5" fieldid="2227" decimalPlaces="2"/>
+            <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+            <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+            <field fieldname="pe_ratio" fieldid="2553" decimalPlaces="12"/>
+            <field fieldname="time_stamp" fieldid="2529"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_GetStockQuot" typename="LD_REQUEST" functionid="pubL.1.78" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+    </function>
+    <function functionname="funcl_basesedt_GetStockQuot" typename="LD_ANSWER" functionid="pubL.1.78" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_name" fieldid="2946"/>
+        <field fieldname="up_limit_price" fieldid="2905" decimalPlaces="9"/>
+        <field fieldname="down_limit_price" fieldid="1436" decimalPlaces="9"/>
+        <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+        <field fieldname="pre_close_price" fieldid="3140" decimalPlaces="9"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockQuotJour" typename="LD_REQUEST" functionid="pubL.1.75" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockQuotJour" typename="LD_ANSWER" functionid="pubL.1.75" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="jour_occur_field" fieldid="2184"/>
+            <field fieldname="jour_after_occur_info" fieldid="2185"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockQuotJour_His" typename="LD_REQUEST" functionid="pubL.1.76" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockQuotJour_His" typename="LD_ANSWER" functionid="pubL.1.76" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="jour_occur_field" fieldid="2184"/>
+            <field fieldname="jour_after_occur_info" fieldid="2185"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_StockQuotBackup" typename="LD_REQUEST" functionid="pubL.1.79" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="task_no" fieldid="2424"/>
+        <field fieldname="exec_count" fieldid="2951"/>
+        <field fieldname="exec_date" fieldid="2953"/>
+        <field fieldname="exec_time" fieldid="2954"/>
+    </function>
+    <function functionname="funcl_basesedt_StockQuotBackup" typename="LD_ANSWER" functionid="pubL.1.79" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <field fieldname="task_strike_status" fieldid="2430"/>
+    </function>
+    <function functionname="funcl_basesedt_AddBondInfo" typename="LD_REQUEST" functionid="pubL.1.81" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="stock_name" fieldid="2946"/>
+        <field fieldname="issue_date" fieldid="1505"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="value_date" fieldid="2354"/>
+        <field fieldname="next_value_date" fieldid="2747"/>
+        <field fieldname="begin_trade_date" fieldid="2498"/>
+        <field fieldname="bond_limit" fieldid="2895" decimalPlaces="2"/>
+        <field fieldname="issue_price" fieldid="1504" decimalPlaces="9"/>
+        <field fieldname="par_value" fieldid="2310" decimalPlaces="9"/>
+        <field fieldname="intrst_ratio" fieldid="2287" decimalPlaces="12"/>
+        <field fieldname="intrst_days" fieldid="1864"/>
+        <field fieldname="pay_inteval" fieldid="1643"/>
+        <field fieldname="bond_accr_intrst" fieldid="2893" decimalPlaces="12"/>
+        <field fieldname="bond_rate_type" fieldid="2894"/>
+        <field fieldname="inteval_days" fieldid="1892"/>
+        <field fieldname="net_price_flag" fieldid="2019"/>
+        <field fieldname="last_trade_date" fieldid="3123"/>
+        <field fieldname="rights_type" fieldid="2404"/>
+        <field fieldname="trans_begin_date" fieldid="3035"/>
+        <field fieldname="trans_end_date" fieldid="3034"/>
+        <field fieldname="exec_begin_date" fieldid="1722"/>
+        <field fieldname="exec_end_date" fieldid="1721"/>
+        <field fieldname="impawn_ratio" fieldid="3026" decimalPlaces="12"/>
+        <field fieldname="trade_code" fieldid="1917"/>
+        <field fieldname="target_code" fieldid="1160"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+    </function>
+    <function functionname="funcl_basesedt_AddBondInfo" typename="LD_ANSWER" functionid="pubL.1.81" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_basesedt_ModiBondInfo" typename="LD_REQUEST" functionid="pubL.1.82" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="stock_name" fieldid="2946"/>
+        <field fieldname="issue_date" fieldid="1505"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="value_date" fieldid="2354"/>
+        <field fieldname="next_value_date" fieldid="2747"/>
+        <field fieldname="begin_trade_date" fieldid="2498"/>
+        <field fieldname="bond_limit" fieldid="2895" decimalPlaces="2"/>
+        <field fieldname="issue_price" fieldid="1504" decimalPlaces="9"/>
+        <field fieldname="par_value" fieldid="2310" decimalPlaces="9"/>
+        <field fieldname="intrst_ratio" fieldid="2287" decimalPlaces="12"/>
+        <field fieldname="intrst_days" fieldid="1864"/>
+        <field fieldname="pay_inteval" fieldid="1643"/>
+        <field fieldname="bond_accr_intrst" fieldid="2893" decimalPlaces="12"/>
+        <field fieldname="bond_rate_type" fieldid="2894"/>
+        <field fieldname="inteval_days" fieldid="1892"/>
+        <field fieldname="net_price_flag" fieldid="2019"/>
+        <field fieldname="last_trade_date" fieldid="3123"/>
+        <field fieldname="rights_type" fieldid="2404"/>
+        <field fieldname="trans_begin_date" fieldid="3035"/>
+        <field fieldname="trans_end_date" fieldid="3034"/>
+        <field fieldname="exec_begin_date" fieldid="1722"/>
+        <field fieldname="exec_end_date" fieldid="1721"/>
+        <field fieldname="impawn_ratio" fieldid="3026" decimalPlaces="12"/>
+        <field fieldname="trade_code" fieldid="1917"/>
+        <field fieldname="target_code" fieldid="1160"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+    </function>
+    <function functionname="funcl_basesedt_ModiBondInfo" typename="LD_ANSWER" functionid="pubL.1.82" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_basesedt_DeleteBondInfo" typename="LD_REQUEST" functionid="pubL.1.83" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+    </function>
+    <function functionname="funcl_basesedt_DeleteBondInfo" typename="LD_ANSWER" functionid="pubL.1.83" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryBondInfo" typename="LD_REQUEST" functionid="pubL.1.84" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="time_stamp" fieldid="2529"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryBondInfo" typename="LD_ANSWER" functionid="pubL.1.84" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="issue_date" fieldid="1505"/>
+            <field fieldname="end_date" fieldid="1986"/>
+            <field fieldname="value_date" fieldid="2354"/>
+            <field fieldname="next_value_date" fieldid="2747"/>
+            <field fieldname="begin_trade_date" fieldid="2498"/>
+            <field fieldname="bond_limit" fieldid="2895" decimalPlaces="2"/>
+            <field fieldname="issue_price" fieldid="1504" decimalPlaces="9"/>
+            <field fieldname="par_value" fieldid="2310" decimalPlaces="9"/>
+            <field fieldname="intrst_ratio" fieldid="2287" decimalPlaces="12"/>
+            <field fieldname="intrst_days" fieldid="1864"/>
+            <field fieldname="pay_inteval" fieldid="1643"/>
+            <field fieldname="bond_accr_intrst" fieldid="2893" decimalPlaces="12"/>
+            <field fieldname="bond_rate_type" fieldid="2894"/>
+            <field fieldname="inteval_days" fieldid="1892"/>
+            <field fieldname="net_price_flag" fieldid="2019"/>
+            <field fieldname="last_trade_date" fieldid="3123"/>
+            <field fieldname="rights_type" fieldid="2404"/>
+            <field fieldname="trans_begin_date" fieldid="3035"/>
+            <field fieldname="trans_end_date" fieldid="3034"/>
+            <field fieldname="exec_begin_date" fieldid="1722"/>
+            <field fieldname="exec_end_date" fieldid="1721"/>
+            <field fieldname="impawn_ratio" fieldid="3026" decimalPlaces="12"/>
+            <field fieldname="trade_code" fieldid="1917"/>
+            <field fieldname="target_code" fieldid="1160"/>
+            <field fieldname="time_stamp" fieldid="2529"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_GetBondInfo" typename="LD_REQUEST" functionid="pubL.1.88" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+    </function>
+    <function functionname="funcl_basesedt_GetBondInfo" typename="LD_ANSWER" functionid="pubL.1.88" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_name" fieldid="2946"/>
+        <field fieldname="issue_date" fieldid="1505"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="value_date" fieldid="2354"/>
+        <field fieldname="next_value_date" fieldid="2747"/>
+        <field fieldname="begin_trade_date" fieldid="2498"/>
+        <field fieldname="bond_limit" fieldid="2895" decimalPlaces="2"/>
+        <field fieldname="issue_price" fieldid="1504" decimalPlaces="9"/>
+        <field fieldname="par_value" fieldid="2310" decimalPlaces="9"/>
+        <field fieldname="intrst_ratio" fieldid="2287" decimalPlaces="12"/>
+        <field fieldname="intrst_days" fieldid="1864"/>
+        <field fieldname="pay_inteval" fieldid="1643"/>
+        <field fieldname="bond_accr_intrst" fieldid="2893" decimalPlaces="12"/>
+        <field fieldname="bond_rate_type" fieldid="2894"/>
+        <field fieldname="inteval_days" fieldid="1892"/>
+        <field fieldname="net_price_flag" fieldid="2019"/>
+        <field fieldname="last_trade_date" fieldid="3123"/>
+        <field fieldname="rights_type" fieldid="2404"/>
+        <field fieldname="trans_begin_date" fieldid="3035"/>
+        <field fieldname="trans_end_date" fieldid="3034"/>
+        <field fieldname="exec_begin_date" fieldid="1722"/>
+        <field fieldname="exec_end_date" fieldid="1721"/>
+        <field fieldname="impawn_ratio" fieldid="3026" decimalPlaces="12"/>
+        <field fieldname="trade_code" fieldid="1917"/>
+        <field fieldname="target_code" fieldid="1160"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryBondInfoJour" typename="LD_REQUEST" functionid="pubL.1.85" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryBondInfoJour" typename="LD_ANSWER" functionid="pubL.1.85" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="jour_occur_field" fieldid="2184"/>
+            <field fieldname="jour_after_occur_info" fieldid="2185"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_QueryBondInfoJour_His" typename="LD_REQUEST" functionid="pubL.1.86" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryBondInfoJour_His" typename="LD_ANSWER" functionid="pubL.1.86" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="jour_occur_field" fieldid="2184"/>
+            <field fieldname="jour_after_occur_info" fieldid="2185"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_QueryBondImpawnInfo" typename="LD_REQUEST" functionid="pubL.1.87" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryBondImpawnInfo" typename="LD_ANSWER" functionid="pubL.1.87" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="impawn_code_no" fieldid="3250"/>
+            <field fieldname="impawn_code" fieldid="3251"/>
+            <field fieldname="impawn_ratio" fieldid="3026" decimalPlaces="12"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_AddBondRate" typename="LD_REQUEST" functionid="pubL.1.91" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="intrst_begin_date" fieldid="2163"/>
+        <field fieldname="intrst_ratio" fieldid="2287" decimalPlaces="12"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+    </function>
+    <function functionname="funcl_basesedt_AddBondRate" typename="LD_ANSWER" functionid="pubL.1.91" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_basesedt_ModiBondRate" typename="LD_REQUEST" functionid="pubL.1.92" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="intrst_begin_date" fieldid="2163"/>
+        <field fieldname="intrst_ratio" fieldid="2287" decimalPlaces="12"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+    </function>
+    <function functionname="funcl_basesedt_ModiBondRate" typename="LD_ANSWER" functionid="pubL.1.92" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_basesedt_DeleteBondRate" typename="LD_REQUEST" functionid="pubL.1.93" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="intrst_begin_date" fieldid="2163"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+    </function>
+    <function functionname="funcl_basesedt_DeleteBondRate" typename="LD_ANSWER" functionid="pubL.1.93" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryBondRate" typename="LD_REQUEST" functionid="pubL.1.94" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="time_stamp" fieldid="2529"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryBondRate" typename="LD_ANSWER" functionid="pubL.1.94" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="intrst_begin_date" fieldid="2163"/>
+            <field fieldname="intrst_ratio" fieldid="2287" decimalPlaces="12"/>
+            <field fieldname="time_stamp" fieldid="2529"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_QueryBondRateJour" typename="LD_REQUEST" functionid="pubL.1.95" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryBondRateJour" typename="LD_ANSWER" functionid="pubL.1.95" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="intrst_begin_date" fieldid="2163"/>
+            <field fieldname="intrst_ratio" fieldid="2287" decimalPlaces="12"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_QueryBondRateJour_His" typename="LD_REQUEST" functionid="pubL.1.96" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryBondRateJour_His" typename="LD_ANSWER" functionid="pubL.1.96" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="intrst_begin_date" fieldid="2163"/>
+            <field fieldname="intrst_ratio" fieldid="2287" decimalPlaces="12"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_AddBondRating" typename="LD_REQUEST" functionid="pubL.1.101" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="rating_agency" fieldid="2325"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="bond_level" fieldid="2891"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+    </function>
+    <function functionname="funcl_basesedt_AddBondRating" typename="LD_ANSWER" functionid="pubL.1.101" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_basesedt_ModiBondRating" typename="LD_REQUEST" functionid="pubL.1.102" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="rating_agency" fieldid="2325"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="bond_level" fieldid="2891"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+    </function>
+    <function functionname="funcl_basesedt_ModiBondRating" typename="LD_ANSWER" functionid="pubL.1.102" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_basesedt_DeleteBondRating" typename="LD_REQUEST" functionid="pubL.1.103" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="rating_agency" fieldid="2325"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+    </function>
+    <function functionname="funcl_basesedt_DeleteBondRating" typename="LD_ANSWER" functionid="pubL.1.103" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryBondRating" typename="LD_REQUEST" functionid="pubL.1.104" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryBondRating" typename="LD_ANSWER" functionid="pubL.1.104" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="rating_agency" fieldid="2325"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="bond_level" fieldid="2891"/>
+            <field fieldname="time_stamp" fieldid="2529"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_QueryBondRatingJour" typename="LD_REQUEST" functionid="pubL.1.105" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryBondRatingJour" typename="LD_ANSWER" functionid="pubL.1.105" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="rating_agency" fieldid="2325"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="bond_level" fieldid="2891"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_QueryBondRatingJour_His" typename="LD_REQUEST" functionid="pubL.1.106" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryBondRatingJour_His" typename="LD_ANSWER" functionid="pubL.1.106" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="rating_agency" fieldid="2325"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="bond_level" fieldid="2891"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_QueryRepoInfo" typename="LD_REQUEST" functionid="pubL.1.130" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryRepoInfo" typename="LD_ANSWER" functionid="pubL.1.130" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_type" fieldid="2938"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="repo_days" fieldid="1819"/>
+            <field fieldname="cash_capt_days" fieldid="3071"/>
+            <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_GetRepoStockFeeInfo" typename="LD_REQUEST" functionid="pubL.1.131" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="stock_code_no_str" fieldid="3192"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="stock_code_str" fieldid="3191"/>
+        <field fieldname="asset_acco_no_str" fieldid="3052"/>
+    </function>
+    <function functionname="funcl_basesedt_GetRepoStockFeeInfo" typename="LD_ANSWER" functionid="pubL.1.131" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <field fieldname="amt_ratio_str" fieldid="5183"/>
+        <field fieldname="amt_value_str" fieldid="5184"/>
+        <field fieldname="max_fee_str" fieldid="5185"/>
+        <field fieldname="min_fee_str" fieldid="5186"/>
+        <field fieldname="par_value" fieldid="2310" decimalPlaces="9"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryHKStepPrice" typename="LD_REQUEST" functionid="pubL.1.140" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryHKStepPrice" typename="LD_ANSWER" functionid="pubL.1.140" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="begin_price" fieldid="3849" decimalPlaces="9"/>
+            <field fieldname="end_price" fieldid="3850" decimalPlaces="9"/>
+            <field fieldname="step_price" fieldid="3125" decimalPlaces="9"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_NumberGetStockInfo" typename="LD_REQUEST" functionid="pubL.1.141" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+    </function>
+    <function functionname="funcl_basesedt_NumberGetStockInfo" typename="LD_ANSWER" functionid="pubL.1.141" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_AddFundInfo" typename="LD_REQUEST" functionid="pubL.1.142" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="stock_name" fieldid="2946"/>
+        <field fieldname="fund_kind" fieldid="1848"/>
+        <field fieldname="fund_manager" fieldid="1847"/>
+        <field fieldname="fund_trustee" fieldid="1850"/>
+        <field fieldname="distribution_scale" fieldid="5108" decimalPlaces="6"/>
+        <field fieldname="charging_method" fieldid="5109"/>
+        <field fieldname="default_divide_type" fieldid="5110"/>
+        <field fieldname="fund_found_date" fieldid="1844"/>
+        <field fieldname="fund_expire_date" fieldid="1845"/>
+        <field fieldname="subscription_trade_mark" fieldid="5111"/>
+        <field fieldname="purchase_trade_mark" fieldid="5112"/>
+        <field fieldname="rede_trade_mark" fieldid="5113"/>
+        <field fieldname="first_minimum_amt" fieldid="5114" decimalPlaces="6"/>
+        <field fieldname="minimum_subscription_amt" fieldid="5115" decimalPlaces="6"/>
+        <field fieldname="minimum_purchase_amt" fieldid="5116" decimalPlaces="6"/>
+        <field fieldname="minimum_rede_share" fieldid="5117" decimalPlaces="2"/>
+        <field fieldname="minimum_holding_share" fieldid="5118" decimalPlaces="2"/>
+        <field fieldname="minimum_turning_out_share" fieldid="5165" decimalPlaces="2"/>
+        <field fieldname="rede_money_to_account_days" fieldid="5119"/>
+        <field fieldname="registration_agency" fieldid="5222"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+    </function>
+    <function functionname="funcl_basesedt_AddFundInfo" typename="LD_ANSWER" functionid="pubL.1.142" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_basesedt_ModiFundInfo" typename="LD_REQUEST" functionid="pubL.1.143" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="stock_name" fieldid="2946"/>
+        <field fieldname="fund_kind" fieldid="1848"/>
+        <field fieldname="fund_manager" fieldid="1847"/>
+        <field fieldname="fund_trustee" fieldid="1850"/>
+        <field fieldname="distribution_scale" fieldid="5108" decimalPlaces="6"/>
+        <field fieldname="charging_method" fieldid="5109"/>
+        <field fieldname="default_divide_type" fieldid="5110"/>
+        <field fieldname="fund_found_date" fieldid="1844"/>
+        <field fieldname="fund_expire_date" fieldid="1845"/>
+        <field fieldname="subscription_trade_mark" fieldid="5111"/>
+        <field fieldname="purchase_trade_mark" fieldid="5112"/>
+        <field fieldname="rede_trade_mark" fieldid="5113"/>
+        <field fieldname="first_minimum_amt" fieldid="5114" decimalPlaces="6"/>
+        <field fieldname="minimum_subscription_amt" fieldid="5115" decimalPlaces="6"/>
+        <field fieldname="minimum_purchase_amt" fieldid="5116" decimalPlaces="6"/>
+        <field fieldname="minimum_rede_share" fieldid="5117" decimalPlaces="2"/>
+        <field fieldname="minimum_holding_share" fieldid="5118" decimalPlaces="2"/>
+        <field fieldname="minimum_turning_out_share" fieldid="5165" decimalPlaces="2"/>
+        <field fieldname="rede_money_to_account_days" fieldid="5119"/>
+        <field fieldname="registration_agency" fieldid="5222"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+    </function>
+    <function functionname="funcl_basesedt_ModiFundInfo" typename="LD_ANSWER" functionid="pubL.1.143" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_basesedt_DeleteFundInfo" typename="LD_REQUEST" functionid="pubL.1.144" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+    </function>
+    <function functionname="funcl_basesedt_DeleteFundInfo" typename="LD_ANSWER" functionid="pubL.1.144" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryFundInfo" typename="LD_REQUEST" functionid="pubL.1.145" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="time_stamp" fieldid="2529"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryFundInfo" typename="LD_ANSWER" functionid="pubL.1.145" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="fund_kind" fieldid="1848"/>
+            <field fieldname="fund_manager" fieldid="1847"/>
+            <field fieldname="fund_trustee" fieldid="1850"/>
+            <field fieldname="distribution_scale" fieldid="5108" decimalPlaces="6"/>
+            <field fieldname="charging_method" fieldid="5109"/>
+            <field fieldname="default_divide_type" fieldid="5110"/>
+            <field fieldname="fund_found_date" fieldid="1844"/>
+            <field fieldname="fund_expire_date" fieldid="1845"/>
+            <field fieldname="subscription_trade_mark" fieldid="5111"/>
+            <field fieldname="purchase_trade_mark" fieldid="5112"/>
+            <field fieldname="rede_trade_mark" fieldid="5113"/>
+            <field fieldname="first_minimum_amt" fieldid="5114" decimalPlaces="6"/>
+            <field fieldname="minimum_subscription_amt" fieldid="5115" decimalPlaces="6"/>
+            <field fieldname="minimum_purchase_amt" fieldid="5116" decimalPlaces="6"/>
+            <field fieldname="minimum_rede_share" fieldid="5117" decimalPlaces="2"/>
+            <field fieldname="minimum_holding_share" fieldid="5118" decimalPlaces="2"/>
+            <field fieldname="minimum_turning_out_share" fieldid="5165" decimalPlaces="2"/>
+            <field fieldname="rede_money_to_account_days" fieldid="5119"/>
+            <field fieldname="registration_agency" fieldid="5222"/>
+            <field fieldname="time_stamp" fieldid="2529"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_GetFundInfo" typename="LD_REQUEST" functionid="pubL.1.146" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+    </function>
+    <function functionname="funcl_basesedt_GetFundInfo" typename="LD_ANSWER" functionid="pubL.1.146" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_name" fieldid="2946"/>
+        <field fieldname="fund_kind" fieldid="1848"/>
+        <field fieldname="fund_manager" fieldid="1847"/>
+        <field fieldname="fund_trustee" fieldid="1850"/>
+        <field fieldname="distribution_scale" fieldid="5108" decimalPlaces="6"/>
+        <field fieldname="charging_method" fieldid="5109"/>
+        <field fieldname="default_divide_type" fieldid="5110"/>
+        <field fieldname="fund_found_date" fieldid="1844"/>
+        <field fieldname="fund_expire_date" fieldid="1845"/>
+        <field fieldname="subscription_trade_mark" fieldid="5111"/>
+        <field fieldname="purchase_trade_mark" fieldid="5112"/>
+        <field fieldname="rede_trade_mark" fieldid="5113"/>
+        <field fieldname="first_minimum_amt" fieldid="5114" decimalPlaces="6"/>
+        <field fieldname="minimum_subscription_amt" fieldid="5115" decimalPlaces="6"/>
+        <field fieldname="minimum_purchase_amt" fieldid="5116" decimalPlaces="6"/>
+        <field fieldname="minimum_rede_share" fieldid="5117" decimalPlaces="2"/>
+        <field fieldname="minimum_holding_share" fieldid="5118" decimalPlaces="2"/>
+        <field fieldname="minimum_turning_out_share" fieldid="5165" decimalPlaces="2"/>
+        <field fieldname="rede_money_to_account_days" fieldid="5119"/>
+        <field fieldname="registration_agency" fieldid="5222"/>
+        <field fieldname="time_stamp" fieldid="2529"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryFundInfoJour" typename="LD_REQUEST" functionid="pubL.1.147" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryFundInfoJour" typename="LD_ANSWER" functionid="pubL.1.147" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="jour_occur_field" fieldid="2184"/>
+            <field fieldname="jour_after_occur_info" fieldid="2185"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_QueryFundInfoJourHis" typename="LD_REQUEST" functionid="pubL.1.148" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryFundInfoJourHis" typename="LD_ANSWER" functionid="pubL.1.148" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="jour_occur_field" fieldid="2184"/>
+            <field fieldname="jour_after_occur_info" fieldid="2185"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_QueryNewStockMonitor" typename="LD_REQUEST" functionid="pubL.1.151" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryNewStockMonitor" typename="LD_ANSWER" functionid="pubL.1.151" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="trade_code" fieldid="1917"/>
+            <field fieldname="target_code" fieldid="1160"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="trade_code_no" fieldid="1918"/>
+            <field fieldname="target_code_no" fieldid="1161"/>
+            <field fieldname="apply_date" fieldid="2509"/>
+            <field fieldname="apply_limit" fieldid="2510" decimalPlaces="2"/>
+            <field fieldname="begin_trade_date" fieldid="2498"/>
+            <field fieldname="issue_price" fieldid="1504" decimalPlaces="9"/>
+            <field fieldname="warn_trade_amount" fieldid="5242" decimalPlaces="2"/>
+            <field fieldname="warn_buy_amount" fieldid="5243" decimalPlaces="2"/>
+            <field fieldname="warn_auto_sell" fieldid="5244"/>
+            <field fieldname="is_warn" fieldid="5245"/>
+            <field fieldname="stock_open_date" fieldid="5246"/>
+            <field fieldname="stock_open_price" fieldid="5247" decimalPlaces="9"/>
+            <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+            <field fieldname="buy_qty_1" fieldid="2208" decimalPlaces="2"/>
+            <field fieldname="up_limit_price" fieldid="2905" decimalPlaces="9"/>
+            <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_AddStockMonitorInfo" typename="LD_REQUEST" functionid="pubL.1.152" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="warn_trade_amount" fieldid="5242" decimalPlaces="2"/>
+        <field fieldname="warn_buy_amount" fieldid="5243" decimalPlaces="2"/>
+        <field fieldname="warn_auto_sell" fieldid="5244"/>
+    </function>
+    <function functionname="funcl_basesedt_AddStockMonitorInfo" typename="LD_ANSWER" functionid="pubL.1.152" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_basesedt_ModifyNewStockMonitor" typename="LD_REQUEST" functionid="pubL.1.153" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="warn_trade_amount" fieldid="5242" decimalPlaces="2"/>
+        <field fieldname="warn_buy_amount" fieldid="5243" decimalPlaces="2"/>
+        <field fieldname="warn_auto_sell" fieldid="5244"/>
+    </function>
+    <function functionname="funcl_basesedt_ModifyNewStockMonitor" typename="LD_ANSWER" functionid="pubL.1.153" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_basesedt_DeleteNewStockMonitor" typename="LD_REQUEST" functionid="pubL.1.154" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+    </function>
+    <function functionname="funcl_basesedt_DeleteNewStockMonitor" typename="LD_ANSWER" functionid="pubL.1.154" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryTriggerNewStock" typename="LD_REQUEST" functionid="pubL.1.155" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryTriggerNewStock" typename="LD_ANSWER" functionid="pubL.1.155" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="warn_trade_amount" fieldid="5242" decimalPlaces="2"/>
+            <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+            <field fieldname="warn_buy_amount" fieldid="5243" decimalPlaces="2"/>
+            <field fieldname="buy_qty_1" fieldid="2208" decimalPlaces="2"/>
+            <field fieldname="up_limit_price" fieldid="2905" decimalPlaces="9"/>
+            <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_UpdateMonitorInfo" typename="LD_REQUEST" functionid="pubL.1.156" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="buy_qty_1" fieldid="2208" decimalPlaces="2"/>
+        <field fieldname="up_limit_price" fieldid="2905" decimalPlaces="9"/>
+        <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+        <field fieldname="is_warn" fieldid="5245"/>
+    </function>
+    <function functionname="funcl_basesedt_UpdateMonitorInfo" typename="LD_ANSWER" functionid="pubL.1.156" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryAllNewStock" typename="LD_REQUEST" functionid="pubL.1.157" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryAllNewStock" typename="LD_ANSWER" functionid="pubL.1.157" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="trade_code" fieldid="1917"/>
+            <field fieldname="target_code" fieldid="1160"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="trade_code_no" fieldid="1918"/>
+            <field fieldname="target_code_no" fieldid="1161"/>
+            <field fieldname="apply_date" fieldid="2509"/>
+            <field fieldname="apply_pay_date" fieldid="5940"/>
+            <field fieldname="apply_limit" fieldid="2510" decimalPlaces="2"/>
+            <field fieldname="begin_trade_date" fieldid="2498"/>
+            <field fieldname="issue_price" fieldid="1504" decimalPlaces="9"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_AddFundPdCompRelation" typename="LD_REQUEST" functionid="pubL.1.158" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="stock_name" fieldid="2946"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="co_no" fieldid="1828"/>
+    </function>
+    <function functionname="funcl_basesedt_AddFundPdCompRelation" typename="LD_ANSWER" functionid="pubL.1.158" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_basesedt_ModifyFundPdCompRelation" typename="LD_REQUEST" functionid="pubL.1.159" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="stock_name" fieldid="2946"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="co_no" fieldid="1828"/>
+    </function>
+    <function functionname="funcl_basesedt_ModifyFundPdCompRelation" typename="LD_ANSWER" functionid="pubL.1.159" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryFundPdCompRelation" typename="LD_REQUEST" functionid="pubL.1.160" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryFundPdCompRelation" typename="LD_ANSWER" functionid="pubL.1.160" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="co_no" fieldid="1828"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_UpdateFundPdQuot" typename="LD_REQUEST" functionid="pubL.1.161" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+    </function>
+    <function functionname="funcl_basesedt_UpdateFundPdQuot" typename="LD_ANSWER" functionid="pubL.1.161" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_basesedt_DeleteFundPdCompRelation" typename="LD_REQUEST" functionid="pubL.1.162" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="co_no" fieldid="1828"/>
+    </function>
+    <function functionname="funcl_basesedt_DeleteFundPdCompRelation" typename="LD_ANSWER" functionid="pubL.1.162" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_basesedt_SyncOffSiteFundAttrInf" typename="LD_REQUEST" functionid="pubL.1.163" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="fund_kind" fieldid="1848"/>
+        <field fieldname="first_minimum_amt" fieldid="5114" decimalPlaces="6"/>
+        <field fieldname="minimum_subscription_amt" fieldid="5115" decimalPlaces="6"/>
+        <field fieldname="minimum_purchase_amt" fieldid="5116" decimalPlaces="6"/>
+        <field fieldname="minimum_rede_share" fieldid="5117" decimalPlaces="2"/>
+        <field fieldname="minimum_holding_share" fieldid="5118" decimalPlaces="2"/>
+        <field fieldname="minimum_turning_out_share" fieldid="5165" decimalPlaces="2"/>
+        <field fieldname="rede_money_to_account_days" fieldid="5119"/>
+    </function>
+    <function functionname="funcl_basesedt_SyncOffSiteFundAttrInf" typename="LD_ANSWER" functionid="pubL.1.163" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_basesedt_QuerySpecStockQuotCalcUnit" typename="LD_REQUEST" functionid="pubL.1.164" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QuerySpecStockQuotCalcUnit" typename="LD_ANSWER" functionid="pubL.1.164" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="quot_calc_unit" fieldid="5638" decimalPlaces="9"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_UpdateSpecStockQuotCalcUnit" typename="LD_REQUEST" functionid="pubL.1.165" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="quot_calc_unit" fieldid="5638" decimalPlaces="9"/>
+    </function>
+    <function functionname="funcl_basesedt_UpdateSpecStockQuotCalcUnit" typename="LD_ANSWER" functionid="pubL.1.165" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_basesedt_DeleteSpecStockQuotCalcUnit" typename="LD_REQUEST" functionid="pubL.1.166" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+    </function>
+    <function functionname="funcl_basesedt_DeleteSpecStockQuotCalcUnit" typename="LD_ANSWER" functionid="pubL.1.166" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockClosePrice" typename="LD_REQUEST" functionid="pubL.1.177" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="stock_type_str" fieldid="2939"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockClosePrice" typename="LD_ANSWER" functionid="pubL.1.177" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="up_limit_price" fieldid="2905" decimalPlaces="9"/>
+            <field fieldname="down_limit_price" fieldid="1436" decimalPlaces="9"/>
+            <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+            <field fieldname="pre_close_price" fieldid="3140" decimalPlaces="9"/>
+            <field fieldname="today_open_price" fieldid="2001" decimalPlaces="9"/>
+            <field fieldname="today_close_price" fieldid="2002" decimalPlaces="9"/>
+            <field fieldname="today_max_price" fieldid="2004" decimalPlaces="9"/>
+            <field fieldname="today_min_price" fieldid="2003" decimalPlaces="9"/>
+        </sequence>
+    </function>
+</bizmsgs>

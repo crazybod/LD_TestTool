@@ -1,0 +1,1953 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bizmsgs>
+    <function functionname="funcl_rkserk_AddSecuClientRiskRule" typename="LD_REQUEST" functionid="rksecuL.4.1" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no_str" fieldid="1230"/>
+        <field fieldname="exch_group_no_str" fieldid="1963"/>
+        <field fieldname="model_id" fieldid="2247"/>
+        <field fieldname="risk_item_id" fieldid="1630"/>
+        <field fieldname="templ_flag" fieldid="3702"/>
+        <field fieldname="union_flag" fieldid="3881"/>
+        <field fieldname="group_no_str" fieldid="5942"/>
+    </function>
+    <function functionname="funcl_rkserk_AddSecuClientRiskRule" typename="LD_ANSWER" functionid="rksecuL.4.1" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="order_dir_str" fieldid="1450"/>
+        <field fieldname="dime_id" fieldid="2717"/>
+        <field fieldname="trig_stage_type_str" fieldid="3882"/>
+        <field fieldname="compli_calc_level" fieldid="1751"/>
+        <field fieldname="unit_nav_flag" fieldid="1379"/>
+        <field fieldname="trig_type" fieldid="1348"/>
+        <field fieldname="compli_rules_remark" fieldid="1745"/>
+        <field fieldname="risk_rule_id" fieldid="1615"/>
+        <field fieldname="risk_rule_type" fieldid="1612"/>
+        <field fieldname="risk_rule_name" fieldid="1614"/>
+        <field fieldname="risk_rule_code" fieldid="1611"/>
+        <field fieldname="risk_param_str" fieldid="1633"/>
+        <field fieldname="risk_rule_value_str1" fieldid="1620"/>
+        <field fieldname="risk_rule_action1" fieldid="1605"/>
+        <field fieldname="risk_rule_value_str2" fieldid="1621"/>
+        <field fieldname="risk_rule_action2" fieldid="1606"/>
+        <field fieldname="risk_rule_value_str3" fieldid="1622"/>
+        <field fieldname="risk_rule_action3" fieldid="1607"/>
+        <field fieldname="risk_rule_value_str4" fieldid="1623"/>
+        <field fieldname="risk_rule_action4" fieldid="1608"/>
+        <field fieldname="corrsp_plug" fieldid="1480"/>
+        <field fieldname="begin_time" fieldid="2074"/>
+        <field fieldname="end_time" fieldid="1987"/>
+        <field fieldname="rule_flag" fieldid="2352"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="funcl_rkserk_DeleteSecuClientRiskRule" typename="LD_REQUEST" functionid="rksecuL.4.2" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no_str" fieldid="1230"/>
+        <field fieldname="exch_group_no_str" fieldid="1963"/>
+        <field fieldname="model_id" fieldid="2247"/>
+        <field fieldname="risk_item_id_str" fieldid="1631"/>
+    </function>
+    <function functionname="funcl_rkserk_DeleteSecuClientRiskRule" typename="LD_ANSWER" functionid="rksecuL.4.2" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_rkserk_QuerySecuClientRiskRule" typename="LD_REQUEST" functionid="rksecuL.4.3" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="model_id" fieldid="2247"/>
+        <field fieldname="risk_item_id_str" fieldid="1631"/>
+        <field fieldname="risk_rule_type_str" fieldid="1613"/>
+        <field fieldname="trig_stage_type" fieldid="1350"/>
+        <field fieldname="templ_flag" fieldid="3702"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_rkserk_QuerySecuClientRiskRule" typename="LD_ANSWER" functionid="rksecuL.4.3" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no_str" fieldid="1230"/>
+            <field fieldname="exch_group_no_str" fieldid="1963"/>
+            <field fieldname="exch_no_str" fieldid="2539"/>
+            <field fieldname="order_dir_str" fieldid="1450"/>
+            <field fieldname="dime_id" fieldid="2717"/>
+            <field fieldname="trig_stage_type_str" fieldid="3882"/>
+            <field fieldname="compli_calc_level" fieldid="1751"/>
+            <field fieldname="unit_nav_flag" fieldid="1379"/>
+            <field fieldname="trig_type" fieldid="1348"/>
+            <field fieldname="model_id" fieldid="2247"/>
+            <field fieldname="risk_item_id" fieldid="1630"/>
+            <field fieldname="compli_rules_remark" fieldid="1745"/>
+            <field fieldname="risk_rule_id" fieldid="1615"/>
+            <field fieldname="risk_rule_type" fieldid="1612"/>
+            <field fieldname="risk_rule_name" fieldid="1614"/>
+            <field fieldname="risk_rule_code" fieldid="1611"/>
+            <field fieldname="risk_param_str" fieldid="1633"/>
+            <field fieldname="risk_rule_value_str1" fieldid="1620"/>
+            <field fieldname="risk_rule_action1" fieldid="1605"/>
+            <field fieldname="risk_rule_value_str2" fieldid="1621"/>
+            <field fieldname="risk_rule_action2" fieldid="1606"/>
+            <field fieldname="risk_rule_value_str3" fieldid="1622"/>
+            <field fieldname="risk_rule_action3" fieldid="1607"/>
+            <field fieldname="risk_rule_value_str4" fieldid="1623"/>
+            <field fieldname="risk_rule_action4" fieldid="1608"/>
+            <field fieldname="templ_flag" fieldid="3702"/>
+            <field fieldname="corrsp_plug" fieldid="1480"/>
+            <field fieldname="begin_time" fieldid="2074"/>
+            <field fieldname="end_time" fieldid="1987"/>
+            <field fieldname="rule_flag" fieldid="2352"/>
+            <field fieldname="union_flag" fieldid="3881"/>
+            <field fieldname="group_no_str" fieldid="5942"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_rkserk_HoldingRiskComplianceJudge" typename="LD_REQUEST" functionid="rksecuL.4.4" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="client_risk_rule_id_str" fieldid="1617"/>
+    </function>
+    <function functionname="funcl_rkserk_HoldingRiskComplianceJudge" typename="LD_ANSWER" functionid="rksecuL.4.4" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="client_risk_rule_id" fieldid="1616"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="compli_rules_remark" fieldid="1745"/>
+            <field fieldname="risk_rule_action" fieldid="1604"/>
+            <field fieldname="risk_rule_value_str" fieldid="1619"/>
+            <field fieldname="risk_rule_calc_str" fieldid="1618"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="pd_no_str" fieldid="1230"/>
+            <field fieldname="dime_id" fieldid="2717"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="risk_rule_type" fieldid="1612"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_rkserk_QuerySecuClientRiskTrig" typename="LD_REQUEST" functionid="rksecuL.4.5" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="create_date" fieldid="1354"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="risk_rule_action" fieldid="1604"/>
+        <field fieldname="risk_rule_type" fieldid="1612"/>
+        <field fieldname="trig_stage_type" fieldid="1350"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_rkserk_QuerySecuClientRiskTrig" typename="LD_ANSWER" functionid="rksecuL.4.5" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="create_date" fieldid="1354"/>
+            <field fieldname="create_time" fieldid="1355"/>
+            <field fieldname="risk_item_id" fieldid="1630"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="order_dir" fieldid="1449"/>
+            <field fieldname="dime_id" fieldid="2717"/>
+            <field fieldname="trig_stage_type" fieldid="1350"/>
+            <field fieldname="compli_calc_level" fieldid="1751"/>
+            <field fieldname="unit_nav_flag" fieldid="1379"/>
+            <field fieldname="trig_type" fieldid="1348"/>
+            <field fieldname="compli_rules_remark" fieldid="1745"/>
+            <field fieldname="risk_rule_action" fieldid="1604"/>
+            <field fieldname="risk_rule_type" fieldid="1612"/>
+            <field fieldname="risk_rule_value_str" fieldid="1619"/>
+            <field fieldname="risk_rule_calc_str" fieldid="1618"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="pd_no_str" fieldid="1230"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_rkserk_QueryPdExchGroupByModel" typename="LD_REQUEST" functionid="rksecuL.4.6" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="model_id" fieldid="2247"/>
+        <field fieldname="risk_rule_type_str" fieldid="1613"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_rkserk_QueryPdExchGroupByModel" typename="LD_ANSWER" functionid="rksecuL.4.6" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="pd_no_str" fieldid="1230"/>
+            <field fieldname="exch_group_no_str" fieldid="1963"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_rkserk_CheckCalcSecuClientRisk" typename="LD_REQUEST" functionid="rksecuL.4.7" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="trig_stage_type" fieldid="1350"/>
+    </function>
+    <function functionname="funcl_rkserk_CheckCalcSecuClientRisk" typename="LD_ANSWER" functionid="rksecuL.4.7" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="client_risk_rule_id" fieldid="1616"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="compli_rules_remark" fieldid="1745"/>
+            <field fieldname="risk_rule_action" fieldid="1604"/>
+            <field fieldname="risk_rule_value_str" fieldid="1619"/>
+            <field fieldname="risk_rule_calc_str" fieldid="1618"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_rkserk_InsertProductMonitorSet" typename="LD_REQUEST" functionid="rksecuL.4.8" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no_str" fieldid="1230"/>
+        <field fieldname="exch_group_no_str" fieldid="1963"/>
+        <field fieldname="moni_role_type" fieldid="1893"/>
+        <field fieldname="moni_value_flag" fieldid="1898"/>
+        <field fieldname="moni_value_type" fieldid="1899"/>
+        <field fieldname="warn_posi_value" fieldid="3351" decimalPlaces="6"/>
+        <field fieldname="warn_trig_oper_type" fieldid="4053"/>
+        <field fieldname="close_posi_value" fieldid="2319" decimalPlaces="6"/>
+        <field fieldname="close_trig_oper_type" fieldid="4055"/>
+        <field fieldname="appd_value" fieldid="3041" decimalPlaces="6"/>
+        <field fieldname="appd_trig_oper_type" fieldid="4054"/>
+        <field fieldname="begin_moni_date" fieldid="4050"/>
+        <field fieldname="begin_moni_value" fieldid="2353" decimalPlaces="6"/>
+        <field fieldname="max_moni_value" fieldid="3104" decimalPlaces="6"/>
+        <field fieldname="contrs_stock_code" fieldid="1474"/>
+        <field fieldname="contrs_exch_no" fieldid="1473"/>
+        <field fieldname="contrs_max_moni_value" fieldid="1475" decimalPlaces="6"/>
+        <field fieldname="close_posi_flag" fieldid="2312"/>
+        <field fieldname="close_ratio_level_one" fieldid="2801" decimalPlaces="12"/>
+        <field fieldname="close_ratio_level_two" fieldid="1501" decimalPlaces="12"/>
+        <field fieldname="close_ratio_level_three" fieldid="2482" decimalPlaces="12"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funcl_rkserk_InsertProductMonitorSet" typename="LD_ANSWER" functionid="rksecuL.4.8" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_rkserk_UpdateProductMonitorSet" typename="LD_REQUEST" functionid="rksecuL.4.9" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="moni_set_id" fieldid="1896"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no_str" fieldid="1230"/>
+        <field fieldname="exch_group_no_str" fieldid="1963"/>
+        <field fieldname="moni_role_type" fieldid="1893"/>
+        <field fieldname="moni_value_flag" fieldid="1898"/>
+        <field fieldname="moni_value_type" fieldid="1899"/>
+        <field fieldname="warn_posi_value" fieldid="3351" decimalPlaces="6"/>
+        <field fieldname="warn_trig_oper_type" fieldid="4053"/>
+        <field fieldname="close_posi_value" fieldid="2319" decimalPlaces="6"/>
+        <field fieldname="close_trig_oper_type" fieldid="4055"/>
+        <field fieldname="appd_value" fieldid="3041" decimalPlaces="6"/>
+        <field fieldname="appd_trig_oper_type" fieldid="4054"/>
+        <field fieldname="begin_moni_date" fieldid="4050"/>
+        <field fieldname="begin_moni_value" fieldid="2353" decimalPlaces="6"/>
+        <field fieldname="max_moni_value" fieldid="3104" decimalPlaces="6"/>
+        <field fieldname="curr_moni_value" fieldid="1395" decimalPlaces="6"/>
+        <field fieldname="contrs_stock_code" fieldid="1474"/>
+        <field fieldname="contrs_exch_no" fieldid="1473"/>
+        <field fieldname="contrs_max_moni_value" fieldid="1475" decimalPlaces="6"/>
+        <field fieldname="close_posi_flag" fieldid="2312"/>
+        <field fieldname="close_ratio_level_one" fieldid="2801" decimalPlaces="12"/>
+        <field fieldname="close_ratio_level_two" fieldid="1501" decimalPlaces="12"/>
+        <field fieldname="close_ratio_level_three" fieldid="2482" decimalPlaces="12"/>
+        <field fieldname="trig_oper_type" fieldid="3902"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funcl_rkserk_UpdateProductMonitorSet" typename="LD_ANSWER" functionid="rksecuL.4.9" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_rkserk_DeleteProductMonitorSet" typename="LD_REQUEST" functionid="rksecuL.4.10" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="moni_set_id" fieldid="1896"/>
+    </function>
+    <function functionname="funcl_rkserk_DeleteProductMonitorSet" typename="LD_ANSWER" functionid="rksecuL.4.10" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_rkserk_QueryProductMonitorSet" typename="LD_REQUEST" functionid="rksecuL.4.11" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="moni_role_type" fieldid="1893"/>
+        <field fieldname="moni_value_flag" fieldid="1898"/>
+        <field fieldname="moni_value_type" fieldid="1899"/>
+        <field fieldname="moni_set_status" fieldid="1897"/>
+        <field fieldname="moni_result_status" fieldid="1895"/>
+        <field fieldname="sort_type" fieldid="2290"/>
+    </function>
+    <function functionname="funcl_rkserk_QueryProductMonitorSet" typename="LD_ANSWER" functionid="rksecuL.4.11" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no_str" fieldid="1230"/>
+            <field fieldname="exch_group_no_str" fieldid="1963"/>
+            <field fieldname="moni_role_type" fieldid="1893"/>
+            <field fieldname="moni_value_flag" fieldid="1898"/>
+            <field fieldname="moni_value_type" fieldid="1899"/>
+            <field fieldname="warn_posi_value" fieldid="3351" decimalPlaces="6"/>
+            <field fieldname="warn_trig_oper_type" fieldid="4053"/>
+            <field fieldname="close_posi_value" fieldid="2319" decimalPlaces="6"/>
+            <field fieldname="close_trig_oper_type" fieldid="4055"/>
+            <field fieldname="appd_value" fieldid="3041" decimalPlaces="6"/>
+            <field fieldname="appd_trig_oper_type" fieldid="4054"/>
+            <field fieldname="begin_moni_date" fieldid="4050"/>
+            <field fieldname="begin_moni_value" fieldid="2353" decimalPlaces="6"/>
+            <field fieldname="max_moni_value" fieldid="3104" decimalPlaces="6"/>
+            <field fieldname="curr_moni_value" fieldid="1395" decimalPlaces="6"/>
+            <field fieldname="curr_result_moni_value" fieldid="1394" decimalPlaces="6"/>
+            <field fieldname="contrs_stock_code" fieldid="1474"/>
+            <field fieldname="contrs_exch_no" fieldid="1473"/>
+            <field fieldname="contrs_max_moni_value" fieldid="1475" decimalPlaces="6"/>
+            <field fieldname="contrs_curr_moni_value" fieldid="1470" decimalPlaces="6"/>
+            <field fieldname="contrs_result_moni_value" fieldid="1471" decimalPlaces="6"/>
+            <field fieldname="moni_result_value" fieldid="1894" decimalPlaces="6"/>
+            <field fieldname="moni_result_status" fieldid="1895"/>
+            <field fieldname="moni_set_status" fieldid="1897"/>
+            <field fieldname="cash_asset" fieldid="2752" decimalPlaces="6"/>
+            <field fieldname="fund_asset" fieldid="1853" decimalPlaces="6"/>
+            <field fieldname="bond_asset" fieldid="2897" decimalPlaces="6"/>
+            <field fieldname="stock_asset" fieldid="1710" decimalPlaces="6"/>
+            <field fieldname="repo_asset" fieldid="1821" decimalPlaces="6"/>
+            <field fieldname="nav_asset" fieldid="2035" decimalPlaces="6"/>
+            <field fieldname="stock_asset_ratio" fieldid="1711" decimalPlaces="12"/>
+            <field fieldname="close_posi_flag" fieldid="2312"/>
+            <field fieldname="close_ratio_level_one" fieldid="2801" decimalPlaces="12"/>
+            <field fieldname="close_ratio_level_two" fieldid="1501" decimalPlaces="12"/>
+            <field fieldname="close_ratio_level_three" fieldid="2482" decimalPlaces="12"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+            <field fieldname="pd_share" fieldid="1250" decimalPlaces="2"/>
+            <field fieldname="begin_asset_value" fieldid="3249" decimalPlaces="6"/>
+            <field fieldname="hk_thrgh_stock_asset" fieldid="3560" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_rkserk_StartProductMonitorSet" typename="LD_REQUEST" functionid="rksecuL.4.12" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="moni_set_id" fieldid="1896"/>
+    </function>
+    <function functionname="funcl_rkserk_StartProductMonitorSet" typename="LD_ANSWER" functionid="rksecuL.4.12" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_rkserk_PauseProductMonitorSet" typename="LD_REQUEST" functionid="rksecuL.4.13" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="moni_set_id" fieldid="1896"/>
+    </function>
+    <function functionname="funcl_rkserk_PauseProductMonitorSet" typename="LD_ANSWER" functionid="rksecuL.4.13" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_rkserk_StopProductMonitorSet" typename="LD_REQUEST" functionid="rksecuL.4.14" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="moni_set_id" fieldid="1896"/>
+    </function>
+    <function functionname="funcl_rkserk_StopProductMonitorSet" typename="LD_ANSWER" functionid="rksecuL.4.14" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_rkserk_StartAllProductMonitorSet" typename="LD_REQUEST" functionid="rksecuL.4.15" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+    </function>
+    <function functionname="funcl_rkserk_StartAllProductMonitorSet" typename="LD_ANSWER" functionid="rksecuL.4.15" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_rkserk_PauseAllProductMonitorSet" typename="LD_REQUEST" functionid="rksecuL.4.16" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+    </function>
+    <function functionname="funcl_rkserk_PauseAllProductMonitorSet" typename="LD_ANSWER" functionid="rksecuL.4.16" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_rkserk_StopAllProductMonitorSet" typename="LD_REQUEST" functionid="rksecuL.4.17" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+    </function>
+    <function functionname="funcl_rkserk_StopAllProductMonitorSet" typename="LD_ANSWER" functionid="rksecuL.4.17" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_rkserk_InsertStockMonitorSet" typename="LD_REQUEST" functionid="rksecuL.4.18" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no_str" fieldid="1230"/>
+        <field fieldname="exch_group_no_str" fieldid="1963"/>
+        <field fieldname="monitor_ctrl_type" fieldid="3952"/>
+        <field fieldname="moni_value_type" fieldid="1899"/>
+        <field fieldname="monitor_param_value" fieldid="3954"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="moni_value_flag" fieldid="1898"/>
+        <field fieldname="warn_posi_value" fieldid="3351" decimalPlaces="6"/>
+        <field fieldname="appd_value" fieldid="3041" decimalPlaces="6"/>
+        <field fieldname="close_posi_value" fieldid="2319" decimalPlaces="6"/>
+        <field fieldname="max_moni_value" fieldid="3104" decimalPlaces="6"/>
+        <field fieldname="contrs_stock_code" fieldid="1474"/>
+        <field fieldname="contrs_exch_no" fieldid="1473"/>
+        <field fieldname="contrs_max_moni_value" fieldid="1475" decimalPlaces="6"/>
+        <field fieldname="close_posi_flag" fieldid="2312"/>
+        <field fieldname="close_ratio_level_one" fieldid="2801" decimalPlaces="12"/>
+        <field fieldname="close_ratio_level_two" fieldid="1501" decimalPlaces="12"/>
+        <field fieldname="close_ratio_level_three" fieldid="2482" decimalPlaces="12"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funcl_rkserk_InsertStockMonitorSet" typename="LD_ANSWER" functionid="rksecuL.4.18" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <field fieldname="moni_set_id" fieldid="1896"/>
+    </function>
+    <function functionname="funcl_rkserk_UpdateStockMonitorSet" typename="LD_REQUEST" functionid="rksecuL.4.19" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="moni_set_id" fieldid="1896"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no_str" fieldid="1230"/>
+        <field fieldname="exch_group_no_str" fieldid="1963"/>
+        <field fieldname="monitor_ctrl_type" fieldid="3952"/>
+        <field fieldname="moni_value_type" fieldid="1899"/>
+        <field fieldname="monitor_param_value" fieldid="3954"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="moni_value_flag" fieldid="1898"/>
+        <field fieldname="warn_posi_value" fieldid="3351" decimalPlaces="6"/>
+        <field fieldname="appd_value" fieldid="3041" decimalPlaces="6"/>
+        <field fieldname="close_posi_value" fieldid="2319" decimalPlaces="6"/>
+        <field fieldname="max_moni_value" fieldid="3104" decimalPlaces="6"/>
+        <field fieldname="contrs_stock_code" fieldid="1474"/>
+        <field fieldname="contrs_exch_no" fieldid="1473"/>
+        <field fieldname="contrs_max_moni_value" fieldid="1475" decimalPlaces="6"/>
+        <field fieldname="close_posi_flag" fieldid="2312"/>
+        <field fieldname="close_ratio_level_one" fieldid="2801" decimalPlaces="12"/>
+        <field fieldname="close_ratio_level_two" fieldid="1501" decimalPlaces="12"/>
+        <field fieldname="close_ratio_level_three" fieldid="2482" decimalPlaces="12"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funcl_rkserk_UpdateStockMonitorSet" typename="LD_ANSWER" functionid="rksecuL.4.19" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_rkserk_DeleteStockMonitorSet" typename="LD_REQUEST" functionid="rksecuL.4.20" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="moni_set_id" fieldid="1896"/>
+    </function>
+    <function functionname="funcl_rkserk_DeleteStockMonitorSet" typename="LD_ANSWER" functionid="rksecuL.4.20" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_rkserk_QueryStockMonitorSet" typename="LD_REQUEST" functionid="rksecuL.4.21" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="moni_value_flag" fieldid="1898"/>
+        <field fieldname="moni_value_type" fieldid="1899"/>
+        <field fieldname="moni_set_status" fieldid="1897"/>
+        <field fieldname="moni_result_status" fieldid="1895"/>
+        <field fieldname="sort_type" fieldid="2290"/>
+    </function>
+    <function functionname="funcl_rkserk_QueryStockMonitorSet" typename="LD_ANSWER" functionid="rksecuL.4.21" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="pd_no_str" fieldid="1230"/>
+            <field fieldname="exch_group_no_str" fieldid="1963"/>
+            <field fieldname="monitor_ctrl_type" fieldid="3952"/>
+            <field fieldname="moni_value_type" fieldid="1899"/>
+            <field fieldname="monitor_param_value" fieldid="3954"/>
+            <field fieldname="moni_value_flag" fieldid="1898"/>
+            <field fieldname="warn_posi_value" fieldid="3351" decimalPlaces="6"/>
+            <field fieldname="appd_value" fieldid="3041" decimalPlaces="6"/>
+            <field fieldname="close_posi_value" fieldid="2319" decimalPlaces="6"/>
+            <field fieldname="max_moni_value" fieldid="3104" decimalPlaces="6"/>
+            <field fieldname="curr_moni_value" fieldid="1395" decimalPlaces="6"/>
+            <field fieldname="curr_result_moni_value" fieldid="1394" decimalPlaces="6"/>
+            <field fieldname="contrs_stock_code" fieldid="1474"/>
+            <field fieldname="contrs_exch_no" fieldid="1473"/>
+            <field fieldname="contrs_max_moni_value" fieldid="1475" decimalPlaces="6"/>
+            <field fieldname="contrs_curr_moni_value" fieldid="1470" decimalPlaces="6"/>
+            <field fieldname="contrs_result_moni_value" fieldid="1471" decimalPlaces="6"/>
+            <field fieldname="moni_result_value" fieldid="1894" decimalPlaces="6"/>
+            <field fieldname="moni_result_status" fieldid="1895"/>
+            <field fieldname="moni_set_status" fieldid="1897"/>
+            <field fieldname="close_posi_flag" fieldid="2312"/>
+            <field fieldname="close_ratio_level_one" fieldid="2801" decimalPlaces="12"/>
+            <field fieldname="close_ratio_level_two" fieldid="1501" decimalPlaces="12"/>
+            <field fieldname="close_ratio_level_three" fieldid="2482" decimalPlaces="12"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_rkserk_StartStockMonitorSet" typename="LD_REQUEST" functionid="rksecuL.4.22" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="moni_set_id" fieldid="1896"/>
+    </function>
+    <function functionname="funcl_rkserk_StartStockMonitorSet" typename="LD_ANSWER" functionid="rksecuL.4.22" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_rkserk_PauseStockMonitorSet" typename="LD_REQUEST" functionid="rksecuL.4.23" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="moni_set_id" fieldid="1896"/>
+    </function>
+    <function functionname="funcl_rkserk_PauseStockMonitorSet" typename="LD_ANSWER" functionid="rksecuL.4.23" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_rkserk_StopStockMonitorSet" typename="LD_REQUEST" functionid="rksecuL.4.24" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="moni_set_id" fieldid="1896"/>
+    </function>
+    <function functionname="funcl_rkserk_StopStockMonitorSet" typename="LD_ANSWER" functionid="rksecuL.4.24" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_rkserk_StartAllStockMonitorSet" typename="LD_REQUEST" functionid="rksecuL.4.25" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+    </function>
+    <function functionname="funcl_rkserk_StartAllStockMonitorSet" typename="LD_ANSWER" functionid="rksecuL.4.25" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_rkserk_PauseAllStockMonitorSet" typename="LD_REQUEST" functionid="rksecuL.4.26" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+    </function>
+    <function functionname="funcl_rkserk_PauseAllStockMonitorSet" typename="LD_ANSWER" functionid="rksecuL.4.26" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_rkserk_StopAllStockMonitorSet" typename="LD_REQUEST" functionid="rksecuL.4.27" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+    </function>
+    <function functionname="funcl_rkserk_StopAllStockMonitorSet" typename="LD_ANSWER" functionid="rksecuL.4.27" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_rkserk_CalcStockMonitorSetService" typename="LD_REQUEST" functionid="rksecuL.4.28" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="task_no" fieldid="2424"/>
+        <field fieldname="exec_count" fieldid="2951"/>
+        <field fieldname="exec_date" fieldid="2953"/>
+        <field fieldname="exec_time" fieldid="2954"/>
+    </function>
+    <function functionname="funcl_rkserk_CalcStockMonitorSetService" typename="LD_ANSWER" functionid="rksecuL.4.28" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <field fieldname="task_strike_status" fieldid="2430"/>
+    </function>
+    <function functionname="funcl_rkserk_QueryHisSecuClientRiskTrig" typename="LD_REQUEST" functionid="rksecuL.4.29" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="trig_stage_type" fieldid="1350"/>
+        <field fieldname="risk_rule_action" fieldid="1604"/>
+        <field fieldname="risk_rule_type" fieldid="1612"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_rkserk_QueryHisSecuClientRiskTrig" typename="LD_ANSWER" functionid="rksecuL.4.29" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="create_date" fieldid="1354"/>
+            <field fieldname="create_time" fieldid="1355"/>
+            <field fieldname="risk_item_id" fieldid="1630"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="order_dir" fieldid="1449"/>
+            <field fieldname="dime_id" fieldid="2717"/>
+            <field fieldname="trig_stage_type" fieldid="1350"/>
+            <field fieldname="compli_calc_level" fieldid="1751"/>
+            <field fieldname="unit_nav_flag" fieldid="1379"/>
+            <field fieldname="trig_type" fieldid="1348"/>
+            <field fieldname="compli_rules_remark" fieldid="1745"/>
+            <field fieldname="risk_rule_action" fieldid="1604"/>
+            <field fieldname="risk_rule_type" fieldid="1612"/>
+            <field fieldname="risk_rule_value_str" fieldid="1619"/>
+            <field fieldname="risk_rule_calc_str" fieldid="1618"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="pd_no_str" fieldid="1230"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_rkserk_QueryPdExchGroupByItem" typename="LD_REQUEST" functionid="rksecuL.4.30" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="risk_item_id" fieldid="1630"/>
+    </function>
+    <function functionname="funcl_rkserk_QueryPdExchGroupByItem" typename="LD_ANSWER" functionid="rksecuL.4.30" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="pd_no_str" fieldid="1230"/>
+            <field fieldname="exch_group_no_str" fieldid="1963"/>
+            <field fieldname="union_flag" fieldid="3881"/>
+            <field fieldname="group_no_str" fieldid="5942"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_rkserk_UpdateClientRiskRuleFlag" typename="LD_REQUEST" functionid="rksecuL.4.31" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="rule_flag" fieldid="2352"/>
+    </function>
+    <function functionname="funcl_rkserk_UpdateClientRiskRuleFlag" typename="LD_ANSWER" functionid="rksecuL.4.31" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_rkserk_CheckBatchCalcSecuClientRisk" typename="LD_REQUEST" functionid="rksecuL.4.32" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no_str" fieldid="1230"/>
+        <field fieldname="exch_group_no_str" fieldid="1963"/>
+        <field fieldname="asset_acco_no_str" fieldid="3052"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="exch_crncy_type_str" fieldid="1907"/>
+        <field fieldname="stock_code_str" fieldid="3191"/>
+        <field fieldname="order_dir_str" fieldid="1450"/>
+        <field fieldname="order_price_str" fieldid="3186"/>
+        <field fieldname="order_qty_str" fieldid="3187"/>
+        <field fieldname="trig_stage_type" fieldid="1350"/>
+    </function>
+    <function functionname="funcl_rkserk_CheckBatchCalcSecuClientRisk" typename="LD_ANSWER" functionid="rksecuL.4.32" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="client_risk_rule_id" fieldid="1616"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="compli_rules_remark" fieldid="1745"/>
+            <field fieldname="risk_rule_action" fieldid="1604"/>
+            <field fieldname="risk_rule_value_str" fieldid="1619"/>
+            <field fieldname="risk_rule_calc_str" fieldid="1618"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_rkserk_T0QueryOporTsholdInfo" typename="LD_REQUEST" functionid="rksecuL.4.33" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="query_opor_no" fieldid="1209"/>
+        <field fieldname="last_tshold_value" fieldid="3130" decimalPlaces="6"/>
+        <field fieldname="posi_status" fieldid="1335"/>
+    </function>
+    <function functionname="funcl_rkserk_T0QueryOporTsholdInfo" typename="LD_ANSWER" functionid="rksecuL.4.33" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="detail_posi_id" fieldid="2242"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_acco_no" fieldid="1697"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="lngsht_type" fieldid="1491"/>
+            <field fieldname="curr_qty" fieldid="1401" decimalPlaces="2"/>
+            <field fieldname="open_posi_date" fieldid="2055"/>
+            <field fieldname="open_posi_time" fieldid="2056"/>
+            <field fieldname="open_posi_price" fieldid="2053" decimalPlaces="9"/>
+            <field fieldname="open_posi_value" fieldid="2057" decimalPlaces="6"/>
+            <field fieldname="open_posi_fee" fieldid="2052" decimalPlaces="6"/>
+            <field fieldname="close_posi_qty" fieldid="2318" decimalPlaces="2"/>
+            <field fieldname="close_posi_market_value" fieldid="2317" decimalPlaces="6"/>
+            <field fieldname="close_posi_fee" fieldid="2313" decimalPlaces="6"/>
+            <field fieldname="realize_pandl" fieldid="2536" decimalPlaces="6"/>
+            <field fieldname="pandl_ratio" fieldid="2815" decimalPlaces="12"/>
+            <field fieldname="un_close_posi_qty" fieldid="2723" decimalPlaces="2"/>
+            <field fieldname="un_close_marke_value" fieldid="2722" decimalPlaces="6"/>
+            <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+            <field fieldname="up_limit_price" fieldid="2905" decimalPlaces="9"/>
+            <field fieldname="down_limit_price" fieldid="1436" decimalPlaces="9"/>
+            <field fieldname="cost_price" fieldid="1284" decimalPlaces="9"/>
+            <field fieldname="last_tshold_value" fieldid="3130" decimalPlaces="6"/>
+            <field fieldname="float_pandl" fieldid="1639" decimalPlaces="6"/>
+            <field fieldname="posi_status" fieldid="1335"/>
+            <field fieldname="moni_result_status" fieldid="1895"/>
+            <field fieldname="posi_limit_status" fieldid="3264"/>
+            <field fieldname="opor_warn_tshold" fieldid="3256" decimalPlaces="6"/>
+            <field fieldname="opor_stop_tshold" fieldid="3257" decimalPlaces="6"/>
+            <field fieldname="stock_warn_ratio" fieldid="3254" decimalPlaces="12"/>
+            <field fieldname="stock_stop_ratio" fieldid="3255" decimalPlaces="12"/>
+            <field fieldname="stock_warn_amt" fieldid="3900" decimalPlaces="6"/>
+            <field fieldname="stock_stop_amt" fieldid="3901" decimalPlaces="6"/>
+            <field fieldname="open_close_permission" fieldid="3903"/>
+            <field fieldname="posi_limit_time" fieldid="1329"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_rkserk_T0QueryOporTsholdSumInfo" typename="LD_REQUEST" functionid="rksecuL.4.34" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="query_opor_no" fieldid="1209"/>
+        <field fieldname="last_tshold_value" fieldid="3130" decimalPlaces="6"/>
+        <field fieldname="posi_status" fieldid="1335"/>
+    </function>
+    <function functionname="funcl_rkserk_T0QueryOporTsholdSumInfo" typename="LD_ANSWER" functionid="rksecuL.4.34" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="detail_posi_id" fieldid="2242"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_acco_no" fieldid="1697"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="lngsht_type" fieldid="1491"/>
+            <field fieldname="curr_qty" fieldid="1401" decimalPlaces="2"/>
+            <field fieldname="open_posi_date" fieldid="2055"/>
+            <field fieldname="open_posi_time" fieldid="2056"/>
+            <field fieldname="open_posi_price" fieldid="2053" decimalPlaces="9"/>
+            <field fieldname="open_posi_value" fieldid="2057" decimalPlaces="6"/>
+            <field fieldname="open_posi_fee" fieldid="2052" decimalPlaces="6"/>
+            <field fieldname="close_posi_qty" fieldid="2318" decimalPlaces="2"/>
+            <field fieldname="close_posi_market_value" fieldid="2317" decimalPlaces="6"/>
+            <field fieldname="close_posi_fee" fieldid="2313" decimalPlaces="6"/>
+            <field fieldname="realize_pandl" fieldid="2536" decimalPlaces="6"/>
+            <field fieldname="pandl_ratio" fieldid="2815" decimalPlaces="12"/>
+            <field fieldname="un_close_posi_qty" fieldid="2723" decimalPlaces="2"/>
+            <field fieldname="un_close_marke_value" fieldid="2722" decimalPlaces="6"/>
+            <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+            <field fieldname="up_limit_price" fieldid="2905" decimalPlaces="9"/>
+            <field fieldname="down_limit_price" fieldid="1436" decimalPlaces="9"/>
+            <field fieldname="last_tshold_value" fieldid="3130" decimalPlaces="6"/>
+            <field fieldname="float_pandl" fieldid="1639" decimalPlaces="6"/>
+            <field fieldname="posi_status" fieldid="1335"/>
+            <field fieldname="moni_result_status" fieldid="1895"/>
+            <field fieldname="posi_limit_status" fieldid="3264"/>
+            <field fieldname="opor_warn_tshold" fieldid="3256" decimalPlaces="6"/>
+            <field fieldname="opor_stop_tshold" fieldid="3257" decimalPlaces="6"/>
+            <field fieldname="stock_warn_ratio" fieldid="3254" decimalPlaces="12"/>
+            <field fieldname="stock_stop_ratio" fieldid="3255" decimalPlaces="12"/>
+            <field fieldname="stock_warn_amt" fieldid="3900" decimalPlaces="6"/>
+            <field fieldname="stock_stop_amt" fieldid="3901" decimalPlaces="6"/>
+            <field fieldname="open_close_permission" fieldid="3903"/>
+            <field fieldname="posi_limit_time" fieldid="1329"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_rkserk_InsertOporMonitorSet" typename="LD_REQUEST" functionid="rksecuL.4.35" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="busi_opor_no" fieldid="2789"/>
+        <field fieldname="moni_role_type" fieldid="1893"/>
+        <field fieldname="moni_value_flag" fieldid="1898"/>
+        <field fieldname="moni_value_type" fieldid="1899"/>
+        <field fieldname="warn_posi_value" fieldid="3351" decimalPlaces="6"/>
+        <field fieldname="warn_trig_oper_type" fieldid="4053"/>
+        <field fieldname="close_posi_value" fieldid="2319" decimalPlaces="6"/>
+        <field fieldname="close_trig_oper_type" fieldid="4055"/>
+        <field fieldname="appd_value" fieldid="3041" decimalPlaces="6"/>
+        <field fieldname="appd_trig_oper_type" fieldid="4054"/>
+        <field fieldname="begin_moni_date" fieldid="4050"/>
+        <field fieldname="begin_moni_value" fieldid="2353" decimalPlaces="6"/>
+        <field fieldname="max_moni_value" fieldid="3104" decimalPlaces="6"/>
+        <field fieldname="contrs_stock_code" fieldid="1474"/>
+        <field fieldname="contrs_exch_no" fieldid="1473"/>
+        <field fieldname="contrs_max_moni_value" fieldid="1475" decimalPlaces="6"/>
+        <field fieldname="close_posi_flag" fieldid="2312"/>
+        <field fieldname="close_ratio_level_one" fieldid="2801" decimalPlaces="12"/>
+        <field fieldname="close_ratio_level_two" fieldid="1501" decimalPlaces="12"/>
+        <field fieldname="close_ratio_level_three" fieldid="2482" decimalPlaces="12"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funcl_rkserk_InsertOporMonitorSet" typename="LD_ANSWER" functionid="rksecuL.4.35" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_rkserk_UpdateOporMonitorSet" typename="LD_REQUEST" functionid="rksecuL.4.36" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="moni_set_id" fieldid="1896"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="busi_opor_no" fieldid="2789"/>
+        <field fieldname="moni_role_type" fieldid="1893"/>
+        <field fieldname="moni_value_flag" fieldid="1898"/>
+        <field fieldname="moni_value_type" fieldid="1899"/>
+        <field fieldname="warn_posi_value" fieldid="3351" decimalPlaces="6"/>
+        <field fieldname="warn_trig_oper_type" fieldid="4053"/>
+        <field fieldname="close_posi_value" fieldid="2319" decimalPlaces="6"/>
+        <field fieldname="close_trig_oper_type" fieldid="4055"/>
+        <field fieldname="appd_value" fieldid="3041" decimalPlaces="6"/>
+        <field fieldname="appd_trig_oper_type" fieldid="4054"/>
+        <field fieldname="begin_moni_date" fieldid="4050"/>
+        <field fieldname="begin_moni_value" fieldid="2353" decimalPlaces="6"/>
+        <field fieldname="max_moni_value" fieldid="3104" decimalPlaces="6"/>
+        <field fieldname="curr_moni_value" fieldid="1395" decimalPlaces="6"/>
+        <field fieldname="contrs_stock_code" fieldid="1474"/>
+        <field fieldname="contrs_exch_no" fieldid="1473"/>
+        <field fieldname="contrs_max_moni_value" fieldid="1475" decimalPlaces="6"/>
+        <field fieldname="close_posi_flag" fieldid="2312"/>
+        <field fieldname="close_ratio_level_one" fieldid="2801" decimalPlaces="12"/>
+        <field fieldname="close_ratio_level_two" fieldid="1501" decimalPlaces="12"/>
+        <field fieldname="close_ratio_level_three" fieldid="2482" decimalPlaces="12"/>
+        <field fieldname="trig_oper_type" fieldid="3902"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funcl_rkserk_UpdateOporMonitorSet" typename="LD_ANSWER" functionid="rksecuL.4.36" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_rkserk_DeleteOporMonitorSet" typename="LD_REQUEST" functionid="rksecuL.4.37" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="moni_set_id" fieldid="1896"/>
+    </function>
+    <function functionname="funcl_rkserk_DeleteOporMonitorSet" typename="LD_ANSWER" functionid="rksecuL.4.37" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_rkserk_QueryOporMonitorSet" typename="LD_REQUEST" functionid="rksecuL.4.38" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="busi_opor_no" fieldid="2789"/>
+        <field fieldname="moni_role_type" fieldid="1893"/>
+        <field fieldname="moni_value_flag" fieldid="1898"/>
+        <field fieldname="moni_value_type" fieldid="1899"/>
+        <field fieldname="moni_set_status" fieldid="1897"/>
+        <field fieldname="moni_result_status" fieldid="1895"/>
+        <field fieldname="sort_type" fieldid="2290"/>
+    </function>
+    <function functionname="funcl_rkserk_QueryOporMonitorSet" typename="LD_ANSWER" functionid="rksecuL.4.38" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="moni_role_type" fieldid="1893"/>
+            <field fieldname="moni_value_flag" fieldid="1898"/>
+            <field fieldname="moni_value_type" fieldid="1899"/>
+            <field fieldname="warn_posi_value" fieldid="3351" decimalPlaces="6"/>
+            <field fieldname="warn_trig_oper_type" fieldid="4053"/>
+            <field fieldname="close_posi_value" fieldid="2319" decimalPlaces="6"/>
+            <field fieldname="close_trig_oper_type" fieldid="4055"/>
+            <field fieldname="appd_value" fieldid="3041" decimalPlaces="6"/>
+            <field fieldname="appd_trig_oper_type" fieldid="4054"/>
+            <field fieldname="begin_moni_date" fieldid="4050"/>
+            <field fieldname="begin_moni_value" fieldid="2353" decimalPlaces="6"/>
+            <field fieldname="max_moni_value" fieldid="3104" decimalPlaces="6"/>
+            <field fieldname="curr_moni_value" fieldid="1395" decimalPlaces="6"/>
+            <field fieldname="curr_result_moni_value" fieldid="1394" decimalPlaces="6"/>
+            <field fieldname="contrs_stock_code" fieldid="1474"/>
+            <field fieldname="contrs_exch_no" fieldid="1473"/>
+            <field fieldname="contrs_max_moni_value" fieldid="1475" decimalPlaces="6"/>
+            <field fieldname="contrs_curr_moni_value" fieldid="1470" decimalPlaces="6"/>
+            <field fieldname="contrs_result_moni_value" fieldid="1471" decimalPlaces="6"/>
+            <field fieldname="moni_result_value" fieldid="1894" decimalPlaces="6"/>
+            <field fieldname="moni_result_status" fieldid="1895"/>
+            <field fieldname="moni_set_status" fieldid="1897"/>
+            <field fieldname="cash_asset" fieldid="2752" decimalPlaces="6"/>
+            <field fieldname="fund_asset" fieldid="1853" decimalPlaces="6"/>
+            <field fieldname="bond_asset" fieldid="2897" decimalPlaces="6"/>
+            <field fieldname="stock_asset" fieldid="1710" decimalPlaces="6"/>
+            <field fieldname="repo_asset" fieldid="1821" decimalPlaces="6"/>
+            <field fieldname="nav_asset" fieldid="2035" decimalPlaces="6"/>
+            <field fieldname="stock_asset_ratio" fieldid="1711" decimalPlaces="12"/>
+            <field fieldname="close_posi_flag" fieldid="2312"/>
+            <field fieldname="close_ratio_level_one" fieldid="2801" decimalPlaces="12"/>
+            <field fieldname="close_ratio_level_two" fieldid="1501" decimalPlaces="12"/>
+            <field fieldname="close_ratio_level_three" fieldid="2482" decimalPlaces="12"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_rkserk_StartStopOporMonitorSet" typename="LD_REQUEST" functionid="rksecuL.4.39" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="moni_set_id" fieldid="1896"/>
+        <field fieldname="moni_set_status" fieldid="1897"/>
+    </function>
+    <function functionname="funcl_rkserk_StartStopOporMonitorSet" typename="LD_ANSWER" functionid="rksecuL.4.39" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_rkserk_StartStopAllOporMonitorSet" typename="LD_REQUEST" functionid="rksecuL.4.40" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="moni_set_status" fieldid="1897"/>
+    </function>
+    <function functionname="funcl_rkserk_StartStopAllOporMonitorSet" typename="LD_ANSWER" functionid="rksecuL.4.40" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_rkserk_QueryT0OporTrigInfo" typename="LD_REQUEST" functionid="rksecuL.4.41" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="query_opor_no" fieldid="1209"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+    </function>
+    <function functionname="funcl_rkserk_QueryT0OporTrigInfo" typename="LD_ANSWER" functionid="rksecuL.4.41" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="create_date" fieldid="1354"/>
+            <field fieldname="create_time" fieldid="1355"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="stock_acco_no" fieldid="1697"/>
+            <field fieldname="lngsht_type" fieldid="1491"/>
+            <field fieldname="curr_qty" fieldid="1401" decimalPlaces="2"/>
+            <field fieldname="open_posi_price" fieldid="2053" decimalPlaces="9"/>
+            <field fieldname="open_posi_value" fieldid="2057" decimalPlaces="6"/>
+            <field fieldname="open_posi_fee" fieldid="2052" decimalPlaces="6"/>
+            <field fieldname="close_posi_qty" fieldid="2318" decimalPlaces="2"/>
+            <field fieldname="close_posi_market_value" fieldid="2317" decimalPlaces="6"/>
+            <field fieldname="close_posi_fee" fieldid="2313" decimalPlaces="6"/>
+            <field fieldname="realize_pandl" fieldid="2536" decimalPlaces="6"/>
+            <field fieldname="pandl_ratio" fieldid="2815" decimalPlaces="12"/>
+            <field fieldname="un_close_posi_qty" fieldid="2723" decimalPlaces="2"/>
+            <field fieldname="un_close_marke_value" fieldid="2722" decimalPlaces="6"/>
+            <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+            <field fieldname="cost_price" fieldid="1284" decimalPlaces="9"/>
+            <field fieldname="last_tshold_value" fieldid="3130" decimalPlaces="6"/>
+            <field fieldname="float_pandl" fieldid="1639" decimalPlaces="6"/>
+            <field fieldname="moni_result_status" fieldid="1895"/>
+            <field fieldname="opor_warn_tshold" fieldid="3256" decimalPlaces="6"/>
+            <field fieldname="opor_stop_tshold" fieldid="3257" decimalPlaces="6"/>
+            <field fieldname="stock_warn_ratio" fieldid="3254" decimalPlaces="12"/>
+            <field fieldname="stock_stop_ratio" fieldid="3255" decimalPlaces="12"/>
+            <field fieldname="stock_warn_amt" fieldid="3900" decimalPlaces="6"/>
+            <field fieldname="stock_stop_amt" fieldid="3901" decimalPlaces="6"/>
+            <field fieldname="open_close_permission" fieldid="3903"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_rkserk_QueryT0OporSumTrigInfo" typename="LD_REQUEST" functionid="rksecuL.4.42" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="query_opor_no" fieldid="1209"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+    </function>
+    <function functionname="funcl_rkserk_QueryT0OporSumTrigInfo" typename="LD_ANSWER" functionid="rksecuL.4.42" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="create_date" fieldid="1354"/>
+            <field fieldname="create_time" fieldid="1355"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="curr_qty" fieldid="1401" decimalPlaces="2"/>
+            <field fieldname="open_posi_value" fieldid="2057" decimalPlaces="6"/>
+            <field fieldname="open_posi_fee" fieldid="2052" decimalPlaces="6"/>
+            <field fieldname="close_posi_qty" fieldid="2318" decimalPlaces="2"/>
+            <field fieldname="close_posi_market_value" fieldid="2317" decimalPlaces="6"/>
+            <field fieldname="close_posi_fee" fieldid="2313" decimalPlaces="6"/>
+            <field fieldname="realize_pandl" fieldid="2536" decimalPlaces="6"/>
+            <field fieldname="float_pandl" fieldid="1639" decimalPlaces="6"/>
+            <field fieldname="pandl_ratio" fieldid="2815" decimalPlaces="12"/>
+            <field fieldname="un_close_posi_qty" fieldid="2723" decimalPlaces="2"/>
+            <field fieldname="un_close_marke_value" fieldid="2722" decimalPlaces="6"/>
+            <field fieldname="last_tshold_value" fieldid="3130" decimalPlaces="6"/>
+            <field fieldname="moni_result_status" fieldid="1895"/>
+            <field fieldname="opor_warn_tshold" fieldid="3256" decimalPlaces="6"/>
+            <field fieldname="opor_stop_tshold" fieldid="3257" decimalPlaces="6"/>
+            <field fieldname="open_close_permission" fieldid="3903"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_rkserk_QueryT0OporHisTrigInfo" typename="LD_REQUEST" functionid="rksecuL.4.43" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="query_opor_no" fieldid="1209"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+    </function>
+    <function functionname="funcl_rkserk_QueryT0OporHisTrigInfo" typename="LD_ANSWER" functionid="rksecuL.4.43" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="create_date" fieldid="1354"/>
+            <field fieldname="create_time" fieldid="1355"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="stock_acco_no" fieldid="1697"/>
+            <field fieldname="lngsht_type" fieldid="1491"/>
+            <field fieldname="curr_qty" fieldid="1401" decimalPlaces="2"/>
+            <field fieldname="open_posi_price" fieldid="2053" decimalPlaces="9"/>
+            <field fieldname="open_posi_value" fieldid="2057" decimalPlaces="6"/>
+            <field fieldname="open_posi_fee" fieldid="2052" decimalPlaces="6"/>
+            <field fieldname="close_posi_qty" fieldid="2318" decimalPlaces="2"/>
+            <field fieldname="close_posi_market_value" fieldid="2317" decimalPlaces="6"/>
+            <field fieldname="close_posi_fee" fieldid="2313" decimalPlaces="6"/>
+            <field fieldname="realize_pandl" fieldid="2536" decimalPlaces="6"/>
+            <field fieldname="pandl_ratio" fieldid="2815" decimalPlaces="12"/>
+            <field fieldname="un_close_posi_qty" fieldid="2723" decimalPlaces="2"/>
+            <field fieldname="un_close_marke_value" fieldid="2722" decimalPlaces="6"/>
+            <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+            <field fieldname="cost_price" fieldid="1284" decimalPlaces="9"/>
+            <field fieldname="last_tshold_value" fieldid="3130" decimalPlaces="6"/>
+            <field fieldname="float_pandl" fieldid="1639" decimalPlaces="6"/>
+            <field fieldname="moni_result_status" fieldid="1895"/>
+            <field fieldname="opor_warn_tshold" fieldid="3256" decimalPlaces="6"/>
+            <field fieldname="opor_stop_tshold" fieldid="3257" decimalPlaces="6"/>
+            <field fieldname="stock_warn_ratio" fieldid="3254" decimalPlaces="12"/>
+            <field fieldname="stock_stop_ratio" fieldid="3255" decimalPlaces="12"/>
+            <field fieldname="stock_warn_amt" fieldid="3900" decimalPlaces="6"/>
+            <field fieldname="stock_stop_amt" fieldid="3901" decimalPlaces="6"/>
+            <field fieldname="open_close_permission" fieldid="3903"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_rkserk_QueryT0OporHisSumTrigInfo" typename="LD_REQUEST" functionid="rksecuL.4.44" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="query_opor_no" fieldid="1209"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+    </function>
+    <function functionname="funcl_rkserk_QueryT0OporHisSumTrigInfo" typename="LD_ANSWER" functionid="rksecuL.4.44" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="create_date" fieldid="1354"/>
+            <field fieldname="create_time" fieldid="1355"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="curr_qty" fieldid="1401" decimalPlaces="2"/>
+            <field fieldname="open_posi_value" fieldid="2057" decimalPlaces="6"/>
+            <field fieldname="open_posi_fee" fieldid="2052" decimalPlaces="6"/>
+            <field fieldname="close_posi_qty" fieldid="2318" decimalPlaces="2"/>
+            <field fieldname="close_posi_market_value" fieldid="2317" decimalPlaces="6"/>
+            <field fieldname="close_posi_fee" fieldid="2313" decimalPlaces="6"/>
+            <field fieldname="realize_pandl" fieldid="2536" decimalPlaces="6"/>
+            <field fieldname="float_pandl" fieldid="1639" decimalPlaces="6"/>
+            <field fieldname="pandl_ratio" fieldid="2815" decimalPlaces="12"/>
+            <field fieldname="un_close_posi_qty" fieldid="2723" decimalPlaces="2"/>
+            <field fieldname="un_close_marke_value" fieldid="2722" decimalPlaces="6"/>
+            <field fieldname="last_tshold_value" fieldid="3130" decimalPlaces="6"/>
+            <field fieldname="moni_result_status" fieldid="1895"/>
+            <field fieldname="opor_warn_tshold" fieldid="3256" decimalPlaces="6"/>
+            <field fieldname="opor_stop_tshold" fieldid="3257" decimalPlaces="6"/>
+            <field fieldname="open_close_permission" fieldid="3903"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_rkserk_DeleteSecuClientRiskTrig" typename="LD_REQUEST" functionid="rksecuL.4.45" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="trig_stage_type" fieldid="1350"/>
+    </function>
+    <function functionname="funcl_rkserk_DeleteSecuClientRiskTrig" typename="LD_ANSWER" functionid="rksecuL.4.45" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_rkserk_InsertAsacFinaLoanMarginCalcList" typename="LD_REQUEST" functionid="rksecuL.4.51" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="curr_converted_margin" fieldid="5770" decimalPlaces="6"/>
+        <field fieldname="cmmd_converted_margin" fieldid="5771" decimalPlaces="6"/>
+        <field fieldname="order_converted_margin" fieldid="5772" decimalPlaces="6"/>
+        <field fieldname="fina_market_value" fieldid="5764" decimalPlaces="6"/>
+        <field fieldname="fina_profit" fieldid="5773" decimalPlaces="6"/>
+        <field fieldname="fina_converted_pandl" fieldid="5598" decimalPlaces="6"/>
+        <field fieldname="loan_market_value" fieldid="5766" decimalPlaces="6"/>
+        <field fieldname="loan_profit" fieldid="5774" decimalPlaces="6"/>
+        <field fieldname="loan_converted_pandl" fieldid="5599" decimalPlaces="6"/>
+        <field fieldname="fina_capt_margin" fieldid="5600" decimalPlaces="6"/>
+        <field fieldname="loan_capt_margin" fieldid="5601" decimalPlaces="6"/>
+        <field fieldname="keep_guarantee_ratio" fieldid="5602" decimalPlaces="12"/>
+        <field fieldname="loan_sell_amt" fieldid="5687" decimalPlaces="6"/>
+        <field fieldname="margin_ratio_market_value" fieldid="5775" decimalPlaces="6"/>
+        <field fieldname="fina_interest" fieldid="5767" decimalPlaces="6"/>
+        <field fieldname="loan_interest" fieldid="5776" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+        <field fieldname="fina_comm_capt_margin" fieldid="5791" decimalPlaces="6"/>
+        <field fieldname="loan_comm_capt_margin" fieldid="5792" decimalPlaces="6"/>
+        <field fieldname="fina_order_capt_margin" fieldid="5793" decimalPlaces="6"/>
+        <field fieldname="loan_order_capt_margin" fieldid="5794" decimalPlaces="6"/>
+    </function>
+    <function functionname="funcl_rkserk_InsertAsacFinaLoanMarginCalcList" typename="LD_ANSWER" functionid="rksecuL.4.51" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_rkserk_QueryAsacFinaLoanMarginCalcList" typename="LD_REQUEST" functionid="rksecuL.4.54" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_rkserk_QueryAsacFinaLoanMarginCalcList" typename="LD_ANSWER" functionid="rksecuL.4.54" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="curr_converted_margin" fieldid="5770" decimalPlaces="6"/>
+            <field fieldname="cmmd_converted_margin" fieldid="5771" decimalPlaces="6"/>
+            <field fieldname="order_converted_margin" fieldid="5772" decimalPlaces="6"/>
+            <field fieldname="fina_market_value" fieldid="5764" decimalPlaces="6"/>
+            <field fieldname="fina_profit" fieldid="5773" decimalPlaces="6"/>
+            <field fieldname="fina_converted_pandl" fieldid="5598" decimalPlaces="6"/>
+            <field fieldname="loan_market_value" fieldid="5766" decimalPlaces="6"/>
+            <field fieldname="loan_profit" fieldid="5774" decimalPlaces="6"/>
+            <field fieldname="loan_converted_pandl" fieldid="5599" decimalPlaces="6"/>
+            <field fieldname="fina_capt_margin" fieldid="5600" decimalPlaces="6"/>
+            <field fieldname="loan_capt_margin" fieldid="5601" decimalPlaces="6"/>
+            <field fieldname="keep_guarantee_ratio" fieldid="5602" decimalPlaces="12"/>
+            <field fieldname="loan_sell_amt" fieldid="5687" decimalPlaces="6"/>
+            <field fieldname="margin_ratio_market_value" fieldid="5775" decimalPlaces="6"/>
+            <field fieldname="fina_interest" fieldid="5767" decimalPlaces="6"/>
+            <field fieldname="loan_interest" fieldid="5776" decimalPlaces="6"/>
+            <field fieldname="update_times" fieldid="3381"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_rkserk_InsertGrpFinaLoanMarginCalcList" typename="LD_REQUEST" functionid="rksecuL.4.61" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="curr_converted_margin" fieldid="5770" decimalPlaces="6"/>
+        <field fieldname="cmmd_converted_margin" fieldid="5771" decimalPlaces="6"/>
+        <field fieldname="order_converted_margin" fieldid="5772" decimalPlaces="6"/>
+        <field fieldname="fina_market_value" fieldid="5764" decimalPlaces="6"/>
+        <field fieldname="fina_profit" fieldid="5773" decimalPlaces="6"/>
+        <field fieldname="fina_converted_pandl" fieldid="5598" decimalPlaces="6"/>
+        <field fieldname="loan_market_value" fieldid="5766" decimalPlaces="6"/>
+        <field fieldname="loan_profit" fieldid="5774" decimalPlaces="6"/>
+        <field fieldname="loan_converted_pandl" fieldid="5599" decimalPlaces="6"/>
+        <field fieldname="fina_capt_margin" fieldid="5600" decimalPlaces="6"/>
+        <field fieldname="loan_capt_margin" fieldid="5601" decimalPlaces="6"/>
+        <field fieldname="keep_guarantee_ratio" fieldid="5602" decimalPlaces="12"/>
+        <field fieldname="loan_sell_amt" fieldid="5687" decimalPlaces="6"/>
+        <field fieldname="margin_ratio_market_value" fieldid="5775" decimalPlaces="6"/>
+        <field fieldname="fina_interest" fieldid="5767" decimalPlaces="6"/>
+        <field fieldname="loan_interest" fieldid="5776" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+        <field fieldname="fina_comm_capt_margin" fieldid="5791" decimalPlaces="6"/>
+        <field fieldname="loan_comm_capt_margin" fieldid="5792" decimalPlaces="6"/>
+        <field fieldname="fina_order_capt_margin" fieldid="5793" decimalPlaces="6"/>
+        <field fieldname="loan_order_capt_margin" fieldid="5794" decimalPlaces="6"/>
+    </function>
+    <function functionname="funcl_rkserk_InsertGrpFinaLoanMarginCalcList" typename="LD_ANSWER" functionid="rksecuL.4.61" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_rkserk_QueryGrpFinaLoanMarginCalcList" typename="LD_REQUEST" functionid="rksecuL.4.64" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_rkserk_QueryGrpFinaLoanMarginCalcList" typename="LD_ANSWER" functionid="rksecuL.4.64" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="curr_converted_margin" fieldid="5770" decimalPlaces="6"/>
+            <field fieldname="cmmd_converted_margin" fieldid="5771" decimalPlaces="6"/>
+            <field fieldname="order_converted_margin" fieldid="5772" decimalPlaces="6"/>
+            <field fieldname="fina_market_value" fieldid="5764" decimalPlaces="6"/>
+            <field fieldname="fina_profit" fieldid="5773" decimalPlaces="6"/>
+            <field fieldname="fina_converted_pandl" fieldid="5598" decimalPlaces="6"/>
+            <field fieldname="loan_market_value" fieldid="5766" decimalPlaces="6"/>
+            <field fieldname="loan_profit" fieldid="5774" decimalPlaces="6"/>
+            <field fieldname="loan_converted_pandl" fieldid="5599" decimalPlaces="6"/>
+            <field fieldname="fina_capt_margin" fieldid="5600" decimalPlaces="6"/>
+            <field fieldname="loan_capt_margin" fieldid="5601" decimalPlaces="6"/>
+            <field fieldname="keep_guarantee_ratio" fieldid="5602" decimalPlaces="12"/>
+            <field fieldname="loan_sell_amt" fieldid="5687" decimalPlaces="6"/>
+            <field fieldname="margin_ratio_market_value" fieldid="5775" decimalPlaces="6"/>
+            <field fieldname="fina_interest" fieldid="5767" decimalPlaces="6"/>
+            <field fieldname="loan_interest" fieldid="5776" decimalPlaces="6"/>
+            <field fieldname="update_times" fieldid="3381"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_rkserk_QueryAllProductMonitorSet" typename="LD_REQUEST" functionid="rksecuL.4.65" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="moni_role_type" fieldid="1893"/>
+        <field fieldname="moni_value_flag" fieldid="1898"/>
+        <field fieldname="moni_value_type" fieldid="1899"/>
+        <field fieldname="moni_set_status" fieldid="1897"/>
+        <field fieldname="moni_result_status" fieldid="1895"/>
+        <field fieldname="sort_type" fieldid="2290"/>
+    </function>
+    <function functionname="funcl_rkserk_QueryAllProductMonitorSet" typename="LD_ANSWER" functionid="rksecuL.4.65" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no_str" fieldid="1230"/>
+            <field fieldname="exch_group_no_str" fieldid="1963"/>
+            <field fieldname="moni_role_type" fieldid="1893"/>
+            <field fieldname="moni_value_flag" fieldid="1898"/>
+            <field fieldname="moni_value_type" fieldid="1899"/>
+            <field fieldname="warn_posi_value" fieldid="3351" decimalPlaces="6"/>
+            <field fieldname="warn_trig_oper_type" fieldid="4053"/>
+            <field fieldname="close_posi_value" fieldid="2319" decimalPlaces="6"/>
+            <field fieldname="close_trig_oper_type" fieldid="4055"/>
+            <field fieldname="appd_value" fieldid="3041" decimalPlaces="6"/>
+            <field fieldname="appd_trig_oper_type" fieldid="4054"/>
+            <field fieldname="begin_moni_date" fieldid="4050"/>
+            <field fieldname="begin_moni_value" fieldid="2353" decimalPlaces="6"/>
+            <field fieldname="max_moni_value" fieldid="3104" decimalPlaces="6"/>
+            <field fieldname="curr_moni_value" fieldid="1395" decimalPlaces="6"/>
+            <field fieldname="curr_result_moni_value" fieldid="1394" decimalPlaces="6"/>
+            <field fieldname="contrs_stock_code" fieldid="1474"/>
+            <field fieldname="contrs_exch_no" fieldid="1473"/>
+            <field fieldname="contrs_max_moni_value" fieldid="1475" decimalPlaces="6"/>
+            <field fieldname="contrs_curr_moni_value" fieldid="1470" decimalPlaces="6"/>
+            <field fieldname="contrs_result_moni_value" fieldid="1471" decimalPlaces="6"/>
+            <field fieldname="moni_result_value" fieldid="1894" decimalPlaces="6"/>
+            <field fieldname="moni_result_status" fieldid="1895"/>
+            <field fieldname="moni_set_status" fieldid="1897"/>
+            <field fieldname="cash_asset" fieldid="2752" decimalPlaces="6"/>
+            <field fieldname="fund_asset" fieldid="1853" decimalPlaces="6"/>
+            <field fieldname="bond_asset" fieldid="2897" decimalPlaces="6"/>
+            <field fieldname="stock_asset" fieldid="1710" decimalPlaces="6"/>
+            <field fieldname="repo_asset" fieldid="1821" decimalPlaces="6"/>
+            <field fieldname="nav_asset" fieldid="2035" decimalPlaces="6"/>
+            <field fieldname="stock_asset_ratio" fieldid="1711" decimalPlaces="12"/>
+            <field fieldname="close_posi_flag" fieldid="2312"/>
+            <field fieldname="close_ratio_level_one" fieldid="2801" decimalPlaces="12"/>
+            <field fieldname="close_ratio_level_two" fieldid="1501" decimalPlaces="12"/>
+            <field fieldname="close_ratio_level_three" fieldid="2482" decimalPlaces="12"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+            <field fieldname="pd_share" fieldid="1250" decimalPlaces="2"/>
+            <field fieldname="begin_asset_value" fieldid="3249" decimalPlaces="6"/>
+            <field fieldname="hk_thrgh_stock_asset" fieldid="3560" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_tb_rkserk_Addpreorder" typename="LD_REQUEST" functionid="rksecuL.4.66" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="order_batch_no" fieldid="1457"/>
+        <field fieldname="price_type" fieldid="1887"/>
+        <field fieldname="order_oper_way" fieldid="1443"/>
+    </function>
+    <function functionname="funcl_tb_rkserk_Addpreorder" typename="LD_ANSWER" functionid="rksecuL.4.66" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <field fieldname="row_id" fieldid="1867"/>
+    </function>
+    <function functionname="funcl_tb_rkserk_Delpreorder" typename="LD_REQUEST" functionid="rksecuL.4.67" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="order_batch_no" fieldid="1457"/>
+    </function>
+    <function functionname="funcl_tb_rkserk_Delpreorder" typename="LD_ANSWER" functionid="rksecuL.4.67" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_rkserk_SumChecktSingleSecuClientRisk" typename="LD_REQUEST" functionid="rksecuL.4.68" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="order_batch_no" fieldid="1457"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="trig_stage_type" fieldid="1350"/>
+    </function>
+    <function functionname="funcl_rkserk_SumChecktSingleSecuClientRisk" typename="LD_ANSWER" functionid="rksecuL.4.68" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <field fieldname="compli_trig_id" fieldid="1743"/>
+        <field fieldname="risk_rule_type" fieldid="1612"/>
+        <field fieldname="compli_rules_remark" fieldid="1745"/>
+        <field fieldname="numer_value" fieldid="1597" decimalPlaces="6"/>
+        <field fieldname="dino_value" fieldid="1584" decimalPlaces="6"/>
+        <field fieldname="trig_type" fieldid="1348"/>
+        <field fieldname="risk_rule_value_str" fieldid="1619"/>
+        <field fieldname="client_risk_rule_id" fieldid="1616"/>
+        <field fieldname="risk_rule_action" fieldid="1604"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funcl_rkserk_Addprecommand" typename="LD_REQUEST" functionid="rksecuL.4.69" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="comm_dir" fieldid="2974"/>
+        <field fieldname="limit_actual_price" fieldid="2998" decimalPlaces="9"/>
+        <field fieldname="comm_qty" fieldid="3002" decimalPlaces="2"/>
+        <field fieldname="comm_batch_no" fieldid="2987"/>
+        <field fieldname="comm_executor" fieldid="3014"/>
+        <field fieldname="comm_limit_price" fieldid="3008" decimalPlaces="9"/>
+        <field fieldname="price_type" fieldid="1887"/>
+    </function>
+    <function functionname="funcl_rkserk_Addprecommand" typename="LD_ANSWER" functionid="rksecuL.4.69" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <field fieldname="row_id" fieldid="1867"/>
+    </function>
+</bizmsgs>

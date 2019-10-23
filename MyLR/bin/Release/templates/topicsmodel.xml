@@ -2001,52 +2001,7 @@
         <field fieldname="is_trace" fieldid="5248"/>
         <field fieldname="price_up" fieldid="1890" decimalPlaces="9"/>
         <field fieldname="keep_trace" fieldid="5480"/>
-        <field fieldname="pre_batch_no" fieldid="5902"/>
-        <field fieldname="strategy_id" fieldid="3674"/>
-        <field fieldname="trig_qty_type" fieldid="5903"/>
-        <field fieldname="is_strategy_pre" fieldid="5904"/>
-        <field fieldname="trig_price_type" fieldid="5905"/>
-        <field fieldname="trig_time_intrv" fieldid="5909"/>
-        <field fieldname="trace_price_type" fieldid="5906"/>
-        <field fieldname="trace_price" fieldid="5907" decimalPlaces="9"/>
-        <field fieldname="trace_price_offset" fieldid="5908" decimalPlaces="9"/>
-        <field fieldname="comm_batch_no" fieldid="2987"/>
-        <field fieldname="comm_id" fieldid="3010"/>
-        <field fieldname="basket_id" fieldid="2141"/>
-        <field fieldname="comm_opor" fieldid="3006"/>
-        <field fieldname="price_type" fieldid="1887"/>
-        <field fieldname="target_strategy_type" fieldid="3688"/>
-        <field fieldname="target_strategy_param" fieldid="3689"/>
-        <field fieldname="strategy_price_type" fieldid="3684"/>
-        <field fieldname="order_oper_way" fieldid="1443"/>
-        <field fieldname="contrc_dir" fieldid="2070"/>
-        <field fieldname="hedge_type" fieldid="2591"/>
-        <field fieldname="combo_code" fieldid="4056"/>
-        <field fieldname="is_bellwether_stock" fieldid="5913"/>
-        <field fieldname="trace_times" fieldid="5914"/>
-        <field fieldname="batches_count" fieldid="5925"/>
-        <field fieldname="order_no_str" fieldid="1442"/>
-        <field fieldname="remark_info" fieldid="1146"/>
         <field fieldname="update_times" fieldid="3381"/>
-    </function>
-    <function functionname="func_secupush_plugerrororder" typename="LD_REQUEST" functionid="pushL.2.709" packettype="0">
-        <field fieldname="co_no" fieldid="1828"/>
-        <field fieldname="pd_no" fieldid="1228"/>
-        <field fieldname="exch_group_no" fieldid="1962"/>
-        <field fieldname="asset_acco_no" fieldid="3051"/>
-        <field fieldname="exch_no" fieldid="2538"/>
-        <field fieldname="stock_code" fieldid="2929"/>
-        <field fieldname="comm_id" fieldid="3010"/>
-        <field fieldname="comm_batch_no" fieldid="2987"/>
-        <field fieldname="order_date" fieldid="1458"/>
-        <field fieldname="order_time" fieldid="1459"/>
-        <field fieldname="order_dir" fieldid="1449"/>
-        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
-        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
-        <field fieldname="combo_code" fieldid="4056"/>
-        <field fieldname="remark_info" fieldid="1146"/>
-        <field fieldname="plugin_type" fieldid="5915"/>
-        <field fieldname="plugin_params_str" fieldid="5916"/>
     </function>
     <function functionname="func_secupush_report_fundqry" typename="LD_REQUEST" functionid="pushL.2.801" packettype="0">
         <field fieldname="pass_no" fieldid="2610"/>
@@ -2709,26 +2664,5 @@
         <field fieldname="datadict_busi_type" fieldid="5889"/>
         <field fieldname="datadict_busi_no" fieldid="5890"/>
         <field fieldname="datadict_busi_name" fieldid="5891"/>
-    </function>
-    <function functionname="func_secupush_trade_balance" typename="LD_REQUEST" functionid="pushL.2.947" packettype="0">
-        <field fieldname="row_id" fieldid="1867"/>
-        <field fieldname="init_date" fieldid="1339"/>
-        <field fieldname="co_no" fieldid="1828"/>
-        <field fieldname="pd_no" fieldid="1228"/>
-        <field fieldname="exch_group_no" fieldid="1962"/>
-        <field fieldname="asset_acco_no" fieldid="3051"/>
-        <field fieldname="exch_crncy_type" fieldid="1906"/>
-        <field fieldname="stock_code" fieldid="2929"/>
-        <field fieldname="stock_code_no" fieldid="2930"/>
-        <field fieldname="exch_no" fieldid="2538"/>
-        <field fieldname="stock_type" fieldid="2938"/>
-        <field fieldname="order_dir" fieldid="1449"/>
-        <field fieldname="comm_qty" fieldid="3002" decimalPlaces="2"/>
-        <field fieldname="comm_amt" fieldid="2982" decimalPlaces="6"/>
-        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
-        <field fieldname="order_amt" fieldid="3762" decimalPlaces="6"/>
-        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
-        <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
-        <field fieldname="update_times" fieldid="3381"/>
     </function>
 </bizmsgs>
