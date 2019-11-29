@@ -2,7 +2,7 @@
 #设置保存日志文件，这个后续实现
 #LogFile=   Database=db_tdfutu_his;
 
-DataTable dt : connStr1_tdsecu | select * from db_rksecu_his.tbjour_rkserk_opor_tshold_sum_risk_trig_his where row_id = 6
+DataTable dt : connStr | select * from db_rksecu_his.tbjour_rkserk_opor_tshold_sum_risk_trig_his where row_id = 6
 if dt.create_date != 20181111 : Print 'this is false'
 Print dt.opor_no
 #下面是对持仓进行蓝补 

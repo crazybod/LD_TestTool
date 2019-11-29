@@ -30,6 +30,7 @@
             <field fieldname="apply_limit" fieldid="2510" decimalPlaces="2"/>
             <field fieldname="begin_trade_date" fieldid="2498"/>
             <field fieldname="issue_price" fieldid="1504" decimalPlaces="9"/>
+            <field fieldname="apply_pay_date" fieldid="5940"/>
         </sequence>
     </function>
     <function functionname="funcl_basesync_UpdateNewStockTable" typename="LD_REQUEST" functionid="pubL.28.102" packettype="0">
@@ -54,6 +55,7 @@
         <field fieldname="apply_limit" fieldid="2510" decimalPlaces="2"/>
         <field fieldname="begin_trade_date" fieldid="2498"/>
         <field fieldname="issue_price" fieldid="1504" decimalPlaces="9"/>
+        <field fieldname="apply_pay_date" fieldid="5940"/>
     </function>
     <function functionname="funcl_basesync_UpdateNewStockTable" typename="LD_ANSWER" functionid="pubL.28.102" packettype="1">
         <field fieldname="error_code" fieldid="1359"/>
@@ -569,6 +571,7 @@
         <field fieldname="pinyin_short_str" fieldid="5303"/>
         <field fieldname="apply_code_str" fieldid="5304"/>
         <field fieldname="apply_date_str" fieldid="5305"/>
+        <field fieldname="apply_pay_date_str" fieldid="5941"/>
         <field fieldname="apply_limit_str" fieldid="5306"/>
         <field fieldname="begin_trade_date_str" fieldid="5307"/>
         <field fieldname="issue_price_str" fieldid="5308"/>

@@ -1,0 +1,1076 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bizmsgs>
+    <function functionname="funct_pdseca_DistrPdCapital" typename="LD_REQUEST" functionid="pdfofuT.2.8" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdseca_DistrPdCapital" typename="LD_ANSWER" functionid="pdfofuT.2.8" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdseca_BackPdCapital" typename="LD_REQUEST" functionid="pdfofuT.2.9" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdseca_BackPdCapital" typename="LD_ANSWER" functionid="pdfofuT.2.9" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdseca_AuthPdCapital" typename="LD_REQUEST" functionid="pdfofuT.2.10" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdseca_AuthPdCapital" typename="LD_ANSWER" functionid="pdfofuT.2.10" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdseca_BackAuthPdCapital" typename="LD_REQUEST" functionid="pdfofuT.2.11" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdseca_BackAuthPdCapital" typename="LD_ANSWER" functionid="pdfofuT.2.11" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdfoca_FrozenExgpCapital" typename="LD_REQUEST" functionid="pdfofuT.2.32" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="expire_date" fieldid="1425"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdfoca_FrozenExgpCapital" typename="LD_ANSWER" functionid="pdfofuT.2.32" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdfoca_UndoFrozenExgpCapital" typename="LD_REQUEST" functionid="pdfofuT.2.33" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+    </function>
+    <function functionname="funct_pdfoca_UndoFrozenExgpCapital" typename="LD_ANSWER" functionid="pdfofuT.2.33" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdfoca_UnFrozenExgpCapital" typename="LD_REQUEST" functionid="pdfofuT.2.34" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="expire_date" fieldid="1425"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdfoca_UnFrozenExgpCapital" typename="LD_ANSWER" functionid="pdfofuT.2.34" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdfoca_UndoUnFrozenExgpCapital" typename="LD_REQUEST" functionid="pdfofuT.2.35" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+    </function>
+    <function functionname="funct_pdfoca_UndoUnFrozenExgpCapital" typename="LD_ANSWER" functionid="pdfofuT.2.35" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdfoca_ModiExgpCapital" typename="LD_REQUEST" functionid="pdfofuT.2.36" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="capt_margin" fieldid="2898" decimalPlaces="6"/>
+        <field fieldname="close_pandl" fieldid="2320" decimalPlaces="6"/>
+        <field fieldname="marked_pandl" fieldid="1438" decimalPlaces="6"/>
+        <field fieldname="total_rece_amt" fieldid="2158" decimalPlaces="6"/>
+        <field fieldname="total_payab_amt" fieldid="2157" decimalPlaces="6"/>
+        <field fieldname="realize_pandl" fieldid="2536" decimalPlaces="6"/>
+        <field fieldname="intrst_rate" fieldid="2162" decimalPlaces="12"/>
+        <field fieldname="intrst_base_amt" fieldid="2170" decimalPlaces="6"/>
+        <field fieldname="pre_entry_intrst_amt" fieldid="1372" decimalPlaces="6"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdfoca_ModiExgpCapital" typename="LD_ANSWER" functionid="pdfofuT.2.36" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdfoca_QueryExgpCapital" typename="LD_REQUEST" functionid="pdfofuT.2.37" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+        <field fieldname="exch_group_no_rights_str" fieldid="1964"/>
+    </function>
+    <function functionname="funct_pdfoca_QueryExgpCapital" typename="LD_ANSWER" functionid="pdfofuT.2.37" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="create_date" fieldid="1354"/>
+            <field fieldname="create_time" fieldid="1355"/>
+            <field fieldname="update_date" fieldid="1667"/>
+            <field fieldname="update_time" fieldid="1669"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="begin_amt" fieldid="2327" decimalPlaces="6"/>
+            <field fieldname="curr_amt" fieldid="1396" decimalPlaces="6"/>
+            <field fieldname="capt_margin" fieldid="2898" decimalPlaces="6"/>
+            <field fieldname="close_pandl" fieldid="2320" decimalPlaces="6"/>
+            <field fieldname="marked_pandl" fieldid="1438" decimalPlaces="6"/>
+            <field fieldname="frozen_amt" fieldid="1467" decimalPlaces="6"/>
+            <field fieldname="unfroz_amt" fieldid="1995" decimalPlaces="6"/>
+            <field fieldname="total_rece_amt" fieldid="2158" decimalPlaces="6"/>
+            <field fieldname="total_payab_amt" fieldid="2157" decimalPlaces="6"/>
+            <field fieldname="intrst_rate" fieldid="2162" decimalPlaces="12"/>
+            <field fieldname="intrst_base_amt" fieldid="2170" decimalPlaces="6"/>
+            <field fieldname="pre_entry_intrst_amt" fieldid="1372" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdfoca_QueryExgpCapital_His" typename="LD_REQUEST" functionid="pdfofuT.2.38" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+        <field fieldname="exch_group_no_rights_str" fieldid="1964"/>
+    </function>
+    <function functionname="funct_pdfoca_QueryExgpCapital_His" typename="LD_ANSWER" functionid="pdfofuT.2.38" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="create_date" fieldid="1354"/>
+            <field fieldname="create_time" fieldid="1355"/>
+            <field fieldname="update_date" fieldid="1667"/>
+            <field fieldname="update_time" fieldid="1669"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="begin_amt" fieldid="2327" decimalPlaces="6"/>
+            <field fieldname="curr_amt" fieldid="1396" decimalPlaces="6"/>
+            <field fieldname="capt_margin" fieldid="2898" decimalPlaces="6"/>
+            <field fieldname="close_pandl" fieldid="2320" decimalPlaces="6"/>
+            <field fieldname="marked_pandl" fieldid="1438" decimalPlaces="6"/>
+            <field fieldname="frozen_amt" fieldid="1467" decimalPlaces="6"/>
+            <field fieldname="unfroz_amt" fieldid="1995" decimalPlaces="6"/>
+            <field fieldname="total_rece_amt" fieldid="2158" decimalPlaces="6"/>
+            <field fieldname="total_payab_amt" fieldid="2157" decimalPlaces="6"/>
+            <field fieldname="intrst_rate" fieldid="2162" decimalPlaces="12"/>
+            <field fieldname="intrst_base_amt" fieldid="2170" decimalPlaces="6"/>
+            <field fieldname="pre_entry_intrst_amt" fieldid="1372" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdfoca_QueryExgpCapital_Jour" typename="LD_REQUEST" functionid="pdfofuT.2.39" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+        <field fieldname="exch_group_no_rights_str" fieldid="1964"/>
+    </function>
+    <function functionname="funct_pdfoca_QueryExgpCapital_Jour" typename="LD_ANSWER" functionid="pdfofuT.2.39" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="create_date" fieldid="1354"/>
+            <field fieldname="create_time" fieldid="1355"/>
+            <field fieldname="update_date" fieldid="1667"/>
+            <field fieldname="update_time" fieldid="1669"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="busi_flag" fieldid="2785"/>
+            <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+            <field fieldname="occur_end_amt" fieldid="1154" decimalPlaces="6"/>
+            <field fieldname="jour_occur_field" fieldid="2184"/>
+            <field fieldname="jour_after_occur_info" fieldid="2185"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdfoca_QueryExgpCapital_JourHis" typename="LD_REQUEST" functionid="pdfofuT.2.40" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+        <field fieldname="exch_group_no_rights_str" fieldid="1964"/>
+    </function>
+    <function functionname="funct_pdfoca_QueryExgpCapital_JourHis" typename="LD_ANSWER" functionid="pdfofuT.2.40" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="create_date" fieldid="1354"/>
+            <field fieldname="create_time" fieldid="1355"/>
+            <field fieldname="update_date" fieldid="1667"/>
+            <field fieldname="update_time" fieldid="1669"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="busi_flag" fieldid="2785"/>
+            <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+            <field fieldname="occur_end_amt" fieldid="1154" decimalPlaces="6"/>
+            <field fieldname="jour_occur_field" fieldid="2184"/>
+            <field fieldname="jour_after_occur_info" fieldid="2185"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdfoca_QueryExgpCapitalFrozenJour" typename="LD_REQUEST" functionid="pdfofuT.2.41" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="frozen_type" fieldid="1466"/>
+        <field fieldname="jour_status" fieldid="2186"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+        <field fieldname="exch_group_no_rights_str" fieldid="1964"/>
+    </function>
+    <function functionname="funct_pdfoca_QueryExgpCapitalFrozenJour" typename="LD_ANSWER" functionid="pdfofuT.2.41" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="create_date" fieldid="1354"/>
+            <field fieldname="create_time" fieldid="1355"/>
+            <field fieldname="update_date" fieldid="1667"/>
+            <field fieldname="update_time" fieldid="1669"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="frozen_type" fieldid="1466"/>
+            <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+            <field fieldname="expire_date" fieldid="1425"/>
+            <field fieldname="jour_status" fieldid="2186"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdfoca_QueryExgpCapitalFrozenJour_His" typename="LD_REQUEST" functionid="pdfofuT.2.42" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="frozen_type" fieldid="1466"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+        <field fieldname="exch_group_no_rights_str" fieldid="1964"/>
+    </function>
+    <function functionname="funct_pdfoca_QueryExgpCapitalFrozenJour_His" typename="LD_ANSWER" functionid="pdfofuT.2.42" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="create_date" fieldid="1354"/>
+            <field fieldname="create_time" fieldid="1355"/>
+            <field fieldname="update_date" fieldid="1667"/>
+            <field fieldname="update_time" fieldid="1669"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="frozen_type" fieldid="1466"/>
+            <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+            <field fieldname="expire_date" fieldid="1425"/>
+            <field fieldname="jour_status" fieldid="2186"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdfoca_GetExgpCapitalFrozenJour" typename="LD_REQUEST" functionid="pdfofuT.2.43" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+    </function>
+    <function functionname="funct_pdfoca_GetExgpCapitalFrozenJour" typename="LD_ANSWER" functionid="pdfofuT.2.43" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="oper_func_code" fieldid="1186"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="frozen_type" fieldid="1466"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="expire_date" fieldid="1425"/>
+        <field fieldname="jour_status" fieldid="2186"/>
+    </function>
+    <function functionname="funct_pdfoca_PatchAsacCapital" typename="LD_REQUEST" functionid="pdfofuT.2.51" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdfoca_PatchAsacCapital" typename="LD_ANSWER" functionid="pdfofuT.2.51" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdfoca_FrozenAsacCapital" typename="LD_REQUEST" functionid="pdfofuT.2.52" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="expire_date" fieldid="1425"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdfoca_FrozenAsacCapital" typename="LD_ANSWER" functionid="pdfofuT.2.52" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdfoca_UndoFrozenAsacCapital" typename="LD_REQUEST" functionid="pdfofuT.2.53" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+    </function>
+    <function functionname="funct_pdfoca_UndoFrozenAsacCapital" typename="LD_ANSWER" functionid="pdfofuT.2.53" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdfoca_UnFrozenAsacCapital" typename="LD_REQUEST" functionid="pdfofuT.2.54" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="expire_date" fieldid="1425"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdfoca_UnFrozenAsacCapital" typename="LD_ANSWER" functionid="pdfofuT.2.54" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdfoca_UndoUnFrozenAsacCapital" typename="LD_REQUEST" functionid="pdfofuT.2.55" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+    </function>
+    <function functionname="funct_pdfoca_UndoUnFrozenAsacCapital" typename="LD_ANSWER" functionid="pdfofuT.2.55" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdfoca_ModiAsacCapital" typename="LD_REQUEST" functionid="pdfofuT.2.56" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="capt_margin" fieldid="2898" decimalPlaces="6"/>
+        <field fieldname="close_pandl" fieldid="2320" decimalPlaces="6"/>
+        <field fieldname="marked_pandl" fieldid="1438" decimalPlaces="6"/>
+        <field fieldname="total_rece_amt" fieldid="2158" decimalPlaces="6"/>
+        <field fieldname="total_payab_amt" fieldid="2157" decimalPlaces="6"/>
+        <field fieldname="realize_pandl" fieldid="2536" decimalPlaces="6"/>
+        <field fieldname="intrst_rate" fieldid="2162" decimalPlaces="12"/>
+        <field fieldname="intrst_base_amt" fieldid="2170" decimalPlaces="6"/>
+        <field fieldname="pre_entry_intrst_amt" fieldid="1372" decimalPlaces="6"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdfoca_ModiAsacCapital" typename="LD_ANSWER" functionid="pdfofuT.2.56" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdfoca_QueryAsacCapital" typename="LD_REQUEST" functionid="pdfofuT.2.57" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+        <field fieldname="pd_no_rights_str" fieldid="1231"/>
+    </function>
+    <function functionname="funct_pdfoca_QueryAsacCapital" typename="LD_ANSWER" functionid="pdfofuT.2.57" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="create_date" fieldid="1354"/>
+            <field fieldname="create_time" fieldid="1355"/>
+            <field fieldname="update_date" fieldid="1667"/>
+            <field fieldname="update_time" fieldid="1669"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="begin_amt" fieldid="2327" decimalPlaces="6"/>
+            <field fieldname="curr_amt" fieldid="1396" decimalPlaces="6"/>
+            <field fieldname="capt_margin" fieldid="2898" decimalPlaces="6"/>
+            <field fieldname="close_pandl" fieldid="2320" decimalPlaces="6"/>
+            <field fieldname="marked_pandl" fieldid="1438" decimalPlaces="6"/>
+            <field fieldname="frozen_amt" fieldid="1467" decimalPlaces="6"/>
+            <field fieldname="unfroz_amt" fieldid="1995" decimalPlaces="6"/>
+            <field fieldname="total_rece_amt" fieldid="2158" decimalPlaces="6"/>
+            <field fieldname="total_payab_amt" fieldid="2157" decimalPlaces="6"/>
+            <field fieldname="intrst_rate" fieldid="2162" decimalPlaces="12"/>
+            <field fieldname="intrst_base_amt" fieldid="2170" decimalPlaces="6"/>
+            <field fieldname="pre_entry_intrst_amt" fieldid="1372" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdfoca_QueryAsacCapital_His" typename="LD_REQUEST" functionid="pdfofuT.2.58" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+        <field fieldname="pd_no_rights_str" fieldid="1231"/>
+    </function>
+    <function functionname="funct_pdfoca_QueryAsacCapital_His" typename="LD_ANSWER" functionid="pdfofuT.2.58" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="create_date" fieldid="1354"/>
+            <field fieldname="create_time" fieldid="1355"/>
+            <field fieldname="update_date" fieldid="1667"/>
+            <field fieldname="update_time" fieldid="1669"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="begin_amt" fieldid="2327" decimalPlaces="6"/>
+            <field fieldname="curr_amt" fieldid="1396" decimalPlaces="6"/>
+            <field fieldname="capt_margin" fieldid="2898" decimalPlaces="6"/>
+            <field fieldname="close_pandl" fieldid="2320" decimalPlaces="6"/>
+            <field fieldname="marked_pandl" fieldid="1438" decimalPlaces="6"/>
+            <field fieldname="frozen_amt" fieldid="1467" decimalPlaces="6"/>
+            <field fieldname="unfroz_amt" fieldid="1995" decimalPlaces="6"/>
+            <field fieldname="total_rece_amt" fieldid="2158" decimalPlaces="6"/>
+            <field fieldname="total_payab_amt" fieldid="2157" decimalPlaces="6"/>
+            <field fieldname="intrst_rate" fieldid="2162" decimalPlaces="12"/>
+            <field fieldname="intrst_base_amt" fieldid="2170" decimalPlaces="6"/>
+            <field fieldname="pre_entry_intrst_amt" fieldid="1372" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdfoca_QueryAsacCapital_Jour" typename="LD_REQUEST" functionid="pdfofuT.2.59" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+        <field fieldname="pd_no_rights_str" fieldid="1231"/>
+    </function>
+    <function functionname="funct_pdfoca_QueryAsacCapital_Jour" typename="LD_ANSWER" functionid="pdfofuT.2.59" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="create_date" fieldid="1354"/>
+            <field fieldname="create_time" fieldid="1355"/>
+            <field fieldname="update_date" fieldid="1667"/>
+            <field fieldname="update_time" fieldid="1669"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="busi_flag" fieldid="2785"/>
+            <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+            <field fieldname="occur_end_amt" fieldid="1154" decimalPlaces="6"/>
+            <field fieldname="jour_occur_field" fieldid="2184"/>
+            <field fieldname="jour_after_occur_info" fieldid="2185"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdfoca_QueryAsacCapital_JourHis" typename="LD_REQUEST" functionid="pdfofuT.2.60" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+        <field fieldname="pd_no_rights_str" fieldid="1231"/>
+    </function>
+    <function functionname="funct_pdfoca_QueryAsacCapital_JourHis" typename="LD_ANSWER" functionid="pdfofuT.2.60" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="create_date" fieldid="1354"/>
+            <field fieldname="create_time" fieldid="1355"/>
+            <field fieldname="update_date" fieldid="1667"/>
+            <field fieldname="update_time" fieldid="1669"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="busi_flag" fieldid="2785"/>
+            <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+            <field fieldname="occur_end_amt" fieldid="1154" decimalPlaces="6"/>
+            <field fieldname="jour_occur_field" fieldid="2184"/>
+            <field fieldname="jour_after_occur_info" fieldid="2185"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdfoca_QueryAsacCapitalFrozenJour" typename="LD_REQUEST" functionid="pdfofuT.2.61" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="frozen_type" fieldid="1466"/>
+        <field fieldname="jour_status" fieldid="2186"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+        <field fieldname="pd_no_rights_str" fieldid="1231"/>
+    </function>
+    <function functionname="funct_pdfoca_QueryAsacCapitalFrozenJour" typename="LD_ANSWER" functionid="pdfofuT.2.61" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="create_date" fieldid="1354"/>
+            <field fieldname="create_time" fieldid="1355"/>
+            <field fieldname="update_date" fieldid="1667"/>
+            <field fieldname="update_time" fieldid="1669"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="frozen_type" fieldid="1466"/>
+            <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+            <field fieldname="expire_date" fieldid="1425"/>
+            <field fieldname="jour_status" fieldid="2186"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdfoca_QueryAsacCapitalFrozenJour_His" typename="LD_REQUEST" functionid="pdfofuT.2.62" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="frozen_type" fieldid="1466"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+        <field fieldname="pd_no_rights_str" fieldid="1231"/>
+    </function>
+    <function functionname="funct_pdfoca_QueryAsacCapitalFrozenJour_His" typename="LD_ANSWER" functionid="pdfofuT.2.62" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="create_date" fieldid="1354"/>
+            <field fieldname="create_time" fieldid="1355"/>
+            <field fieldname="update_date" fieldid="1667"/>
+            <field fieldname="update_time" fieldid="1669"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="frozen_type" fieldid="1466"/>
+            <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+            <field fieldname="expire_date" fieldid="1425"/>
+            <field fieldname="jour_status" fieldid="2186"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdfoca_GetAsacCapitalFrozenJour" typename="LD_REQUEST" functionid="pdfofuT.2.63" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+    </function>
+    <function functionname="funct_pdfoca_GetAsacCapitalFrozenJour" typename="LD_ANSWER" functionid="pdfofuT.2.63" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="oper_func_code" fieldid="1186"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="frozen_type" fieldid="1466"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="expire_date" fieldid="1425"/>
+        <field fieldname="jour_status" fieldid="2186"/>
+    </function>
+    <function functionname="funct_pdfoca_DealOutFoFutuCapitalJour" typename="LD_REQUEST" functionid="pdfofuT.2.106" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="pass_money_jour_no" fieldid="2618"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="busi_flag" fieldid="2785"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="entry_amt" fieldid="2470" decimalPlaces="6"/>
+        <field fieldname="entry_end_amt" fieldid="2463" decimalPlaces="6"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="futu_acco" fieldid="1908"/>
+        <field fieldname="contrc_code" fieldid="1776"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funct_pdfoca_DealOutFoFutuCapitalJour" typename="LD_ANSWER" functionid="pdfofuT.2.106" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdfoca_GetOutFoFutuCapitalJour" typename="LD_REQUEST" functionid="pdfofuT.2.107" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="query_row_id" fieldid="1214"/>
+    </function>
+    <function functionname="funct_pdfoca_GetOutFoFutuCapitalJour" typename="LD_ANSWER" functionid="pdfofuT.2.107" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="pass_money_jour_no" fieldid="2618"/>
+        <field fieldname="busi_flag" fieldid="2785"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="entry_amt" fieldid="2470" decimalPlaces="6"/>
+        <field fieldname="entry_end_amt" fieldid="2463" decimalPlaces="6"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="futu_acco" fieldid="1908"/>
+        <field fieldname="contrc_code" fieldid="1776"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+        <field fieldname="deal_flag" fieldid="1342"/>
+    </function>
+    <function functionname="funct_pdfoca_QueryOutFoFutuCapitalJour" typename="LD_REQUEST" functionid="pdfofuT.2.108" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_pdfoca_QueryOutFoFutuCapitalJour" typename="LD_ANSWER" functionid="pdfofuT.2.108" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="pass_money_jour_no" fieldid="2618"/>
+            <field fieldname="busi_flag" fieldid="2785"/>
+            <field fieldname="pass_no" fieldid="2610"/>
+            <field fieldname="out_acco" fieldid="2697"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="entry_amt" fieldid="2470" decimalPlaces="6"/>
+            <field fieldname="entry_end_amt" fieldid="2463" decimalPlaces="6"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="futu_acco" fieldid="1908"/>
+            <field fieldname="contrc_code" fieldid="1776"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+            <field fieldname="deal_flag" fieldid="1342"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdfoca_ClearCapitalDataTotal" typename="LD_REQUEST" functionid="pdfofuT.2.201" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+    </function>
+    <function functionname="funct_pdfoca_ClearCapitalDataTotal" typename="LD_ANSWER" functionid="pdfofuT.2.201" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdfoca_QueryClearCapitalTotalData" typename="LD_REQUEST" functionid="pdfofuT.2.202" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_pdfoca_QueryClearCapitalTotalData" typename="LD_ANSWER" functionid="pdfofuT.2.202" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+        </sequence>
+    </function>
+</bizmsgs>

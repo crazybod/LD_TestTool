@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bizmsgs>
+    <function functionname="funct_rksecc_GetStockInfo" typename="LD_REQUEST" functionid="rksecuT.2.1" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+    </function>
+    <function functionname="funct_rksecc_GetStockInfo" typename="LD_ANSWER" functionid="rksecuT.2.1" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+        <field fieldname="pre_close_price" fieldid="3140" decimalPlaces="9"/>
+        <field fieldname="today_open_price" fieldid="2001" decimalPlaces="9"/>
+        <field fieldname="total_stock_issue" fieldid="3084" decimalPlaces="2"/>
+        <field fieldname="circl_stock_capit" fieldid="2188" decimalPlaces="2"/>
+        <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+    </function>
+</bizmsgs>

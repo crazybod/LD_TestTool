@@ -359,6 +359,7 @@
         <field fieldname="asset_acco_no" fieldid="3051"/>
         <field fieldname="stock_acco_no" fieldid="1697"/>
         <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_acco" fieldid="1696"/>
         <field fieldname="stock_acco_name" fieldid="1699"/>
         <field fieldname="stock_acco_apoint_status" fieldid="1703"/>
         <field fieldname="allow_stock_type" fieldid="2879"/>

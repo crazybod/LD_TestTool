@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizmsgs>
+    <function functionname="funct_pdcapitif_GetPdNetAsset" typename="LD_REQUEST" functionid="prodT.4.1" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="update_preci_type" fieldid="1666"/>
+    </function>
+    <function functionname="funct_pdcapitif_GetPdNetAsset" typename="LD_ANSWER" functionid="prodT.4.1" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="nav_asset" fieldid="2035" decimalPlaces="6"/>
+        <field fieldname="cash_asset" fieldid="2752" decimalPlaces="6"/>
+        <field fieldname="fund_asset" fieldid="1853" decimalPlaces="6"/>
+        <field fieldname="bond_asset" fieldid="2897" decimalPlaces="6"/>
+        <field fieldname="repo_asset" fieldid="1821" decimalPlaces="6"/>
+        <field fieldname="stock_asset" fieldid="1710" decimalPlaces="6"/>
+    </function>
+    <function functionname="funct_pdcapitif_PdCapitalRecorded" typename="LD_REQUEST" functionid="prodT.4.2" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="busi_flag" fieldid="2785"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="curr_amt" fieldid="1396" decimalPlaces="6"/>
+        <field fieldname="frozen_amt" fieldid="1467" decimalPlaces="6"/>
+        <field fieldname="unfroz_amt" fieldid="1995" decimalPlaces="6"/>
+        <field fieldname="total_rece_amt" fieldid="2158" decimalPlaces="6"/>
+        <field fieldname="total_payab_amt" fieldid="2157" decimalPlaces="6"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funct_pdcapitif_PdCapitalRecorded" typename="LD_ANSWER" functionid="prodT.4.2" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdcapitif_DistrPdCapital" typename="LD_REQUEST" functionid="prodT.4.8" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdcapitif_DistrPdCapital" typename="LD_ANSWER" functionid="prodT.4.8" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdcapitif_BackPdCapital" typename="LD_REQUEST" functionid="prodT.4.9" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdcapitif_BackPdCapital" typename="LD_ANSWER" functionid="prodT.4.9" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdcapitif_AuthPdCapital" typename="LD_REQUEST" functionid="prodT.4.10" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdcapitif_AuthPdCapital" typename="LD_ANSWER" functionid="prodT.4.10" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdcapitif_BackAuthPdCapital" typename="LD_REQUEST" functionid="prodT.4.11" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdcapitif_BackAuthPdCapital" typename="LD_ANSWER" functionid="prodT.4.11" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+</bizmsgs>

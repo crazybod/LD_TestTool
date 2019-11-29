@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizmsgs>
+<!--
+<paramtype:fixed固定值，取值value;file 取值文件>
+<selectrow：random文件中随机取一行 sequence按顺序依次取>
+<file filename="" columnname="" selectrow="random/sequence/" />
+比如 <field fieldname="co_no" fieldid="1828" paramtype="file"> 
+		 <file filename="account.dat"  selectrow="random" />
+		</field>
+-->
+<!--逻辑_交易证券_公用_获取业务记录编号-->
+ <function functionname="funcl_tdsepb_GetCoBusiRecordNo" typename="LD_REQUEST" functionid="tdsecuL.1.901" packettype="0" times="3">
+        <field fieldname="opor_co_no" fieldid="1194" value="9999" />
+        <field fieldname="opor_no" fieldid="1192" value="99990001"/>
+        <field fieldname="opor_pwd" fieldid="1197" value="ZTI0MTA1ZDRiNmVmNjIxNWViMTA2ZmQ1YzkxMjYyNDM=" />
+        <field fieldname="oper_mac" fieldid="1181" />
+        <field fieldname="oper_ip_addr" fieldid="1180" />
+        <field fieldname="oper_info" fieldid="1190" />
+        <field fieldname="oper_way" fieldid="1184" value="1"/>
+        <field fieldname="menu_no" fieldid="1169" value=""/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828" paramtype="file"> 
+		 <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat"  selectrow="random" />
+		</field>
+        <field fieldname="record_no_type" fieldid="1149" value="18"/>
+    </function> 
+<!--逻辑_交易证券_交易_新增订单-->    
+    <function functionname="funcl_tdsetd_AddOrder" typename="LD_REQUEST" functionid="tdsecuL.4.11" packettype="0" times="3">
+        <field fieldname="opor_co_no" fieldid="1194" paramtype="file">
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" selectrow="random" />
+		</field>
+        <field fieldname="opor_no" fieldid="1192" paramtype="file">
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" />
+		</field>
+        <field fieldname="opor_pwd" fieldid="1197" paramtype="file">
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" />
+		</field>
+        <field fieldname="oper_mac" fieldid="1181" />
+        <field fieldname="oper_ip_addr" fieldid="1180" />
+        <field fieldname="oper_info" fieldid="1190" />
+        <field fieldname="oper_way" fieldid="1184" value="1"/>
+        <field fieldname="menu_no" fieldid="1169" value="11001000"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="comm_opor" fieldid="3006" value=""/>
+        <field fieldname="exch_group_no" fieldid="1962" paramtype="file">
+		 <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" />
+		</field>
+        <field fieldname="asset_acco_no" fieldid="3051" paramtype="file">
+		<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" />
+		</field>
+        <field fieldname="exch_no" fieldid="2538" paramtype="file"  >
+		    <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\AGstock_code.dat" selectrow="random" />
+		</field>
+        <field fieldname="stock_code" fieldid="2929" paramtype="file"  >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\AGstock_code.dat"  />
+		</field>
+        <field fieldname="external_no" fieldid="2656" />
+        <field fieldname="comm_id" fieldid="3010" />
+        <field fieldname="order_batch_no" fieldid="1457"  paramtype="file">
+		<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" />
+		</field>
+        <field fieldname="order_dir" fieldid="1449" value="1"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2" value="200" />
+        <field fieldname="order_price" fieldid="1455"  decimalPlaces="9"  paramtype="file" >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\AGstock_code.dat" columnname="last_price" />
+		</field>
+        <field fieldname="price_type" fieldid="1887"  paramtype="file" >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\AGstock_code.dat"  />
+		</field>
+        <field fieldname="order_oper_way" fieldid="1443" value="13"  />
+    </function>
+<!--逻辑_交易证券_报盘_处理订单回报-->    
+    <function functionname="prl_tdserp_DealOrderRsp" typename="LD_REQUEST" functionid="tdsecuL.5.1" packettype="0" times="3">
+        <field fieldname="opor_co_no" fieldid="1194" />
+        <field fieldname="opor_no" fieldid="1192" />
+        <field fieldname="opor_pwd" fieldid="1197" />
+        <field fieldname="oper_mac" fieldid="1181" />
+        <field fieldname="oper_ip_addr" fieldid="1180" />
+        <field fieldname="oper_info" fieldid="1190" />
+        <field fieldname="oper_way" fieldid="1184" value="1"/>
+        <field fieldname="menu_no" fieldid="1169" />
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pass_no" fieldid="2610" paramtype="file">
+		 <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\orderrsp.dat" selectrow="sequence" />
+		</field>
+        <field fieldname="out_acco" fieldid="2697" paramtype="file">
+		 <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\orderrsp.dat" />
+		</field>
+        <field fieldname="exch_no" fieldid="2538" paramtype="file"  >
+		    <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\orderrsp.dat" />
+		</field>
+		<field fieldname="stock_acco" fieldid="1696" paramtype="file"  >
+		    <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\orderrsp.dat" />
+		</field>
+        <field fieldname="stock_code" fieldid="2929" paramtype="file"  >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\orderrsp.dat" />
+		</field>
+		<field fieldname="report_date" fieldid="2505" paramtype="file"  >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\orderrsp.dat" />
+		</field>
+		<field fieldname="report_time" fieldid="2506" paramtype="file"  >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\orderrsp.dat" />
+		</field>
+		<field fieldname="report_no" fieldid="2502" paramtype="file"  >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\orderrsp.dat" />
+		</field>
+		<field fieldname="order_date" fieldid="1458" paramtype="file"  >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\orderrsp.dat" />
+		</field>
+		<field fieldname="order_id" fieldid="1462"  paramtype="file"  >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\orderrsp.dat" />
+		</field>
+		<field fieldname="order_dir" fieldid="1449" value="1"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"  paramtype="file" >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\orderrsp.dat"  />
+		</field>
+		<field fieldname="order_qty" fieldid="1460" decimalPlaces="2" paramtype="file" >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\orderrsp.dat"  />
+		</field>
+        <field fieldname="rsp_info" fieldid="1800" value="性能测试"/>
+        <field fieldname="order_rsp_status" fieldid="1452" value="1"  />
+		<field fieldname="price_type" fieldid="1887" value="1"  />
+		<field fieldname="contra_no" fieldid="1769" value=" "  />
+    </function>
+<!--逻辑_交易证券_交易_更新订单状态-->    
+    <function functionname="prl_tdsetd_UpdateOrderStatus" typename="LD_REQUEST" functionid="tdsecuL.4.23" packettype="0" times="3">
+        <field fieldname="opor_co_no" fieldid="1194" />
+        <field fieldname="opor_no" fieldid="1192" />
+        <field fieldname="opor_pwd" fieldid="1197" />
+        <field fieldname="oper_mac" fieldid="1181" />
+        <field fieldname="oper_ip_addr" fieldid="1180" />
+        <field fieldname="oper_info" fieldid="1190" />
+        <field fieldname="oper_way" fieldid="1184" value="1"/>
+        <field fieldname="menu_no" fieldid="1169" />
+        <field fieldname="func_code" fieldid="1674"/>
+		<field fieldname="order_date" fieldid="1458" paramtype="file"  >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\canclersp.dat"  selectrow="sequence" />
+		</field>
+		<field fieldname="order_id" fieldid="1462"  paramtype="file"  >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\canclersp.dat"  />
+		</field>
+		<field fieldname="out_acco" fieldid="2697" paramtype="file">
+		 <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\canclersp.dat"  />
+		</field>
+        <field fieldname="order_status" fieldid="1464" value="3"  />
+    </function>
+<!--逻辑_交易证券_报盘_处理撤单回报-->    
+    <function functionname="prl_tdserp_DealWithdrawRsp" typename="LD_REQUEST" functionid="tdsecuL.5.11" packettype="0" times="3" >
+        <field fieldname="opor_co_no" fieldid="1194" />
+        <field fieldname="opor_no" fieldid="1192" />
+        <field fieldname="opor_pwd" fieldid="1197" />
+        <field fieldname="oper_mac" fieldid="1181" />
+        <field fieldname="oper_ip_addr" fieldid="1180" />
+        <field fieldname="oper_info" fieldid="1190" />
+        <field fieldname="oper_way" fieldid="1184" value="1"/>
+        <field fieldname="menu_no" fieldid="1169" />
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pass_no" fieldid="2610" paramtype="file">
+		 <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\BP_canclersp.dat" selectrow="sequence" />
+		</field>
+        <field fieldname="out_acco" fieldid="2697" paramtype="file">
+		 <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\BP_canclersp.dat" />
+		</field>
+        <field fieldname="exch_no" fieldid="2538" paramtype="file"  >
+		    <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\BP_canclersp.dat" />
+		</field>
+        <field fieldname="stock_code" fieldid="2929" paramtype="file"  >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\BP_canclersp.dat"  />
+		</field>
+		<field fieldname="report_date" fieldid="2505" paramtype="file"  >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\BP_canclersp.dat"  />
+		</field>
+		<field fieldname="report_time" fieldid="2506" paramtype="file"  >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\BP_canclersp.dat"  />
+		</field>
+		<field fieldname="report_no" fieldid="2502" paramtype="file"  >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\BP_canclersp.dat"  />
+		</field>
+        <field fieldname="wtdraw_qty" fieldid="1277" paramtype="file"  >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\BP_canclersp.dat"  />
+		</field>
+        <field fieldname="rsp_status" fieldid="1801" value="1"  />
+		<field fieldname="rsp_info" fieldid="1800" value="性能测试"/>
+    </function>
+<!--逻辑_交易证券_报盘_处理成交回报-->    
+    <function functionname="prl_tdserp_DealStrikeRsp" typename="LD_REQUEST" functionid="tdsecuL.5.21" packettype="0" times="3">
+        <field fieldname="opor_co_no" fieldid="1194" />
+        <field fieldname="opor_no" fieldid="1192" />
+        <field fieldname="opor_pwd" fieldid="1197" />
+        <field fieldname="oper_mac" fieldid="1181" />
+        <field fieldname="oper_ip_addr" fieldid="1180" />
+        <field fieldname="oper_info" fieldid="1190" />
+        <field fieldname="oper_way" fieldid="1184" value="1"/>
+        <field fieldname="menu_no" fieldid="1169" />
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pass_no" fieldid="2610"  paramtype="file">
+		 <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\orderrsp.dat" selectrow="sequence" />
+		</field>
+        <field fieldname="out_acco" fieldid="2697" paramtype="file">
+		 <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\orderrsp.dat"  />
+		</field>
+        <field fieldname="exch_no" fieldid="2538" paramtype="file"  >
+		    <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\orderrsp.dat" />
+		</field>
+		<field fieldname="stock_acco" fieldid="1696" paramtype="file"  >
+		    <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\orderrsp.dat" />
+		</field>
+        <field fieldname="stock_code" fieldid="2929" paramtype="file"  >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\orderrsp.dat"  />
+		</field>
+		<field fieldname="report_date" fieldid="2505" paramtype="file"  >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\orderrsp.dat"  />
+		</field>
+		<field fieldname="report_no" fieldid="2502" paramtype="file"  >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\orderrsp.dat"  />
+		</field>
+		<field fieldname="strike_date" fieldid="1310" paramtype="file"  >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\orderrsp.dat" columnname="report_date" />
+		</field>
+		<field fieldname="strike_time" fieldid="1311" value="110000"/>
+		<field fieldname="strike_no" fieldid="1295" paramtype="file"  >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\orderrsp.dat" columnname="report_no"  />
+		</field>
+        <field fieldname="order_dir" fieldid="1449" value="1"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2" paramtype="file" >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\orderrsp.dat" columnname="order_qty"  />
+		</field>
+        <field fieldname="strike_price" fieldid="1303" decimalPlaces="9"  paramtype="file" >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\orderrsp.dat" columnname="order_price"  />
+		</field>
+        <field fieldname="strike_amt" fieldid="1305"  paramtype="file" >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\orderrsp.dat"  />
+		</field>
+		<field fieldname="rsp_info" fieldid="1800" value="性能测试"/>
+        <field fieldname="strike_deal_type" fieldid="1298"  value="1" />
+    </function>
+<!--逻辑_交易证券_报盘_处理订单补单回报-->    
+    <function functionname="prl_tdserp_DealMissOrderRsp" typename="LD_REQUEST" functionid="tdsecuL.5.31" packettype="0" times="3">
+        <field fieldname="opor_co_no" fieldid="1194" />
+        <field fieldname="opor_no" fieldid="1192" />
+        <field fieldname="opor_pwd" fieldid="1197" />
+        <field fieldname="oper_mac" fieldid="1181" />
+        <field fieldname="oper_ip_addr" fieldid="1180" />
+        <field fieldname="oper_info" fieldid="1190" />
+        <field fieldname="oper_way" fieldid="1184" value="1"/>
+        <field fieldname="menu_no" fieldid="1169" />
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pass_no" fieldid="2610" paramtype="file">
+		 <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\BP_orderrsp.dat" selectrow="sequence" />
+		</field>
+        <field fieldname="out_acco" fieldid="2697" paramtype="file">
+		 <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\BP_orderrsp.dat" />
+		</field>
+        <field fieldname="exch_no" fieldid="2538" paramtype="file"  >
+		    <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\BP_orderrsp.dat" />
+		</field>
+		<field fieldname="stock_acco" fieldid="1696" paramtype="file"  >
+		    <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\BP_orderrsp.dat" />
+		</field>
+        <field fieldname="stock_code" fieldid="2929" paramtype="file"  >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\BP_orderrsp.dat" />
+		</field>
+		<field fieldname="external_no" fieldid="2656" />
+		<field fieldname="report_date" fieldid="2505" paramtype="file"  >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\BP_orderrsp.dat" />
+		</field>
+		<field fieldname="report_time" fieldid="2506" paramtype="file"  >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\BP_orderrsp.dat" />
+		</field>
+		<field fieldname="report_no" fieldid="2502" paramtype="file"  >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\BP_orderrsp.dat" />
+		</field>
+		<field fieldname="order_dir" fieldid="1449" value="1"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"  paramtype="file" >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\BP_orderrsp.dat"  />
+		</field>
+		<field fieldname="order_qty" fieldid="1460" decimalPlaces="2" value="500"/>
+        <field fieldname="order_status" fieldid="1464" value="2"  />
+		<field fieldname="price_type" fieldid="1887" value="1"  />
+    </function>
+<!--逻辑_交易证券_交易_插件新增订单-->    
+    <function functionname="prl_tdsetd_PlugAddOrder" typename="LD_REQUEST" functionid="tdsecuL.4.132" packettype="0" times="3">
+        <field fieldname="opor_co_no" fieldid="1194" />
+        <field fieldname="opor_no" fieldid="1192" />
+        <field fieldname="opor_pwd" fieldid="1197" />
+        <field fieldname="oper_mac" fieldid="1181" />
+        <field fieldname="oper_ip_addr" fieldid="1180" />
+        <field fieldname="oper_info" fieldid="1190" />
+        <field fieldname="oper_way" fieldid="1184" value="1"/>
+        <field fieldname="menu_no" fieldid="1169" />
+        <field fieldname="func_code" fieldid="1674"/>
+		<field fieldname="target_opor_no" fieldid="2256" paramtype="file"  >
+		    <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" columnname="opor_no" selectrow="random" />
+		</field>
+        <field fieldname="target_co_no" fieldid="2269" paramtype="file"  >
+		    <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" columnname="opor_co_no" />
+		</field>
+		<field fieldname="comm_opor" fieldid="3006" value=""/>
+        <field fieldname="exch_group_no" fieldid="1962" paramtype="file">
+		 <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" />
+		</field>
+        <field fieldname="asset_acco_no" fieldid="3051" paramtype="file">
+		<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" />
+		</field>
+        <field fieldname="exch_no" fieldid="2538" paramtype="file"  >
+		    <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\AGstock_code.dat" selectrow="random" />
+		</field>
+        <field fieldname="stock_code" fieldid="2929" paramtype="file"  >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\AGstock_code.dat" />
+		</field>
+		<field fieldname="external_no" fieldid="2656" />
+		<field fieldname="comm_id" fieldid="3010" />
+        <field fieldname="order_batch_no" fieldid="1457" />
+		<field fieldname="order_dir" fieldid="1449" value="1"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"  paramtype="file" >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\AGstock_code.dat" columnname="last_price" />
+		</field>
+		<field fieldname="order_qty" fieldid="1460" decimalPlaces="2" value="400"/>
+		<field fieldname="price_type" fieldid="1887" value="1"  />
+		<field fieldname="combo_code" fieldid="4056" value=" "  />
+		<field fieldname="order_oper_way" fieldid="1443" value="61"  />
+		<field fieldname="plugin_type" fieldid="5882" value="2"  />
+		<field fieldname="plugin_params_str" fieldid="5883" value=" " />
+    </function>	
+<!--逻辑_交易证券_交易_撤销订单-->    
+    <function functionname="prl_tdsetd_CancelOrder" typename="LD_REQUEST" functionid="tdsecuL.4.12" packettype="0" times="3" >
+        <field fieldname="opor_co_no" fieldid="1194" paramtype="file">
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\canclersp.dat" selectrow="sequence" />
+		</field>
+        <field fieldname="opor_no" fieldid="1192" paramtype="file">
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\canclersp.dat" />
+		</field>
+        <field fieldname="opor_pwd" fieldid="1197" paramtype="file">
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\canclersp.dat" />
+		</field>
+        <field fieldname="oper_mac" fieldid="1181" />
+        <field fieldname="oper_ip_addr" fieldid="1180" />
+        <field fieldname="oper_info" fieldid="1190" />
+        <field fieldname="oper_way" fieldid="1184" value="1"/>
+        <field fieldname="menu_no" fieldid="1169" />
+        <field fieldname="func_code" fieldid="1674"/>
+		<field fieldname="order_date" fieldid="1458" paramtype="file"  >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\canclersp.dat"  />
+		</field>
+		<field fieldname="order_id" fieldid="1462"  paramtype="file"  >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\canclersp.dat"  />
+		</field>
+    </function>	
+<!--逻辑_交易证券_交易_新增组合策略订单-->    
+    <function functionname="prl_tdsetd_AddCombStraOrder" typename="LD_REQUEST" functionid="tdsecuL.4.138" packettype="0" times="3">
+        <field fieldname="opor_co_no" fieldid="1194" paramtype="file">
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" selectrow="random" />
+		</field>
+        <field fieldname="opor_no" fieldid="1192" paramtype="file">
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" />
+		</field>
+        <field fieldname="opor_pwd" fieldid="1197" paramtype="file">
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" />
+		</field>
+        <field fieldname="oper_mac" fieldid="1181" />
+        <field fieldname="oper_ip_addr" fieldid="1180" />
+        <field fieldname="oper_info" fieldid="1190" />
+        <field fieldname="oper_way" fieldid="1184" value="1"/>
+        <field fieldname="menu_no" fieldid="1169" />
+        <field fieldname="func_code" fieldid="1674"/>
+		<field fieldname="comm_opor" fieldid="3006" value=""/>
+        <field fieldname="exch_group_no" fieldid="1962" paramtype="file">
+		 <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" />
+		</field>
+        <field fieldname="asset_acco_no" fieldid="3051" paramtype="file">
+		<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" />
+		</field>
+        <field fieldname="exch_no" fieldid="2538" paramtype="file"  >
+		    <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\AGstock_code.dat" selectrow="random" />
+		</field>
+        <field fieldname="stock_code" fieldid="2929" paramtype="file"  >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\AGstock_code.dat" />
+		</field>
+		<field fieldname="external_no" fieldid="2656" />
+		<field fieldname="comm_id" fieldid="3010" />
+		<field fieldname="combo_code" fieldid="4056" value=" "/>
+        <field fieldname="order_batch_no" fieldid="1457" />
+		<field fieldname="order_dir" fieldid="1449" value="1"/>
+		<field fieldname="order_qty" fieldid="1460" decimalPlaces="2" value="300"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"  paramtype="file" >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\AGstock_code.dat" columnname="last_price" />
+		</field>
+		<field fieldname="price_type" fieldid="1887" value="1"  />
+		<field fieldname="order_oper_way" fieldid="1443" value="12"  />
+    </function>	
+<!--逻辑_交易证券_策略_更新策略执行情况-->    
+    <function functionname="prl_tdsest_UpdateStrategyOrderExecution" typename="LD_REQUEST" functionid="tdsecuL.11.15" packettype="0" times="3">
+        <field fieldname="opor_co_no" fieldid="1194" value="4141"/>
+        <field fieldname="opor_no" fieldid="1192" value="41410001" />
+        <field fieldname="opor_pwd" fieldid="1197" value="NGFhOTE3ZGRkZjZmZDRjNmViMGI5Zjc3ZTU2YTVmZWI=" />
+        <field fieldname="oper_mac" fieldid="1181" />
+        <field fieldname="oper_ip_addr" fieldid="1180" />
+        <field fieldname="oper_info" fieldid="1190" />
+        <field fieldname="oper_way" fieldid="1184" value="1"/>
+        <field fieldname="menu_no" fieldid="1169" />
+        <field fieldname="func_code" fieldid="1674"/>
+		<field fieldname="strategy_id" fieldid="3674" value="377" />
+		<field fieldname="order_id" fieldid="1462"  value="460627" />
+        <field fieldname="order_qty" fieldid="1460" value="100" />
+		<field fieldname="order_amt" fieldid="3762"  value="1589" />
+		<field fieldname="wtdraw_qty" fieldid="1277" value="100"  />
+		<field fieldname="strike_id" fieldid="1315" decimalPlaces="9"  />
+		<field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"  />     
+        <field fieldname="strike_amt" fieldid="1305"   />
+    </function>	
+<!--逻辑_交易证券_策略_更新策略状态-->    
+    <function functionname="prl_tdsest_UpdateStrategyOrderExecution" typename="LD_REQUEST" functionid="tdsecuL.11.16" packettype="0" times="3">
+        <field fieldname="opor_co_no" fieldid="1194" value="4141"/>
+        <field fieldname="opor_no" fieldid="1192" value="41410001" />
+        <field fieldname="opor_pwd" fieldid="1197" value="NGFhOTE3ZGRkZjZmZDRjNmViMGI5Zjc3ZTU2YTVmZWI=" />
+        <field fieldname="oper_mac" fieldid="1181" />
+        <field fieldname="oper_ip_addr" fieldid="1180" />
+        <field fieldname="oper_info" fieldid="1190" />
+        <field fieldname="oper_way" fieldid="1184" value="1"/>
+        <field fieldname="menu_no" fieldid="1169" />
+        <field fieldname="func_code" fieldid="1674"/>
+		<field fieldname="orig_strategy_id" fieldid="3676" value="378" />
+		<field fieldname="strategy_id" fieldid="3674" value="378" />
+		<field fieldname="strategy_deal_status" fieldid="3763"  value="2" />
+        <field fieldname="strategy_status" fieldid="3757" value="3" />
+		<field fieldname="remark_info" fieldid="1146"  value="执行中" />
+    </function>	
+<!--逻辑_交易证券_交易_查询订单-->  
+    <function functionname="funcl_tdsetd_QueryOrder" typename="LD_REQUEST" functionid="tdsecuL.4.101" packettype="0" times="3">
+        <field fieldname="opor_co_no" fieldid="1194" paramtype="file">
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" selectrow="sequence" />
+		</field>
+        <field fieldname="opor_no" fieldid="1192" paramtype="file">
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" />
+		</field>
+        <field fieldname="opor_pwd" fieldid="1197" paramtype="file">
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" />
+		</field>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="busi_opor_no" fieldid="2789"/>
+        <field fieldname="order_oper_way" fieldid="1443"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="exch_no_str" fieldid="2539" value=" "/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_type_str" fieldid="2939" value=" "/>
+        <field fieldname="comm_id" fieldid="3010"/>
+        <field fieldname="comm_batch_no" fieldid="2987"/>
+        <field fieldname="comm_opor" fieldid="3006"/>
+        <field fieldname="external_no" fieldid="2656"/>
+        <field fieldname="order_batch_no" fieldid="1457"/>
+        <field fieldname="order_id" fieldid="1462"/>
+        <field fieldname="order_dir_str" fieldid="1450" value=" "/>
+        <field fieldname="order_status_str" fieldid="1465" value=" "/>
+        <field fieldname="price_type_str" fieldid="1888" value=" "/>
+        <field fieldname="row_id" fieldid="1867" value="0" />
+        <field fieldname="row_count" fieldid="2959" value="500"/>
+        <field fieldname="sort_type" fieldid="2290" value="1"/>
+        <field fieldname="combo_code" fieldid="4056" value=" "/>
+    </function>
+<!--逻辑_交易证券_报盘_查询成交明细历史-->  
+    <function functionname="prl_tdserp_QueryStrikeDetail_His" typename="LD_REQUEST" functionid="tdsecuL.5.123" packettype="0" times="3">
+        <field fieldname="opor_co_no" fieldid="1194" paramtype="file">
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" selectrow="sequence" />
+		</field>
+        <field fieldname="opor_no" fieldid="1192" paramtype="file">
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" />
+		</field>
+        <field fieldname="opor_pwd" fieldid="1197" paramtype="file">
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" />
+		</field>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+		<field fieldname="begin_date" fieldid="2073" value="20190927"/>
+		<field fieldname="end_date" fieldid="1986" value="20190927"/>
+        <field fieldname="busi_opor_no" fieldid="2789"/>
+        <field fieldname="order_oper_way" fieldid="1443" value=" "/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="exch_no_str" fieldid="2539" value=" "/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_type_str" fieldid="2939" value=" "/>
+        <field fieldname="comm_id" fieldid="3010"/>
+        <field fieldname="comm_batch_no" fieldid="2987"/>
+        <field fieldname="order_batch_no" fieldid="1457"/>
+        <field fieldname="order_dir_str" fieldid="1450" value=" "/>
+        <field fieldname="exter_comm_flag" fieldid="3170" />
+        <field fieldname="record_valid_flag" fieldid="3169" />
+        <field fieldname="row_id" fieldid="1867" value="0" />
+        <field fieldname="row_count" fieldid="2959" value="500"/>
+        <field fieldname="sort_type" fieldid="2290" value="1"/>
+        <field fieldname="combo_code" fieldid="4056" value=" "/>
+    </function>
+<!--逻辑_交易证券_交易_查询订单汇总-->  
+    <function functionname="prl_tdsetd_QueryOrderSum" typename="LD_REQUEST" functionid="tdsecuL.4.103" packettype="0" times="3">
+        <field fieldname="opor_co_no" fieldid="1194" paramtype="file">
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" selectrow="random" />
+		</field>
+        <field fieldname="opor_no" fieldid="1192" paramtype="file">
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" />
+		</field>
+        <field fieldname="opor_pwd" fieldid="1197" paramtype="file">
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" />
+		</field>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+		<field fieldname="busi_opor_no" fieldid="2789"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="exch_no_str" fieldid="2539" value=" "/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_type_str" fieldid="2939" value=" "/>
+        <field fieldname="external_no" fieldid="2656"/>
+        <field fieldname="order_batch_no" fieldid="1457"/>
+        <field fieldname="order_dir_str" fieldid="1450" value=" "/>
+        <field fieldname="order_sum_status_str" fieldid="3324" value=" "/>
+        <field fieldname="row_id" fieldid="1867" value="0" />
+        <field fieldname="row_count" fieldid="2959" value="500"/>
+    </function>
+<!--逻辑_交易证券_报盘_查询成交明细-->  
+    <function functionname="prl_tdserp_QueryStrikeDetail" typename="LD_REQUEST" functionid="tdsecuL.5.122" packettype="0" times="3">
+        <field fieldname="opor_co_no" fieldid="1194" paramtype="file">
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" selectrow="random" />
+		</field>
+        <field fieldname="opor_no" fieldid="1192" paramtype="file">
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" />
+		</field>
+        <field fieldname="opor_pwd" fieldid="1197" paramtype="file">
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" />
+		</field>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+		<field fieldname="busi_opor_no" fieldid="2789"/>
+		<field fieldname="order_oper_way" fieldid="1443" value=" "/>
+		<field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="exch_no_str" fieldid="2539" value=" "/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_type_str" fieldid="2939" value=" "/>
+	    <field fieldname="comm_id" fieldid="3010"/>
+        <field fieldname="comm_batch_no" fieldid="2987"/>
+        <field fieldname="order_batch_no" fieldid="1457"/>
+        <field fieldname="order_dir_str" fieldid="1450" value=" "/>
+        <field fieldname="exter_comm_flag" fieldid="3170" />
+        <field fieldname="record_valid_flag" fieldid="3169" />
+        <field fieldname="row_id" fieldid="1867" value="0" />
+        <field fieldname="row_count" fieldid="2959" value="500"/>
+        <field fieldname="sort_type" fieldid="2290" value="1"/>
+        <field fieldname="combo_code" fieldid="4056" value=" "/>
+    </function>
+<!--逻辑_交易证券_交易_查询预埋订单-->  
+    <function functionname="prl_tdsetd_QueryPreOrder" typename="LD_REQUEST" functionid="tdsecuL.4.105" packettype="0" times="3">
+        <field fieldname="opor_co_no" fieldid="1194" paramtype="file">
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" selectrow="sequence" />
+		</field>
+        <field fieldname="opor_no" fieldid="1192" paramtype="file">
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" />
+		</field>
+        <field fieldname="opor_pwd" fieldid="1197" paramtype="file">
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" />
+		</field>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+		<field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="row_id" fieldid="1867" value="0" />
+        <field fieldname="row_count" fieldid="2959" value="500"/>
+    </function>
+<!--逻辑_交易证券_账户_查询资产账户资金-->  
+    <function functionname="prl_userclient_QueryExgpGroupAsset" typename="LD_REQUEST" functionid="tdsecuL.2.6" packettype="0" times="3">
+        <field fieldname="opor_co_no" fieldid="1194" paramtype="file">
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" selectrow="random" />
+		</field>
+        <field fieldname="opor_no" fieldid="1192" paramtype="file">
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" />
+		</field>
+        <field fieldname="opor_pwd" fieldid="1197" paramtype="file">
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" />
+		</field>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+		<field fieldname="co_no" fieldid="1828" />
+        <field fieldname="pd_no" fieldid="1228"  />
+		<field fieldname="asset_acco_no" fieldid="3051" />
+        <field fieldname="exch_crncy_type" fieldid="1906" value="CNY" />
+        <field fieldname="row_id" fieldid="1867" value="0" />
+        <field fieldname="row_count" fieldid="2959" value="500"/>
+    </function>
+<!--逻辑_交易证券_账户_查询交易组资金-->  
+    <function functionname="prl_tdseac_QueryExgpCash" typename="LD_REQUEST" functionid="tdsecuL.2.5" packettype="0" times="3">
+        <field fieldname="opor_co_no" fieldid="1194" paramtype="file">
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" selectrow="sequence" />
+		</field>
+        <field fieldname="opor_no" fieldid="1192" paramtype="file">
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" />
+		</field>
+        <field fieldname="opor_pwd" fieldid="1197" paramtype="file">
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" />
+		</field>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+		<field fieldname="co_no" fieldid="1828" />
+        <field fieldname="pd_no" fieldid="1228"  />
+	    <field fieldname="exch_group_no" fieldid="1962"/>	
+		<field fieldname="asset_acco_no" fieldid="3051" />
+        <field fieldname="exch_crncy_type" fieldid="1906" value="CNY" />
+        <field fieldname="row_id" fieldid="1867" value="0" />
+        <field fieldname="row_count" fieldid="2959" value="500"/>
+    </function>
+<!--逻辑_交易证券_账户_查询交易组持仓-->  
+    <function functionname="prl_tdseac_QueryExgpPosi" typename="LD_REQUEST" functionid="tdsecuL.2.7" packettype="0" times="3">
+        <field fieldname="opor_co_no" fieldid="1194" paramtype="file">
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" selectrow="random" />
+		</field>
+        <field fieldname="opor_no" fieldid="1192" paramtype="file">
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" />
+		</field>
+        <field fieldname="opor_pwd" fieldid="1197" paramtype="file">
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" />
+		</field>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+		<field fieldname="co_no" fieldid="1828" />
+        <field fieldname="pd_no" fieldid="1228"  />
+        <field fieldname="exch_group_no" fieldid="1962"/>		
+		<field fieldname="asset_acco_no" fieldid="3051" />
+		<field fieldname="exch_no_str" fieldid="2539" value=" "/>
+		<field fieldname="stock_acco_no" fieldid="1697"/>
+		<field fieldname="stock_code_no_str" fieldid="3192" value=" " />
+        <field fieldname="stock_type_str" fieldid="2939" value=" "/>
+        <field fieldname="row_id" fieldid="1867" value="0" />
+        <field fieldname="row_count" fieldid="2959" value="500"/>
+    </function>
+<!--逻辑_交易证券_账户_查询资产账户持仓-->  
+    <function functionname="prl_tdseac_QueryAsacPosi" typename="LD_REQUEST" functionid="tdsecuL.2.8" packettype="0" times="3">
+        <field fieldname="opor_co_no" fieldid="1194" paramtype="file">
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" selectrow="random" />
+		</field>
+        <field fieldname="opor_no" fieldid="1192" paramtype="file">
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" />
+		</field>
+        <field fieldname="opor_pwd" fieldid="1197" paramtype="file">
+        <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" />
+		</field>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+		<field fieldname="co_no" fieldid="1828" />
+        <field fieldname="pd_no" fieldid="1228"  />	
+		<field fieldname="asset_acco_no" fieldid="3051" />
+		<field fieldname="exch_no_str" fieldid="2539" value=" "/>
+		<field fieldname="stock_acco_no" fieldid="1697"/>
+		<field fieldname="stock_code_no_str" fieldid="3192" value=" " />
+        <field fieldname="row_id" fieldid="1867" value="0" />
+        <field fieldname="row_count" fieldid="2959" value="500"/>
+    </function>
+<!--逻辑_交易证券_T0_持仓合笔查询-->  
+    <function functionname="prl_tdset0_QueryPosiCombi" typename="LD_REQUEST" functionid="tdsecuL.6.3" packettype="0" times="3">
+        <field fieldname="opor_co_no" fieldid="1194" value="4242" />
+        <field fieldname="opor_no" fieldid="1192"  value="42420001" />
+        <field fieldname="opor_pwd" fieldid="1197"  value="NzhmOTdhNzdmYWNiZDJlMzg1ODZiNTNmZjYyZDA4MWY=" />
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+		<field fieldname="co_no" fieldid="1828" />
+        <field fieldname="pd_no" fieldid="1228"  />	
+		<field fieldname="exch_group_no" fieldid="1962"/>	
+		<field fieldname="asset_acco_no" fieldid="3051" />
+    </function>
+<!--逻辑_交易证券_T0_券源持仓查询-->  
+    <function functionname="prl_tdset0_QuerySourceStockPosi" typename="LD_REQUEST" functionid="tdsecuL.6.1" packettype="0" times="3">
+        <field fieldname="opor_co_no" fieldid="1194" value="4242" />
+        <field fieldname="opor_no" fieldid="1192"  value="42420001" />
+        <field fieldname="opor_pwd" fieldid="1197"  value="NzhmOTdhNzdmYWNiZDJlMzg1ODZiNTNmZjYyZDA4MWY=" />
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+		<field fieldname="co_no" fieldid="1828" />
+        <field fieldname="pd_no" fieldid="1228"  />	
+		<field fieldname="exch_group_no" fieldid="1962"/>	
+		<field fieldname="asset_acco_no" fieldid="3051" />
+		<field fieldname="stock_code" fieldid="2929"/>	
+		<field fieldname="exch_no" fieldid="2538" />
+    </function>		
+</bizmsgs>

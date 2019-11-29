@@ -1,0 +1,115 @@
+[2019-11-08 14:05:05:282]
+            LogID:[ldsdk] 3500[sdk初始化完成]
+            Level:INFO
+            Module:sdk
+            Message:sdk编译日期：May  6 2019  编译时间：11:20:30
+[2019-11-08 14:08:50:178]
+            LogID:[ldsdk] 3500[sdk初始化完成]
+            Level:INFO
+            Module:sdk
+            Message:sdk编译日期：May  6 2019  编译时间：11:20:30
+[2019-11-08 14:19:12:490]
+            LogID:[ldsdk] 3500[sdk初始化完成]
+            Level:INFO
+            Module:sdk
+            Message:sdk编译日期：May  6 2019  编译时间：11:20:30
+[2019-11-08 14:32:23:390]
+            LogID:[ldsdk] 3500[sdk初始化完成]
+            Level:INFO
+            Module:sdk
+            Message:sdk编译日期：May  6 2019  编译时间：11:20:30
+[2019-11-08 14:32:55:969]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.1.901  Time:15
+[2019-11-08 14:32:56:989]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.138  Time:16
+[2019-11-08 14:33:23:799]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.1.901  Time:0
+[2019-11-08 14:33:24:815]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.138  Time:16
+[2019-11-08 14:35:03:409]
+            LogID:[ldsdk] 3500[sdk初始化完成]
+            Level:INFO
+            Module:sdk
+            Message:sdk编译日期：May  6 2019  编译时间：11:20:30
+[2019-11-08 14:35:37:094]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.1.901  Time:15
+[2019-11-08 14:35:38:111]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.138  Time:16
+[2019-11-08 14:35:46:984]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.1.901  Time:16
+[2019-11-08 14:35:48:000]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.16  Time:16
+[2019-11-08 14:36:11:889]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：pdsecuL.3.1  Time:15
+[2019-11-08 15:33:56:067]
+            LogID:[ldsdk] 3500[sdk初始化完成]
+            Level:INFO
+            Module:sdk
+            Message:sdk编译日期：May  6 2019  编译时间：11:20:30
+[2019-11-08 15:34:38:456]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.1.901  Time:94
+[2019-11-08 15:34:39:531]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：tdsecuL.4.138  Time:63
+[2019-11-08 16:33:41:656]
+            LogID:[ldsdk] 3500[sdk初始化完成]
+            Level:INFO
+            Module:sdk
+            Message:sdk编译日期：May  6 2019  编译时间：11:20:30
+[2019-11-08 16:39:57:303]
+            LogID:[ldsdk] 3500[sdk初始化完成]
+            Level:INFO
+            Module:sdk
+            Message:sdk编译日期：May  6 2019  编译时间：11:20:30
+[2019-11-08 16:57:10:996]
+            LogID:[ldsdk] 3500[sdk初始化完成]
+            Level:INFO
+            Module:sdk
+            Message:sdk编译日期：May  6 2019  编译时间：11:20:30
+[2019-11-08 17:02:17:316]
+            LogID:[ldsdk] 3500[sdk初始化完成]
+            Level:INFO
+            Module:sdk
+            Message:sdk编译日期：May  6 2019  编译时间：11:20:30
+[2019-11-08 17:05:38:951]
+            LogID:[ldsdk] 3500[sdk初始化完成]
+            Level:INFO
+            Module:sdk
+            Message:sdk编译日期：May  6 2019  编译时间：11:20:30
+[2019-11-08 17:09:03:769]
+            LogID:[ldsdk] 3500[sdk初始化完成]
+            Level:INFO
+            Module:sdk
+            Message:sdk编译日期：May  6 2019  编译时间：11:20:30

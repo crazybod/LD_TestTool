@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bizmsgs>
+    <function functionname="funct_rpt_Init_Exch" typename="LD_REQUEST" functionid="rptT.1.1" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+    </function>
+    <function functionname="funct_rpt_Init_Exch" typename="LD_ANSWER" functionid="rptT.1.1" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_rpt_Init_System" typename="LD_REQUEST" functionid="rptT.1.2" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+    </function>
+    <function functionname="funct_rpt_Init_System" typename="LD_ANSWER" functionid="rptT.1.2" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_rpt_Qry_Sys_Initdate" typename="LD_REQUEST" functionid="rptT.1.3" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+    </function>
+    <function functionname="funct_rpt_Qry_Sys_Initdate" typename="LD_ANSWER" functionid="rptT.1.3" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="last_init_date" fieldid="2494"/>
+        <field fieldname="next_init_date" fieldid="3653"/>
+    </function>
+    <function functionname="funct_rpt_Add_Def_Sqls_Repo" typename="LD_REQUEST" functionid="rptT.1.21" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="sql_no" fieldid="4412"/>
+        <field fieldname="sql_name" fieldid="4413"/>
+        <field fieldname="sql_str" fieldid="4414"/>
+        <field fieldname="sql_type" fieldid="4415"/>
+        <field fieldname="in_params" fieldid="4416"/>
+        <field fieldname="in_params_value" fieldid="4417"/>
+        <field fieldname="valid_flag" fieldid="2834"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funct_rpt_Add_Def_Sqls_Repo" typename="LD_ANSWER" functionid="rptT.1.21" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_rpt_Modi_Def_Sqls_Repo" typename="LD_REQUEST" functionid="rptT.1.22" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="sql_no" fieldid="4412"/>
+        <field fieldname="sql_name" fieldid="4413"/>
+        <field fieldname="sql_str" fieldid="4414"/>
+        <field fieldname="sql_type" fieldid="4415"/>
+        <field fieldname="in_params" fieldid="4416"/>
+        <field fieldname="in_params_value" fieldid="4417"/>
+        <field fieldname="valid_flag" fieldid="2834"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funct_rpt_Modi_Def_Sqls_Repo" typename="LD_ANSWER" functionid="rptT.1.22" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_rpt_Run_Def_Sqls_Repo" typename="LD_REQUEST" functionid="rptT.1.23" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exe_sql_name" fieldid="4421"/>
+        <field fieldname="in_params_value" fieldid="4417"/>
+    </function>
+    <function functionname="funct_rpt_Run_Def_Sqls_Repo" typename="LD_ANSWER" functionid="rptT.1.23" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_rpt_Add_Def_Exe_Sqls" typename="LD_REQUEST" functionid="rptT.1.25" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exe_sql_name" fieldid="4421"/>
+        <field fieldname="exe_sql_type" fieldid="4422"/>
+        <field fieldname="exe_sql_str" fieldid="3699"/>
+        <field fieldname="manual_modi_flag" fieldid="4438"/>
+        <field fieldname="in_params_value" fieldid="4417"/>
+        <field fieldname="update_table_name" fieldid="4423"/>
+        <field fieldname="update_fields" fieldid="4424"/>
+        <field fieldname="rl_fields" fieldid="4425"/>
+        <field fieldname="join_fields" fieldid="4437"/>
+        <field fieldname="sql_no" fieldid="4412"/>
+        <field fieldname="sql_name" fieldid="4413"/>
+        <field fieldname="valid_flag" fieldid="2834"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funct_rpt_Add_Def_Exe_Sqls" typename="LD_ANSWER" functionid="rptT.1.25" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_rpt_Run_Init_Exe_Sql_Grps" typename="LD_REQUEST" functionid="rptT.1.27" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exe_sql_grp_nos_str" fieldid="4506"/>
+        <field fieldname="exe_sql_nos_str" fieldid="4507"/>
+        <field fieldname="sql_grp_no" fieldid="4426"/>
+    </function>
+    <function functionname="funct_rpt_Run_Init_Exe_Sql_Grps" typename="LD_ANSWER" functionid="rptT.1.27" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_rpt_Run_Exe_Sql_Grps" typename="LD_REQUEST" functionid="rptT.1.30" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="sql_grp_no" fieldid="4426"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="sync_his_flag" fieldid="5096"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="src_data_type" fieldid="5097"/>
+        <field fieldname="pos_str" fieldid="5098"/>
+    </function>
+    <function functionname="funct_rpt_Run_Exe_Sql_Grps" typename="LD_ANSWER" functionid="rptT.1.30" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+</bizmsgs>

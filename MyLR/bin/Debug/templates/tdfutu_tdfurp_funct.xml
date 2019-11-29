@@ -1,0 +1,611 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bizmsgs>
+    <function functionname="funct_tdfurp_DealOrderRsp" typename="LD_REQUEST" functionid="tdfutuT.5.1" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="futu_acco" fieldid="1908"/>
+        <field fieldname="contrc_code" fieldid="1776"/>
+        <field fieldname="contrc_dir" fieldid="2070"/>
+        <field fieldname="lngsht_type" fieldid="1491"/>
+        <field fieldname="order_id" fieldid="1462"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="report_no" fieldid="2502"/>
+        <field fieldname="report_date" fieldid="2505"/>
+        <field fieldname="report_time" fieldid="2506"/>
+        <field fieldname="pre_settle_price" fieldid="3132" decimalPlaces="9"/>
+        <field fieldname="rsp_info" fieldid="1800"/>
+        <field fieldname="order_rsp_status" fieldid="1452"/>
+        <field fieldname="rsp_status" fieldid="1801"/>
+        <field fieldname="exgp_avail_qty" fieldid="1969" decimalPlaces="2"/>
+        <field fieldname="asac_avail_qty" fieldid="3055" decimalPlaces="2"/>
+        <field fieldname="exgp_long_rece_margin" fieldid="3748" decimalPlaces="6"/>
+        <field fieldname="exgp_short_rece_margin" fieldid="3749" decimalPlaces="6"/>
+        <field fieldname="asac_long_rece_margin" fieldid="3750" decimalPlaces="6"/>
+        <field fieldname="asac_short_rece_margin" fieldid="3751" decimalPlaces="6"/>
+    </function>
+    <function functionname="funct_tdfurp_DealOrderRsp" typename="LD_ANSWER" functionid="tdfutuT.5.1" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="futu_acco_no" fieldid="1909"/>
+        <field fieldname="contrc_code_no" fieldid="1777"/>
+        <field fieldname="external_no" fieldid="2656"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="contrc_type" fieldid="1778"/>
+        <field fieldname="contrc_unit" fieldid="1775"/>
+        <field fieldname="calc_dir" fieldid="1858"/>
+        <field fieldname="occur_qty" fieldid="1159" decimalPlaces="2"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="comm_id" fieldid="3010"/>
+        <field fieldname="comm_batch_no" fieldid="2987"/>
+        <field fieldname="comm_limit_price" fieldid="3008" decimalPlaces="9"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="hedge_type" fieldid="2591"/>
+        <field fieldname="order_batch_no" fieldid="1457"/>
+        <field fieldname="order_date" fieldid="1458"/>
+        <field fieldname="order_time" fieldid="1459"/>
+        <field fieldname="order_status" fieldid="1464"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="wtdraw_qty" fieldid="1277" decimalPlaces="2"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="strike_price" fieldid="1303" decimalPlaces="9"/>
+        <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+        <field fieldname="report_fee" fieldid="2504" decimalPlaces="6"/>
+        <field fieldname="wtdraw_fee" fieldid="1272" decimalPlaces="6"/>
+        <field fieldname="trade_fee" fieldid="1939" decimalPlaces="6"/>
+        <field fieldname="strike_fee" fieldid="1300" decimalPlaces="6"/>
+        <field fieldname="all_fee" fieldid="2410" decimalPlaces="6"/>
+        <field fieldname="trade_commis" fieldid="1953" decimalPlaces="6"/>
+        <field fieldname="other_commis" fieldid="2350" decimalPlaces="6"/>
+        <field fieldname="trade_capt_amt" fieldid="1959" decimalPlaces="6"/>
+        <field fieldname="posi_capt_amt" fieldid="1333" decimalPlaces="6"/>
+        <field fieldname="comb_code" fieldid="3092"/>
+        <field fieldname="rece_margin" fieldid="2822" decimalPlaces="6"/>
+        <field fieldname="margin_ratio" fieldid="1114" decimalPlaces="12"/>
+        <field fieldname="comm_margin" fieldid="2961" decimalPlaces="6"/>
+        <field fieldname="compli_trig_id" fieldid="1743"/>
+        <field fieldname="order_oper_way" fieldid="1443"/>
+        <field fieldname="busi_opor_no" fieldid="2789"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="funct_tdfurp_DealCancelRsp" typename="LD_REQUEST" functionid="tdfutuT.5.11" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="contrc_dir" fieldid="2070"/>
+        <field fieldname="hedge_type" fieldid="2591"/>
+        <field fieldname="lngsht_type" fieldid="1491"/>
+        <field fieldname="report_no" fieldid="2502"/>
+        <field fieldname="report_date" fieldid="2505"/>
+        <field fieldname="order_date" fieldid="1458"/>
+        <field fieldname="order_id" fieldid="1462"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="wtdraw_qty" fieldid="1277" decimalPlaces="2"/>
+        <field fieldname="exgp_avail_qty" fieldid="1969" decimalPlaces="2"/>
+        <field fieldname="asac_avail_qty" fieldid="3055" decimalPlaces="2"/>
+        <field fieldname="pre_settle_price" fieldid="3132" decimalPlaces="9"/>
+        <field fieldname="rsp_status" fieldid="1801"/>
+        <field fieldname="rsp_info" fieldid="1800"/>
+        <field fieldname="exgp_long_rece_margin" fieldid="3748" decimalPlaces="6"/>
+        <field fieldname="exgp_short_rece_margin" fieldid="3749" decimalPlaces="6"/>
+        <field fieldname="asac_long_rece_margin" fieldid="3750" decimalPlaces="6"/>
+        <field fieldname="asac_short_rece_margin" fieldid="3751" decimalPlaces="6"/>
+    </function>
+    <function functionname="funct_tdfurp_DealCancelRsp" typename="LD_ANSWER" functionid="tdfutuT.5.11" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="futu_acco_no" fieldid="1909"/>
+        <field fieldname="contrc_code_no" fieldid="1777"/>
+        <field fieldname="external_no" fieldid="2656"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="contrc_type" fieldid="1778"/>
+        <field fieldname="contrc_unit" fieldid="1775"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="report_time" fieldid="2506"/>
+        <field fieldname="order_status" fieldid="1464"/>
+        <field fieldname="order_batch_no" fieldid="1457"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+        <field fieldname="order_frozen_amt" fieldid="1445" decimalPlaces="6"/>
+        <field fieldname="wtdraw_status" fieldid="1280"/>
+        <field fieldname="wtdraw_date" fieldid="1275"/>
+        <field fieldname="wtdraw_time" fieldid="1276"/>
+        <field fieldname="wtdraw_remark" fieldid="1278"/>
+        <field fieldname="calc_dir" fieldid="1858"/>
+        <field fieldname="comm_id" fieldid="3010"/>
+        <field fieldname="comm_batch_no" fieldid="2987"/>
+        <field fieldname="comm_limit_price" fieldid="3008" decimalPlaces="9"/>
+        <field fieldname="occur_qty" fieldid="1159" decimalPlaces="2"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="strike_price" fieldid="1303" decimalPlaces="9"/>
+        <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+        <field fieldname="strike_fee" fieldid="1300" decimalPlaces="6"/>
+        <field fieldname="trade_fee" fieldid="1939" decimalPlaces="6"/>
+        <field fieldname="report_fee" fieldid="2504" decimalPlaces="6"/>
+        <field fieldname="wtdraw_fee" fieldid="1272" decimalPlaces="6"/>
+        <field fieldname="trade_commis" fieldid="1953" decimalPlaces="6"/>
+        <field fieldname="other_commis" fieldid="2350" decimalPlaces="6"/>
+        <field fieldname="comb_code" fieldid="3092"/>
+        <field fieldname="trade_capt_amt" fieldid="1959" decimalPlaces="6"/>
+        <field fieldname="posi_capt_amt" fieldid="1333" decimalPlaces="6"/>
+        <field fieldname="rece_margin" fieldid="2822" decimalPlaces="6"/>
+        <field fieldname="margin_ratio" fieldid="1114" decimalPlaces="12"/>
+        <field fieldname="comm_margin" fieldid="2961" decimalPlaces="6"/>
+        <field fieldname="compli_trig_id" fieldid="1743"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="funct_tdfurp_DealStrikeRsp" typename="LD_REQUEST" functionid="tdfutuT.5.21" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="futu_acco" fieldid="1908"/>
+        <field fieldname="contrc_code" fieldid="1776"/>
+        <field fieldname="contrc_unit" fieldid="1775"/>
+        <field fieldname="contrc_type" fieldid="1778"/>
+        <field fieldname="lngsht_type" fieldid="1491"/>
+        <field fieldname="hedge_type" fieldid="2591"/>
+        <field fieldname="report_date" fieldid="2505"/>
+        <field fieldname="report_no" fieldid="2502"/>
+        <field fieldname="order_id" fieldid="1462"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="contrc_dir" fieldid="2070"/>
+        <field fieldname="strike_price" fieldid="1303" decimalPlaces="9"/>
+        <field fieldname="strike_date" fieldid="1310"/>
+        <field fieldname="strike_time" fieldid="1311"/>
+        <field fieldname="strike_no" fieldid="1295"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+        <field fieldname="strike_fee" fieldid="1300" decimalPlaces="6"/>
+        <field fieldname="trade_commis" fieldid="1953" decimalPlaces="6"/>
+        <field fieldname="other_commis" fieldid="2350" decimalPlaces="6"/>
+        <field fieldname="rsp_info" fieldid="1800"/>
+        <field fieldname="rsp_no" fieldid="1795"/>
+        <field fieldname="pre_settle_price" fieldid="3132" decimalPlaces="9"/>
+        <field fieldname="strike_margin" fieldid="1293" decimalPlaces="6"/>
+        <field fieldname="exgp_long_rece_margin" fieldid="3748" decimalPlaces="6"/>
+        <field fieldname="exgp_short_rece_margin" fieldid="3749" decimalPlaces="6"/>
+        <field fieldname="asac_long_rece_margin" fieldid="3750" decimalPlaces="6"/>
+        <field fieldname="asac_short_rece_margin" fieldid="3751" decimalPlaces="6"/>
+        <field fieldname="exgp_avail_qty" fieldid="1969" decimalPlaces="2"/>
+        <field fieldname="asac_avail_qty" fieldid="3055" decimalPlaces="2"/>
+        <field fieldname="comb_code" fieldid="3092"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="exgp_long_stock_rece_margin" fieldid="5695" decimalPlaces="6"/>
+        <field fieldname="exgp_short_stock_rece_margin" fieldid="5696" decimalPlaces="6"/>
+    </function>
+    <function functionname="funct_tdfurp_DealStrikeRsp" typename="LD_ANSWER" functionid="tdfutuT.5.21" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="mach_date" fieldid="1839"/>
+        <field fieldname="mach_time" fieldid="1840"/>
+        <field fieldname="futu_acco_no" fieldid="1909"/>
+        <field fieldname="contrc_code_no" fieldid="1777"/>
+        <field fieldname="external_no" fieldid="2656"/>
+        <field fieldname="calc_dir" fieldid="1858"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="invest_type" fieldid="2651"/>
+        <field fieldname="report_time" fieldid="2506"/>
+        <field fieldname="order_date" fieldid="1458"/>
+        <field fieldname="order_time" fieldid="1459"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+        <field fieldname="order_status" fieldid="1464"/>
+        <field fieldname="order_batch_no" fieldid="1457"/>
+        <field fieldname="wtdraw_qty" fieldid="1277" decimalPlaces="2"/>
+        <field fieldname="record_count" fieldid="1865"/>
+        <field fieldname="strike_id" fieldid="1315"/>
+        <field fieldname="report_fee" fieldid="2504" decimalPlaces="6"/>
+        <field fieldname="wtdraw_fee" fieldid="1272" decimalPlaces="6"/>
+        <field fieldname="trade_fee" fieldid="1939" decimalPlaces="6"/>
+        <field fieldname="all_fee" fieldid="2410" decimalPlaces="6"/>
+        <field fieldname="posi_qty" fieldid="1331" decimalPlaces="2"/>
+        <field fieldname="rece_margin" fieldid="2822" decimalPlaces="6"/>
+        <field fieldname="margin_ratio" fieldid="1114" decimalPlaces="12"/>
+        <field fieldname="trade_capt_amt" fieldid="1959" decimalPlaces="6"/>
+        <field fieldname="posi_capt_amt" fieldid="1333" decimalPlaces="6"/>
+        <field fieldname="strike_occur_amt" fieldid="1296" decimalPlaces="6"/>
+        <field fieldname="realize_pandl" fieldid="2536" decimalPlaces="6"/>
+        <field fieldname="close_pandl" fieldid="2320" decimalPlaces="6"/>
+        <field fieldname="order_margin" fieldid="1439" decimalPlaces="6"/>
+        <field fieldname="detail_posi_id" fieldid="2242"/>
+        <field fieldname="compli_trig_id" fieldid="1743"/>
+        <field fieldname="order_update_times" fieldid="3591"/>
+        <field fieldname="order_oper_way" fieldid="1443"/>
+        <field fieldname="update_times" fieldid="3381"/>
+        <field fieldname="busi_opor_no" fieldid="2789"/>
+    </function>
+    <function functionname="funct_tdfurp_AddMissOrder" typename="LD_REQUEST" functionid="tdfutuT.5.22" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="futu_acco_no" fieldid="1909"/>
+        <field fieldname="futu_acco" fieldid="1908"/>
+        <field fieldname="contrc_code_no" fieldid="1777"/>
+        <field fieldname="contrc_code" fieldid="1776"/>
+        <field fieldname="contrc_type" fieldid="1778"/>
+        <field fieldname="contrc_unit" fieldid="1775"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="report_date" fieldid="2505"/>
+        <field fieldname="report_time" fieldid="2506"/>
+        <field fieldname="report_no" fieldid="2502"/>
+        <field fieldname="external_no" fieldid="2656"/>
+        <field fieldname="contrc_dir" fieldid="2070"/>
+        <field fieldname="hedge_type" fieldid="2591"/>
+        <field fieldname="lngsht_type" fieldid="1491"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="report_fee" fieldid="2504" decimalPlaces="6"/>
+        <field fieldname="wtdraw_fee" fieldid="1272" decimalPlaces="6"/>
+        <field fieldname="trade_fee" fieldid="1939" decimalPlaces="6"/>
+        <field fieldname="all_fee" fieldid="2410" decimalPlaces="6"/>
+        <field fieldname="trade_commis" fieldid="1953" decimalPlaces="6"/>
+        <field fieldname="other_commis" fieldid="2350" decimalPlaces="6"/>
+        <field fieldname="comb_code" fieldid="3092"/>
+        <field fieldname="asac_busi_config_str" fieldid="3058"/>
+        <field fieldname="pre_settle_price" fieldid="3132" decimalPlaces="9"/>
+        <field fieldname="up_limit_price" fieldid="2905" decimalPlaces="9"/>
+        <field fieldname="down_limit_price" fieldid="1436" decimalPlaces="9"/>
+        <field fieldname="rece_margin" fieldid="2822" decimalPlaces="6"/>
+        <field fieldname="exgp_avail_qty" fieldid="1969" decimalPlaces="2"/>
+        <field fieldname="asac_avail_qty" fieldid="3055" decimalPlaces="2"/>
+        <field fieldname="exgp_long_rece_margin" fieldid="3748" decimalPlaces="6"/>
+        <field fieldname="exgp_short_rece_margin" fieldid="3749" decimalPlaces="6"/>
+        <field fieldname="asac_long_rece_margin" fieldid="3750" decimalPlaces="6"/>
+        <field fieldname="asac_short_rece_margin" fieldid="3751" decimalPlaces="6"/>
+        <field fieldname="order_status" fieldid="1464"/>
+    </function>
+    <function functionname="funct_tdfurp_AddMissOrder" typename="LD_ANSWER" functionid="tdfutuT.5.22" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="order_id" fieldid="1462"/>
+        <field fieldname="order_date" fieldid="1458"/>
+        <field fieldname="order_time" fieldid="1459"/>
+        <field fieldname="wtdraw_qty" fieldid="1277" decimalPlaces="2"/>
+        <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="order_oper_way" fieldid="1443"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="funct_tdfurp_CheckStrikeRspGetOrderInfo" typename="LD_REQUEST" functionid="tdfutuT.5.31" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="futu_acco" fieldid="1908"/>
+        <field fieldname="contrc_code" fieldid="1776"/>
+        <field fieldname="contrc_dir" fieldid="2070"/>
+        <field fieldname="report_date" fieldid="2505"/>
+        <field fieldname="report_no" fieldid="2502"/>
+        <field fieldname="strike_date" fieldid="1310"/>
+        <field fieldname="strike_time" fieldid="1311"/>
+        <field fieldname="strike_no" fieldid="1295"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="strike_price" fieldid="1303" decimalPlaces="9"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+        <field fieldname="rsp_info" fieldid="1800"/>
+    </function>
+    <function functionname="funct_tdfurp_CheckStrikeRspGetOrderInfo" typename="LD_ANSWER" functionid="tdfutuT.5.31" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="futu_acco_no" fieldid="1909"/>
+        <field fieldname="contrc_code_no" fieldid="1777"/>
+        <field fieldname="contrc_type" fieldid="1778"/>
+        <field fieldname="contrc_unit" fieldid="1775"/>
+        <field fieldname="order_date" fieldid="1458"/>
+        <field fieldname="order_id" fieldid="1462"/>
+        <field fieldname="rsp_time" fieldid="1799"/>
+        <field fieldname="rsp_no" fieldid="1795"/>
+        <field fieldname="comb_code" fieldid="3092"/>
+        <field fieldname="comm_id" fieldid="3010"/>
+        <field fieldname="comm_batch_no" fieldid="2987"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="hedge_type" fieldid="2591"/>
+    </function>
+    <function functionname="funct_tdfurp_QueryOrderRsp" typename="LD_REQUEST" functionid="tdfutuT.5.101" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="futu_acco" fieldid="1908"/>
+        <field fieldname="contrc_code" fieldid="1776"/>
+        <field fieldname="order_dir_str" fieldid="1450"/>
+        <field fieldname="rsp_status_str" fieldid="1802"/>
+        <field fieldname="deal_status_str" fieldid="1347"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+        <field fieldname="co_no_rights_str" fieldid="1830"/>
+        <field fieldname="pd_no_rights_str" fieldid="1231"/>
+        <field fieldname="exch_group_no_rights_str" fieldid="1964"/>
+    </function>
+    <function functionname="funct_tdfurp_QueryOrderRsp" typename="LD_ANSWER" functionid="tdfutuT.5.101" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="pass_no" fieldid="2610"/>
+            <field fieldname="out_acco" fieldid="2697"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="report_date" fieldid="2505"/>
+            <field fieldname="report_time" fieldid="2506"/>
+            <field fieldname="report_no" fieldid="2502"/>
+            <field fieldname="order_date" fieldid="1458"/>
+            <field fieldname="order_id" fieldid="1462"/>
+            <field fieldname="order_dir" fieldid="1449"/>
+            <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+            <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+            <field fieldname="rsp_status" fieldid="1801"/>
+            <field fieldname="rsp_info" fieldid="1800"/>
+            <field fieldname="deal_status" fieldid="1346"/>
+            <field fieldname="update_times" fieldid="3381"/>
+        </sequence>
+    </function>
+    <function functionname="funct_tdfurp_QueryStrikeRsp" typename="LD_REQUEST" functionid="tdfutuT.5.121" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="futu_acco" fieldid="1908"/>
+        <field fieldname="contrc_code" fieldid="1776"/>
+        <field fieldname="order_dir_str" fieldid="1450"/>
+        <field fieldname="deal_status_str" fieldid="1347"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+        <field fieldname="co_no_rights_str" fieldid="1830"/>
+        <field fieldname="pd_no_rights_str" fieldid="1231"/>
+        <field fieldname="exch_group_no_rights_str" fieldid="1964"/>
+    </function>
+    <function functionname="funct_tdfurp_QueryStrikeRsp" typename="LD_ANSWER" functionid="tdfutuT.5.121" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="pass_no" fieldid="2610"/>
+            <field fieldname="out_acco" fieldid="2697"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="strike_date" fieldid="1310"/>
+            <field fieldname="strike_time" fieldid="1311"/>
+            <field fieldname="strike_no" fieldid="1295"/>
+            <field fieldname="report_no" fieldid="2502"/>
+            <field fieldname="order_dir" fieldid="1449"/>
+            <field fieldname="strike_price" fieldid="1303" decimalPlaces="9"/>
+            <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+            <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+            <field fieldname="strike_deal_type" fieldid="1298"/>
+            <field fieldname="rsp_info" fieldid="1800"/>
+            <field fieldname="deal_status" fieldid="1346"/>
+            <field fieldname="update_times" fieldid="3381"/>
+        </sequence>
+    </function>
+    <function functionname="funct_tdfurp_QueryStrikeDetail" typename="LD_REQUEST" functionid="tdfutuT.5.122" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="contrc_code_no" fieldid="1777"/>
+        <field fieldname="comm_id" fieldid="3010"/>
+        <field fieldname="comm_batch_no" fieldid="2987"/>
+        <field fieldname="order_dir_str" fieldid="1450"/>
+        <field fieldname="query_type" fieldid="1211"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+        <field fieldname="sort_type" fieldid="2290"/>
+        <field fieldname="co_no_rights_str" fieldid="1830"/>
+        <field fieldname="pd_no_rights_str" fieldid="1231"/>
+        <field fieldname="exch_group_no_rights_str" fieldid="1964"/>
+    </function>
+    <function functionname="funct_tdfurp_QueryStrikeDetail" typename="LD_ANSWER" functionid="tdfutuT.5.122" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="query_opor_no" fieldid="1209"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="futu_acco_no" fieldid="1909"/>
+            <field fieldname="contrc_code_no" fieldid="1777"/>
+            <field fieldname="pass_no" fieldid="2610"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="contrc_code" fieldid="1776"/>
+            <field fieldname="contrc_unit" fieldid="1775"/>
+            <field fieldname="contrc_dir" fieldid="2070"/>
+            <field fieldname="hedge_type" fieldid="2591"/>
+            <field fieldname="report_date" fieldid="2505"/>
+            <field fieldname="order_id" fieldid="1462"/>
+            <field fieldname="order_dir" fieldid="1449"/>
+            <field fieldname="report_no" fieldid="2502"/>
+            <field fieldname="strike_date" fieldid="1310"/>
+            <field fieldname="strike_time" fieldid="1311"/>
+            <field fieldname="strike_no" fieldid="1295"/>
+            <field fieldname="strike_price" fieldid="1303" decimalPlaces="9"/>
+            <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+            <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+            <field fieldname="strike_fee" fieldid="1300" decimalPlaces="6"/>
+            <field fieldname="close_pandl" fieldid="2320" decimalPlaces="6"/>
+            <field fieldname="strike_margin" fieldid="1293" decimalPlaces="6"/>
+            <field fieldname="order_oper_way" fieldid="1443"/>
+            <field fieldname="update_times" fieldid="3381"/>
+            <field fieldname="comm_id" fieldid="3010"/>
+        </sequence>
+    </function>
+    <function functionname="funct_tdfurp_QueryStrikeDetailHis" typename="LD_REQUEST" functionid="tdfutuT.5.123" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="contrc_code_no" fieldid="1777"/>
+        <field fieldname="comm_id" fieldid="3010"/>
+        <field fieldname="comm_batch_no" fieldid="2987"/>
+        <field fieldname="order_dir_str" fieldid="1450"/>
+        <field fieldname="query_type" fieldid="1211"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+        <field fieldname="co_no_rights_str" fieldid="1830"/>
+        <field fieldname="pd_no_rights_str" fieldid="1231"/>
+        <field fieldname="exch_group_no_rights_str" fieldid="1964"/>
+    </function>
+    <function functionname="funct_tdfurp_QueryStrikeDetailHis" typename="LD_ANSWER" functionid="tdfutuT.5.123" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="futu_acco_no" fieldid="1909"/>
+            <field fieldname="contrc_code_no" fieldid="1777"/>
+            <field fieldname="pass_no" fieldid="2610"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="contrc_code" fieldid="1776"/>
+            <field fieldname="contrc_unit" fieldid="1775"/>
+            <field fieldname="contrc_dir" fieldid="2070"/>
+            <field fieldname="hedge_type" fieldid="2591"/>
+            <field fieldname="report_date" fieldid="2505"/>
+            <field fieldname="order_id" fieldid="1462"/>
+            <field fieldname="order_dir" fieldid="1449"/>
+            <field fieldname="report_no" fieldid="2502"/>
+            <field fieldname="strike_date" fieldid="1310"/>
+            <field fieldname="strike_time" fieldid="1311"/>
+            <field fieldname="strike_no" fieldid="1295"/>
+            <field fieldname="strike_price" fieldid="1303" decimalPlaces="9"/>
+            <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+            <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+            <field fieldname="strike_fee" fieldid="1300" decimalPlaces="6"/>
+            <field fieldname="close_pandl" fieldid="2320" decimalPlaces="6"/>
+            <field fieldname="strike_margin" fieldid="1293" decimalPlaces="6"/>
+            <field fieldname="order_oper_way" fieldid="1443"/>
+            <field fieldname="update_times" fieldid="3381"/>
+        </sequence>
+    </function>
+    <function functionname="funct_tdfurp_GetOrderInfo" typename="LD_REQUEST" functionid="tdfutuT.5.130" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="order_id" fieldid="1462"/>
+    </function>
+    <function functionname="funct_tdfurp_GetOrderInfo" typename="LD_ANSWER" functionid="tdfutuT.5.130" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="futu_acco_no" fieldid="1909"/>
+        <field fieldname="futu_acco" fieldid="1908"/>
+        <field fieldname="contrc_code_no" fieldid="1777"/>
+        <field fieldname="contrc_code" fieldid="1776"/>
+        <field fieldname="contrc_type" fieldid="1778"/>
+        <field fieldname="contrc_unit" fieldid="1775"/>
+        <field fieldname="contrc_dir" fieldid="2070"/>
+        <field fieldname="hedge_type" fieldid="2591"/>
+        <field fieldname="order_date" fieldid="1458"/>
+        <field fieldname="order_time" fieldid="1459"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+        <field fieldname="wtdraw_qty" fieldid="1277" decimalPlaces="2"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="trade_commis" fieldid="1953" decimalPlaces="6"/>
+        <field fieldname="other_commis" fieldid="2350" decimalPlaces="6"/>
+        <field fieldname="comb_code" fieldid="3092"/>
+        <field fieldname="rece_margin" fieldid="2822" decimalPlaces="6"/>
+    </function>
+</bizmsgs>

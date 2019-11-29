@@ -1,0 +1,56 @@
+﻿#下面是获取订单批号  
+Function funOrderBatchNo = tdsecuL.1.901
+set funOrderBatchNo.co_no = 7474
+set funOrderBatchNo.record_no_type = 17 
+funOrderBatchNo.Send()
+funOrderBatchNo.GetAnswer()
+if funOrderBatchNo.Answer().error_code !=0 : Print '('&funOrderBatchNo.Answer().error_code&')'&funOrderBatchNo.Answer().error_prompt&funOrderBatchNo.Answer().error_info
+if funOrderBatchNo.Answer().error_code !=0 : Print 'tdsecuL.1.901错误，程序即将退出'
+if funOrderBatchNo.Answer().error_code !=0 : Exit
+if funOrderBatchNo.Answer().curr_no > 0 : Print '获取指令批号成功，CommandBatchNo = '&funOrderBatchNo.Answer().curr_no
+sleep=1000
+
+#获取当天日期
+DataTable date1 : connStr1_tdsecu | select date_format(curdate(),'%Y%m%d') as date from dual
+Print '开始日期 = ' & date1.date
+
+#获取两天后日期
+DataTable date2 : connStr1_tdsecu | select date_format(curdate()+2,'%Y%m%d') as date from dual
+Print '结束日期 = ' & date2.date
+
+#下指令
+Function funcl_tdseap_AddCombStraComm = tdsecuL.3.70
+set funcl_tdseap_AddCombStraComm.co_no = 7474
+set funcl_tdseap_AddCombStraComm.pd_no = 74740001
+set funcl_tdseap_AddCombStraComm.exch_group_no = 74740002
+set funcl_tdseap_AddCombStraComm.asset_acco_no = 74740001
+set funcl_tdseap_AddCombStraComm.exch_no = 3
+set funcl_tdseap_AddCombStraComm.stock_code = 00001
+set funcl_tdseap_AddCombStraComm.comm_batch_no = funOrderBatchNo.Answer().curr_no
+set funcl_tdseap_AddCombStraComm.comm_executor = 74740001
+set funcl_tdseap_AddCombStraComm.comm_dir = 1
+#set funcl_tdseap_AddCombStraComm.price_kind = 
+#set funcl_tdseap_AddCombStraComm.ctrl_type = 
+set funcl_tdseap_AddCombStraComm.comm_limit_price = 67.8
+set funcl_tdseap_AddCombStraComm.limit_actual_price = 67.8
+set funcl_tdseap_AddCombStraComm.comm_qty = 500
+set funcl_tdseap_AddCombStraComm.comm_amt = 33900
+set funcl_tdseap_AddCombStraComm.comm_remark = 'regression'
+set funcl_tdseap_AddCombStraComm.comm_begin_date = 0
+set funcl_tdseap_AddCombStraComm.comm_end_date = date2.date
+set funcl_tdseap_AddCombStraComm.comm_begin_time = 0
+set funcl_tdseap_AddCombStraComm.comm_end_time = 150000
+#set funcl_tdseap_AddCombStraComm.external_no = 
+#set funcl_tdseap_AddCombStraComm.basket_id = 
+set funcl_tdseap_AddCombStraComm.comm_oper_way = 71
+set funcl_tdseap_AddCombStraComm.comm_remark_info = 'regression test'
+set funcl_tdseap_AddCombStraComm.acco_concat_info = 'regression test'
+
+funcl_tdseap_AddCombStraComm.Send()
+funcl_tdseap_AddCombStraComm.GetAnswer()
+if funcl_tdseap_AddCombStraComm.Answer().error_code !=0 : Print '('&funcl_tdseap_AddCombStraComm.Answer().error_code&')'&funcl_tdseap_AddCombStraComm.Answer().error_prompt&funcl_tdseap_AddCombStraComm.Answer().error_info
+if funcl_tdseap_AddCombStraComm.Answer().error_code !=0 : Print 'tdsecuL.3.70错误，程序即将退出'  
+if funcl_tdseap_AddCombStraComm.Answer().error_code !=0 :Exit
+if funcl_tdseap_AddCombStraComm.Answer().comm_id >0 :Print '指令下达成功，command_id='&funcl_tdseap_AddCombStraComm.Answer().comm_id
+sleep=1000
+

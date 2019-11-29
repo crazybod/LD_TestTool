@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bizmsgs>
+    <function functionname="communication" typename="LD_REQUEST" functionid="flpL.1.2" packettype="0">
+        <field fieldname="msg_type" fieldid="2761"/>
+        <field fieldname="app_name" fieldid="2829"/>
+        <field fieldname="task_status" fieldid="2431"/>
+    </function>
+    <function functionname="communication" typename="LD_ANSWER" functionid="flpL.1.2" packettype="1">
+    </function>
+
+    <function functionname="filetans" typename="LD_REQUEST" functionid="flpL.1.3" packettype="0">
+        <field fieldname="msg_type" fieldid="2761"/>
+        <field fieldname="app_name" fieldid="2829"/>
+        <field fieldname="elves_id" fieldid="5919"/>
+        <field fieldname="file_type_name" fieldid="5924"/>
+        <field fieldname="file_name" fieldid="2727"/>
+        <field fieldname="file_block_index" fieldid="5920"/>
+        <field fieldname="file_stream_offset" fieldid="5921"/>
+        <field fieldname="file_context" fieldid="5922"/>
+        <field fieldname="file_size" fieldid="5923"/>
+        <field fieldname="sys_date" fieldid="2742"/>
+		
+    </function>
+    <function functionname="filetans" typename="LD_ANSWER" functionid="flpL.1.3" packettype="1">
+    </function>
+
+    <function functionname="filerequest" typename="LD_REQUEST" functionid="flpL.1.4" packettype="0">
+        <field fieldname="msg_type" fieldid="2761"/>
+        <field fieldname="app_name" fieldid="2829"/>
+        <field fieldname="elves_id" fieldid="5919"/>
+        <field fieldname="file_type_name" fieldid="5924"/>
+        <field fieldname="sys_date" fieldid="2742"/>
+    </function>
+    <function functionname="filerequest" typename="LD_ANSWER" functionid="flpL.1.4" packettype="1">
+    </function>
+
+    <function functionname="heart" typename="LD_REQUEST" functionid="flpL.1.5" packettype="0">
+        <field fieldname="msg_type" fieldid="2761"/>
+        <field fieldname="app_name" fieldid="2829"/>
+        <field fieldname="task_status" fieldid="2431"/>
+        <field fieldname="time_intrv" fieldid="2530"/>
+        <field fieldname="deal_status_str" fieldid="1347"/>
+    </function>
+    <function functionname="heart" typename="LD_ANSWER" functionid="flpL.1.5" packettype="1">
+    </function>
+
+    <function functionname="closerequest" typename="LD_REQUEST" functionid="flpL.1.6" packettype="0">
+        <field fieldname="msg_type" fieldid="2761"/>
+        <field fieldname="app_name" fieldid="2829"/>
+        <field fieldname="elves_id" fieldid="5919"/>
+    </function>
+    <function functionname="closerequest" typename="LD_ANSWER" functionid="flpL.1.6" packettype="1">
+	</function>
+	
+	 <function functionname="nodeloginfo" typename="LD_REQUEST" functionid="flpL.1.7" packettype="0">
+		<field fieldname="msg_type" fieldid="2761"/>
+		<field fieldname="app_name" fieldid="2829"/>
+        <field fieldname="log_error_info" fieldid="2435"/>
+    </function>
+    <function functionname="nodeloginfo" typename="LD_ANSWER" functionid="flpL.1.7" packettype="1">
+	</function>
+</bizmsgs>

@@ -1,0 +1,595 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bizmsgs>
+    <function functionname="funct_evadata_SyncPdAccoAsset" typename="LD_REQUEST" functionid="evaT.2.1" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+    </function>
+    <function functionname="funct_evadata_SyncPdAccoAsset" typename="LD_ANSWER" functionid="evaT.2.1" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_evadata_updateSecuPrice" typename="LD_REQUEST" functionid="evaT.2.2" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+    </function>
+    <function functionname="funct_evadata_updateSecuPrice" typename="LD_ANSWER" functionid="evaT.2.2" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_evadata_AddPdSecuPosi" typename="LD_REQUEST" functionid="evaT.2.11" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="evalu_date" fieldid="1693"/>
+        <field fieldname="asset_acco" fieldid="3050"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_acco" fieldid="1696"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="curr_qty" fieldid="1401" decimalPlaces="2"/>
+        <field fieldname="curr_cost_amt" fieldid="1388" decimalPlaces="6"/>
+        <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+    </function>
+    <function functionname="funct_evadata_AddPdSecuPosi" typename="LD_ANSWER" functionid="evaT.2.11" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_evadata_ModiPdSecuPosi" typename="LD_REQUEST" functionid="evaT.2.12" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="evalu_date" fieldid="1693"/>
+        <field fieldname="asset_acco" fieldid="3050"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_acco" fieldid="1696"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="curr_qty" fieldid="1401" decimalPlaces="2"/>
+        <field fieldname="curr_cost_amt" fieldid="1388" decimalPlaces="6"/>
+        <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+        <field fieldname="exch_rate" fieldid="1825" decimalPlaces="12"/>
+        <field fieldname="intrst_pandl" fieldid="2173" decimalPlaces="6"/>
+    </function>
+    <function functionname="funct_evadata_ModiPdSecuPosi" typename="LD_ANSWER" functionid="evaT.2.12" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_evadata_DelPdSecuPosi" typename="LD_REQUEST" functionid="evaT.2.13" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="evalu_date" fieldid="1693"/>
+        <field fieldname="asset_acco" fieldid="3050"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_acco" fieldid="1696"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+    </function>
+    <function functionname="funct_evadata_DelPdSecuPosi" typename="LD_ANSWER" functionid="evaT.2.13" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_evadata_QueryPdSecuPosi" typename="LD_REQUEST" functionid="evaT.2.14" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="evalu_date" fieldid="1693"/>
+        <field fieldname="asset_acco" fieldid="3050"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_acco" fieldid="1696"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_evadata_QueryPdSecuPosi" typename="LD_ANSWER" functionid="evaT.2.14" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco" fieldid="3050"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_acco" fieldid="1696"/>
+            <field fieldname="stock_type" fieldid="2938"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="invest_type" fieldid="2651"/>
+            <field fieldname="begin_qty" fieldid="2329" decimalPlaces="2"/>
+            <field fieldname="curr_qty" fieldid="1401" decimalPlaces="2"/>
+            <field fieldname="frozen_qty" fieldid="1468" decimalPlaces="2"/>
+            <field fieldname="unfroz_qty" fieldid="1996" decimalPlaces="2"/>
+            <field fieldname="curr_cost_amt" fieldid="1388" decimalPlaces="6"/>
+            <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+            <field fieldname="exch_rate" fieldid="1825" decimalPlaces="12"/>
+            <field fieldname="realize_pandl" fieldid="2536" decimalPlaces="6"/>
+            <field fieldname="intrst_cost_amt" fieldid="2167" decimalPlaces="6"/>
+            <field fieldname="intrst_pandl" fieldid="2173" decimalPlaces="6"/>
+            <field fieldname="evalu_data_source" fieldid="1694"/>
+        </sequence>
+    </function>
+    <function functionname="funct_evadata_QueryPdExgpSecuPosi" typename="LD_REQUEST" functionid="evaT.2.15" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="evalu_date" fieldid="1693"/>
+        <field fieldname="asset_acco" fieldid="3050"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_acco" fieldid="1696"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_evadata_QueryPdExgpSecuPosi" typename="LD_ANSWER" functionid="evaT.2.15" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco" fieldid="3050"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_acco" fieldid="1696"/>
+            <field fieldname="stock_type" fieldid="2938"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="invest_type" fieldid="2651"/>
+            <field fieldname="begin_qty" fieldid="2329" decimalPlaces="2"/>
+            <field fieldname="curr_qty" fieldid="1401" decimalPlaces="2"/>
+            <field fieldname="frozen_qty" fieldid="1468" decimalPlaces="2"/>
+            <field fieldname="unfroz_qty" fieldid="1996" decimalPlaces="2"/>
+            <field fieldname="curr_cost_amt" fieldid="1388" decimalPlaces="6"/>
+            <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+            <field fieldname="exch_rate" fieldid="1825" decimalPlaces="12"/>
+            <field fieldname="realize_pandl" fieldid="2536" decimalPlaces="6"/>
+            <field fieldname="intrst_cost_amt" fieldid="2167" decimalPlaces="6"/>
+            <field fieldname="intrst_pandl" fieldid="2173" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_evadata_QueryPdFupoPosi" typename="LD_REQUEST" functionid="evaT.2.16" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="evalu_date" fieldid="1693"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="lngsht_type" fieldid="1491"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_evadata_QueryPdFupoPosi" typename="LD_ANSWER" functionid="evaT.2.16" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="futu_acco_no" fieldid="1909"/>
+            <field fieldname="contrc_code_no" fieldid="1777"/>
+            <field fieldname="contrc_type" fieldid="1778"/>
+            <field fieldname="lngsht_type" fieldid="1491"/>
+            <field fieldname="hedge_type" fieldid="2591"/>
+            <field fieldname="comb_code" fieldid="3092"/>
+            <field fieldname="contrc_unit" fieldid="1775"/>
+            <field fieldname="begin_qty" fieldid="2329" decimalPlaces="2"/>
+            <field fieldname="curr_qty" fieldid="1401" decimalPlaces="2"/>
+            <field fieldname="frozen_qty" fieldid="1468" decimalPlaces="2"/>
+            <field fieldname="unfroz_qty" fieldid="1996" decimalPlaces="2"/>
+            <field fieldname="pre_settle_price" fieldid="3132" decimalPlaces="9"/>
+            <field fieldname="sett_price" fieldid="1991" decimalPlaces="9"/>
+            <field fieldname="rece_margin" fieldid="2822" decimalPlaces="6"/>
+            <field fieldname="open_amount" fieldid="2054" decimalPlaces="6"/>
+            <field fieldname="realize_pandl" fieldid="2536" decimalPlaces="6"/>
+            <field fieldname="close_pandl" fieldid="2320" decimalPlaces="6"/>
+            <field fieldname="today_posi_flag" fieldid="1997"/>
+            <field fieldname="evalu_data_source" fieldid="1694"/>
+        </sequence>
+    </function>
+    <function functionname="funct_evadata_QueryPdSecuBlockPosi" typename="LD_REQUEST" functionid="evaT.2.17" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_evadata_QueryPdSecuBlockPosi" typename="LD_ANSWER" functionid="evaT.2.17" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco" fieldid="3050"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_acco" fieldid="1696"/>
+            <field fieldname="stock_type" fieldid="2938"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="invest_type" fieldid="2651"/>
+            <field fieldname="begin_qty" fieldid="2329" decimalPlaces="2"/>
+            <field fieldname="curr_qty" fieldid="1401" decimalPlaces="2"/>
+            <field fieldname="frozen_qty" fieldid="1468" decimalPlaces="2"/>
+            <field fieldname="unfroz_qty" fieldid="1996" decimalPlaces="2"/>
+            <field fieldname="curr_cost_amt" fieldid="1388" decimalPlaces="6"/>
+            <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+            <field fieldname="exch_rate" fieldid="1825" decimalPlaces="12"/>
+            <field fieldname="realize_pandl" fieldid="2536" decimalPlaces="6"/>
+            <field fieldname="intrst_cost_amt" fieldid="2167" decimalPlaces="6"/>
+            <field fieldname="intrst_pandl" fieldid="2173" decimalPlaces="6"/>
+            <field fieldname="evalu_data_source" fieldid="1694"/>
+        </sequence>
+    </function>
+    <function functionname="funct_evadata_AddPdAccoCapit" typename="LD_REQUEST" functionid="evaT.2.21" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="evalu_date" fieldid="1693"/>
+        <field fieldname="pd_acco_type" fieldid="3991"/>
+        <field fieldname="asset_acco" fieldid="3050"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="curr_amt" fieldid="1396" decimalPlaces="6"/>
+    </function>
+    <function functionname="funct_evadata_AddPdAccoCapit" typename="LD_ANSWER" functionid="evaT.2.21" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_evadata_ModiPdAccoCapit" typename="LD_REQUEST" functionid="evaT.2.22" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="evalu_date" fieldid="1693"/>
+        <field fieldname="pd_acco_type" fieldid="3991"/>
+        <field fieldname="asset_acco" fieldid="3050"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="curr_amt" fieldid="1396" decimalPlaces="6"/>
+    </function>
+    <function functionname="funct_evadata_ModiPdAccoCapit" typename="LD_ANSWER" functionid="evaT.2.22" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_evadata_DelPdAccoCapit" typename="LD_REQUEST" functionid="evaT.2.23" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="evalu_date" fieldid="1693"/>
+        <field fieldname="pd_acco_type" fieldid="3991"/>
+        <field fieldname="asset_acco" fieldid="3050"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+    </function>
+    <function functionname="funct_evadata_DelPdAccoCapit" typename="LD_ANSWER" functionid="evaT.2.23" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_evadata_QueryPdAccoCapit" typename="LD_REQUEST" functionid="evaT.2.24" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="evalu_date" fieldid="1693"/>
+        <field fieldname="pd_acco_type" fieldid="3991"/>
+        <field fieldname="asset_acco" fieldid="3050"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_evadata_QueryPdAccoCapit" typename="LD_ANSWER" functionid="evaT.2.24" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="pd_acco_type" fieldid="3991"/>
+            <field fieldname="asset_acco" fieldid="3050"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="begin_amt" fieldid="2327" decimalPlaces="6"/>
+            <field fieldname="curr_amt" fieldid="1396" decimalPlaces="6"/>
+            <field fieldname="frozen_amt" fieldid="1467" decimalPlaces="6"/>
+            <field fieldname="unfroz_amt" fieldid="1995" decimalPlaces="6"/>
+            <field fieldname="intrst_base_amt" fieldid="2170" decimalPlaces="6"/>
+            <field fieldname="intrst_cacl_amt" fieldid="2839" decimalPlaces="6"/>
+            <field fieldname="evalu_data_source" fieldid="1694"/>
+        </sequence>
+    </function>
+    <function functionname="funct_evadata_QueryPdExgpAccoCapit" typename="LD_REQUEST" functionid="evaT.2.25" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="evalu_date" fieldid="1693"/>
+        <field fieldname="pd_acco_type" fieldid="3991"/>
+        <field fieldname="asset_acco" fieldid="3050"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_evadata_QueryPdExgpAccoCapit" typename="LD_ANSWER" functionid="evaT.2.25" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="pd_acco_type" fieldid="3991"/>
+            <field fieldname="asset_acco" fieldid="3050"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="begin_amt" fieldid="2327" decimalPlaces="6"/>
+            <field fieldname="curr_amt" fieldid="1396" decimalPlaces="6"/>
+            <field fieldname="frozen_amt" fieldid="1467" decimalPlaces="6"/>
+            <field fieldname="unfroz_amt" fieldid="1995" decimalPlaces="6"/>
+            <field fieldname="intrst_base_amt" fieldid="2170" decimalPlaces="6"/>
+            <field fieldname="intrst_cacl_amt" fieldid="2839" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_evadata_ImportPdSecuPosi" typename="LD_REQUEST" functionid="evaT.2.31" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="pd_name" fieldid="1257"/>
+        <field fieldname="evalu_date" fieldid="1693"/>
+    </function>
+    <function functionname="funct_evadata_ImportPdSecuPosi" typename="LD_ANSWER" functionid="evaT.2.31" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_evadata_AddPdBankJour" typename="LD_REQUEST" functionid="evaT.2.41" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco" fieldid="3050"/>
+        <field fieldname="occur_dir" fieldid="1151"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funct_evadata_AddPdBankJour" typename="LD_ANSWER" functionid="evaT.2.41" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_evadata_ModiPdBankJour" typename="LD_REQUEST" functionid="evaT.2.42" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco" fieldid="3050"/>
+        <field fieldname="occur_dir" fieldid="1151"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funct_evadata_ModiPdBankJour" typename="LD_ANSWER" functionid="evaT.2.42" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_evadata_DelPdBankJour" typename="LD_REQUEST" functionid="evaT.2.43" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco" fieldid="3050"/>
+        <field fieldname="occur_dir" fieldid="1151"/>
+    </function>
+    <function functionname="funct_evadata_DelPdBankJour" typename="LD_ANSWER" functionid="evaT.2.43" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_evadata_QueryPdBankJour" typename="LD_REQUEST" functionid="evaT.2.44" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_evadata_QueryPdBankJour" typename="LD_ANSWER" functionid="evaT.2.44" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco" fieldid="3050"/>
+            <field fieldname="occur_dir" fieldid="1151"/>
+            <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+        </sequence>
+    </function>
+    <function functionname="funct_evadata_AddPdTransOut" typename="LD_REQUEST" functionid="evaT.2.51" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="strike_price" fieldid="1303" decimalPlaces="9"/>
+        <field fieldname="expire_date" fieldid="1425"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funct_evadata_AddPdTransOut" typename="LD_ANSWER" functionid="evaT.2.51" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_evadata_ModiPdTransOut" typename="LD_REQUEST" functionid="evaT.2.52" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="strike_price" fieldid="1303" decimalPlaces="9"/>
+        <field fieldname="expire_date" fieldid="1425"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funct_evadata_ModiPdTransOut" typename="LD_ANSWER" functionid="evaT.2.52" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_evadata_DelPdTransOut" typename="LD_REQUEST" functionid="evaT.2.53" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+    </function>
+    <function functionname="funct_evadata_DelPdTransOut" typename="LD_ANSWER" functionid="evaT.2.53" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_evadata_QueryPdTransOut" typename="LD_REQUEST" functionid="evaT.2.54" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_evadata_QueryPdTransOut" typename="LD_ANSWER" functionid="evaT.2.54" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_type" fieldid="2938"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="order_dir" fieldid="1449"/>
+            <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+            <field fieldname="strike_price" fieldid="1303" decimalPlaces="9"/>
+            <field fieldname="expire_date" fieldid="1425"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+        </sequence>
+    </function>
+</bizmsgs>

@@ -438,6 +438,12 @@
             <filter fieldid="3766" note="策略操作方式"/>
         </filters>
     </topic>
+    <topic topicname="secu.strategymodistrategy"   funcid="pushL.2.513" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="3766" note="策略操作方式"/>
+        </filters>
+    </topic>
     <topic topicname="pub.base"   funcid="pushL.2.601" snapshot="y" private="n" RLevel="0" livetime="0">
         <filters>
             <filter fieldid="2538" note="市场编号"/>
@@ -504,6 +510,12 @@
             <filter fieldid="1228" note="产品编号"/>
             <filter fieldid="1962" note="交易组编号"/>
             <filter fieldid="3051" note="资产账户编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.plugerrororder"   funcid="pushL.2.709" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1962" note="交易组编号"/>
         </filters>
     </topic>
     <topic topicname="secu.fundqry"   funcid="pushL.2.801" snapshot="y" private="n" RLevel="0" livetime="0">
@@ -762,6 +774,58 @@
     <topic topicname="sys.datadictionary"   funcid="pushL.2.946" snapshot="y" private="n" RLevel="0" livetime="0">
         <filters>
             <filter fieldid="1828" note="机构编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.tradebalance"   funcid="pushL.2.947" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1828" note="机构编号"/>
+            <filter fieldid="1962" note="交易组编号"/>
+            <filter fieldid="3051" note="资产账户编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.appclientlogin"   funcid="pushL.2.5101" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="2610" note="通道编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.apprptorder"   funcid="pushL.2.5102" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="2610" note="通道编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.apprptwtdraw"   funcid="pushL.2.5103" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="2610" note="通道编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.appfundqry"   funcid="pushL.2.5104" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="2610" note="通道编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.appholdqry"   funcid="pushL.2.5105" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="2610" note="通道编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.apporderqry"   funcid="pushL.2.5106" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="2610" note="通道编号"/>
+        </filters>
+    </topic>
+    <topic topicname="secu.apprealqry"   funcid="pushL.2.5107" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="2610" note="通道编号"/>
+        </filters>
+    </topic>
+    <topic topicname="pub.UserClient"   funcid="pushL.2.948" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+        </filters>
+    </topic>
+    <topic topicname="pub.operatortask"   funcid="pushL.2.949" snapshot="y" private="n" RLevel="0" livetime="0">
+        <filters>
+            <filter fieldid="1194" note="操作员机构编号"/>
+            <filter fieldid="1192" note="操作员编号"/>
         </filters>
     </topic>
 </topics>

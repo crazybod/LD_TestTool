@@ -1,0 +1,44 @@
+﻿[时间]:2019-08-15 14:58:12,508
+[级别]:ERROR
+[内容]:14:58:12,493 打印错误TextDocument can be accessed only from the thread that owns it.
+
+[时间]:2019-08-15 14:59:56,116
+[级别]:ERROR
+[内容]:14:59:56,105 打印错误TextDocument can be accessed only from the thread that owns it.
+
+[时间]:2019-08-15 15:00:54,993
+[级别]:ERROR
+[内容]:15:00:54,988 打印错误TextDocument can be accessed only from the thread that owns it.
+
+[时间]:2019-08-15 15:04:19,434
+[级别]:ERROR
+[内容]:15:04:19,417 打印错误TextDocument can be accessed only from the thread that owns it.
+
+[时间]:2019-08-15 18:16:26,398
+[级别]:INFO
+[内容]:18:16:26,385 开始启动
+
+[时间]:2019-08-15 18:16:41,741
+[级别]:ERROR
+[内容]:18:16:41,732 功能号[tdsecuL.4.11]，errorCode[tdsecuA.4.13.707]，errorinfo[价格类型=1,订单价格=0.000000000],errorprompt[限价订单价格不合法！]
+
+[时间]:2019-08-15 18:16:53,566
+[级别]:ERROR
+[内容]:18:16:53,559 功能号[tdsecuL.4.11]，errorCode[tdsecuA.4.13.707]，errorinfo[价格类型=1,订单价格=0.000000000],errorprompt[限价订单价格不合法！]
+
+[时间]:2019-08-15 18:16:54,771
+[级别]:ERROR
+[内容]:18:16:54,762 功能号[tdsecuL.4.11]，errorCode[tdsecuA.4.13.707]，errorinfo[价格类型=1,订单价格=0.000000000],errorprompt[限价订单价格不合法！]
+
+[时间]:2019-08-15 18:16:54,773
+[级别]:ERROR
+[内容]:18:16:54,762 功能号[tdsecuL.4.11]，errorCode[tdsecuA.4.13.707]，errorinfo[价格类型=1,订单价格=0.000000000],errorprompt[限价订单价格不合法！]
+
+[时间]:2019-08-15 18:17:41,879
+[级别]:ERROR
+[内容]:18:17:41,872 功能号[tdsecuL.4.11]，errorCode[tdsecuA.4.13.707]，errorinfo[价格类型=1,订单价格=0.000000000],errorprompt[限价订单价格不合法！]
+
+[时间]:2019-08-15 18:18:03,925
+[级别]:ERROR
+[内容]:18:18:03,923 功能号[tdsecuL.4.11]，errorCode[tdsecuA.4.13.707]，errorinfo[价格类型=1,订单价格=0.000000000],errorprompt[限价订单价格不合法！]
+

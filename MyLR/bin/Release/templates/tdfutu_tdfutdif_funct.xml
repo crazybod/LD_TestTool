@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bizmsgs>
+    <function functionname="funct_tdfutdif_DealClearStrikeRsp" typename="LD_REQUEST" functionid="tdfutuT.6.1" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="qry_no" fieldid="1223"/>
+    </function>
+    <function functionname="funct_tdfutdif_DealClearStrikeRsp" typename="LD_ANSWER" functionid="tdfutuT.6.1" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="record_count" fieldid="1865"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="futu_acco_no" fieldid="1909"/>
+        <field fieldname="contrc_code_no" fieldid="1777"/>
+        <field fieldname="contrc_type" fieldid="1778"/>
+        <field fieldname="contrc_unit" fieldid="1775"/>
+        <field fieldname="strike_date" fieldid="1310"/>
+        <field fieldname="strike_time" fieldid="1311"/>
+        <field fieldname="strike_no" fieldid="1295"/>
+        <field fieldname="report_date" fieldid="2505"/>
+        <field fieldname="report_time" fieldid="2506"/>
+        <field fieldname="report_no" fieldid="2502"/>
+        <field fieldname="order_date" fieldid="1458"/>
+        <field fieldname="order_time" fieldid="1459"/>
+        <field fieldname="order_no" fieldid="1441"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="contrc_dir" fieldid="2070"/>
+        <field fieldname="hedge_type" fieldid="2591"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="wtdraw_qty" fieldid="1277" decimalPlaces="2"/>
+        <field fieldname="strike_price" fieldid="1303" decimalPlaces="9"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+        <field fieldname="all_fee" fieldid="2410" decimalPlaces="6"/>
+        <field fieldname="rece_margin" fieldid="2822" decimalPlaces="6"/>
+        <field fieldname="comb_code" fieldid="3092"/>
+        <field fieldname="margin_ratio" fieldid="1114" decimalPlaces="12"/>
+    </function>
+    <function functionname="funct_tdfutdif_UpdateOneStrikeClearFlag" typename="LD_REQUEST" functionid="tdfutuT.6.2" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="deal_flag" fieldid="1342"/>
+    </function>
+    <function functionname="funct_tdfutdif_UpdateOneStrikeClearFlag" typename="LD_ANSWER" functionid="tdfutuT.6.2" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_tdfutdif_UpdateAllStrikeClearFlag" typename="LD_REQUEST" functionid="tdfutuT.6.3" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="deal_flag" fieldid="1342"/>
+    </function>
+    <function functionname="funct_tdfutdif_UpdateAllStrikeClearFlag" typename="LD_ANSWER" functionid="tdfutuT.6.3" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_tdfutdif_GetStrikeTotal" typename="LD_REQUEST" functionid="tdfutuT.6.4" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+    </function>
+    <function functionname="funct_tdfutdif_GetStrikeTotal" typename="LD_ANSWER" functionid="tdfutuT.6.4" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="strike_count" fieldid="1302"/>
+        <field fieldname="succ_count" fieldid="1292"/>
+        <field fieldname="fail_count" fieldid="2528"/>
+    </function>
+    <function functionname="funct_tdfutdif_DealClearOrder" typename="LD_REQUEST" functionid="tdfutuT.6.11" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="qry_no" fieldid="1223"/>
+    </function>
+    <function functionname="funct_tdfutdif_DealClearOrder" typename="LD_ANSWER" functionid="tdfutuT.6.11" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="record_count" fieldid="1865"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="futu_acco_no" fieldid="1909"/>
+        <field fieldname="futu_acco" fieldid="1908"/>
+        <field fieldname="contrc_code_no" fieldid="1777"/>
+        <field fieldname="contrc_code" fieldid="1776"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="contrc_type" fieldid="1778"/>
+        <field fieldname="contrc_unit" fieldid="1775"/>
+        <field fieldname="external_no" fieldid="2656"/>
+        <field fieldname="comm_id" fieldid="3010"/>
+        <field fieldname="comm_batch_no" fieldid="2987"/>
+        <field fieldname="comm_opor" fieldid="3006"/>
+        <field fieldname="report_date" fieldid="2505"/>
+        <field fieldname="report_time" fieldid="2506"/>
+        <field fieldname="report_no" fieldid="2502"/>
+        <field fieldname="order_batch_no" fieldid="1457"/>
+        <field fieldname="order_date" fieldid="1458"/>
+        <field fieldname="order_time" fieldid="1459"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="contrc_dir" fieldid="2070"/>
+        <field fieldname="hedge_type" fieldid="2591"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="order_status" fieldid="1464"/>
+        <field fieldname="wtdraw_qty" fieldid="1277" decimalPlaces="2"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="strike_price" fieldid="1303" decimalPlaces="9"/>
+        <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+        <field fieldname="all_fee" fieldid="2410" decimalPlaces="6"/>
+        <field fieldname="trade_commis" fieldid="1953" decimalPlaces="6"/>
+        <field fieldname="other_commis" fieldid="2350" decimalPlaces="6"/>
+        <field fieldname="report_fee" fieldid="2504" decimalPlaces="6"/>
+        <field fieldname="wtdraw_fee" fieldid="1272" decimalPlaces="6"/>
+        <field fieldname="rece_margin" fieldid="2822" decimalPlaces="6"/>
+        <field fieldname="comb_code" fieldid="3092"/>
+        <field fieldname="margin_ratio" fieldid="1114" decimalPlaces="12"/>
+        <field fieldname="rsp_info" fieldid="1800"/>
+        <field fieldname="compli_trig_id" fieldid="1743"/>
+    </function>
+    <function functionname="funct_tdfutdif_UpdateOneOrderClearFlag" typename="LD_REQUEST" functionid="tdfutuT.6.22" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="deal_flag" fieldid="1342"/>
+    </function>
+    <function functionname="funct_tdfutdif_UpdateOneOrderClearFlag" typename="LD_ANSWER" functionid="tdfutuT.6.22" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_tdfutdif_GetSwitchStrikeTotal" typename="LD_REQUEST" functionid="tdfutuT.6.23" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+    </function>
+    <function functionname="funct_tdfutdif_GetSwitchStrikeTotal" typename="LD_ANSWER" functionid="tdfutuT.6.23" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="pre_switch_strike_qty" fieldid="3667" decimalPlaces="2"/>
+        <field fieldname="alr_switch_strike_qty" fieldid="3668" decimalPlaces="2"/>
+    </function>
+    <function functionname="funct_tdfutdif_QueryStrikeRspId" typename="LD_REQUEST" functionid="tdfutuT.6.24" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="qry_no" fieldid="1223"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_tdfutdif_QueryStrikeRspId" typename="LD_ANSWER" functionid="tdfutuT.6.24" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+        </sequence>
+    </function>
+    <function functionname="funct_tdfutdif_AutoDealClearStrikeRsp" typename="LD_REQUEST" functionid="tdfutuT.6.25" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="qry_no" fieldid="1223"/>
+    </function>
+    <function functionname="funct_tdfutdif_AutoDealClearStrikeRsp" typename="LD_ANSWER" functionid="tdfutuT.6.25" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="record_count" fieldid="1865"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="futu_acco_no" fieldid="1909"/>
+        <field fieldname="contrc_code_no" fieldid="1777"/>
+        <field fieldname="contrc_type" fieldid="1778"/>
+        <field fieldname="contrc_unit" fieldid="1775"/>
+        <field fieldname="strike_date" fieldid="1310"/>
+        <field fieldname="strike_time" fieldid="1311"/>
+        <field fieldname="strike_no" fieldid="1295"/>
+        <field fieldname="report_date" fieldid="2505"/>
+        <field fieldname="report_time" fieldid="2506"/>
+        <field fieldname="report_no" fieldid="2502"/>
+        <field fieldname="order_date" fieldid="1458"/>
+        <field fieldname="order_time" fieldid="1459"/>
+        <field fieldname="order_no" fieldid="1441"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="contrc_dir" fieldid="2070"/>
+        <field fieldname="hedge_type" fieldid="2591"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="wtdraw_qty" fieldid="1277" decimalPlaces="2"/>
+        <field fieldname="strike_price" fieldid="1303" decimalPlaces="9"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+        <field fieldname="all_fee" fieldid="2410" decimalPlaces="6"/>
+        <field fieldname="rece_margin" fieldid="2822" decimalPlaces="6"/>
+        <field fieldname="comb_code" fieldid="3092"/>
+        <field fieldname="margin_ratio" fieldid="1114" decimalPlaces="12"/>
+    </function>
+    <function functionname="funct_tdfutdif_CreateTbTdfuBak" typename="LD_REQUEST" functionid="tdfutuT.6.26" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+    </function>
+    <function functionname="funct_tdfutdif_CreateTbTdfuBak" typename="LD_ANSWER" functionid="tdfutuT.6.26" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_tdfutdif_ReTbTdfu" typename="LD_REQUEST" functionid="tdfutuT.6.27" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+    </function>
+    <function functionname="funct_tdfutdif_ReTbTdfu" typename="LD_ANSWER" functionid="tdfutuT.6.27" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+</bizmsgs>

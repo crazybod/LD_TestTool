@@ -250,6 +250,11 @@
             <bizmsg_template    Ver="1000" BizName="valT.4" File="val_valcheck_funct.xml"/>
             <bizmsg_template    Ver="1000" BizName="valL.5" File="val_valinfo_funcl.xml"/>
             <bizmsg_template    Ver="1000" BizName="valT.5" File="val_valinfo_funct.xml"/>
+            <bizmsg_template    Ver="1000" BizName="dcL.1" File="dc_dcrawdata_funcl.xml"/>
+            <bizmsg_template    Ver="1000" BizName="dcT.1" File="dc_dcrawdata_funct.xml"/>
+            <bizmsg_template    Ver="1000" BizName="dcL.2" File="dc_dcwarehouse_funcl.xml"/>
+            <bizmsg_template    Ver="1000" BizName="dcT.2" File="dc_dcwarehouse_funct.xml"/>
+            <bizmsg_template    Ver="1000" BizName="flpL.1" File="flp_funcl.xml"/>
         </biz_msgs>
     </bizs_template>
 </ld_templates>

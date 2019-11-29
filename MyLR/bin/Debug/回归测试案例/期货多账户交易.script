@@ -1,0 +1,37 @@
+﻿#下面是获取订单批号  
+Function funOrderBatchNo = tdsecuL.1.901
+set funOrderBatchNo.co_no = 7474
+set funOrderBatchNo.record_no_type = 18 
+funOrderBatchNo.Send()
+funOrderBatchNo.GetAnswer()
+if funOrderBatchNo.Answer().error_code !=0 : Print '('&funOrderBatchNo.Answer().error_code&')'&funOrderBatchNo.Answer().error_prompt&funOrderBatchNo.Answer().error_info
+if funOrderBatchNo.Answer().error_code !=0 : Print 'tdsecuL.1.901错误，程序即将退出'
+if funOrderBatchNo.Answer().error_code !=0 : Exit
+if funOrderBatchNo.Answer().curr_no > 0 : Print '获取订单批号成功，OrderBatchNo = '&funOrderBatchNo.Answer().curr_no
+sleep=1000
+
+#下面是期货新增订单
+Function funcl_tdfutd_AddOrder = tdfutuL.4.11
+set funcl_tdfutd_AddOrder.comm_opor=74740001
+set funcl_tdfutd_AddOrder.exch_group_no=74740002
+set funcl_tdfutd_AddOrder.asset_acco_no=74740002
+set funcl_tdfutd_AddOrder.exch_no=12
+set funcl_tdfutd_AddOrder.contrc_code=ag1910
+set funcl_tdfutd_AddOrder.contrc_name='沪白银1910'
+set funcl_tdfutd_AddOrder.contrc_dir=1
+set funcl_tdfutd_AddOrder.hedge_type=1
+#set funcl_tdfutd_AddOrder.external_no=
+#set funcl_tdfutd_AddOrder.comm_id=
+set funcl_tdfutd_AddOrder.order_batch_no=funOrderBatchNo.Answer().curr_no
+set funcl_tdfutd_AddOrder.order_dir=1
+set funcl_tdfutd_AddOrder.order_qty=1
+set funcl_tdfutd_AddOrder.order_price=4282
+set funcl_tdfutd_AddOrder.order_oper_way=35
+funcl_tdfutd_AddOrder.Send()
+funcl_tdfutd_AddOrder.GetAnswer()
+if funcl_tdfutd_AddOrder.Answer().error_code !=0 : Print '('&funcl_tdfutd_AddOrder.Answer().error_code&')'&funcl_tdfutd_AddOrder.Answer().error_prompt&funcl_tdfutd_AddOrder.Answer().error_info
+if funcl_tdfutd_AddOrder.Answer().error_code !=0 : Print 'tdfutuL.4.11错误，程序即将退出'  
+if funcl_tdfutd_AddOrder.Answer().error_code !=0 :Exit
+if funcl_tdfutd_AddOrder.Answer().order_id >0 :Print '订单下达成功，order_id='&funcl_tdfutd_AddOrder.Answer().order_id
+sleep=1000
+

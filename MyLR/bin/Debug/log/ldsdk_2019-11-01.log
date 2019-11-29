@@ -1,0 +1,370 @@
+[2019-11-01 12:14:23:554]
+            LogID:[ldsdk] 3500[sdk初始化完成]
+            Level:INFO
+            Module:sdk
+            Message:sdk编译日期：May  6 2019  编译时间：11:20:30
+[2019-11-01 12:17:39:491]
+            LogID:[ldsdk] 3500[sdk初始化完成]
+            Level:INFO
+            Module:sdk
+            Message:sdk编译日期：May  6 2019  编译时间：11:20:30
+[2019-11-01 12:18:14:107]
+            LogID:[ldsdk] 3500[sdk初始化完成]
+            Level:INFO
+            Module:sdk
+            Message:sdk编译日期：May  6 2019  编译时间：11:20:30
+[2019-11-01 12:18:35:287]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：tdfutuL.8.4  dealTime:79  packetid:15  callbacktime:0
+[2019-11-01 12:18:35:288]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：tdfutuL.8.4  dealTime:79  packetid:25  callbacktime:0
+[2019-11-01 12:18:35:288]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：tdfutuL.8.4  dealTime:79  packetid:22  callbacktime:0
+[2019-11-01 12:18:35:288]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：tdfutuL.8.4  dealTime:63  packetid:61  callbacktime:0
+[2019-11-01 12:18:35:288]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：tdfutuL.8.4  dealTime:63  packetid:64  callbacktime:0
+[2019-11-01 12:18:35:288]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：tdfutuL.8.4  dealTime:63  packetid:41  callbacktime:0
+[2019-11-01 12:18:35:288]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：tdfutuL.8.4  dealTime:79  packetid:18  callbacktime:0
+[2019-11-01 12:18:35:288]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：tdfutuL.8.4  dealTime:63  packetid:32  callbacktime:0
+[2019-11-01 12:18:35:292]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：tdfutuL.8.4  dealTime:47  packetid:116  callbacktime:0
+[2019-11-01 12:18:35:292]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：pubL.11.30  dealTime:79  packetid:1  callbacktime:0
+[2019-11-01 12:18:35:690]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：pdsecuL.2.65  dealTime:312  packetid:403  callbacktime:0
+[2019-11-01 12:18:35:694]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：rksecuL.4.64  dealTime:219  packetid:717  callbacktime:0
+[2019-11-01 12:18:35:694]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：pdsecuL.2.65  dealTime:313  packetid:461  callbacktime:0
+[2019-11-01 12:18:35:697]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：tdfutuL.8.4  dealTime:360  packetid:317  callbacktime:0
+[2019-11-01 12:18:35:697]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：tdfutuL.2.6  dealTime:375  packetid:292  callbacktime:0
+[2019-11-01 12:18:35:697]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：rksecuL.4.64  dealTime:328  packetid:404  callbacktime:0
+[2019-11-01 12:18:35:697]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：tdfutuL.8.4  dealTime:453  packetid:110  callbacktime:0
+[2019-11-01 12:18:35:697]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：rksecuL.4.64  dealTime:172  packetid:910  callbacktime:0
+[2019-11-01 12:18:35:697]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：tdsecuL.2.6  dealTime:438  packetid:195  callbacktime:0
+[2019-11-01 12:18:35:699]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：tdfutuL.8.4  dealTime:391  packetid:274  callbacktime:0
+[2019-11-01 12:18:37:407]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：pubL.19.91  dealTime:0  packetid:1601  callbacktime:0
+[2019-11-01 12:18:37:414]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：pubL.19.91  dealTime:16  packetid:1608  callbacktime:0
+[2019-11-01 12:18:37:414]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：pubL.19.91  dealTime:16  packetid:1607  callbacktime:0
+[2019-11-01 12:18:37:426]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：pubL.19.91  dealTime:16  packetid:1604  callbacktime:0
+[2019-11-01 12:18:37:426]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：pubL.19.91  dealTime:16  packetid:1602  callbacktime:0
+[2019-11-01 12:18:37:426]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：pubL.19.91  dealTime:16  packetid:1603  callbacktime:0
+[2019-11-01 12:18:37:426]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：pubL.19.91  dealTime:0  packetid:1609  callbacktime:0
+[2019-11-01 12:18:37:426]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：pubL.19.91  dealTime:16  packetid:1605  callbacktime:0
+[2019-11-01 12:18:37:426]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：pubL.19.91  dealTime:0  packetid:1611  callbacktime:0
+[2019-11-01 12:18:37:426]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：pubL.19.91  dealTime:0  packetid:1610  callbacktime:0
+[2019-11-01 12:18:37:812]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：pubL.19.91  dealTime:47  packetid:1945  callbacktime:15
+[2019-11-01 12:18:37:812]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：pubL.19.91  dealTime:62  packetid:1947  callbacktime:0
+[2019-11-01 12:18:37:812]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：pdsecuL.2.57  dealTime:62  packetid:1958  callbacktime:0
+[2019-11-01 12:18:37:812]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：pubL.19.91  dealTime:62  packetid:1975  callbacktime:0
+[2019-11-01 12:18:37:812]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：pubL.19.91  dealTime:62  packetid:1950  callbacktime:0
+[2019-11-01 12:18:37:812]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：pdsecuL.3.71  dealTime:62  packetid:1966  callbacktime:0
+[2019-11-01 12:18:37:812]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：prodL.3.21  dealTime:62  packetid:1956  callbacktime:0
+[2019-11-01 12:18:37:812]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：pubL.19.91  dealTime:62  packetid:1948  callbacktime:0
+[2019-11-01 12:18:37:812]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：prodL.3.21  dealTime:62  packetid:1961  callbacktime:0
+[2019-11-01 12:18:37:812]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：prodL.3.21  dealTime:62  packetid:1963  callbacktime:0
+[2019-11-01 12:18:39:063]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：tdsecuL.2.6  dealTime:0  packetid:2803  callbacktime:312
+[2019-11-01 12:18:39:063]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：tdsecuL.2.6  dealTime:312  packetid:2802  callbacktime:0
+[2019-11-01 12:18:39:063]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：tdsecuL.2.6  dealTime:312  packetid:2804  callbacktime:0
+[2019-11-01 12:18:39:063]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：pdsecuL.3.21  dealTime:265  packetid:2805  callbacktime:0
+[2019-11-01 12:18:39:063]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：pdsecuL.2.57  dealTime:265  packetid:2806  callbacktime:0
+[2019-11-01 12:18:39:063]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：pdsecuL.2.57  dealTime:265  packetid:2808  callbacktime:0
+[2019-11-01 12:18:39:063]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：pdsecuL.2.57  dealTime:265  packetid:2807  callbacktime:0
+[2019-11-01 12:18:39:063]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：tdsecuL.2.6  dealTime:250  packetid:2809  callbacktime:0
+[2019-11-01 12:18:39:063]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：tdsecuL.2.6  dealTime:250  packetid:2810  callbacktime:0
+[2019-11-01 12:18:39:063]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：tdfutuL.8.4  dealTime:234  packetid:2811  callbacktime:0
+[2019-11-01 12:18:39:936]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：pubL.19.91  dealTime:219  packetid:4152  callbacktime:0
+[2019-11-01 12:18:39:936]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：prodL.3.21  dealTime:219  packetid:4264  callbacktime:0
+[2019-11-01 12:18:39:936]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：prodL.3.21  dealTime:219  packetid:4267  callbacktime:0
+[2019-11-01 12:18:39:937]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：prodL.3.21  dealTime:203  packetid:4295  callbacktime:0
+[2019-11-01 12:18:39:937]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：tdsecuL.2.7  dealTime:187  packetid:4394  callbacktime:0
+[2019-11-01 12:18:39:937]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：prodL.3.21  dealTime:203  packetid:4277  callbacktime:0
+[2019-11-01 12:18:39:937]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：pubL.19.76  dealTime:219  packetid:4200  callbacktime:0
+[2019-11-01 12:18:39:937]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：tdsecuL.2.6  dealTime:203  packetid:4353  callbacktime:0
+[2019-11-01 12:18:39:937]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：prodL.3.21  dealTime:203  packetid:4285  callbacktime:0
+[2019-11-01 12:18:39:937]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：tdsecuL.2.8  dealTime:219  packetid:4215  callbacktime:0
+[2019-11-01 12:18:41:156]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：tdsecuL.2.5  dealTime:281  packetid:6037  callbacktime:219
+[2019-11-01 12:18:41:156]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：tdsecuL.5.123  dealTime:813  packetid:5495  callbacktime:0
+[2019-11-01 12:18:41:156]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：pdfutuL.2.57  dealTime:641  packetid:5897  callbacktime:0
+[2019-11-01 12:18:41:156]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：tdfutuL.8.4  dealTime:406  packetid:6175  callbacktime:0
+[2019-11-01 12:18:41:156]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：tdfutuL.8.4  dealTime:406  packetid:6187  callbacktime:0
+[2019-11-01 12:18:41:156]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：tdsecuL.10.60  dealTime:422  packetid:6130  callbacktime:0
+[2019-11-01 12:18:41:156]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：pdsecuL.3.21  dealTime:281  packetid:6248  callbacktime:0
+[2019-11-01 12:18:41:156]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：tdsecuL.5.123  dealTime:1078  packetid:4903  callbacktime:0
+[2019-11-01 12:18:41:156]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：pdsecuL.2.37  dealTime:391  packetid:6198  callbacktime:0
+[2019-11-01 12:18:41:156]
+            LogID:[ldsdk] 3501[业务请求统计]
+            Level:INFO
+            Module:sdk
+            Message:func：pdsecuL.2.57  dealTime:281  packetid:6251  callbacktime:0
+[2019-11-01 12:20:21:484]
+            LogID:[ldsdk] 3500[sdk初始化完成]
+            Level:INFO
+            Module:sdk
+            Message:sdk编译日期：May  6 2019  编译时间：11:20:30

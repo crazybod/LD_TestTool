@@ -1,0 +1,92 @@
+﻿#港股普通交易流程
+#1、获取批号
+  	//逻辑_交易证券_公用_获取业务记录编号
+#2、风险试算
+ 	//逻辑_风控证券_风控_新增预订单信息表
+	//逻辑_风控证券_风控_联合汇总检查客户风险
+#3、新增订单
+	//逻辑_交易证券_交易_新增组合策略订单
+
+
+#下面是获取订单批号  
+Function funOrderBatchNo = tdsecuL.1.901
+set funOrderBatchNo.co_no = 7474
+set funOrderBatchNo.record_no_type = 18 
+funOrderBatchNo.Send()
+funOrderBatchNo.GetAnswer()
+if funOrderBatchNo.Answer().error_code !=0 : Print '('&funOrderBatchNo.Answer().error_code&')'&funOrderBatchNo.Answer().error_prompt&funOrderBatchNo.Answer().error_info
+if funOrderBatchNo.Answer().error_code !=0 : Print 'tdsecuL.1.901错误，程序即将退出'
+if funOrderBatchNo.Answer().error_code !=0 : Exit
+if funOrderBatchNo.Answer().curr_no > 0 : Print '获取订单批号成功，OrderBatchNo = '&funOrderBatchNo.Answer().curr_no
+sleep=1000
+
+
+#下面是新增订单
+Function funcl_tdsed_AddCombStraOrder=tdsecuL.4.138
+#set funcl_tdsed_AddCombStraOrder.comm_opor
+set funcl_tdsed_AddCombStraOrder.exch_group_no=74740001
+set funcl_tdsed_AddCombStraOrder.asset_acco_no=74740001
+set funcl_tdsed_AddCombStraOrder.exch_no=3
+set funcl_tdsed_AddCombStraOrder.stock_code=00001
+#set funcl_tdsed_AddCombStraOrder.external_no
+#set funcl_tdsed_AddCombStraOrder.comm_id
+#set funcl_tdsed_AddCombStraOrder.combo_code
+set funcl_tdsed_AddCombStraOrder.order_batch_no=funOrderBatchNo.Answer().curr_no
+set funcl_tdsed_AddCombStraOrder.order_dir=1
+set funcl_tdsed_AddCombStraOrder.order_qty=500
+set funcl_tdsed_AddCombStraOrder.order_price=68.45
+set funcl_tdsed_AddCombStraOrder.price_type=9
+set funcl_tdsed_AddCombStraOrder.order_oper_way=71
+funcl_tdsed_AddCombStraOrder.Send()
+funcl_tdsed_AddCombStraOrder.GetAnswer()
+if funcl_tdsed_AddCombStraOrder.Answer().error_code !=0 : Print '('&funcl_tdsed_AddCombStraOrder.Answer().error_code&')'&funcl_tdsed_AddCombStraOrder.Answer().error_prompt&funcl_tdsed_AddCombStraOrder.Answer().error_info
+if funcl_tdsed_AddCombStraOrder.Answer().error_code !=0 : Print 'tdsecuL.4.138错误，程序即将退出'  
+if funcl_tdsed_AddCombStraOrder.Answer().error_code !=0 :Exit
+if funcl_tdsed_AddCombStraOrder.Answer().order_id >0 :Print '订单下达成功，order_id='&funcl_tdsed_AddCombStraOrder.Answer().order_id
+sleep=1000
+
+
+#下面是订单查询的功能号
+Function fun = tdsecuL.4.101
+#busi_opor_no
+set fun.order_oper_way = 71
+set fun.co_no = 7474
+set fun.pd_no = 74740001
+set fun.exch_group_no = 74740001
+set fun.pass_no = 5
+#exch_no_str
+set fun.stock_code_no = 3000001
+#stock_type_str
+#comm_id
+#comm_batch_no
+#comm_opor
+#external_no
+set fun.order_batch_no = funOrderBatchNo.Answer().curr_no
+set fun.order_id = funcl_tdsed_AddCombStraOrder.Answer().order_id
+#order_dir_str
+#order_status_str
+#price_type_str
+set fun.row_id = 0
+set fun.row_count=1
+#sort_type
+#combo_code
+
+fun.Send()
+fun.GetAnswer()
+if fun.Answer().error_code !=0 : Print '('&fun.Answer().error_code&')'&fun.Answer().error_prompt&fun.Answer().error_info
+if fun.Answer().error_code !=0 :Print 'tdsecuL.4.101错误，程序即将退出'
+if fun.Answer().error_code !=0 :Exit
+if fun.Answer().error_code == 0 :Print '订单查询成功'
+sleep=1000
+
+#把上面的单子撤销掉
+Function funCancel = tdsecuL.4.12
+set funCancel.order_id=funcl_tdsed_AddCombStraOrder.Answer().order_id
+set funCancel.order_date= funcl_tdsed_AddCombStraOrder.Answer().order_date
+funCancel.Send()
+funCancel.GetAnswer()
+if funCancel.Answer().error_code !=0:Print '('&funCancel.Answer().error_code&')'&funCancel.Answer().error_prompt&funCancel.Answer().error_info
+if funCancel.Answer().error_code !=0:Print 'tdsecuL.4.12错误，程序即将退出'
+if funCancel.Answer().error_code !=0 :Exit
+if funCancel.Answer().error_code ==0:Print '撤单发送成功'
+

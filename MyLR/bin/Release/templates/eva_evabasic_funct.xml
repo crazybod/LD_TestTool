@@ -1,0 +1,677 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bizmsgs>
+    <function functionname="funct_evabasic_AddFinaName" typename="LD_REQUEST" functionid="evaT.1.1" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="fina_acco_code" fieldid="2076"/>
+        <field fieldname="fina_acco_name" fieldid="2079"/>
+        <field fieldname="fina_acco_level" fieldid="2077"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="pd_asset_type_str" fieldid="1269"/>
+        <field fieldname="pd_fee_type_str" fieldid="1248"/>
+    </function>
+    <function functionname="funct_evabasic_AddFinaName" typename="LD_ANSWER" functionid="evaT.1.1" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_evabasic_ModiFinaName" typename="LD_REQUEST" functionid="evaT.1.2" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="fina_acco_code" fieldid="2076"/>
+        <field fieldname="fina_acco_name" fieldid="2079"/>
+        <field fieldname="fina_acco_level" fieldid="2077"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="pd_asset_type_str" fieldid="1269"/>
+        <field fieldname="pd_fee_type_str" fieldid="1248"/>
+    </function>
+    <function functionname="funct_evabasic_ModiFinaName" typename="LD_ANSWER" functionid="evaT.1.2" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_evabasic_DelFinaName" typename="LD_REQUEST" functionid="evaT.1.3" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="fina_acco_code" fieldid="2076"/>
+    </function>
+    <function functionname="funct_evabasic_DelFinaName" typename="LD_ANSWER" functionid="evaT.1.3" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_evabasic_QueryFinaName" typename="LD_REQUEST" functionid="evaT.1.4" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="fina_acco_code" fieldid="2076"/>
+        <field fieldname="fina_acco_name" fieldid="2079"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_evabasic_QueryFinaName" typename="LD_ANSWER" functionid="evaT.1.4" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+        </sequence>
+    </function>
+    <function functionname="funct_evabasic_AddEvaPdInfo" typename="LD_REQUEST" functionid="evaT.1.11" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="pd_begin_share" fieldid="1258" decimalPlaces="2"/>
+        <field fieldname="pd_curr_share" fieldid="1237" decimalPlaces="2"/>
+        <field fieldname="target_pd_code" fieldid="2259"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funct_evabasic_AddEvaPdInfo" typename="LD_ANSWER" functionid="evaT.1.11" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_evabasic_ModiEvaPdInfo" typename="LD_REQUEST" functionid="evaT.1.12" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="pd_begin_share" fieldid="1258" decimalPlaces="2"/>
+        <field fieldname="pd_curr_share" fieldid="1237" decimalPlaces="2"/>
+        <field fieldname="target_pd_code" fieldid="2259"/>
+        <field fieldname="task_status" fieldid="2431"/>
+        <field fieldname="is_auto_push" fieldid="2571"/>
+        <field fieldname="is_sync_netvalue" fieldid="3970"/>
+        <field fieldname="unit_evalu" fieldid="5102"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funct_evabasic_ModiEvaPdInfo" typename="LD_ANSWER" functionid="evaT.1.12" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_evabasic_DelEvaPdInfo" typename="LD_REQUEST" functionid="evaT.1.13" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+    </function>
+    <function functionname="funct_evabasic_DelEvaPdInfo" typename="LD_ANSWER" functionid="evaT.1.13" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_evabasic_QueryEvaPdInfo" typename="LD_REQUEST" functionid="evaT.1.14" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no_str" fieldid="1230"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_evabasic_QueryEvaPdInfo" typename="LD_ANSWER" functionid="evaT.1.14" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="pd_begin_share" fieldid="1258" decimalPlaces="2"/>
+            <field fieldname="pd_curr_share" fieldid="1237" decimalPlaces="2"/>
+            <field fieldname="target_pd_code" fieldid="2259"/>
+            <field fieldname="task_status" fieldid="2431"/>
+            <field fieldname="is_auto_push" fieldid="2571"/>
+            <field fieldname="is_sync_netvalue" fieldid="3970"/>
+            <field fieldname="unit_evalu" fieldid="5102"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+        </sequence>
+    </function>
+    <function functionname="funct_evabasic_GetEvaPdInfo" typename="LD_REQUEST" functionid="evaT.1.15" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+    </function>
+    <function functionname="funct_evabasic_GetEvaPdInfo" typename="LD_ANSWER" functionid="evaT.1.15" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="pd_begin_share" fieldid="1258" decimalPlaces="2"/>
+        <field fieldname="pd_curr_share" fieldid="1237" decimalPlaces="2"/>
+        <field fieldname="target_pd_code" fieldid="2259"/>
+        <field fieldname="is_auto_push" fieldid="2571"/>
+        <field fieldname="unit_evalu" fieldid="5102"/>
+    </function>
+    <function functionname="funct_evabasic_GetEvaPdPushConfig" typename="LD_REQUEST" functionid="evaT.1.16" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="query_row_id" fieldid="1214"/>
+    </function>
+    <function functionname="funct_evabasic_GetEvaPdPushConfig" typename="LD_ANSWER" functionid="evaT.1.16" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="unit_evalu" fieldid="5102"/>
+    </function>
+    <function functionname="funct_evabasic_QueryPdMailConfig" typename="LD_REQUEST" functionid="evaT.1.17" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_evabasic_QueryPdMailConfig" typename="LD_ANSWER" functionid="evaT.1.17" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="mail_server" fieldid="4653"/>
+            <field fieldname="server_type" fieldid="4654"/>
+            <field fieldname="mail_server_protocol" fieldid="4668"/>
+            <field fieldname="mail_server_port" fieldid="4655"/>
+            <field fieldname="mail_server_username" fieldid="4656"/>
+            <field fieldname="mail_server_password" fieldid="4657"/>
+            <field fieldname="ssl_type" fieldid="4658"/>
+            <field fieldname="send_from" fieldid="4664"/>
+            <field fieldname="mail_subject" fieldid="4665"/>
+            <field fieldname="netvalue_posi" fieldid="4661"/>
+            <field fieldname="netvalue_date_posi" fieldid="4662"/>
+            <field fieldname="dateformat_type" fieldid="4663"/>
+        </sequence>
+    </function>
+    <function functionname="funct_evabasic_addPdFee" typename="LD_REQUEST" functionid="evaT.1.21" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="pd_fee_type" fieldid="1247"/>
+        <field fieldname="pd_fee_rate" fieldid="1243" decimalPlaces="12"/>
+        <field fieldname="pd_fee_circle" fieldid="3971"/>
+        <field fieldname="min_fee" fieldid="3107" decimalPlaces="6"/>
+        <field fieldname="calc_fee_date_str" fieldid="5481"/>
+        <field fieldname="eva_calc_type" fieldid="5482"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funct_evabasic_addPdFee" typename="LD_ANSWER" functionid="evaT.1.21" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_evabasic_modifyPdFee" typename="LD_REQUEST" functionid="evaT.1.22" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="pd_fee_type" fieldid="1247"/>
+        <field fieldname="pd_fee_rate" fieldid="1243" decimalPlaces="12"/>
+        <field fieldname="pd_fee_circle" fieldid="3971"/>
+        <field fieldname="min_fee" fieldid="3107" decimalPlaces="6"/>
+        <field fieldname="calc_fee_date_str" fieldid="5481"/>
+        <field fieldname="eva_calc_type" fieldid="5482"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funct_evabasic_modifyPdFee" typename="LD_ANSWER" functionid="evaT.1.22" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_evabasic_deletePdFee" typename="LD_REQUEST" functionid="evaT.1.23" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="pd_fee_type" fieldid="1247"/>
+    </function>
+    <function functionname="funct_evabasic_deletePdFee" typename="LD_ANSWER" functionid="evaT.1.23" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_evabasic_queryPdFee" typename="LD_REQUEST" functionid="evaT.1.24" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="pd_fee_type" fieldid="1247"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_evabasic_queryPdFee" typename="LD_ANSWER" functionid="evaT.1.24" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="pd_fee_type" fieldid="1247"/>
+            <field fieldname="pd_fee_rate" fieldid="1243" decimalPlaces="12"/>
+            <field fieldname="pd_fee_circle" fieldid="3971"/>
+            <field fieldname="min_fee" fieldid="3107" decimalPlaces="6"/>
+            <field fieldname="calc_fee_date_str" fieldid="5481"/>
+            <field fieldname="eva_calc_type" fieldid="5482"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+        </sequence>
+    </function>
+    <function functionname="funct_evabasic_addPdRate" typename="LD_REQUEST" functionid="evaT.1.31" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="pd_rate_type" fieldid="3972"/>
+        <field fieldname="asset_acco" fieldid="3050"/>
+        <field fieldname="intrst_rate" fieldid="2162" decimalPlaces="12"/>
+        <field fieldname="pd_fee_circle" fieldid="3971"/>
+        <field fieldname="min_interest" fieldid="3973" decimalPlaces="6"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funct_evabasic_addPdRate" typename="LD_ANSWER" functionid="evaT.1.31" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_evabasic_modifyPdRate" typename="LD_REQUEST" functionid="evaT.1.32" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="pd_rate_type" fieldid="3972"/>
+        <field fieldname="asset_acco" fieldid="3050"/>
+        <field fieldname="intrst_rate" fieldid="2162" decimalPlaces="12"/>
+        <field fieldname="pd_fee_circle" fieldid="3971"/>
+        <field fieldname="min_interest" fieldid="3973" decimalPlaces="6"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funct_evabasic_modifyPdRate" typename="LD_ANSWER" functionid="evaT.1.32" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_evabasic_deletePdRate" typename="LD_REQUEST" functionid="evaT.1.33" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="pd_rate_type" fieldid="3972"/>
+        <field fieldname="asset_acco" fieldid="3050"/>
+    </function>
+    <function functionname="funct_evabasic_deletePdRate" typename="LD_ANSWER" functionid="evaT.1.33" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_evabasic_queryPdRate" typename="LD_REQUEST" functionid="evaT.1.34" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="pd_rate_type" fieldid="3972"/>
+        <field fieldname="asset_acco" fieldid="3050"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_evabasic_queryPdRate" typename="LD_ANSWER" functionid="evaT.1.34" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="pd_rate_type" fieldid="3972"/>
+            <field fieldname="asset_acco" fieldid="3050"/>
+            <field fieldname="intrst_rate" fieldid="2162" decimalPlaces="12"/>
+            <field fieldname="pd_fee_circle" fieldid="3971"/>
+            <field fieldname="min_interest" fieldid="3973" decimalPlaces="6"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+        </sequence>
+    </function>
+    <function functionname="funct_evabasic_addPdShareJour" typename="LD_REQUEST" functionid="evaT.1.41" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="share_oper" fieldid="5014"/>
+        <field fieldname="occur_share" fieldid="1153" decimalPlaces="2"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="arrive_date" fieldid="1427"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funct_evabasic_addPdShareJour" typename="LD_ANSWER" functionid="evaT.1.41" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_evabasic_modifyPdShareJour" typename="LD_REQUEST" functionid="evaT.1.42" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="share_oper" fieldid="5014"/>
+        <field fieldname="occur_share" fieldid="1153" decimalPlaces="2"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="arrive_date" fieldid="1427"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funct_evabasic_modifyPdShareJour" typename="LD_ANSWER" functionid="evaT.1.42" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_evabasic_deletePdShareJour" typename="LD_REQUEST" functionid="evaT.1.43" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="share_oper" fieldid="5014"/>
+    </function>
+    <function functionname="funct_evabasic_deletePdShareJour" typename="LD_ANSWER" functionid="evaT.1.43" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_evabasic_queryPdShareJour" typename="LD_REQUEST" functionid="evaT.1.44" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_evabasic_queryPdShareJour" typename="LD_ANSWER" functionid="evaT.1.44" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="occur_dir" fieldid="1151"/>
+            <field fieldname="share_oper" fieldid="5014"/>
+            <field fieldname="occur_share" fieldid="1153" decimalPlaces="2"/>
+            <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+            <field fieldname="arrive_date" fieldid="1427"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+        </sequence>
+    </function>
+    <function functionname="funct_evabasic_addPdTotalNetConfig" typename="LD_REQUEST" functionid="evaT.1.51" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="divide_type" fieldid="4975"/>
+        <field fieldname="pd_curr_share" fieldid="1237" decimalPlaces="2"/>
+        <field fieldname="divi_amt" fieldid="1576" decimalPlaces="6"/>
+        <field fieldname="unit_divi_amt" fieldid="4102" decimalPlaces="6"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funct_evabasic_addPdTotalNetConfig" typename="LD_ANSWER" functionid="evaT.1.51" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_evabasic_editPdTotalNetConfig" typename="LD_REQUEST" functionid="evaT.1.52" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="divide_type" fieldid="4975"/>
+        <field fieldname="pd_curr_share" fieldid="1237" decimalPlaces="2"/>
+        <field fieldname="divi_amt" fieldid="1576" decimalPlaces="6"/>
+        <field fieldname="unit_divi_amt" fieldid="4102" decimalPlaces="6"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funct_evabasic_editPdTotalNetConfig" typename="LD_ANSWER" functionid="evaT.1.52" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_evabasic_delPdTotalNetConfig" typename="LD_REQUEST" functionid="evaT.1.53" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="divide_type" fieldid="4975"/>
+    </function>
+    <function functionname="funct_evabasic_delPdTotalNetConfig" typename="LD_ANSWER" functionid="evaT.1.53" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_evabasic_queryPdTotalNetConfig" typename="LD_REQUEST" functionid="evaT.1.54" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="divide_type" fieldid="4975"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_evabasic_queryPdTotalNetConfig" typename="LD_ANSWER" functionid="evaT.1.54" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="divide_type" fieldid="4975"/>
+            <field fieldname="pd_curr_share" fieldid="1237" decimalPlaces="2"/>
+            <field fieldname="divi_amt" fieldid="1576" decimalPlaces="6"/>
+            <field fieldname="unit_divi_amt" fieldid="4102" decimalPlaces="6"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+        </sequence>
+    </function>
+    <function functionname="funct_evabasic_addPdVatConfig" typename="LD_REQUEST" functionid="evaT.1.55" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="vat_rate" fieldid="4997" decimalPlaces="12"/>
+        <field fieldname="vat_add_rate" fieldid="4998" decimalPlaces="12"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funct_evabasic_addPdVatConfig" typename="LD_ANSWER" functionid="evaT.1.55" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_evabasic_editPdVatConfig" typename="LD_REQUEST" functionid="evaT.1.56" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="vat_rate" fieldid="4997" decimalPlaces="12"/>
+        <field fieldname="vat_add_rate" fieldid="4998" decimalPlaces="12"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funct_evabasic_editPdVatConfig" typename="LD_ANSWER" functionid="evaT.1.56" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_evabasic_delPdVatConfig" typename="LD_REQUEST" functionid="evaT.1.57" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+    </function>
+    <function functionname="funct_evabasic_delPdVatConfig" typename="LD_ANSWER" functionid="evaT.1.57" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_evabasic_queryPdVatConfig" typename="LD_REQUEST" functionid="evaT.1.58" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_evabasic_queryPdVatConfig" typename="LD_ANSWER" functionid="evaT.1.58" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="vat_rate" fieldid="4997" decimalPlaces="12"/>
+            <field fieldname="vat_add_rate" fieldid="4998" decimalPlaces="12"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+        </sequence>
+    </function>
+</bizmsgs>

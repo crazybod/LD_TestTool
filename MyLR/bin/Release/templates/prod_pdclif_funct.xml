@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bizmsgs>
+    <function functionname="funct_pdclif_PdCapitalRecorded" typename="LD_REQUEST" functionid="prodT.7.2" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="arrive_date" fieldid="1427"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="busi_flag" fieldid="2785"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="curr_amt" fieldid="1396" decimalPlaces="6"/>
+        <field fieldname="frozen_amt" fieldid="1467" decimalPlaces="6"/>
+        <field fieldname="unfroz_amt" fieldid="1995" decimalPlaces="6"/>
+        <field fieldname="total_rece_amt" fieldid="2158" decimalPlaces="6"/>
+        <field fieldname="total_payab_amt" fieldid="2157" decimalPlaces="6"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+        <field fieldname="invest_type" fieldid="2651"/>
+    </function>
+    <function functionname="funct_pdclif_PdCapitalRecorded" typename="LD_ANSWER" functionid="prodT.7.2" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdclif_GetAssetAccoSplitFareStr" typename="LD_REQUEST" functionid="prodT.7.33" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+    </function>
+    <function functionname="funct_pdclif_GetAssetAccoSplitFareStr" typename="LD_ANSWER" functionid="prodT.7.33" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="split_fee_typr_str" fieldid="1537"/>
+    </function>
+    <function functionname="funct_pdclif_GetProdCostCalcType" typename="LD_REQUEST" functionid="prodT.7.41" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+    </function>
+    <function functionname="funct_pdclif_GetProdCostCalcType" typename="LD_ANSWER" functionid="prodT.7.41" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="cost_calc_type" fieldid="1283"/>
+    </function>
+    <function functionname="funct_pdclif_GetAssetAccoInfo" typename="LD_REQUEST" functionid="prodT.7.42" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+    </function>
+    <function functionname="funct_pdclif_GetAssetAccoInfo" typename="LD_ANSWER" functionid="prodT.7.42" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="asset_acco_type" fieldid="3056"/>
+    </function>
+    <function functionname="funct_pdclif_GetFinaLoanIntrstRate" typename="LD_REQUEST" functionid="prodT.7.43" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+    </function>
+    <function functionname="funct_pdclif_GetFinaLoanIntrstRate" typename="LD_ANSWER" functionid="prodT.7.43" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="fina_year_intrst_rate" fieldid="5513" decimalPlaces="12"/>
+        <field fieldname="secu_loan_year_intrst_rate" fieldid="5514" decimalPlaces="12"/>
+        <field fieldname="sell_auto_back_debt" fieldid="5803"/>
+        <field fieldname="fina_return_type" fieldid="5757"/>
+    </function>
+    <function functionname="funct_pdclif_CreateProdTbBak" typename="LD_REQUEST" functionid="prodT.7.44" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+    </function>
+    <function functionname="funct_pdclif_CreateProdTbBak" typename="LD_ANSWER" functionid="prodT.7.44" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdclif_ReProdTb" typename="LD_REQUEST" functionid="prodT.7.45" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+    </function>
+    <function functionname="funct_pdclif_ReProdTb" typename="LD_ANSWER" functionid="prodT.7.45" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+</bizmsgs>

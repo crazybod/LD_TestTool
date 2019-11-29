@@ -1,0 +1,2664 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bizmsgs>
+    <function functionname="funct_pdseca_DistrPdCapital" typename="LD_REQUEST" functionid="pdsecuT.2.8" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdseca_DistrPdCapital" typename="LD_ANSWER" functionid="pdsecuT.2.8" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="asac_cash_id" fieldid="3388"/>
+        <field fieldname="asac_begin_amt" fieldid="3566" decimalPlaces="6"/>
+        <field fieldname="asac_curr_amt" fieldid="3568" decimalPlaces="6"/>
+        <field fieldname="asac_frozen_amt" fieldid="3438" decimalPlaces="6"/>
+        <field fieldname="asac_unfroz_amt" fieldid="3439" decimalPlaces="6"/>
+        <field fieldname="asac_pre_settle_amt" fieldid="3872" decimalPlaces="6"/>
+        <field fieldname="asac_shsz_avail_change_amt" fieldid="3928" decimalPlaces="6"/>
+        <field fieldname="asac_hk_avail_change_amt" fieldid="3929" decimalPlaces="6"/>
+        <field fieldname="asac_amt_check_diff" fieldid="3966" decimalPlaces="6"/>
+        <field fieldname="asac_T_hk_buy_total_amt" fieldid="5067" decimalPlaces="6"/>
+        <field fieldname="asac_T_hk_sell_total_amt" fieldid="5068" decimalPlaces="6"/>
+        <field fieldname="asac_T1_hk_buy_total_amt" fieldid="5057" decimalPlaces="6"/>
+        <field fieldname="asac_T1_hk_sell_total_amt" fieldid="5058" decimalPlaces="6"/>
+        <field fieldname="asac_total_rece_amt" fieldid="3619" decimalPlaces="6"/>
+        <field fieldname="asac_total_payab_amt" fieldid="3620" decimalPlaces="6"/>
+        <field fieldname="asac_realize_pandl" fieldid="3339" decimalPlaces="6"/>
+        <field fieldname="asac_intrst_rate" fieldid="3621" decimalPlaces="6"/>
+        <field fieldname="asac_intrst_base_amt" fieldid="3622" decimalPlaces="6"/>
+        <field fieldname="asac_pre_entry_intrst_amt" fieldid="3623" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="funct_pdseca_BackPdCapital" typename="LD_REQUEST" functionid="pdsecuT.2.9" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdseca_BackPdCapital" typename="LD_ANSWER" functionid="pdsecuT.2.9" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="asac_cash_id" fieldid="3388"/>
+        <field fieldname="asac_begin_amt" fieldid="3566" decimalPlaces="6"/>
+        <field fieldname="asac_curr_amt" fieldid="3568" decimalPlaces="6"/>
+        <field fieldname="asac_frozen_amt" fieldid="3438" decimalPlaces="6"/>
+        <field fieldname="asac_unfroz_amt" fieldid="3439" decimalPlaces="6"/>
+        <field fieldname="asac_pre_settle_amt" fieldid="3872" decimalPlaces="6"/>
+        <field fieldname="asac_shsz_avail_change_amt" fieldid="3928" decimalPlaces="6"/>
+        <field fieldname="asac_hk_avail_change_amt" fieldid="3929" decimalPlaces="6"/>
+        <field fieldname="asac_amt_check_diff" fieldid="3966" decimalPlaces="6"/>
+        <field fieldname="asac_T_hk_buy_total_amt" fieldid="5067" decimalPlaces="6"/>
+        <field fieldname="asac_T_hk_sell_total_amt" fieldid="5068" decimalPlaces="6"/>
+        <field fieldname="asac_T1_hk_buy_total_amt" fieldid="5057" decimalPlaces="6"/>
+        <field fieldname="asac_T1_hk_sell_total_amt" fieldid="5058" decimalPlaces="6"/>
+        <field fieldname="asac_total_rece_amt" fieldid="3619" decimalPlaces="6"/>
+        <field fieldname="asac_total_payab_amt" fieldid="3620" decimalPlaces="6"/>
+        <field fieldname="asac_realize_pandl" fieldid="3339" decimalPlaces="6"/>
+        <field fieldname="asac_intrst_rate" fieldid="3621" decimalPlaces="6"/>
+        <field fieldname="asac_intrst_base_amt" fieldid="3622" decimalPlaces="6"/>
+        <field fieldname="asac_pre_entry_intrst_amt" fieldid="3623" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="funct_pdseca_AuthPdCapital" typename="LD_REQUEST" functionid="pdsecuT.2.10" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdseca_AuthPdCapital" typename="LD_ANSWER" functionid="pdsecuT.2.10" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="exgp_cash_id" fieldid="3387"/>
+        <field fieldname="exgp_begin_amt" fieldid="3565" decimalPlaces="6"/>
+        <field fieldname="exgp_curr_amt" fieldid="3567" decimalPlaces="6"/>
+        <field fieldname="exgp_frozen_amt" fieldid="3412" decimalPlaces="6"/>
+        <field fieldname="exgp_unfroz_amt" fieldid="3413" decimalPlaces="6"/>
+        <field fieldname="exgp_pre_settle_amt" fieldid="3873" decimalPlaces="6"/>
+        <field fieldname="exgp_shsz_avail_change_amt" fieldid="3926" decimalPlaces="6"/>
+        <field fieldname="exgp_hk_avail_change_amt" fieldid="3927" decimalPlaces="6"/>
+        <field fieldname="exgp_amt_check_diff" fieldid="3965" decimalPlaces="6"/>
+        <field fieldname="exgp_T_hk_buy_total_amt" fieldid="5065" decimalPlaces="6"/>
+        <field fieldname="exgp_T_hk_sell_total_amt" fieldid="5066" decimalPlaces="6"/>
+        <field fieldname="exgp_T1_hk_buy_total_amt" fieldid="5051" decimalPlaces="6"/>
+        <field fieldname="exgp_T1_hk_sell_total_amt" fieldid="5052" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_rece_amt" fieldid="3614" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_payab_amt" fieldid="3615" decimalPlaces="6"/>
+        <field fieldname="exgp_realize_pandl" fieldid="3334" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_rate" fieldid="3616" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_base_amt" fieldid="3617" decimalPlaces="6"/>
+        <field fieldname="exch_group_pre_entry_intrst_amt" fieldid="3618" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="funct_pdseca_BackAuthPdCapital" typename="LD_REQUEST" functionid="pdsecuT.2.11" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdseca_BackAuthPdCapital" typename="LD_ANSWER" functionid="pdsecuT.2.11" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="exgp_cash_id" fieldid="3387"/>
+        <field fieldname="exgp_begin_amt" fieldid="3565" decimalPlaces="6"/>
+        <field fieldname="exgp_curr_amt" fieldid="3567" decimalPlaces="6"/>
+        <field fieldname="exgp_frozen_amt" fieldid="3412" decimalPlaces="6"/>
+        <field fieldname="exgp_unfroz_amt" fieldid="3413" decimalPlaces="6"/>
+        <field fieldname="exgp_pre_settle_amt" fieldid="3873" decimalPlaces="6"/>
+        <field fieldname="exgp_shsz_avail_change_amt" fieldid="3926" decimalPlaces="6"/>
+        <field fieldname="exgp_hk_avail_change_amt" fieldid="3927" decimalPlaces="6"/>
+        <field fieldname="exgp_amt_check_diff" fieldid="3965" decimalPlaces="6"/>
+        <field fieldname="exgp_T_hk_buy_total_amt" fieldid="5065" decimalPlaces="6"/>
+        <field fieldname="exgp_T_hk_sell_total_amt" fieldid="5066" decimalPlaces="6"/>
+        <field fieldname="exgp_T1_hk_buy_total_amt" fieldid="5051" decimalPlaces="6"/>
+        <field fieldname="exgp_T1_hk_sell_total_amt" fieldid="5052" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_rece_amt" fieldid="3614" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_payab_amt" fieldid="3615" decimalPlaces="6"/>
+        <field fieldname="exgp_realize_pandl" fieldid="3334" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_rate" fieldid="3616" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_base_amt" fieldid="3617" decimalPlaces="6"/>
+        <field fieldname="exch_group_pre_entry_intrst_amt" fieldid="3618" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="funct_pdseca_FrozenExgpCapital" typename="LD_REQUEST" functionid="pdsecuT.2.32" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="expire_date" fieldid="1425"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdseca_FrozenExgpCapital" typename="LD_ANSWER" functionid="pdsecuT.2.32" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="exgp_cash_id" fieldid="3387"/>
+        <field fieldname="exgp_begin_amt" fieldid="3565" decimalPlaces="6"/>
+        <field fieldname="exgp_curr_amt" fieldid="3567" decimalPlaces="6"/>
+        <field fieldname="exgp_frozen_amt" fieldid="3412" decimalPlaces="6"/>
+        <field fieldname="exgp_unfroz_amt" fieldid="3413" decimalPlaces="6"/>
+        <field fieldname="exgp_pre_settle_amt" fieldid="3873" decimalPlaces="6"/>
+        <field fieldname="exgp_shsz_avail_change_amt" fieldid="3926" decimalPlaces="6"/>
+        <field fieldname="exgp_hk_avail_change_amt" fieldid="3927" decimalPlaces="6"/>
+        <field fieldname="exgp_amt_check_diff" fieldid="3965" decimalPlaces="6"/>
+        <field fieldname="exgp_T_hk_buy_total_amt" fieldid="5065" decimalPlaces="6"/>
+        <field fieldname="exgp_T_hk_sell_total_amt" fieldid="5066" decimalPlaces="6"/>
+        <field fieldname="exgp_T1_hk_buy_total_amt" fieldid="5051" decimalPlaces="6"/>
+        <field fieldname="exgp_T1_hk_sell_total_amt" fieldid="5052" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_rece_amt" fieldid="3614" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_payab_amt" fieldid="3615" decimalPlaces="6"/>
+        <field fieldname="exgp_realize_pandl" fieldid="3334" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_rate" fieldid="3616" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_base_amt" fieldid="3617" decimalPlaces="6"/>
+        <field fieldname="exch_group_pre_entry_intrst_amt" fieldid="3618" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="funct_pdseca_UndoFrozenExgpCapital" typename="LD_REQUEST" functionid="pdsecuT.2.33" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+    </function>
+    <function functionname="funct_pdseca_UndoFrozenExgpCapital" typename="LD_ANSWER" functionid="pdsecuT.2.33" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="exgp_cash_id" fieldid="3387"/>
+        <field fieldname="exgp_begin_amt" fieldid="3565" decimalPlaces="6"/>
+        <field fieldname="exgp_curr_amt" fieldid="3567" decimalPlaces="6"/>
+        <field fieldname="exgp_frozen_amt" fieldid="3412" decimalPlaces="6"/>
+        <field fieldname="exgp_unfroz_amt" fieldid="3413" decimalPlaces="6"/>
+        <field fieldname="exgp_pre_settle_amt" fieldid="3873" decimalPlaces="6"/>
+        <field fieldname="exgp_shsz_avail_change_amt" fieldid="3926" decimalPlaces="6"/>
+        <field fieldname="exgp_hk_avail_change_amt" fieldid="3927" decimalPlaces="6"/>
+        <field fieldname="exgp_amt_check_diff" fieldid="3965" decimalPlaces="6"/>
+        <field fieldname="exgp_T_hk_buy_total_amt" fieldid="5065" decimalPlaces="6"/>
+        <field fieldname="exgp_T_hk_sell_total_amt" fieldid="5066" decimalPlaces="6"/>
+        <field fieldname="exgp_T1_hk_buy_total_amt" fieldid="5051" decimalPlaces="6"/>
+        <field fieldname="exgp_T1_hk_sell_total_amt" fieldid="5052" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_rece_amt" fieldid="3614" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_payab_amt" fieldid="3615" decimalPlaces="6"/>
+        <field fieldname="exgp_realize_pandl" fieldid="3334" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_rate" fieldid="3616" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_base_amt" fieldid="3617" decimalPlaces="6"/>
+        <field fieldname="exch_group_pre_entry_intrst_amt" fieldid="3618" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="funct_pdseca_UnFrozenExgpCapital" typename="LD_REQUEST" functionid="pdsecuT.2.34" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="expire_date" fieldid="1425"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdseca_UnFrozenExgpCapital" typename="LD_ANSWER" functionid="pdsecuT.2.34" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="exgp_cash_id" fieldid="3387"/>
+        <field fieldname="exgp_begin_amt" fieldid="3565" decimalPlaces="6"/>
+        <field fieldname="exgp_curr_amt" fieldid="3567" decimalPlaces="6"/>
+        <field fieldname="exgp_frozen_amt" fieldid="3412" decimalPlaces="6"/>
+        <field fieldname="exgp_unfroz_amt" fieldid="3413" decimalPlaces="6"/>
+        <field fieldname="exgp_pre_settle_amt" fieldid="3873" decimalPlaces="6"/>
+        <field fieldname="exgp_shsz_avail_change_amt" fieldid="3926" decimalPlaces="6"/>
+        <field fieldname="exgp_hk_avail_change_amt" fieldid="3927" decimalPlaces="6"/>
+        <field fieldname="exgp_amt_check_diff" fieldid="3965" decimalPlaces="6"/>
+        <field fieldname="exgp_T_hk_buy_total_amt" fieldid="5065" decimalPlaces="6"/>
+        <field fieldname="exgp_T_hk_sell_total_amt" fieldid="5066" decimalPlaces="6"/>
+        <field fieldname="exgp_T1_hk_buy_total_amt" fieldid="5051" decimalPlaces="6"/>
+        <field fieldname="exgp_T1_hk_sell_total_amt" fieldid="5052" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_rece_amt" fieldid="3614" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_payab_amt" fieldid="3615" decimalPlaces="6"/>
+        <field fieldname="exgp_realize_pandl" fieldid="3334" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_rate" fieldid="3616" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_base_amt" fieldid="3617" decimalPlaces="6"/>
+        <field fieldname="exch_group_pre_entry_intrst_amt" fieldid="3618" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="funct_pdseca_UndoUnFrozenExgpCapital" typename="LD_REQUEST" functionid="pdsecuT.2.35" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+    </function>
+    <function functionname="funct_pdseca_UndoUnFrozenExgpCapital" typename="LD_ANSWER" functionid="pdsecuT.2.35" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="exgp_cash_id" fieldid="3387"/>
+        <field fieldname="exgp_begin_amt" fieldid="3565" decimalPlaces="6"/>
+        <field fieldname="exgp_curr_amt" fieldid="3567" decimalPlaces="6"/>
+        <field fieldname="exgp_frozen_amt" fieldid="3412" decimalPlaces="6"/>
+        <field fieldname="exgp_unfroz_amt" fieldid="3413" decimalPlaces="6"/>
+        <field fieldname="exgp_pre_settle_amt" fieldid="3873" decimalPlaces="6"/>
+        <field fieldname="exgp_shsz_avail_change_amt" fieldid="3926" decimalPlaces="6"/>
+        <field fieldname="exgp_hk_avail_change_amt" fieldid="3927" decimalPlaces="6"/>
+        <field fieldname="exgp_amt_check_diff" fieldid="3965" decimalPlaces="6"/>
+        <field fieldname="exgp_T_hk_buy_total_amt" fieldid="5065" decimalPlaces="6"/>
+        <field fieldname="exgp_T_hk_sell_total_amt" fieldid="5066" decimalPlaces="6"/>
+        <field fieldname="exgp_T1_hk_buy_total_amt" fieldid="5051" decimalPlaces="6"/>
+        <field fieldname="exgp_T1_hk_sell_total_amt" fieldid="5052" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_rece_amt" fieldid="3614" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_payab_amt" fieldid="3615" decimalPlaces="6"/>
+        <field fieldname="exgp_realize_pandl" fieldid="3334" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_rate" fieldid="3616" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_base_amt" fieldid="3617" decimalPlaces="6"/>
+        <field fieldname="exch_group_pre_entry_intrst_amt" fieldid="3618" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="funct_pdseca_QueryExgpCapital" typename="LD_REQUEST" functionid="pdsecuT.2.37" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+        <field fieldname="exch_group_no_rights_str" fieldid="1964"/>
+    </function>
+    <function functionname="funct_pdseca_QueryExgpCapital" typename="LD_ANSWER" functionid="pdsecuT.2.37" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="create_date" fieldid="1354"/>
+            <field fieldname="create_time" fieldid="1355"/>
+            <field fieldname="update_date" fieldid="1667"/>
+            <field fieldname="update_time" fieldid="1669"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="begin_amt" fieldid="2327" decimalPlaces="6"/>
+            <field fieldname="curr_amt" fieldid="1396" decimalPlaces="6"/>
+            <field fieldname="frozen_amt" fieldid="1467" decimalPlaces="6"/>
+            <field fieldname="unfroz_amt" fieldid="1995" decimalPlaces="6"/>
+            <field fieldname="pre_settle_amt" fieldid="3870" decimalPlaces="6"/>
+            <field fieldname="shsz_avail_change_amt" fieldid="3924" decimalPlaces="6"/>
+            <field fieldname="hk_avail_change_amt" fieldid="3925" decimalPlaces="6"/>
+            <field fieldname="amt_check_diff" fieldid="3961" decimalPlaces="6"/>
+            <field fieldname="T_hk_buy_total_amt" fieldid="5063" decimalPlaces="6"/>
+            <field fieldname="T_hk_sell_total_amt" fieldid="5064" decimalPlaces="6"/>
+            <field fieldname="T1_hk_buy_total_amt" fieldid="5045" decimalPlaces="6"/>
+            <field fieldname="T1_hk_sell_total_amt" fieldid="5046" decimalPlaces="6"/>
+            <field fieldname="total_rece_amt" fieldid="2158" decimalPlaces="6"/>
+            <field fieldname="total_payab_amt" fieldid="2157" decimalPlaces="6"/>
+            <field fieldname="total_change_amt" fieldid="3943" decimalPlaces="6"/>
+            <field fieldname="realize_pandl" fieldid="2536" decimalPlaces="6"/>
+            <field fieldname="intrst_rate" fieldid="2162" decimalPlaces="12"/>
+            <field fieldname="intrst_base_amt" fieldid="2170" decimalPlaces="6"/>
+            <field fieldname="pre_entry_intrst_amt" fieldid="1372" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdseca_QueryExgpCapital_His" typename="LD_REQUEST" functionid="pdsecuT.2.38" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+        <field fieldname="exch_group_no_rights_str" fieldid="1964"/>
+    </function>
+    <function functionname="funct_pdseca_QueryExgpCapital_His" typename="LD_ANSWER" functionid="pdsecuT.2.38" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="create_date" fieldid="1354"/>
+            <field fieldname="create_time" fieldid="1355"/>
+            <field fieldname="update_date" fieldid="1667"/>
+            <field fieldname="update_time" fieldid="1669"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="begin_amt" fieldid="2327" decimalPlaces="6"/>
+            <field fieldname="curr_amt" fieldid="1396" decimalPlaces="6"/>
+            <field fieldname="frozen_amt" fieldid="1467" decimalPlaces="6"/>
+            <field fieldname="unfroz_amt" fieldid="1995" decimalPlaces="6"/>
+            <field fieldname="pre_settle_amt" fieldid="3870" decimalPlaces="6"/>
+            <field fieldname="shsz_avail_change_amt" fieldid="3924" decimalPlaces="6"/>
+            <field fieldname="hk_avail_change_amt" fieldid="3925" decimalPlaces="6"/>
+            <field fieldname="amt_check_diff" fieldid="3961" decimalPlaces="6"/>
+            <field fieldname="T_hk_buy_total_amt" fieldid="5063" decimalPlaces="6"/>
+            <field fieldname="T_hk_sell_total_amt" fieldid="5064" decimalPlaces="6"/>
+            <field fieldname="T1_hk_buy_total_amt" fieldid="5045" decimalPlaces="6"/>
+            <field fieldname="T1_hk_sell_total_amt" fieldid="5046" decimalPlaces="6"/>
+            <field fieldname="total_rece_amt" fieldid="2158" decimalPlaces="6"/>
+            <field fieldname="total_payab_amt" fieldid="2157" decimalPlaces="6"/>
+            <field fieldname="total_change_amt" fieldid="3943" decimalPlaces="6"/>
+            <field fieldname="realize_pandl" fieldid="2536" decimalPlaces="6"/>
+            <field fieldname="intrst_rate" fieldid="2162" decimalPlaces="12"/>
+            <field fieldname="intrst_base_amt" fieldid="2170" decimalPlaces="6"/>
+            <field fieldname="pre_entry_intrst_amt" fieldid="1372" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdseca_QueryExgpCapital_Jour" typename="LD_REQUEST" functionid="pdsecuT.2.39" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+        <field fieldname="exch_group_no_rights_str" fieldid="1964"/>
+    </function>
+    <function functionname="funct_pdseca_QueryExgpCapital_Jour" typename="LD_ANSWER" functionid="pdsecuT.2.39" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="create_date" fieldid="1354"/>
+            <field fieldname="create_time" fieldid="1355"/>
+            <field fieldname="update_date" fieldid="1667"/>
+            <field fieldname="update_time" fieldid="1669"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="busi_flag" fieldid="2785"/>
+            <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+            <field fieldname="occur_end_amt" fieldid="1154" decimalPlaces="6"/>
+            <field fieldname="jour_occur_field" fieldid="2184"/>
+            <field fieldname="jour_after_occur_info" fieldid="2185"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdseca_QueryExgpCapital_JourHis" typename="LD_REQUEST" functionid="pdsecuT.2.40" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+        <field fieldname="exch_group_no_rights_str" fieldid="1964"/>
+    </function>
+    <function functionname="funct_pdseca_QueryExgpCapital_JourHis" typename="LD_ANSWER" functionid="pdsecuT.2.40" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="create_date" fieldid="1354"/>
+            <field fieldname="create_time" fieldid="1355"/>
+            <field fieldname="update_date" fieldid="1667"/>
+            <field fieldname="update_time" fieldid="1669"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="busi_flag" fieldid="2785"/>
+            <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+            <field fieldname="occur_end_amt" fieldid="1154" decimalPlaces="6"/>
+            <field fieldname="jour_occur_field" fieldid="2184"/>
+            <field fieldname="jour_after_occur_info" fieldid="2185"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdseca_QueryExgpCapitalFrozenJour" typename="LD_REQUEST" functionid="pdsecuT.2.41" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="frozen_type" fieldid="1466"/>
+        <field fieldname="jour_status" fieldid="2186"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+        <field fieldname="exch_group_no_rights_str" fieldid="1964"/>
+    </function>
+    <function functionname="funct_pdseca_QueryExgpCapitalFrozenJour" typename="LD_ANSWER" functionid="pdsecuT.2.41" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="create_date" fieldid="1354"/>
+            <field fieldname="create_time" fieldid="1355"/>
+            <field fieldname="update_date" fieldid="1667"/>
+            <field fieldname="update_time" fieldid="1669"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="frozen_type" fieldid="1466"/>
+            <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+            <field fieldname="expire_date" fieldid="1425"/>
+            <field fieldname="jour_status" fieldid="2186"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdseca_QueryExgpCapitalFrozenJour_His" typename="LD_REQUEST" functionid="pdsecuT.2.42" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="frozen_type" fieldid="1466"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+        <field fieldname="exch_group_no_rights_str" fieldid="1964"/>
+    </function>
+    <function functionname="funct_pdseca_QueryExgpCapitalFrozenJour_His" typename="LD_ANSWER" functionid="pdsecuT.2.42" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="create_date" fieldid="1354"/>
+            <field fieldname="create_time" fieldid="1355"/>
+            <field fieldname="update_date" fieldid="1667"/>
+            <field fieldname="update_time" fieldid="1669"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="frozen_type" fieldid="1466"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+            <field fieldname="expire_date" fieldid="1425"/>
+            <field fieldname="jour_status" fieldid="2186"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdseca_GetExgpCapitalFrozenJour" typename="LD_REQUEST" functionid="pdsecuT.2.43" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+    </function>
+    <function functionname="funct_pdseca_GetExgpCapitalFrozenJour" typename="LD_ANSWER" functionid="pdsecuT.2.43" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="oper_func_code" fieldid="1186"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="frozen_type" fieldid="1466"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="expire_date" fieldid="1425"/>
+        <field fieldname="jour_status" fieldid="2186"/>
+        <field fieldname="asac_frozen_no" fieldid="3944"/>
+    </function>
+    <function functionname="funct_pdseca_UpdateExchGroupCapitalRecePayab" typename="LD_REQUEST" functionid="pdsecuT.2.44" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="total_rece_amt" fieldid="2158" decimalPlaces="6"/>
+        <field fieldname="total_payab_amt" fieldid="2157" decimalPlaces="6"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdseca_UpdateExchGroupCapitalRecePayab" typename="LD_ANSWER" functionid="pdsecuT.2.44" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="exgp_cash_id" fieldid="3387"/>
+        <field fieldname="exgp_begin_amt" fieldid="3565" decimalPlaces="6"/>
+        <field fieldname="exgp_curr_amt" fieldid="3567" decimalPlaces="6"/>
+        <field fieldname="exgp_frozen_amt" fieldid="3412" decimalPlaces="6"/>
+        <field fieldname="exgp_unfroz_amt" fieldid="3413" decimalPlaces="6"/>
+        <field fieldname="exgp_pre_settle_amt" fieldid="3873" decimalPlaces="6"/>
+        <field fieldname="exgp_shsz_avail_change_amt" fieldid="3926" decimalPlaces="6"/>
+        <field fieldname="exgp_hk_avail_change_amt" fieldid="3927" decimalPlaces="6"/>
+        <field fieldname="exgp_amt_check_diff" fieldid="3965" decimalPlaces="6"/>
+        <field fieldname="exgp_T_hk_buy_total_amt" fieldid="5065" decimalPlaces="6"/>
+        <field fieldname="exgp_T_hk_sell_total_amt" fieldid="5066" decimalPlaces="6"/>
+        <field fieldname="exgp_T1_hk_buy_total_amt" fieldid="5051" decimalPlaces="6"/>
+        <field fieldname="exgp_T1_hk_sell_total_amt" fieldid="5052" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_rece_amt" fieldid="3614" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_payab_amt" fieldid="3615" decimalPlaces="6"/>
+        <field fieldname="exgp_realize_pandl" fieldid="3334" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_rate" fieldid="3616" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_base_amt" fieldid="3617" decimalPlaces="6"/>
+        <field fieldname="exch_group_pre_entry_intrst_amt" fieldid="3618" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="funct_pdseca_QueryExgpGroupAsset" typename="LD_REQUEST" functionid="pdsecuT.2.45" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+        <field fieldname="exch_group_no_rights_str" fieldid="1964"/>
+    </function>
+    <function functionname="funct_pdseca_QueryExgpGroupAsset" typename="LD_ANSWER" functionid="pdsecuT.2.45" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="begin_NAV" fieldid="2328" decimalPlaces="6"/>
+            <field fieldname="nav_asset" fieldid="2035" decimalPlaces="6"/>
+            <field fieldname="cash_asset" fieldid="2752" decimalPlaces="6"/>
+            <field fieldname="stock_asset" fieldid="1710" decimalPlaces="6"/>
+            <field fieldname="fund_asset" fieldid="1853" decimalPlaces="6"/>
+            <field fieldname="bond_asset" fieldid="2897" decimalPlaces="6"/>
+            <field fieldname="repo_asset" fieldid="1821" decimalPlaces="6"/>
+            <field fieldname="other_asset" fieldid="2351" decimalPlaces="6"/>
+            <field fieldname="hk_thrgh_stock_asset" fieldid="3560" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdseca_PatchAsacCapital" typename="LD_REQUEST" functionid="pdsecuT.2.51" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="is_change_exch_group_capital" fieldid="3611"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdseca_PatchAsacCapital" typename="LD_ANSWER" functionid="pdsecuT.2.51" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="exgp_cash_id" fieldid="3387"/>
+        <field fieldname="exgp_begin_amt" fieldid="3565" decimalPlaces="6"/>
+        <field fieldname="exgp_curr_amt" fieldid="3567" decimalPlaces="6"/>
+        <field fieldname="exgp_frozen_amt" fieldid="3412" decimalPlaces="6"/>
+        <field fieldname="exgp_unfroz_amt" fieldid="3413" decimalPlaces="6"/>
+        <field fieldname="exgp_pre_settle_amt" fieldid="3873" decimalPlaces="6"/>
+        <field fieldname="exgp_shsz_avail_change_amt" fieldid="3926" decimalPlaces="6"/>
+        <field fieldname="exgp_hk_avail_change_amt" fieldid="3927" decimalPlaces="6"/>
+        <field fieldname="exgp_amt_check_diff" fieldid="3965" decimalPlaces="6"/>
+        <field fieldname="exgp_T_hk_buy_total_amt" fieldid="5065" decimalPlaces="6"/>
+        <field fieldname="exgp_T_hk_sell_total_amt" fieldid="5066" decimalPlaces="6"/>
+        <field fieldname="exgp_T1_hk_buy_total_amt" fieldid="5051" decimalPlaces="6"/>
+        <field fieldname="exgp_T1_hk_sell_total_amt" fieldid="5052" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_rece_amt" fieldid="3614" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_payab_amt" fieldid="3615" decimalPlaces="6"/>
+        <field fieldname="exgp_realize_pandl" fieldid="3334" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_rate" fieldid="3616" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_base_amt" fieldid="3617" decimalPlaces="6"/>
+        <field fieldname="exch_group_pre_entry_intrst_amt" fieldid="3618" decimalPlaces="6"/>
+        <field fieldname="exch_group_update_times" fieldid="3636"/>
+        <field fieldname="asac_cash_id" fieldid="3388"/>
+        <field fieldname="asac_begin_amt" fieldid="3566" decimalPlaces="6"/>
+        <field fieldname="asac_curr_amt" fieldid="3568" decimalPlaces="6"/>
+        <field fieldname="asac_frozen_amt" fieldid="3438" decimalPlaces="6"/>
+        <field fieldname="asac_unfroz_amt" fieldid="3439" decimalPlaces="6"/>
+        <field fieldname="asac_pre_settle_amt" fieldid="3872" decimalPlaces="6"/>
+        <field fieldname="asac_shsz_avail_change_amt" fieldid="3928" decimalPlaces="6"/>
+        <field fieldname="asac_hk_avail_change_amt" fieldid="3929" decimalPlaces="6"/>
+        <field fieldname="asac_amt_check_diff" fieldid="3966" decimalPlaces="6"/>
+        <field fieldname="asac_T_hk_buy_total_amt" fieldid="5067" decimalPlaces="6"/>
+        <field fieldname="asac_T_hk_sell_total_amt" fieldid="5068" decimalPlaces="6"/>
+        <field fieldname="asac_T1_hk_buy_total_amt" fieldid="5057" decimalPlaces="6"/>
+        <field fieldname="asac_T1_hk_sell_total_amt" fieldid="5058" decimalPlaces="6"/>
+        <field fieldname="asac_total_rece_amt" fieldid="3619" decimalPlaces="6"/>
+        <field fieldname="asac_total_payab_amt" fieldid="3620" decimalPlaces="6"/>
+        <field fieldname="asac_realize_pandl" fieldid="3339" decimalPlaces="6"/>
+        <field fieldname="asac_intrst_rate" fieldid="3621" decimalPlaces="6"/>
+        <field fieldname="asac_intrst_base_amt" fieldid="3622" decimalPlaces="6"/>
+        <field fieldname="asac_pre_entry_intrst_amt" fieldid="3623" decimalPlaces="6"/>
+        <field fieldname="asac_update_times" fieldid="3637"/>
+    </function>
+    <function functionname="funct_pdseca_FrozenAsacCapital" typename="LD_REQUEST" functionid="pdsecuT.2.52" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="expire_date" fieldid="1425"/>
+        <field fieldname="is_change_exch_group_capital" fieldid="3611"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdseca_FrozenAsacCapital" typename="LD_ANSWER" functionid="pdsecuT.2.52" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="asac_cash_id" fieldid="3388"/>
+        <field fieldname="asac_begin_amt" fieldid="3566" decimalPlaces="6"/>
+        <field fieldname="asac_curr_amt" fieldid="3568" decimalPlaces="6"/>
+        <field fieldname="asac_frozen_amt" fieldid="3438" decimalPlaces="6"/>
+        <field fieldname="asac_unfroz_amt" fieldid="3439" decimalPlaces="6"/>
+        <field fieldname="asac_pre_settle_amt" fieldid="3872" decimalPlaces="6"/>
+        <field fieldname="asac_shsz_avail_change_amt" fieldid="3928" decimalPlaces="6"/>
+        <field fieldname="asac_hk_avail_change_amt" fieldid="3929" decimalPlaces="6"/>
+        <field fieldname="asac_amt_check_diff" fieldid="3966" decimalPlaces="6"/>
+        <field fieldname="asac_T_hk_buy_total_amt" fieldid="5067" decimalPlaces="6"/>
+        <field fieldname="asac_T_hk_sell_total_amt" fieldid="5068" decimalPlaces="6"/>
+        <field fieldname="asac_T1_hk_buy_total_amt" fieldid="5057" decimalPlaces="6"/>
+        <field fieldname="asac_T1_hk_sell_total_amt" fieldid="5058" decimalPlaces="6"/>
+        <field fieldname="asac_total_rece_amt" fieldid="3619" decimalPlaces="6"/>
+        <field fieldname="asac_total_payab_amt" fieldid="3620" decimalPlaces="6"/>
+        <field fieldname="asac_realize_pandl" fieldid="3339" decimalPlaces="6"/>
+        <field fieldname="asac_intrst_rate" fieldid="3621" decimalPlaces="6"/>
+        <field fieldname="asac_intrst_base_amt" fieldid="3622" decimalPlaces="6"/>
+        <field fieldname="asac_pre_entry_intrst_amt" fieldid="3623" decimalPlaces="6"/>
+        <field fieldname="asac_update_times" fieldid="3637"/>
+        <field fieldname="exgp_cash_id" fieldid="3387"/>
+        <field fieldname="exgp_begin_amt" fieldid="3565" decimalPlaces="6"/>
+        <field fieldname="exgp_curr_amt" fieldid="3567" decimalPlaces="6"/>
+        <field fieldname="exgp_frozen_amt" fieldid="3412" decimalPlaces="6"/>
+        <field fieldname="exgp_unfroz_amt" fieldid="3413" decimalPlaces="6"/>
+        <field fieldname="exgp_pre_settle_amt" fieldid="3873" decimalPlaces="6"/>
+        <field fieldname="exgp_shsz_avail_change_amt" fieldid="3926" decimalPlaces="6"/>
+        <field fieldname="exgp_hk_avail_change_amt" fieldid="3927" decimalPlaces="6"/>
+        <field fieldname="exgp_amt_check_diff" fieldid="3965" decimalPlaces="6"/>
+        <field fieldname="exgp_T_hk_buy_total_amt" fieldid="5065" decimalPlaces="6"/>
+        <field fieldname="exgp_T_hk_sell_total_amt" fieldid="5066" decimalPlaces="6"/>
+        <field fieldname="exgp_T1_hk_buy_total_amt" fieldid="5051" decimalPlaces="6"/>
+        <field fieldname="exgp_T1_hk_sell_total_amt" fieldid="5052" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_rece_amt" fieldid="3614" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_payab_amt" fieldid="3615" decimalPlaces="6"/>
+        <field fieldname="exgp_realize_pandl" fieldid="3334" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_rate" fieldid="3616" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_base_amt" fieldid="3617" decimalPlaces="6"/>
+        <field fieldname="exch_group_pre_entry_intrst_amt" fieldid="3618" decimalPlaces="6"/>
+        <field fieldname="exch_group_update_times" fieldid="3636"/>
+    </function>
+    <function functionname="funct_pdseca_UndoFrozenAsacCapital" typename="LD_REQUEST" functionid="pdsecuT.2.53" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="frozen_type" fieldid="1466"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="is_change_exch_group_capital" fieldid="3611"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+    </function>
+    <function functionname="funct_pdseca_UndoFrozenAsacCapital" typename="LD_ANSWER" functionid="pdsecuT.2.53" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="asac_cash_id" fieldid="3388"/>
+        <field fieldname="asac_begin_amt" fieldid="3566" decimalPlaces="6"/>
+        <field fieldname="asac_curr_amt" fieldid="3568" decimalPlaces="6"/>
+        <field fieldname="asac_frozen_amt" fieldid="3438" decimalPlaces="6"/>
+        <field fieldname="asac_unfroz_amt" fieldid="3439" decimalPlaces="6"/>
+        <field fieldname="asac_pre_settle_amt" fieldid="3872" decimalPlaces="6"/>
+        <field fieldname="asac_shsz_avail_change_amt" fieldid="3928" decimalPlaces="6"/>
+        <field fieldname="asac_hk_avail_change_amt" fieldid="3929" decimalPlaces="6"/>
+        <field fieldname="asac_amt_check_diff" fieldid="3966" decimalPlaces="6"/>
+        <field fieldname="asac_T_hk_buy_total_amt" fieldid="5067" decimalPlaces="6"/>
+        <field fieldname="asac_T_hk_sell_total_amt" fieldid="5068" decimalPlaces="6"/>
+        <field fieldname="asac_T1_hk_buy_total_amt" fieldid="5057" decimalPlaces="6"/>
+        <field fieldname="asac_T1_hk_sell_total_amt" fieldid="5058" decimalPlaces="6"/>
+        <field fieldname="asac_total_rece_amt" fieldid="3619" decimalPlaces="6"/>
+        <field fieldname="asac_total_payab_amt" fieldid="3620" decimalPlaces="6"/>
+        <field fieldname="asac_realize_pandl" fieldid="3339" decimalPlaces="6"/>
+        <field fieldname="asac_intrst_rate" fieldid="3621" decimalPlaces="6"/>
+        <field fieldname="asac_intrst_base_amt" fieldid="3622" decimalPlaces="6"/>
+        <field fieldname="asac_pre_entry_intrst_amt" fieldid="3623" decimalPlaces="6"/>
+        <field fieldname="asac_update_times" fieldid="3637"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="exgp_cash_id" fieldid="3387"/>
+        <field fieldname="exgp_begin_amt" fieldid="3565" decimalPlaces="6"/>
+        <field fieldname="exgp_curr_amt" fieldid="3567" decimalPlaces="6"/>
+        <field fieldname="exgp_frozen_amt" fieldid="3412" decimalPlaces="6"/>
+        <field fieldname="exgp_unfroz_amt" fieldid="3413" decimalPlaces="6"/>
+        <field fieldname="exgp_pre_settle_amt" fieldid="3873" decimalPlaces="6"/>
+        <field fieldname="exgp_shsz_avail_change_amt" fieldid="3926" decimalPlaces="6"/>
+        <field fieldname="exgp_hk_avail_change_amt" fieldid="3927" decimalPlaces="6"/>
+        <field fieldname="exgp_amt_check_diff" fieldid="3965" decimalPlaces="6"/>
+        <field fieldname="exgp_T_hk_buy_total_amt" fieldid="5065" decimalPlaces="6"/>
+        <field fieldname="exgp_T_hk_sell_total_amt" fieldid="5066" decimalPlaces="6"/>
+        <field fieldname="exgp_T1_hk_buy_total_amt" fieldid="5051" decimalPlaces="6"/>
+        <field fieldname="exgp_T1_hk_sell_total_amt" fieldid="5052" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_rece_amt" fieldid="3614" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_payab_amt" fieldid="3615" decimalPlaces="6"/>
+        <field fieldname="exgp_realize_pandl" fieldid="3334" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_rate" fieldid="3616" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_base_amt" fieldid="3617" decimalPlaces="6"/>
+        <field fieldname="exch_group_pre_entry_intrst_amt" fieldid="3618" decimalPlaces="6"/>
+        <field fieldname="exch_group_update_times" fieldid="3636"/>
+    </function>
+    <function functionname="funct_pdseca_UnFrozenAsacCapital" typename="LD_REQUEST" functionid="pdsecuT.2.54" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="expire_date" fieldid="1425"/>
+        <field fieldname="is_change_exch_group_capital" fieldid="3611"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdseca_UnFrozenAsacCapital" typename="LD_ANSWER" functionid="pdsecuT.2.54" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="asac_cash_id" fieldid="3388"/>
+        <field fieldname="asac_begin_amt" fieldid="3566" decimalPlaces="6"/>
+        <field fieldname="asac_curr_amt" fieldid="3568" decimalPlaces="6"/>
+        <field fieldname="asac_frozen_amt" fieldid="3438" decimalPlaces="6"/>
+        <field fieldname="asac_unfroz_amt" fieldid="3439" decimalPlaces="6"/>
+        <field fieldname="asac_pre_settle_amt" fieldid="3872" decimalPlaces="6"/>
+        <field fieldname="asac_shsz_avail_change_amt" fieldid="3928" decimalPlaces="6"/>
+        <field fieldname="asac_hk_avail_change_amt" fieldid="3929" decimalPlaces="6"/>
+        <field fieldname="asac_amt_check_diff" fieldid="3966" decimalPlaces="6"/>
+        <field fieldname="asac_T_hk_buy_total_amt" fieldid="5067" decimalPlaces="6"/>
+        <field fieldname="asac_T_hk_sell_total_amt" fieldid="5068" decimalPlaces="6"/>
+        <field fieldname="asac_T1_hk_buy_total_amt" fieldid="5057" decimalPlaces="6"/>
+        <field fieldname="asac_T1_hk_sell_total_amt" fieldid="5058" decimalPlaces="6"/>
+        <field fieldname="asac_total_rece_amt" fieldid="3619" decimalPlaces="6"/>
+        <field fieldname="asac_total_payab_amt" fieldid="3620" decimalPlaces="6"/>
+        <field fieldname="asac_realize_pandl" fieldid="3339" decimalPlaces="6"/>
+        <field fieldname="asac_intrst_rate" fieldid="3621" decimalPlaces="6"/>
+        <field fieldname="asac_intrst_base_amt" fieldid="3622" decimalPlaces="6"/>
+        <field fieldname="asac_pre_entry_intrst_amt" fieldid="3623" decimalPlaces="6"/>
+        <field fieldname="asac_update_times" fieldid="3637"/>
+        <field fieldname="exgp_cash_id" fieldid="3387"/>
+        <field fieldname="exgp_begin_amt" fieldid="3565" decimalPlaces="6"/>
+        <field fieldname="exgp_curr_amt" fieldid="3567" decimalPlaces="6"/>
+        <field fieldname="exgp_frozen_amt" fieldid="3412" decimalPlaces="6"/>
+        <field fieldname="exgp_unfroz_amt" fieldid="3413" decimalPlaces="6"/>
+        <field fieldname="exgp_pre_settle_amt" fieldid="3873" decimalPlaces="6"/>
+        <field fieldname="exgp_shsz_avail_change_amt" fieldid="3926" decimalPlaces="6"/>
+        <field fieldname="exgp_hk_avail_change_amt" fieldid="3927" decimalPlaces="6"/>
+        <field fieldname="exgp_amt_check_diff" fieldid="3965" decimalPlaces="6"/>
+        <field fieldname="exgp_T_hk_buy_total_amt" fieldid="5065" decimalPlaces="6"/>
+        <field fieldname="exgp_T_hk_sell_total_amt" fieldid="5066" decimalPlaces="6"/>
+        <field fieldname="exgp_T1_hk_buy_total_amt" fieldid="5051" decimalPlaces="6"/>
+        <field fieldname="exgp_T1_hk_sell_total_amt" fieldid="5052" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_rece_amt" fieldid="3614" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_payab_amt" fieldid="3615" decimalPlaces="6"/>
+        <field fieldname="exgp_realize_pandl" fieldid="3334" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_rate" fieldid="3616" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_base_amt" fieldid="3617" decimalPlaces="6"/>
+        <field fieldname="exch_group_pre_entry_intrst_amt" fieldid="3618" decimalPlaces="6"/>
+        <field fieldname="exch_group_update_times" fieldid="3636"/>
+    </function>
+    <function functionname="funct_pdseca_UndoUnFrozenAsacCapital" typename="LD_REQUEST" functionid="pdsecuT.2.55" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="frozen_type" fieldid="1466"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="is_change_exch_group_capital" fieldid="3611"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+    </function>
+    <function functionname="funct_pdseca_UndoUnFrozenAsacCapital" typename="LD_ANSWER" functionid="pdsecuT.2.55" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="asac_cash_id" fieldid="3388"/>
+        <field fieldname="asac_begin_amt" fieldid="3566" decimalPlaces="6"/>
+        <field fieldname="asac_curr_amt" fieldid="3568" decimalPlaces="6"/>
+        <field fieldname="asac_frozen_amt" fieldid="3438" decimalPlaces="6"/>
+        <field fieldname="asac_unfroz_amt" fieldid="3439" decimalPlaces="6"/>
+        <field fieldname="asac_pre_settle_amt" fieldid="3872" decimalPlaces="6"/>
+        <field fieldname="asac_shsz_avail_change_amt" fieldid="3928" decimalPlaces="6"/>
+        <field fieldname="asac_hk_avail_change_amt" fieldid="3929" decimalPlaces="6"/>
+        <field fieldname="asac_amt_check_diff" fieldid="3966" decimalPlaces="6"/>
+        <field fieldname="asac_T_hk_buy_total_amt" fieldid="5067" decimalPlaces="6"/>
+        <field fieldname="asac_T_hk_sell_total_amt" fieldid="5068" decimalPlaces="6"/>
+        <field fieldname="asac_T1_hk_buy_total_amt" fieldid="5057" decimalPlaces="6"/>
+        <field fieldname="asac_T1_hk_sell_total_amt" fieldid="5058" decimalPlaces="6"/>
+        <field fieldname="asac_total_rece_amt" fieldid="3619" decimalPlaces="6"/>
+        <field fieldname="asac_total_payab_amt" fieldid="3620" decimalPlaces="6"/>
+        <field fieldname="asac_realize_pandl" fieldid="3339" decimalPlaces="6"/>
+        <field fieldname="asac_intrst_rate" fieldid="3621" decimalPlaces="6"/>
+        <field fieldname="asac_intrst_base_amt" fieldid="3622" decimalPlaces="6"/>
+        <field fieldname="asac_pre_entry_intrst_amt" fieldid="3623" decimalPlaces="6"/>
+        <field fieldname="asac_update_times" fieldid="3637"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="exgp_cash_id" fieldid="3387"/>
+        <field fieldname="exgp_begin_amt" fieldid="3565" decimalPlaces="6"/>
+        <field fieldname="exgp_curr_amt" fieldid="3567" decimalPlaces="6"/>
+        <field fieldname="exgp_frozen_amt" fieldid="3412" decimalPlaces="6"/>
+        <field fieldname="exgp_unfroz_amt" fieldid="3413" decimalPlaces="6"/>
+        <field fieldname="exgp_pre_settle_amt" fieldid="3873" decimalPlaces="6"/>
+        <field fieldname="exgp_shsz_avail_change_amt" fieldid="3926" decimalPlaces="6"/>
+        <field fieldname="exgp_hk_avail_change_amt" fieldid="3927" decimalPlaces="6"/>
+        <field fieldname="exgp_amt_check_diff" fieldid="3965" decimalPlaces="6"/>
+        <field fieldname="exgp_T_hk_buy_total_amt" fieldid="5065" decimalPlaces="6"/>
+        <field fieldname="exgp_T_hk_sell_total_amt" fieldid="5066" decimalPlaces="6"/>
+        <field fieldname="exgp_T1_hk_buy_total_amt" fieldid="5051" decimalPlaces="6"/>
+        <field fieldname="exgp_T1_hk_sell_total_amt" fieldid="5052" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_rece_amt" fieldid="3614" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_payab_amt" fieldid="3615" decimalPlaces="6"/>
+        <field fieldname="exgp_realize_pandl" fieldid="3334" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_rate" fieldid="3616" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_base_amt" fieldid="3617" decimalPlaces="6"/>
+        <field fieldname="exch_group_pre_entry_intrst_amt" fieldid="3618" decimalPlaces="6"/>
+        <field fieldname="exch_group_update_times" fieldid="3636"/>
+    </function>
+    <function functionname="funct_pdseca_ModiAsacCapital" typename="LD_REQUEST" functionid="pdsecuT.2.56" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="total_rece_amt" fieldid="2158" decimalPlaces="6"/>
+        <field fieldname="total_payab_amt" fieldid="2157" decimalPlaces="6"/>
+        <field fieldname="realize_pandl" fieldid="2536" decimalPlaces="6"/>
+        <field fieldname="intrst_rate" fieldid="2162" decimalPlaces="12"/>
+        <field fieldname="intrst_base_amt" fieldid="2170" decimalPlaces="6"/>
+        <field fieldname="pre_entry_intrst_amt" fieldid="1372" decimalPlaces="6"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdseca_ModiAsacCapital" typename="LD_ANSWER" functionid="pdsecuT.2.56" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdseca_QueryAsacCapital" typename="LD_REQUEST" functionid="pdsecuT.2.57" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+        <field fieldname="pd_no_rights_str" fieldid="1231"/>
+    </function>
+    <function functionname="funct_pdseca_QueryAsacCapital" typename="LD_ANSWER" functionid="pdsecuT.2.57" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="create_date" fieldid="1354"/>
+            <field fieldname="create_time" fieldid="1355"/>
+            <field fieldname="update_date" fieldid="1667"/>
+            <field fieldname="update_time" fieldid="1669"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="begin_amt" fieldid="2327" decimalPlaces="6"/>
+            <field fieldname="curr_amt" fieldid="1396" decimalPlaces="6"/>
+            <field fieldname="frozen_amt" fieldid="1467" decimalPlaces="6"/>
+            <field fieldname="unfroz_amt" fieldid="1995" decimalPlaces="6"/>
+            <field fieldname="pre_settle_amt" fieldid="3870" decimalPlaces="6"/>
+            <field fieldname="shsz_avail_change_amt" fieldid="3924" decimalPlaces="6"/>
+            <field fieldname="hk_avail_change_amt" fieldid="3925" decimalPlaces="6"/>
+            <field fieldname="amt_check_diff" fieldid="3961" decimalPlaces="6"/>
+            <field fieldname="T_hk_buy_total_amt" fieldid="5063" decimalPlaces="6"/>
+            <field fieldname="T_hk_sell_total_amt" fieldid="5064" decimalPlaces="6"/>
+            <field fieldname="T1_hk_buy_total_amt" fieldid="5045" decimalPlaces="6"/>
+            <field fieldname="T1_hk_sell_total_amt" fieldid="5046" decimalPlaces="6"/>
+            <field fieldname="total_rece_amt" fieldid="2158" decimalPlaces="6"/>
+            <field fieldname="total_payab_amt" fieldid="2157" decimalPlaces="6"/>
+            <field fieldname="total_change_amt" fieldid="3943" decimalPlaces="6"/>
+            <field fieldname="realize_pandl" fieldid="2536" decimalPlaces="6"/>
+            <field fieldname="intrst_rate" fieldid="2162" decimalPlaces="12"/>
+            <field fieldname="intrst_base_amt" fieldid="2170" decimalPlaces="6"/>
+            <field fieldname="pre_entry_intrst_amt" fieldid="1372" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdseca_QueryAsacCapital_His" typename="LD_REQUEST" functionid="pdsecuT.2.58" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+        <field fieldname="pd_no_rights_str" fieldid="1231"/>
+    </function>
+    <function functionname="funct_pdseca_QueryAsacCapital_His" typename="LD_ANSWER" functionid="pdsecuT.2.58" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="create_date" fieldid="1354"/>
+            <field fieldname="create_time" fieldid="1355"/>
+            <field fieldname="update_date" fieldid="1667"/>
+            <field fieldname="update_time" fieldid="1669"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="begin_amt" fieldid="2327" decimalPlaces="6"/>
+            <field fieldname="curr_amt" fieldid="1396" decimalPlaces="6"/>
+            <field fieldname="frozen_amt" fieldid="1467" decimalPlaces="6"/>
+            <field fieldname="unfroz_amt" fieldid="1995" decimalPlaces="6"/>
+            <field fieldname="pre_settle_amt" fieldid="3870" decimalPlaces="6"/>
+            <field fieldname="shsz_avail_change_amt" fieldid="3924" decimalPlaces="6"/>
+            <field fieldname="hk_avail_change_amt" fieldid="3925" decimalPlaces="6"/>
+            <field fieldname="amt_check_diff" fieldid="3961" decimalPlaces="6"/>
+            <field fieldname="T_hk_buy_total_amt" fieldid="5063" decimalPlaces="6"/>
+            <field fieldname="T_hk_sell_total_amt" fieldid="5064" decimalPlaces="6"/>
+            <field fieldname="T1_hk_buy_total_amt" fieldid="5045" decimalPlaces="6"/>
+            <field fieldname="T1_hk_sell_total_amt" fieldid="5046" decimalPlaces="6"/>
+            <field fieldname="total_rece_amt" fieldid="2158" decimalPlaces="6"/>
+            <field fieldname="total_payab_amt" fieldid="2157" decimalPlaces="6"/>
+            <field fieldname="total_change_amt" fieldid="3943" decimalPlaces="6"/>
+            <field fieldname="realize_pandl" fieldid="2536" decimalPlaces="6"/>
+            <field fieldname="intrst_rate" fieldid="2162" decimalPlaces="12"/>
+            <field fieldname="intrst_base_amt" fieldid="2170" decimalPlaces="6"/>
+            <field fieldname="pre_entry_intrst_amt" fieldid="1372" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdseca_QueryAsacCapital_Jour" typename="LD_REQUEST" functionid="pdsecuT.2.59" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+        <field fieldname="pd_no_rights_str" fieldid="1231"/>
+    </function>
+    <function functionname="funct_pdseca_QueryAsacCapital_Jour" typename="LD_ANSWER" functionid="pdsecuT.2.59" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="create_date" fieldid="1354"/>
+            <field fieldname="create_time" fieldid="1355"/>
+            <field fieldname="update_date" fieldid="1667"/>
+            <field fieldname="update_time" fieldid="1669"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="busi_flag" fieldid="2785"/>
+            <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+            <field fieldname="occur_end_amt" fieldid="1154" decimalPlaces="6"/>
+            <field fieldname="jour_occur_field" fieldid="2184"/>
+            <field fieldname="jour_after_occur_info" fieldid="2185"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdseca_QueryAsacCapital_JourHis" typename="LD_REQUEST" functionid="pdsecuT.2.60" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+        <field fieldname="pd_no_rights_str" fieldid="1231"/>
+    </function>
+    <function functionname="funct_pdseca_QueryAsacCapital_JourHis" typename="LD_ANSWER" functionid="pdsecuT.2.60" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="create_date" fieldid="1354"/>
+            <field fieldname="create_time" fieldid="1355"/>
+            <field fieldname="update_date" fieldid="1667"/>
+            <field fieldname="update_time" fieldid="1669"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="busi_flag" fieldid="2785"/>
+            <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+            <field fieldname="occur_end_amt" fieldid="1154" decimalPlaces="6"/>
+            <field fieldname="jour_occur_field" fieldid="2184"/>
+            <field fieldname="jour_after_occur_info" fieldid="2185"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdseca_QueryAsacCapitalFrozenJour" typename="LD_REQUEST" functionid="pdsecuT.2.61" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="frozen_type" fieldid="1466"/>
+        <field fieldname="jour_status" fieldid="2186"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+        <field fieldname="pd_no_rights_str" fieldid="1231"/>
+    </function>
+    <function functionname="funct_pdseca_QueryAsacCapitalFrozenJour" typename="LD_ANSWER" functionid="pdsecuT.2.61" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="create_date" fieldid="1354"/>
+            <field fieldname="create_time" fieldid="1355"/>
+            <field fieldname="update_date" fieldid="1667"/>
+            <field fieldname="update_time" fieldid="1669"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="frozen_type" fieldid="1466"/>
+            <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+            <field fieldname="expire_date" fieldid="1425"/>
+            <field fieldname="jour_status" fieldid="2186"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdseca_QueryAsacCapitalFrozenJour_His" typename="LD_REQUEST" functionid="pdsecuT.2.62" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="frozen_type" fieldid="1466"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+        <field fieldname="pd_no_rights_str" fieldid="1231"/>
+    </function>
+    <function functionname="funct_pdseca_QueryAsacCapitalFrozenJour_His" typename="LD_ANSWER" functionid="pdsecuT.2.62" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="create_date" fieldid="1354"/>
+            <field fieldname="create_time" fieldid="1355"/>
+            <field fieldname="update_date" fieldid="1667"/>
+            <field fieldname="update_time" fieldid="1669"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="frozen_type" fieldid="1466"/>
+            <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+            <field fieldname="expire_date" fieldid="1425"/>
+            <field fieldname="jour_status" fieldid="2186"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdseca_GetAsacCapitalFrozenJour" typename="LD_REQUEST" functionid="pdsecuT.2.63" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+    </function>
+    <function functionname="funct_pdseca_GetAsacCapitalFrozenJour" typename="LD_ANSWER" functionid="pdsecuT.2.63" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="oper_func_code" fieldid="1186"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="frozen_type" fieldid="1466"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="expire_date" fieldid="1425"/>
+        <field fieldname="jour_status" fieldid="2186"/>
+        <field fieldname="is_change_exch_group_capital" fieldid="3611"/>
+    </function>
+    <function functionname="funct_pdseca_UpdateAsacCapitalRecePayab" typename="LD_REQUEST" functionid="pdsecuT.2.64" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="total_rece_amt" fieldid="2158" decimalPlaces="6"/>
+        <field fieldname="total_payab_amt" fieldid="2157" decimalPlaces="6"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdseca_UpdateAsacCapitalRecePayab" typename="LD_ANSWER" functionid="pdsecuT.2.64" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="asac_cash_id" fieldid="3388"/>
+        <field fieldname="asac_begin_amt" fieldid="3566" decimalPlaces="6"/>
+        <field fieldname="asac_curr_amt" fieldid="3568" decimalPlaces="6"/>
+        <field fieldname="asac_frozen_amt" fieldid="3438" decimalPlaces="6"/>
+        <field fieldname="asac_unfroz_amt" fieldid="3439" decimalPlaces="6"/>
+        <field fieldname="asac_pre_settle_amt" fieldid="3872" decimalPlaces="6"/>
+        <field fieldname="asac_shsz_avail_change_amt" fieldid="3928" decimalPlaces="6"/>
+        <field fieldname="asac_hk_avail_change_amt" fieldid="3929" decimalPlaces="6"/>
+        <field fieldname="asac_amt_check_diff" fieldid="3966" decimalPlaces="6"/>
+        <field fieldname="asac_T_hk_buy_total_amt" fieldid="5067" decimalPlaces="6"/>
+        <field fieldname="asac_T_hk_sell_total_amt" fieldid="5068" decimalPlaces="6"/>
+        <field fieldname="asac_T1_hk_buy_total_amt" fieldid="5057" decimalPlaces="6"/>
+        <field fieldname="asac_T1_hk_sell_total_amt" fieldid="5058" decimalPlaces="6"/>
+        <field fieldname="asac_total_rece_amt" fieldid="3619" decimalPlaces="6"/>
+        <field fieldname="asac_total_payab_amt" fieldid="3620" decimalPlaces="6"/>
+        <field fieldname="asac_realize_pandl" fieldid="3339" decimalPlaces="6"/>
+        <field fieldname="asac_intrst_rate" fieldid="3621" decimalPlaces="6"/>
+        <field fieldname="asac_intrst_base_amt" fieldid="3622" decimalPlaces="6"/>
+        <field fieldname="asac_pre_entry_intrst_amt" fieldid="3623" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="funct_pdseca_AsacCapitalChange" typename="LD_REQUEST" functionid="pdsecuT.2.65" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="total_rece_amt" fieldid="2158" decimalPlaces="6"/>
+        <field fieldname="total_payab_amt" fieldid="2157" decimalPlaces="6"/>
+        <field fieldname="is_change_exch_group_capital" fieldid="3611"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdseca_AsacCapitalChange" typename="LD_ANSWER" functionid="pdsecuT.2.65" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="exgp_cash_id" fieldid="3387"/>
+        <field fieldname="exgp_begin_amt" fieldid="3565" decimalPlaces="6"/>
+        <field fieldname="exgp_curr_amt" fieldid="3567" decimalPlaces="6"/>
+        <field fieldname="exgp_frozen_amt" fieldid="3412" decimalPlaces="6"/>
+        <field fieldname="exgp_unfroz_amt" fieldid="3413" decimalPlaces="6"/>
+        <field fieldname="exgp_pre_settle_amt" fieldid="3873" decimalPlaces="6"/>
+        <field fieldname="exgp_shsz_avail_change_amt" fieldid="3926" decimalPlaces="6"/>
+        <field fieldname="exgp_hk_avail_change_amt" fieldid="3927" decimalPlaces="6"/>
+        <field fieldname="exgp_amt_check_diff" fieldid="3965" decimalPlaces="6"/>
+        <field fieldname="exgp_T_hk_buy_total_amt" fieldid="5065" decimalPlaces="6"/>
+        <field fieldname="exgp_T_hk_sell_total_amt" fieldid="5066" decimalPlaces="6"/>
+        <field fieldname="exgp_T1_hk_buy_total_amt" fieldid="5051" decimalPlaces="6"/>
+        <field fieldname="exgp_T1_hk_sell_total_amt" fieldid="5052" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_rece_amt" fieldid="3614" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_payab_amt" fieldid="3615" decimalPlaces="6"/>
+        <field fieldname="exgp_realize_pandl" fieldid="3334" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_rate" fieldid="3616" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_base_amt" fieldid="3617" decimalPlaces="6"/>
+        <field fieldname="exch_group_pre_entry_intrst_amt" fieldid="3618" decimalPlaces="6"/>
+        <field fieldname="exch_group_update_times" fieldid="3636"/>
+        <field fieldname="total_rece_amt_diff" fieldid="3957" decimalPlaces="6"/>
+        <field fieldname="total_payab_amt_diff" fieldid="3958" decimalPlaces="6"/>
+        <field fieldname="asac_cash_id" fieldid="3388"/>
+        <field fieldname="asac_begin_amt" fieldid="3566" decimalPlaces="6"/>
+        <field fieldname="asac_curr_amt" fieldid="3568" decimalPlaces="6"/>
+        <field fieldname="asac_frozen_amt" fieldid="3438" decimalPlaces="6"/>
+        <field fieldname="asac_unfroz_amt" fieldid="3439" decimalPlaces="6"/>
+        <field fieldname="asac_pre_settle_amt" fieldid="3872" decimalPlaces="6"/>
+        <field fieldname="asac_shsz_avail_change_amt" fieldid="3928" decimalPlaces="6"/>
+        <field fieldname="asac_hk_avail_change_amt" fieldid="3929" decimalPlaces="6"/>
+        <field fieldname="asac_amt_check_diff" fieldid="3966" decimalPlaces="6"/>
+        <field fieldname="asac_T_hk_buy_total_amt" fieldid="5067" decimalPlaces="6"/>
+        <field fieldname="asac_T_hk_sell_total_amt" fieldid="5068" decimalPlaces="6"/>
+        <field fieldname="asac_T1_hk_buy_total_amt" fieldid="5057" decimalPlaces="6"/>
+        <field fieldname="asac_T1_hk_sell_total_amt" fieldid="5058" decimalPlaces="6"/>
+        <field fieldname="asac_total_rece_amt" fieldid="3619" decimalPlaces="6"/>
+        <field fieldname="asac_total_payab_amt" fieldid="3620" decimalPlaces="6"/>
+        <field fieldname="asac_realize_pandl" fieldid="3339" decimalPlaces="6"/>
+        <field fieldname="asac_intrst_rate" fieldid="3621" decimalPlaces="6"/>
+        <field fieldname="asac_intrst_base_amt" fieldid="3622" decimalPlaces="6"/>
+        <field fieldname="asac_pre_entry_intrst_amt" fieldid="3623" decimalPlaces="6"/>
+        <field fieldname="asac_update_times" fieldid="3637"/>
+    </function>
+    <function functionname="funct_pdseca_AddBankTransferRecord" typename="LD_REQUEST" functionid="pdsecuT.2.66" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="trans_date" fieldid="3038"/>
+        <field fieldname="trans_time" fieldid="3039"/>
+        <field fieldname="bank_name" fieldid="2809"/>
+        <field fieldname="bank_code" fieldid="2807"/>
+        <field fieldname="busi_flag" fieldid="2785"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="trans_status" fieldid="3040"/>
+        <field fieldname="bank_jour_no" fieldid="2813"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funct_pdseca_AddBankTransferRecord" typename="LD_ANSWER" functionid="pdsecuT.2.66" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdseca_DealBankTransferCapit" typename="LD_REQUEST" functionid="pdsecuT.2.67" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="default_exch_group_no" fieldid="3348"/>
+        <field fieldname="exch_group_no_str" fieldid="1963"/>
+        <field fieldname="weight_value_str" fieldid="5107"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="busi_flag" fieldid="2785"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+    </function>
+    <function functionname="funct_pdseca_DealBankTransferCapit" typename="LD_ANSWER" functionid="pdsecuT.2.67" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="asac_cash_id" fieldid="3388"/>
+        <field fieldname="asac_begin_amt" fieldid="3566" decimalPlaces="6"/>
+        <field fieldname="asac_curr_amt" fieldid="3568" decimalPlaces="6"/>
+        <field fieldname="asac_frozen_amt" fieldid="3438" decimalPlaces="6"/>
+        <field fieldname="asac_unfroz_amt" fieldid="3439" decimalPlaces="6"/>
+        <field fieldname="asac_pre_settle_amt" fieldid="3872" decimalPlaces="6"/>
+        <field fieldname="asac_shsz_avail_change_amt" fieldid="3928" decimalPlaces="6"/>
+        <field fieldname="asac_hk_avail_change_amt" fieldid="3929" decimalPlaces="6"/>
+        <field fieldname="asac_amt_check_diff" fieldid="3966" decimalPlaces="6"/>
+        <field fieldname="asac_T_hk_buy_total_amt" fieldid="5067" decimalPlaces="6"/>
+        <field fieldname="asac_T_hk_sell_total_amt" fieldid="5068" decimalPlaces="6"/>
+        <field fieldname="asac_T1_hk_buy_total_amt" fieldid="5057" decimalPlaces="6"/>
+        <field fieldname="asac_T1_hk_sell_total_amt" fieldid="5058" decimalPlaces="6"/>
+        <field fieldname="asac_total_rece_amt" fieldid="3619" decimalPlaces="6"/>
+        <field fieldname="asac_total_payab_amt" fieldid="3620" decimalPlaces="6"/>
+        <field fieldname="asac_realize_pandl" fieldid="3339" decimalPlaces="6"/>
+        <field fieldname="asac_intrst_rate" fieldid="3621" decimalPlaces="6"/>
+        <field fieldname="asac_intrst_base_amt" fieldid="3622" decimalPlaces="6"/>
+        <field fieldname="asac_pre_entry_intrst_amt" fieldid="3623" decimalPlaces="6"/>
+        <field fieldname="asac_update_times" fieldid="3637"/>
+    </function>
+    <function functionname="funct_pdseca_DealOutSecuCapitalJour" typename="LD_REQUEST" functionid="pdsecuT.2.101" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="pass_money_jour_no" fieldid="2618"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="busi_flag" fieldid="2785"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="entry_amt" fieldid="2470" decimalPlaces="6"/>
+        <field fieldname="entry_end_amt" fieldid="2463" decimalPlaces="6"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_acco" fieldid="1696"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funct_pdseca_DealOutSecuCapitalJour" typename="LD_ANSWER" functionid="pdsecuT.2.101" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdseca_GetOutSecuCapitalJour" typename="LD_REQUEST" functionid="pdsecuT.2.102" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="query_row_id" fieldid="1214"/>
+    </function>
+    <function functionname="funct_pdseca_GetOutSecuCapitalJour" typename="LD_ANSWER" functionid="pdsecuT.2.102" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="pass_money_jour_no" fieldid="2618"/>
+        <field fieldname="busi_flag" fieldid="2785"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="entry_amt" fieldid="2470" decimalPlaces="6"/>
+        <field fieldname="entry_end_amt" fieldid="2463" decimalPlaces="6"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_acco" fieldid="1696"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+        <field fieldname="deal_flag" fieldid="1342"/>
+    </function>
+    <function functionname="funct_pdseca_QueryOutSecuCapitalJour" typename="LD_REQUEST" functionid="pdsecuT.2.103" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_pdseca_QueryOutSecuCapitalJour" typename="LD_ANSWER" functionid="pdsecuT.2.103" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="pass_money_jour_no" fieldid="2618"/>
+            <field fieldname="busi_flag" fieldid="2785"/>
+            <field fieldname="pass_no" fieldid="2610"/>
+            <field fieldname="out_acco" fieldid="2697"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="entry_amt" fieldid="2470" decimalPlaces="6"/>
+            <field fieldname="entry_end_amt" fieldid="2463" decimalPlaces="6"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_acco" fieldid="1696"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+            <field fieldname="deal_flag" fieldid="1342"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdseca_AddOutCapital" typename="LD_REQUEST" functionid="pdsecuT.2.171" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="default_exch_group_no" fieldid="3348"/>
+        <field fieldname="co_busi_config_str" fieldid="1835"/>
+        <field fieldname="asac_busi_config_str" fieldid="3058"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="out_curr_amt" fieldid="2663" decimalPlaces="6"/>
+        <field fieldname="out_enable_amt" fieldid="2681" decimalPlaces="6"/>
+        <field fieldname="out_frozen_amt" fieldid="2665" decimalPlaces="6"/>
+        <field fieldname="out_unfroz_amt" fieldid="2677" decimalPlaces="6"/>
+        <field fieldname="out_total_payab_amt" fieldid="5499" decimalPlaces="6"/>
+        <field fieldname="out_total_rece_amt" fieldid="5500" decimalPlaces="6"/>
+        <field fieldname="pboc_rate" fieldid="5199" decimalPlaces="12"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+    </function>
+    <function functionname="funct_pdseca_AddOutCapital" typename="LD_ANSWER" functionid="pdsecuT.2.171" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdseca_DealCloseFrozenUnfrozen" typename="LD_REQUEST" functionid="pdsecuT.2.254" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+    </function>
+    <function functionname="funct_pdseca_DealCloseFrozenUnfrozen" typename="LD_ANSWER" functionid="pdsecuT.2.254" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdseca_DealDividend" typename="LD_REQUEST" functionid="pdsecuT.2.255" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdseca_DealDividend" typename="LD_ANSWER" functionid="pdsecuT.2.255" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdseca_DealCapitPreEntry" typename="LD_REQUEST" functionid="pdsecuT.2.256" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="query_row_id" fieldid="1214"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdseca_DealCapitPreEntry" typename="LD_ANSWER" functionid="pdsecuT.2.256" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="busi_flag" fieldid="2785"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="record_count" fieldid="1865"/>
+    </function>
+    <function functionname="funct_pdseca_UpdateTrdCapital" typename="LD_REQUEST" functionid="pdsecuT.2.257" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="shsz_avail_amt" fieldid="5005" decimalPlaces="6"/>
+        <field fieldname="hk_avail_amt" fieldid="5006" decimalPlaces="6"/>
+        <field fieldname="static_avail_amt" fieldid="2038" decimalPlaces="6"/>
+    </function>
+    <function functionname="funct_pdseca_UpdateTrdCapital" typename="LD_ANSWER" functionid="pdsecuT.2.257" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdseca_UpdateTrdExgpCapital" typename="LD_REQUEST" functionid="pdsecuT.2.258" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="shsz_avail_amt" fieldid="5005" decimalPlaces="6"/>
+        <field fieldname="hk_avail_amt" fieldid="5006" decimalPlaces="6"/>
+        <field fieldname="static_avail_amt" fieldid="2038" decimalPlaces="6"/>
+    </function>
+    <function functionname="funct_pdseca_UpdateTrdExgpCapital" typename="LD_ANSWER" functionid="pdsecuT.2.258" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdseca_UpEvaluUpdateTotalRece" typename="LD_REQUEST" functionid="pdsecuT.2.259" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="total_rece_amt" fieldid="2158" decimalPlaces="6"/>
+        <field fieldname="total_payab_amt" fieldid="2157" decimalPlaces="6"/>
+    </function>
+    <function functionname="funct_pdseca_UpEvaluUpdateTotalRece" typename="LD_ANSWER" functionid="pdsecuT.2.259" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="exgp_cash_id" fieldid="3387"/>
+        <field fieldname="exgp_begin_amt" fieldid="3565" decimalPlaces="6"/>
+        <field fieldname="exgp_curr_amt" fieldid="3567" decimalPlaces="6"/>
+        <field fieldname="exgp_frozen_amt" fieldid="3412" decimalPlaces="6"/>
+        <field fieldname="exgp_unfroz_amt" fieldid="3413" decimalPlaces="6"/>
+        <field fieldname="exgp_pre_settle_amt" fieldid="3873" decimalPlaces="6"/>
+        <field fieldname="exgp_shsz_avail_change_amt" fieldid="3926" decimalPlaces="6"/>
+        <field fieldname="exgp_hk_avail_change_amt" fieldid="3927" decimalPlaces="6"/>
+        <field fieldname="exgp_amt_check_diff" fieldid="3965" decimalPlaces="6"/>
+        <field fieldname="exgp_T_hk_buy_total_amt" fieldid="5065" decimalPlaces="6"/>
+        <field fieldname="exgp_T_hk_sell_total_amt" fieldid="5066" decimalPlaces="6"/>
+        <field fieldname="exgp_T1_hk_buy_total_amt" fieldid="5051" decimalPlaces="6"/>
+        <field fieldname="exgp_T1_hk_sell_total_amt" fieldid="5052" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_rece_amt" fieldid="3614" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_payab_amt" fieldid="3615" decimalPlaces="6"/>
+        <field fieldname="exgp_realize_pandl" fieldid="3334" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_rate" fieldid="3616" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_base_amt" fieldid="3617" decimalPlaces="6"/>
+        <field fieldname="exch_group_pre_entry_intrst_amt" fieldid="3618" decimalPlaces="6"/>
+        <field fieldname="exch_group_update_times" fieldid="3636"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="asac_cash_id" fieldid="3388"/>
+        <field fieldname="asac_begin_amt" fieldid="3566" decimalPlaces="6"/>
+        <field fieldname="asac_curr_amt" fieldid="3568" decimalPlaces="6"/>
+        <field fieldname="asac_frozen_amt" fieldid="3438" decimalPlaces="6"/>
+        <field fieldname="asac_unfroz_amt" fieldid="3439" decimalPlaces="6"/>
+        <field fieldname="asac_pre_settle_amt" fieldid="3872" decimalPlaces="6"/>
+        <field fieldname="asac_shsz_avail_change_amt" fieldid="3928" decimalPlaces="6"/>
+        <field fieldname="asac_hk_avail_change_amt" fieldid="3929" decimalPlaces="6"/>
+        <field fieldname="asac_amt_check_diff" fieldid="3966" decimalPlaces="6"/>
+        <field fieldname="asac_T_hk_buy_total_amt" fieldid="5067" decimalPlaces="6"/>
+        <field fieldname="asac_T_hk_sell_total_amt" fieldid="5068" decimalPlaces="6"/>
+        <field fieldname="asac_T1_hk_buy_total_amt" fieldid="5057" decimalPlaces="6"/>
+        <field fieldname="asac_T1_hk_sell_total_amt" fieldid="5058" decimalPlaces="6"/>
+        <field fieldname="asac_total_rece_amt" fieldid="3619" decimalPlaces="6"/>
+        <field fieldname="asac_total_payab_amt" fieldid="3620" decimalPlaces="6"/>
+        <field fieldname="asac_realize_pandl" fieldid="3339" decimalPlaces="6"/>
+        <field fieldname="asac_intrst_rate" fieldid="3621" decimalPlaces="6"/>
+        <field fieldname="asac_intrst_base_amt" fieldid="3622" decimalPlaces="6"/>
+        <field fieldname="asac_pre_entry_intrst_amt" fieldid="3623" decimalPlaces="6"/>
+        <field fieldname="asac_update_times" fieldid="3637"/>
+    </function>
+    <function functionname="funct_pdseca_ImportCapital" typename="LD_REQUEST" functionid="pdsecuT.2.260" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="target_amt" fieldid="4036" decimalPlaces="6"/>
+        <field fieldname="frozen_amt" fieldid="1467" decimalPlaces="6"/>
+        <field fieldname="unfroz_amt" fieldid="1995" decimalPlaces="6"/>
+        <field fieldname="total_rece_amt" fieldid="2158" decimalPlaces="6"/>
+        <field fieldname="total_payab_amt" fieldid="2157" decimalPlaces="6"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdseca_ImportCapital" typename="LD_ANSWER" functionid="pdsecuT.2.260" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="exgp_cash_id" fieldid="3387"/>
+        <field fieldname="exgp_begin_amt" fieldid="3565" decimalPlaces="6"/>
+        <field fieldname="exgp_curr_amt" fieldid="3567" decimalPlaces="6"/>
+        <field fieldname="exgp_frozen_amt" fieldid="3412" decimalPlaces="6"/>
+        <field fieldname="exgp_unfroz_amt" fieldid="3413" decimalPlaces="6"/>
+        <field fieldname="exgp_pre_settle_amt" fieldid="3873" decimalPlaces="6"/>
+        <field fieldname="exgp_shsz_avail_change_amt" fieldid="3926" decimalPlaces="6"/>
+        <field fieldname="exgp_hk_avail_change_amt" fieldid="3927" decimalPlaces="6"/>
+        <field fieldname="exgp_amt_check_diff" fieldid="3965" decimalPlaces="6"/>
+        <field fieldname="exgp_T_hk_buy_total_amt" fieldid="5065" decimalPlaces="6"/>
+        <field fieldname="exgp_T_hk_sell_total_amt" fieldid="5066" decimalPlaces="6"/>
+        <field fieldname="exgp_T1_hk_buy_total_amt" fieldid="5051" decimalPlaces="6"/>
+        <field fieldname="exgp_T1_hk_sell_total_amt" fieldid="5052" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_rece_amt" fieldid="3614" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_payab_amt" fieldid="3615" decimalPlaces="6"/>
+        <field fieldname="exgp_realize_pandl" fieldid="3334" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_rate" fieldid="3616" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_base_amt" fieldid="3617" decimalPlaces="6"/>
+        <field fieldname="exch_group_pre_entry_intrst_amt" fieldid="3618" decimalPlaces="6"/>
+        <field fieldname="exch_group_update_times" fieldid="3636"/>
+        <field fieldname="total_rece_amt_diff" fieldid="3957" decimalPlaces="6"/>
+        <field fieldname="total_payab_amt_diff" fieldid="3958" decimalPlaces="6"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="occur_amt_check_diff" fieldid="5625" decimalPlaces="6"/>
+        <field fieldname="asac_cash_id" fieldid="3388"/>
+        <field fieldname="asac_begin_amt" fieldid="3566" decimalPlaces="6"/>
+        <field fieldname="asac_curr_amt" fieldid="3568" decimalPlaces="6"/>
+        <field fieldname="asac_frozen_amt" fieldid="3438" decimalPlaces="6"/>
+        <field fieldname="asac_unfroz_amt" fieldid="3439" decimalPlaces="6"/>
+        <field fieldname="asac_pre_settle_amt" fieldid="3872" decimalPlaces="6"/>
+        <field fieldname="asac_shsz_avail_change_amt" fieldid="3928" decimalPlaces="6"/>
+        <field fieldname="asac_hk_avail_change_amt" fieldid="3929" decimalPlaces="6"/>
+        <field fieldname="asac_amt_check_diff" fieldid="3966" decimalPlaces="6"/>
+        <field fieldname="asac_T_hk_buy_total_amt" fieldid="5067" decimalPlaces="6"/>
+        <field fieldname="asac_T_hk_sell_total_amt" fieldid="5068" decimalPlaces="6"/>
+        <field fieldname="asac_T1_hk_buy_total_amt" fieldid="5057" decimalPlaces="6"/>
+        <field fieldname="asac_T1_hk_sell_total_amt" fieldid="5058" decimalPlaces="6"/>
+        <field fieldname="asac_total_rece_amt" fieldid="3619" decimalPlaces="6"/>
+        <field fieldname="asac_total_payab_amt" fieldid="3620" decimalPlaces="6"/>
+        <field fieldname="asac_realize_pandl" fieldid="3339" decimalPlaces="6"/>
+        <field fieldname="asac_intrst_rate" fieldid="3621" decimalPlaces="6"/>
+        <field fieldname="asac_intrst_base_amt" fieldid="3622" decimalPlaces="6"/>
+        <field fieldname="asac_pre_entry_intrst_amt" fieldid="3623" decimalPlaces="6"/>
+        <field fieldname="asac_update_times" fieldid="3637"/>
+    </function>
+    <function functionname="funct_pdseca_GetAssectStrsForExgp" typename="LD_REQUEST" functionid="pdsecuT.2.261" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+    </function>
+    <function functionname="funct_pdseca_GetAssectStrsForExgp" typename="LD_ANSWER" functionid="pdsecuT.2.261" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_acco" fieldid="1696"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdseca_TransferExgpCapit" typename="LD_REQUEST" functionid="pdsecuT.2.262" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="target_exch_group_no" fieldid="2273"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdseca_TransferExgpCapit" typename="LD_ANSWER" functionid="pdsecuT.2.262" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="exgp_cash_id" fieldid="3387"/>
+        <field fieldname="exgp_begin_amt" fieldid="3565" decimalPlaces="6"/>
+        <field fieldname="exgp_curr_amt" fieldid="3567" decimalPlaces="6"/>
+        <field fieldname="exgp_frozen_amt" fieldid="3412" decimalPlaces="6"/>
+        <field fieldname="exgp_unfroz_amt" fieldid="3413" decimalPlaces="6"/>
+        <field fieldname="exgp_pre_settle_amt" fieldid="3873" decimalPlaces="6"/>
+        <field fieldname="exgp_shsz_avail_change_amt" fieldid="3926" decimalPlaces="6"/>
+        <field fieldname="exgp_hk_avail_change_amt" fieldid="3927" decimalPlaces="6"/>
+        <field fieldname="exgp_amt_check_diff" fieldid="3965" decimalPlaces="6"/>
+        <field fieldname="exgp_T_hk_buy_total_amt" fieldid="5065" decimalPlaces="6"/>
+        <field fieldname="exgp_T_hk_sell_total_amt" fieldid="5066" decimalPlaces="6"/>
+        <field fieldname="exgp_T1_hk_buy_total_amt" fieldid="5051" decimalPlaces="6"/>
+        <field fieldname="exgp_T1_hk_sell_total_amt" fieldid="5052" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_rece_amt" fieldid="3614" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_payab_amt" fieldid="3615" decimalPlaces="6"/>
+        <field fieldname="exgp_realize_pandl" fieldid="3334" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_rate" fieldid="3616" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_base_amt" fieldid="3617" decimalPlaces="6"/>
+        <field fieldname="exch_group_pre_entry_intrst_amt" fieldid="3618" decimalPlaces="6"/>
+        <field fieldname="exch_group_update_times" fieldid="3636"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="begin_amt" fieldid="2327" decimalPlaces="6"/>
+        <field fieldname="curr_amt" fieldid="1396" decimalPlaces="6"/>
+        <field fieldname="frozen_amt" fieldid="1467" decimalPlaces="6"/>
+        <field fieldname="unfroz_amt" fieldid="1995" decimalPlaces="6"/>
+        <field fieldname="pre_settle_amt" fieldid="3870" decimalPlaces="6"/>
+        <field fieldname="shsz_avail_change_amt" fieldid="3924" decimalPlaces="6"/>
+        <field fieldname="hk_avail_change_amt" fieldid="3925" decimalPlaces="6"/>
+        <field fieldname="amt_check_diff" fieldid="3961" decimalPlaces="6"/>
+        <field fieldname="T_hk_buy_total_amt" fieldid="5063" decimalPlaces="6"/>
+        <field fieldname="T_hk_sell_total_amt" fieldid="5064" decimalPlaces="6"/>
+        <field fieldname="T1_hk_buy_total_amt" fieldid="5045" decimalPlaces="6"/>
+        <field fieldname="T1_hk_sell_total_amt" fieldid="5046" decimalPlaces="6"/>
+        <field fieldname="total_rece_amt" fieldid="2158" decimalPlaces="6"/>
+        <field fieldname="total_payab_amt" fieldid="2157" decimalPlaces="6"/>
+        <field fieldname="realize_pandl" fieldid="2536" decimalPlaces="6"/>
+        <field fieldname="intrst_rate" fieldid="2162" decimalPlaces="12"/>
+        <field fieldname="intrst_base_amt" fieldid="2170" decimalPlaces="6"/>
+        <field fieldname="pre_entry_intrst_amt" fieldid="1372" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="funct_pdseca_BackUpGetAsacCapit" typename="LD_REQUEST" functionid="pdsecuT.2.263" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="query_row_id" fieldid="1214"/>
+    </function>
+    <function functionname="funct_pdseca_BackUpGetAsacCapit" typename="LD_ANSWER" functionid="pdsecuT.2.263" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="pre_settle_amt" fieldid="3870" decimalPlaces="6"/>
+        <field fieldname="row_id" fieldid="1867"/>
+    </function>
+    <function functionname="funct_pdseca_BackUpQueryAsacCapit" typename="LD_REQUEST" functionid="pdsecuT.2.264" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+    </function>
+    <function functionname="funct_pdseca_BackUpQueryAsacCapit" typename="LD_ANSWER" functionid="pdsecuT.2.264" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="pre_settle_amt" fieldid="3870" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdseca_QueryBankStockInOutAmt" typename="LD_REQUEST" functionid="pdsecuT.2.265" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+    </function>
+    <function functionname="funct_pdseca_QueryBankStockInOutAmt" typename="LD_ANSWER" functionid="pdsecuT.2.265" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="tday_in_amt" fieldid="5219" decimalPlaces="6"/>
+        <field fieldname="tday_out_amt" fieldid="5220" decimalPlaces="6"/>
+    </function>
+    <function functionname="funct_pdseca_DeleteExgpCapital" typename="LD_REQUEST" functionid="pdsecuT.2.266" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="row_id" fieldid="1867"/>
+    </function>
+    <function functionname="funct_pdseca_DeleteExgpCapital" typename="LD_ANSWER" functionid="pdsecuT.2.266" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdseca_SyncOffSetFundOutFund" typename="LD_REQUEST" functionid="pdsecuT.2.267" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="out_curr_amt" fieldid="2663" decimalPlaces="6"/>
+        <field fieldname="out_enable_amt" fieldid="2681" decimalPlaces="6"/>
+        <field fieldname="out_frozen_amt" fieldid="2665" decimalPlaces="6"/>
+        <field fieldname="out_unfroz_amt" fieldid="2677" decimalPlaces="6"/>
+        <field fieldname="out_total_payab_amt" fieldid="5499" decimalPlaces="6"/>
+        <field fieldname="out_total_rece_amt" fieldid="5500" decimalPlaces="6"/>
+    </function>
+    <function functionname="funct_pdseca_SyncOffSetFundOutFund" typename="LD_ANSWER" functionid="pdsecuT.2.267" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdseca_GetOffSetFundAsacCapit" typename="LD_REQUEST" functionid="pdsecuT.2.268" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+    </function>
+    <function functionname="funct_pdseca_GetOffSetFundAsacCapit" typename="LD_ANSWER" functionid="pdsecuT.2.268" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="out_acco" fieldid="2697"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="out_curr_amt" fieldid="2663" decimalPlaces="6"/>
+            <field fieldname="out_enable_amt" fieldid="2681" decimalPlaces="6"/>
+            <field fieldname="out_frozen_amt" fieldid="2665" decimalPlaces="6"/>
+            <field fieldname="out_unfroz_amt" fieldid="2677" decimalPlaces="6"/>
+            <field fieldname="out_total_payab_amt" fieldid="5499" decimalPlaces="6"/>
+            <field fieldname="out_total_rece_amt" fieldid="5500" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdseca_ClearOutAsacCapit" typename="LD_REQUEST" functionid="pdsecuT.2.269" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+    </function>
+    <function functionname="funct_pdseca_ClearOutAsacCapit" typename="LD_ANSWER" functionid="pdsecuT.2.269" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdseca_AddOutAsacCapital" typename="LD_REQUEST" functionid="pdsecuT.2.270" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="default_exch_group_no" fieldid="3348"/>
+        <field fieldname="co_busi_config_str" fieldid="1835"/>
+        <field fieldname="asac_busi_config_str" fieldid="3058"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="out_curr_amt" fieldid="2663" decimalPlaces="6"/>
+        <field fieldname="out_enable_amt" fieldid="2681" decimalPlaces="6"/>
+        <field fieldname="out_frozen_amt" fieldid="2665" decimalPlaces="6"/>
+        <field fieldname="out_unfroz_amt" fieldid="2677" decimalPlaces="6"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+    </function>
+    <function functionname="funct_pdseca_AddOutAsacCapital" typename="LD_ANSWER" functionid="pdsecuT.2.270" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdseca_EntryOutAsac" typename="LD_REQUEST" functionid="pdsecuT.2.271" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="out_nav_asset" fieldid="5739" decimalPlaces="6"/>
+        <field fieldname="out_stock_asset" fieldid="5741" decimalPlaces="6"/>
+        <field fieldname="out_bond_asset" fieldid="5742" decimalPlaces="6"/>
+        <field fieldname="out_fund_asset" fieldid="5743" decimalPlaces="6"/>
+        <field fieldname="out_repo_asset" fieldid="5744" decimalPlaces="6"/>
+        <field fieldname="out_total_rece_amt" fieldid="5500" decimalPlaces="6"/>
+        <field fieldname="out_total_payab_amt" fieldid="5499" decimalPlaces="6"/>
+        <field fieldname="out_other_asset" fieldid="5745" decimalPlaces="6"/>
+        <field fieldname="out_option_asset" fieldid="5746" decimalPlaces="6"/>
+        <field fieldname="out_fina_debt" fieldid="5747" decimalPlaces="6"/>
+        <field fieldname="out_loan_debt" fieldid="5748" decimalPlaces="6"/>
+        <field fieldname="out_futu_asset" fieldid="5872" decimalPlaces="6"/>
+        <field fieldname="out_margin_amt" fieldid="5749" decimalPlaces="6"/>
+        <field fieldname="out_shsz_T0_avail" fieldid="5750" decimalPlaces="6"/>
+        <field fieldname="out_shsz_T1_avail" fieldid="5751" decimalPlaces="6"/>
+        <field fieldname="out_shhk_avail_amt" fieldid="5752" decimalPlaces="6"/>
+        <field fieldname="out_szhk_avail_amt" fieldid="5753" decimalPlaces="6"/>
+        <field fieldname="out_cash_asset" fieldid="5754" decimalPlaces="6"/>
+        <field fieldname="out_futu_pandl_amt" fieldid="5755" decimalPlaces="6"/>
+    </function>
+    <function functionname="funct_pdseca_EntryOutAsac" typename="LD_ANSWER" functionid="pdsecuT.2.271" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdseca_ApplyPdSyncAsacAndExgpCapital" typename="LD_REQUEST" functionid="pdsecuT.2.272" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no_str" fieldid="3052"/>
+        <field fieldname="dist_amt_str" fieldid="5758"/>
+        <field fieldname="exch_group_no_str" fieldid="1963"/>
+        <field fieldname="default_exch_group_no_str" fieldid="5709"/>
+        <field fieldname="weight_value_str" fieldid="5107"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="redempt_type" fieldid="5759"/>
+        <field fieldname="redempt_amt" fieldid="5760" decimalPlaces="6"/>
+        <field fieldname="redempt_qty" fieldid="5761" decimalPlaces="2"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdseca_ApplyPdSyncAsacAndExgpCapital" typename="LD_ANSWER" functionid="pdsecuT.2.272" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdseca_QueryAsacCapitInfoByPd" typename="LD_REQUEST" functionid="pdsecuT.2.273" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+    </function>
+    <function functionname="funct_pdseca_QueryAsacCapitInfoByPd" typename="LD_ANSWER" functionid="pdsecuT.2.273" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="asac_cash_id" fieldid="3388"/>
+            <field fieldname="asac_begin_amt" fieldid="3566" decimalPlaces="6"/>
+            <field fieldname="asac_curr_amt" fieldid="3568" decimalPlaces="6"/>
+            <field fieldname="asac_frozen_amt" fieldid="3438" decimalPlaces="6"/>
+            <field fieldname="asac_unfroz_amt" fieldid="3439" decimalPlaces="6"/>
+            <field fieldname="asac_pre_settle_amt" fieldid="3872" decimalPlaces="6"/>
+            <field fieldname="asac_shsz_avail_change_amt" fieldid="3928" decimalPlaces="6"/>
+            <field fieldname="asac_hk_avail_change_amt" fieldid="3929" decimalPlaces="6"/>
+            <field fieldname="asac_amt_check_diff" fieldid="3966" decimalPlaces="6"/>
+            <field fieldname="asac_T_hk_buy_total_amt" fieldid="5067" decimalPlaces="6"/>
+            <field fieldname="asac_T_hk_sell_total_amt" fieldid="5068" decimalPlaces="6"/>
+            <field fieldname="asac_T1_hk_buy_total_amt" fieldid="5057" decimalPlaces="6"/>
+            <field fieldname="asac_T1_hk_sell_total_amt" fieldid="5058" decimalPlaces="6"/>
+            <field fieldname="asac_total_rece_amt" fieldid="3619" decimalPlaces="6"/>
+            <field fieldname="asac_total_payab_amt" fieldid="3620" decimalPlaces="6"/>
+            <field fieldname="asac_realize_pandl" fieldid="3339" decimalPlaces="6"/>
+            <field fieldname="asac_intrst_rate" fieldid="3621" decimalPlaces="6"/>
+            <field fieldname="asac_intrst_base_amt" fieldid="3622" decimalPlaces="6"/>
+            <field fieldname="asac_pre_entry_intrst_amt" fieldid="3623" decimalPlaces="6"/>
+            <field fieldname="update_times" fieldid="3381"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdseca_QueryExgpCapitInfoByPd" typename="LD_REQUEST" functionid="pdsecuT.2.274" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+    </function>
+    <function functionname="funct_pdseca_QueryExgpCapitInfoByPd" typename="LD_ANSWER" functionid="pdsecuT.2.274" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="exgp_cash_id" fieldid="3387"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="exgp_begin_amt" fieldid="3565" decimalPlaces="6"/>
+            <field fieldname="exgp_curr_amt" fieldid="3567" decimalPlaces="6"/>
+            <field fieldname="exgp_frozen_amt" fieldid="3412" decimalPlaces="6"/>
+            <field fieldname="exgp_unfroz_amt" fieldid="3413" decimalPlaces="6"/>
+            <field fieldname="exgp_pre_settle_amt" fieldid="3873" decimalPlaces="6"/>
+            <field fieldname="exgp_shsz_avail_change_amt" fieldid="3926" decimalPlaces="6"/>
+            <field fieldname="exgp_hk_avail_change_amt" fieldid="3927" decimalPlaces="6"/>
+            <field fieldname="exgp_amt_check_diff" fieldid="3965" decimalPlaces="6"/>
+            <field fieldname="exgp_T_hk_buy_total_amt" fieldid="5065" decimalPlaces="6"/>
+            <field fieldname="exgp_T_hk_sell_total_amt" fieldid="5066" decimalPlaces="6"/>
+            <field fieldname="exgp_T1_hk_buy_total_amt" fieldid="5051" decimalPlaces="6"/>
+            <field fieldname="exgp_T1_hk_sell_total_amt" fieldid="5052" decimalPlaces="6"/>
+            <field fieldname="exch_group_total_rece_amt" fieldid="3614" decimalPlaces="6"/>
+            <field fieldname="exch_group_total_payab_amt" fieldid="3615" decimalPlaces="6"/>
+            <field fieldname="exgp_realize_pandl" fieldid="3334" decimalPlaces="6"/>
+            <field fieldname="exch_group_intrst_rate" fieldid="3616" decimalPlaces="6"/>
+            <field fieldname="exch_group_intrst_base_amt" fieldid="3617" decimalPlaces="6"/>
+            <field fieldname="exch_group_pre_entry_intrst_amt" fieldid="3618" decimalPlaces="6"/>
+            <field fieldname="update_times" fieldid="3381"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdseca_DelApplyJourRebackAsacAndExgpCapital" typename="LD_REQUEST" functionid="pdsecuT.2.275" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no_str" fieldid="1963"/>
+        <field fieldname="exgp_dist_amt_str" fieldid="5762"/>
+        <field fieldname="record_batch_no" fieldid="5469"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="redempt_type" fieldid="5759"/>
+        <field fieldname="redempt_amt" fieldid="5760" decimalPlaces="6"/>
+        <field fieldname="redempt_qty" fieldid="5761" decimalPlaces="2"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdseca_DelApplyJourRebackAsacAndExgpCapital" typename="LD_ANSWER" functionid="pdsecuT.2.275" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdseca_QueryPdApplyJourRecord" typename="LD_REQUEST" functionid="pdsecuT.2.276" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="redempt_type" fieldid="5759"/>
+        <field fieldname="record_batch_no" fieldid="5469"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+        <field fieldname="co_no_rights_str" fieldid="1830"/>
+        <field fieldname="pd_no_rights_str" fieldid="1231"/>
+        <field fieldname="exch_group_no_rights_str" fieldid="1964"/>
+    </function>
+    <function functionname="funct_pdseca_QueryPdApplyJourRecord" typename="LD_ANSWER" functionid="pdsecuT.2.276" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="record_batch_no" fieldid="5469"/>
+            <field fieldname="redempt_type" fieldid="5759"/>
+            <field fieldname="redempt_amt" fieldid="5760" decimalPlaces="6"/>
+            <field fieldname="redempt_qty" fieldid="5761" decimalPlaces="2"/>
+            <field fieldname="exch_group_no_str" fieldid="1963"/>
+            <field fieldname="exgp_dist_amt_str" fieldid="5762"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdseca_QueryPdApplyJourHisRecord" typename="LD_REQUEST" functionid="pdsecuT.2.277" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="redempt_type" fieldid="5759"/>
+        <field fieldname="record_batch_no" fieldid="5469"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+        <field fieldname="co_no_rights_str" fieldid="1830"/>
+        <field fieldname="pd_no_rights_str" fieldid="1231"/>
+        <field fieldname="exch_group_no_rights_str" fieldid="1964"/>
+    </function>
+    <function functionname="funct_pdseca_QueryPdApplyJourHisRecord" typename="LD_ANSWER" functionid="pdsecuT.2.277" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="record_batch_no" fieldid="5469"/>
+            <field fieldname="redempt_type" fieldid="5759"/>
+            <field fieldname="redempt_amt" fieldid="5760" decimalPlaces="6"/>
+            <field fieldname="redempt_qty" fieldid="5761" decimalPlaces="2"/>
+            <field fieldname="exch_group_no_str" fieldid="1963"/>
+            <field fieldname="exgp_dist_amt_str" fieldid="5762"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdseca_QueryEntryOutAsac" typename="LD_REQUEST" functionid="pdsecuT.2.778" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_pdseca_QueryEntryOutAsac" typename="LD_ANSWER" functionid="pdsecuT.2.778" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="out_nav_asset" fieldid="5739" decimalPlaces="6"/>
+            <field fieldname="out_stock_asset" fieldid="5741" decimalPlaces="6"/>
+            <field fieldname="out_bond_asset" fieldid="5742" decimalPlaces="6"/>
+            <field fieldname="out_fund_asset" fieldid="5743" decimalPlaces="6"/>
+            <field fieldname="out_repo_asset" fieldid="5744" decimalPlaces="6"/>
+            <field fieldname="out_total_rece_amt" fieldid="5500" decimalPlaces="6"/>
+            <field fieldname="out_total_payab_amt" fieldid="5499" decimalPlaces="6"/>
+            <field fieldname="out_other_asset" fieldid="5745" decimalPlaces="6"/>
+            <field fieldname="out_option_asset" fieldid="5746" decimalPlaces="6"/>
+            <field fieldname="out_fina_debt" fieldid="5747" decimalPlaces="6"/>
+            <field fieldname="out_loan_debt" fieldid="5748" decimalPlaces="6"/>
+            <field fieldname="out_margin_amt" fieldid="5749" decimalPlaces="6"/>
+            <field fieldname="out_futu_asset" fieldid="5872" decimalPlaces="6"/>
+            <field fieldname="out_shsz_T0_avail" fieldid="5750" decimalPlaces="6"/>
+            <field fieldname="out_shsz_T1_avail" fieldid="5751" decimalPlaces="6"/>
+            <field fieldname="out_shhk_avail_amt" fieldid="5752" decimalPlaces="6"/>
+            <field fieldname="out_szhk_avail_amt" fieldid="5753" decimalPlaces="6"/>
+            <field fieldname="out_cash_asset" fieldid="5754" decimalPlaces="6"/>
+            <field fieldname="out_futu_pandl_amt" fieldid="5755" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdseca_QuerySecuCapitalDiff" typename="LD_REQUEST" functionid="pdsecuT.2.779" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no_str" fieldid="1230"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="deal_flag_query_str" fieldid="3361"/>
+        <field fieldname="filter_diff_cond" fieldid="3362"/>
+        <field fieldname="asset_sync_flag" fieldid="3049"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_pdseca_QuerySecuCapitalDiff" typename="LD_ANSWER" functionid="pdsecuT.2.779" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="pass_no" fieldid="2610"/>
+            <field fieldname="out_acco" fieldid="2697"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="acco_curr_amt" fieldid="2906" decimalPlaces="6"/>
+            <field fieldname="acco_avail_amt" fieldid="2912" decimalPlaces="6"/>
+            <field fieldname="out_curr_amt" fieldid="2663" decimalPlaces="6"/>
+            <field fieldname="out_enable_amt" fieldid="2681" decimalPlaces="6"/>
+            <field fieldname="sys_avail_amt_diff" fieldid="4971" decimalPlaces="6"/>
+            <field fieldname="acco_curr_amt_diff" fieldid="2907" decimalPlaces="6"/>
+            <field fieldname="acco_avail_amt_diff" fieldid="2913" decimalPlaces="6"/>
+            <field fieldname="total_payab_amt" fieldid="2157" decimalPlaces="6"/>
+            <field fieldname="total_rece_amt" fieldid="2158" decimalPlaces="6"/>
+            <field fieldname="out_total_payab_amt" fieldid="5499" decimalPlaces="6"/>
+            <field fieldname="out_total_rece_amt" fieldid="5500" decimalPlaces="6"/>
+            <field fieldname="acco_total_payab_amt_diff" fieldid="5503" decimalPlaces="6"/>
+            <field fieldname="acco_total_rece_amt_diff" fieldid="5504" decimalPlaces="6"/>
+            <field fieldname="deal_flag" fieldid="1342"/>
+            <field fieldname="asset_sync_flag" fieldid="3049"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdseca_OperQueryExgpCapital" typename="LD_REQUEST" functionid="pdsecuT.2.76" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+        <field fieldname="exch_group_no_rights_str" fieldid="1964"/>
+    </function>
+    <function functionname="funct_pdseca_OperQueryExgpCapital" typename="LD_ANSWER" functionid="pdsecuT.2.76" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="create_date" fieldid="1354"/>
+            <field fieldname="create_time" fieldid="1355"/>
+            <field fieldname="update_date" fieldid="1667"/>
+            <field fieldname="update_time" fieldid="1669"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="begin_amt" fieldid="2327" decimalPlaces="6"/>
+            <field fieldname="curr_amt" fieldid="1396" decimalPlaces="6"/>
+            <field fieldname="frozen_amt" fieldid="1467" decimalPlaces="6"/>
+            <field fieldname="unfroz_amt" fieldid="1995" decimalPlaces="6"/>
+            <field fieldname="pre_settle_amt" fieldid="3870" decimalPlaces="6"/>
+            <field fieldname="shsz_avail_change_amt" fieldid="3924" decimalPlaces="6"/>
+            <field fieldname="hk_avail_change_amt" fieldid="3925" decimalPlaces="6"/>
+            <field fieldname="amt_check_diff" fieldid="3961" decimalPlaces="6"/>
+            <field fieldname="T_hk_buy_total_amt" fieldid="5063" decimalPlaces="6"/>
+            <field fieldname="T_hk_sell_total_amt" fieldid="5064" decimalPlaces="6"/>
+            <field fieldname="T1_hk_buy_total_amt" fieldid="5045" decimalPlaces="6"/>
+            <field fieldname="T1_hk_sell_total_amt" fieldid="5046" decimalPlaces="6"/>
+            <field fieldname="total_rece_amt" fieldid="2158" decimalPlaces="6"/>
+            <field fieldname="total_payab_amt" fieldid="2157" decimalPlaces="6"/>
+            <field fieldname="total_change_amt" fieldid="3943" decimalPlaces="6"/>
+            <field fieldname="realize_pandl" fieldid="2536" decimalPlaces="6"/>
+            <field fieldname="intrst_rate" fieldid="2162" decimalPlaces="12"/>
+            <field fieldname="intrst_base_amt" fieldid="2170" decimalPlaces="6"/>
+            <field fieldname="pre_entry_intrst_amt" fieldid="1372" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdseca_UpdateTotalRecePayab" typename="LD_REQUEST" functionid="pdsecuT.2.780" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="rece_occur_amt" fieldid="2823" decimalPlaces="6"/>
+        <field fieldname="payab_occur_amt" fieldid="2820" decimalPlaces="6"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdseca_UpdateTotalRecePayab" typename="LD_ANSWER" functionid="pdsecuT.2.780" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="exgp_cash_id" fieldid="3387"/>
+        <field fieldname="exgp_begin_amt" fieldid="3565" decimalPlaces="6"/>
+        <field fieldname="exgp_curr_amt" fieldid="3567" decimalPlaces="6"/>
+        <field fieldname="exgp_frozen_amt" fieldid="3412" decimalPlaces="6"/>
+        <field fieldname="exgp_unfroz_amt" fieldid="3413" decimalPlaces="6"/>
+        <field fieldname="exgp_pre_settle_amt" fieldid="3873" decimalPlaces="6"/>
+        <field fieldname="exgp_shsz_avail_change_amt" fieldid="3926" decimalPlaces="6"/>
+        <field fieldname="exgp_hk_avail_change_amt" fieldid="3927" decimalPlaces="6"/>
+        <field fieldname="exgp_amt_check_diff" fieldid="3965" decimalPlaces="6"/>
+        <field fieldname="exgp_T_hk_buy_total_amt" fieldid="5065" decimalPlaces="6"/>
+        <field fieldname="exgp_T_hk_sell_total_amt" fieldid="5066" decimalPlaces="6"/>
+        <field fieldname="exgp_T1_hk_buy_total_amt" fieldid="5051" decimalPlaces="6"/>
+        <field fieldname="exgp_T1_hk_sell_total_amt" fieldid="5052" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_rece_amt" fieldid="3614" decimalPlaces="6"/>
+        <field fieldname="exch_group_total_payab_amt" fieldid="3615" decimalPlaces="6"/>
+        <field fieldname="exgp_realize_pandl" fieldid="3334" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_rate" fieldid="3616" decimalPlaces="6"/>
+        <field fieldname="exch_group_intrst_base_amt" fieldid="3617" decimalPlaces="6"/>
+        <field fieldname="exch_group_pre_entry_intrst_amt" fieldid="3618" decimalPlaces="6"/>
+        <field fieldname="exch_group_update_times" fieldid="3636"/>
+        <field fieldname="asac_cash_id" fieldid="3388"/>
+        <field fieldname="asac_begin_amt" fieldid="3566" decimalPlaces="6"/>
+        <field fieldname="asac_curr_amt" fieldid="3568" decimalPlaces="6"/>
+        <field fieldname="asac_frozen_amt" fieldid="3438" decimalPlaces="6"/>
+        <field fieldname="asac_unfroz_amt" fieldid="3439" decimalPlaces="6"/>
+        <field fieldname="asac_pre_settle_amt" fieldid="3872" decimalPlaces="6"/>
+        <field fieldname="asac_shsz_avail_change_amt" fieldid="3928" decimalPlaces="6"/>
+        <field fieldname="asac_hk_avail_change_amt" fieldid="3929" decimalPlaces="6"/>
+        <field fieldname="asac_amt_check_diff" fieldid="3966" decimalPlaces="6"/>
+        <field fieldname="asac_T_hk_buy_total_amt" fieldid="5067" decimalPlaces="6"/>
+        <field fieldname="asac_T_hk_sell_total_amt" fieldid="5068" decimalPlaces="6"/>
+        <field fieldname="asac_T1_hk_buy_total_amt" fieldid="5057" decimalPlaces="6"/>
+        <field fieldname="asac_T1_hk_sell_total_amt" fieldid="5058" decimalPlaces="6"/>
+        <field fieldname="asac_total_rece_amt" fieldid="3619" decimalPlaces="6"/>
+        <field fieldname="asac_total_payab_amt" fieldid="3620" decimalPlaces="6"/>
+        <field fieldname="asac_realize_pandl" fieldid="3339" decimalPlaces="6"/>
+        <field fieldname="asac_intrst_rate" fieldid="3621" decimalPlaces="6"/>
+        <field fieldname="asac_intrst_base_amt" fieldid="3622" decimalPlaces="6"/>
+        <field fieldname="asac_pre_entry_intrst_amt" fieldid="3623" decimalPlaces="6"/>
+        <field fieldname="asac_update_times" fieldid="3637"/>
+    </function>
+    <function functionname="funct_pdseca_ImportCapitalData" typename="LD_REQUEST" functionid="pdsecuT.2.781" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="default_exch_group_no" fieldid="3348"/>
+        <field fieldname="co_busi_config_str" fieldid="1835"/>
+        <field fieldname="asac_busi_config_str" fieldid="3058"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="out_curr_amt" fieldid="2663" decimalPlaces="6"/>
+        <field fieldname="out_enable_amt" fieldid="2681" decimalPlaces="6"/>
+        <field fieldname="out_frozen_amt" fieldid="2665" decimalPlaces="6"/>
+        <field fieldname="out_unfroz_amt" fieldid="2677" decimalPlaces="6"/>
+        <field fieldname="out_total_payab_amt" fieldid="5499" decimalPlaces="6"/>
+        <field fieldname="out_total_rece_amt" fieldid="5500" decimalPlaces="6"/>
+        <field fieldname="pboc_rate" fieldid="5199" decimalPlaces="12"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="busi_config_str" fieldid="2794"/>
+    </function>
+    <function functionname="funct_pdseca_ImportCapitalData" typename="LD_ANSWER" functionid="pdsecuT.2.781" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+</bizmsgs>

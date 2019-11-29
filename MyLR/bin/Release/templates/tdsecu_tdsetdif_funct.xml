@@ -1,0 +1,800 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bizmsgs>
+    <function functionname="funct_tdsetdif_DealClearStrikeRsp" typename="LD_REQUEST" functionid="tdsecuT.20.1" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="qry_no" fieldid="1223"/>
+    </function>
+    <function functionname="funct_tdsetdif_DealClearStrikeRsp" typename="LD_ANSWER" functionid="tdsecuT.20.1" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="record_count" fieldid="1865"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_acco_no" fieldid="1697"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="target_stock_code_no" fieldid="3383"/>
+        <field fieldname="target_stock_code" fieldid="5164"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="strike_date" fieldid="1310"/>
+        <field fieldname="strike_time" fieldid="1311"/>
+        <field fieldname="strike_no" fieldid="1295"/>
+        <field fieldname="report_date" fieldid="2505"/>
+        <field fieldname="report_time" fieldid="2506"/>
+        <field fieldname="report_no" fieldid="2502"/>
+        <field fieldname="order_date" fieldid="1458"/>
+        <field fieldname="order_time" fieldid="1459"/>
+        <field fieldname="order_no" fieldid="1441"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="strike_price" fieldid="1303" decimalPlaces="9"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+        <field fieldname="all_fee" fieldid="2410" decimalPlaces="6"/>
+        <field fieldname="trade_code_no" fieldid="1918"/>
+        <field fieldname="target_code_no" fieldid="1161"/>
+        <field fieldname="capit_reback_days" fieldid="3066"/>
+        <field fieldname="posi_reback_days" fieldid="1323"/>
+        <field fieldname="net_price_flag" fieldid="2019"/>
+        <field fieldname="intrst_days" fieldid="1864"/>
+        <field fieldname="par_value" fieldid="2310" decimalPlaces="9"/>
+        <field fieldname="bond_accr_intrst" fieldid="2893" decimalPlaces="12"/>
+        <field fieldname="bond_rate_type" fieldid="2894"/>
+        <field fieldname="impawn_ratio" fieldid="3026" decimalPlaces="12"/>
+        <field fieldname="strike_deal_type" fieldid="1298"/>
+        <field fieldname="stamp_tax" fieldid="2814" decimalPlaces="6"/>
+        <field fieldname="trans_fee" fieldid="1718" decimalPlaces="6"/>
+        <field fieldname="brkage_fee" fieldid="2017" decimalPlaces="6"/>
+        <field fieldname="SEC_charges" fieldid="2922" decimalPlaces="6"/>
+        <field fieldname="other_fee" fieldid="2348" decimalPlaces="6"/>
+        <field fieldname="trade_commis" fieldid="1953" decimalPlaces="6"/>
+        <field fieldname="other_commis" fieldid="2350" decimalPlaces="6"/>
+        <field fieldname="trade_tax" fieldid="3853" decimalPlaces="6"/>
+        <field fieldname="trade_cost_fee" fieldid="3854" decimalPlaces="6"/>
+        <field fieldname="trade_system_use_fee" fieldid="3855" decimalPlaces="6"/>
+        <field fieldname="stock_settle_fee" fieldid="3856" decimalPlaces="6"/>
+    </function>
+    <function functionname="funct_tdsetdif_UpdateOneStrikeClearFlag" typename="LD_REQUEST" functionid="tdsecuT.20.2" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="deal_flag" fieldid="1342"/>
+    </function>
+    <function functionname="funct_tdsetdif_UpdateOneStrikeClearFlag" typename="LD_ANSWER" functionid="tdsecuT.20.2" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_tdsetdif_UpdateAllStrikeClearFlag" typename="LD_REQUEST" functionid="tdsecuT.20.3" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="deal_flag" fieldid="1342"/>
+    </function>
+    <function functionname="funct_tdsetdif_UpdateAllStrikeClearFlag" typename="LD_ANSWER" functionid="tdsecuT.20.3" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_tdsetdif_UpdateGetNewStockOrder" typename="LD_REQUEST" functionid="tdsecuT.20.4" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+    </function>
+    <function functionname="funct_tdsetdif_UpdateGetNewStockOrder" typename="LD_ANSWER" functionid="tdsecuT.20.4" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="record_count" fieldid="1865"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_acco_no" fieldid="1697"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="report_date" fieldid="2505"/>
+        <field fieldname="report_time" fieldid="2506"/>
+        <field fieldname="report_no" fieldid="2502"/>
+        <field fieldname="order_date" fieldid="1458"/>
+        <field fieldname="order_time" fieldid="1459"/>
+        <field fieldname="order_no" fieldid="1441"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="all_fee" fieldid="2410" decimalPlaces="6"/>
+        <field fieldname="other_fee" fieldid="2348" decimalPlaces="6"/>
+        <field fieldname="trade_commis" fieldid="1953" decimalPlaces="6"/>
+        <field fieldname="other_commis" fieldid="2350" decimalPlaces="6"/>
+        <field fieldname="order_frozen_amt" fieldid="1445" decimalPlaces="6"/>
+        <field fieldname="nav_asset" fieldid="2035" decimalPlaces="6"/>
+        <field fieldname="rsp_info" fieldid="1800"/>
+        <field fieldname="compli_trig_id" fieldid="1743"/>
+        <field fieldname="trade_code_no" fieldid="1918"/>
+        <field fieldname="target_code_no" fieldid="1161"/>
+    </function>
+    <function functionname="funct_tdsetdif_GetStrikeTotal" typename="LD_REQUEST" functionid="tdsecuT.20.5" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+    </function>
+    <function functionname="funct_tdsetdif_GetStrikeTotal" typename="LD_ANSWER" functionid="tdsecuT.20.5" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="strike_count" fieldid="1302"/>
+        <field fieldname="succ_count" fieldid="1292"/>
+        <field fieldname="fail_count" fieldid="2528"/>
+    </function>
+    <function functionname="funct_tdsetdif_GetSwitchStrikeTotal" typename="LD_REQUEST" functionid="tdsecuT.20.6" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+    </function>
+    <function functionname="funct_tdsetdif_GetSwitchStrikeTotal" typename="LD_ANSWER" functionid="tdsecuT.20.6" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="pre_switch_strike_qty" fieldid="3667" decimalPlaces="2"/>
+        <field fieldname="alr_switch_strike_qty" fieldid="3668" decimalPlaces="2"/>
+    </function>
+    <function functionname="funct_tdsetdif_QueryErrorStrike" typename="LD_REQUEST" functionid="tdsecuT.20.7" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="sett_flag" fieldid="2380"/>
+    </function>
+    <function functionname="funct_tdsetdif_QueryErrorStrike" typename="LD_ANSWER" functionid="tdsecuT.20.7" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="out_acco" fieldid="2697"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_acco" fieldid="1696"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="strike_time" fieldid="1311"/>
+            <field fieldname="strike_no" fieldid="1295"/>
+            <field fieldname="report_time" fieldid="2506"/>
+            <field fieldname="report_no" fieldid="2502"/>
+            <field fieldname="order_dir" fieldid="1449"/>
+            <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+            <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+            <field fieldname="sett_flag" fieldid="2380"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+        </sequence>
+    </function>
+    <function functionname="funct_tdsetdif_GetComboPosiInfo" typename="LD_REQUEST" functionid="tdsecuT.20.8" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="query_row_id" fieldid="1214"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+    </function>
+    <function functionname="funct_tdsetdif_GetComboPosiInfo" typename="LD_ANSWER" functionid="tdsecuT.20.8" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_acco_no" fieldid="1697"/>
+            <field fieldname="curr_qty" fieldid="1401" decimalPlaces="2"/>
+            <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        </sequence>
+    </function>
+    <function functionname="funct_tdsetdif_ComboCoActionRegDeal" typename="LD_REQUEST" functionid="tdsecuT.20.9" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_acco_no" fieldid="1697"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="occur_qty" fieldid="1159" decimalPlaces="2"/>
+        <field fieldname="target_code_no" fieldid="1161"/>
+        <field fieldname="impawn_ratio" fieldid="3026" decimalPlaces="12"/>
+        <field fieldname="busi_flag" fieldid="2785"/>
+        <field fieldname="cost_calc_type" fieldid="1283"/>
+        <field fieldname="co_busi_config_str" fieldid="1835"/>
+        <field fieldname="arrive_date" fieldid="1427"/>
+        <field fieldname="begin_trade_date" fieldid="2498"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funct_tdsetdif_ComboCoActionRegDeal" typename="LD_ANSWER" functionid="tdsecuT.20.9" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="entry_money_jour_no" fieldid="2481"/>
+        <field fieldname="entry_exgp_posi_jour_no" fieldid="3752"/>
+        <field fieldname="entry_asac_posi_jour_no" fieldid="3753"/>
+    </function>
+    <function functionname="funct_tdsetdif_DealComboPosiPreEntry" typename="LD_REQUEST" functionid="tdsecuT.20.10" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_tdsetdif_DealComboPosiPreEntry" typename="LD_ANSWER" functionid="tdsecuT.20.10" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_tdseac_InsertComboPosiEntryJour" typename="LD_REQUEST" functionid="tdsecuT.20.11" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_acco_no" fieldid="1697"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="target_code_no" fieldid="1161"/>
+        <field fieldname="occur_qty" fieldid="1159" decimalPlaces="2"/>
+        <field fieldname="arrive_date" fieldid="1427"/>
+        <field fieldname="entry_status" fieldid="2480"/>
+    </function>
+    <function functionname="funct_tdseac_InsertComboPosiEntryJour" typename="LD_ANSWER" functionid="tdsecuT.20.11" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_tdseac_UpdateHKPreEntryRecord" typename="LD_REQUEST" functionid="tdsecuT.20.12" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="T1_settle_date" fieldid="3934"/>
+        <field fieldname="T2_settle_date" fieldid="3935"/>
+    </function>
+    <function functionname="funct_tdseac_UpdateHKPreEntryRecord" typename="LD_ANSWER" functionid="tdsecuT.20.12" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_tdsetdif_DealFundTradeRecord" typename="LD_REQUEST" functionid="tdsecuT.20.13" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="qry_no" fieldid="1223"/>
+    </function>
+    <function functionname="funct_tdsetdif_DealFundTradeRecord" typename="LD_ANSWER" functionid="tdsecuT.20.13" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="record_count" fieldid="1865"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_acco_no" fieldid="1697"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="target_stock_code_no" fieldid="3383"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="report_date" fieldid="2505"/>
+        <field fieldname="report_time" fieldid="2506"/>
+        <field fieldname="report_no" fieldid="2502"/>
+        <field fieldname="order_date" fieldid="1458"/>
+        <field fieldname="order_time" fieldid="1459"/>
+        <field fieldname="order_no" fieldid="1441"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+        <field fieldname="all_fee" fieldid="2410" decimalPlaces="6"/>
+        <field fieldname="stamp_tax" fieldid="2814" decimalPlaces="6"/>
+        <field fieldname="trans_fee" fieldid="1718" decimalPlaces="6"/>
+        <field fieldname="brkage_fee" fieldid="2017" decimalPlaces="6"/>
+        <field fieldname="SEC_charges" fieldid="2922" decimalPlaces="6"/>
+        <field fieldname="other_fee" fieldid="2348" decimalPlaces="6"/>
+        <field fieldname="trade_commis" fieldid="1953" decimalPlaces="6"/>
+        <field fieldname="other_commis" fieldid="2350" decimalPlaces="6"/>
+        <field fieldname="trade_tax" fieldid="3853" decimalPlaces="6"/>
+        <field fieldname="trade_cost_fee" fieldid="3854" decimalPlaces="6"/>
+        <field fieldname="trade_system_use_fee" fieldid="3855" decimalPlaces="6"/>
+        <field fieldname="stock_settle_fee" fieldid="3856" decimalPlaces="6"/>
+        <field fieldname="busi_flag" fieldid="2785"/>
+        <field fieldname="trade_code_no" fieldid="1918"/>
+        <field fieldname="target_code_no" fieldid="1161"/>
+        <field fieldname="intrst_days" fieldid="1864"/>
+        <field fieldname="bond_accr_intrst" fieldid="2893" decimalPlaces="12"/>
+        <field fieldname="bond_rate_type" fieldid="2894"/>
+        <field fieldname="impawn_ratio" fieldid="3026" decimalPlaces="12"/>
+        <field fieldname="pre_entry_amt" fieldid="1371" decimalPlaces="6"/>
+        <field fieldname="pre_entry_qty" fieldid="1374" decimalPlaces="2"/>
+    </function>
+    <function functionname="funct_tdsetdif_UpdateOneOrderClearFlag" typename="LD_REQUEST" functionid="tdsecuT.20.14" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="deal_flag" fieldid="1342"/>
+    </function>
+    <function functionname="funct_tdsetdif_UpdateOneOrderClearFlag" typename="LD_ANSWER" functionid="tdsecuT.20.14" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_tdsetdif_QueryStrikeId" typename="LD_REQUEST" functionid="tdsecuT.20.15" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="qry_no" fieldid="1223"/>
+        <field fieldname="row_count" fieldid="2959"/>
+        <field fieldname="init_date" fieldid="1339"/>
+    </function>
+    <function functionname="funct_tdsetdif_QueryStrikeId" typename="LD_ANSWER" functionid="tdsecuT.20.15" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+        </sequence>
+    </function>
+    <function functionname="funct_tdsetdif_DealCrdtClearStrikeRsp" typename="LD_REQUEST" functionid="tdsecuT.20.21" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="qry_no" fieldid="1223"/>
+    </function>
+    <function functionname="funct_tdsetdif_DealCrdtClearStrikeRsp" typename="LD_ANSWER" functionid="tdsecuT.20.21" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="record_count" fieldid="1865"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="busi_opor_no" fieldid="2789"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_acco_no" fieldid="1697"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="target_stock_code_no" fieldid="3383"/>
+        <field fieldname="target_stock_code" fieldid="5164"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="strike_date" fieldid="1310"/>
+        <field fieldname="strike_time" fieldid="1311"/>
+        <field fieldname="strike_no" fieldid="1295"/>
+        <field fieldname="report_date" fieldid="2505"/>
+        <field fieldname="report_time" fieldid="2506"/>
+        <field fieldname="report_no" fieldid="2502"/>
+        <field fieldname="order_date" fieldid="1458"/>
+        <field fieldname="order_time" fieldid="1459"/>
+        <field fieldname="order_no" fieldid="1441"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="strike_price" fieldid="1303" decimalPlaces="9"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+        <field fieldname="all_fee" fieldid="2410" decimalPlaces="6"/>
+        <field fieldname="trade_code_no" fieldid="1918"/>
+        <field fieldname="target_code_no" fieldid="1161"/>
+        <field fieldname="capit_reback_days" fieldid="3066"/>
+        <field fieldname="posi_reback_days" fieldid="1323"/>
+        <field fieldname="net_price_flag" fieldid="2019"/>
+        <field fieldname="intrst_days" fieldid="1864"/>
+        <field fieldname="par_value" fieldid="2310" decimalPlaces="9"/>
+        <field fieldname="bond_accr_intrst" fieldid="2893" decimalPlaces="12"/>
+        <field fieldname="bond_rate_type" fieldid="2894"/>
+        <field fieldname="impawn_ratio" fieldid="3026" decimalPlaces="12"/>
+        <field fieldname="strike_deal_type" fieldid="1298"/>
+        <field fieldname="stamp_tax" fieldid="2814" decimalPlaces="6"/>
+        <field fieldname="trans_fee" fieldid="1718" decimalPlaces="6"/>
+        <field fieldname="brkage_fee" fieldid="2017" decimalPlaces="6"/>
+        <field fieldname="SEC_charges" fieldid="2922" decimalPlaces="6"/>
+        <field fieldname="other_fee" fieldid="2348" decimalPlaces="6"/>
+        <field fieldname="trade_commis" fieldid="1953" decimalPlaces="6"/>
+        <field fieldname="other_commis" fieldid="2350" decimalPlaces="6"/>
+        <field fieldname="trade_tax" fieldid="3853" decimalPlaces="6"/>
+        <field fieldname="trade_cost_fee" fieldid="3854" decimalPlaces="6"/>
+        <field fieldname="trade_system_use_fee" fieldid="3855" decimalPlaces="6"/>
+        <field fieldname="stock_settle_fee" fieldid="3856" decimalPlaces="6"/>
+    </function>
+    <function functionname="funct_tdsetdif_GetCrdtStrikeTotal" typename="LD_REQUEST" functionid="tdsecuT.20.22" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+    </function>
+    <function functionname="funct_tdsetdif_GetCrdtStrikeTotal" typename="LD_ANSWER" functionid="tdsecuT.20.22" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="strike_count" fieldid="1302"/>
+        <field fieldname="succ_count" fieldid="1292"/>
+        <field fieldname="fail_count" fieldid="2528"/>
+    </function>
+    <function functionname="funct_tdsetdif_GetCrdtSwitchStrikeTotal" typename="LD_REQUEST" functionid="tdsecuT.20.23" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+    </function>
+    <function functionname="funct_tdsetdif_GetCrdtSwitchStrikeTotal" typename="LD_ANSWER" functionid="tdsecuT.20.23" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="pre_switch_strike_qty" fieldid="3667" decimalPlaces="2"/>
+        <field fieldname="alr_switch_strike_qty" fieldid="3668" decimalPlaces="2"/>
+    </function>
+    <function functionname="funct_tdsetdif_QueryErrorCrdtStrike" typename="LD_REQUEST" functionid="tdsecuT.20.24" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="sett_flag" fieldid="2380"/>
+    </function>
+    <function functionname="funct_tdsetdif_QueryErrorCrdtStrike" typename="LD_ANSWER" functionid="tdsecuT.20.24" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="out_acco" fieldid="2697"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_acco" fieldid="1696"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="strike_time" fieldid="1311"/>
+            <field fieldname="strike_no" fieldid="1295"/>
+            <field fieldname="report_time" fieldid="2506"/>
+            <field fieldname="report_no" fieldid="2502"/>
+            <field fieldname="order_dir" fieldid="1449"/>
+            <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+            <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+            <field fieldname="sett_flag" fieldid="2380"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+        </sequence>
+    </function>
+    <function functionname="funct_tdsetdif_QueryCrdtStrikeId" typename="LD_REQUEST" functionid="tdsecuT.20.25" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="qry_no" fieldid="1223"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_tdsetdif_QueryCrdtStrikeId" typename="LD_ANSWER" functionid="tdsecuT.20.25" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+        </sequence>
+    </function>
+    <function functionname="funct_tdsetdif_ASharePreEntryCheckTotal" typename="LD_REQUEST" functionid="tdsecuT.20.26" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+    </function>
+    <function functionname="funct_tdsetdif_ASharePreEntryCheckTotal" typename="LD_ANSWER" functionid="tdsecuT.20.26" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="sum_strike_count" fieldid="5779"/>
+        <field fieldname="split_strike_count" fieldid="5780"/>
+        <field fieldname="split_order_count" fieldid="5817"/>
+    </function>
+    <function functionname="funct_tdsetdif_AutoDealClearStrikeRsp" typename="LD_REQUEST" functionid="tdsecuT.20.27" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="qry_no" fieldid="1223"/>
+    </function>
+    <function functionname="funct_tdsetdif_AutoDealClearStrikeRsp" typename="LD_ANSWER" functionid="tdsecuT.20.27" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="record_count" fieldid="1865"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_acco_no" fieldid="1697"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="target_stock_code_no" fieldid="3383"/>
+        <field fieldname="target_stock_code" fieldid="5164"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="strike_date" fieldid="1310"/>
+        <field fieldname="strike_time" fieldid="1311"/>
+        <field fieldname="strike_no" fieldid="1295"/>
+        <field fieldname="report_date" fieldid="2505"/>
+        <field fieldname="report_time" fieldid="2506"/>
+        <field fieldname="report_no" fieldid="2502"/>
+        <field fieldname="order_date" fieldid="1458"/>
+        <field fieldname="order_time" fieldid="1459"/>
+        <field fieldname="order_no" fieldid="1441"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="strike_price" fieldid="1303" decimalPlaces="9"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+        <field fieldname="all_fee" fieldid="2410" decimalPlaces="6"/>
+        <field fieldname="trade_code_no" fieldid="1918"/>
+        <field fieldname="target_code_no" fieldid="1161"/>
+        <field fieldname="capit_reback_days" fieldid="3066"/>
+        <field fieldname="posi_reback_days" fieldid="1323"/>
+        <field fieldname="net_price_flag" fieldid="2019"/>
+        <field fieldname="intrst_days" fieldid="1864"/>
+        <field fieldname="par_value" fieldid="2310" decimalPlaces="9"/>
+        <field fieldname="bond_accr_intrst" fieldid="2893" decimalPlaces="12"/>
+        <field fieldname="bond_rate_type" fieldid="2894"/>
+        <field fieldname="impawn_ratio" fieldid="3026" decimalPlaces="12"/>
+        <field fieldname="strike_deal_type" fieldid="1298"/>
+        <field fieldname="stamp_tax" fieldid="2814" decimalPlaces="6"/>
+        <field fieldname="trans_fee" fieldid="1718" decimalPlaces="6"/>
+        <field fieldname="brkage_fee" fieldid="2017" decimalPlaces="6"/>
+        <field fieldname="SEC_charges" fieldid="2922" decimalPlaces="6"/>
+        <field fieldname="other_fee" fieldid="2348" decimalPlaces="6"/>
+        <field fieldname="trade_commis" fieldid="1953" decimalPlaces="6"/>
+        <field fieldname="other_commis" fieldid="2350" decimalPlaces="6"/>
+        <field fieldname="trade_tax" fieldid="3853" decimalPlaces="6"/>
+        <field fieldname="trade_cost_fee" fieldid="3854" decimalPlaces="6"/>
+        <field fieldname="trade_system_use_fee" fieldid="3855" decimalPlaces="6"/>
+        <field fieldname="stock_settle_fee" fieldid="3856" decimalPlaces="6"/>
+    </function>
+    <function functionname="funct_tdsetdif_PatchSyncDebtDetail" typename="LD_REQUEST" functionid="tdsecuT.20.28" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_acco_no" fieldid="1697"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="invest_type" fieldid="2651"/>
+        <field fieldname="debt_type" fieldid="5609"/>
+        <field fieldname="occur_qty" fieldid="1159" decimalPlaces="2"/>
+        <field fieldname="occur_amt" fieldid="1157" decimalPlaces="6"/>
+        <field fieldname="debt_fee" fieldid="5672" decimalPlaces="6"/>
+        <field fieldname="debt_interest" fieldid="5666" decimalPlaces="6"/>
+    </function>
+    <function functionname="funct_tdsetdif_PatchSyncDebtDetail" typename="LD_ANSWER" functionid="tdsecuT.20.28" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_tdsetdif_CreateTbStrikeRspBak" typename="LD_REQUEST" functionid="tdsecuT.20.29" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+    </function>
+    <function functionname="funct_tdsetdif_CreateTbStrikeRspBak" typename="LD_ANSWER" functionid="tdsecuT.20.29" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_tdsetdif_ReTbStrikeRsp" typename="LD_REQUEST" functionid="tdsecuT.20.30" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+    </function>
+    <function functionname="funct_tdsetdif_ReTbStrikeRsp" typename="LD_ANSWER" functionid="tdsecuT.20.30" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_tdsetdif_AddNewStockPreOrder" typename="LD_REQUEST" functionid="tdsecuT.20.41" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="oper_func_code" fieldid="1186"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="stock_acco" fieldid="1696"/>
+        <field fieldname="stock_acco_no" fieldid="1697"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="pre_order_dir" fieldid="2843"/>
+        <field fieldname="pre_order_type" fieldid="2842"/>
+        <field fieldname="pre_order_price" fieldid="2844" decimalPlaces="9"/>
+        <field fieldname="trig_type" fieldid="1348"/>
+        <field fieldname="trig_price" fieldid="1349" decimalPlaces="9"/>
+        <field fieldname="trig_date" fieldid="5001"/>
+        <field fieldname="trig_time" fieldid="1351"/>
+        <field fieldname="pre_order_qty" fieldid="2847" decimalPlaces="2"/>
+        <field fieldname="pre_price_type" fieldid="4045"/>
+        <field fieldname="price_offset" fieldid="3888" decimalPlaces="9"/>
+        <field fieldname="auth_time" fieldid="2837"/>
+        <field fieldname="pre_begin_date" fieldid="5003"/>
+        <field fieldname="pre_end_date" fieldid="5004"/>
+        <field fieldname="pre_begin_time" fieldid="4046"/>
+        <field fieldname="pre_end_time" fieldid="4047"/>
+        <field fieldname="is_trace" fieldid="5248"/>
+        <field fieldname="is_strategy_pre" fieldid="5904"/>
+        <field fieldname="trig_qty_type" fieldid="5903"/>
+        <field fieldname="trig_price_type" fieldid="5905"/>
+        <field fieldname="trig_time_intrv" fieldid="5909"/>
+        <field fieldname="trace_price_type" fieldid="5906"/>
+        <field fieldname="trace_price" fieldid="5907" decimalPlaces="9"/>
+        <field fieldname="trace_price_offset" fieldid="5908" decimalPlaces="9"/>
+        <field fieldname="price_type" fieldid="1887"/>
+        <field fieldname="target_strategy_type" fieldid="3688"/>
+        <field fieldname="target_strategy_param" fieldid="3689"/>
+        <field fieldname="strategy_price_type" fieldid="3684"/>
+        <field fieldname="order_oper_way" fieldid="1443"/>
+        <field fieldname="trace_times" fieldid="5914"/>
+        <field fieldname="begin_trade_date" fieldid="2498"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="hedge_type" fieldid="2591"/>
+    </function>
+    <function functionname="funct_tdsetdif_AddNewStockPreOrder" typename="LD_ANSWER" functionid="tdsecuT.20.41" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="pre_order_id" fieldid="2848"/>
+        <field fieldname="pre_order_date" fieldid="2845"/>
+        <field fieldname="pre_order_time" fieldid="2846"/>
+        <field fieldname="pre_order_status" fieldid="2849"/>
+    </function>
+    <function functionname="funct_tdsetdif_DeleteAfterMarketImportData" typename="LD_REQUEST" functionid="tdsecuT.20.42" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+    </function>
+    <function functionname="funct_tdsetdif_DeleteAfterMarketImportData" typename="LD_ANSWER" functionid="tdsecuT.20.42" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+</bizmsgs>

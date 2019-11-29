@@ -1,0 +1,986 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bizmsgs>
+    <function functionname="funct_feeseclient_AddSecuFeeTmplat" typename="LD_REQUEST" functionid="pubT.23.11" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="fee_tmplat_name" fieldid="1532"/>
+        <field fieldname="fee_tmplat_kind" fieldid="1530"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_feeseclient_AddSecuFeeTmplat" typename="LD_ANSWER" functionid="pubT.23.11" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="fee_tmplat_no" fieldid="1527"/>
+    </function>
+    <function functionname="funct_feeseclient_ModiSecuFeeTmplat" typename="LD_REQUEST" functionid="pubT.23.12" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="fee_tmplat_no" fieldid="1527"/>
+        <field fieldname="fee_tmplat_name" fieldid="1532"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_feeseclient_ModiSecuFeeTmplat" typename="LD_ANSWER" functionid="pubT.23.12" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_feeseclient_DeleteSecuFeeTmplat" typename="LD_REQUEST" functionid="pubT.23.13" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="fee_tmplat_no" fieldid="1527"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_feeseclient_DeleteSecuFeeTmplat" typename="LD_ANSWER" functionid="pubT.23.13" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_feeseclient_QuerySecuFeeTmplat" typename="LD_REQUEST" functionid="pubT.23.14" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="fee_tmplat_no" fieldid="1527"/>
+        <field fieldname="fee_tmplat_kind" fieldid="1530"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_feeseclient_QuerySecuFeeTmplat" typename="LD_ANSWER" functionid="pubT.23.14" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="fee_tmplat_no" fieldid="1527"/>
+            <field fieldname="fee_tmplat_name" fieldid="1532"/>
+            <field fieldname="fee_tmplat_kind" fieldid="1530"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+        </sequence>
+    </function>
+    <function functionname="funct_feeseclient_QuerySecuFeeTmplatJour" typename="LD_REQUEST" functionid="pubT.23.15" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="fee_tmplat_no" fieldid="1527"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_feeseclient_QuerySecuFeeTmplatJour" typename="LD_ANSWER" functionid="pubT.23.15" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="fee_tmplat_no" fieldid="1527"/>
+            <field fieldname="fee_tmplat_name" fieldid="1532"/>
+            <field fieldname="fee_tmplat_kind" fieldid="1530"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funct_feeseclient_QuerySecuFeeTmplatJour_His" typename="LD_REQUEST" functionid="pubT.23.16" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="fee_tmplat_no" fieldid="1527"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_feeseclient_QuerySecuFeeTmplatJour_His" typename="LD_ANSWER" functionid="pubT.23.16" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="fee_tmplat_no" fieldid="1527"/>
+            <field fieldname="fee_tmplat_name" fieldid="1532"/>
+            <field fieldname="fee_tmplat_kind" fieldid="1530"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funct_feeseclient_CopySecuFeeTmplat" typename="LD_REQUEST" functionid="pubT.23.17" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="source_fee_tmplat_no" fieldid="3860"/>
+        <field fieldname="fee_tmplat_name" fieldid="1532"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_feeseclient_CopySecuFeeTmplat" typename="LD_ANSWER" functionid="pubT.23.17" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="fee_tmplat_no" fieldid="1527"/>
+    </function>
+    <function functionname="funct_feeseclient_AddStockTypeFeeTmplatDetail" typename="LD_REQUEST" functionid="pubT.23.21" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="fee_tmplat_no" fieldid="1527"/>
+        <field fieldname="secu_fee_type" fieldid="1525"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="amt_ratio" fieldid="2005" decimalPlaces="12"/>
+        <field fieldname="amt_value" fieldid="2006" decimalPlaces="6"/>
+        <field fieldname="par_value_ratio" fieldid="2240" decimalPlaces="12"/>
+        <field fieldname="par_value_value" fieldid="2241" decimalPlaces="6"/>
+        <field fieldname="max_fee" fieldid="3114" decimalPlaces="6"/>
+        <field fieldname="min_fee" fieldid="3107" decimalPlaces="6"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_feeseclient_AddStockTypeFeeTmplatDetail" typename="LD_ANSWER" functionid="pubT.23.21" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_feeseclient_ModiStockTypeFeeTmplatDetail" typename="LD_REQUEST" functionid="pubT.23.22" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="fee_tmplat_no" fieldid="1527"/>
+        <field fieldname="fee_no" fieldid="1519"/>
+        <field fieldname="amt_ratio" fieldid="2005" decimalPlaces="12"/>
+        <field fieldname="amt_value" fieldid="2006" decimalPlaces="6"/>
+        <field fieldname="par_value_ratio" fieldid="2240" decimalPlaces="12"/>
+        <field fieldname="par_value_value" fieldid="2241" decimalPlaces="6"/>
+        <field fieldname="max_fee" fieldid="3114" decimalPlaces="6"/>
+        <field fieldname="min_fee" fieldid="3107" decimalPlaces="6"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_feeseclient_ModiStockTypeFeeTmplatDetail" typename="LD_ANSWER" functionid="pubT.23.22" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_feeseclient_DeleteStockTypeFeeTmplatDetail" typename="LD_REQUEST" functionid="pubT.23.23" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="fee_tmplat_no" fieldid="1527"/>
+        <field fieldname="fee_no" fieldid="1519"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_feeseclient_DeleteStockTypeFeeTmplatDetail" typename="LD_ANSWER" functionid="pubT.23.23" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_feeseclient_QueryStockTypeFeeTmplatDetail" typename="LD_REQUEST" functionid="pubT.23.24" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="stock_type_str" fieldid="2939"/>
+        <field fieldname="fee_tmplat_no_str" fieldid="1528"/>
+        <field fieldname="secu_fee_type" fieldid="1525"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_feeseclient_QueryStockTypeFeeTmplatDetail" typename="LD_ANSWER" functionid="pubT.23.24" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_type" fieldid="2938"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="fee_no" fieldid="1519"/>
+            <field fieldname="fee_tmplat_no" fieldid="1527"/>
+            <field fieldname="secu_fee_type" fieldid="1525"/>
+            <field fieldname="order_dir" fieldid="1449"/>
+            <field fieldname="amt_ratio" fieldid="2005" decimalPlaces="12"/>
+            <field fieldname="amt_value" fieldid="2006" decimalPlaces="6"/>
+            <field fieldname="par_value_ratio" fieldid="2240" decimalPlaces="12"/>
+            <field fieldname="par_value_value" fieldid="2241" decimalPlaces="6"/>
+            <field fieldname="max_fee" fieldid="3114" decimalPlaces="6"/>
+            <field fieldname="min_fee" fieldid="3107" decimalPlaces="6"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+        </sequence>
+    </function>
+    <function functionname="funct_feeseclient_QueryStockTypeFeeTmplatDetailJour" typename="LD_REQUEST" functionid="pubT.23.25" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="stock_type_str" fieldid="2939"/>
+        <field fieldname="fee_tmplat_no_str" fieldid="1528"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_feeseclient_QueryStockTypeFeeTmplatDetailJour" typename="LD_ANSWER" functionid="pubT.23.25" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_type" fieldid="2938"/>
+            <field fieldname="fee_tmplat_no" fieldid="1527"/>
+            <field fieldname="jour_occur_field" fieldid="2184"/>
+            <field fieldname="jour_after_occur_info" fieldid="2185"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funct_feeseclient_QueryStockTypeFeeTmplatDetailJour_His" typename="LD_REQUEST" functionid="pubT.23.26" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="stock_type_str" fieldid="2939"/>
+        <field fieldname="fee_tmplat_no_str" fieldid="1528"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_feeseclient_QueryStockTypeFeeTmplatDetailJour_His" typename="LD_ANSWER" functionid="pubT.23.26" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_type" fieldid="2938"/>
+            <field fieldname="fee_tmplat_no" fieldid="1527"/>
+            <field fieldname="jour_occur_field" fieldid="2184"/>
+            <field fieldname="jour_after_occur_info" fieldid="2185"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funct_feeseclient_AddStockCodeFeeTmplatDetail" typename="LD_REQUEST" functionid="pubT.23.31" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="fee_tmplat_no" fieldid="1527"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="secu_fee_type" fieldid="1525"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="amt_ratio" fieldid="2005" decimalPlaces="12"/>
+        <field fieldname="amt_value" fieldid="2006" decimalPlaces="6"/>
+        <field fieldname="par_value_ratio" fieldid="2240" decimalPlaces="12"/>
+        <field fieldname="par_value_value" fieldid="2241" decimalPlaces="6"/>
+        <field fieldname="max_fee" fieldid="3114" decimalPlaces="6"/>
+        <field fieldname="min_fee" fieldid="3107" decimalPlaces="6"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_feeseclient_AddStockCodeFeeTmplatDetail" typename="LD_ANSWER" functionid="pubT.23.31" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_feeseclient_ModiStockCodeFeeTmplatDetail" typename="LD_REQUEST" functionid="pubT.23.32" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="fee_tmplat_no" fieldid="1527"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="fee_no" fieldid="1519"/>
+        <field fieldname="amt_ratio" fieldid="2005" decimalPlaces="12"/>
+        <field fieldname="amt_value" fieldid="2006" decimalPlaces="6"/>
+        <field fieldname="par_value_ratio" fieldid="2240" decimalPlaces="12"/>
+        <field fieldname="par_value_value" fieldid="2241" decimalPlaces="6"/>
+        <field fieldname="max_fee" fieldid="3114" decimalPlaces="6"/>
+        <field fieldname="min_fee" fieldid="3107" decimalPlaces="6"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_feeseclient_ModiStockCodeFeeTmplatDetail" typename="LD_ANSWER" functionid="pubT.23.32" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_feeseclient_DeleteStockCodeFeeTmplatDetail" typename="LD_REQUEST" functionid="pubT.23.33" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="fee_tmplat_no" fieldid="1527"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="fee_no" fieldid="1519"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_feeseclient_DeleteStockCodeFeeTmplatDetail" typename="LD_ANSWER" functionid="pubT.23.33" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_feeseclient_QueryStockCodeFeeTmplatDetail" typename="LD_REQUEST" functionid="pubT.23.34" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="fee_tmplat_no_str" fieldid="1528"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="stock_code_no_str" fieldid="3192"/>
+        <field fieldname="secu_fee_type" fieldid="1525"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_feeseclient_QueryStockCodeFeeTmplatDetail" typename="LD_ANSWER" functionid="pubT.23.34" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="fee_tmplat_no" fieldid="1527"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="fee_no" fieldid="1519"/>
+            <field fieldname="secu_fee_type" fieldid="1525"/>
+            <field fieldname="order_dir" fieldid="1449"/>
+            <field fieldname="amt_ratio" fieldid="2005" decimalPlaces="12"/>
+            <field fieldname="amt_value" fieldid="2006" decimalPlaces="6"/>
+            <field fieldname="par_value_ratio" fieldid="2240" decimalPlaces="12"/>
+            <field fieldname="par_value_value" fieldid="2241" decimalPlaces="6"/>
+            <field fieldname="max_fee" fieldid="3114" decimalPlaces="6"/>
+            <field fieldname="min_fee" fieldid="3107" decimalPlaces="6"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+        </sequence>
+    </function>
+    <function functionname="funct_feeseclient_QueryStockCodeFeeTmplatDetailJour" typename="LD_REQUEST" functionid="pubT.23.35" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="fee_tmplat_no_str" fieldid="1528"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_feeseclient_QueryStockCodeFeeTmplatDetailJour" typename="LD_ANSWER" functionid="pubT.23.35" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="fee_tmplat_no" fieldid="1527"/>
+            <field fieldname="jour_occur_field" fieldid="2184"/>
+            <field fieldname="jour_after_occur_info" fieldid="2185"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funct_feeseclient_QueryStockCodeFeeTmplatDetailJour_His" typename="LD_REQUEST" functionid="pubT.23.36" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="fee_tmplat_no_str" fieldid="1528"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_feeseclient_QueryStockCodeFeeTmplatDetailJour_His" typename="LD_ANSWER" functionid="pubT.23.36" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="fee_tmplat_no" fieldid="1527"/>
+            <field fieldname="jour_occur_field" fieldid="2184"/>
+            <field fieldname="jour_after_occur_info" fieldid="2185"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funct_feeseclient_AddAsacSecuFeeTmplat" typename="LD_REQUEST" functionid="pubT.23.71" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="secu_code_fee_tmplat_no" fieldid="2931"/>
+        <field fieldname="secu_type_fee_tmplat_no" fieldid="2940"/>
+        <field fieldname="secu_code_out_fee_tmplat_no" fieldid="2935"/>
+        <field fieldname="secu_type_out_fee_tmplat_no" fieldid="2944"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_feeseclient_AddAsacSecuFeeTmplat" typename="LD_ANSWER" functionid="pubT.23.71" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_feeseclient_ModiAsacSecuFeeTmplat" typename="LD_REQUEST" functionid="pubT.23.72" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="secu_code_fee_tmplat_no" fieldid="2931"/>
+        <field fieldname="secu_type_fee_tmplat_no" fieldid="2940"/>
+        <field fieldname="secu_code_out_fee_tmplat_no" fieldid="2935"/>
+        <field fieldname="secu_type_out_fee_tmplat_no" fieldid="2944"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_feeseclient_ModiAsacSecuFeeTmplat" typename="LD_ANSWER" functionid="pubT.23.72" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_feeseclient_DeleteAsacSecuFeeTmplat" typename="LD_REQUEST" functionid="pubT.23.73" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_feeseclient_DeleteAsacSecuFeeTmplat" typename="LD_ANSWER" functionid="pubT.23.73" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_feeseclient_QueryAsacSecuFeeTmplat" typename="LD_REQUEST" functionid="pubT.23.74" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="secu_code_fee_tmplat_str" fieldid="2932"/>
+        <field fieldname="secu_type_fee_tmplat_str" fieldid="2941"/>
+        <field fieldname="secu_code_out_fee_tmplat_str" fieldid="2936"/>
+        <field fieldname="secu_type_out_fee_tmplat_str" fieldid="2945"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_feeseclient_QueryAsacSecuFeeTmplat" typename="LD_ANSWER" functionid="pubT.23.74" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="secu_code_spec_fee_tmplat_no" fieldid="2933"/>
+            <field fieldname="secu_type_spec_fee_tmplat_no" fieldid="2943"/>
+            <field fieldname="secu_code_fee_tmplat_no" fieldid="2931"/>
+            <field fieldname="secu_type_fee_tmplat_no" fieldid="2940"/>
+            <field fieldname="secu_code_out_fee_tmplat_no" fieldid="2935"/>
+            <field fieldname="secu_type_out_fee_tmplat_no" fieldid="2944"/>
+        </sequence>
+    </function>
+    <function functionname="funct_feeseclient_QueryAsacSecuFeeTmplatJour" typename="LD_REQUEST" functionid="pubT.23.75" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_feeseclient_QueryAsacSecuFeeTmplatJour" typename="LD_ANSWER" functionid="pubT.23.75" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="jour_occur_field" fieldid="2184"/>
+            <field fieldname="jour_after_occur_info" fieldid="2185"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funct_feeseclient_QueryAsacSecuFeeTmplatJour_His" typename="LD_REQUEST" functionid="pubT.23.76" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_feeseclient_QueryAsacSecuFeeTmplatJour_His" typename="LD_ANSWER" functionid="pubT.23.76" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="jour_occur_field" fieldid="2184"/>
+            <field fieldname="jour_after_occur_info" fieldid="2185"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funct_feeseclient_QuerySysStockTypeFee" typename="LD_REQUEST" functionid="pubT.23.104" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="stock_type_str" fieldid="2939"/>
+        <field fieldname="fee_no_str" fieldid="1520"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_feeseclient_QuerySysStockTypeFee" typename="LD_ANSWER" functionid="pubT.23.104" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_type" fieldid="2938"/>
+            <field fieldname="fee_no" fieldid="1519"/>
+            <field fieldname="secu_fee_type" fieldid="1525"/>
+            <field fieldname="order_dir" fieldid="1449"/>
+            <field fieldname="amt_ratio" fieldid="2005" decimalPlaces="12"/>
+            <field fieldname="amt_value" fieldid="2006" decimalPlaces="6"/>
+            <field fieldname="par_value_ratio" fieldid="2240" decimalPlaces="12"/>
+            <field fieldname="par_value_value" fieldid="2241" decimalPlaces="6"/>
+            <field fieldname="max_fee" fieldid="3114" decimalPlaces="6"/>
+            <field fieldname="min_fee" fieldid="3107" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_feeseclient_QuerySysStockCodeFee" typename="LD_REQUEST" functionid="pubT.23.114" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="stock_code_no_str" fieldid="3192"/>
+        <field fieldname="fee_no_str" fieldid="1520"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_feeseclient_QuerySysStockCodeFee" typename="LD_ANSWER" functionid="pubT.23.114" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="fee_no" fieldid="1519"/>
+            <field fieldname="secu_fee_type" fieldid="1525"/>
+            <field fieldname="order_dir" fieldid="1449"/>
+            <field fieldname="amt_ratio" fieldid="2005" decimalPlaces="12"/>
+            <field fieldname="amt_value" fieldid="2006" decimalPlaces="6"/>
+            <field fieldname="par_value_ratio" fieldid="2240" decimalPlaces="12"/>
+            <field fieldname="par_value_value" fieldid="2241" decimalPlaces="6"/>
+            <field fieldname="max_fee" fieldid="3114" decimalPlaces="6"/>
+            <field fieldname="min_fee" fieldid="3107" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_feeseclient_AddProdFare" typename="LD_REQUEST" functionid="pubT.23.161" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="pd_fee_type" fieldid="1247"/>
+        <field fieldname="pd_fee_name" fieldid="1249"/>
+        <field fieldname="pd_fee_rate" fieldid="1243" decimalPlaces="12"/>
+        <field fieldname="pd_fee_cacl_type" fieldid="1244"/>
+        <field fieldname="pd_fee_cacl_base" fieldid="1245" decimalPlaces="6"/>
+        <field fieldname="min_fee" fieldid="3107" decimalPlaces="6"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_feeseclient_AddProdFare" typename="LD_ANSWER" functionid="pubT.23.161" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_feeseclient_ModiProdFare" typename="LD_REQUEST" functionid="pubT.23.162" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="pd_fee_type" fieldid="1247"/>
+        <field fieldname="pd_fee_name" fieldid="1249"/>
+        <field fieldname="pd_fee_rate" fieldid="1243" decimalPlaces="12"/>
+        <field fieldname="pd_fee_cacl_type" fieldid="1244"/>
+        <field fieldname="pd_fee_cacl_base" fieldid="1245" decimalPlaces="6"/>
+        <field fieldname="min_fee" fieldid="3107" decimalPlaces="6"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_feeseclient_ModiProdFare" typename="LD_ANSWER" functionid="pubT.23.162" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_feeseclient_DeleteProdFare" typename="LD_REQUEST" functionid="pubT.23.163" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="pd_fee_type" fieldid="1247"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_feeseclient_DeleteProdFare" typename="LD_ANSWER" functionid="pubT.23.163" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_feeseclient_QueryProdFare" typename="LD_REQUEST" functionid="pubT.23.164" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="pd_fee_type" fieldid="1247"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_feeseclient_QueryProdFare" typename="LD_ANSWER" functionid="pubT.23.164" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="pd_fee_type" fieldid="1247"/>
+            <field fieldname="pd_fee_name" fieldid="1249"/>
+            <field fieldname="pd_fee_rate" fieldid="1243" decimalPlaces="12"/>
+            <field fieldname="pd_fee_cacl_type" fieldid="1244"/>
+            <field fieldname="pd_fee_cacl_base" fieldid="1245" decimalPlaces="6"/>
+            <field fieldname="min_fee" fieldid="3107" decimalPlaces="6"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+        </sequence>
+    </function>
+    <function functionname="funct_feeseclient_QueryProdFareJour" typename="LD_REQUEST" functionid="pubT.23.165" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="pd_fee_type_str" fieldid="1248"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_feeseclient_QueryProdFareJour" typename="LD_ANSWER" functionid="pubT.23.165" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="pd_fee_type" fieldid="1247"/>
+            <field fieldname="jour_occur_field" fieldid="2184"/>
+            <field fieldname="jour_after_occur_info" fieldid="2185"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funct_feeseclient_QueryProdFareJour_His" typename="LD_REQUEST" functionid="pubT.23.166" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="pd_fee_type_str" fieldid="1248"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_feeseclient_QueryProdFareJour_His" typename="LD_ANSWER" functionid="pubT.23.166" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="opor_co_no" fieldid="1194"/>
+            <field fieldname="opor_no" fieldid="1192"/>
+            <field fieldname="oper_mac" fieldid="1181"/>
+            <field fieldname="oper_ip_addr" fieldid="1180"/>
+            <field fieldname="oper_info" fieldid="1190"/>
+            <field fieldname="oper_way" fieldid="1184"/>
+            <field fieldname="oper_menu_no" fieldid="3163"/>
+            <field fieldname="oper_func_code" fieldid="1186"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="pd_fee_type" fieldid="1247"/>
+            <field fieldname="jour_occur_field" fieldid="2184"/>
+            <field fieldname="jour_after_occur_info" fieldid="2185"/>
+            <field fieldname="oper_remark_info" fieldid="3164"/>
+        </sequence>
+    </function>
+    <function functionname="funct_feeseclient_QueryFeeNo" typename="LD_REQUEST" functionid="pubT.23.302" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="fee_no" fieldid="1519"/>
+        <field fieldname="secu_fee_type" fieldid="1525"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="contrc_dir" fieldid="2070"/>
+    </function>
+    <function functionname="funct_feeseclient_QueryFeeNo" typename="LD_ANSWER" functionid="pubT.23.302" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="fee_no" fieldid="1519"/>
+            <field fieldname="secu_fee_type" fieldid="1525"/>
+            <field fieldname="order_dir" fieldid="1449"/>
+            <field fieldname="contrc_dir" fieldid="2070"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+        </sequence>
+    </function>
+    <function functionname="funct_feeseclient_DeleteSecuFeeTmplatDetailByFeeNo" typename="LD_REQUEST" functionid="pubT.23.167" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="fee_tmplat_no" fieldid="1527"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_feeseclient_DeleteSecuFeeTmplatDetailByFeeNo" typename="LD_ANSWER" functionid="pubT.23.167" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+</bizmsgs>

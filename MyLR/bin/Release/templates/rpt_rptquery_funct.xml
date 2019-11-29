@@ -1,0 +1,1824 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bizmsgs>
+    <function functionname="funct_rpt_QuerySingleProductEarningRate" typename="LD_REQUEST" functionid="rptT.3.1" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_code" fieldid="1232"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_rpt_QuerySingleProductEarningRate" typename="LD_ANSWER" functionid="rptT.3.1" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_code" fieldid="1232"/>
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="found_date" fieldid="1321"/>
+            <field fieldname="runtime" fieldid="2885"/>
+            <field fieldname="unit_nav" fieldid="1377" decimalPlaces="6"/>
+            <field fieldname="daily_pandl_ratio" fieldid="1416" decimalPlaces="12"/>
+            <field fieldname="daily_pandl_ratio_year" fieldid="1415" decimalPlaces="12"/>
+            <field fieldname="total_unit_nav" fieldid="2148" decimalPlaces="6"/>
+            <field fieldname="total_realiz_pandl_ratio" fieldid="2156" decimalPlaces="12"/>
+            <field fieldname="total_realize_pandl_ratio_year" fieldid="2153" decimalPlaces="12"/>
+            <field fieldname="excess_earning_year" fieldid="1271" decimalPlaces="12"/>
+            <field fieldname="day_retracement" fieldid="2231" decimalPlaces="12"/>
+            <field fieldname="day_continue_retracement" fieldid="2176" decimalPlaces="12"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_QueryEarningRateAnalysis" typename="LD_REQUEST" functionid="rptT.3.2" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_code" fieldid="1232"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_rpt_QueryEarningRateAnalysis" typename="LD_ANSWER" functionid="rptT.3.2" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_code" fieldid="1232"/>
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="unit_nav" fieldid="1377" decimalPlaces="6"/>
+            <field fieldname="daily_pandl_ratio" fieldid="1416" decimalPlaces="12"/>
+            <field fieldname="total_realize_pandl_ratio_year" fieldid="2153" decimalPlaces="12"/>
+            <field fieldname="sharpe_ration" fieldid="2749" decimalPlaces="12"/>
+            <field fieldname="max_retracement" fieldid="3103" decimalPlaces="12"/>
+            <field fieldname="market_value_sh" fieldid="1391" decimalPlaces="6"/>
+            <field fieldname="market_value_avg_sh" fieldid="2322" decimalPlaces="6"/>
+            <field fieldname="sh_remainday_two" fieldid="1787"/>
+            <field fieldname="sh_remainday_three" fieldid="1788"/>
+            <field fieldname="sh_remainday_five" fieldid="1789"/>
+            <field fieldname="market_value_sz" fieldid="1398" decimalPlaces="6"/>
+            <field fieldname="market_value_avg_sz" fieldid="2323" decimalPlaces="6"/>
+            <field fieldname="sz_remainday_two" fieldid="2513"/>
+            <field fieldname="sz_remainday_three" fieldid="2514"/>
+            <field fieldname="sz_remainday_five" fieldid="2515"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_QueryProductAsset" typename="LD_REQUEST" functionid="rptT.3.3" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_code" fieldid="1232"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_rpt_QueryProductAsset" typename="LD_ANSWER" functionid="rptT.3.3" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="mach_date" fieldid="1839"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_code" fieldid="1232"/>
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="pd_curr_share" fieldid="1237" decimalPlaces="2"/>
+            <field fieldname="unit_nav" fieldid="1377" decimalPlaces="6"/>
+            <field fieldname="nav_asset" fieldid="2035" decimalPlaces="6"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_QueryProductNAVReturnRate" typename="LD_REQUEST" functionid="rptT.3.4" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_code" fieldid="1232"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="std_stock_market" fieldid="2782"/>
+        <field fieldname="std_stock_code" fieldid="2781"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_rpt_QueryProductNAVReturnRate" typename="LD_ANSWER" functionid="rptT.3.4" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="region_no" fieldid="1218"/>
+            <field fieldname="region_name" fieldid="1219"/>
+            <field fieldname="product_return_rate" fieldid="1797" decimalPlaces="6"/>
+            <field fieldname="max_product_increase" fieldid="3106" decimalPlaces="6"/>
+            <field fieldname="cmp_product_return_rate" fieldid="2758" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_QueryProductAssetTotalHis" typename="LD_REQUEST" functionid="rptT.3.6" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_asset_type_str" fieldid="1269"/>
+        <field fieldname="pd_code" fieldid="1232"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_rpt_QueryProductAssetTotalHis" typename="LD_ANSWER" functionid="rptT.3.6" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_asset_type" fieldid="1268"/>
+            <field fieldname="pd_code" fieldid="1232"/>
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+            <field fieldname="curr_qty" fieldid="1401" decimalPlaces="2"/>
+            <field fieldname="cost_amt" fieldid="1285" decimalPlaces="6"/>
+            <field fieldname="stop_status" fieldid="2608"/>
+            <field fieldname="circl_flag" fieldid="2187"/>
+            <field fieldname="today_pandl" fieldid="1417" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_QueryProductWeekUnitNAV" typename="LD_REQUEST" functionid="rptT.3.7" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_code" fieldid="1232"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_rpt_QueryProductWeekUnitNAV" typename="LD_ANSWER" functionid="rptT.3.7" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_code" fieldid="1232"/>
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="total_asset" fieldid="3088" decimalPlaces="6"/>
+            <field fieldname="stock_market_value" fieldid="1709" decimalPlaces="6"/>
+            <field fieldname="pd_share" fieldid="1250" decimalPlaces="2"/>
+            <field fieldname="unit_nav" fieldid="1377" decimalPlaces="6"/>
+            <field fieldname="week_nav_change" fieldid="3030" decimalPlaces="6"/>
+            <field fieldname="day_nav_change" fieldid="2432" decimalPlaces="6"/>
+            <field fieldname="cash_asset" fieldid="2752" decimalPlaces="6"/>
+            <field fieldname="cash_nav_ratio" fieldid="2750" decimalPlaces="12"/>
+            <field fieldname="stock_asset_ratio" fieldid="1711" decimalPlaces="12"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_QueryProductDetail" typename="LD_REQUEST" functionid="rptT.3.8" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="input_date" fieldid="1353"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+    </function>
+    <function functionname="funct_rpt_QueryProductDetail" typename="LD_ANSWER" functionid="rptT.3.8" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_code" fieldid="1232"/>
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="unit_nav" fieldid="1377" decimalPlaces="6"/>
+            <field fieldname="daily_pandl_ratio" fieldid="1416" decimalPlaces="12"/>
+            <field fieldname="daily_pandl_ratio_year" fieldid="1415" decimalPlaces="12"/>
+            <field fieldname="nav_fluct" fieldid="2031" decimalPlaces="12"/>
+            <field fieldname="max_retracement" fieldid="3103" decimalPlaces="12"/>
+            <field fieldname="curr_share" fieldid="1390" decimalPlaces="2"/>
+            <field fieldname="total_asset" fieldid="3088" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_CalcFollowAnalysis" typename="LD_REQUEST" functionid="rptT.3.9" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="input_date" fieldid="1353"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_code" fieldid="1232"/>
+    </function>
+    <function functionname="funct_rpt_CalcFollowAnalysis" typename="LD_ANSWER" functionid="rptT.3.9" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_rpt_QueryFollowAnalysis" typename="LD_REQUEST" functionid="rptT.3.10" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_code" fieldid="1232"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_rpt_QueryFollowAnalysis" typename="LD_ANSWER" functionid="rptT.3.10" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_code" fieldid="1232"/>
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="net_performance" fieldid="1407" decimalPlaces="6"/>
+            <field fieldname="total_unit_nav" fieldid="2148" decimalPlaces="6"/>
+            <field fieldname="market_value_posi_ratio" fieldid="2554" decimalPlaces="12"/>
+            <field fieldname="pd_manager" fieldid="1251"/>
+            <field fieldname="nav_asset" fieldid="2035" decimalPlaces="6"/>
+            <field fieldname="cash_asset" fieldid="2752" decimalPlaces="6"/>
+            <field fieldname="profit_year" fieldid="1384" decimalPlaces="6"/>
+            <field fieldname="profit_year_ratio" fieldid="1385" decimalPlaces="12"/>
+            <field fieldname="follow_share" fieldid="1659" decimalPlaces="2"/>
+            <field fieldname="follow_nav_asset" fieldid="1661" decimalPlaces="6"/>
+            <field fieldname="follow_income_year" fieldid="1660" decimalPlaces="6"/>
+            <field fieldname="follow_income_total" fieldid="1663" decimalPlaces="6"/>
+            <field fieldname="follow_profit_ratio" fieldid="1662" decimalPlaces="12"/>
+            <field fieldname="warn_value" fieldid="2840" decimalPlaces="6"/>
+            <field fieldname="stop_value" fieldid="2958" decimalPlaces="6"/>
+            <field fieldname="curr_share" fieldid="1390" decimalPlaces="2"/>
+            <field fieldname="max_retracement" fieldid="3103" decimalPlaces="12"/>
+            <field fieldname="found_date" fieldid="1321"/>
+            <field fieldname="last_year_nav" fieldid="2492" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_QueryCauseAnalysis" typename="LD_REQUEST" functionid="rptT.3.11" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="achi_compa_crite" fieldid="2779"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_rpt_QueryCauseAnalysis" typename="LD_ANSWER" functionid="rptT.3.11" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="begin_date" fieldid="2073"/>
+            <field fieldname="end_date" fieldid="1986"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_code" fieldid="1232"/>
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="nav_asset" fieldid="2035" decimalPlaces="6"/>
+            <field fieldname="posi_market_value" fieldid="1330" decimalPlaces="6"/>
+            <field fieldname="cash_asset" fieldid="2752" decimalPlaces="6"/>
+            <field fieldname="product_return_rate" fieldid="1797" decimalPlaces="6"/>
+            <field fieldname="standard_return" fieldid="4090" decimalPlaces="12"/>
+            <field fieldname="curr_share" fieldid="1390" decimalPlaces="2"/>
+            <field fieldname="unit_nav" fieldid="1377" decimalPlaces="6"/>
+            <field fieldname="interval_pandl" fieldid="3695" decimalPlaces="6"/>
+            <field fieldname="total_realiz_pandl_ratio" fieldid="2156" decimalPlaces="12"/>
+            <field fieldname="cmp_product_return_rate" fieldid="2758" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_QueryReturnAnalysis" typename="LD_REQUEST" functionid="rptT.3.12" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="achi_compa_crite" fieldid="2779"/>
+    </function>
+    <function functionname="funct_rpt_QueryReturnAnalysis" typename="LD_ANSWER" functionid="rptT.3.12" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_code" fieldid="1232"/>
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="product_return_rate" fieldid="1797" decimalPlaces="6"/>
+            <field fieldname="total_asset" fieldid="3088" decimalPlaces="6"/>
+            <field fieldname="standard_return" fieldid="4090" decimalPlaces="12"/>
+            <field fieldname="cmp_product_return_rate" fieldid="2758" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_QueryAttributeAnalysis" typename="LD_REQUEST" functionid="rptT.3.13" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="cause_type" fieldid="1714"/>
+        <field fieldname="achi_compa_crite" fieldid="2779"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_rpt_QueryAttributeAnalysis" typename="LD_ANSWER" functionid="rptT.3.13" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="begin_date" fieldid="2073"/>
+            <field fieldname="end_date" fieldid="1986"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_code" fieldid="1232"/>
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="asset_market_value" fieldid="3047" decimalPlaces="6"/>
+            <field fieldname="weight_ratio" fieldid="2407" decimalPlaces="2"/>
+            <field fieldname="interval_pandl" fieldid="3695" decimalPlaces="6"/>
+            <field fieldname="product_return_rate" fieldid="1797" decimalPlaces="6"/>
+            <field fieldname="return_rate" fieldid="4096" decimalPlaces="12"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_QueryAssetAnalysis" typename="LD_REQUEST" functionid="rptT.3.14" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="cause_type" fieldid="1714"/>
+        <field fieldname="achi_compa_crite" fieldid="2779"/>
+    </function>
+    <function functionname="funct_rpt_QueryAssetAnalysis" typename="LD_ANSWER" functionid="rptT.3.14" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_code" fieldid="1232"/>
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="asset_market_value" fieldid="3047" decimalPlaces="6"/>
+            <field fieldname="weight_ratio" fieldid="2407" decimalPlaces="2"/>
+            <field fieldname="asset_kind" fieldid="4094"/>
+            <field fieldname="interval_pandl" fieldid="3695" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_QueryHoldAnalysis" typename="LD_REQUEST" functionid="rptT.3.15" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="cause_type" fieldid="1714"/>
+        <field fieldname="asset_kind" fieldid="4094"/>
+        <field fieldname="achi_compa_crite" fieldid="2779"/>
+    </function>
+    <function functionname="funct_rpt_QueryHoldAnalysis" typename="LD_ANSWER" functionid="rptT.3.15" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="begin_date" fieldid="2073"/>
+            <field fieldname="end_date" fieldid="1986"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+            <field fieldname="posi_qty" fieldid="1331" decimalPlaces="2"/>
+            <field fieldname="asset_market_value" fieldid="3047" decimalPlaces="6"/>
+            <field fieldname="weight_ratio" fieldid="2407" decimalPlaces="2"/>
+            <field fieldname="interval_pandl" fieldid="3695" decimalPlaces="6"/>
+            <field fieldname="product_return_rate" fieldid="1797" decimalPlaces="6"/>
+            <field fieldname="return_rate" fieldid="4096" decimalPlaces="12"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_QueryIndustryAnalysis" typename="LD_REQUEST" functionid="rptT.3.16" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="cause_type" fieldid="1714"/>
+        <field fieldname="asset_kind" fieldid="4094"/>
+        <field fieldname="achi_compa_crite" fieldid="2779"/>
+    </function>
+    <function functionname="funct_rpt_QueryIndustryAnalysis" typename="LD_ANSWER" functionid="rptT.3.16" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="first_indu_code" fieldid="4109"/>
+            <field fieldname="asset_market_value" fieldid="3047" decimalPlaces="6"/>
+            <field fieldname="weight_ratio" fieldid="2407" decimalPlaces="2"/>
+            <field fieldname="interval_pandl" fieldid="3695" decimalPlaces="6"/>
+            <field fieldname="product_return_rate" fieldid="1797" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_QueryIndustryHoldAnalysis" typename="LD_REQUEST" functionid="rptT.3.17" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="cause_type" fieldid="1714"/>
+        <field fieldname="achi_compa_crite" fieldid="2779"/>
+        <field fieldname="first_indu_code" fieldid="4109"/>
+    </function>
+    <function functionname="funct_rpt_QueryIndustryHoldAnalysis" typename="LD_ANSWER" functionid="rptT.3.17" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="begin_date" fieldid="2073"/>
+            <field fieldname="end_date" fieldid="1986"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+            <field fieldname="posi_qty" fieldid="1331" decimalPlaces="2"/>
+            <field fieldname="asset_market_value" fieldid="3047" decimalPlaces="6"/>
+            <field fieldname="weight_ratio" fieldid="2407" decimalPlaces="2"/>
+            <field fieldname="interval_pandl" fieldid="3695" decimalPlaces="6"/>
+            <field fieldname="product_return_rate" fieldid="1797" decimalPlaces="6"/>
+            <field fieldname="return_rate" fieldid="4096" decimalPlaces="12"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_QueryProductHold" typename="LD_REQUEST" functionid="rptT.3.18" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="input_date" fieldid="1353"/>
+    </function>
+    <function functionname="funct_rpt_QueryProductHold" typename="LD_ANSWER" functionid="rptT.3.18" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="pd_code" fieldid="1232"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="stock_asset_value" fieldid="2949" decimalPlaces="6"/>
+            <field fieldname="cost_price" fieldid="1284" decimalPlaces="9"/>
+            <field fieldname="posi_qty" fieldid="1331" decimalPlaces="2"/>
+            <field fieldname="cost_amt" fieldid="1285" decimalPlaces="6"/>
+            <field fieldname="float_pandl" fieldid="1639" decimalPlaces="6"/>
+            <field fieldname="weight_ratio" fieldid="2407" decimalPlaces="2"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_QueryProductHoldCmp" typename="LD_REQUEST" functionid="rptT.3.19" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+    </function>
+    <function functionname="funct_rpt_QueryProductHoldCmp" typename="LD_ANSWER" functionid="rptT.3.19" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+            <field fieldname="posi_qty" fieldid="1331" decimalPlaces="2"/>
+            <field fieldname="stock_asset_value" fieldid="2949" decimalPlaces="6"/>
+            <field fieldname="cost_price" fieldid="1284" decimalPlaces="9"/>
+            <field fieldname="weight_ratio" fieldid="2407" decimalPlaces="2"/>
+            <field fieldname="float_pandl" fieldid="1639" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_QueryStockHoldProduct" typename="LD_REQUEST" functionid="rptT.3.20" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+    </function>
+    <function functionname="funct_rpt_QueryStockHoldProduct" typename="LD_ANSWER" functionid="rptT.3.20" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="pd_manager" fieldid="1251"/>
+            <field fieldname="posi_qty" fieldid="1331" decimalPlaces="2"/>
+            <field fieldname="stock_asset_value" fieldid="2949" decimalPlaces="6"/>
+            <field fieldname="cost_price" fieldid="1284" decimalPlaces="9"/>
+            <field fieldname="weight_ratio" fieldid="2407" decimalPlaces="2"/>
+            <field fieldname="float_pandl" fieldid="1639" decimalPlaces="6"/>
+            <field fieldname="asset_market_value" fieldid="3047" decimalPlaces="6"/>
+            <field fieldname="asset_ratio" fieldid="4129" decimalPlaces="12"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_Holder_QrySum_By_StockCode" typename="LD_REQUEST" functionid="rptT.3.22" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+    </function>
+    <function functionname="funct_rpt_Holder_QrySum_By_StockCode" typename="LD_ANSWER" functionid="rptT.3.22" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="stock_type" fieldid="2938"/>
+            <field fieldname="asset_type" fieldid="3045"/>
+            <field fieldname="begin_qty" fieldid="2329" decimalPlaces="2"/>
+            <field fieldname="curr_qty" fieldid="1401" decimalPlaces="2"/>
+            <field fieldname="cost_amt" fieldid="1285" decimalPlaces="6"/>
+            <field fieldname="realize_pandl" fieldid="2536" decimalPlaces="6"/>
+            <field fieldname="intrst_cost_amt" fieldid="2167" decimalPlaces="6"/>
+            <field fieldname="intrst_pandl" fieldid="2173" decimalPlaces="6"/>
+            <field fieldname="cost_price" fieldid="1284" decimalPlaces="9"/>
+            <field fieldname="float_pandl" fieldid="1639" decimalPlaces="6"/>
+            <field fieldname="posi_market_value" fieldid="1330" decimalPlaces="6"/>
+            <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+            <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+            <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+            <field fieldname="strike_price" fieldid="1303" decimalPlaces="9"/>
+            <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+            <field fieldname="buy_qty" fieldid="3370" decimalPlaces="2"/>
+            <field fieldname="buy_amt" fieldid="3372" decimalPlaces="6"/>
+            <field fieldname="buy_strike_price" fieldid="2192" decimalPlaces="9"/>
+            <field fieldname="sell_qty" fieldid="3371" decimalPlaces="2"/>
+            <field fieldname="sellout_amt" fieldid="3373" decimalPlaces="6"/>
+            <field fieldname="sell_strike_price" fieldid="2210" decimalPlaces="9"/>
+            <field fieldname="diff_qty" fieldid="3374" decimalPlaces="2"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_Holder_QrySum_By_ExchNo" typename="LD_REQUEST" functionid="rptT.3.23" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+    </function>
+    <function functionname="funct_rpt_Holder_QrySum_By_ExchNo" typename="LD_ANSWER" functionid="rptT.3.23" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="pd_code" fieldid="1232"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="stock_asset_value" fieldid="2949" decimalPlaces="6"/>
+            <field fieldname="cost_price" fieldid="1284" decimalPlaces="9"/>
+            <field fieldname="posi_qty" fieldid="1331" decimalPlaces="2"/>
+            <field fieldname="cost_amt" fieldid="1285" decimalPlaces="6"/>
+            <field fieldname="float_pandl" fieldid="1639" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_Holder_QrySum_By_StockType" typename="LD_REQUEST" functionid="rptT.3.24" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+    </function>
+    <function functionname="funct_rpt_Holder_QrySum_By_StockType" typename="LD_ANSWER" functionid="rptT.3.24" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="pd_code" fieldid="1232"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="stock_asset_value" fieldid="2949" decimalPlaces="6"/>
+            <field fieldname="cost_price" fieldid="1284" decimalPlaces="9"/>
+            <field fieldname="posi_qty" fieldid="1331" decimalPlaces="2"/>
+            <field fieldname="cost_amt" fieldid="1285" decimalPlaces="6"/>
+            <field fieldname="float_pandl" fieldid="1639" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_Holder_QrySum_By_Product" typename="LD_REQUEST" functionid="rptT.3.25" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+    </function>
+    <function functionname="funct_rpt_Holder_QrySum_By_Product" typename="LD_ANSWER" functionid="rptT.3.25" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="pd_code" fieldid="1232"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="stock_asset_value" fieldid="2949" decimalPlaces="6"/>
+            <field fieldname="cost_price" fieldid="1284" decimalPlaces="9"/>
+            <field fieldname="posi_qty" fieldid="1331" decimalPlaces="2"/>
+            <field fieldname="cost_amt" fieldid="1285" decimalPlaces="6"/>
+            <field fieldname="float_pandl" fieldid="1639" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_Holder_QryDetail_Holder" typename="LD_REQUEST" functionid="rptT.3.26" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+    </function>
+    <function functionname="funct_rpt_Holder_QryDetail_Holder" typename="LD_ANSWER" functionid="rptT.3.26" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="pd_code" fieldid="1232"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="stock_asset_value" fieldid="2949" decimalPlaces="6"/>
+            <field fieldname="cost_price" fieldid="1284" decimalPlaces="9"/>
+            <field fieldname="posi_qty" fieldid="1331" decimalPlaces="2"/>
+            <field fieldname="cost_amt" fieldid="1285" decimalPlaces="6"/>
+            <field fieldname="float_pandl" fieldid="1639" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_Bond_QryDetail_Detail" typename="LD_REQUEST" functionid="rptT.3.28" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="bond_code" fieldid="2890"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_rpt_Bond_QryDetail_Detail" typename="LD_ANSWER" functionid="rptT.3.28" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="pd_code" fieldid="1232"/>
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="bond_code" fieldid="2890"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+            <field fieldname="posi_qty" fieldid="1331" decimalPlaces="2"/>
+            <field fieldname="stock_asset_value" fieldid="2949" decimalPlaces="6"/>
+            <field fieldname="cost_price" fieldid="1284" decimalPlaces="9"/>
+            <field fieldname="rating_agency" fieldid="2325"/>
+            <field fieldname="bond_level" fieldid="2891"/>
+            <field fieldname="bond_accr_intrst" fieldid="2893" decimalPlaces="12"/>
+            <field fieldname="value_dirty_price" fieldid="1686" decimalPlaces="9"/>
+            <field fieldname="value_net_price" fieldid="1681" decimalPlaces="9"/>
+            <field fieldname="value_price_yield" fieldid="1687" decimalPlaces="12"/>
+            <field fieldname="value_price_modi_dur" fieldid="1689" decimalPlaces="12"/>
+            <field fieldname="value_price_conve" fieldid="1688" decimalPlaces="12"/>
+            <field fieldname="value_price_point_value" fieldid="1680" decimalPlaces="12"/>
+            <field fieldname="value_price_intrst_dur" fieldid="1684" decimalPlaces="12"/>
+            <field fieldname="value_price_intrst_conve" fieldid="1685" decimalPlaces="12"/>
+            <field fieldname="value_price_spread_dur" fieldid="1682" decimalPlaces="12"/>
+            <field fieldname="value_price_spread_Conve" fieldid="1683" decimalPlaces="12"/>
+            <field fieldname="true_dirty_price" fieldid="1882" decimalPlaces="9"/>
+            <field fieldname="true_net_price" fieldid="1881" decimalPlaces="9"/>
+            <field fieldname="true_yield" fieldid="1878" decimalPlaces="12"/>
+            <field fieldname="true_remain_limit" fieldid="2532" decimalPlaces="2"/>
+            <field fieldname="true_avg_modi_dur" fieldid="1880" decimalPlaces="12"/>
+            <field fieldname="true_conve" fieldid="1879" decimalPlaces="12"/>
+            <field fieldname="true_point_value" fieldid="1873" decimalPlaces="9"/>
+            <field fieldname="true_intrst_dur" fieldid="1876" decimalPlaces="12"/>
+            <field fieldname="true_intrst_conve" fieldid="1877" decimalPlaces="12"/>
+            <field fieldname="true_spread_dur" fieldid="1874" decimalPlaces="12"/>
+            <field fieldname="true_spread_conve" fieldid="1875" decimalPlaces="12"/>
+            <field fieldname="abs_liq_coeffi" fieldid="2047" decimalPlaces="12"/>
+            <field fieldname="pstion_per" fieldid="2724" decimalPlaces="12"/>
+            <field fieldname="rela_liq_coeffi" fieldid="2760" decimalPlaces="12"/>
+            <field fieldname="rela_liq_num" fieldid="2759" decimalPlaces="12"/>
+            <field fieldname="sett_value_dirty_rice" fieldid="2437" decimalPlaces="9"/>
+            <field fieldname="sett_accr_intrst" fieldid="2438" decimalPlaces="12"/>
+            <field fieldname="remain_capit" fieldid="2524" decimalPlaces="6"/>
+            <field fieldname="point_spread_yield" fieldid="1433" decimalPlaces="12"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_Bond_QryIndustry_Weight" typename="LD_REQUEST" functionid="rptT.3.29" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+    </function>
+    <function functionname="funct_rpt_Bond_QryIndustry_Weight" typename="LD_ANSWER" functionid="rptT.3.29" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="pd_code" fieldid="1232"/>
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="end_date" fieldid="1986"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="first_indu_code" fieldid="4109"/>
+            <field fieldname="end_date_weight" fieldid="4336" decimalPlaces="12"/>
+            <field fieldname="end_date_revenue" fieldid="4337" decimalPlaces="12"/>
+            <field fieldname="clean_price_profit" fieldid="4338" decimalPlaces="6"/>
+            <field fieldname="clean_price_revenue" fieldid="4339" decimalPlaces="6"/>
+            <field fieldname="total_return" fieldid="3085" decimalPlaces="6"/>
+            <field fieldname="interest_revenue_total" fieldid="4340" decimalPlaces="6"/>
+            <field fieldname="face_value" fieldid="4341" decimalPlaces="6"/>
+            <field fieldname="clean_price_market_value" fieldid="4342" decimalPlaces="6"/>
+            <field fieldname="dirty_price_market_value" fieldid="4343" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_FutuHolder_QryDetail" typename="LD_REQUEST" functionid="rptT.3.31" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+    </function>
+    <function functionname="funct_rpt_FutuHolder_QryDetail" typename="LD_ANSWER" functionid="rptT.3.31" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="pd_code" fieldid="1232"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="stock_asset_value" fieldid="2949" decimalPlaces="6"/>
+            <field fieldname="cost_price" fieldid="1284" decimalPlaces="9"/>
+            <field fieldname="posi_qty" fieldid="1331" decimalPlaces="2"/>
+            <field fieldname="cost_amt" fieldid="1285" decimalPlaces="6"/>
+            <field fieldname="float_pandl" fieldid="1639" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_Futu_QryDeposit" typename="LD_REQUEST" functionid="rptT.3.32" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+    </function>
+    <function functionname="funct_rpt_Futu_QryDeposit" typename="LD_ANSWER" functionid="rptT.3.32" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="pd_code" fieldid="1232"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="stock_asset_value" fieldid="2949" decimalPlaces="6"/>
+            <field fieldname="cost_price" fieldid="1284" decimalPlaces="9"/>
+            <field fieldname="posi_qty" fieldid="1331" decimalPlaces="2"/>
+            <field fieldname="cost_amt" fieldid="1285" decimalPlaces="6"/>
+            <field fieldname="float_pandl" fieldid="1639" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_FutuHolder_Pd_Holder" typename="LD_REQUEST" functionid="rptT.3.33" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="product_id" fieldid="4085"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="contrc_code" fieldid="1776"/>
+        <field fieldname="futu_acco" fieldid="1908"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_rpt_FutuHolder_Pd_Holder" typename="LD_ANSWER" functionid="rptT.3.33" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_code" fieldid="1232"/>
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="product_id" fieldid="4085"/>
+            <field fieldname="contrc_name" fieldid="1781"/>
+            <field fieldname="contrc_code" fieldid="1776"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="posi_market_value" fieldid="1330" decimalPlaces="6"/>
+            <field fieldname="stock_acco" fieldid="1696"/>
+            <field fieldname="futu_acco" fieldid="1908"/>
+            <field fieldname="asset_acco" fieldid="3050"/>
+            <field fieldname="invest_type" fieldid="2651"/>
+            <field fieldname="lngsht_type" fieldid="1491"/>
+            <field fieldname="contrc_unit" fieldid="1775"/>
+            <field fieldname="hedge_type" fieldid="2591"/>
+            <field fieldname="begin_qty" fieldid="2329" decimalPlaces="2"/>
+            <field fieldname="curr_qty" fieldid="1401" decimalPlaces="2"/>
+            <field fieldname="frozen_qty" fieldid="1468" decimalPlaces="2"/>
+            <field fieldname="unfroz_qty" fieldid="1996" decimalPlaces="2"/>
+            <field fieldname="buy_pre_sett_qty" fieldid="2194" decimalPlaces="2"/>
+            <field fieldname="sell_pre_sett_qty" fieldid="2212" decimalPlaces="2"/>
+            <field fieldname="rece_margin" fieldid="2822" decimalPlaces="6"/>
+            <field fieldname="realize_pandl" fieldid="2536" decimalPlaces="6"/>
+            <field fieldname="avail_qty" fieldid="2089" decimalPlaces="2"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_FutuHolder_Pd_HolderDetail" typename="LD_REQUEST" functionid="rptT.3.34" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="product_id" fieldid="4085"/>
+        <field fieldname="part_code" fieldid="1923"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="contrc_code" fieldid="1776"/>
+        <field fieldname="contrc_type" fieldid="1778"/>
+        <field fieldname="futu_acco" fieldid="1908"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_rpt_FutuHolder_Pd_HolderDetail" typename="LD_ANSWER" functionid="rptT.3.34" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="detail_posi_id" fieldid="2242"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="product_id" fieldid="4085"/>
+            <field fieldname="pd_code" fieldid="1232"/>
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="contrc_type" fieldid="1778"/>
+            <field fieldname="contrc_code" fieldid="1776"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="asset_acco" fieldid="3050"/>
+            <field fieldname="futu_acco" fieldid="1908"/>
+            <field fieldname="invest_type" fieldid="2651"/>
+            <field fieldname="lngsht_type" fieldid="1491"/>
+            <field fieldname="open_posi_date" fieldid="2055"/>
+            <field fieldname="open_posi_time" fieldid="2056"/>
+            <field fieldname="strike_no" fieldid="1295"/>
+            <field fieldname="open_posi_price" fieldid="2053" decimalPlaces="9"/>
+            <field fieldname="open_posi_qty" fieldid="2058" decimalPlaces="2"/>
+            <field fieldname="trade_capt_qty" fieldid="1960" decimalPlaces="2"/>
+            <field fieldname="strike_capt_qty" fieldid="1318" decimalPlaces="2"/>
+            <field fieldname="open_posi_fee" fieldid="2052" decimalPlaces="6"/>
+            <field fieldname="close_posi_fee" fieldid="2313" decimalPlaces="6"/>
+            <field fieldname="marked_sett_price" fieldid="1437" decimalPlaces="9"/>
+            <field fieldname="marked_pandl" fieldid="1438" decimalPlaces="6"/>
+            <field fieldname="close_pandl" fieldid="2320" decimalPlaces="6"/>
+            <field fieldname="rece_margin" fieldid="2822" decimalPlaces="6"/>
+            <field fieldname="hedge_type" fieldid="2591"/>
+            <field fieldname="open_amount" fieldid="2054" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_Qry_pd_RiskIndex" typename="LD_REQUEST" functionid="rptT.3.36" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_rpt_Qry_pd_RiskIndex" typename="LD_ANSWER" functionid="rptT.3.36" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_code" fieldid="1232"/>
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="unit_nav" fieldid="1377" decimalPlaces="6"/>
+            <field fieldname="nav_asset" fieldid="2035" decimalPlaces="6"/>
+            <field fieldname="fund_share_total" fieldid="1846" decimalPlaces="2"/>
+            <field fieldname="daily_pandl_ratio" fieldid="1416" decimalPlaces="12"/>
+            <field fieldname="total_realize_pandl_ratio_year" fieldid="2153" decimalPlaces="12"/>
+            <field fieldname="fund_manager" fieldid="1847"/>
+            <field fieldname="standard_return" fieldid="4090" decimalPlaces="12"/>
+            <field fieldname="cmp_product_return_rate" fieldid="2758" decimalPlaces="6"/>
+            <field fieldname="trade_days" fieldid="4272"/>
+            <field fieldname="excess_earning_year" fieldid="1271" decimalPlaces="12"/>
+            <field fieldname="annual_yield" fieldid="4273" decimalPlaces="12"/>
+            <field fieldname="max_retracement" fieldid="3103" decimalPlaces="12"/>
+            <field fieldname="max_rise_range" fieldid="4274" decimalPlaces="12"/>
+            <field fieldname="volatility" fieldid="4275" decimalPlaces="12"/>
+            <field fieldname="volatility_yearly" fieldid="4276" decimalPlaces="12"/>
+            <field fieldname="sharpe_ration" fieldid="2749" decimalPlaces="12"/>
+            <field fieldname="down_risk" fieldid="4277" decimalPlaces="12"/>
+            <field fieldname="sortino_ratio" fieldid="4278" decimalPlaces="12"/>
+            <field fieldname="jensen_index" fieldid="4279" decimalPlaces="12"/>
+            <field fieldname="beta_ratio" fieldid="4280" decimalPlaces="12"/>
+            <field fieldname="info_ratio" fieldid="4281" decimalPlaces="12"/>
+            <field fieldname="kamabi" fieldid="4282" decimalPlaces="12"/>
+            <field fieldname="timing_ability" fieldid="4283" decimalPlaces="12"/>
+            <field fieldname="stock_selection_ability" fieldid="4284" decimalPlaces="12"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_Qry_pd_Attr_Effect" typename="LD_REQUEST" functionid="rptT.3.37" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_rpt_Qry_pd_Attr_Effect" typename="LD_ANSWER" functionid="rptT.3.37" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_code" fieldid="1232"/>
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="fund_manager" fieldid="1847"/>
+            <field fieldname="annual_yield" fieldid="4273" decimalPlaces="12"/>
+            <field fieldname="standard_return" fieldid="4090" decimalPlaces="12"/>
+            <field fieldname="distributional_effect_rate" fieldid="4285" decimalPlaces="12"/>
+            <field fieldname="selection_effect_rate" fieldid="4286" decimalPlaces="12"/>
+            <field fieldname="interaction_effect_rate" fieldid="4287" decimalPlaces="12"/>
+            <field fieldname="all_effect_rate" fieldid="4288" decimalPlaces="12"/>
+            <field fieldname="cmp_product_return_rate" fieldid="2758" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_Qry_pd_Trade_Stat" typename="LD_REQUEST" functionid="rptT.3.38" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_rpt_Qry_pd_Trade_Stat" typename="LD_ANSWER" functionid="rptT.3.38" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="begin_date" fieldid="2073"/>
+            <field fieldname="end_date" fieldid="1986"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_code" fieldid="1232"/>
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="trade_stock_cnt" fieldid="4289"/>
+            <field fieldname="profit_total" fieldid="4290" decimalPlaces="12"/>
+            <field fieldname="profit_stock_cnt" fieldid="4291"/>
+            <field fieldname="loss_stock_cnt" fieldid="4292"/>
+            <field fieldname="profit_balance" fieldid="4293" decimalPlaces="12"/>
+            <field fieldname="loss_balance" fieldid="4294" decimalPlaces="12"/>
+            <field fieldname="win_rate" fieldid="4295" decimalPlaces="12"/>
+            <field fieldname="profit_loss_ratio" fieldid="4296" decimalPlaces="12"/>
+            <field fieldname="max_stock_10_ratio" fieldid="4297" decimalPlaces="12"/>
+            <field fieldname="max_stock_10_avg_days" fieldid="4298"/>
+            <field fieldname="tnover_rate" fieldid="1794" decimalPlaces="12"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_Qry_pd_bond_Month_Holder_Stat" typename="LD_REQUEST" functionid="rptT.3.39" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="bond_code" fieldid="2890"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_rpt_Qry_pd_bond_Month_Holder_Stat" typename="LD_ANSWER" functionid="rptT.3.39" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="curr_month" fieldid="1402"/>
+            <field fieldname="trade_days" fieldid="4272"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="pd_code" fieldid="1232"/>
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="bond_code" fieldid="2890"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="curr_qty" fieldid="1401" decimalPlaces="2"/>
+            <field fieldname="intrst_ratio" fieldid="2287" decimalPlaces="12"/>
+            <field fieldname="begin_date" fieldid="2073"/>
+            <field fieldname="begin_value" fieldid="4300" decimalPlaces="9"/>
+            <field fieldname="begin_net_price" fieldid="4301" decimalPlaces="9"/>
+            <field fieldname="begin_full_price" fieldid="4302" decimalPlaces="9"/>
+            <field fieldname="end_date" fieldid="1986"/>
+            <field fieldname="end_value" fieldid="4303" decimalPlaces="9"/>
+            <field fieldname="end_net_price" fieldid="4304" decimalPlaces="9"/>
+            <field fieldname="end_full_price" fieldid="4305" decimalPlaces="9"/>
+            <field fieldname="pay_interest_term" fieldid="4306" decimalPlaces="6"/>
+            <field fieldname="profit_from_capital" fieldid="4307" decimalPlaces="6"/>
+            <field fieldname="coupon_yield" fieldid="4308" decimalPlaces="6"/>
+            <field fieldname="cb_profit" fieldid="4309" decimalPlaces="6"/>
+            <field fieldname="bond_kind" fieldid="4318"/>
+            <field fieldname="recover_capital" fieldid="4310" decimalPlaces="6"/>
+            <field fieldname="value_price_modi_dur" fieldid="1689" decimalPlaces="12"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_Qry_pd_bond_Month_Trade_Detail" typename="LD_REQUEST" functionid="rptT.3.40" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="bond_code" fieldid="2890"/>
+        <field fieldname="bond_type" fieldid="4319"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_rpt_Qry_pd_bond_Month_Trade_Detail" typename="LD_ANSWER" functionid="rptT.3.40" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="curr_month" fieldid="1402"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_code" fieldid="1232"/>
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="bond_code" fieldid="2890"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="trade_qty" fieldid="1950" decimalPlaces="2"/>
+            <field fieldname="order_dir" fieldid="1449"/>
+            <field fieldname="trade_date" fieldid="1946"/>
+            <field fieldname="bank_ib_member" fieldid="4312"/>
+            <field fieldname="value_yield" fieldid="4313" decimalPlaces="12"/>
+            <field fieldname="value_net_price" fieldid="1681" decimalPlaces="9"/>
+            <field fieldname="trade_yield" fieldid="4315" decimalPlaces="12"/>
+            <field fieldname="trade_net_price" fieldid="4316" decimalPlaces="9"/>
+            <field fieldname="profit" fieldid="4317" decimalPlaces="6"/>
+            <field fieldname="bond_kind" fieldid="4318"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_Qry_pd_bond_Month_Trade_Stat" typename="LD_REQUEST" functionid="rptT.3.41" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="bond_code" fieldid="2890"/>
+        <field fieldname="bond_type" fieldid="4319"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_rpt_Qry_pd_bond_Month_Trade_Stat" typename="LD_ANSWER" functionid="rptT.3.41" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="curr_month" fieldid="1402"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_code" fieldid="1232"/>
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="bond_code" fieldid="2890"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="bond_type" fieldid="4319"/>
+            <field fieldname="avg_invest_ratio" fieldid="4325" decimalPlaces="12"/>
+            <field fieldname="avg_yield" fieldid="4320" decimalPlaces="12"/>
+            <field fieldname="yield_ratio" fieldid="4327" decimalPlaces="12"/>
+            <field fieldname="holder_profit" fieldid="4332" decimalPlaces="6"/>
+            <field fieldname="trade_profit" fieldid="4333" decimalPlaces="6"/>
+            <field fieldname="total_profit" fieldid="4334" decimalPlaces="6"/>
+            <field fieldname="bond_cr_level" fieldid="4321" decimalPlaces="12"/>
+            <field fieldname="rem_per" fieldid="4322" decimalPlaces="12"/>
+            <field fieldname="bond_limit" fieldid="2895" decimalPlaces="2"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_Qry_pd_bond_Month_Asset_Stat" typename="LD_REQUEST" functionid="rptT.3.42" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="achi_compa_crite" fieldid="2779"/>
+    </function>
+    <function functionname="funct_rpt_Qry_pd_bond_Month_Asset_Stat" typename="LD_ANSWER" functionid="rptT.3.42" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="curr_month" fieldid="1402"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_code" fieldid="1232"/>
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="asset_type" fieldid="3045"/>
+            <field fieldname="begin_invest_ratio" fieldid="4323" decimalPlaces="12"/>
+            <field fieldname="end_invest_ratio" fieldid="4324" decimalPlaces="12"/>
+            <field fieldname="avg_invest_ratio" fieldid="4325" decimalPlaces="12"/>
+            <field fieldname="return_on_investment" fieldid="4326" decimalPlaces="12"/>
+            <field fieldname="yield_ratio" fieldid="4327" decimalPlaces="12"/>
+            <field fieldname="cmp_ytm" fieldid="4328" decimalPlaces="12"/>
+            <field fieldname="excess_earning_year" fieldid="1271" decimalPlaces="12"/>
+            <field fieldname="begin_market_value" fieldid="4329" decimalPlaces="6"/>
+            <field fieldname="end_market_value" fieldid="4330" decimalPlaces="6"/>
+            <field fieldname="avg_market_value" fieldid="4331" decimalPlaces="6"/>
+            <field fieldname="holder_profit" fieldid="4332" decimalPlaces="6"/>
+            <field fieldname="trade_profit" fieldid="4333" decimalPlaces="6"/>
+            <field fieldname="total_profit" fieldid="4334" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_Qry_Pd_Holder_Detail" typename="LD_REQUEST" functionid="rptT.3.61" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="input_date" fieldid="1353"/>
+    </function>
+    <function functionname="funct_rpt_Qry_Pd_Holder_Detail" typename="LD_ANSWER" functionid="rptT.3.61" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="pd_code" fieldid="1232"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="stock_asset_value" fieldid="2949" decimalPlaces="6"/>
+            <field fieldname="cost_price" fieldid="1284" decimalPlaces="9"/>
+            <field fieldname="posi_qty" fieldid="1331" decimalPlaces="2"/>
+            <field fieldname="cost_amt" fieldid="1285" decimalPlaces="6"/>
+            <field fieldname="float_pandl" fieldid="1639" decimalPlaces="6"/>
+            <field fieldname="weight_ratio" fieldid="2407" decimalPlaces="2"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_Qry_Pd_Trade_Detail" typename="LD_REQUEST" functionid="rptT.3.62" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="input_date" fieldid="1353"/>
+    </function>
+    <function functionname="funct_rpt_Qry_Pd_Trade_Detail" typename="LD_ANSWER" functionid="rptT.3.62" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="pd_code" fieldid="1232"/>
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="order_dir" fieldid="1449"/>
+            <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+            <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+            <field fieldname="order_frozen_amt" fieldid="1445" decimalPlaces="6"/>
+            <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+            <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+            <field fieldname="asset_type" fieldid="3045"/>
+            <field fieldname="stock_type" fieldid="2938"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_Qry_Pd_Trade_Sum_Dir" typename="LD_REQUEST" functionid="rptT.3.63" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="input_date" fieldid="1353"/>
+    </function>
+    <function functionname="funct_rpt_Qry_Pd_Trade_Sum_Dir" typename="LD_ANSWER" functionid="rptT.3.63" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="pd_code" fieldid="1232"/>
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="order_dir" fieldid="1449"/>
+            <field fieldname="order_frozen_amt" fieldid="1445" decimalPlaces="6"/>
+            <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+            <field fieldname="asset_type" fieldid="3045"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_Qry_Pd_Trade_Sum_Stock_Co" typename="LD_REQUEST" functionid="rptT.3.64" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="input_date" fieldid="1353"/>
+    </function>
+    <function functionname="funct_rpt_Qry_Pd_Trade_Sum_Stock_Co" typename="LD_ANSWER" functionid="rptT.3.64" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="order_dir" fieldid="1449"/>
+            <field fieldname="order_frozen_amt" fieldid="1445" decimalPlaces="6"/>
+            <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+            <field fieldname="asset_type" fieldid="3045"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_Qry_Pd_Holder_Sum" typename="LD_REQUEST" functionid="rptT.3.66" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+    </function>
+    <function functionname="funct_rpt_Qry_Pd_Holder_Sum" typename="LD_ANSWER" functionid="rptT.3.66" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="pd_code" fieldid="1232"/>
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="stock_type" fieldid="2938"/>
+            <field fieldname="today_buy_qty" fieldid="1411" decimalPlaces="2"/>
+            <field fieldname="today_sell_qty" fieldid="1414" decimalPlaces="2"/>
+            <field fieldname="posi_qty" fieldid="1331" decimalPlaces="2"/>
+            <field fieldname="cost_price" fieldid="1284" decimalPlaces="9"/>
+            <field fieldname="today_close_price" fieldid="2002" decimalPlaces="9"/>
+            <field fieldname="posi_market_value" fieldid="1330" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_Qry_Co_Holder_Sum" typename="LD_REQUEST" functionid="rptT.3.67" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+    </function>
+    <function functionname="funct_rpt_Qry_Co_Holder_Sum" typename="LD_ANSWER" functionid="rptT.3.67" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="stock_type" fieldid="2938"/>
+            <field fieldname="today_buy_qty" fieldid="1411" decimalPlaces="2"/>
+            <field fieldname="today_sell_qty" fieldid="1414" decimalPlaces="2"/>
+            <field fieldname="posi_qty" fieldid="1331" decimalPlaces="2"/>
+            <field fieldname="today_close_price" fieldid="2002" decimalPlaces="9"/>
+            <field fieldname="posi_market_value" fieldid="1330" decimalPlaces="6"/>
+            <field fieldname="posi_nav_ratio" fieldid="1325" decimalPlaces="12"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_Qry_Pd_Holder_Trade_Sum" typename="LD_REQUEST" functionid="rptT.3.68" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+    </function>
+    <function functionname="funct_rpt_Qry_Pd_Holder_Trade_Sum" typename="LD_ANSWER" functionid="rptT.3.68" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="pd_code" fieldid="1232"/>
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="stock_type" fieldid="2938"/>
+            <field fieldname="pre_holding_qty" fieldid="3134" decimalPlaces="2"/>
+            <field fieldname="today_buy_qty" fieldid="1411" decimalPlaces="2"/>
+            <field fieldname="today_buy_amt" fieldid="1410" decimalPlaces="6"/>
+            <field fieldname="today_buy_price" fieldid="1409" decimalPlaces="9"/>
+            <field fieldname="buy_begin_time" fieldid="2197"/>
+            <field fieldname="buy_end_time" fieldid="2196"/>
+            <field fieldname="today_sell_qty" fieldid="1414" decimalPlaces="2"/>
+            <field fieldname="today_sell_amt" fieldid="1413" decimalPlaces="6"/>
+            <field fieldname="today_sell_price" fieldid="1412" decimalPlaces="9"/>
+            <field fieldname="sell_begin_time" fieldid="2215"/>
+            <field fieldname="sell_end_time" fieldid="2214"/>
+            <field fieldname="posi_qty" fieldid="1331" decimalPlaces="2"/>
+            <field fieldname="today_close_price" fieldid="2002" decimalPlaces="9"/>
+            <field fieldname="posi_market_value" fieldid="1330" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_Qry_Exgp_Asset_Posi_ExInfo" typename="LD_REQUEST" functionid="rptT.3.81" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="strategy_type" fieldid="3697"/>
+    </function>
+    <function functionname="funct_rpt_Qry_Exgp_Asset_Posi_ExInfo" typename="LD_ANSWER" functionid="rptT.3.81" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="exch_group_pd_share" fieldid="1966" decimalPlaces="2"/>
+            <field fieldname="unit_nav" fieldid="1377" decimalPlaces="6"/>
+            <field fieldname="pre_nav" fieldid="3138" decimalPlaces="6"/>
+            <field fieldname="nav_asset" fieldid="2035" decimalPlaces="6"/>
+            <field fieldname="nav_fluct" fieldid="2031" decimalPlaces="12"/>
+            <field fieldname="posi_ratio" fieldid="1336" decimalPlaces="12"/>
+            <field fieldname="securities_ratio" fieldid="3378" decimalPlaces="12"/>
+            <field fieldname="float_pandl" fieldid="1639" decimalPlaces="6"/>
+            <field fieldname="realize_pandl" fieldid="2536" decimalPlaces="6"/>
+            <field fieldname="total_divi_amt" fieldid="2150" decimalPlaces="6"/>
+            <field fieldname="first_asset" fieldid="2859" decimalPlaces="6"/>
+            <field fieldname="strategy_type" fieldid="3697"/>
+            <field fieldname="total_pre_fee" fieldid="2152" decimalPlaces="6"/>
+            <field fieldname="posi_market_value" fieldid="1330" decimalPlaces="6"/>
+            <field fieldname="cash_asset" fieldid="2752" decimalPlaces="6"/>
+            <field fieldname="stock_asset" fieldid="1710" decimalPlaces="6"/>
+            <field fieldname="bond_asset" fieldid="2897" decimalPlaces="6"/>
+            <field fieldname="fund_asset" fieldid="1853" decimalPlaces="6"/>
+            <field fieldname="repo_asset" fieldid="1821" decimalPlaces="6"/>
+            <field fieldname="other_asset" fieldid="2351" decimalPlaces="6"/>
+            <field fieldname="total_payab_amt" fieldid="2157" decimalPlaces="6"/>
+            <field fieldname="total_rece_amt" fieldid="2158" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_Qry_Co_Stock_Posi_Strike" typename="LD_REQUEST" functionid="rptT.3.82" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+    </function>
+    <function functionname="funct_rpt_Qry_Co_Stock_Posi_Strike" typename="LD_ANSWER" functionid="rptT.3.82" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="posi_market_value" fieldid="1330" decimalPlaces="6"/>
+            <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_Qry_Exgp_Stock_Posi_Detail" typename="LD_REQUEST" functionid="rptT.3.83" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+    </function>
+    <function functionname="funct_rpt_Qry_Exgp_Stock_Posi_Detail" typename="LD_ANSWER" functionid="rptT.3.83" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="posi_market_value" fieldid="1330" decimalPlaces="6"/>
+            <field fieldname="posi_ratio" fieldid="1336" decimalPlaces="12"/>
+            <field fieldname="float_pandl" fieldid="1639" decimalPlaces="6"/>
+            <field fieldname="curr_qty" fieldid="1401" decimalPlaces="2"/>
+            <field fieldname="cost_amt" fieldid="1285" decimalPlaces="6"/>
+            <field fieldname="realize_pandl" fieldid="2536" decimalPlaces="6"/>
+            <field fieldname="cost_price" fieldid="1284" decimalPlaces="9"/>
+            <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_Qry_exgp_posi_value_inter_pl" typename="LD_REQUEST" functionid="rptT.3.101" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="qry_begin_date" fieldid="1217"/>
+        <field fieldname="qry_end_date" fieldid="1216"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+    </function>
+    <function functionname="funct_rpt_Qry_exgp_posi_value_inter_pl" typename="LD_ANSWER" functionid="rptT.3.101" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="begin_date" fieldid="2073"/>
+            <field fieldname="end_date" fieldid="1986"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="stock_type" fieldid="2938"/>
+            <field fieldname="asset_type" fieldid="3045"/>
+            <field fieldname="begin_close_price" fieldid="4672" decimalPlaces="6"/>
+            <field fieldname="begin_qty" fieldid="2329" decimalPlaces="2"/>
+            <field fieldname="begin_cost_amt" fieldid="4673" decimalPlaces="6"/>
+            <field fieldname="begin_posi_market_value" fieldid="4674" decimalPlaces="6"/>
+            <field fieldname="begin_realize_pandl" fieldid="4675" decimalPlaces="6"/>
+            <field fieldname="end_close_price" fieldid="4676" decimalPlaces="6"/>
+            <field fieldname="end_cur_qty" fieldid="4677"/>
+            <field fieldname="end_cost_amt" fieldid="4678" decimalPlaces="6"/>
+            <field fieldname="end_posi_market_value" fieldid="4679" decimalPlaces="6"/>
+            <field fieldname="end_realize_pandl" fieldid="4680" decimalPlaces="6"/>
+            <field fieldname="float_pandl" fieldid="1639" decimalPlaces="6"/>
+            <field fieldname="interval_realize_pandl" fieldid="4681" decimalPlaces="6"/>
+            <field fieldname="interval_pandl" fieldid="3695" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_Qry_exgp_posi_value_inter_pl_industry" typename="LD_REQUEST" functionid="rptT.3.102" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="qry_begin_date" fieldid="1217"/>
+        <field fieldname="qry_end_date" fieldid="1216"/>
+        <field fieldname="sum_type" fieldid="1826"/>
+    </function>
+    <function functionname="funct_rpt_Qry_exgp_posi_value_inter_pl_industry" typename="LD_ANSWER" functionid="rptT.3.102" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="begin_date" fieldid="2073"/>
+            <field fieldname="end_date" fieldid="1986"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="weight_ratio" fieldid="2407" decimalPlaces="2"/>
+            <field fieldname="begin_cost_amt" fieldid="4673" decimalPlaces="6"/>
+            <field fieldname="begin_posi_market_value" fieldid="4674" decimalPlaces="6"/>
+            <field fieldname="begin_realize_pandl" fieldid="4675" decimalPlaces="6"/>
+            <field fieldname="end_cost_amt" fieldid="4678" decimalPlaces="6"/>
+            <field fieldname="end_posi_market_value" fieldid="4679" decimalPlaces="6"/>
+            <field fieldname="end_realize_pandl" fieldid="4680" decimalPlaces="6"/>
+            <field fieldname="float_pandl" fieldid="1639" decimalPlaces="6"/>
+            <field fieldname="interval_realize_pandl" fieldid="4681" decimalPlaces="6"/>
+            <field fieldname="interval_pandl" fieldid="3695" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_Qry_Pd_posi_value_inter_pl" typename="LD_REQUEST" functionid="rptT.3.103" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="qry_begin_date" fieldid="1217"/>
+        <field fieldname="qry_end_date" fieldid="1216"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+    </function>
+    <function functionname="funct_rpt_Qry_Pd_posi_value_inter_pl" typename="LD_ANSWER" functionid="rptT.3.103" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="begin_date" fieldid="2073"/>
+            <field fieldname="end_date" fieldid="1986"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="stock_type" fieldid="2938"/>
+            <field fieldname="asset_type" fieldid="3045"/>
+            <field fieldname="begin_close_price" fieldid="4672" decimalPlaces="6"/>
+            <field fieldname="begin_qty" fieldid="2329" decimalPlaces="2"/>
+            <field fieldname="begin_cost_amt" fieldid="4673" decimalPlaces="6"/>
+            <field fieldname="begin_posi_market_value" fieldid="4674" decimalPlaces="6"/>
+            <field fieldname="begin_realize_pandl" fieldid="4675" decimalPlaces="6"/>
+            <field fieldname="end_close_price" fieldid="4676" decimalPlaces="6"/>
+            <field fieldname="end_cur_qty" fieldid="4677"/>
+            <field fieldname="end_cost_amt" fieldid="4678" decimalPlaces="6"/>
+            <field fieldname="end_posi_market_value" fieldid="4679" decimalPlaces="6"/>
+            <field fieldname="end_realize_pandl" fieldid="4680" decimalPlaces="6"/>
+            <field fieldname="float_pandl" fieldid="1639" decimalPlaces="6"/>
+            <field fieldname="interval_realize_pandl" fieldid="4681" decimalPlaces="6"/>
+            <field fieldname="interval_pandl" fieldid="3695" decimalPlaces="6"/>
+            <field fieldname="max_posi_market_value" fieldid="4956" decimalPlaces="6"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_Qry_pf_pd_SharpeRatio" typename="LD_REQUEST" functionid="rptT.3.201" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="qry_begin_date" fieldid="1217"/>
+        <field fieldname="qry_end_date" fieldid="1216"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+    </function>
+    <function functionname="funct_rpt_Qry_pf_pd_SharpeRatio" typename="LD_ANSWER" functionid="rptT.3.201" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="share_net" fieldid="1598" decimalPlaces="6"/>
+            <field fieldname="share_net_total" fieldid="1599" decimalPlaces="6"/>
+            <field fieldname="sharpe_ration" fieldid="2749" decimalPlaces="12"/>
+            <field fieldname="max_retracement" fieldid="3103" decimalPlaces="12"/>
+            <field fieldname="annual_yield" fieldid="4273" decimalPlaces="12"/>
+            <field fieldname="net_growth_rate_stdev" fieldid="2033" decimalPlaces="12"/>
+            <field fieldname="achi_compa_pandl_ratio" fieldid="4634" decimalPlaces="12"/>
+            <field fieldname="profit_year_ratio" fieldid="1385" decimalPlaces="12"/>
+        </sequence>
+    </function>
+    <function functionname="funct_rpt_Qry_pf_pd_monthRatio" typename="LD_REQUEST" functionid="rptT.3.202" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="qry_begin_date" fieldid="1217"/>
+        <field fieldname="qry_end_date" fieldid="1216"/>
+    </function>
+    <function functionname="funct_rpt_Qry_pf_pd_monthRatio" typename="LD_ANSWER" functionid="rptT.3.202" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="share_net_total" fieldid="1599" decimalPlaces="6"/>
+            <field fieldname="pre_nav" fieldid="3138" decimalPlaces="6"/>
+            <field fieldname="busin_date" fieldid="4011"/>
+            <field fieldname="return_ratio_in_single_month" fieldid="3232" decimalPlaces="12"/>
+        </sequence>
+    </function>
+</bizmsgs>

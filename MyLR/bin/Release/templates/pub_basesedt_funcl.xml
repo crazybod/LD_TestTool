@@ -959,6 +959,7 @@
             <field fieldname="trade_code_no" fieldid="1918"/>
             <field fieldname="target_code_no" fieldid="1161"/>
             <field fieldname="apply_date" fieldid="2509"/>
+            <field fieldname="apply_pay_date" fieldid="5940"/>
             <field fieldname="apply_limit" fieldid="2510" decimalPlaces="2"/>
             <field fieldname="begin_trade_date" fieldid="2498"/>
             <field fieldname="issue_price" fieldid="1504" decimalPlaces="9"/>
@@ -992,6 +993,7 @@
             <field fieldname="trade_code_no" fieldid="1918"/>
             <field fieldname="target_code_no" fieldid="1161"/>
             <field fieldname="apply_date" fieldid="2509"/>
+            <field fieldname="apply_pay_date" fieldid="5940"/>
             <field fieldname="apply_limit" fieldid="2510" decimalPlaces="2"/>
             <field fieldname="begin_trade_date" fieldid="2498"/>
             <field fieldname="issue_price" fieldid="1504" decimalPlaces="9"/>
@@ -2648,6 +2650,7 @@
             <field fieldname="trade_code_no" fieldid="1918"/>
             <field fieldname="target_code_no" fieldid="1161"/>
             <field fieldname="apply_date" fieldid="2509"/>
+            <field fieldname="apply_pay_date" fieldid="5940"/>
             <field fieldname="apply_limit" fieldid="2510" decimalPlaces="2"/>
             <field fieldname="begin_trade_date" fieldid="2498"/>
             <field fieldname="issue_price" fieldid="1504" decimalPlaces="9"/>
@@ -2909,6 +2912,37 @@
             <field fieldname="today_close_price" fieldid="2002" decimalPlaces="9"/>
             <field fieldname="today_max_price" fieldid="2004" decimalPlaces="9"/>
             <field fieldname="today_min_price" fieldid="2003" decimalPlaces="9"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockMinQty" typename="LD_REQUEST" functionid="pubL.1.178" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_basesedt_QueryStockMinQty" typename="LD_ANSWER" functionid="pubL.1.178" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="stock_type" fieldid="2938"/>
+            <field fieldname="asset_type" fieldid="3045"/>
+            <field fieldname="hk_stock_flag" fieldid="3852"/>
+            <field fieldname="min_qty" fieldid="3128" decimalPlaces="2"/>
         </sequence>
     </function>
 </bizmsgs>

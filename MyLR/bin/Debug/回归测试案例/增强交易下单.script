@@ -1,0 +1,85 @@
+﻿//逻辑_交易证券_交易_融资融券新增订单
+//逻辑_交易证券_交易_新增订单tdsecuL.4.11
+
+#下面是获取订单批号  
+Function funOrderBatchNo = tdsecuL.1.901
+set funOrderBatchNo.co_no = 1100
+set funOrderBatchNo.record_no_type = 18 
+funOrderBatchNo.Send()
+funOrderBatchNo.GetAnswer()
+if funOrderBatchNo.Answer().error_code !=0 : Print '('&funOrderBatchNo.Answer().error_code&')'&funOrderBatchNo.Answer().error_prompt&funOrderBatchNo.Answer().error_info
+if funOrderBatchNo.Answer().error_code !=0 : Print 'tdsecuL.1.901错误，程序即将退出'
+if funOrderBatchNo.Answer().error_code !=0 : Exit
+if funOrderBatchNo.Answer().curr_no > 0 : Print '获取订单批号成功，OrderBatchNo = '&funOrderBatchNo.Answer().curr_no
+sleep=1000
+
+#下面是融资融券新增订单
+Function prl_tdsed_FinaLoanAddOrder = tdsecuL.4.130
+set prl_tdsed_FinaLoanAddOrder.comm_opor=74740001
+set prl_tdsed_FinaLoanAddOrder.exch_group_no=74740001
+set prl_tdsed_FinaLoanAddOrder.asset_acco_no=74740003
+set prl_tdsed_FinaLoanAddOrder.exch_no=1
+set prl_tdsed_FinaLoanAddOrder.stock_code=600600
+#set prl_tdsed_FinaLoanAddOrder.external_no
+#set prl_tdsed_FinaLoanAddOrder.comm_id
+#set prl_tdsed_FinaLoanAddOrder.order_batch_no=funOrderBatchNo.Answer().curr_no
+set prl_tdsed_FinaLoanAddOrder.order_dir=5
+set prl_tdsed_FinaLoanAddOrder.order_qty=100
+set prl_tdsed_FinaLoanAddOrder.order_price=48.75
+set prl_tdsed_FinaLoanAddOrder.price_type=1
+set prl_tdsed_FinaLoanAddOrder.order_oper_way=14
+#set prl_tdsed_FinaLoanAddOrder.contra_no=
+#set prl_tdsed_FinaLoanAddOrder.order_amt=4875
+prl_tdsed_FinaLoanAddOrder.Send()
+prl_tdsed_FinaLoanAddOrder.GetAnswer()
+if prl_tdsed_FinaLoanAddOrder.Answer().error_code !=0 : Print '('&prl_tdsed_FinaLoanAddOrder.Answer().error_code&')'&prl_tdsed_FinaLoanAddOrder.Answer().error_prompt&prl_tdsed_FinaLoanAddOrder.Answer().error_info
+if prl_tdsed_FinaLoanAddOrder.Answer().error_code !=0 : Print 'tdsecuL.4.130错误，程序即将退出'
+if prl_tdsed_FinaLoanAddOrder.Answer().error_code !=0 : Exit
+if prl_tdsed_FinaLoanAddOrder.Answer().error_code == 0 : Print '融资融券新增订单成功， '&prl_tdsed_FinaLoanAddOrder.Answer().order_id
+sleep=1000
+
+
+#下面是订单查询的功能号
+Function fun = tdsecuL.4.101
+#busi_opor_no
+set fun.order_oper_way = 14
+set fun.co_no = 7474
+set fun.pd_no = 74740001
+set fun.exch_group_no = 74740001
+set fun.pass_no = 5
+#exch_no_str
+set fun.stock_code_no = 1
+#stock_type_str
+#comm_id
+#comm_batch_no
+#comm_opor
+#external_no
+#set fun.order_batch_no = funOrderBatchNo.Answer().curr_no
+set fun.order_id = prl_tdsed_FinaLoanAddOrder.Answer().order_id
+#order_dir_str
+#order_status_str
+#price_type_str
+set fun.row_id = 0
+set fun.row_count=1
+#sort_type
+#combo_code
+
+fun.Send()
+fun.GetAnswer()
+if fun.Answer().error_code !=0 : Print '('&fun.Answer().error_code&')'&fun.Answer().error_prompt&fun.Answer().error_info
+if fun.Answer().error_code !=0 :Print 'tdsecuL.4.101错误，程序即将退出'
+if fun.Answer().error_code !=0 :Exit
+if fun.Answer().error_code == 0 :Print '订单查询成功'
+sleep=1000
+
+#把上面的单子撤销掉
+Function funCancel = tdsecuL.4.12
+set funCancel.order_id=prl_tdsed_FinaLoanAddOrder.Answer().order_id
+set funCancel.order_date= prl_tdsed_FinaLoanAddOrder.Answer().order_date
+funCancel.Send()
+funCancel.GetAnswer()
+if funCancel.Answer().error_code !=0:Print '('&funCancel.Answer().error_code&')'&funCancel.Answer().error_prompt&funCancel.Answer().error_info
+if funCancel.Answer().error_code !=0:Print 'tdsecuL.4.12错误，程序即将退出'
+if funCancel.Answer().error_code !=0 :Exit
+if funCancel.Answer().error_code ==0:Print '撤单发送成功'
+

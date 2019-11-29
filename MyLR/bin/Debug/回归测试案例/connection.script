@@ -1,0 +1,27 @@
+﻿DataTable dt0 : connStr | select * from db_pub.tb_basesedt_stock_quot where stock_code = 600519
+Print 'stock_code 600519 跌停价= ' & dt0.down_limit_price
+
+DataTable dt : connStr | select * from db_rksecu_his.tbjour_rkserk_opor_tshold_sum_risk_trig_his where row_id = 6
+if dt.create_date != 20181111 : Print 'this is false'
+Print dt.opor_no
+
+DataTable dt2 : connStr | select * from db_prod_his.tb_pdcapit_pd_asset_his where row_id = 1
+if dt2.co_no == 9001 : Print 'co_no=9001'
+Print dt2.pd_no
+
+DataTable dt3 : connStr | select * from db_pub.tb_base_exch_info where row_id = 1
+Print dt3.exch_name
+
+DataTable dt4 : connStr | select * from db_pdfutu.tb_pdfuca_asac_capit where row_id = 1
+if dt4.begin_amt ==1082870923.9000 : Print 'co_no = '&dt4.co_no 
+Print dt4.co_no
+
+
+#获取当天日期
+DataTable date1 : connStr | select date_format(curdate(),'%Y%m%d') as date from dual
+Print 'begin_date = ' & date1.date
+
+
+#获取两天后日期
+DataTable date2 : connStr | select date_format(curdate()+2,'%Y%m%d') as date from dual
+Print 'end_date = ' & date2.date

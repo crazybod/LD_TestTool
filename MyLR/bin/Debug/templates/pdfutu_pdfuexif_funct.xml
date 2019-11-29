@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bizmsgs>
+    <function functionname="funct_pdfuexif_CheckStockAccoStatusAvail" typename="LD_REQUEST" functionid="pdfutuT.6.1" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="contrc_code_no" fieldid="1777"/>
+        <field fieldname="hedge_type" fieldid="2591"/>
+        <field fieldname="comb_code" fieldid="3092"/>
+        <field fieldname="contrc_type" fieldid="1778"/>
+        <field fieldname="contrc_dir" fieldid="2070"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+    </function>
+    <function functionname="funct_pdfuexif_CheckStockAccoStatusAvail" typename="LD_ANSWER" functionid="pdfutuT.6.1" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="futu_acco_no" fieldid="1909"/>
+        <field fieldname="futu_acco" fieldid="1908"/>
+        <field fieldname="exgp_avail_amt" fieldid="1968" decimalPlaces="6"/>
+        <field fieldname="asac_avail_amt" fieldid="3054" decimalPlaces="6"/>
+        <field fieldname="exgp_avail_qty" fieldid="1969" decimalPlaces="2"/>
+        <field fieldname="asac_avail_qty" fieldid="3055" decimalPlaces="2"/>
+        <field fieldname="exgp_long_rece_margin" fieldid="3748" decimalPlaces="6"/>
+        <field fieldname="exgp_short_rece_margin" fieldid="3749" decimalPlaces="6"/>
+        <field fieldname="asac_long_rece_margin" fieldid="3750" decimalPlaces="6"/>
+        <field fieldname="asac_short_rece_margin" fieldid="3751" decimalPlaces="6"/>
+        <field fieldname="exgp_long_stock_rece_margin" fieldid="5695" decimalPlaces="6"/>
+        <field fieldname="exgp_short_stock_rece_margin" fieldid="5696" decimalPlaces="6"/>
+    </function>
+</bizmsgs>

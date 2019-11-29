@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bizmsgs>
+    <function functionname="funct_riskif_QueryExchGroupByRisk" typename="LD_REQUEST" functionid="pubT.27.1" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="exch_group_status" fieldid="1972"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_riskif_QueryExchGroupByRisk" typename="LD_ANSWER" functionid="pubT.27.1" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="exch_group_code" fieldid="1965"/>
+            <field fieldname="exch_group_name" fieldid="1970"/>
+            <field fieldname="exch_group_status" fieldid="1972"/>
+            <field fieldname="default_group_flag" fieldid="2251"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="begin_NAV" fieldid="2328" decimalPlaces="6"/>
+            <field fieldname="exch_group_pd_share" fieldid="1966" decimalPlaces="2"/>
+            <field fieldname="update_times" fieldid="3381"/>
+        </sequence>
+    </function>
+    <function functionname="funct_riskif_CalcSecuOrderFee" typename="LD_REQUEST" functionid="pubT.27.2" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+    </function>
+    <function functionname="funct_riskif_CalcSecuOrderFee" typename="LD_ANSWER" functionid="pubT.27.2" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="all_fee" fieldid="2410" decimalPlaces="6"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+    </function>
+    <function functionname="funct_riskif_GetStockCodeInfoByRisk" typename="LD_REQUEST" functionid="pubT.27.3" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_riskif_GetStockCodeInfoByRisk" typename="LD_ANSWER" functionid="pubT.27.3" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="stock_code_no" fieldid="2930"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="stock_type" fieldid="2938"/>
+            <field fieldname="asset_type" fieldid="3045"/>
+            <field fieldname="fair_price" fieldid="1672" decimalPlaces="9"/>
+            <field fieldname="total_stock_issue" fieldid="3084" decimalPlaces="2"/>
+            <field fieldname="circl_stock_capit" fieldid="2188" decimalPlaces="2"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="exch_crncy_type" fieldid="1906"/>
+            <field fieldname="net_price_flag" fieldid="2019"/>
+            <field fieldname="bond_accr_intrst" fieldid="2893" decimalPlaces="12"/>
+            <field fieldname="bond_rate_type" fieldid="2894"/>
+            <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+            <field fieldname="pre_close_price" fieldid="3140" decimalPlaces="9"/>
+            <field fieldname="today_open_price" fieldid="2001" decimalPlaces="9"/>
+            <field fieldname="up_limit_price" fieldid="2905" decimalPlaces="9"/>
+            <field fieldname="down_limit_price" fieldid="1436" decimalPlaces="9"/>
+            <field fieldname="step_price" fieldid="3125" decimalPlaces="9"/>
+        </sequence>
+    </function>
+    <function functionname="funct_riskif_GetFutuCodeInfoByRisk" typename="LD_REQUEST" functionid="pubT.27.4" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_riskif_GetFutuCodeInfoByRisk" typename="LD_ANSWER" functionid="pubT.27.4" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="contrc_code_no" fieldid="1777"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="contrc_code" fieldid="1776"/>
+            <field fieldname="contrc_name" fieldid="1781"/>
+            <field fieldname="contrc_type" fieldid="1778"/>
+            <field fieldname="asset_type" fieldid="3045"/>
+            <field fieldname="step_price" fieldid="3125" decimalPlaces="9"/>
+            <field fieldname="hold_qty" fieldid="1328" decimalPlaces="2"/>
+            <field fieldname="main_flag" fieldid="3033"/>
+            <field fieldname="contrc_unit" fieldid="1775"/>
+            <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+            <field fieldname="buy_price_1" fieldid="2207" decimalPlaces="9"/>
+            <field fieldname="sell_price_1" fieldid="2228" decimalPlaces="9"/>
+            <field fieldname="up_limit_price" fieldid="2905" decimalPlaces="9"/>
+            <field fieldname="down_limit_price" fieldid="1436" decimalPlaces="9"/>
+            <field fieldname="pre_settle_price" fieldid="3132" decimalPlaces="9"/>
+            <field fieldname="sett_price" fieldid="1991" decimalPlaces="9"/>
+        </sequence>
+    </function>
+    <function functionname="funct_riskif_GetHKRate" typename="LD_REQUEST" functionid="pubT.27.5" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+    </function>
+    <function functionname="funct_riskif_GetHKRate" typename="LD_ANSWER" functionid="pubT.27.5" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="sh_hk_buy_ref_rate" fieldid="3734" decimalPlaces="12"/>
+        <field fieldname="sh_hk_sell_ref_rate" fieldid="3735" decimalPlaces="12"/>
+        <field fieldname="sh_hk_settle_buy_rate" fieldid="3736" decimalPlaces="12"/>
+        <field fieldname="sh_hk_settle_sell_rate" fieldid="3737" decimalPlaces="12"/>
+        <field fieldname="sz_hk_buy_ref_rate" fieldid="3738" decimalPlaces="12"/>
+        <field fieldname="sz_hk_sell_ref_rate" fieldid="3739" decimalPlaces="12"/>
+        <field fieldname="sz_hk_settle_buy_rate" fieldid="3740" decimalPlaces="12"/>
+        <field fieldname="sz_hksettle_sell_rate" fieldid="3741" decimalPlaces="12"/>
+    </function>
+    <function functionname="funct_riskif_CalcOrderBatchFee" typename="LD_REQUEST" functionid="pubT.27.6" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="asset_acco_no_str" fieldid="3052"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="stock_code_str" fieldid="3191"/>
+        <field fieldname="order_dir_str" fieldid="1450"/>
+        <field fieldname="order_qty_str" fieldid="3187"/>
+        <field fieldname="order_price_str" fieldid="3186"/>
+    </function>
+    <function functionname="funct_riskif_CalcOrderBatchFee" typename="LD_ANSWER" functionid="pubT.27.6" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="all_fee_str" fieldid="3200"/>
+    </function>
+    <function functionname="funct_riskif_UpdateExchGroupSecuAsset" typename="LD_REQUEST" functionid="pubT.27.7" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="asset_item" fieldid="3360"/>
+        <field fieldname="asset_value" fieldid="3061" decimalPlaces="6"/>
+    </function>
+    <function functionname="funct_riskif_UpdateExchGroupSecuAsset" typename="LD_ANSWER" functionid="pubT.27.7" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="exgp_asset_id" fieldid="3947"/>
+        <field fieldname="exch_group_net_asset" fieldid="1967" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="funct_riskif_UpdateExchGroupFutuAsset" typename="LD_REQUEST" functionid="pubT.27.8" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="asset_item" fieldid="3360"/>
+        <field fieldname="asset_value" fieldid="3061" decimalPlaces="6"/>
+    </function>
+    <function functionname="funct_riskif_UpdateExchGroupFutuAsset" typename="LD_ANSWER" functionid="pubT.27.8" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="exgp_asset_id" fieldid="3947"/>
+        <field fieldname="exch_group_net_asset" fieldid="1967" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="funct_riskif_CalcFutuOrderBatchFee" typename="LD_REQUEST" functionid="pubT.27.9" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="asset_acco_no_str" fieldid="3052"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="contrc_code_str" fieldid="5487"/>
+        <field fieldname="contrc_type_str" fieldid="1779"/>
+        <field fieldname="contrc_unit_str" fieldid="5484"/>
+        <field fieldname="order_dir_str" fieldid="1450"/>
+        <field fieldname="contrc_dir_str" fieldid="2071"/>
+        <field fieldname="order_qty_str" fieldid="3187"/>
+        <field fieldname="order_price_str" fieldid="3186"/>
+        <field fieldname="hedge_type_str" fieldid="2592"/>
+    </function>
+    <function functionname="funct_riskif_CalcFutuOrderBatchFee" typename="LD_ANSWER" functionid="pubT.27.9" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="all_fee_str" fieldid="3200"/>
+    </function>
+</bizmsgs>

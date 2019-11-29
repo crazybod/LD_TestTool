@@ -45,7 +45,7 @@ namespace MyLR.Utils
         public static DataTable ExecuteDataTable(string connStrKey,string sqlCommand)
         {
             DataSet ds = new DataSet();//声明数据集  
-            MySqlConnection mySqlConnection = new MySqlConnection();
+            MySqlConnection mySqlConnection = null;
             try
             {
                 if (SqlCollections.TryGetValue(connStrKey,out mySqlConnection))
@@ -73,7 +73,7 @@ namespace MyLR.Utils
         public static int Execute(string connStrKey,string sqlCommand)
         {
             int result = -1;
-            MySqlConnection mySqlConnection = new MySqlConnection();
+            MySqlConnection mySqlConnection = null;
             try
             {
                 if (SqlCollections.TryGetValue(connStrKey,out mySqlConnection))

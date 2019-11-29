@@ -2221,7 +2221,7 @@
     <bytevector fieldname="comm_pwd" fieldid="3318"/>
     <bytevector fieldname="client_sign_str" fieldid="3319"/>
     <uint32 fieldname="use_certificate_Flag" fieldid="3320"/>
-    <uint32 fieldname="branch_no" fieldid="3321"/>
+    <uint64 fieldname="broker_branch_id" fieldid="5979"/>
     <bytevector fieldname="comm_sum_status" fieldid="3322"/>
     <int64 fieldname="comm_await_cancel_qty" fieldid="3323" decimalPlaces="2"/>
     <bytevector fieldname="order_sum_status_str" fieldid="3324"/>
@@ -2271,7 +2271,7 @@
     <int64 fieldname="sellout_amt" fieldid="3373" decimalPlaces="6"/>
     <int64 fieldname="diff_qty" fieldid="3374" decimalPlaces="2"/>
     <int64 fieldname="cancel_rate" fieldid="3375" decimalPlaces="12"/>
-    <int64 fieldname="month_pandl" fieldid="3376" decimalPlaces="6"/>
+    <int64 fieldname="month_pandl" fieldid="5961" decimalPlaces="6"/>
     <int64 fieldname="cash_out_amt" fieldid="3377" decimalPlaces="6"/>
     <int64 fieldname="securities_ratio" fieldid="3378" decimalPlaces="12"/>
     <bytevector fieldname="compli_rules_name" fieldid="3379"/>
@@ -3349,7 +3349,7 @@
     <uint32 fieldname="private_stock_pd_type" fieldid="4483"/>
     <uint32 fieldname="private_equity_pd_type" fieldid="4484"/>
     <uint32 fieldname="private_other_pd_type" fieldid="4485"/>
-    <bytevector fieldname="cust_img" fieldid="4486"/>
+    <int32 fieldname="cust_image" fieldid="5972"/>
     <uint32 fieldname="train_id" fieldid="4487"/>
     <bytevector fieldname="train_name" fieldid="4488"/>
     <uint32 fieldname="train_type" fieldid="4489"/>
@@ -4679,5 +4679,76 @@
     <bytevector fieldname="file_type_name" fieldid="5924"/>
     <int32 fieldname="batches_count" fieldid="5925"/>
     <bytevector fieldname="fail_reason" fieldid="5926"/>
-    <LPCTSTR fieldname="dc_index_value_list" fieldid="5927"/>
+    <bytevector fieldname="dc_index_value_list" fieldid="5927"/>
+    <bytevector fieldname="import_mapping_acco" fieldid="5928"/>
+    <int32 fieldname="date_calc_type" fieldid="5929"/>
+    <int32 fieldname="import_data_type" fieldid="5930"/>
+    <int64 fieldname="begin_calc_value" fieldid="5931" decimalPlaces="6"/>
+    <int64 fieldname="end_calc_value" fieldid="5932" decimalPlaces="6"/>
+    <int64 fieldname="param_calc_value" fieldid="5933" decimalPlaces="6"/>
+    <int64 fieldname="help_calc_value" fieldid="5934" decimalPlaces="6"/>
+    <int64 fieldname="sh_hk_stock_asset" fieldid="5935" decimalPlaces="6"/>
+    <int64 fieldname="sz_hk_stock_asset" fieldid="5936" decimalPlaces="6"/>
+    <int64 fieldname="sh_Astock_asset" fieldid="5937" decimalPlaces="6"/>
+    <int64 fieldname="sz_Astock_asset" fieldid="5938" decimalPlaces="6"/>
+    <int32 fieldname="data_source" fieldid="5939"/>
+    <uint32 fieldname="apply_pay_date" fieldid="5940"/>
+    <bytevector fieldname="apply_pay_date_str" fieldid="5941"/>
+    <bytevector fieldname="group_no_str" fieldid="5942"/>
+    <uint64 fieldname="link_acco_id" fieldid="5943"/>
+    <int32 fieldname="link_acco_type" fieldid="5944"/>
+    <bytevector fieldname="link_broker_co" fieldid="5945"/>
+    <bytevector fieldname="link_secu_branch" fieldid="5946"/>
+    <bytevector fieldname="link_acco" fieldid="5947"/>
+    <bytevector fieldname="link_acco_pass" fieldid="5948"/>
+    <bytevector fieldname="link_acco_status" fieldid="5949"/>
+    <bytevector fieldname="strategy_name" fieldid="5950"/>
+    <bytevector fieldname="strategy_memo" fieldid="5951"/>
+    <int64 fieldname="strategy_income_eva" fieldid="5952" decimalPlaces="6"/>
+    <int64 fieldname="strategy_share_eva" fieldid="5953" decimalPlaces="12"/>
+    <int64 fieldname="strategy_share_year" fieldid="5954" decimalPlaces="12"/>
+    <int64 fieldname="strategy_share_halfyear" fieldid="5955" decimalPlaces="12"/>
+    <int64 fieldname="strategy_share_season" fieldid="5956" decimalPlaces="12"/>
+    <int64 fieldname="strategy_share_month" fieldid="5957" decimalPlaces="12"/>
+    <int64 fieldname="strategy_share_day" fieldid="5958" decimalPlaces="12"/>
+    <int64 fieldname="strategy_captial_ratio" fieldid="5959" decimalPlaces="12"/>
+    <int64 fieldname="seven_day_pandl" fieldid="5960" decimalPlaces="6"/>
+    <int64 fieldname="three_month_pandl" fieldid="5962" decimalPlaces="6"/>
+    <int64 fieldname="half_year_pandl" fieldid="5963" decimalPlaces="6"/>
+    <int64 fieldname="year_pandl" fieldid="5964" decimalPlaces="6"/>
+    <uint32 fieldname="purchase_date" fieldid="5965"/>
+    <uint32 fieldname="purchase_time" fieldid="5966"/>
+    <int32 fieldname="strategy_enable_flag" fieldid="5967"/>
+    <bytevector fieldname="client_old_pass" fieldid="5968"/>
+    <bytevector fieldname="client_new_pass" fieldid="5969"/>
+    <int64 fieldname="strategy_share_year_pre" fieldid="5970" decimalPlaces="12"/>
+    <bytevector fieldname="cust_nickname" fieldid="5971"/>
+    <uint32 fieldname="password_date" fieldid="5973"/>
+    <uint32 fieldname="password_time" fieldid="5974"/>
+    <uint64 fieldname="broker_co_id" fieldid="5975"/>
+    <bytevector fieldname="broker_co_name" fieldid="5976"/>
+    <int32 fieldname="broker_co_type" fieldid="5977"/>
+    <int32 fieldname="broker_co_acco_flag" fieldid="5978"/>
+    <bytevector fieldname="broker_branch_name" fieldid="5980"/>
+    <int64 fieldname="begin_asset" fieldid="5981" decimalPlaces="6"/>
+    <int64 fieldname="asset_total" fieldid="5982" decimalPlaces="6"/>
+    <int64 fieldname="realize_pandl_ratio_year" fieldid="5983" decimalPlaces="12"/>
+    <int64 fieldname="seven_day_pandl_ratio_year" fieldid="5984" decimalPlaces="12"/>
+    <int64 fieldname="month_pandl_ratio_year" fieldid="5985" decimalPlaces="12"/>
+    <int64 fieldname="three_month_pandl_ratio_year" fieldid="5986" decimalPlaces="12"/>
+    <int64 fieldname="half_year_pandl_ratio_year" fieldid="5987" decimalPlaces="12"/>
+    <int64 fieldname="year_pandl_ratio_year" fieldid="5988" decimalPlaces="12"/>
+    <int32 fieldname="loop_count" fieldid="5989"/>
+    <uint32 fieldname="datatohis_date" fieldid="5990"/>
+    <uint32 fieldname="get_opor_no" fieldid="5991"/>
+    <uint32 fieldname="get_opor_co_no" fieldid="5992"/>
+    <bytevector fieldname="get_oper_ip_addr" fieldid="5993"/>
+    <bytevector fieldname="get_oper_mac" fieldid="5994"/>
+    <bytevector fieldname="get_oper_info" fieldid="5995"/>
+    <bytevector fieldname="get_oper_way" fieldid="5996"/>
+    <int64 fieldname="min_strategy_order_amt" fieldid="5997" decimalPlaces="6"/>
+    <int64 fieldname="strategy_total_asset" fieldid="5998" decimalPlaces="6"/>
+    <int64 fieldname="strategy_posi_market_value" fieldid="5999" decimalPlaces="6"/>
+    <int64 fieldname="strategy_cancel_loss_ratio" fieldid="6000" decimalPlaces="12"/>
+    <bytevector fieldname="strategy_prompt" fieldid="6001"/>
 </fields>

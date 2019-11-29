@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bizmsgs>
+    <function functionname="funct_clsepb_AddDealError" typename="LD_REQUEST" functionid="clsecuT.1.6" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="busi_func_code" fieldid="2792"/>
+        <field fieldname="log_error_code" fieldid="2434"/>
+        <field fieldname="log_error_info" fieldid="2435"/>
+    </function>
+    <function functionname="funct_clsepb_AddDealError" typename="LD_ANSWER" functionid="clsecuT.1.6" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_clsepb_UpdateDealStatus" typename="LD_REQUEST" functionid="clsecuT.1.12" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="sett_flow_step" fieldid="2371"/>
+        <field fieldname="sett_deal_status" fieldid="2381"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funct_clsepb_UpdateDealStatus" typename="LD_ANSWER" functionid="clsecuT.1.12" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_clsepb_DataToHis" typename="LD_REQUEST" functionid="clsecuT.1.21" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+    </function>
+    <function functionname="funct_clsepb_DataToHis" typename="LD_ANSWER" functionid="clsecuT.1.21" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_clsepb_RedoPrepare" typename="LD_REQUEST" functionid="clsecuT.1.41" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="sett_redo_type" fieldid="2383"/>
+        <field fieldname="clear_date" fieldid="2372"/>
+        <field fieldname="clear_deal_id" fieldid="2373"/>
+        <field fieldname="sett_date" fieldid="1989"/>
+        <field fieldname="sett_deal_id" fieldid="1990"/>
+    </function>
+    <function functionname="funct_clsepb_RedoPrepare" typename="LD_ANSWER" functionid="clsecuT.1.41" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_clsepb_AddDealFlowTotal" typename="LD_REQUEST" functionid="clsecuT.1.42" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="sett_flow_step" fieldid="2371"/>
+        <field fieldname="total_count" fieldid="3086"/>
+        <field fieldname="total_amt" fieldid="3087" decimalPlaces="6"/>
+        <field fieldname="total_succ_count" fieldid="2803"/>
+        <field fieldname="total_succ_amt" fieldid="2804" decimalPlaces="6"/>
+        <field fieldname="total_fail_count" fieldid="2720"/>
+        <field fieldname="total_fail_amt" fieldid="2721" decimalPlaces="6"/>
+    </function>
+    <function functionname="funct_clsepb_AddDealFlowTotal" typename="LD_ANSWER" functionid="clsecuT.1.42" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_clsepb_DealFlowTotal" typename="LD_REQUEST" functionid="clsecuT.1.43" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="sett_flow_step" fieldid="2371"/>
+    </function>
+    <function functionname="funct_clsepb_DealFlowTotal" typename="LD_ANSWER" functionid="clsecuT.1.43" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_clsepb_QueryDealFlowTotal" typename="LD_REQUEST" functionid="clsecuT.1.44" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="sett_flow_step" fieldid="2371"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_clsepb_QueryDealFlowTotal" typename="LD_ANSWER" functionid="clsecuT.1.44" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+        </sequence>
+    </function>
+    <function functionname="funct_clsepb_CheckDealFlow" typename="LD_REQUEST" functionid="clsecuT.1.45" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="sett_flow_step" fieldid="2371"/>
+    </function>
+    <function functionname="funct_clsepb_CheckDealFlow" typename="LD_ANSWER" functionid="clsecuT.1.45" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_clsepb_ReClseclTb" typename="LD_REQUEST" functionid="clsecuT.1.46" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+    </function>
+    <function functionname="funct_clsepb_ReClseclTb" typename="LD_ANSWER" functionid="clsecuT.1.46" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_clsepb_CreateReClseclTbBak" typename="LD_REQUEST" functionid="clsecuT.1.47" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+    </function>
+    <function functionname="funct_clsepb_CreateReClseclTbBak" typename="LD_ANSWER" functionid="clsecuT.1.47" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+</bizmsgs>

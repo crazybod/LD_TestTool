@@ -2288,13 +2288,15 @@
         <field fieldname="oper_way" fieldid="1184"/>
         <field fieldname="menu_no" fieldid="1169"/>
         <field fieldname="func_code" fieldid="1674"/>
-        <field fieldname="out_acco" fieldid="2697"/>
-        <field fieldname="curr_amt" fieldid="1396" decimalPlaces="6"/>
+        <field fieldname="import_mapping_acco" fieldid="5928"/>
+        <field fieldname="co_no" fieldid="1828"/>
         <field fieldname="crncy_type" fieldid="1147"/>
-        <field fieldname="total_rece_amt" fieldid="2158" decimalPlaces="6"/>
-        <field fieldname="total_payab_amt" fieldid="2157" decimalPlaces="6"/>
-        <field fieldname="frozen_amt" fieldid="1467" decimalPlaces="6"/>
-        <field fieldname="unfroz_amt" fieldid="1995" decimalPlaces="6"/>
+        <field fieldname="out_curr_amt" fieldid="2663" decimalPlaces="6"/>
+        <field fieldname="out_enable_amt" fieldid="2681" decimalPlaces="6"/>
+        <field fieldname="out_frozen_amt" fieldid="2665" decimalPlaces="6"/>
+        <field fieldname="out_unfroz_amt" fieldid="2677" decimalPlaces="6"/>
+        <field fieldname="out_total_payab_amt" fieldid="5499" decimalPlaces="6"/>
+        <field fieldname="out_total_rece_amt" fieldid="5500" decimalPlaces="6"/>
     </function>
     <function functionname="funcl_pdseca_ImportCapitalData" typename="LD_ANSWER" functionid="pdsecuL.2.105" packettype="1">
         <field fieldname="error_code" fieldid="1359"/>
@@ -2302,6 +2304,8 @@
         <field fieldname="error_level" fieldid="1362"/>
         <field fieldname="error_deal" fieldid="1361"/>
         <field fieldname="error_prompt" fieldid="1364"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
     </function>
     <function functionname="funcl_pdseca_AddBankTransferRecordData" typename="LD_REQUEST" functionid="pdsecuL.2.106" packettype="0">
         <field fieldname="opor_co_no" fieldid="1194"/>
@@ -2313,7 +2317,7 @@
         <field fieldname="oper_way" fieldid="1184"/>
         <field fieldname="menu_no" fieldid="1169"/>
         <field fieldname="func_code" fieldid="1674"/>
-        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="import_mapping_acco" fieldid="5928"/>
         <field fieldname="co_no" fieldid="1828"/>
         <field fieldname="trans_date" fieldid="3038"/>
         <field fieldname="trans_time" fieldid="3039"/>

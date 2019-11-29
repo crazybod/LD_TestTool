@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bizmsgs>
+    <function functionname="funct_dcwh_queryIndexInfo" typename="LD_REQUEST" functionid="dcT.2.1" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_dcwh_queryIndexInfo" typename="LD_ANSWER" functionid="dcT.2.1" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="dc_index_no" fieldid="5896"/>
+            <field fieldname="dc_index_name" fieldid="5897"/>
+            <field fieldname="dc_index_type" fieldid="5898"/>
+            <field fieldname="dc_index_info" fieldid="5899"/>
+            <field fieldname="dc_index_formula" fieldid="5900"/>
+            <field fieldname="data_source" fieldid="5939"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+        </sequence>
+    </function>
+    <function functionname="funct_dcwh_queryPdRptTemp" typename="LD_REQUEST" functionid="dcT.2.2" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_dcwh_queryPdRptTemp" typename="LD_ANSWER" functionid="dcT.2.2" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="tpl_no" fieldid="2243"/>
+            <field fieldname="model_name" fieldid="2245"/>
+            <field fieldname="query_cond" fieldid="1222"/>
+            <field fieldname="dc_index_list" fieldid="5901"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+        </sequence>
+    </function>
+    <function functionname="funct_dcwh_queryCoRptTemp" typename="LD_REQUEST" functionid="dcT.2.3" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_dcwh_queryCoRptTemp" typename="LD_ANSWER" functionid="dcT.2.3" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="tpl_no" fieldid="2243"/>
+            <field fieldname="model_name" fieldid="2245"/>
+            <field fieldname="query_cond" fieldid="1222"/>
+            <field fieldname="dc_index_list" fieldid="5901"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+        </sequence>
+    </function>
+    <function functionname="funct_dcwh_queryPdRptIndex" typename="LD_REQUEST" functionid="dcT.2.4" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="tpl_no" fieldid="2243"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no_str" fieldid="1230"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_dcwh_queryPdRptIndex" typename="LD_ANSWER" functionid="dcT.2.4" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="dc_index_value_list" fieldid="5927"/>
+        </sequence>
+    </function>
+    <function functionname="funct_dcwh_queryCoRptIndex" typename="LD_REQUEST" functionid="dcT.2.5" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="tpl_no" fieldid="2243"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_dcwh_queryCoRptIndex" typename="LD_ANSWER" functionid="dcT.2.5" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="dc_index_value_list" fieldid="5927"/>
+        </sequence>
+    </function>
+    <function functionname="funct_dcwh_queryPdSecuPosi" typename="LD_REQUEST" functionid="dcT.2.6" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no_str" fieldid="1230"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_dcwh_queryPdSecuPosi" typename="LD_ANSWER" functionid="dcT.2.6" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_type" fieldid="2938"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="invest_type" fieldid="2651"/>
+            <field fieldname="begin_qty" fieldid="2329" decimalPlaces="2"/>
+            <field fieldname="curr_qty" fieldid="1401" decimalPlaces="2"/>
+            <field fieldname="frozen_qty" fieldid="1468" decimalPlaces="2"/>
+            <field fieldname="unfroz_qty" fieldid="1996" decimalPlaces="2"/>
+            <field fieldname="pre_settle_qty" fieldid="3923" decimalPlaces="2"/>
+            <field fieldname="curr_cost_amt" fieldid="1388" decimalPlaces="6"/>
+            <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+            <field fieldname="exch_rate" fieldid="1825" decimalPlaces="12"/>
+            <field fieldname="realize_pandl" fieldid="2536" decimalPlaces="6"/>
+            <field fieldname="intrst_cost_amt" fieldid="2167" decimalPlaces="6"/>
+            <field fieldname="intrst_pandl" fieldid="2173" decimalPlaces="6"/>
+            <field fieldname="repl_qty" fieldid="2600" decimalPlaces="2"/>
+        </sequence>
+    </function>
+    <function functionname="funct_dcwh_queryCoSecuPosi" typename="LD_REQUEST" functionid="dcT.2.7" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="begin_date" fieldid="2073"/>
+        <field fieldname="end_date" fieldid="1986"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_dcwh_queryCoSecuPosi" typename="LD_ANSWER" functionid="dcT.2.7" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="stock_type" fieldid="2938"/>
+            <field fieldname="stock_code" fieldid="2929"/>
+            <field fieldname="stock_name" fieldid="2946"/>
+            <field fieldname="invest_type" fieldid="2651"/>
+            <field fieldname="begin_qty" fieldid="2329" decimalPlaces="2"/>
+            <field fieldname="curr_qty" fieldid="1401" decimalPlaces="2"/>
+            <field fieldname="frozen_qty" fieldid="1468" decimalPlaces="2"/>
+            <field fieldname="unfroz_qty" fieldid="1996" decimalPlaces="2"/>
+            <field fieldname="pre_settle_qty" fieldid="3923" decimalPlaces="2"/>
+            <field fieldname="curr_cost_amt" fieldid="1388" decimalPlaces="6"/>
+            <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+            <field fieldname="exch_rate" fieldid="1825" decimalPlaces="12"/>
+            <field fieldname="realize_pandl" fieldid="2536" decimalPlaces="6"/>
+            <field fieldname="intrst_cost_amt" fieldid="2167" decimalPlaces="6"/>
+            <field fieldname="intrst_pandl" fieldid="2173" decimalPlaces="6"/>
+            <field fieldname="repl_qty" fieldid="2600" decimalPlaces="2"/>
+        </sequence>
+    </function>
+</bizmsgs>

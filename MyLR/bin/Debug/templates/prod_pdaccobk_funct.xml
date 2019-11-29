@@ -1,0 +1,515 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bizmsgs>
+    <function functionname="funct_pdaccobk_QueryAllProduct" typename="LD_REQUEST" functionid="prodT.5.1" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="pd_status" fieldid="1266"/>
+    </function>
+    <function functionname="funct_pdaccobk_QueryAllProduct" typename="LD_ANSWER" functionid="prodT.5.1" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_code" fieldid="1232"/>
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="pd_status" fieldid="1266"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdaccobk_QueryAllAssetAcco" typename="LD_REQUEST" functionid="prodT.5.2" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="asset_acco_status" fieldid="3059"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="pd_name" fieldid="1257"/>
+    </function>
+    <function functionname="funct_pdaccobk_QueryAllAssetAcco" typename="LD_ANSWER" functionid="prodT.5.2" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="asset_acco" fieldid="3050"/>
+            <field fieldname="asset_acco_name" fieldid="3057"/>
+            <field fieldname="asset_acco_status" fieldid="3059"/>
+            <field fieldname="out_acco" fieldid="2697"/>
+            <field fieldname="busi_depart" fieldid="5105"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdaccobk_QueryProductInfo" typename="LD_REQUEST" functionid="prodT.5.4" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="pd_type" fieldid="1256"/>
+        <field fieldname="pd_status_str" fieldid="1267"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_pdaccobk_QueryProductInfo" typename="LD_ANSWER" functionid="prodT.5.4" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_code" fieldid="1232"/>
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="pd_flname" fieldid="1260"/>
+            <field fieldname="pd_manager" fieldid="1251"/>
+            <field fieldname="found_date" fieldid="1321"/>
+            <field fieldname="pd_type" fieldid="1256"/>
+            <field fieldname="apply_currency" fieldid="2284"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="first_asset" fieldid="2859" decimalPlaces="6"/>
+            <field fieldname="first_amt" fieldid="2858" decimalPlaces="6"/>
+            <field fieldname="pd_all_share" fieldid="1270" decimalPlaces="2"/>
+            <field fieldname="curr_share" fieldid="1390" decimalPlaces="2"/>
+            <field fieldname="pre_share" fieldid="3137" decimalPlaces="2"/>
+            <field fieldname="his_max_per_nav" fieldid="2161" decimalPlaces="6"/>
+            <field fieldname="pre_nav" fieldid="3138" decimalPlaces="6"/>
+            <field fieldname="coust_full_name" fieldid="2041"/>
+            <field fieldname="coust_acco" fieldid="2043"/>
+            <field fieldname="coust_acco_name" fieldid="2044"/>
+            <field fieldname="cost_calc_type" fieldid="1283"/>
+            <field fieldname="allow_exch" fieldid="2884"/>
+            <field fieldname="allow_stock_type" fieldid="2879"/>
+            <field fieldname="busi_config_str" fieldid="2794"/>
+            <field fieldname="comm_appr_oper" fieldid="2989"/>
+            <field fieldname="market_price_ratio" fieldid="2550" decimalPlaces="12"/>
+            <field fieldname="forbid_order_dir" fieldid="3205"/>
+            <field fieldname="warn_posi_value" fieldid="3351" decimalPlaces="6"/>
+            <field fieldname="close_posi_value" fieldid="2319" decimalPlaces="6"/>
+            <field fieldname="target_posi_ratio" fieldid="5691" decimalPlaces="6"/>
+            <field fieldname="beta_coeffi" fieldid="5692" decimalPlaces="12"/>
+            <field fieldname="custom_pd_class" fieldid="5693"/>
+            <field fieldname="pd_status" fieldid="1266"/>
+            <field fieldname="index_value" fieldid="5821"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdaccobk_UpdateProdBusiConfigStr" typename="LD_REQUEST" functionid="prodT.5.5" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="config_index" fieldid="3328"/>
+        <field fieldname="config_value" fieldid="2308"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdaccobk_UpdateProdBusiConfigStr" typename="LD_ANSWER" functionid="prodT.5.5" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="busi_config_str" fieldid="2794"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="funct_pdaccobk_QueryAssetAccoInfo" typename="LD_REQUEST" functionid="prodT.5.6" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="asset_acco_status_str" fieldid="3060"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_pdaccobk_QueryAssetAccoInfo" typename="LD_ANSWER" functionid="prodT.5.6" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="create_date" fieldid="1354"/>
+            <field fieldname="create_time" fieldid="1355"/>
+            <field fieldname="update_date" fieldid="1667"/>
+            <field fieldname="update_time" fieldid="1669"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="asset_acco" fieldid="3050"/>
+            <field fieldname="asset_acco_name" fieldid="3057"/>
+            <field fieldname="asset_acco_type" fieldid="3056"/>
+            <field fieldname="trade_pwd" fieldid="1945"/>
+            <field fieldname="asset_acco_status" fieldid="3059"/>
+            <field fieldname="busi_config_str" fieldid="2794"/>
+            <field fieldname="market_price_ratio" fieldid="2550" decimalPlaces="12"/>
+            <field fieldname="allow_exch" fieldid="2884"/>
+            <field fieldname="allow_stock_type" fieldid="2879"/>
+            <field fieldname="split_fee_typr_str" fieldid="1537"/>
+            <field fieldname="busi_limit_str" fieldid="2799"/>
+            <field fieldname="exter_comm_flag" fieldid="3170"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdaccobk_UpdateAseetAccoBusiConfigStr" typename="LD_REQUEST" functionid="prodT.5.7" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="config_index" fieldid="3328"/>
+        <field fieldname="config_value" fieldid="2308"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdaccobk_UpdateAseetAccoBusiConfigStr" typename="LD_ANSWER" functionid="prodT.5.7" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="busi_config_str" fieldid="2794"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="funct_pdaccobk_QueryAssetAccoInfoBySecuSync" typename="LD_REQUEST" functionid="prodT.5.8" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no_str" fieldid="1230"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="online_status" fieldid="2887"/>
+    </function>
+    <function functionname="funct_pdaccobk_QueryAssetAccoInfoBySecuSync" typename="LD_ANSWER" functionid="prodT.5.8" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="asset_acco" fieldid="3050"/>
+            <field fieldname="pass_no" fieldid="2610"/>
+            <field fieldname="out_acco" fieldid="2697"/>
+            <field fieldname="online_status" fieldid="2887"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdaccobk_BackUpProdData" typename="LD_REQUEST" functionid="prodT.5.11" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+    </function>
+    <function functionname="funct_pdaccobk_BackUpProdData" typename="LD_ANSWER" functionid="prodT.5.11" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdaccobk_UpdateProdEvaluAsset" typename="LD_REQUEST" functionid="prodT.5.21" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="evalu_nav_asset" fieldid="3885" decimalPlaces="6"/>
+        <field fieldname="begin_evalu_nav_asset" fieldid="3886" decimalPlaces="6"/>
+        <field fieldname="evalu_share" fieldid="3883" decimalPlaces="2"/>
+        <field fieldname="total_rece_amt" fieldid="2158" decimalPlaces="6"/>
+        <field fieldname="total_payab_amt" fieldid="2157" decimalPlaces="6"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdaccobk_UpdateProdEvaluAsset" typename="LD_ANSWER" functionid="prodT.5.21" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="pd_cash_id" fieldid="3640"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_first_amt" fieldid="3639" decimalPlaces="6"/>
+        <field fieldname="pd_curr_amt" fieldid="1238" decimalPlaces="6"/>
+        <field fieldname="pd_dist_amt" fieldid="1264" decimalPlaces="6"/>
+        <field fieldname="pd_auth_amt" fieldid="1265" decimalPlaces="6"/>
+        <field fieldname="pd_amt_check_diff" fieldid="3967" decimalPlaces="6"/>
+        <field fieldname="pd_pre_settle_amt" fieldid="3871" decimalPlaces="6"/>
+        <field fieldname="pd_total_cash_divide" fieldid="3630" decimalPlaces="6"/>
+        <field fieldname="pd_total_pre_fee" fieldid="3631" decimalPlaces="6"/>
+        <field fieldname="pd_total_rece_amt" fieldid="3632" decimalPlaces="6"/>
+        <field fieldname="pd_total_payab_amt" fieldid="3633" decimalPlaces="6"/>
+        <field fieldname="pd_intrst_cacl_amt" fieldid="3634" decimalPlaces="6"/>
+        <field fieldname="pd_pre_entry_intrst_amt" fieldid="3635" decimalPlaces="6"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="funct_pdaccobk_SetAssetAccoChannel" typename="LD_REQUEST" functionid="prodT.5.71" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="pass_type" fieldid="2614"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="config_str" fieldid="1178"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdaccobk_SetAssetAccoChannel" typename="LD_ANSWER" functionid="prodT.5.71" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdaccobk_QueryAssetAccoChannel" typename="LD_REQUEST" functionid="prodT.5.74" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="pd_name" fieldid="1257"/>
+    </function>
+    <function functionname="funct_pdaccobk_QueryAssetAccoChannel" typename="LD_ANSWER" functionid="prodT.5.74" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="create_date" fieldid="1354"/>
+            <field fieldname="create_time" fieldid="1355"/>
+            <field fieldname="update_date" fieldid="1667"/>
+            <field fieldname="update_time" fieldid="1669"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="pass_type" fieldid="2614"/>
+            <field fieldname="pass_no" fieldid="2610"/>
+            <field fieldname="out_acco" fieldid="2697"/>
+            <field fieldname="online_status" fieldid="2887"/>
+            <field fieldname="config_str" fieldid="1178"/>
+            <field fieldname="read_flag" fieldid="5843"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdaccobk_UpdateAssetAccoStatus" typename="LD_REQUEST" functionid="prodT.5.75" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="asset_acco_status" fieldid="3059"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdaccobk_UpdateAssetAccoStatus" typename="LD_ANSWER" functionid="prodT.5.75" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdaccobk_QueryProductAccordToAsacType" typename="LD_REQUEST" functionid="prodT.5.76" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="pd_status" fieldid="1266"/>
+        <field fieldname="asset_acco_type_str" fieldid="5866"/>
+    </function>
+    <function functionname="funct_pdaccobk_QueryProductAccordToAsacType" typename="LD_ANSWER" functionid="prodT.5.76" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_code" fieldid="1232"/>
+            <field fieldname="pd_name" fieldid="1257"/>
+            <field fieldname="pd_status" fieldid="1266"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdaccobk_UpdateProductStatus" typename="LD_REQUEST" functionid="prodT.5.77" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="pd_status" fieldid="1266"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdaccobk_UpdateProductStatus" typename="LD_ANSWER" functionid="prodT.5.77" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_cost_calc_type" fieldid="3642"/>
+        <field fieldname="pd_market_price_ratio" fieldid="3880" decimalPlaces="12"/>
+        <field fieldname="pd_comm_no_limit_price_ratio" fieldid="3879" decimalPlaces="12"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="funct_pdaccobk_ModiProductLimit" typename="LD_REQUEST" functionid="prodT.5.78" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="cost_calc_type" fieldid="1283"/>
+        <field fieldname="allow_exch" fieldid="2884"/>
+        <field fieldname="allow_stock_type" fieldid="2879"/>
+        <field fieldname="comm_appr_oper" fieldid="2989"/>
+        <field fieldname="market_price_ratio" fieldid="2550" decimalPlaces="12"/>
+        <field fieldname="forbid_order_dir" fieldid="3205"/>
+        <field fieldname="comm_no_limit_price_ratio" fieldid="3613" decimalPlaces="12"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="hk_asset_calc_rate" fieldid="5198"/>
+    </function>
+    <function functionname="funct_pdaccobk_ModiProductLimit" typename="LD_ANSWER" functionid="prodT.5.78" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_status" fieldid="1266"/>
+        <field fieldname="update_times" fieldid="3381"/>
+    </function>
+    <function functionname="funct_pdaccobk_UpdatePdForbidOrderDir" typename="LD_REQUEST" functionid="prodT.5.79" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="forbid_order_dir" fieldid="3205"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdaccobk_UpdatePdForbidOrderDir" typename="LD_ANSWER" functionid="prodT.5.79" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdaccobk_QueryProductLimit" typename="LD_REQUEST" functionid="prodT.5.80" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_pdaccobk_QueryProductLimit" typename="LD_ANSWER" functionid="prodT.5.80" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="create_date" fieldid="1354"/>
+            <field fieldname="create_time" fieldid="1355"/>
+            <field fieldname="update_date" fieldid="1667"/>
+            <field fieldname="update_time" fieldid="1669"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="cost_calc_type" fieldid="1283"/>
+            <field fieldname="allow_exch" fieldid="2884"/>
+            <field fieldname="allow_stock_type" fieldid="2879"/>
+            <field fieldname="busi_config_str" fieldid="2794"/>
+            <field fieldname="comm_appr_oper" fieldid="2989"/>
+            <field fieldname="market_price_ratio" fieldid="2550" decimalPlaces="12"/>
+            <field fieldname="forbid_order_dir" fieldid="3205"/>
+            <field fieldname="pd_status" fieldid="1266"/>
+            <field fieldname="comm_no_limit_price_ratio" fieldid="3613" decimalPlaces="12"/>
+            <field fieldname="remark_info" fieldid="1146"/>
+        </sequence>
+    </function>
+    <function functionname="funct_pdaccobk_SetAssetAccoChReadFlag" typename="LD_REQUEST" functionid="prodT.5.81" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+    </function>
+    <function functionname="funct_pdaccobk_SetAssetAccoChReadFlag" typename="LD_ANSWER" functionid="prodT.5.81" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_pdaccobk_ModiOutAcco" typename="LD_REQUEST" functionid="prodT.5.82" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="oper_remark_info" fieldid="3164"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+    </function>
+    <function functionname="funct_pdaccobk_ModiOutAcco" typename="LD_ANSWER" functionid="prodT.5.82" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+</bizmsgs>

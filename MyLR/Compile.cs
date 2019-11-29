@@ -161,10 +161,15 @@ namespace MyLR
                         DataTable dt = null;
                         if (_dataTableCollection.TryGetValue(bizReq.DataTableName,out dt))
                         {
-                            if (dt != null)
+                            if (dt != null && dt.Rows.Count > 0)
                             {
                                 string columnName = fieldValue.Split('.')[1].Trim();
                                 bizReq.FieldValue = dt.Rows[0][columnName].ToString();
+                            }
+                            else
+                            {
+                                StringBuilder printBu = new StringBuilder();
+                                printBu.Append($"数据集{bizReq.DataTableName}的SQL查询返回结果集为空！");
                             }
                         }
                     }
@@ -211,7 +216,14 @@ namespace MyLR
                         //如果是SQL返回结果集，用如下方法打印
                         if (_dataTableCollection.TryGetValue(printAry[i].Split('.')[0].Trim(),out dt))
                         {
-                            printBu.Append(dt.Rows[0][printAry[i].Split('.')[1].Trim()].ToString());
+                            if (dt.Rows.Count > 0)
+                            {
+                                printBu.Append(dt.Rows[0][printAry[i].Split('.')[1].Trim()].ToString());
+                            }
+                            else
+                            {
+                                printBu.Append("该SQL查询返回结果集为空！");
+                            }
                         }
                         else
                         {
@@ -635,9 +647,14 @@ namespace MyLR
             string[] leftDatas = leftData.Split('.');
             if (_dataTableCollection.TryGetValue(leftDatas[0].Trim(), out dt))
             {
-                if (dt != null)
+                if (dt != null && dt.Rows.Count > 0)
                 {
                     leftData = dt.Rows[0][leftDatas[1]].ToString();
+                    leftFieldType = LDSdkTag.TypeString;
+                }
+                else
+                {
+                    leftData = "null";
                     leftFieldType = LDSdkTag.TypeString;
                 }
             }

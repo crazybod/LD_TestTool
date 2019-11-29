@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bizmsgs>
+    <function functionname="funct_wtttest_add" typename="LD_REQUEST" functionid="pubT.31.1" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="wanttt_id" fieldid="5872"/>
+        <field fieldname="wanttt_name" fieldid="5873"/>
+        <field fieldname="wangtt_stock_code_no" fieldid="5875"/>
+        <field fieldname="wanttt_asset_no" fieldid="5874"/>
+        <field fieldname="wanttt_buy_stock_qty" fieldid="5876"/>
+        <field fieldname="wanttt_sale_stock_qty" fieldid="5877"/>
+    </function>
+    <function functionname="funct_wtttest_add" typename="LD_ANSWER" functionid="pubT.31.1" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_wtttest_dele" typename="LD_REQUEST" functionid="pubT.31.2" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="wanttt_id" fieldid="5872"/>
+    </function>
+    <function functionname="funct_wtttest_dele" typename="LD_ANSWER" functionid="pubT.31.2" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_wtttest_Modify" typename="LD_REQUEST" functionid="pubT.31.3" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="wanttt_id" fieldid="5872"/>
+        <field fieldname="wanttt_name" fieldid="5873"/>
+        <field fieldname="wangtt_stock_code_no" fieldid="5875"/>
+        <field fieldname="wanttt_asset_no" fieldid="5874"/>
+        <field fieldname="wanttt_buy_stock_qty" fieldid="5876"/>
+        <field fieldname="wanttt_sale_stock_qty" fieldid="5877"/>
+    </function>
+    <function functionname="funct_wtttest_Modify" typename="LD_ANSWER" functionid="pubT.31.3" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_wtttest_sel" typename="LD_REQUEST" functionid="pubT.31.4" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="wanttt_id" fieldid="5872"/>
+        <field fieldname="wanttt_name" fieldid="5873"/>
+        <field fieldname="wangtt_stock_code_no" fieldid="5875"/>
+        <field fieldname="wanttt_asset_no" fieldid="5874"/>
+    </function>
+    <function functionname="funct_wtttest_sel" typename="LD_ANSWER" functionid="pubT.31.4" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="wanttt_id" fieldid="5872"/>
+            <field fieldname="wanttt_name" fieldid="5873"/>
+            <field fieldname="wangtt_stock_code_no" fieldid="5875"/>
+            <field fieldname="wanttt_asset_no" fieldid="5874"/>
+            <field fieldname="wanttt_buy_stock_qty" fieldid="5876"/>
+            <field fieldname="wanttt_sale_stock_qty" fieldid="5877"/>
+        </sequence>
+    </function>
+</bizmsgs>

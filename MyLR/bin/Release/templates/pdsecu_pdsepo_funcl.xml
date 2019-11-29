@@ -1158,6 +1158,7 @@
         <field fieldname="menu_no" fieldid="1169"/>
         <field fieldname="func_code" fieldid="1674"/>
         <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="qry_fields" fieldid="4444"/>
     </function>
     <function functionname="funcl_pdsepo_QuerySecuAccoListByAutoNewStock" typename="LD_ANSWER" functionid="pdsecuL.3.91" packettype="1">
         <field fieldname="error_code" fieldid="1359"/>
@@ -1884,15 +1885,15 @@
         <field fieldname="oper_way" fieldid="1184"/>
         <field fieldname="menu_no" fieldid="1169"/>
         <field fieldname="func_code" fieldid="1674"/>
-        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="import_mapping_acco" fieldid="5928"/>
+        <field fieldname="co_no" fieldid="1828"/>
         <field fieldname="exch_no" fieldid="2538"/>
-        <field fieldname="stock_acco" fieldid="1696"/>
         <field fieldname="stock_code" fieldid="2929"/>
-        <field fieldname="cost_price" fieldid="1284" decimalPlaces="9"/>
-        <field fieldname="curr_qty" fieldid="1401" decimalPlaces="2"/>
-        <field fieldname="crncy_type" fieldid="1147"/>
-        <field fieldname="today_buy_qty" fieldid="1411" decimalPlaces="2"/>
-        <field fieldname="today_sell_qty" fieldid="1414" decimalPlaces="2"/>
+        <field fieldname="out_cost_price" fieldid="3312" decimalPlaces="9"/>
+        <field fieldname="out_curr_qty" fieldid="2664" decimalPlaces="2"/>
+        <field fieldname="out_enable_qty" fieldid="2682" decimalPlaces="2"/>
+        <field fieldname="out_frozen_qty" fieldid="2666" decimalPlaces="2"/>
+        <field fieldname="out_unfroz_qty" fieldid="2678" decimalPlaces="2"/>
     </function>
     <function functionname="funcl_pdsepo_ImportRecordPosiData" typename="LD_ANSWER" functionid="pdsecuL.3.87" packettype="1">
         <field fieldname="error_code" fieldid="1359"/>

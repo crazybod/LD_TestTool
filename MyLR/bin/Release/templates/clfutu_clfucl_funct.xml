@@ -1,0 +1,899 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bizmsgs>
+    <function functionname="funct_clfucl_AddPosi" typename="LD_REQUEST" functionid="clfutuT.2.1" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="futu_acco_no" fieldid="1909"/>
+        <field fieldname="contrc_code_no" fieldid="1777"/>
+        <field fieldname="contrc_type" fieldid="1778"/>
+        <field fieldname="lngsht_type" fieldid="1491"/>
+        <field fieldname="hedge_type" fieldid="2591"/>
+        <field fieldname="pre_settle_price" fieldid="3132" decimalPlaces="9"/>
+        <field fieldname="curr_qty" fieldid="1401" decimalPlaces="2"/>
+        <field fieldname="contrc_unit" fieldid="1775"/>
+        <field fieldname="comb_code" fieldid="3092"/>
+        <field fieldname="open_amount" fieldid="2054" decimalPlaces="6"/>
+    </function>
+    <function functionname="funct_clfucl_AddPosi" typename="LD_ANSWER" functionid="clfutuT.2.1" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_clfucl_Prepare" typename="LD_REQUEST" functionid="clfutuT.2.2" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+    </function>
+    <function functionname="funct_clfucl_Prepare" typename="LD_ANSWER" functionid="clfutuT.2.2" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="record_count" fieldid="1865"/>
+        <field fieldname="deal_info" fieldid="3309"/>
+    </function>
+    <function functionname="funct_clfucl_AddOrder" typename="LD_REQUEST" functionid="clfutuT.2.6" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="exch_rate" fieldid="1825" decimalPlaces="12"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="futu_acco_no" fieldid="1909"/>
+        <field fieldname="contrc_code_no" fieldid="1777"/>
+        <field fieldname="contrc_type" fieldid="1778"/>
+        <field fieldname="contrc_unit" fieldid="1775"/>
+        <field fieldname="comm_id" fieldid="3010"/>
+        <field fieldname="report_date" fieldid="2505"/>
+        <field fieldname="report_time" fieldid="2506"/>
+        <field fieldname="report_no" fieldid="2502"/>
+        <field fieldname="order_date" fieldid="1458"/>
+        <field fieldname="order_time" fieldid="1459"/>
+        <field fieldname="order_no" fieldid="1441"/>
+        <field fieldname="order_batch_no" fieldid="1457"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="contrc_dir" fieldid="2070"/>
+        <field fieldname="hedge_type" fieldid="2591"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="wtdraw_qty" fieldid="1277" decimalPlaces="2"/>
+        <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="report_fee" fieldid="2504" decimalPlaces="6"/>
+        <field fieldname="wtdraw_fee" fieldid="1272" decimalPlaces="6"/>
+        <field fieldname="order_status" fieldid="1464"/>
+    </function>
+    <function functionname="funct_clfucl_AddOrder" typename="LD_ANSWER" functionid="clfutuT.2.6" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_clfucl_QueryOrder" typename="LD_REQUEST" functionid="clfutuT.2.9" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="order_date" fieldid="1458"/>
+        <field fieldname="order_no" fieldid="1441"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="futu_acco_no" fieldid="1909"/>
+        <field fieldname="contrc_code_no" fieldid="1777"/>
+        <field fieldname="order_dir_str" fieldid="1450"/>
+        <field fieldname="contrc_dir_str" fieldid="2071"/>
+        <field fieldname="hedge_type" fieldid="2591"/>
+        <field fieldname="order_status" fieldid="1464"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_clfucl_QueryOrder" typename="LD_ANSWER" functionid="clfutuT.2.9" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="pass_no" fieldid="2610"/>
+            <field fieldname="out_acco" fieldid="2697"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="exch_crncy_type" fieldid="1906"/>
+            <field fieldname="exch_rate" fieldid="1825" decimalPlaces="12"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="futu_acco_no" fieldid="1909"/>
+            <field fieldname="contrc_code_no" fieldid="1777"/>
+            <field fieldname="contrc_type" fieldid="1778"/>
+            <field fieldname="contrc_unit" fieldid="1775"/>
+            <field fieldname="comm_id" fieldid="3010"/>
+            <field fieldname="report_date" fieldid="2505"/>
+            <field fieldname="report_time" fieldid="2506"/>
+            <field fieldname="report_no" fieldid="2502"/>
+            <field fieldname="order_date" fieldid="1458"/>
+            <field fieldname="order_time" fieldid="1459"/>
+            <field fieldname="order_no" fieldid="1441"/>
+            <field fieldname="order_batch_no" fieldid="1457"/>
+            <field fieldname="order_dir" fieldid="1449"/>
+            <field fieldname="contrc_dir" fieldid="2070"/>
+            <field fieldname="hedge_type" fieldid="2591"/>
+            <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+            <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+            <field fieldname="wtdraw_qty" fieldid="1277" decimalPlaces="2"/>
+            <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+            <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+            <field fieldname="report_fee" fieldid="2504" decimalPlaces="6"/>
+            <field fieldname="wtdraw_fee" fieldid="1272" decimalPlaces="6"/>
+            <field fieldname="order_status" fieldid="1464"/>
+            <field fieldname="deal_flag" fieldid="1342"/>
+        </sequence>
+    </function>
+    <function functionname="funct_clfucl_UpdateOrderClearFlag" typename="LD_REQUEST" functionid="clfutuT.2.11" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="deal_flag" fieldid="1342"/>
+    </function>
+    <function functionname="funct_clfucl_UpdateOrderClearFlag" typename="LD_ANSWER" functionid="clfutuT.2.11" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_clfucl_AddOutBusi" typename="LD_REQUEST" functionid="clfutuT.2.21" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="exch_rate" fieldid="1825" decimalPlaces="12"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="futu_acco_no" fieldid="1909"/>
+        <field fieldname="contrc_code_no" fieldid="1777"/>
+        <field fieldname="contrc_code" fieldid="1776"/>
+        <field fieldname="contrc_type" fieldid="1778"/>
+        <field fieldname="contrc_unit" fieldid="1775"/>
+        <field fieldname="strike_date" fieldid="1310"/>
+        <field fieldname="strike_time" fieldid="1311"/>
+        <field fieldname="strike_no" fieldid="1295"/>
+        <field fieldname="report_date" fieldid="2505"/>
+        <field fieldname="report_time" fieldid="2506"/>
+        <field fieldname="report_no" fieldid="2502"/>
+        <field fieldname="order_date" fieldid="1458"/>
+        <field fieldname="order_time" fieldid="1459"/>
+        <field fieldname="order_no" fieldid="1441"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="contrc_dir" fieldid="2070"/>
+        <field fieldname="hedge_type" fieldid="2591"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="strike_price" fieldid="1303" decimalPlaces="9"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+        <field fieldname="rece_margin" fieldid="2822" decimalPlaces="6"/>
+        <field fieldname="report_fee" fieldid="2504" decimalPlaces="6"/>
+        <field fieldname="wtdraw_fee" fieldid="1272" decimalPlaces="6"/>
+        <field fieldname="deli_fee" fieldid="1900" decimalPlaces="6"/>
+        <field fieldname="service_fee" fieldid="3364" decimalPlaces="6"/>
+        <field fieldname="other_fee" fieldid="2348" decimalPlaces="6"/>
+        <field fieldname="trade_commis" fieldid="1953" decimalPlaces="6"/>
+        <field fieldname="other_commis" fieldid="2350" decimalPlaces="6"/>
+        <field fieldname="out_report_fee" fieldid="2689" decimalPlaces="6"/>
+        <field fieldname="out_cancel_fee" fieldid="2657" decimalPlaces="6"/>
+        <field fieldname="out_deli_fee" fieldid="2669" decimalPlaces="6"/>
+        <field fieldname="out_service_fee" fieldid="3365" decimalPlaces="6"/>
+        <field fieldname="out_other_fee" fieldid="2685" decimalPlaces="6"/>
+        <field fieldname="out_brkage_commis" fieldid="2673" decimalPlaces="6"/>
+        <field fieldname="out_other_commis" fieldid="2686" decimalPlaces="6"/>
+        <field fieldname="capit_reback_days" fieldid="3066"/>
+        <field fieldname="posi_reback_days" fieldid="1323"/>
+        <field fieldname="clear_entry_type" fieldid="2391"/>
+        <field fieldname="comb_code" fieldid="3092"/>
+    </function>
+    <function functionname="funct_clfucl_AddOutBusi" typename="LD_ANSWER" functionid="clfutuT.2.21" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_clfucl_QueryOutBusi" typename="LD_REQUEST" functionid="clfutuT.2.24" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="strike_date" fieldid="1310"/>
+        <field fieldname="strike_no" fieldid="1295"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="futu_acco" fieldid="1908"/>
+        <field fieldname="contrc_code" fieldid="1776"/>
+        <field fieldname="order_dir_str" fieldid="1450"/>
+        <field fieldname="contrc_dir_str" fieldid="2071"/>
+        <field fieldname="hedge_type" fieldid="2591"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_clfucl_QueryOutBusi" typename="LD_ANSWER" functionid="clfutuT.2.24" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="pass_no" fieldid="2610"/>
+            <field fieldname="out_acco" fieldid="2697"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="exch_crncy_type" fieldid="1906"/>
+            <field fieldname="exch_rate" fieldid="1825" decimalPlaces="12"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="futu_acco_no" fieldid="1909"/>
+            <field fieldname="contrc_code_no" fieldid="1777"/>
+            <field fieldname="contrc_code" fieldid="1776"/>
+            <field fieldname="contrc_type" fieldid="1778"/>
+            <field fieldname="contrc_unit" fieldid="1775"/>
+            <field fieldname="strike_date" fieldid="1310"/>
+            <field fieldname="strike_time" fieldid="1311"/>
+            <field fieldname="strike_no" fieldid="1295"/>
+            <field fieldname="report_date" fieldid="2505"/>
+            <field fieldname="report_time" fieldid="2506"/>
+            <field fieldname="report_no" fieldid="2502"/>
+            <field fieldname="order_date" fieldid="1458"/>
+            <field fieldname="order_time" fieldid="1459"/>
+            <field fieldname="order_no" fieldid="1441"/>
+            <field fieldname="order_dir" fieldid="1449"/>
+            <field fieldname="contrc_dir" fieldid="2070"/>
+            <field fieldname="hedge_type" fieldid="2591"/>
+            <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+            <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+            <field fieldname="strike_price" fieldid="1303" decimalPlaces="9"/>
+            <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+            <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+            <field fieldname="rece_margin" fieldid="2822" decimalPlaces="6"/>
+            <field fieldname="report_fee" fieldid="2504" decimalPlaces="6"/>
+            <field fieldname="wtdraw_fee" fieldid="1272" decimalPlaces="6"/>
+            <field fieldname="deli_fee" fieldid="1900" decimalPlaces="6"/>
+            <field fieldname="service_fee" fieldid="3364" decimalPlaces="6"/>
+            <field fieldname="other_fee" fieldid="2348" decimalPlaces="6"/>
+            <field fieldname="trade_commis" fieldid="1953" decimalPlaces="6"/>
+            <field fieldname="other_commis" fieldid="2350" decimalPlaces="6"/>
+            <field fieldname="out_report_fee" fieldid="2689" decimalPlaces="6"/>
+            <field fieldname="out_cancel_fee" fieldid="2657" decimalPlaces="6"/>
+            <field fieldname="out_deli_fee" fieldid="2669" decimalPlaces="6"/>
+            <field fieldname="out_service_fee" fieldid="3365" decimalPlaces="6"/>
+            <field fieldname="out_other_fee" fieldid="2685" decimalPlaces="6"/>
+            <field fieldname="out_brkage_commis" fieldid="2673" decimalPlaces="6"/>
+            <field fieldname="out_other_commis" fieldid="2686" decimalPlaces="6"/>
+            <field fieldname="capit_reback_days" fieldid="3066"/>
+            <field fieldname="posi_reback_days" fieldid="1323"/>
+            <field fieldname="clear_entry_type" fieldid="2391"/>
+            <field fieldname="deal_flag" fieldid="1342"/>
+        </sequence>
+    </function>
+    <function functionname="funct_clfucl_UpdateBusiClearFlag" typename="LD_REQUEST" functionid="clfutuT.2.26" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="deal_flag" fieldid="1342"/>
+    </function>
+    <function functionname="funct_clfucl_UpdateBusiClearFlag" typename="LD_ANSWER" functionid="clfutuT.2.26" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_clfucl_DealClear" typename="LD_REQUEST" functionid="clfutuT.2.37" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="qry_no" fieldid="1223"/>
+    </function>
+    <function functionname="funct_clfucl_DealClear" typename="LD_ANSWER" functionid="clfutuT.2.37" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="record_count" fieldid="1865"/>
+        <field fieldname="row_id" fieldid="1867"/>
+    </function>
+    <function functionname="funct_clfucl_DealOrderFare" typename="LD_REQUEST" functionid="clfutuT.2.38" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+    </function>
+    <function functionname="funct_clfucl_DealOrderFare" typename="LD_ANSWER" functionid="clfutuT.2.38" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="record_count" fieldid="1865"/>
+        <field fieldname="row_id" fieldid="1867"/>
+    </function>
+    <function functionname="funct_clfucl_UpdatePreEntry" typename="LD_REQUEST" functionid="clfutuT.2.57" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="entry_money_jour_no" fieldid="2481"/>
+        <field fieldname="entry_exgp_posi_jour_no" fieldid="3752"/>
+        <field fieldname="entry_asac_posi_jour_no" fieldid="3753"/>
+        <field fieldname="entry_status" fieldid="2480"/>
+        <field fieldname="undo_status" fieldid="1823"/>
+    </function>
+    <function functionname="funct_clfucl_UpdatePreEntry" typename="LD_ANSWER" functionid="clfutuT.2.57" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_clfucl_QueryPreEntry" typename="LD_REQUEST" functionid="clfutuT.2.58" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="futu_acco_no" fieldid="1909"/>
+        <field fieldname="contrc_code_no" fieldid="1777"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="entry_status" fieldid="2480"/>
+        <field fieldname="undo_status" fieldid="1823"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_clfucl_QueryPreEntry" typename="LD_ANSWER" functionid="clfutuT.2.58" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+            <field fieldname="init_date" fieldid="1339"/>
+            <field fieldname="co_no" fieldid="1828"/>
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="pass_no" fieldid="2610"/>
+            <field fieldname="out_acco" fieldid="2697"/>
+            <field fieldname="crncy_type" fieldid="1147"/>
+            <field fieldname="exch_crncy_type" fieldid="1906"/>
+            <field fieldname="exch_rate" fieldid="1825" decimalPlaces="12"/>
+            <field fieldname="exch_no" fieldid="2538"/>
+            <field fieldname="futu_acco_no" fieldid="1909"/>
+            <field fieldname="contrc_code_no" fieldid="1777"/>
+            <field fieldname="contrc_type" fieldid="1778"/>
+            <field fieldname="contrc_unit" fieldid="1775"/>
+            <field fieldname="strike_date" fieldid="1310"/>
+            <field fieldname="strike_time" fieldid="1311"/>
+            <field fieldname="strike_no" fieldid="1295"/>
+            <field fieldname="report_date" fieldid="2505"/>
+            <field fieldname="report_time" fieldid="2506"/>
+            <field fieldname="report_no" fieldid="2502"/>
+            <field fieldname="order_date" fieldid="1458"/>
+            <field fieldname="order_time" fieldid="1459"/>
+            <field fieldname="order_no" fieldid="1441"/>
+            <field fieldname="order_dir" fieldid="1449"/>
+            <field fieldname="contrc_dir" fieldid="2070"/>
+            <field fieldname="lngsht_type" fieldid="1491"/>
+            <field fieldname="hedge_type" fieldid="2591"/>
+            <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+            <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+            <field fieldname="pre_settle_price" fieldid="3132" decimalPlaces="9"/>
+            <field fieldname="sett_price" fieldid="1991" decimalPlaces="9"/>
+            <field fieldname="strike_price" fieldid="1303" decimalPlaces="9"/>
+            <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+            <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+            <field fieldname="strike_num" fieldid="1294"/>
+            <field fieldname="pre_entry_qty" fieldid="1374" decimalPlaces="2"/>
+            <field fieldname="pre_entry_amt" fieldid="1371" decimalPlaces="6"/>
+            <field fieldname="rece_margin" fieldid="2822" decimalPlaces="6"/>
+            <field fieldname="comb_code" fieldid="3092"/>
+            <field fieldname="sett_close_pandl" fieldid="2389" decimalPlaces="6"/>
+            <field fieldname="all_fee" fieldid="2410" decimalPlaces="6"/>
+            <field fieldname="report_fee" fieldid="2504" decimalPlaces="6"/>
+            <field fieldname="wtdraw_fee" fieldid="1272" decimalPlaces="6"/>
+            <field fieldname="deli_fee" fieldid="1900" decimalPlaces="6"/>
+            <field fieldname="service_fee" fieldid="3364" decimalPlaces="6"/>
+            <field fieldname="other_fee" fieldid="2348" decimalPlaces="6"/>
+            <field fieldname="trade_commis" fieldid="1953" decimalPlaces="6"/>
+            <field fieldname="other_commis" fieldid="2350" decimalPlaces="6"/>
+            <field fieldname="out_all_fee" fieldid="2688" decimalPlaces="6"/>
+            <field fieldname="out_report_fee" fieldid="2689" decimalPlaces="6"/>
+            <field fieldname="out_cancel_fee" fieldid="2657" decimalPlaces="6"/>
+            <field fieldname="out_deli_fee" fieldid="2669" decimalPlaces="6"/>
+            <field fieldname="out_service_fee" fieldid="3365" decimalPlaces="6"/>
+            <field fieldname="out_other_fee" fieldid="2685" decimalPlaces="6"/>
+            <field fieldname="out_brkage_commis" fieldid="2673" decimalPlaces="6"/>
+            <field fieldname="out_other_commis" fieldid="2686" decimalPlaces="6"/>
+            <field fieldname="busi_flag" fieldid="2785"/>
+            <field fieldname="entry_status" fieldid="2480"/>
+            <field fieldname="undo_status" fieldid="1823"/>
+            <field fieldname="entry_money_jour_no" fieldid="2481"/>
+            <field fieldname="entry_asac_posi_jour_no" fieldid="3753"/>
+            <field fieldname="deli_jour_no" fieldid="1484"/>
+        </sequence>
+    </function>
+    <function functionname="funct_clfucl_GetPreEntry" typename="LD_REQUEST" functionid="clfutuT.2.59" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="qry_no" fieldid="1223"/>
+    </function>
+    <function functionname="funct_clfucl_GetPreEntry" typename="LD_ANSWER" functionid="clfutuT.2.59" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="record_count" fieldid="1865"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="exch_rate" fieldid="1825" decimalPlaces="12"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="futu_acco_no" fieldid="1909"/>
+        <field fieldname="contrc_code_no" fieldid="1777"/>
+        <field fieldname="contrc_type" fieldid="1778"/>
+        <field fieldname="contrc_unit" fieldid="1775"/>
+        <field fieldname="strike_date" fieldid="1310"/>
+        <field fieldname="strike_time" fieldid="1311"/>
+        <field fieldname="strike_no" fieldid="1295"/>
+        <field fieldname="report_date" fieldid="2505"/>
+        <field fieldname="report_time" fieldid="2506"/>
+        <field fieldname="report_no" fieldid="2502"/>
+        <field fieldname="order_date" fieldid="1458"/>
+        <field fieldname="order_time" fieldid="1459"/>
+        <field fieldname="order_no" fieldid="1441"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="contrc_dir" fieldid="2070"/>
+        <field fieldname="lngsht_type" fieldid="1491"/>
+        <field fieldname="hedge_type" fieldid="2591"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="pre_settle_price" fieldid="3132" decimalPlaces="9"/>
+        <field fieldname="sett_price" fieldid="1991" decimalPlaces="9"/>
+        <field fieldname="strike_price" fieldid="1303" decimalPlaces="9"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+        <field fieldname="strike_num" fieldid="1294"/>
+        <field fieldname="pre_entry_qty" fieldid="1374" decimalPlaces="2"/>
+        <field fieldname="pre_entry_amt" fieldid="1371" decimalPlaces="6"/>
+        <field fieldname="rece_margin" fieldid="2822" decimalPlaces="6"/>
+        <field fieldname="comb_code" fieldid="3092"/>
+        <field fieldname="long_hold_margin" fieldid="1494" decimalPlaces="6"/>
+        <field fieldname="short_hold_margin" fieldid="2106" decimalPlaces="6"/>
+        <field fieldname="sett_capt_margin" fieldid="2395" decimalPlaces="6"/>
+        <field fieldname="sett_close_pandl" fieldid="2389" decimalPlaces="6"/>
+        <field fieldname="sett_marked_pandl" fieldid="2378" decimalPlaces="6"/>
+        <field fieldname="sett_close_pandl_today" fieldid="2390" decimalPlaces="6"/>
+        <field fieldname="all_fee" fieldid="2410" decimalPlaces="6"/>
+        <field fieldname="report_fee" fieldid="2504" decimalPlaces="6"/>
+        <field fieldname="wtdraw_fee" fieldid="1272" decimalPlaces="6"/>
+        <field fieldname="deli_fee" fieldid="1900" decimalPlaces="6"/>
+        <field fieldname="service_fee" fieldid="3364" decimalPlaces="6"/>
+        <field fieldname="other_fee" fieldid="2348" decimalPlaces="6"/>
+        <field fieldname="trade_commis" fieldid="1953" decimalPlaces="6"/>
+        <field fieldname="other_commis" fieldid="2350" decimalPlaces="6"/>
+        <field fieldname="out_all_fee" fieldid="2688" decimalPlaces="6"/>
+        <field fieldname="out_report_fee" fieldid="2689" decimalPlaces="6"/>
+        <field fieldname="out_cancel_fee" fieldid="2657" decimalPlaces="6"/>
+        <field fieldname="out_deli_fee" fieldid="2669" decimalPlaces="6"/>
+        <field fieldname="out_service_fee" fieldid="3365" decimalPlaces="6"/>
+        <field fieldname="out_other_fee" fieldid="2685" decimalPlaces="6"/>
+        <field fieldname="out_brkage_commis" fieldid="2673" decimalPlaces="6"/>
+        <field fieldname="out_other_commis" fieldid="2686" decimalPlaces="6"/>
+        <field fieldname="busi_flag" fieldid="2785"/>
+        <field fieldname="entry_status" fieldid="2480"/>
+        <field fieldname="undo_status" fieldid="1823"/>
+        <field fieldname="entry_money_jour_no" fieldid="2481"/>
+        <field fieldname="entry_posi_jour_no" fieldid="2441"/>
+        <field fieldname="deli_jour_no" fieldid="1484"/>
+        <field fieldname="open_amount" fieldid="2054" decimalPlaces="6"/>
+    </function>
+    <function functionname="funct_clfucl_UpdateGetPreEntryUndo" typename="LD_REQUEST" functionid="clfutuT.2.60" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="qry_no" fieldid="1223"/>
+    </function>
+    <function functionname="funct_clfucl_UpdateGetPreEntryUndo" typename="LD_ANSWER" functionid="clfutuT.2.60" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="record_count" fieldid="1865"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="exch_rate" fieldid="1825" decimalPlaces="12"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="futu_acco_no" fieldid="1909"/>
+        <field fieldname="contrc_code_no" fieldid="1777"/>
+        <field fieldname="contrc_type" fieldid="1778"/>
+        <field fieldname="contrc_unit" fieldid="1775"/>
+        <field fieldname="strike_date" fieldid="1310"/>
+        <field fieldname="strike_time" fieldid="1311"/>
+        <field fieldname="strike_no" fieldid="1295"/>
+        <field fieldname="report_date" fieldid="2505"/>
+        <field fieldname="report_time" fieldid="2506"/>
+        <field fieldname="report_no" fieldid="2502"/>
+        <field fieldname="order_date" fieldid="1458"/>
+        <field fieldname="order_time" fieldid="1459"/>
+        <field fieldname="order_no" fieldid="1441"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="contrc_dir" fieldid="2070"/>
+        <field fieldname="lngsht_type" fieldid="1491"/>
+        <field fieldname="hedge_type" fieldid="2591"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="pre_settle_price" fieldid="3132" decimalPlaces="9"/>
+        <field fieldname="sett_price" fieldid="1991" decimalPlaces="9"/>
+        <field fieldname="strike_price" fieldid="1303" decimalPlaces="9"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+        <field fieldname="strike_num" fieldid="1294"/>
+        <field fieldname="pre_entry_qty" fieldid="1374" decimalPlaces="2"/>
+        <field fieldname="pre_entry_amt" fieldid="1371" decimalPlaces="6"/>
+        <field fieldname="rece_margin" fieldid="2822" decimalPlaces="6"/>
+        <field fieldname="comb_code" fieldid="3092"/>
+        <field fieldname="long_hold_margin" fieldid="1494" decimalPlaces="6"/>
+        <field fieldname="short_hold_margin" fieldid="2106" decimalPlaces="6"/>
+        <field fieldname="sett_capt_margin" fieldid="2395" decimalPlaces="6"/>
+        <field fieldname="sett_close_pandl" fieldid="2389" decimalPlaces="6"/>
+        <field fieldname="sett_marked_pandl" fieldid="2378" decimalPlaces="6"/>
+        <field fieldname="sett_close_pandl_today" fieldid="2390" decimalPlaces="6"/>
+        <field fieldname="all_fee" fieldid="2410" decimalPlaces="6"/>
+        <field fieldname="report_fee" fieldid="2504" decimalPlaces="6"/>
+        <field fieldname="wtdraw_fee" fieldid="1272" decimalPlaces="6"/>
+        <field fieldname="deli_fee" fieldid="1900" decimalPlaces="6"/>
+        <field fieldname="service_fee" fieldid="3364" decimalPlaces="6"/>
+        <field fieldname="other_fee" fieldid="2348" decimalPlaces="6"/>
+        <field fieldname="trade_commis" fieldid="1953" decimalPlaces="6"/>
+        <field fieldname="other_commis" fieldid="2350" decimalPlaces="6"/>
+        <field fieldname="out_all_fee" fieldid="2688" decimalPlaces="6"/>
+        <field fieldname="out_report_fee" fieldid="2689" decimalPlaces="6"/>
+        <field fieldname="out_cancel_fee" fieldid="2657" decimalPlaces="6"/>
+        <field fieldname="out_deli_fee" fieldid="2669" decimalPlaces="6"/>
+        <field fieldname="out_service_fee" fieldid="3365" decimalPlaces="6"/>
+        <field fieldname="out_other_fee" fieldid="2685" decimalPlaces="6"/>
+        <field fieldname="out_brkage_commis" fieldid="2673" decimalPlaces="6"/>
+        <field fieldname="out_other_commis" fieldid="2686" decimalPlaces="6"/>
+        <field fieldname="busi_flag" fieldid="2785"/>
+        <field fieldname="entry_status" fieldid="2480"/>
+        <field fieldname="undo_status" fieldid="1823"/>
+        <field fieldname="entry_money_jour_no" fieldid="2481"/>
+        <field fieldname="entry_exgp_posi_jour_no" fieldid="3752"/>
+        <field fieldname="entry_asac_posi_jour_no" fieldid="3753"/>
+        <field fieldname="deli_jour_no" fieldid="1484"/>
+    </function>
+    <function functionname="funct_clfucl_DealEntryError" typename="LD_REQUEST" functionid="clfutuT.2.63" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="exch_rate" fieldid="1825" decimalPlaces="12"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="futu_acco_no" fieldid="1909"/>
+        <field fieldname="contrc_code_no" fieldid="1777"/>
+        <field fieldname="contrc_type" fieldid="1778"/>
+        <field fieldname="contrc_unit" fieldid="1775"/>
+        <field fieldname="strike_date" fieldid="1310"/>
+        <field fieldname="strike_time" fieldid="1311"/>
+        <field fieldname="strike_no" fieldid="1295"/>
+        <field fieldname="report_date" fieldid="2505"/>
+        <field fieldname="report_time" fieldid="2506"/>
+        <field fieldname="report_no" fieldid="2502"/>
+        <field fieldname="order_date" fieldid="1458"/>
+        <field fieldname="order_time" fieldid="1459"/>
+        <field fieldname="order_no" fieldid="1441"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="contrc_dir" fieldid="2070"/>
+        <field fieldname="lngsht_type" fieldid="1491"/>
+        <field fieldname="hedge_type" fieldid="2591"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="pre_settle_price" fieldid="3132" decimalPlaces="9"/>
+        <field fieldname="sett_price" fieldid="1991" decimalPlaces="9"/>
+        <field fieldname="strike_price" fieldid="1303" decimalPlaces="9"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+        <field fieldname="strike_num" fieldid="1294"/>
+        <field fieldname="pre_entry_qty" fieldid="1374" decimalPlaces="2"/>
+        <field fieldname="pre_entry_amt" fieldid="1371" decimalPlaces="6"/>
+        <field fieldname="rece_margin" fieldid="2822" decimalPlaces="6"/>
+        <field fieldname="comb_code" fieldid="3092"/>
+        <field fieldname="comb_type" fieldid="3095"/>
+        <field fieldname="comb_name" fieldid="3096"/>
+        <field fieldname="long_hold_margin" fieldid="1494" decimalPlaces="6"/>
+        <field fieldname="short_hold_margin" fieldid="2106" decimalPlaces="6"/>
+        <field fieldname="sett_capt_margin" fieldid="2395" decimalPlaces="6"/>
+        <field fieldname="sett_close_pandl" fieldid="2389" decimalPlaces="6"/>
+        <field fieldname="sett_marked_pandl" fieldid="2378" decimalPlaces="6"/>
+        <field fieldname="sett_close_pandl_today" fieldid="2390" decimalPlaces="6"/>
+        <field fieldname="all_fee" fieldid="2410" decimalPlaces="6"/>
+        <field fieldname="report_fee" fieldid="2504" decimalPlaces="6"/>
+        <field fieldname="wtdraw_fee" fieldid="1272" decimalPlaces="6"/>
+        <field fieldname="deli_fee" fieldid="1900" decimalPlaces="6"/>
+        <field fieldname="service_fee" fieldid="3364" decimalPlaces="6"/>
+        <field fieldname="other_fee" fieldid="2348" decimalPlaces="6"/>
+        <field fieldname="trade_commis" fieldid="1953" decimalPlaces="6"/>
+        <field fieldname="other_commis" fieldid="2350" decimalPlaces="6"/>
+        <field fieldname="out_all_fee" fieldid="2688" decimalPlaces="6"/>
+        <field fieldname="out_report_fee" fieldid="2689" decimalPlaces="6"/>
+        <field fieldname="out_cancel_fee" fieldid="2657" decimalPlaces="6"/>
+        <field fieldname="out_deli_fee" fieldid="2669" decimalPlaces="6"/>
+        <field fieldname="out_service_fee" fieldid="3365" decimalPlaces="6"/>
+        <field fieldname="out_other_fee" fieldid="2685" decimalPlaces="6"/>
+        <field fieldname="out_brkage_commis" fieldid="2673" decimalPlaces="6"/>
+        <field fieldname="out_other_commis" fieldid="2686" decimalPlaces="6"/>
+        <field fieldname="busi_flag" fieldid="2785"/>
+        <field fieldname="undo_error_no" fieldid="1822"/>
+        <field fieldname="remark_info" fieldid="1146"/>
+    </function>
+    <function functionname="funct_clfucl_DealEntryError" typename="LD_ANSWER" functionid="clfutuT.2.63" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_clfucl_GetClrTotalData" typename="LD_REQUEST" functionid="clfutuT.2.72" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+    </function>
+    <function functionname="funct_clfucl_GetClrTotalData" typename="LD_ANSWER" functionid="clfutuT.2.72" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="pre_clr_strike_qty" fieldid="3669" decimalPlaces="2"/>
+        <field fieldname="alr_clr_strike_qty" fieldid="3670" decimalPlaces="2"/>
+        <field fieldname="pre_entry_record_qty" fieldid="3671" decimalPlaces="2"/>
+        <field fieldname="alr_entry_record_qty" fieldid="3672" decimalPlaces="2"/>
+    </function>
+    <function functionname="funct_clfucl_DealException" typename="LD_REQUEST" functionid="clfutuT.2.81" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="deal_info" fieldid="3309"/>
+    </function>
+    <function functionname="funct_clfucl_DealException" typename="LD_ANSWER" functionid="clfutuT.2.81" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_clfucl_UpdateEntryJour" typename="LD_REQUEST" functionid="clfutuT.2.83" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="entry_money_jour_no" fieldid="2481"/>
+        <field fieldname="entry_exgp_posi_jour_no" fieldid="3752"/>
+        <field fieldname="entry_asac_posi_jour_no" fieldid="3753"/>
+    </function>
+    <function functionname="funct_clfucl_UpdateEntryJour" typename="LD_ANSWER" functionid="clfutuT.2.83" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+    </function>
+    <function functionname="funct_clfucl_QueryStrikeId" typename="LD_REQUEST" functionid="clfutuT.2.84" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="qry_no" fieldid="1223"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_clfucl_QueryStrikeId" typename="LD_ANSWER" functionid="clfutuT.2.84" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+        </sequence>
+    </function>
+    <function functionname="funct_clfucl_QueryPreEntryId" typename="LD_REQUEST" functionid="clfutuT.2.85" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="qry_no" fieldid="1223"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funct_clfucl_QueryPreEntryId" typename="LD_ANSWER" functionid="clfutuT.2.85" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="row_id" fieldid="1867"/>
+        </sequence>
+    </function>
+    <function functionname="funct_clfucl_AutoGetPreEntry" typename="LD_REQUEST" functionid="clfutuT.2.86" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="qry_no" fieldid="1223"/>
+    </function>
+    <function functionname="funct_clfucl_AutoGetPreEntry" typename="LD_ANSWER" functionid="clfutuT.2.86" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="record_count" fieldid="1865"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="exch_rate" fieldid="1825" decimalPlaces="12"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="futu_acco_no" fieldid="1909"/>
+        <field fieldname="contrc_code_no" fieldid="1777"/>
+        <field fieldname="contrc_type" fieldid="1778"/>
+        <field fieldname="contrc_unit" fieldid="1775"/>
+        <field fieldname="strike_date" fieldid="1310"/>
+        <field fieldname="strike_time" fieldid="1311"/>
+        <field fieldname="strike_no" fieldid="1295"/>
+        <field fieldname="report_date" fieldid="2505"/>
+        <field fieldname="report_time" fieldid="2506"/>
+        <field fieldname="report_no" fieldid="2502"/>
+        <field fieldname="order_date" fieldid="1458"/>
+        <field fieldname="order_time" fieldid="1459"/>
+        <field fieldname="order_no" fieldid="1441"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="contrc_dir" fieldid="2070"/>
+        <field fieldname="lngsht_type" fieldid="1491"/>
+        <field fieldname="hedge_type" fieldid="2591"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="pre_settle_price" fieldid="3132" decimalPlaces="9"/>
+        <field fieldname="sett_price" fieldid="1991" decimalPlaces="9"/>
+        <field fieldname="strike_price" fieldid="1303" decimalPlaces="9"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2"/>
+        <field fieldname="strike_amt" fieldid="1305" decimalPlaces="6"/>
+        <field fieldname="strike_num" fieldid="1294"/>
+        <field fieldname="pre_entry_qty" fieldid="1374" decimalPlaces="2"/>
+        <field fieldname="pre_entry_amt" fieldid="1371" decimalPlaces="6"/>
+        <field fieldname="rece_margin" fieldid="2822" decimalPlaces="6"/>
+        <field fieldname="comb_code" fieldid="3092"/>
+        <field fieldname="long_hold_margin" fieldid="1494" decimalPlaces="6"/>
+        <field fieldname="short_hold_margin" fieldid="2106" decimalPlaces="6"/>
+        <field fieldname="sett_capt_margin" fieldid="2395" decimalPlaces="6"/>
+        <field fieldname="sett_close_pandl" fieldid="2389" decimalPlaces="6"/>
+        <field fieldname="sett_marked_pandl" fieldid="2378" decimalPlaces="6"/>
+        <field fieldname="sett_close_pandl_today" fieldid="2390" decimalPlaces="6"/>
+        <field fieldname="all_fee" fieldid="2410" decimalPlaces="6"/>
+        <field fieldname="report_fee" fieldid="2504" decimalPlaces="6"/>
+        <field fieldname="wtdraw_fee" fieldid="1272" decimalPlaces="6"/>
+        <field fieldname="deli_fee" fieldid="1900" decimalPlaces="6"/>
+        <field fieldname="service_fee" fieldid="3364" decimalPlaces="6"/>
+        <field fieldname="other_fee" fieldid="2348" decimalPlaces="6"/>
+        <field fieldname="trade_commis" fieldid="1953" decimalPlaces="6"/>
+        <field fieldname="other_commis" fieldid="2350" decimalPlaces="6"/>
+        <field fieldname="out_all_fee" fieldid="2688" decimalPlaces="6"/>
+        <field fieldname="out_report_fee" fieldid="2689" decimalPlaces="6"/>
+        <field fieldname="out_cancel_fee" fieldid="2657" decimalPlaces="6"/>
+        <field fieldname="out_deli_fee" fieldid="2669" decimalPlaces="6"/>
+        <field fieldname="out_service_fee" fieldid="3365" decimalPlaces="6"/>
+        <field fieldname="out_other_fee" fieldid="2685" decimalPlaces="6"/>
+        <field fieldname="out_brkage_commis" fieldid="2673" decimalPlaces="6"/>
+        <field fieldname="out_other_commis" fieldid="2686" decimalPlaces="6"/>
+        <field fieldname="busi_flag" fieldid="2785"/>
+        <field fieldname="entry_status" fieldid="2480"/>
+        <field fieldname="undo_status" fieldid="1823"/>
+        <field fieldname="entry_money_jour_no" fieldid="2481"/>
+        <field fieldname="entry_posi_jour_no" fieldid="2441"/>
+        <field fieldname="deli_jour_no" fieldid="1484"/>
+        <field fieldname="open_amount" fieldid="2054" decimalPlaces="6"/>
+    </function>
+</bizmsgs>

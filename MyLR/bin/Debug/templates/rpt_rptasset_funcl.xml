@@ -964,7 +964,7 @@
             <field fieldname="opor_name" fieldid="1199"/>
             <field fieldname="pd_no" fieldid="1228"/>
             <field fieldname="exch_group_no" fieldid="1962"/>
-            <field fieldname="month_pandl" fieldid="3376" decimalPlaces="6"/>
+            <field fieldname="month_pandl" fieldid="5961" decimalPlaces="6"/>
             <field fieldname="all_fee" fieldid="2410" decimalPlaces="6"/>
             <field fieldname="trade_amt" fieldid="1943" decimalPlaces="6"/>
             <field fieldname="close_posi_market_value" fieldid="2317" decimalPlaces="6"/>
@@ -1001,7 +1001,7 @@
             <field fieldname="opor_name" fieldid="1199"/>
             <field fieldname="pd_no" fieldid="1228"/>
             <field fieldname="exch_group_no" fieldid="1962"/>
-            <field fieldname="month_pandl" fieldid="3376" decimalPlaces="6"/>
+            <field fieldname="month_pandl" fieldid="5961" decimalPlaces="6"/>
             <field fieldname="all_fee" fieldid="2410" decimalPlaces="6"/>
             <field fieldname="trade_amt" fieldid="1943" decimalPlaces="6"/>
             <field fieldname="close_posi_market_value" fieldid="2317" decimalPlaces="6"/>
@@ -1164,6 +1164,12 @@
             <field fieldname="capt_margin" fieldid="2898" decimalPlaces="6"/>
             <field fieldname="total_fina_debt" fieldid="5736" decimalPlaces="6"/>
             <field fieldname="total_loan_debt" fieldid="5737" decimalPlaces="6"/>
+            <field fieldname="futu_long_market_value" fieldid="5777" decimalPlaces="6"/>
+            <field fieldname="futu_short_market_value" fieldid="5778" decimalPlaces="6"/>
+            <field fieldname="sh_hk_stock_asset" fieldid="5935" decimalPlaces="6"/>
+            <field fieldname="sz_hk_stock_asset" fieldid="5936" decimalPlaces="6"/>
+            <field fieldname="sh_Astock_asset" fieldid="5937" decimalPlaces="6"/>
+            <field fieldname="sz_Astock_asset" fieldid="5938" decimalPlaces="6"/>
         </sequence>
     </function>
     <function functionname="funcl_rptasset_Qry_ExGrp_Asset" typename="LD_REQUEST" functionid="rptL.4.32" packettype="0">
@@ -1226,6 +1232,12 @@
             <field fieldname="hk_avail_amt" fieldid="5006" decimalPlaces="6"/>
             <field fieldname="total_fina_debt" fieldid="5736" decimalPlaces="6"/>
             <field fieldname="total_loan_debt" fieldid="5737" decimalPlaces="6"/>
+            <field fieldname="futu_long_market_value" fieldid="5777" decimalPlaces="6"/>
+            <field fieldname="futu_short_market_value" fieldid="5778" decimalPlaces="6"/>
+            <field fieldname="sh_hk_stock_asset" fieldid="5935" decimalPlaces="6"/>
+            <field fieldname="sz_hk_stock_asset" fieldid="5936" decimalPlaces="6"/>
+            <field fieldname="sh_Astock_asset" fieldid="5937" decimalPlaces="6"/>
+            <field fieldname="sz_Astock_asset" fieldid="5938" decimalPlaces="6"/>
         </sequence>
     </function>
     <function functionname="funcl_rptasset_Qry_Pd_Asset_His" typename="LD_REQUEST" functionid="rptL.4.33" packettype="0">
@@ -1292,6 +1304,12 @@
             <field fieldname="capt_margin" fieldid="2898" decimalPlaces="6"/>
             <field fieldname="total_fina_debt" fieldid="5736" decimalPlaces="6"/>
             <field fieldname="total_loan_debt" fieldid="5737" decimalPlaces="6"/>
+            <field fieldname="futu_long_market_value" fieldid="5777" decimalPlaces="6"/>
+            <field fieldname="futu_short_market_value" fieldid="5778" decimalPlaces="6"/>
+            <field fieldname="sh_hk_stock_asset" fieldid="5935" decimalPlaces="6"/>
+            <field fieldname="sz_hk_stock_asset" fieldid="5936" decimalPlaces="6"/>
+            <field fieldname="sh_Astock_asset" fieldid="5937" decimalPlaces="6"/>
+            <field fieldname="sz_Astock_asset" fieldid="5938" decimalPlaces="6"/>
         </sequence>
     </function>
     <function functionname="funcl_rptasset_Qry_ExGrp_Asset_His" typename="LD_REQUEST" functionid="rptL.4.34" packettype="0">
@@ -1359,6 +1377,12 @@
             <field fieldname="hk_avail_amt" fieldid="5006" decimalPlaces="6"/>
             <field fieldname="total_fina_debt" fieldid="5736" decimalPlaces="6"/>
             <field fieldname="total_loan_debt" fieldid="5737" decimalPlaces="6"/>
+            <field fieldname="futu_long_market_value" fieldid="5777" decimalPlaces="6"/>
+            <field fieldname="futu_short_market_value" fieldid="5778" decimalPlaces="6"/>
+            <field fieldname="sh_hk_stock_asset" fieldid="5935" decimalPlaces="6"/>
+            <field fieldname="sz_hk_stock_asset" fieldid="5936" decimalPlaces="6"/>
+            <field fieldname="sh_Astock_asset" fieldid="5937" decimalPlaces="6"/>
+            <field fieldname="sz_Astock_asset" fieldid="5938" decimalPlaces="6"/>
         </sequence>
     </function>
     <function functionname="funcl_rptasset_Qry_Pd_Posi" typename="LD_REQUEST" functionid="rptL.4.35" packettype="0">

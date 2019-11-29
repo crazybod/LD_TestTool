@@ -117,6 +117,7 @@
         <field fieldname="func_code" fieldid="1674"/>
         <field fieldname="pd_no" fieldid="1228"/>
         <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="stock_acco" fieldid="1696"/>
         <field fieldname="stock_acco_no" fieldid="1697"/>
         <field fieldname="exch_no" fieldid="2538"/>
         <field fieldname="stock_acco_name" fieldid="1699"/>
@@ -754,5 +755,181 @@
         <field fieldname="pre_settle_qty" fieldid="3923" decimalPlaces="2"/>
         <field fieldname="frozen_qty" fieldid="1468" decimalPlaces="2"/>
         <field fieldname="unfroz_qty" fieldid="1996" decimalPlaces="2"/>
+    </function>
+    <function functionname="funcl_pdseac_AddNewStockPreOrderConfigerInfo" typename="LD_REQUEST" functionid="pdsecuL.1.91" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="pre_order_dir" fieldid="2843"/>
+        <field fieldname="pre_order_type" fieldid="2842"/>
+        <field fieldname="pre_order_price" fieldid="2844" decimalPlaces="9"/>
+        <field fieldname="trig_type" fieldid="1348"/>
+        <field fieldname="trig_price" fieldid="1349" decimalPlaces="9"/>
+        <field fieldname="trig_date" fieldid="5001"/>
+        <field fieldname="trig_time" fieldid="1351"/>
+        <field fieldname="pre_order_qty" fieldid="2847" decimalPlaces="2"/>
+        <field fieldname="pre_price_type" fieldid="4045"/>
+        <field fieldname="price_offset" fieldid="3888" decimalPlaces="9"/>
+        <field fieldname="auth_time" fieldid="2837"/>
+        <field fieldname="pre_end_date" fieldid="5004"/>
+        <field fieldname="pre_begin_time" fieldid="4046"/>
+        <field fieldname="pre_end_time" fieldid="4047"/>
+        <field fieldname="is_trace" fieldid="5248"/>
+        <field fieldname="is_strategy_pre" fieldid="5904"/>
+        <field fieldname="trig_price_type" fieldid="5905"/>
+        <field fieldname="trig_time_intrv" fieldid="5909"/>
+        <field fieldname="trace_price_type" fieldid="5906"/>
+        <field fieldname="trace_price" fieldid="5907" decimalPlaces="9"/>
+        <field fieldname="trace_price_offset" fieldid="5908" decimalPlaces="9"/>
+        <field fieldname="price_type" fieldid="1887"/>
+        <field fieldname="target_strategy_type" fieldid="3688"/>
+        <field fieldname="target_strategy_param" fieldid="3689"/>
+        <field fieldname="strategy_price_type" fieldid="3684"/>
+        <field fieldname="order_oper_way" fieldid="1443"/>
+        <field fieldname="trace_times" fieldid="5914"/>
+    </function>
+    <function functionname="funcl_pdseac_AddNewStockPreOrderConfigerInfo" typename="LD_ANSWER" functionid="pdsecuL.1.91" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_pdseac_QueryNewStockPreOrderConfigerInfo" typename="LD_REQUEST" functionid="pdsecuL.1.92" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="row_id" fieldid="1867"/>
+        <field fieldname="row_count" fieldid="2959"/>
+    </function>
+    <function functionname="funcl_pdseac_QueryNewStockPreOrderConfigerInfo" typename="LD_ANSWER" functionid="pdsecuL.1.92" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+        <sequence fieldname="NoResultSet" fieldid="1000" presence="optional">
+            <field fieldname="pd_no" fieldid="1228"/>
+            <field fieldname="exch_group_no" fieldid="1962"/>
+            <field fieldname="asset_acco_no" fieldid="3051"/>
+            <field fieldname="pre_order_dir" fieldid="2843"/>
+            <field fieldname="pre_order_type" fieldid="2842"/>
+            <field fieldname="pre_order_price" fieldid="2844" decimalPlaces="9"/>
+            <field fieldname="trig_type" fieldid="1348"/>
+            <field fieldname="trig_price" fieldid="1349" decimalPlaces="9"/>
+            <field fieldname="trig_date" fieldid="5001"/>
+            <field fieldname="trig_time" fieldid="1351"/>
+            <field fieldname="pre_order_qty" fieldid="2847" decimalPlaces="2"/>
+            <field fieldname="pre_price_type" fieldid="4045"/>
+            <field fieldname="price_offset" fieldid="3888" decimalPlaces="9"/>
+            <field fieldname="auth_time" fieldid="2837"/>
+            <field fieldname="pre_end_date" fieldid="5004"/>
+            <field fieldname="pre_begin_time" fieldid="4046"/>
+            <field fieldname="pre_end_time" fieldid="4047"/>
+            <field fieldname="is_trace" fieldid="5248"/>
+            <field fieldname="is_strategy_pre" fieldid="5904"/>
+            <field fieldname="trig_price_type" fieldid="5905"/>
+            <field fieldname="trig_time_intrv" fieldid="5909"/>
+            <field fieldname="trace_price_type" fieldid="5906"/>
+            <field fieldname="trace_price" fieldid="5907" decimalPlaces="9"/>
+            <field fieldname="trace_price_offset" fieldid="5908" decimalPlaces="9"/>
+            <field fieldname="price_type" fieldid="1887"/>
+            <field fieldname="target_strategy_type" fieldid="3688"/>
+            <field fieldname="target_strategy_param" fieldid="3689"/>
+            <field fieldname="strategy_price_type" fieldid="3684"/>
+            <field fieldname="order_oper_way" fieldid="1443"/>
+            <field fieldname="trace_times" fieldid="5914"/>
+        </sequence>
+    </function>
+    <function functionname="funcl_pdseac_ModifyNewStockPreOrderConfigerInfo" typename="LD_REQUEST" functionid="pdsecuL.1.93" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="pre_order_dir" fieldid="2843"/>
+        <field fieldname="pre_order_type" fieldid="2842"/>
+        <field fieldname="pre_order_price" fieldid="2844" decimalPlaces="9"/>
+        <field fieldname="trig_type" fieldid="1348"/>
+        <field fieldname="trig_price" fieldid="1349" decimalPlaces="9"/>
+        <field fieldname="trig_date" fieldid="5001"/>
+        <field fieldname="trig_time" fieldid="1351"/>
+        <field fieldname="pre_order_qty" fieldid="2847" decimalPlaces="2"/>
+        <field fieldname="pre_price_type" fieldid="4045"/>
+        <field fieldname="price_offset" fieldid="3888" decimalPlaces="9"/>
+        <field fieldname="auth_time" fieldid="2837"/>
+        <field fieldname="pre_end_date" fieldid="5004"/>
+        <field fieldname="pre_begin_time" fieldid="4046"/>
+        <field fieldname="pre_end_time" fieldid="4047"/>
+        <field fieldname="is_trace" fieldid="5248"/>
+        <field fieldname="is_strategy_pre" fieldid="5904"/>
+        <field fieldname="trig_price_type" fieldid="5905"/>
+        <field fieldname="trig_time_intrv" fieldid="5909"/>
+        <field fieldname="trace_price_type" fieldid="5906"/>
+        <field fieldname="trace_price" fieldid="5907" decimalPlaces="9"/>
+        <field fieldname="trace_price_offset" fieldid="5908" decimalPlaces="9"/>
+        <field fieldname="price_type" fieldid="1887"/>
+        <field fieldname="target_strategy_type" fieldid="3688"/>
+        <field fieldname="target_strategy_param" fieldid="3689"/>
+        <field fieldname="strategy_price_type" fieldid="3684"/>
+        <field fieldname="order_oper_way" fieldid="1443"/>
+        <field fieldname="trace_times" fieldid="5914"/>
+    </function>
+    <function functionname="funcl_pdseac_ModifyNewStockPreOrderConfigerInfo" typename="LD_ANSWER" functionid="pdsecuL.1.93" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
+    </function>
+    <function functionname="funcl_pdseac_DeleteNewStockPreOrderConfigerInfo" typename="LD_REQUEST" functionid="pdsecuL.1.94" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+    </function>
+    <function functionname="funcl_pdseac_DeleteNewStockPreOrderConfigerInfo" typename="LD_ANSWER" functionid="pdsecuL.1.94" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="error_level" fieldid="1362"/>
+        <field fieldname="error_deal" fieldid="1361"/>
+        <field fieldname="error_prompt" fieldid="1364"/>
     </function>
 </bizmsgs>

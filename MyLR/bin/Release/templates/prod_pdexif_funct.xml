@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bizmsgs>
+    <function functionname="funct_pdexif_CheckApprProdAccoInfo" typename="LD_REQUEST" functionid="prodT.8.11" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="comm_dir" fieldid="2974"/>
+        <field fieldname="co_busi_config_str" fieldid="1835"/>
+        <field fieldname="co_comm_appr_oper" fieldid="1836"/>
+        <field fieldname="busi_config_str" fieldid="2794"/>
+        <field fieldname="sys_config_str" fieldid="3330"/>
+    </function>
+    <function functionname="funct_pdexif_CheckApprProdAccoInfo" typename="LD_ANSWER" functionid="prodT.8.11" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="exgp_busi_config_str" fieldid="1971"/>
+        <field fieldname="asac_busi_config_str" fieldid="3058"/>
+        <field fieldname="split_fee_typr_str" fieldid="1537"/>
+        <field fieldname="busi_limit_str" fieldid="2799"/>
+        <field fieldname="comm_appr_oper" fieldid="2989"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="exter_comm_flag" fieldid="3170"/>
+        <field fieldname="market_price_ratio" fieldid="2550" decimalPlaces="12"/>
+        <field fieldname="comm_no_limit_price_ratio" fieldid="3613" decimalPlaces="12"/>
+        <field fieldname="cost_calc_type" fieldid="1283"/>
+        <field fieldname="comm_appr_set" fieldid="2992"/>
+        <field fieldname="appr_allow_order_flag" fieldid="2520"/>
+        <field fieldname="opor_no_str1" fieldid="5295"/>
+        <field fieldname="opor_no_str2" fieldid="5296"/>
+        <field fieldname="opor_no_str3" fieldid="5297"/>
+        <field fieldname="fina_limit_max" fieldid="5635" decimalPlaces="6"/>
+        <field fieldname="loan_limit_max" fieldid="5636" decimalPlaces="6"/>
+        <field fieldname="sys_type" fieldid="5294"/>
+        <field fieldname="asset_acco_type" fieldid="3056"/>
+        <field fieldname="sell_auto_back_debt" fieldid="5803"/>
+    </function>
+    <function functionname="funct_pdexif_CheckApprProdAccoBatchInfo" typename="LD_REQUEST" functionid="prodT.8.12" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="stock_type_str" fieldid="2939"/>
+        <field fieldname="comm_dir_str" fieldid="2975"/>
+        <field fieldname="co_busi_config_str" fieldid="1835"/>
+        <field fieldname="co_comm_appr_oper" fieldid="1836"/>
+        <field fieldname="busi_config_str" fieldid="2794"/>
+        <field fieldname="sys_config_str" fieldid="3330"/>
+    </function>
+    <function functionname="funct_pdexif_CheckApprProdAccoBatchInfo" typename="LD_ANSWER" functionid="prodT.8.12" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="exgp_busi_config_str" fieldid="1971"/>
+        <field fieldname="asac_busi_config_str" fieldid="3058"/>
+        <field fieldname="split_fee_typr_str" fieldid="1537"/>
+        <field fieldname="busi_limit_str" fieldid="2799"/>
+        <field fieldname="comm_appr_oper" fieldid="2989"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="exter_comm_flag" fieldid="3170"/>
+        <field fieldname="market_price_ratio" fieldid="2550" decimalPlaces="12"/>
+        <field fieldname="comm_no_limit_price_ratio" fieldid="3613" decimalPlaces="12"/>
+        <field fieldname="cost_calc_type" fieldid="1283"/>
+        <field fieldname="comm_appr_set" fieldid="2992"/>
+        <field fieldname="appr_allow_order_flag" fieldid="2520"/>
+        <field fieldname="sys_type" fieldid="5294"/>
+        <field fieldname="opor_no_str1" fieldid="5295"/>
+        <field fieldname="opor_no_str2" fieldid="5296"/>
+        <field fieldname="opor_no_str3" fieldid="5297"/>
+        <field fieldname="asset_acco_type" fieldid="3056"/>
+    </function>
+    <function functionname="funct_pdexif_CheckCommApprProdAccoInfo" typename="LD_REQUEST" functionid="prodT.8.13" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="comm_dir" fieldid="2974"/>
+        <field fieldname="co_busi_config_str" fieldid="1835"/>
+        <field fieldname="co_comm_appr_oper" fieldid="1836"/>
+        <field fieldname="busi_config_str" fieldid="2794"/>
+        <field fieldname="sys_config_str" fieldid="3330"/>
+    </function>
+    <function functionname="funct_pdexif_CheckCommApprProdAccoInfo" typename="LD_ANSWER" functionid="prodT.8.13" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="exgp_busi_config_str" fieldid="1971"/>
+        <field fieldname="asac_busi_config_str" fieldid="3058"/>
+        <field fieldname="split_fee_typr_str" fieldid="1537"/>
+        <field fieldname="busi_limit_str" fieldid="2799"/>
+        <field fieldname="comm_appr_oper" fieldid="2989"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="exter_comm_flag" fieldid="3170"/>
+        <field fieldname="market_price_ratio" fieldid="2550" decimalPlaces="12"/>
+        <field fieldname="comm_no_limit_price_ratio" fieldid="3613" decimalPlaces="12"/>
+        <field fieldname="cost_calc_type" fieldid="1283"/>
+        <field fieldname="comm_appr_set" fieldid="2992"/>
+        <field fieldname="appr_allow_order_flag" fieldid="2520"/>
+        <field fieldname="opor_no_str1" fieldid="5295"/>
+        <field fieldname="opor_no_str2" fieldid="5296"/>
+        <field fieldname="opor_no_str3" fieldid="5297"/>
+        <field fieldname="sys_type" fieldid="5294"/>
+        <field fieldname="asset_acco_type" fieldid="3056"/>
+    </function>
+    <function functionname="funct_pdexif_CheckExchProdAccoInfo" typename="LD_REQUEST" functionid="prodT.8.21" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="order_price" fieldid="1455" decimalPlaces="9"/>
+        <field fieldname="price_type" fieldid="1887"/>
+        <field fieldname="up_limit_price" fieldid="2905" decimalPlaces="9"/>
+        <field fieldname="down_limit_price" fieldid="1436" decimalPlaces="9"/>
+        <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+        <field fieldname="co_busi_config_str" fieldid="1835"/>
+        <field fieldname="busi_config_str" fieldid="2794"/>
+        <field fieldname="sys_config_str" fieldid="3330"/>
+    </function>
+    <function functionname="funct_pdexif_CheckExchProdAccoInfo" typename="LD_ANSWER" functionid="prodT.8.21" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="exgp_busi_config_str" fieldid="1971"/>
+        <field fieldname="asac_busi_config_str" fieldid="3058"/>
+        <field fieldname="split_fee_typr_str" fieldid="1537"/>
+        <field fieldname="busi_limit_str" fieldid="2799"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="nav_asset" fieldid="2035" decimalPlaces="6"/>
+        <field fieldname="exter_comm_flag" fieldid="3170"/>
+        <field fieldname="market_price_ratio" fieldid="2550" decimalPlaces="12"/>
+        <field fieldname="market_price_type" fieldid="2549"/>
+        <field fieldname="cost_calc_type" fieldid="1283"/>
+        <field fieldname="order_market_price" fieldid="3298" decimalPlaces="9"/>
+        <field fieldname="sys_type" fieldid="5294"/>
+        <field fieldname="opor_no_str1" fieldid="5295"/>
+        <field fieldname="opor_no_str2" fieldid="5296"/>
+        <field fieldname="opor_no_str3" fieldid="5297"/>
+        <field fieldname="fina_limit_max" fieldid="5635" decimalPlaces="6"/>
+        <field fieldname="loan_limit_max" fieldid="5636" decimalPlaces="6"/>
+        <field fieldname="asset_acco_type" fieldid="3056"/>
+        <field fieldname="sell_auto_back_debt" fieldid="5803"/>
+    </function>
+    <function functionname="funct_pdexif_CheckExchProdAccoBatchInfo" typename="LD_REQUEST" functionid="prodT.8.22" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="stock_type_str" fieldid="2939"/>
+        <field fieldname="order_dir_str" fieldid="1450"/>
+        <field fieldname="order_price_str" fieldid="3186"/>
+        <field fieldname="price_type_str" fieldid="1888"/>
+        <field fieldname="up_limit_price_str" fieldid="3193"/>
+        <field fieldname="down_limit_price_str" fieldid="3194"/>
+        <field fieldname="last_price_str" fieldid="3211"/>
+        <field fieldname="co_busi_config_str" fieldid="1835"/>
+        <field fieldname="busi_config_str" fieldid="2794"/>
+        <field fieldname="split_str" fieldid="3201"/>
+        <field fieldname="sys_config_str" fieldid="3330"/>
+    </function>
+    <function functionname="funct_pdexif_CheckExchProdAccoBatchInfo" typename="LD_ANSWER" functionid="prodT.8.22" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="exgp_busi_config_str" fieldid="1971"/>
+        <field fieldname="asac_busi_config_str" fieldid="3058"/>
+        <field fieldname="split_fee_typr_str" fieldid="1537"/>
+        <field fieldname="busi_limit_str" fieldid="2799"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="nav_asset" fieldid="2035" decimalPlaces="6"/>
+        <field fieldname="exter_comm_flag" fieldid="3170"/>
+        <field fieldname="market_price_ratio" fieldid="2550" decimalPlaces="12"/>
+        <field fieldname="market_price_type" fieldid="2549"/>
+        <field fieldname="cost_calc_type" fieldid="1283"/>
+        <field fieldname="order_market_price_str" fieldid="3299"/>
+        <field fieldname="sys_type" fieldid="5294"/>
+        <field fieldname="opor_no_str1" fieldid="5295"/>
+        <field fieldname="opor_no_str2" fieldid="5296"/>
+        <field fieldname="opor_no_str3" fieldid="5297"/>
+        <field fieldname="asset_acco_type" fieldid="3056"/>
+    </function>
+    <function functionname="funct_pdexif_CheckFutuExchProdAccoInfo" typename="LD_REQUEST" functionid="prodT.8.108" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="contrc_type" fieldid="1778"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="contrc_dir" fieldid="2070"/>
+        <field fieldname="co_busi_config_str" fieldid="1835"/>
+        <field fieldname="busi_config_str" fieldid="2794"/>
+    </function>
+    <function functionname="funct_pdexif_CheckFutuExchProdAccoInfo" typename="LD_ANSWER" functionid="prodT.8.108" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="exgp_busi_config_str" fieldid="1971"/>
+        <field fieldname="asac_busi_config_str" fieldid="3058"/>
+        <field fieldname="split_fee_typr_str" fieldid="1537"/>
+        <field fieldname="busi_limit_str" fieldid="2799"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="nav_asset" fieldid="2035" decimalPlaces="6"/>
+    </function>
+    <function functionname="funct_pdexif_CheckFutuCommProdAccoInfo" typename="LD_REQUEST" functionid="prodT.8.109" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="contrc_type" fieldid="1778"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="contrc_dir" fieldid="2070"/>
+        <field fieldname="co_busi_config_str" fieldid="1835"/>
+        <field fieldname="busi_config_str" fieldid="2794"/>
+        <field fieldname="co_comm_appr_oper" fieldid="1836"/>
+        <field fieldname="sys_config_str" fieldid="3330"/>
+    </function>
+    <function functionname="funct_pdexif_CheckFutuCommProdAccoInfo" typename="LD_ANSWER" functionid="prodT.8.109" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="exgp_busi_config_str" fieldid="1971"/>
+        <field fieldname="asac_busi_config_str" fieldid="3058"/>
+        <field fieldname="split_fee_typr_str" fieldid="1537"/>
+        <field fieldname="busi_limit_str" fieldid="2799"/>
+        <field fieldname="comm_appr_oper" fieldid="2989"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="exter_comm_flag" fieldid="3170"/>
+        <field fieldname="market_price_ratio" fieldid="2550" decimalPlaces="12"/>
+        <field fieldname="comm_no_limit_price_ratio" fieldid="3613" decimalPlaces="12"/>
+        <field fieldname="cost_calc_type" fieldid="1283"/>
+        <field fieldname="comm_appr_set" fieldid="2992"/>
+        <field fieldname="appr_allow_order_flag" fieldid="2520"/>
+        <field fieldname="opor_no_str1" fieldid="5295"/>
+        <field fieldname="opor_no_str2" fieldid="5296"/>
+        <field fieldname="opor_no_str3" fieldid="5297"/>
+        <field fieldname="sys_type" fieldid="5294"/>
+    </function>
+    <function functionname="funct_pdexif_CheckFutuApprProdAccoInfo" typename="LD_REQUEST" functionid="prodT.8.110" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="contrc_type" fieldid="1778"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="contrc_dir" fieldid="2070"/>
+        <field fieldname="co_busi_config_str" fieldid="1835"/>
+        <field fieldname="busi_config_str" fieldid="2794"/>
+    </function>
+    <function functionname="funct_pdexif_CheckFutuApprProdAccoInfo" typename="LD_ANSWER" functionid="prodT.8.110" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="exgp_busi_config_str" fieldid="1971"/>
+        <field fieldname="asac_busi_config_str" fieldid="3058"/>
+        <field fieldname="split_fee_typr_str" fieldid="1537"/>
+        <field fieldname="busi_limit_str" fieldid="2799"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+        <field fieldname="nav_asset" fieldid="2035" decimalPlaces="6"/>
+    </function>
+    <function functionname="funct_pdexif_GetAccoDefaultExgp" typename="LD_REQUEST" functionid="prodT.8.111" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+    </function>
+    <function functionname="funct_pdexif_GetAccoDefaultExgp" typename="LD_ANSWER" functionid="prodT.8.111" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+    </function>
+    <function functionname="funct_pdexif_GetFinaLoanRepaymentWay" typename="LD_REQUEST" functionid="prodT.8.112" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+    </function>
+    <function functionname="funct_pdexif_GetFinaLoanRepaymentWay" typename="LD_ANSWER" functionid="prodT.8.112" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="fina_return_type" fieldid="5757"/>
+        <field fieldname="sell_auto_back_debt" fieldid="5803"/>
+    </function>
+    <function functionname="funct_pdexif_GetOutAccoInfo" typename="LD_REQUEST" functionid="prodT.8.113" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="out_acco" fieldid="2697"/>
+    </function>
+    <function functionname="funct_pdexif_GetOutAccoInfo" typename="LD_ANSWER" functionid="prodT.8.113" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="asac_busi_config_str" fieldid="3058"/>
+        <field fieldname="order_append_return_type" fieldid="3306"/>
+        <field fieldname="default_exch_group_no" fieldid="3348"/>
+        <field fieldname="asset_acco_type" fieldid="3056"/>
+    </function>
+</bizmsgs>

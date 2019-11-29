@@ -11,8 +11,6 @@ D:\code\OSM2.0\trunk\Clients\Tools\MyLR\MyLR\bin\Release\SmartThreadPool.dll
 D:\code\OSM2.0\trunk\Clients\Tools\MyLR\MyLR\bin\Release\ICSharpCode.SharpZipLib.dll
 D:\code\OSM2.0\trunk\Clients\Tools\MyLR\MyLR\bin\Release\ICSharpCode.AvalonEdit.xml
 D:\code\OSM2.0\trunk\Clients\Tools\MyLR\MyLR\bin\Release\log4net.xml
-D:\code\OSM2.0\trunk\Clients\Tools\MyLR\MyLR\bin\Release\NPOI.xml
-D:\code\OSM2.0\trunk\Clients\Tools\MyLR\MyLR\obj\Release\MyLR.csprojResolveAssemblyReference.cache
 D:\code\OSM2.0\trunk\Clients\Tools\MyLR\MyLR\obj\Release\MainWindow.baml
 D:\code\OSM2.0\trunk\Clients\Tools\MyLR\MyLR\obj\Release\MyLR.g.resources
 D:\code\OSM2.0\trunk\Clients\Tools\MyLR\MyLR\obj\Release\MyLR.Properties.Resources.resources
@@ -44,4 +42,10 @@ E:\2.0测试工具代码\MyLR\obj\Release\MyLR.g.resources
 E:\2.0测试工具代码\MyLR\obj\Release\MyLR.Properties.Resources.resources
 E:\2.0测试工具代码\MyLR\obj\Release\MyLR.csproj.GenerateResource.Cache
 E:\2.0测试工具代码\MyLR\bin\Release\MySql.Data.dll
-E:\2.0测试工具代码\MyLR\obj\Release\MyLR.csprojResolveAssemblyReference.cache
+D:\code\OSM2.0\trunk\Clients\Tools\MyLR\MyLR\bin\Release\MySql.Data.dll
+D:\code\OSM2.0\trunk\Clients\Tools\MyLR\MyLR\bin\Release\NPOI.dll
+D:\code\OSM2.0\trunk\Clients\Tools\MyLR\MyLR\bin\Release\NPOI.OOXML.dll
+D:\code\OSM2.0\trunk\Clients\Tools\MyLR\MyLR\bin\Release\NPOI.OpenXml4Net.dll
+D:\code\OSM2.0\trunk\Clients\Tools\MyLR\MyLR\bin\Release\NPOI.OpenXmlFormats.dll
+D:\code\OSM2.0\trunk\Clients\Tools\MyLR\MyLR\bin\Release\ICSharpCode.SharpZipLib.xml
+D:\code\OSM2.0\trunk\Clients\Tools\MyLR\MyLR\obj\Release\MyLR.csprojResolveAssemblyReference.cache

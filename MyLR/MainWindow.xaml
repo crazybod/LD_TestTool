@@ -29,7 +29,7 @@
                     <Button Command="{Binding LoadCase}"   
                             Width="70" Margin="4 5 0 0" HorizontalAlignment="Left"  Content="LoadCase"   >
                     </Button>
-                    <Button Command="{Binding StartRun}" Width="70" Margin="4 5 0 0" HorizontalAlignment="Left"  Content="Start">
+                    <Button Command="{Binding StartRun}" IsEnabled="{Binding StartEnable}" Width="70" Margin="4 5 0 0" HorizontalAlignment="Left"  Content="Start">
                     </Button>
                     <Button Command="{Binding StopRun}" Width="70" Margin="4 5 0 0" HorizontalAlignment="Left"  Content="Stop"   >
                     </Button>
@@ -62,9 +62,11 @@
                         <DataGridTextColumn Header="案例名称" Binding="{Binding GroupName}" />
                         <DataGridTextColumn Header="发送成功" Binding="{Binding SendOkCount}" IsReadOnly="True"/>
                         <DataGridTextColumn Header="发送失败" Binding="{Binding SendFailCount}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="未处理" Binding="{Binding UnDealCount}" IsReadOnly="True"/>
                         <DataGridTextColumn Header="应答成功" Binding="{Binding RecOkCount}" IsReadOnly="True"/>
                         <DataGridTextColumn Header="应答失败" Binding="{Binding RecFailCount}" IsReadOnly="True"/>
                         <DataGridTextColumn Header="发送次数(0无限)" Binding="{Binding LoopCount}" />
+                        <DataGridTextColumn Header="差值" Binding="{Binding Diff}" IsReadOnly="True"/>
                         <DataGridTextColumn Header="积压上限" Binding="{Binding UpStage}" />
                         <DataGridTextColumn Header="积压下限" Binding="{Binding DownStage}"/>
                         <DataGridTextColumn Header="脚本路径" Binding="{Binding FileName}" />
@@ -152,7 +154,7 @@
                           SelectedItem="{Binding SelectScript}"
                           CanUserAddRows="False"
                           CanUserDeleteRows="False"
-                          AutoGenerateColumns="False"                       
+                          AutoGenerateColumns="False"  
                           GridLinesVisibility="Vertical">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="案例"  Binding="{Binding CaseName}" ></DataGridTextColumn>
@@ -177,7 +179,7 @@
                                     SyntaxHighlighting="C#"
                                     Document="{Binding SrciptDoc}"
                                     FontFamily="Consolas"
-                        FontSize="10pt"
+                                    FontSize="10pt"
                                     VerticalScrollBarVisibility="Visible" ShowLineNumbers="True"  >
                     </avalonEdit:TextEditor>
                 </GroupBox>

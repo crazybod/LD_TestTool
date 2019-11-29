@@ -1,0 +1,1357 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bizmsgs>
+    <function functionname="funct_trdif_CheckBatchFundTransMarketStatusAuthOper" typename="LD_REQUEST" functionid="pubT.25.8" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="stock_code_str" fieldid="3191"/>
+        <field fieldname="target_stock_code_str" fieldid="5214"/>
+        <field fieldname="order_dir_str" fieldid="1450"/>
+        <field fieldname="order_qty_str" fieldid="3187"/>
+        <field fieldname="price_type_str" fieldid="1888"/>
+        <field fieldname="split_str" fieldid="3201"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+    </function>
+    <function functionname="funct_trdif_CheckBatchFundTransMarketStatusAuthOper" typename="LD_ANSWER" functionid="pubT.25.8" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="co_busi_config_str" fieldid="1835"/>
+        <field fieldname="exgp_busi_config_str" fieldid="1971"/>
+        <field fieldname="stock_code_no_str" fieldid="3192"/>
+        <field fieldname="target_stock_code_no_str" fieldid="5215"/>
+        <field fieldname="stock_type_str" fieldid="2939"/>
+        <field fieldname="asset_type_str" fieldid="3046"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="exch_crncy_type_str" fieldid="1907"/>
+        <field fieldname="buy_ref_rate_str" fieldid="3744"/>
+        <field fieldname="sell_ref_rate_str" fieldid="3745"/>
+        <field fieldname="par_value_str" fieldid="3176"/>
+        <field fieldname="impawn_ratio_str" fieldid="3177"/>
+        <field fieldname="net_price_flag_str" fieldid="3178"/>
+        <field fieldname="intrst_days_str" fieldid="3182"/>
+        <field fieldname="bond_rate_type_str" fieldid="3188"/>
+        <field fieldname="bond_accr_intrst_str" fieldid="3181"/>
+        <field fieldname="target_code_no_str" fieldid="3190"/>
+        <field fieldname="target_code_str" fieldid="3180"/>
+        <field fieldname="target_code_stock_type_str" fieldid="3207"/>
+        <field fieldname="target_code_asset_type_str" fieldid="3208"/>
+        <field fieldname="trade_code_no_str" fieldid="3189"/>
+        <field fieldname="trade_code_str" fieldid="3179"/>
+        <field fieldname="trade_code_stock_type_str" fieldid="3209"/>
+        <field fieldname="trade_code_asset_type_str" fieldid="3210"/>
+        <field fieldname="min_unit_str" fieldid="3202"/>
+        <field fieldname="up_limit_price_str" fieldid="3193"/>
+        <field fieldname="down_limit_price_str" fieldid="3194"/>
+        <field fieldname="last_price_str" fieldid="3211"/>
+        <field fieldname="capit_reback_days_str" fieldid="3198"/>
+        <field fieldname="posi_reback_days_str" fieldid="3199"/>
+        <field fieldname="subscription_trade_mark_str" fieldid="5120"/>
+        <field fieldname="purchase_trade_mark_str" fieldid="5121"/>
+        <field fieldname="rede_trade_mark_str" fieldid="5122"/>
+        <field fieldname="first_minimum_amt_str" fieldid="5123"/>
+        <field fieldname="minimum_purchase_amt_str" fieldid="5125"/>
+        <field fieldname="minimum_subscription_amt_str" fieldid="5124"/>
+        <field fieldname="minimum_rede_share_str" fieldid="5126"/>
+        <field fieldname="minimum_holding_share_str" fieldid="5127"/>
+        <field fieldname="minimum_turning_out_share_str" fieldid="5209"/>
+        <field fieldname="fund_manager_str" fieldid="5210"/>
+        <field fieldname="charging_method_str" fieldid="5212"/>
+        <field fieldname="registration_agency_str" fieldid="5224"/>
+        <field fieldname="target_subscrip_trade_mark_str" fieldid="5200"/>
+        <field fieldname="target_purchase_trade_mark_str" fieldid="5201"/>
+        <field fieldname="target_rede_trade_mark_str" fieldid="5202"/>
+        <field fieldname="target_first_minimum_amt_str" fieldid="5203"/>
+        <field fieldname="target_min_purchase_amt_str" fieldid="5205"/>
+        <field fieldname="target_min_subscrip_amt_str" fieldid="5204"/>
+        <field fieldname="target_min_rede_share_str" fieldid="5206"/>
+        <field fieldname="target_min_holding_share_str" fieldid="5207"/>
+        <field fieldname="target_min_turning_out_share_str" fieldid="5208"/>
+        <field fieldname="target_fund_manager_str" fieldid="5211"/>
+        <field fieldname="target_charging_method_str" fieldid="5213"/>
+        <field fieldname="trade_acco" fieldid="5223"/>
+        <field fieldname="target_registration_agency_str" fieldid="5226"/>
+        <field fieldname="sys_config_str" fieldid="3330"/>
+    </function>
+    <function functionname="funct_trdif_CheckFundBatchApprMarketStatusAuthOper" typename="LD_REQUEST" functionid="pubT.25.9" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="target_stock_code_str" fieldid="5214"/>
+        <field fieldname="stock_code_str" fieldid="3191"/>
+        <field fieldname="comm_executor" fieldid="3014"/>
+        <field fieldname="comm_dir_str" fieldid="2975"/>
+        <field fieldname="comm_qty_str" fieldid="3174"/>
+        <field fieldname="limit_price_str" fieldid="3173"/>
+        <field fieldname="split_str" fieldid="3201"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+    </function>
+    <function functionname="funct_trdif_CheckFundBatchApprMarketStatusAuthOper" typename="LD_ANSWER" functionid="pubT.25.9" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="co_busi_config_str" fieldid="1835"/>
+        <field fieldname="co_comm_appr_oper" fieldid="1836"/>
+        <field fieldname="exgp_busi_config_str" fieldid="1971"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="exch_crncy_type_str" fieldid="1907"/>
+        <field fieldname="buy_ref_rate_str" fieldid="3744"/>
+        <field fieldname="sell_ref_rate_str" fieldid="3745"/>
+        <field fieldname="stock_code_no_str" fieldid="3192"/>
+        <field fieldname="target_stock_code_no_str" fieldid="5215"/>
+        <field fieldname="stock_type_str" fieldid="2939"/>
+        <field fieldname="asset_type_str" fieldid="3046"/>
+        <field fieldname="net_price_flag_str" fieldid="3178"/>
+        <field fieldname="par_value_str" fieldid="3176"/>
+        <field fieldname="impawn_ratio_str" fieldid="3177"/>
+        <field fieldname="intrst_days_str" fieldid="3182"/>
+        <field fieldname="bond_rate_type_str" fieldid="3188"/>
+        <field fieldname="bond_accr_intrst_str" fieldid="3181"/>
+        <field fieldname="target_code_no_str" fieldid="3190"/>
+        <field fieldname="target_code_str" fieldid="3180"/>
+        <field fieldname="target_code_stock_type_str" fieldid="3207"/>
+        <field fieldname="target_code_asset_type_str" fieldid="3208"/>
+        <field fieldname="trade_code_no_str" fieldid="3189"/>
+        <field fieldname="trade_code_str" fieldid="3179"/>
+        <field fieldname="trade_code_stock_type_str" fieldid="3209"/>
+        <field fieldname="trade_code_asset_type_str" fieldid="3210"/>
+        <field fieldname="min_unit_str" fieldid="3202"/>
+        <field fieldname="up_limit_price_str" fieldid="3193"/>
+        <field fieldname="down_limit_price_str" fieldid="3194"/>
+        <field fieldname="last_price_str" fieldid="3211"/>
+        <field fieldname="capit_reback_days_str" fieldid="3198"/>
+        <field fieldname="posi_reback_days_str" fieldid="3199"/>
+        <field fieldname="limit_actual_price_str" fieldid="3183"/>
+        <field fieldname="pre_close_price_str" fieldid="3878"/>
+        <field fieldname="subscription_trade_mark_str" fieldid="5120"/>
+        <field fieldname="purchase_trade_mark_str" fieldid="5121"/>
+        <field fieldname="rede_trade_mark_str" fieldid="5122"/>
+        <field fieldname="first_minimum_amt_str" fieldid="5123"/>
+        <field fieldname="minimum_purchase_amt_str" fieldid="5125"/>
+        <field fieldname="minimum_subscription_amt_str" fieldid="5124"/>
+        <field fieldname="minimum_rede_share_str" fieldid="5126"/>
+        <field fieldname="minimum_holding_share_str" fieldid="5127"/>
+        <field fieldname="minimum_turning_out_share_str" fieldid="5209"/>
+        <field fieldname="fund_manager_str" fieldid="5210"/>
+        <field fieldname="charging_method_str" fieldid="5212"/>
+        <field fieldname="registration_agency_str" fieldid="5224"/>
+        <field fieldname="target_subscrip_trade_mark_str" fieldid="5200"/>
+        <field fieldname="target_purchase_trade_mark_str" fieldid="5201"/>
+        <field fieldname="target_rede_trade_mark_str" fieldid="5202"/>
+        <field fieldname="target_first_minimum_amt_str" fieldid="5203"/>
+        <field fieldname="target_min_purchase_amt_str" fieldid="5205"/>
+        <field fieldname="target_min_subscrip_amt_str" fieldid="5204"/>
+        <field fieldname="target_min_rede_share_str" fieldid="5206"/>
+        <field fieldname="target_min_holding_share_str" fieldid="5207"/>
+        <field fieldname="target_min_turning_out_share_str" fieldid="5208"/>
+        <field fieldname="target_fund_manager_str" fieldid="5211"/>
+        <field fieldname="target_charging_method_str" fieldid="5213"/>
+        <field fieldname="target_registration_agency_str" fieldid="5226"/>
+        <field fieldname="trade_acco" fieldid="5223"/>
+        <field fieldname="sys_config_str" fieldid="3330"/>
+        <field fieldname="online_opor_no_str" fieldid="5838"/>
+    </function>
+    <function functionname="funct_trdif_CheckFundTransApprMarketStatusAuthOper" typename="LD_REQUEST" functionid="pubT.25.10" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="target_stock_code" fieldid="5164"/>
+        <field fieldname="comm_executor" fieldid="3014"/>
+        <field fieldname="comm_dir" fieldid="2974"/>
+        <field fieldname="comm_qty" fieldid="3002" decimalPlaces="2"/>
+        <field fieldname="comm_limit_price" fieldid="3008" decimalPlaces="9"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+    </function>
+    <function functionname="funct_trdif_CheckFundTransApprMarketStatusAuthOper" typename="LD_ANSWER" functionid="pubT.25.10" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="co_busi_config_str" fieldid="1835"/>
+        <field fieldname="co_comm_appr_oper" fieldid="1836"/>
+        <field fieldname="exgp_busi_config_str" fieldid="1971"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="target_stock_code_no" fieldid="3383"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="net_price_flag" fieldid="2019"/>
+        <field fieldname="par_value" fieldid="2310" decimalPlaces="9"/>
+        <field fieldname="subscription_trade_mark" fieldid="5111"/>
+        <field fieldname="purchase_trade_mark" fieldid="5112"/>
+        <field fieldname="rede_trade_mark" fieldid="5113"/>
+        <field fieldname="first_minimum_amt" fieldid="5114" decimalPlaces="6"/>
+        <field fieldname="minimum_purchase_amt" fieldid="5116" decimalPlaces="6"/>
+        <field fieldname="minimum_subscription_amt" fieldid="5115" decimalPlaces="6"/>
+        <field fieldname="minimum_rede_share" fieldid="5117" decimalPlaces="2"/>
+        <field fieldname="minimum_holding_share" fieldid="5118" decimalPlaces="2"/>
+        <field fieldname="minimum_turning_out_share" fieldid="5165" decimalPlaces="2"/>
+        <field fieldname="target_subscription_trade_mark" fieldid="5166"/>
+        <field fieldname="target_purchase_trade_mark" fieldid="5167"/>
+        <field fieldname="target_rede_trade_mark" fieldid="5168"/>
+        <field fieldname="target_first_minimum_amt" fieldid="5169" decimalPlaces="6"/>
+        <field fieldname="target_minimum_purchase_amt" fieldid="5171" decimalPlaces="6"/>
+        <field fieldname="target_minimum_subscription_amt" fieldid="5170" decimalPlaces="6"/>
+        <field fieldname="target_minimum_rede_share" fieldid="5172" decimalPlaces="2"/>
+        <field fieldname="target_minimum_holding_share" fieldid="5173" decimalPlaces="2"/>
+        <field fieldname="target_minimum_turning_out_share" fieldid="5174" decimalPlaces="2"/>
+        <field fieldname="fund_manager" fieldid="1847"/>
+        <field fieldname="target_fund_manager" fieldid="5176"/>
+        <field fieldname="charging_method" fieldid="5109"/>
+        <field fieldname="target_charging_method" fieldid="5175"/>
+        <field fieldname="sys_config_str" fieldid="3330"/>
+    </function>
+    <function functionname="funct_trdif_CheckApprMarketStatusAuthOper" typename="LD_REQUEST" functionid="pubT.25.11" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="comm_executor" fieldid="3014"/>
+        <field fieldname="comm_dir" fieldid="2974"/>
+        <field fieldname="comm_qty" fieldid="3002" decimalPlaces="2"/>
+        <field fieldname="comm_limit_price" fieldid="3008" decimalPlaces="9"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+    </function>
+    <function functionname="funct_trdif_CheckApprMarketStatusAuthOper" typename="LD_ANSWER" functionid="pubT.25.11" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="co_busi_config_str" fieldid="1835"/>
+        <field fieldname="co_comm_appr_oper" fieldid="1836"/>
+        <field fieldname="exgp_busi_config_str" fieldid="1971"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="buy_ref_rate" fieldid="3556" decimalPlaces="12"/>
+        <field fieldname="sell_ref_rate" fieldid="3557" decimalPlaces="12"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="net_price_flag" fieldid="2019"/>
+        <field fieldname="par_value" fieldid="2310" decimalPlaces="9"/>
+        <field fieldname="impawn_ratio" fieldid="3026" decimalPlaces="12"/>
+        <field fieldname="intrst_days" fieldid="1864"/>
+        <field fieldname="bond_rate_type" fieldid="2894"/>
+        <field fieldname="bond_accr_intrst" fieldid="2893" decimalPlaces="12"/>
+        <field fieldname="target_code_no" fieldid="1161"/>
+        <field fieldname="target_code" fieldid="1160"/>
+        <field fieldname="target_code_stock_type" fieldid="1163"/>
+        <field fieldname="target_code_asset_type" fieldid="1164"/>
+        <field fieldname="trade_code_no" fieldid="1918"/>
+        <field fieldname="trade_code" fieldid="1917"/>
+        <field fieldname="trade_code_stock_type" fieldid="1920"/>
+        <field fieldname="trade_code_asset_type" fieldid="1921"/>
+        <field fieldname="min_unit" fieldid="3124"/>
+        <field fieldname="up_limit_price" fieldid="2905" decimalPlaces="9"/>
+        <field fieldname="down_limit_price" fieldid="1436" decimalPlaces="9"/>
+        <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+        <field fieldname="capit_reback_days" fieldid="3066"/>
+        <field fieldname="posi_reback_days" fieldid="1323"/>
+        <field fieldname="pre_close_price" fieldid="3140" decimalPlaces="9"/>
+        <field fieldname="subscription_trade_mark" fieldid="5111"/>
+        <field fieldname="purchase_trade_mark" fieldid="5112"/>
+        <field fieldname="rede_trade_mark" fieldid="5113"/>
+        <field fieldname="first_minimum_amt" fieldid="5114" decimalPlaces="6"/>
+        <field fieldname="minimum_purchase_amt" fieldid="5116" decimalPlaces="6"/>
+        <field fieldname="minimum_subscription_amt" fieldid="5115" decimalPlaces="6"/>
+        <field fieldname="minimum_rede_share" fieldid="5117" decimalPlaces="2"/>
+        <field fieldname="minimum_holding_share" fieldid="5118" decimalPlaces="2"/>
+        <field fieldname="sys_config_str" fieldid="3330"/>
+        <field fieldname="online_opor_no_str" fieldid="5838"/>
+    </function>
+    <function functionname="funct_trdif_CheckBatchApprMarketStatusAuthOper" typename="LD_REQUEST" functionid="pubT.25.12" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="stock_code_str" fieldid="3191"/>
+        <field fieldname="comm_executor" fieldid="3014"/>
+        <field fieldname="comm_dir_str" fieldid="2975"/>
+        <field fieldname="comm_qty_str" fieldid="3174"/>
+        <field fieldname="limit_price_str" fieldid="3173"/>
+        <field fieldname="split_str" fieldid="3201"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+    </function>
+    <function functionname="funct_trdif_CheckBatchApprMarketStatusAuthOper" typename="LD_ANSWER" functionid="pubT.25.12" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="co_busi_config_str" fieldid="1835"/>
+        <field fieldname="co_comm_appr_oper" fieldid="1836"/>
+        <field fieldname="exgp_busi_config_str" fieldid="1971"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="exch_crncy_type_str" fieldid="1907"/>
+        <field fieldname="buy_ref_rate_str" fieldid="3744"/>
+        <field fieldname="sell_ref_rate_str" fieldid="3745"/>
+        <field fieldname="stock_code_no_str" fieldid="3192"/>
+        <field fieldname="stock_type_str" fieldid="2939"/>
+        <field fieldname="asset_type_str" fieldid="3046"/>
+        <field fieldname="net_price_flag_str" fieldid="3178"/>
+        <field fieldname="par_value_str" fieldid="3176"/>
+        <field fieldname="impawn_ratio_str" fieldid="3177"/>
+        <field fieldname="intrst_days_str" fieldid="3182"/>
+        <field fieldname="bond_rate_type_str" fieldid="3188"/>
+        <field fieldname="bond_accr_intrst_str" fieldid="3181"/>
+        <field fieldname="target_code_no_str" fieldid="3190"/>
+        <field fieldname="target_code_str" fieldid="3180"/>
+        <field fieldname="target_code_stock_type_str" fieldid="3207"/>
+        <field fieldname="target_code_asset_type_str" fieldid="3208"/>
+        <field fieldname="trade_code_no_str" fieldid="3189"/>
+        <field fieldname="trade_code_str" fieldid="3179"/>
+        <field fieldname="trade_code_stock_type_str" fieldid="3209"/>
+        <field fieldname="trade_code_asset_type_str" fieldid="3210"/>
+        <field fieldname="min_unit_str" fieldid="3202"/>
+        <field fieldname="up_limit_price_str" fieldid="3193"/>
+        <field fieldname="down_limit_price_str" fieldid="3194"/>
+        <field fieldname="last_price_str" fieldid="3211"/>
+        <field fieldname="capit_reback_days_str" fieldid="3198"/>
+        <field fieldname="posi_reback_days_str" fieldid="3199"/>
+        <field fieldname="limit_actual_price_str" fieldid="3183"/>
+        <field fieldname="pre_close_price_str" fieldid="3878"/>
+        <field fieldname="subscription_trade_mark_str" fieldid="5120"/>
+        <field fieldname="purchase_trade_mark_str" fieldid="5121"/>
+        <field fieldname="rede_trade_mark_str" fieldid="5122"/>
+        <field fieldname="first_minimum_amt_str" fieldid="5123"/>
+        <field fieldname="minimum_purchase_amt_str" fieldid="5125"/>
+        <field fieldname="minimum_subscription_amt_str" fieldid="5124"/>
+        <field fieldname="minimum_rede_share_str" fieldid="5126"/>
+        <field fieldname="minimum_holding_share_str" fieldid="5127"/>
+        <field fieldname="sys_config_str" fieldid="3330"/>
+        <field fieldname="online_opor_no_str" fieldid="5838"/>
+    </function>
+    <function functionname="funct_trdif_CheckSecuApprProp" typename="LD_REQUEST" functionid="pubT.25.13" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="comm_dir" fieldid="2974"/>
+        <field fieldname="comm_qty" fieldid="3002" decimalPlaces="2"/>
+        <field fieldname="comm_limit_price" fieldid="3008" decimalPlaces="9"/>
+    </function>
+    <function functionname="funct_trdif_CheckSecuApprProp" typename="LD_ANSWER" functionid="pubT.25.13" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="capit_reback_days" fieldid="3066"/>
+        <field fieldname="posi_reback_days" fieldid="1323"/>
+        <field fieldname="par_value" fieldid="2310" decimalPlaces="9"/>
+        <field fieldname="impawn_ratio" fieldid="3026" decimalPlaces="12"/>
+        <field fieldname="net_price_flag" fieldid="2019"/>
+        <field fieldname="intrst_days" fieldid="1864"/>
+        <field fieldname="bond_rate_type" fieldid="2894"/>
+        <field fieldname="bond_accr_intrst" fieldid="2893" decimalPlaces="12"/>
+        <field fieldname="min_unit" fieldid="3124"/>
+        <field fieldname="up_limit_price" fieldid="2905" decimalPlaces="9"/>
+        <field fieldname="down_limit_price" fieldid="1436" decimalPlaces="9"/>
+        <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+        <field fieldname="target_code_no" fieldid="1161"/>
+        <field fieldname="target_code" fieldid="1160"/>
+        <field fieldname="target_code_stock_type" fieldid="1163"/>
+        <field fieldname="target_code_asset_type" fieldid="1164"/>
+        <field fieldname="trade_code_no" fieldid="1918"/>
+        <field fieldname="trade_code" fieldid="1917"/>
+        <field fieldname="trade_code_stock_type" fieldid="1920"/>
+        <field fieldname="trade_code_asset_type" fieldid="1921"/>
+    </function>
+    <function functionname="funct_trdif_CheckApprDispSysStatusAuthOper" typename="LD_REQUEST" functionid="pubT.25.14" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="comm_executor" fieldid="3014"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+    </function>
+    <function functionname="funct_trdif_CheckApprDispSysStatusAuthOper" typename="LD_ANSWER" functionid="pubT.25.14" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="buy_ref_rate" fieldid="3556" decimalPlaces="12"/>
+        <field fieldname="sell_ref_rate" fieldid="3557" decimalPlaces="12"/>
+    </function>
+    <function functionname="funct_trdif_CheckFundTransExchMarketStatusAuthOper" typename="LD_REQUEST" functionid="pubT.25.20" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="target_stock_code" fieldid="5164"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="price_type" fieldid="1887"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+    </function>
+    <function functionname="funct_trdif_CheckFundTransExchMarketStatusAuthOper" typename="LD_ANSWER" functionid="pubT.25.20" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="sys_config_str" fieldid="3330"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="co_busi_config_str" fieldid="1835"/>
+        <field fieldname="exgp_busi_config_str" fieldid="1971"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="target_stock_code_no" fieldid="3383"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="capit_reback_days" fieldid="3066"/>
+        <field fieldname="posi_reback_days" fieldid="1323"/>
+        <field fieldname="subscription_trade_mark" fieldid="5111"/>
+        <field fieldname="purchase_trade_mark" fieldid="5112"/>
+        <field fieldname="rede_trade_mark" fieldid="5113"/>
+        <field fieldname="first_minimum_amt" fieldid="5114" decimalPlaces="6"/>
+        <field fieldname="minimum_purchase_amt" fieldid="5116" decimalPlaces="6"/>
+        <field fieldname="minimum_subscription_amt" fieldid="5115" decimalPlaces="6"/>
+        <field fieldname="minimum_rede_share" fieldid="5117" decimalPlaces="2"/>
+        <field fieldname="minimum_holding_share" fieldid="5118" decimalPlaces="2"/>
+        <field fieldname="minimum_turning_out_share" fieldid="5165" decimalPlaces="2"/>
+        <field fieldname="fund_manager" fieldid="1847"/>
+        <field fieldname="charging_method" fieldid="5109"/>
+        <field fieldname="target_subscription_trade_mark" fieldid="5166"/>
+        <field fieldname="target_purchase_trade_mark" fieldid="5167"/>
+        <field fieldname="target_rede_trade_mark" fieldid="5168"/>
+        <field fieldname="target_first_minimum_amt" fieldid="5169" decimalPlaces="6"/>
+        <field fieldname="target_minimum_purchase_amt" fieldid="5171" decimalPlaces="6"/>
+        <field fieldname="target_minimum_subscription_amt" fieldid="5170" decimalPlaces="6"/>
+        <field fieldname="target_minimum_rede_share" fieldid="5172" decimalPlaces="2"/>
+        <field fieldname="target_minimum_holding_share" fieldid="5173" decimalPlaces="2"/>
+        <field fieldname="target_fund_manager" fieldid="5176"/>
+        <field fieldname="target_charging_method" fieldid="5175"/>
+        <field fieldname="target_minimum_turning_out_share" fieldid="5174" decimalPlaces="2"/>
+    </function>
+    <function functionname="funct_trdif_CheckExchMarketStatus" typename="LD_REQUEST" functionid="pubT.25.21" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+    </function>
+    <function functionname="funct_trdif_CheckExchMarketStatus" typename="LD_ANSWER" functionid="pubT.25.21" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="init_date" fieldid="1339"/>
+    </function>
+    <function functionname="funct_trdif_CheckExchMarketStatusAuthOper" typename="LD_REQUEST" functionid="pubT.25.22" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="price_type" fieldid="1887"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+    </function>
+    <function functionname="funct_trdif_CheckExchMarketStatusAuthOper" typename="LD_ANSWER" functionid="pubT.25.22" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="sys_config_str" fieldid="3330"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="co_busi_config_str" fieldid="1835"/>
+        <field fieldname="exgp_busi_config_str" fieldid="1971"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="buy_ref_rate" fieldid="3556" decimalPlaces="12"/>
+        <field fieldname="sell_ref_rate" fieldid="3557" decimalPlaces="12"/>
+        <field fieldname="par_value" fieldid="2310" decimalPlaces="9"/>
+        <field fieldname="impawn_ratio" fieldid="3026" decimalPlaces="12"/>
+        <field fieldname="net_price_flag" fieldid="2019"/>
+        <field fieldname="intrst_days" fieldid="1864"/>
+        <field fieldname="bond_rate_type" fieldid="2894"/>
+        <field fieldname="bond_accr_intrst" fieldid="2893" decimalPlaces="12"/>
+        <field fieldname="target_code_no" fieldid="1161"/>
+        <field fieldname="target_code" fieldid="1160"/>
+        <field fieldname="target_code_stock_type" fieldid="1163"/>
+        <field fieldname="target_code_asset_type" fieldid="1164"/>
+        <field fieldname="trade_code_no" fieldid="1918"/>
+        <field fieldname="trade_code" fieldid="1917"/>
+        <field fieldname="trade_code_stock_type" fieldid="1920"/>
+        <field fieldname="trade_code_asset_type" fieldid="1921"/>
+        <field fieldname="min_unit" fieldid="3124"/>
+        <field fieldname="up_limit_price" fieldid="2905" decimalPlaces="9"/>
+        <field fieldname="down_limit_price" fieldid="1436" decimalPlaces="9"/>
+        <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+        <field fieldname="capit_reback_days" fieldid="3066"/>
+        <field fieldname="posi_reback_days" fieldid="1323"/>
+        <field fieldname="apply_date" fieldid="2509"/>
+        <field fieldname="subscription_trade_mark" fieldid="5111"/>
+        <field fieldname="purchase_trade_mark" fieldid="5112"/>
+        <field fieldname="rede_trade_mark" fieldid="5113"/>
+        <field fieldname="first_minimum_amt" fieldid="5114" decimalPlaces="6"/>
+        <field fieldname="minimum_purchase_amt" fieldid="5116" decimalPlaces="6"/>
+        <field fieldname="minimum_subscription_amt" fieldid="5115" decimalPlaces="6"/>
+        <field fieldname="minimum_rede_share" fieldid="5117" decimalPlaces="2"/>
+        <field fieldname="minimum_holding_share" fieldid="5118" decimalPlaces="2"/>
+        <field fieldname="trade_acco" fieldid="5223"/>
+    </function>
+    <function functionname="funct_trdif_CheckBatchExchMarketStatusAuthOper" typename="LD_REQUEST" functionid="pubT.25.23" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="stock_code_str" fieldid="3191"/>
+        <field fieldname="order_dir_str" fieldid="1450"/>
+        <field fieldname="order_qty_str" fieldid="3187"/>
+        <field fieldname="price_type_str" fieldid="1888"/>
+        <field fieldname="split_str" fieldid="3201"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+    </function>
+    <function functionname="funct_trdif_CheckBatchExchMarketStatusAuthOper" typename="LD_ANSWER" functionid="pubT.25.23" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="co_busi_config_str" fieldid="1835"/>
+        <field fieldname="exgp_busi_config_str" fieldid="1971"/>
+        <field fieldname="stock_code_no_str" fieldid="3192"/>
+        <field fieldname="stock_type_str" fieldid="2939"/>
+        <field fieldname="asset_type_str" fieldid="3046"/>
+        <field fieldname="crncy_type_str" fieldid="1148"/>
+        <field fieldname="exch_crncy_type_str" fieldid="1907"/>
+        <field fieldname="buy_ref_rate_str" fieldid="3744"/>
+        <field fieldname="sell_ref_rate_str" fieldid="3745"/>
+        <field fieldname="par_value_str" fieldid="3176"/>
+        <field fieldname="impawn_ratio_str" fieldid="3177"/>
+        <field fieldname="net_price_flag_str" fieldid="3178"/>
+        <field fieldname="intrst_days_str" fieldid="3182"/>
+        <field fieldname="bond_rate_type_str" fieldid="3188"/>
+        <field fieldname="bond_accr_intrst_str" fieldid="3181"/>
+        <field fieldname="target_code_no_str" fieldid="3190"/>
+        <field fieldname="target_code_str" fieldid="3180"/>
+        <field fieldname="target_code_stock_type_str" fieldid="3207"/>
+        <field fieldname="target_code_asset_type_str" fieldid="3208"/>
+        <field fieldname="trade_code_no_str" fieldid="3189"/>
+        <field fieldname="trade_code_str" fieldid="3179"/>
+        <field fieldname="trade_code_stock_type_str" fieldid="3209"/>
+        <field fieldname="trade_code_asset_type_str" fieldid="3210"/>
+        <field fieldname="min_unit_str" fieldid="3202"/>
+        <field fieldname="up_limit_price_str" fieldid="3193"/>
+        <field fieldname="down_limit_price_str" fieldid="3194"/>
+        <field fieldname="last_price_str" fieldid="3211"/>
+        <field fieldname="capit_reback_days_str" fieldid="3198"/>
+        <field fieldname="posi_reback_days_str" fieldid="3199"/>
+        <field fieldname="subscription_trade_mark_str" fieldid="5120"/>
+        <field fieldname="purchase_trade_mark_str" fieldid="5121"/>
+        <field fieldname="rede_trade_mark_str" fieldid="5122"/>
+        <field fieldname="first_minimum_amt_str" fieldid="5123"/>
+        <field fieldname="minimum_purchase_amt_str" fieldid="5125"/>
+        <field fieldname="minimum_subscription_amt_str" fieldid="5124"/>
+        <field fieldname="minimum_rede_share_str" fieldid="5126"/>
+        <field fieldname="minimum_holding_share_str" fieldid="5127"/>
+        <field fieldname="sys_config_str" fieldid="3330"/>
+    </function>
+    <function functionname="funct_trdif_CheckModiOrderAuthOper" typename="LD_REQUEST" functionid="pubT.25.24" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="price_type" fieldid="1887"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+    </function>
+    <function functionname="funct_trdif_CheckModiOrderAuthOper" typename="LD_ANSWER" functionid="pubT.25.24" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="co_busi_config_str" fieldid="1835"/>
+        <field fieldname="exgp_busi_config_str" fieldid="1971"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="buy_ref_rate" fieldid="3556" decimalPlaces="12"/>
+        <field fieldname="sell_ref_rate" fieldid="3557" decimalPlaces="12"/>
+        <field fieldname="par_value" fieldid="2310" decimalPlaces="9"/>
+        <field fieldname="impawn_ratio" fieldid="3026" decimalPlaces="12"/>
+        <field fieldname="net_price_flag" fieldid="2019"/>
+        <field fieldname="intrst_days" fieldid="1864"/>
+        <field fieldname="bond_rate_type" fieldid="2894"/>
+        <field fieldname="bond_accr_intrst" fieldid="2893" decimalPlaces="12"/>
+        <field fieldname="target_code_no" fieldid="1161"/>
+        <field fieldname="target_code" fieldid="1160"/>
+        <field fieldname="target_code_stock_type" fieldid="1163"/>
+        <field fieldname="target_code_asset_type" fieldid="1164"/>
+        <field fieldname="trade_code_no" fieldid="1918"/>
+        <field fieldname="trade_code" fieldid="1917"/>
+        <field fieldname="trade_code_stock_type" fieldid="1920"/>
+        <field fieldname="trade_code_asset_type" fieldid="1921"/>
+        <field fieldname="min_unit" fieldid="3124"/>
+        <field fieldname="up_limit_price" fieldid="2905" decimalPlaces="9"/>
+        <field fieldname="down_limit_price" fieldid="1436" decimalPlaces="9"/>
+        <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+        <field fieldname="capit_reback_days" fieldid="3066"/>
+        <field fieldname="posi_reback_days" fieldid="1323"/>
+    </function>
+    <function functionname="funct_trdif_CheckSecuExchProp" typename="LD_REQUEST" functionid="pubT.25.25" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="price_type" fieldid="1887"/>
+    </function>
+    <function functionname="funct_trdif_CheckSecuExchProp" typename="LD_ANSWER" functionid="pubT.25.25" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="capit_reback_days" fieldid="3066"/>
+        <field fieldname="posi_reback_days" fieldid="1323"/>
+        <field fieldname="par_value" fieldid="2310" decimalPlaces="9"/>
+        <field fieldname="impawn_ratio" fieldid="3026" decimalPlaces="12"/>
+        <field fieldname="net_price_flag" fieldid="2019"/>
+        <field fieldname="intrst_days" fieldid="1864"/>
+        <field fieldname="bond_rate_type" fieldid="2894"/>
+        <field fieldname="bond_accr_intrst" fieldid="2893" decimalPlaces="12"/>
+        <field fieldname="min_unit" fieldid="3124"/>
+        <field fieldname="up_limit_price" fieldid="2905" decimalPlaces="9"/>
+        <field fieldname="down_limit_price" fieldid="1436" decimalPlaces="9"/>
+        <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+        <field fieldname="target_code_no" fieldid="1161"/>
+        <field fieldname="target_code" fieldid="1160"/>
+        <field fieldname="target_code_stock_type" fieldid="1163"/>
+        <field fieldname="target_code_asset_type" fieldid="1164"/>
+        <field fieldname="trade_code_no" fieldid="1918"/>
+        <field fieldname="trade_code" fieldid="1917"/>
+        <field fieldname="trade_code_stock_type" fieldid="1920"/>
+        <field fieldname="trade_code_asset_type" fieldid="1921"/>
+    </function>
+    <function functionname="funct_trdif_CheckSysStatusAuthOperExchBusi" typename="LD_REQUEST" functionid="pubT.25.26" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="price_type" fieldid="1887"/>
+        <field fieldname="strike_date" fieldid="1310"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+    </function>
+    <function functionname="funct_trdif_CheckSysStatusAuthOperExchBusi" typename="LD_ANSWER" functionid="pubT.25.26" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="sys_config_str" fieldid="3330"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="co_busi_config_str" fieldid="1835"/>
+        <field fieldname="exgp_busi_config_str" fieldid="1971"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="buy_ref_rate" fieldid="3556" decimalPlaces="12"/>
+        <field fieldname="sell_ref_rate" fieldid="3557" decimalPlaces="12"/>
+        <field fieldname="par_value" fieldid="2310" decimalPlaces="9"/>
+        <field fieldname="impawn_ratio" fieldid="3026" decimalPlaces="12"/>
+        <field fieldname="net_price_flag" fieldid="2019"/>
+        <field fieldname="intrst_days" fieldid="1864"/>
+        <field fieldname="bond_accr_intrst" fieldid="2893" decimalPlaces="12"/>
+        <field fieldname="bond_rate_type" fieldid="2894"/>
+        <field fieldname="trade_code_no" fieldid="1918"/>
+        <field fieldname="target_code_no" fieldid="1161"/>
+        <field fieldname="min_unit" fieldid="3124"/>
+        <field fieldname="up_limit_price" fieldid="2905" decimalPlaces="9"/>
+        <field fieldname="down_limit_price" fieldid="1436" decimalPlaces="9"/>
+        <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+        <field fieldname="repo_days" fieldid="1819"/>
+        <field fieldname="repo_back_date" fieldid="1811"/>
+        <field fieldname="capit_reback_days" fieldid="3066"/>
+        <field fieldname="posi_reback_days" fieldid="1323"/>
+        <field fieldname="bond_qty_unit_set" fieldid="3168"/>
+        <field fieldname="apply_date" fieldid="2509"/>
+    </function>
+    <function functionname="funct_trdif_CheckSysStatusExchBusi" typename="LD_REQUEST" functionid="pubT.25.27" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="price_type" fieldid="1887"/>
+        <field fieldname="strike_date" fieldid="1310"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+    </function>
+    <function functionname="funct_trdif_CheckSysStatusExchBusi" typename="LD_ANSWER" functionid="pubT.25.27" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="sys_config_str" fieldid="3330"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="co_busi_config_str" fieldid="1835"/>
+        <field fieldname="exgp_busi_config_str" fieldid="1971"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="buy_ref_rate" fieldid="3556" decimalPlaces="12"/>
+        <field fieldname="sell_ref_rate" fieldid="3557" decimalPlaces="12"/>
+        <field fieldname="par_value" fieldid="2310" decimalPlaces="9"/>
+        <field fieldname="impawn_ratio" fieldid="3026" decimalPlaces="12"/>
+        <field fieldname="net_price_flag" fieldid="2019"/>
+        <field fieldname="intrst_days" fieldid="1864"/>
+        <field fieldname="bond_accr_intrst" fieldid="2893" decimalPlaces="12"/>
+        <field fieldname="bond_rate_type" fieldid="2894"/>
+        <field fieldname="trade_code_no" fieldid="1918"/>
+        <field fieldname="target_code_no" fieldid="1161"/>
+        <field fieldname="min_unit" fieldid="3124"/>
+        <field fieldname="up_limit_price" fieldid="2905" decimalPlaces="9"/>
+        <field fieldname="down_limit_price" fieldid="1436" decimalPlaces="9"/>
+        <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+        <field fieldname="repo_days" fieldid="1819"/>
+        <field fieldname="repo_back_date" fieldid="1811"/>
+        <field fieldname="capit_reback_days" fieldid="3066"/>
+        <field fieldname="posi_reback_days" fieldid="1323"/>
+        <field fieldname="bond_qty_unit_set" fieldid="3168"/>
+        <field fieldname="apply_date" fieldid="2509"/>
+        <field fieldname="trade_acco" fieldid="5223"/>
+    </function>
+    <function functionname="funct_trdif_CheckRspBusiControl" typename="LD_REQUEST" functionid="pubT.25.31" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+    </function>
+    <function functionname="funct_trdif_CheckRspBusiControl" typename="LD_ANSWER" functionid="pubT.25.31" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="sys_config_str" fieldid="3330"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="buy_ref_rate" fieldid="3556" decimalPlaces="12"/>
+        <field fieldname="sell_ref_rate" fieldid="3557" decimalPlaces="12"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="capit_reback_days" fieldid="3066"/>
+        <field fieldname="posi_reback_days" fieldid="1323"/>
+        <field fieldname="trade_code_no" fieldid="1918"/>
+        <field fieldname="target_code_no" fieldid="1161"/>
+        <field fieldname="net_price_flag" fieldid="2019"/>
+        <field fieldname="bond_accr_intrst" fieldid="2893" decimalPlaces="12"/>
+        <field fieldname="bond_rate_type" fieldid="2894"/>
+        <field fieldname="par_value" fieldid="2310" decimalPlaces="9"/>
+        <field fieldname="impawn_ratio" fieldid="3026" decimalPlaces="12"/>
+        <field fieldname="min_unit" fieldid="3124"/>
+    </function>
+    <function functionname="funct_trdif_CheckStrikeRspBusiControl" typename="LD_REQUEST" functionid="pubT.25.32" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="strike_date" fieldid="1310"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+    </function>
+    <function functionname="funct_trdif_CheckStrikeRspBusiControl" typename="LD_ANSWER" functionid="pubT.25.32" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="sys_config_str" fieldid="3330"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="buy_ref_rate" fieldid="3556" decimalPlaces="12"/>
+        <field fieldname="sell_ref_rate" fieldid="3557" decimalPlaces="12"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="capit_reback_days" fieldid="3066"/>
+        <field fieldname="posi_reback_days" fieldid="1323"/>
+        <field fieldname="trade_code_no" fieldid="1918"/>
+        <field fieldname="target_code_no" fieldid="1161"/>
+        <field fieldname="intrst_days" fieldid="1864"/>
+        <field fieldname="net_price_flag" fieldid="2019"/>
+        <field fieldname="bond_accr_intrst" fieldid="2893" decimalPlaces="12"/>
+        <field fieldname="bond_rate_type" fieldid="2894"/>
+        <field fieldname="par_value" fieldid="2310" decimalPlaces="9"/>
+        <field fieldname="impawn_ratio" fieldid="3026" decimalPlaces="12"/>
+        <field fieldname="repo_days" fieldid="1819"/>
+        <field fieldname="repo_cale_days" fieldid="1817"/>
+        <field fieldname="repo_back_date" fieldid="1811"/>
+        <field fieldname="bond_qty_unit_set" fieldid="3168"/>
+        <field fieldname="apply_date" fieldid="2509"/>
+    </function>
+    <function functionname="funct_trdif_CheckMarketStatusAuthOperRightsStr" typename="LD_REQUEST" functionid="pubT.25.132" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+    </function>
+    <function functionname="funct_trdif_CheckMarketStatusAuthOperRightsStr" typename="LD_ANSWER" functionid="pubT.25.132" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="co_no_rights_str" fieldid="1830"/>
+        <field fieldname="pd_no_rights_str" fieldid="1231"/>
+        <field fieldname="exch_group_no_rights_str" fieldid="1964"/>
+    </function>
+    <function functionname="funct_trdif_CheckTraderAuthOper" typename="LD_REQUEST" functionid="pubT.25.151" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+    </function>
+    <function functionname="funct_trdif_CheckTraderAuthOper" typename="LD_ANSWER" functionid="pubT.25.151" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+    </function>
+    <function functionname="funct_trdif_CheckTraderAuthBatchOper" typename="LD_REQUEST" functionid="pubT.25.152" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="stock_type_str" fieldid="2939"/>
+        <field fieldname="split_str" fieldid="3201"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+    </function>
+    <function functionname="funct_trdif_CheckTraderAuthBatchOper" typename="LD_ANSWER" functionid="pubT.25.152" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+    </function>
+    <function functionname="funct_trdif_CheckCommExecutorAuthOper" typename="LD_REQUEST" functionid="pubT.25.153" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="comm_executor" fieldid="3014"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+    </function>
+    <function functionname="funct_trdif_CheckCommExecutorAuthOper" typename="LD_ANSWER" functionid="pubT.25.153" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+    </function>
+    <function functionname="funct_trdif_CheckOporAuth" typename="LD_REQUEST" functionid="pubT.25.154" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+    </function>
+    <function functionname="funct_trdif_CheckOporAuth" typename="LD_ANSWER" functionid="pubT.25.154" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+    </function>
+    <function functionname="funct_trdif_CheckOporAuthBatch" typename="LD_REQUEST" functionid="pubT.25.155" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="exch_no_str" fieldid="2539"/>
+        <field fieldname="stock_type_str" fieldid="2939"/>
+        <field fieldname="split_str" fieldid="3201"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+    </function>
+    <function functionname="funct_trdif_CheckOporAuthBatch" typename="LD_ANSWER" functionid="pubT.25.155" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+    </function>
+    <function functionname="funct_trdif_CheckFutuExchMarketStatusAuthOper" typename="LD_REQUEST" functionid="pubT.25.135" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="contrc_code" fieldid="1776"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="contrc_dir" fieldid="2070"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="price_type" fieldid="1887"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+    </function>
+    <function functionname="funct_trdif_CheckFutuExchMarketStatusAuthOper" typename="LD_ANSWER" functionid="pubT.25.135" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="co_busi_config_str" fieldid="1835"/>
+        <field fieldname="exgp_busi_config_str" fieldid="1971"/>
+        <field fieldname="contrc_code_no" fieldid="1777"/>
+        <field fieldname="contrc_type" fieldid="1778"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="contrc_unit" fieldid="1775"/>
+        <field fieldname="capit_reback_days" fieldid="3066"/>
+        <field fieldname="posi_reback_days" fieldid="1323"/>
+    </function>
+    <function functionname="funct_trdif_CheckFutuCommMarketStatusAuthOper" typename="LD_REQUEST" functionid="pubT.25.136" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="comm_executor" fieldid="3014"/>
+        <field fieldname="contrc_code" fieldid="1776"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="contrc_dir" fieldid="2070"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="price_type" fieldid="1887"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+    </function>
+    <function functionname="funct_trdif_CheckFutuCommMarketStatusAuthOper" typename="LD_ANSWER" functionid="pubT.25.136" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="co_busi_config_str" fieldid="1835"/>
+        <field fieldname="exgp_busi_config_str" fieldid="1971"/>
+        <field fieldname="contrc_code_no" fieldid="1777"/>
+        <field fieldname="contrc_type" fieldid="1778"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="contrc_unit" fieldid="1775"/>
+        <field fieldname="capit_reback_days" fieldid="3066"/>
+        <field fieldname="posi_reback_days" fieldid="1323"/>
+        <field fieldname="co_comm_appr_oper" fieldid="1836"/>
+        <field fieldname="sys_config_str" fieldid="3330"/>
+    </function>
+    <function functionname="funct_trdif_CheckSysStatusFutuExchBusi" typename="LD_REQUEST" functionid="pubT.25.137" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="contrc_code" fieldid="1776"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="contrc_dir" fieldid="2070"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="price_type" fieldid="1887"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+    </function>
+    <function functionname="funct_trdif_CheckSysStatusFutuExchBusi" typename="LD_ANSWER" functionid="pubT.25.137" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="co_busi_config_str" fieldid="1835"/>
+        <field fieldname="exgp_busi_config_str" fieldid="1971"/>
+        <field fieldname="contrc_code_no" fieldid="1777"/>
+        <field fieldname="contrc_type" fieldid="1778"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="contrc_unit" fieldid="1775"/>
+        <field fieldname="capit_reback_days" fieldid="3066"/>
+        <field fieldname="posi_reback_days" fieldid="1323"/>
+    </function>
+    <function functionname="funct_trdif_CheckFutuRspBusiControl" typename="LD_REQUEST" functionid="pubT.25.230" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="contrc_code" fieldid="1776"/>
+    </function>
+    <function functionname="funct_trdif_CheckFutuRspBusiControl" typename="LD_ANSWER" functionid="pubT.25.230" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="contrc_code_no" fieldid="1777"/>
+        <field fieldname="contrc_type" fieldid="1778"/>
+    </function>
+    <function functionname="funct_trdif_CheckExchMarketStatusAuthOperNoOperatorCheck" typename="LD_REQUEST" functionid="pubT.25.231" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="price_type" fieldid="1887"/>
+        <field fieldname="opor_pwd" fieldid="1197"/>
+    </function>
+    <function functionname="funct_trdif_CheckExchMarketStatusAuthOperNoOperatorCheck" typename="LD_ANSWER" functionid="pubT.25.231" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="sys_config_str" fieldid="3330"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="co_busi_config_str" fieldid="1835"/>
+        <field fieldname="exgp_busi_config_str" fieldid="1971"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="buy_ref_rate" fieldid="3556" decimalPlaces="12"/>
+        <field fieldname="sell_ref_rate" fieldid="3557" decimalPlaces="12"/>
+        <field fieldname="par_value" fieldid="2310" decimalPlaces="9"/>
+        <field fieldname="impawn_ratio" fieldid="3026" decimalPlaces="12"/>
+        <field fieldname="net_price_flag" fieldid="2019"/>
+        <field fieldname="intrst_days" fieldid="1864"/>
+        <field fieldname="bond_rate_type" fieldid="2894"/>
+        <field fieldname="bond_accr_intrst" fieldid="2893" decimalPlaces="12"/>
+        <field fieldname="target_code_no" fieldid="1161"/>
+        <field fieldname="target_code" fieldid="1160"/>
+        <field fieldname="target_code_stock_type" fieldid="1163"/>
+        <field fieldname="target_code_asset_type" fieldid="1164"/>
+        <field fieldname="trade_code_no" fieldid="1918"/>
+        <field fieldname="trade_code" fieldid="1917"/>
+        <field fieldname="trade_code_stock_type" fieldid="1920"/>
+        <field fieldname="trade_code_asset_type" fieldid="1921"/>
+        <field fieldname="min_unit" fieldid="3124"/>
+        <field fieldname="up_limit_price" fieldid="2905" decimalPlaces="9"/>
+        <field fieldname="down_limit_price" fieldid="1436" decimalPlaces="9"/>
+        <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+        <field fieldname="capit_reback_days" fieldid="3066"/>
+        <field fieldname="posi_reback_days" fieldid="1323"/>
+        <field fieldname="apply_date" fieldid="2509"/>
+    </function>
+    <function functionname="funct_trdif_CheckTrdSysStatusAuth" typename="LD_REQUEST" functionid="pubT.25.232" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="co_no" fieldid="1828"/>
+    </function>
+    <function functionname="funct_trdif_CheckTrdSysStatusAuth" typename="LD_ANSWER" functionid="pubT.25.232" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="co_busi_config_str" fieldid="1835"/>
+    </function>
+    <function functionname="funct_trdif_GetOperLoginInfo" typename="LD_REQUEST" functionid="pubT.25.233" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+    </function>
+    <function functionname="funct_trdif_GetOperLoginInfo" typename="LD_ANSWER" functionid="pubT.25.233" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="last_login_ip" fieldid="2485"/>
+        <field fieldname="last_login_mac" fieldid="2486"/>
+        <field fieldname="last_login_date" fieldid="2487"/>
+        <field fieldname="last_oper_info" fieldid="5298"/>
+        <field fieldname="online_status" fieldid="2887"/>
+    </function>
+    <function functionname="funct_trdif_FinaLoanGetBrokerMarginRadio" typename="LD_REQUEST" functionid="pubT.25.234" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="pass_no" fieldid="2610"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+    </function>
+    <function functionname="funct_trdif_FinaLoanGetBrokerMarginRadio" typename="LD_ANSWER" functionid="pubT.25.234" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="fina_marg_ratio" fieldid="5518" decimalPlaces="12"/>
+        <field fieldname="secu_loan_marg_ratio" fieldid="5519" decimalPlaces="12"/>
+        <field fieldname="secu_loan_price_limit" fieldid="5522" decimalPlaces="9"/>
+    </function>
+    <function functionname="funct_trdif_CheckExchMarketStatusAuthOperWithoutPwd" typename="LD_REQUEST" functionid="pubT.25.235" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="co_no" fieldid="1828"/>
+        <field fieldname="exch_group_no" fieldid="1962"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="order_dir" fieldid="1449"/>
+        <field fieldname="order_qty" fieldid="1460" decimalPlaces="2"/>
+        <field fieldname="price_type" fieldid="1887"/>
+    </function>
+    <function functionname="funct_trdif_CheckExchMarketStatusAuthOperWithoutPwd" typename="LD_ANSWER" functionid="pubT.25.235" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="init_date" fieldid="1339"/>
+        <field fieldname="sys_config_str" fieldid="3330"/>
+        <field fieldname="pd_no" fieldid="1228"/>
+        <field fieldname="co_busi_config_str" fieldid="1835"/>
+        <field fieldname="exgp_busi_config_str" fieldid="1971"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="buy_ref_rate" fieldid="3556" decimalPlaces="12"/>
+        <field fieldname="sell_ref_rate" fieldid="3557" decimalPlaces="12"/>
+        <field fieldname="par_value" fieldid="2310" decimalPlaces="9"/>
+        <field fieldname="impawn_ratio" fieldid="3026" decimalPlaces="12"/>
+        <field fieldname="net_price_flag" fieldid="2019"/>
+        <field fieldname="intrst_days" fieldid="1864"/>
+        <field fieldname="bond_rate_type" fieldid="2894"/>
+        <field fieldname="bond_accr_intrst" fieldid="2893" decimalPlaces="12"/>
+        <field fieldname="target_code_no" fieldid="1161"/>
+        <field fieldname="target_code" fieldid="1160"/>
+        <field fieldname="target_code_stock_type" fieldid="1163"/>
+        <field fieldname="target_code_asset_type" fieldid="1164"/>
+        <field fieldname="trade_code_no" fieldid="1918"/>
+        <field fieldname="trade_code" fieldid="1917"/>
+        <field fieldname="trade_code_stock_type" fieldid="1920"/>
+        <field fieldname="trade_code_asset_type" fieldid="1921"/>
+        <field fieldname="min_unit" fieldid="3124"/>
+        <field fieldname="up_limit_price" fieldid="2905" decimalPlaces="9"/>
+        <field fieldname="down_limit_price" fieldid="1436" decimalPlaces="9"/>
+        <field fieldname="last_price" fieldid="3129" decimalPlaces="9"/>
+        <field fieldname="capit_reback_days" fieldid="3066"/>
+        <field fieldname="posi_reback_days" fieldid="1323"/>
+        <field fieldname="apply_date" fieldid="2509"/>
+        <field fieldname="subscription_trade_mark" fieldid="5111"/>
+        <field fieldname="purchase_trade_mark" fieldid="5112"/>
+        <field fieldname="rede_trade_mark" fieldid="5113"/>
+        <field fieldname="first_minimum_amt" fieldid="5114" decimalPlaces="6"/>
+        <field fieldname="minimum_purchase_amt" fieldid="5116" decimalPlaces="6"/>
+        <field fieldname="minimum_subscription_amt" fieldid="5115" decimalPlaces="6"/>
+        <field fieldname="minimum_rede_share" fieldid="5117" decimalPlaces="2"/>
+        <field fieldname="minimum_holding_share" fieldid="5118" decimalPlaces="2"/>
+        <field fieldname="trade_acco" fieldid="5223"/>
+    </function>
+    <function functionname="funct_trdif_CheckSecuProp" typename="LD_REQUEST" functionid="pubT.25.236" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="stock_code" fieldid="2929"/>
+        <field fieldname="price_type" fieldid="1887"/>
+    </function>
+    <function functionname="funct_trdif_CheckSecuProp" typename="LD_ANSWER" functionid="pubT.25.236" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="stock_code_no" fieldid="2930"/>
+        <field fieldname="stock_type" fieldid="2938"/>
+        <field fieldname="asset_type" fieldid="3045"/>
+        <field fieldname="crncy_type" fieldid="1147"/>
+        <field fieldname="exch_crncy_type" fieldid="1906"/>
+        <field fieldname="capit_reback_days" fieldid="3066"/>
+        <field fieldname="posi_reback_days" fieldid="1323"/>
+        <field fieldname="par_value" fieldid="2310" decimalPlaces="9"/>
+        <field fieldname="impawn_ratio" fieldid="3026" decimalPlaces="12"/>
+        <field fieldname="net_price_flag" fieldid="2019"/>
+        <field fieldname="intrst_days" fieldid="1864"/>
+        <field fieldname="bond_rate_type" fieldid="2894"/>
+        <field fieldname="bond_accr_intrst" fieldid="2893" decimalPlaces="12"/>
+    </function>
+</bizmsgs>

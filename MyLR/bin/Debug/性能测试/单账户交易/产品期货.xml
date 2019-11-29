@@ -8,8 +8,59 @@
 		 <file filename="account.dat"  selectrow="random" />
 		</field>
 -->
+<!--逻辑_交易期货_报盘_处理成交回报-->  
+    <function functionname="prl_tdfurp_DealStrikeRsp" typename="LD_REQUEST" functionid="tdfutuL.5.21" packettype="0" times="3">
+        <field fieldname="opor_co_no" fieldid="1194" />
+        <field fieldname="opor_no" fieldid="1192" />
+        <field fieldname="opor_pwd" fieldid="1197" />
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="menu_no" fieldid="1169"/>
+        <field fieldname="func_code" fieldid="1674"/>
+		<field fieldname="pass_no" fieldid="2610" value="2" />
+		<field fieldname="exch_no" fieldid="2538" paramtype="file"  >
+		    <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\futustriklersp.dat" selectrow="sequence" />
+		</field>
+		<field fieldname="out_acco" fieldid="2697" paramtype="file">
+		 <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\futustriklersp.dat"  />
+		</field>
+        <field fieldname="futu_acco" fieldid="1908" paramtype="file">
+		 <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\futustriklersp.dat"  />
+		</field>
+		<field fieldname="contrc_code" fieldid="1776" paramtype="file">
+		 <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\futustriklersp.dat"  />
+		</field>
+		<field fieldname="contrc_dir" fieldid="2070" value="1"/>
+		<field fieldname="hedge_type" fieldid="2591" value="1"/>
+		<field fieldname="report_date" fieldid="2505" paramtype="file"  >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\futustriklersp.dat"  />
+		</field>
+		<field fieldname="report_no" fieldid="2502" paramtype="file"  >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\futustriklersp.dat"  />
+		</field>
+		<field fieldname="strike_date" fieldid="1310" paramtype="file"  >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\futustriklersp.dat"  />
+		</field>
+		<field fieldname="strike_time" fieldid="1311" value="200000"/>
+		<field fieldname="strike_no" fieldid="1295" paramtype="file"  >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\futustriklersp.dat"  />
+		</field>
+        <field fieldname="order_dir" fieldid="1449" value="1"/>
+        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2" paramtype="file"  >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\futustriklersp.dat"  />
+		</field>
+        <field fieldname="strike_price" fieldid="1303" decimalPlaces="9"  paramtype="file" >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\futustriklersp.dat"  />
+		</field>
+        <field fieldname="strike_amt" fieldid="1305"  paramtype="file" >
+			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\futustriklersp.dat"  />
+		</field>
+		<field fieldname="rsp_info" fieldid="1800" value="性能测试"/>		
+    </function>
 <!--逻辑_产品期货_资金_查询资产账户资金-->  
-    <function functionname="prl_pdfuca_QueryAsacCapital" typename="LD_REQUEST" functionid="pdfutuL.2.57" packettype="0" times="1">
+    <function functionname="prl_pdfuca_QueryAsacCapital" typename="LD_REQUEST" functionid="pdfutuL.2.57" packettype="0" times="3">
         <field fieldname="opor_co_no" fieldid="1194" paramtype="file">
         <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" selectrow="sequence" />
 		</field>
@@ -32,7 +83,7 @@
         <field fieldname="row_count" fieldid="2959" value="500"/>
     </function>	
 <!--逻辑_交易期货_账户_查询资产账户资金-->  
-    <function functionname="prt_tdfuac_QueryAsacCash" typename="LD_REQUEST" functionid="tdfutuL.2.6" packettype="0" times="1">
+    <function functionname="prt_tdfuac_QueryAsacCash" typename="LD_REQUEST" functionid="tdfutuL.2.6" packettype="0" times="3">
         <field fieldname="opor_co_no" fieldid="1194" paramtype="file">
         <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\account.dat" selectrow="sequence" />
 		</field>
@@ -56,59 +107,6 @@
         <field fieldname="row_count" fieldid="2959" value="500"/>
         <field fieldname="pd_no_rights_str" fieldid="1231" value=" "/>		
     </function>
-<!--逻辑_交易期货_报盘_处理成交回报-->  
-    <function functionname="prl_tdfurp_DealStrikeRsp" typename="LD_REQUEST" functionid="tdfutuL.5.21" packettype="0" times="1">
-        <field fieldname="opor_co_no" fieldid="1194" />
-        <field fieldname="opor_no" fieldid="1192" />
-        <field fieldname="opor_pwd" fieldid="1197" />
-        <field fieldname="oper_mac" fieldid="1181"/>
-        <field fieldname="oper_ip_addr" fieldid="1180"/>
-        <field fieldname="oper_info" fieldid="1190"/>
-        <field fieldname="oper_way" fieldid="1184"/>
-        <field fieldname="menu_no" fieldid="1169"/>
-        <field fieldname="func_code" fieldid="1674"/>
-		
-		
-		<field fieldname="exch_no" fieldid="2538" paramtype="file"  >
-		    <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\futustriklersp.dat" selectrow="sequence" />
-		</field>
-		<field fieldname="pass_no" fieldid="2610" value="2" />
-		<field fieldname="out_acco" fieldid="2697" paramtype="file">
-		 <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\futustriklersp.dat"  />
-		</field>
-        <field fieldname="futu_acco" fieldid="1908" paramtype="file">
-		 <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\futustriklersp.dat"  />
-		</field>
-		<field fieldname="contrc_code" fieldid="1776" columnname = "" paramtype="file">
-		 <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\futustriklersp.dat"  />
-		</field>
-		<field fieldname="contrc_dir" fieldid="2070" value="1"/>
-		<field fieldname="hedge_type" fieldid="2591" value="1"/>
-		<field fieldname="report_date" fieldid="2505" paramtype="file"  >
-			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\futustriklersp.dat"  />
-		</field>
-		<field fieldname="report_no" fieldid="2502" paramtype="file"  >
-			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\futustriklersp.dat"  />
-		</field>
-		<field fieldname="strike_date" fieldid="1310" paramtype="file"  >
-			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\futustriklersp.dat"  />
-		</field>
-		<field fieldname="strike_time" fieldid="1311" value="200000"/>
-		<field fieldname="strike_no" fieldid="1295" paramtype="file"  >
-			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\futustriklersp.dat"  />
-		</field>
-        <field fieldname="order_dir" fieldid="1449" value="1"/>
-		 <field fieldname="strike_price" fieldid="1303" decimalPlaces="9"  paramtype="file" >
-			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\futustriklersp.dat"  />
-		</field>
-        <field fieldname="strike_qty" fieldid="1314" decimalPlaces="2" paramtype="file"  >
-			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\futustriklersp.dat"  />
-		</field>
-        <field fieldname="strike_amt" fieldid="1305"  paramtype="file" >
-			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\futustriklersp.dat"  />
-		</field>
-		<field fieldname="rsp_info" fieldid="1800" value="性能测试"/>		
-    </function>
 <!--逻辑_交易期货_报盘_处理撤单回报-->  
     <function functionname="prl_tdfurp_DealCancelRsp" typename="LD_REQUEST" functionid="tdfutuL.5.11" packettype="0" times="1">
         <field fieldname="opor_co_no" fieldid="1194" />
@@ -121,7 +119,7 @@
         <field fieldname="menu_no" fieldid="1169"/>
         <field fieldname="func_code" fieldid="1674"/>
 		<field fieldname="exch_no" fieldid="2538" paramtype="file"  >
-		    <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\futucanclersp.dat" />
+		    <file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\futucanclersp.dat" selectrow="sequence"/>
 		</field>
 		<field fieldname="pass_no" fieldid="2610" value="2" />
 		<field fieldname="out_acco" fieldid="2697" paramtype="file">
@@ -143,31 +141,6 @@
 			<file filename="E:\2.0测试工具代码\MyLR\bin\Debug\性能测试\单账户交易\futucanclersp.dat"  />
 		</field>
 		<field fieldname="rsp_status" fieldid="1801" value="1"  />
-		<field fieldname="rsp_info" fieldid="1800" value="性能测试"/>	
+		<field fieldname="rsp_info" fieldid="1800" value="性能测试"/>        	
     </function>	
-	
-	
-	<function functionname="prl_userclient_QueryOporAllowOpor" typename="LD_REQUEST" functionid="pubL.19.76" packettype="0" times="1">
-        <field fieldname="opor_co_no" fieldid="1194" paramtype="file">
-        <file filename="E:\LD_SVN\Document\D3.Testings\性能测试脚本\account.dat" selectrow="random" />
-		</field>
-        <field fieldname="opor_no" fieldid="1192" paramtype="file">
-        <file filename="E:\LD_SVN\Document\D3.Testings\性能测试脚本\account.dat" />
-		</field>
-        <field fieldname="opor_pwd" fieldid="1197" paramtype="file">
-        <file filename="E:\LD_SVN\Document\D3.Testings\性能测试脚本\account.dat" />
-		</field>
-        <field fieldname="oper_mac" fieldid="1181"/>
-        <field fieldname="oper_ip_addr" fieldid="1180"/>
-        <field fieldname="oper_info" fieldid="1190"/>
-        <field fieldname="oper_way" fieldid="1184"/>
-        <field fieldname="menu_no" fieldid="1169"/>
-        <field fieldname="func_code" fieldid="1674"/>
-        <field fieldname="query_opor_no" fieldid="1209"  paramtype="file">
-        <file filename="E:\LD_SVN\Document\D3.Testings\性能测试脚本\account.dat" />
-		</field>
-        <field fieldname="row_id" fieldid="1867" value="0" />
-        <field fieldname="row_count" fieldid="2959" value="500"/>        
-    </function>
-
 </bizmsgs>

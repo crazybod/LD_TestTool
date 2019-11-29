@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bizmsgs>
+    <function functionname="funct_pdfopubif_GetFoFutuAccoNo" typename="LD_REQUEST" functionid="pdfofuT.4.1" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="futu_acco" fieldid="1908"/>
+    </function>
+    <function functionname="funct_pdfopubif_GetFoFutuAccoNo" typename="LD_ANSWER" functionid="pdfofuT.4.1" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="futu_acco_no" fieldid="1909"/>
+    </function>
+    <function functionname="funct_pdfopubif_GetFoFutuAcco" typename="LD_REQUEST" functionid="pdfofuT.4.2" packettype="0">
+        <field fieldname="opor_co_no" fieldid="1194"/>
+        <field fieldname="opor_no" fieldid="1192"/>
+        <field fieldname="oper_mac" fieldid="1181"/>
+        <field fieldname="oper_ip_addr" fieldid="1180"/>
+        <field fieldname="oper_info" fieldid="1190"/>
+        <field fieldname="oper_way" fieldid="1184"/>
+        <field fieldname="func_code" fieldid="1674"/>
+        <field fieldname="asset_acco_no" fieldid="3051"/>
+        <field fieldname="futu_acco_no" fieldid="1909"/>
+    </function>
+    <function functionname="funct_pdfopubif_GetFoFutuAcco" typename="LD_ANSWER" functionid="pdfofuT.4.2" packettype="1">
+        <field fieldname="error_code" fieldid="1359"/>
+        <field fieldname="error_info" fieldid="1365"/>
+        <field fieldname="exch_no" fieldid="2538"/>
+        <field fieldname="futu_acco" fieldid="1908"/>
+    </function>
+</bizmsgs>
